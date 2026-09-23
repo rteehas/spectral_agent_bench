@@ -88,6 +88,8 @@ def validate(data, public=PUBLIC):
             require(isinstance(prompt, dict), f'{sid}: prompt must contain background and instruction')
             text(prompt.get('background'), 'Prompt background')
             text(prompt.get('instruction'), 'Prompt instruction')
+            if 'groundTruthReasoning' in scenario:
+                text(scenario['groundTruthReasoning'], 'Ground truth reasoning')
             verification = scenario.get('verification')
             require(isinstance(verification, dict), f'{sid}: verification must be an object')
             text(verification.get('description'), 'Verification description')

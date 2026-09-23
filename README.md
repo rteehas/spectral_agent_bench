@@ -9,7 +9,7 @@ The initial dataset contains **four clearly labeled, fictional demonstration tas
 
 ## Review workflow
 
-- Browse papers and expand a step, subhypothesis, or subquestion. Each example contains **Inputs → Orchestrator prompt → Verification**.
+- Browse papers and expand a step, subhypothesis, or subquestion. Each example contains **Inputs → Orchestrator prompt → Verification → Ground truth reasoning**.
 - Search by paper, author, DOI, question, input filename, background, or example ID. Combine category, facility, and verdict filters.
 - Record **Correct**, **Needs revision**, or **Unsure**, with optional comments.
 - Reviews save in the current browser, separately for each dataset ID. They are **not sent to a server or shared between reviewers**.
@@ -32,6 +32,7 @@ Each example has:
 - `inputs`: the exact data files used by this task, with a name, URL, and description.
 - `prompt.background` and `prompt.instruction`: background and directions for the LLM agent orchestrator. The site automatically inserts all input filenames, descriptions, and absolute clickable URLs between these two parts. Verification files are not included in the agent prompt.
 - `verification.description`: how to compare the agent's output.
+- `groundTruthReasoning`: a plain-text explanation of the expected result, the evidence or calculation supporting it, and any assumptions or limitations. Shown after Verification and excluded from the orchestrator prompt. Paragraph breaks are preserved. If omitted, the section states that reasoning has not been added yet.
 - `verification.data`: ground-truth file links, and/or `verification.figures`: comparison images from the paper, with captions and optional source links. At least one file or figure is required. Either list may be omitted or empty.
 
 Example task (replace the example paths with files you add):
@@ -57,6 +58,7 @@ Example task (replace the example paths with files you add):
     "background": "Relevant preparation, measurement, and analysis context from the paper.",
     "instruction": "Coordinate loading, validation, and fitting of these files. Return fitted coefficients, residuals, and an overlay plot."
   },
+  "groundTruthReasoning": "Explain why the expected coefficients follow from the data and what conclusions the fit does or does not justify.",
   "verification": {
     "description": "Compare the coefficients with the ground truth and the overlay with the paper's figure.",
     "data": [

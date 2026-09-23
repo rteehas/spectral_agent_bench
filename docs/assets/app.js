@@ -61,10 +61,14 @@ function scenarioHTML(s, paper) {
         ${s.verification.data?.length ? `<h4>Ground-truth data</h4>${fileListHTML(s.verification.data)}` : ''}
         ${s.verification.figures?.length ? `<h4>Comparison figures</h4><div class="verification-figures">${evidenceHTML(s.verification.figures)}</div>` : ''}
       </section>
+      <section class="content-section example-section reasoning-section" aria-label="Ground truth reasoning for ${esc(s.id)}">
+        <h3 class="workflow-heading"><span aria-hidden="true">04</span> Ground truth reasoning</h3>
+        <div class="truth-box"><p>${esc(s.groundTruthReasoning || 'Ground truth reasoning has not been added yet.')}</p></div>
+      </section>
       <section class="review-form" aria-label="Review ${esc(s.id)}">
         <div class="review-top"><h3>Your review</h3><button class="text-button clear-review" type="button">Clear review</button></div>
         <div class="review-actions" role="group" aria-label="Verdict for ${esc(s.id)}">${[['correct', '✓'], ['revision', '✎'], ['unsure', '?']].map(([status, icon]) => `<button class="verdict-button" type="button" data-status="${status}" aria-pressed="${status === current}">${icon} ${labels[status]}</button>`).join('')}</div>
-        <label for="comment-${esc(s.id)}">Comments or suggested corrections</label><textarea id="comment-${esc(s.id)}" maxlength="12000" placeholder="Describe any issues with the inputs, orchestrator prompt, or verification…">${esc(review.comment || '')}</textarea>
+        <label for="comment-${esc(s.id)}">Comments or suggested corrections</label><textarea id="comment-${esc(s.id)}" maxlength="12000" placeholder="Describe any issues with the inputs, orchestrator prompt, verification, or ground truth reasoning…">${esc(review.comment || '')}</textarea>
         <div class="review-bottom"><span class="save-state">${review.updatedAt ? 'Saved in this browser' : 'Only saved in this browser'}</span><a class="issue-link" href="${esc(issueUrl(s, paper))}" target="_blank" rel="noopener noreferrer">Open GitHub issue ↗</a></div>
       </section>
     </div>
@@ -78,7 +82,7 @@ function issueUrl(s, p) {
   return url.href;
 }
 function matches(p, s) {
-  return (state.category === 'all' || p.category === state.category) && (state.facility === 'all' || p.facility === state.facility) && (state.status === 'all' || verdict(s.id) === state.status) && (!state.query || [p.title, p.authors, p.doi, p.category, p.facility, s.id, s.title, s.kind, s.prompt.background, s.prompt.instruction, ...s.inputs.flatMap(file => [file.name, file.description]), s.verification.description].join(' ').toLowerCase().includes(state.query));
+  return (state.category === 'all' || p.category === state.category) && (state.facility === 'all' || p.facility === state.facility) && (state.status === 'all' || verdict(s.id) === state.status) && (!state.query || [p.title, p.authors, p.doi, p.category, p.facility, s.id, s.title, s.kind, s.prompt.background, s.prompt.instruction, ...s.inputs.flatMap(file => [file.name, file.description]), s.verification.description, s.groundTruthReasoning || ''].join(' ').toLowerCase().includes(state.query));
 }
 function render() {
   const open = new Set([...document.querySelectorAll('details[open][id]')].map(d => d.id));
