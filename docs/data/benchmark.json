@@ -6,6 +6,8 @@
   "papers": [
     {
       "id": "demo-copper",
+      "dataUrl": "data/benchmark.json",
+      "codeUrl": "https://github.com/rteehas/spectral_agent_bench",
       "title": "Copper speciation across a model catalyst reduction series",
       "authors": "Demonstration study · fictional source",
       "category": "Catalyst",

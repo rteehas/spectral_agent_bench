@@ -70,7 +70,12 @@ Optional paper fields:
 
 - `doi`: a bare DOI, for example `10.1234/example`.
 - `pdf`: an HTTPS URL or a path relative to `docs/`, such as `assets/papers/paper-001.pdf`.
+- `dataUrl`: an optional open-data URL (for example, a Zenodo record) or local data file path. Displays **Open data** when supplied.
+- `codeUrl`: an optional open-code URL (for example, the study’s GitHub repository) or local code file path. Displays **Open code** when supplied.
 - `evidence`: a list using the same format as scenario evidence, displayed under **Key paper evidence**.
+
+These resource links appear below the paper title and metadata when the paper is expanded. Omit either field when unavailable; do not add an empty string. The first demonstration paper links to this site’s sample dataset and source repository to illustrate both fields.
+
 
 Optional evidence fields:
 

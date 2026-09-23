@@ -57,8 +57,9 @@ def validate(data, public=PUBLIC):
         paper_ids.add(paper['id'])
         if 'doi' in paper:
             require(isinstance(paper['doi'], str) and bool(re.fullmatch(r'10\.\d{4,9}/\S+', paper['doi'])), 'Use a bare DOI, not a URL')
-        if 'pdf' in paper:
-            asset(paper['pdf'])
+        for field in ('pdf', 'dataUrl', 'codeUrl'):
+            if field in paper:
+                asset(paper[field])
         evidence(paper.get('evidence', []))
         require(isinstance(paper.get('scenarios'), list) and paper['scenarios'], 'Each paper needs scenarios')
         for scenario in paper['scenarios']:
