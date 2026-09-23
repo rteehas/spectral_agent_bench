@@ -100,8 +100,17 @@ def validate(data, public=PUBLIC):
             if 'thresholds' in verification:
                 thresholds = verification['thresholds']
                 require(isinstance(thresholds, dict), f'{sid}: thresholds must be an object')
-                for field in ('origin', 'generatedBy', 'provenance', 'description'):
+                for field in ('origin', 'generatedBy', 'provenance'):
                     text(thresholds.get(field), f'Thresholds {field}')
+                if 'description' in thresholds:
+                    text(thresholds['description'], 'Thresholds description')
+                notes = thresholds.get('notes', [])
+                require(isinstance(notes, list), f'{sid}: threshold notes must be a list')
+                for note in notes:
+                    require(isinstance(note, dict), f'{sid}: threshold notes must be objects')
+                    text(note.get('title'), 'Threshold note title')
+                    text(note.get('description'), 'Threshold note description')
+                require(bool(notes or thresholds.get('description')), f'{sid}: thresholds need notes or a description')
                 files(thresholds.get('data', []), 'Threshold policy files')
             evidence(figures)
             require(bool(data_files or figures), f'{sid}: verification needs ground-truth data or comparison figures')

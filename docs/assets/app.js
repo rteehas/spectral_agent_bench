@@ -43,7 +43,9 @@ function promptHTML(s) {
 }
 function thresholdsHTML(thresholds) {
   if (!thresholds) return '';
-  return `<section class="threshold-box" aria-label="Benchmark thresholds"><h4>Benchmark thresholds</h4><div class="threshold-origin"><span class="badge">${esc(thresholds.origin)}</span><span class="badge">${esc(thresholds.generatedBy)}</span></div><p>${esc(thresholds.provenance)}</p><p>${esc(thresholds.description)}</p>${thresholds.data?.length ? fileListHTML(thresholds.data) : ''}</section>`;
+  const notes = thresholds.notes?.length ? thresholds.notes.map(note => `<p><strong>${esc(note.title)}:</strong> ${esc(note.description)}</p>`).join('') : `<p>${esc(thresholds.description)}</p>`;
+  const policy = thresholds.data?.length ? `<p><strong>Comparison Policy:</strong> ${thresholds.data.map(file => `<a href="${esc(safeUrl(file.url))}" target="_blank" rel="noopener noreferrer">${esc(file.name)} ↗</a>`).join(', ')}</p>` : '';
+  return `<section class="verification-notes" aria-label="Verification notes"><h4>Notes</h4><p><strong>Provenance:</strong> ${esc(thresholds.origin)}; ${esc(thresholds.generatedBy)}. ${esc(thresholds.provenance)}</p>${notes}${policy}</section>`;
 }
 function scenarioHTML(s, paper) {
   const review = state.reviews[s.id] || {}, current = verdict(s.id);
@@ -64,8 +66,8 @@ function scenarioHTML(s, paper) {
         <p>${esc(s.verification.description)}</p>
         ${s.verification.data?.length ? `<h4>Ground-truth data</h4>${fileListHTML(s.verification.data)}` : ''}
         ${s.verification.figures?.length ? `<h4>Comparison figures</h4><div class="verification-figures">${evidenceHTML(s.verification.figures)}</div>` : ''}
-        ${thresholdsHTML(s.verification.thresholds)}
         ${s.verification.methods?.length ? `<h4>Worked workflow and checker</h4>${fileListHTML(s.verification.methods)}` : ''}
+        ${thresholdsHTML(s.verification.thresholds)}
       </section>
       <section class="content-section example-section reasoning-section" aria-label="Ground truth reasoning for ${esc(s.id)}">
         <h3 class="workflow-heading"><span aria-hidden="true">04</span> Ground truth reasoning</h3>
@@ -88,7 +90,7 @@ function issueUrl(s, p) {
   return url.href;
 }
 function matches(p, s) {
-  return (state.category === 'all' || p.category === state.category) && (state.facility === 'all' || p.facility === state.facility) && (state.status === 'all' || verdict(s.id) === state.status) && (!state.query || [p.title, p.authors, p.doi, p.category, p.facility, s.id, s.title, s.kind, s.prompt.background, s.prompt.instruction, ...s.inputs.flatMap(file => [file.name, file.description]), s.verification.description, ...['origin', 'generatedBy', 'provenance', 'description'].map(key => s.verification.thresholds?.[key] || ''), s.groundTruthReasoning || ''].join(' ').toLowerCase().includes(state.query));
+  return (state.category === 'all' || p.category === state.category) && (state.facility === 'all' || p.facility === state.facility) && (state.status === 'all' || verdict(s.id) === state.status) && (!state.query || [p.title, p.authors, p.doi, p.category, p.facility, s.id, s.title, s.kind, s.prompt.background, s.prompt.instruction, ...s.inputs.flatMap(file => [file.name, file.description]), s.verification.description, ...['origin', 'generatedBy', 'provenance', 'description'].map(key => s.verification.thresholds?.[key] || ''), ...(s.verification.thresholds?.notes || []).flatMap(note => [note.title, note.description]), s.groundTruthReasoning || ''].join(' ').toLowerCase().includes(state.query));
 }
 function render() {
   const open = new Set([...document.querySelectorAll('details[open][id]')].map(d => d.id));
