@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "datasetId": "spectral-agent-demo-v1",
+  "title": "Spectral Agent Bench",
+  "demo": true,
+  "papers": [
+    {
+      "id": "demo-copper",
+      "title": "Copper speciation across a model catalyst reduction series",
+      "authors": "Demonstration study · fictional source",
+      "category": "Catalyst",
+      "facility": "Demo beamline A",
+      "scenarios": [
+        {
+          "id": "DEMO-001",
+          "title": "Copper oxide catalyst after hydrogen treatment",
+          "edge": "Cu K-edge",
+          "prompt": "A supported copper oxide catalyst is treated in a reducing atmosphere. A synthetic reference fit assigns 0.70 of the normalized signal to metallic Cu and 0.30 to CuO.\n\nWhich copper species are represented, and what are their fitted fractions? Explain one limitation of interpreting these coefficients as bulk phase fractions.",
+          "groundTruth": {"Species": "Metallic Cu and CuO", "Fitted fractions": "Cu: 0.70; CuO: 0.30", "Reasoning": "The coefficients describe the supplied normalized reference fit. Interpreting them as bulk fractions requires appropriate references, consistent normalization, and a validated mixing model."},
+          "rubric": [
+            {"criterion": "Species identification", "answer": "Identifies both metallic Cu and CuO.", "points": 2},
+            {"criterion": "Fraction recovery", "answer": "Reports 0.70 Cu and 0.30 CuO, or equivalent percentages.", "points": 2},
+            {"criterion": "Interpretation", "answer": "States a limitation involving references, normalization, or the mixing model.", "points": 1}
+          ],
+          "evidence": [{"image": "assets/demo-fit.svg", "label": "Synthetic fit · illustration", "caption": "Constructed reference curves and a 70:30 mixture. These curves are illustrative, not measured Cu spectra."}]
+        },
+        {
+          "id": "DEMO-002",
+          "title": "Assessing an incomplete reference library",
+          "edge": "Cu K-edge",
+          "prompt": "A copper-containing sample is fitted using only metallic Cu and CuO reference spectra. The fit shows a systematic residual near the absorption edge.\n\nIs this sufficient evidence to identify an additional phase as Cu2O? What would you check before changing the reference library?",
+          "groundTruth": {"Reference answer": "No. A systematic residual alone does not uniquely identify Cu2O.", "Checks": "Inspect energy alignment, normalization, signal quality, fit range, and the suitability of the existing references. Evaluate additional candidate references against independent evidence."},
+          "rubric": [
+            {"criterion": "Uncertainty", "answer": "Rejects a unique Cu2O assignment from the residual alone.", "points": 2},
+            {"criterion": "Next steps", "answer": "Proposes at least two relevant checks before accepting another reference.", "points": 2}
+          ],
+          "evidence": [{"label": "Demonstration premise", "caption": "The residual is stipulated in the prompt. No measured spectrum or source paper is attached."}]
+        }
+      ]
+    },
+    {
+      "id": "demo-electrode",
+      "title": "Tracking a model electrode through a charge–discharge cycle",
+      "authors": "Demonstration study · fictional source",
+      "category": "Electrochemistry",
+      "facility": "Demo beamline B",
+      "scenarios": [
+        {
+          "id": "DEMO-003",
+          "title": "Recovery of a reference fit after discharge",
+          "edge": "Fe K-edge",
+          "prompt": "A synthetic two-reference fit gives reference-A fractions of 0.80 before charge, 0.25 after charge, and 0.78 after discharge.\n\nHow much does the reference-A fraction change during charge? Does the return to 0.78 establish complete structural reversibility?",
+          "groundTruth": {"Change during charge": "−0.55, a decrease of 55 percentage points.", "Interpretation": "The fitted fraction returns close to its starting value. This alone does not establish complete structural reversibility; uncertainties and other structural evidence are needed."},
+          "rubric": [
+            {"criterion": "Quantitative change", "answer": "Calculates a decrease of 0.55 or 55 percentage points.", "points": 2},
+            {"criterion": "Scope of conclusion", "answer": "Distinguishes recovery of the fitted fraction from proof of complete structural reversibility.", "points": 2}
+          ],
+          "evidence": [{"image": "assets/demo-cycle.svg", "label": "Synthetic fit coefficients", "caption": "Illustrative values supplied by the scenario: 0.80 → 0.25 → 0.78. No experimental uncertainties are available."}]
+        }
+      ]
+    },
+    {
+      "id": "demo-environment",
+      "title": "Reference selection for a model environmental sample",
+      "authors": "Demonstration study · fictional source",
+      "category": "Environmental",
+      "facility": "Demo beamline A",
+      "scenarios": [
+        {
+          "id": "DEMO-004",
+          "title": "An ambiguous iron-bearing sediment mixture",
+          "edge": "Fe K-edge",
+          "prompt": "Two different combinations of reference spectra fit a synthetic sediment spectrum comparably well. No independent mineralogical measurements are provided.\n\nHow should the phase assignment be reported, and what additional evidence could help distinguish the candidate explanations?",
+          "groundTruth": {"Reference answer": "Report the assignment as non-unique and describe the competing candidate fits.", "Useful follow-up": "Compare fit uncertainty and residuals, evaluate reference suitability, and seek independent mineralogical or chemical evidence before assigning a unique composition."},
+          "rubric": [
+            {"criterion": "Ambiguity", "answer": "Explicitly reports a non-unique assignment without inventing a definitive composition.", "points": 2},
+            {"criterion": "Evidence", "answer": "Suggests fit diagnostics and at least one independent source of evidence.", "points": 2}
+          ],
+          "evidence": [{"label": "Demonstration premise", "caption": "Comparable fits are stipulated for this fictional example. Replace this note with source figures or page references for a real benchmark."}]
+        }
+      ]
+    }
+  ]
+}
