@@ -21,15 +21,46 @@ def make(q,title,inputs,background,instruction,reason,check,steps,evidence,figur
     return {'id':'GLEASON24-'+q,'kind':'Subquestion','title':title,'inputs':inputs,'prompt':{'background':background,'instruction':instruction},'verification':verification,'groundTruthReasoning':reason}
 
 selection='Use the saved Materials Project Cu average, rounded to two decimals. The released workflow substitutes 0 when the Cu assignment is missing. Exclude material_id="Failed", records with an error or missing L3 reference, and labels ≥3. This is the historical data rule; an imputed zero is not independently established Cu(0).'
+q1_steps=[
+    ('Read the crystal structure','Python / pymatgen',
+     'Read L3_001_Cu_feff.inp with Python. Extract the lattice lengths, angles, species and fractional coordinates from its header, then construct a pymatgen Structure using Lattice.from_parameters.',
+     'A six-atom TbCu₅ unit cell containing one Tb atom and five Cu atoms.'),
+    ('Determine the site weights','Python / pymatgen SpacegroupAnalyzer',
+     'Identify equivalent atoms with SpacegroupAnalyzer(symprec=0.01).get_symmetrized_structure().equivalent_indices. Keep the Cu groups and divide each group size by the total number of Cu atoms.',
+     'Zero-based representative site 1 occurs once and site 2 represents four equivalent atoms, giving weights 1/5 = 0.2 and 4/5 = 0.8.'),
+    ('Load the four edge spectra','Python / NumPy',
+     'Use numpy.loadtxt to read the L2 and L3 xmu.dat files for sites 001 and 002. Select column 1 for photon energy in eV and column 4 for absorption, preserving their supplied conventions.',
+     'Separate L₂ and L₃ energy–intensity arrays for each Cu environment.'),
+    ('Interpolate each edge','Python / NumPy',
+     'For this worked solution, use numpy.arange to make a 0.1 eV grid from round(min(E)+0.15,1) to round(max(E)−0.15,1), excluding the upper bound. Use numpy.interp for linear interpolation of each edge onto its grid.',
+     'Regularly sampled L₂ and L₃ curves ready for combination.'),
+    ('Combine L₂ and L₃ for each site','Python / NumPy',
+     'Extend L₂ down to the L₃ grid start using b(E+a)^10. Determine a and b from an intensity of 1e−10 at that start and the first interpolated L₂ point. Prepend this extension to L₂ and add it pointwise to L₃ over the L₃ grid.',
+     'One combined Cu L₂,₃ spectrum for each representative site.'),
+    ('Average the Cu sites','Python / NumPy',
+     'Find the overlap of the two site energy ranges, build a common 0.1 eV grid excluding its upper endpoint, and interpolate both site curves onto it. Calculate S(E) = 0.2 S₁(E) + 0.8 S₂(E). The weights account for the number of Cu atoms represented by each simulation.',
+     'The worked solution produces a material-averaged spectrum with 545 samples; this row count is specific to its numerical choices.'),
+    ('Save the answer and plot the contributions','Python / pandas, json and Matplotlib',
+     'Use pandas.DataFrame.to_csv to save energy_eV and intensity in spectrum.csv. Use Python json to save material_id, site_weights and the output row count in result.json. Use Matplotlib to overlay the weighted site contributions and their sum in plot.png.',
+     'The requested numerical spectrum, result metadata and contribution plot. The archived run also retains an optional energy-reference diagnostic.'),
+    ('Check the reconstructed answer','Evaluator / Python verify.py',
+     'After the candidate finishes, run verify.py separately to check its site weights, reported row count and spectral agreement. The evaluator reference is the mp-1077262 row of the authors released 110222_Cu_DF_With_Spectra.joblib, previously extracted with joblib and pandas by prepare_assets.py. The candidate does not read that reference. Apply the comparison policy documented in Verification.',
+     'The recorded execution passes the numerical checks, with normalized RMSE 0.0 on the comparison interval and zero reported peak-energy, peak-height and edge-area errors. Scientific interpretation and plot readability require separate review.')
+]
+q1_reason='\n\n'.join([
+    'Worked solution: reconstruct the material spectrum from the supplied FEFF outputs using candidate.py. The interpolation and padding below follow the authors recipe as one valid numerical treatment; the benchmark also permits other justified treatments.',
+    *[f'{i}. {title} ({tool})\n{operation}\nResult: {artifact}' for i,(title,tool,operation,artifact) in enumerate(q1_steps,1)],
+    'Execution: python candidate.py Q1 --inputs INPUT_DIRECTORY --output OUTPUT_DIRECTORY. The Q1_candidate_workflow.json link in Verification records the actual commands, program versions and outputs. Source methods: Database_Construction.ipynb cells 1, 9 and 10. FEFF is the source of the supplied simulations; no new FEFF calculation is run here.'
+])
 sc=[]
 sc.append(make('Q1','What material-level Cu L₂,₃ spectrum is predicted for TbCu₅?',[
     file('Q1','L3_001_Cu_feff.inp','Unmodified FEFF input deck containing the six-atom unit cell; absorber indices in filenames are zero-based.'),
     *[file('Q1',f'{edge}_{site}_Cu_xmu.dat',f'Unmodified site-resolved FEFF {edge} output for Cu site {int(site)}. Column 1 is photon energy (eV) and column 4 is absorption.') for edge in ['L2','L3'] for site in ['001','002']]],
     'The supplied files contain separate Cu L₂ and L₃ FEFF spectra for the inequivalent Cu sites in TbCu₅ (Materials Project ID mp-1077262). The crystal structure is included in the FEFF input file. Use a positional symmetry tolerance of 0.01 Å when identifying equivalent Cu sites.',
     'Construct the material-averaged Cu L₂,₃ spectrum from the supplied simulations, preserving the FEFF energy and intensity conventions and resolving both edges. Determine the site weights from the structure. Save spectrum.csv with energy_eV,intensity, an overlay plot of weighted site contributions and their sum, and result.json containing material_id, site_weights keyed by zero-based site index, and points (your output row count). Justify how you combine the edges and handle interpolation, unequal energy ranges and site multiplicities.',
-    'The six-atom TbCu5 cell contains five Cu atoms in multiplicity groups 1 and 4, so the weights are 0.2 and 0.8. The reference material spectrum is copied from the authors released pre-alignment table for mp-1077262. It has 545 samples, but that count is not a required answer. The candidate workflow retains the authors interpolation/padding recipe as one worked solution; other justified numerical treatments may pass. The optional saved L3 reference is an archival diagnostic, not part of this research question. This tests postprocessing of converged simulations, not a new FEFF calculation. Source: Database_Construction.ipynb cells 1, 7, 9 and 10.',
+    q1_reason,
     'Require multiplicity-derived site weights and physically justified edge combination. Compare the reconstructed spectrum with the released material spectrum and inspect the contribution plot and reasoning. Different row counts, grids and padding functions are accepted. Numerical screening uses the separately documented benchmark thresholds below; other defensible methods need reviewer adjudication.',
-    [('Python / pymatgen','Parse the structure header and identify symmetry-equivalent Cu sites using the supplied 0.01 Å tolerance.','Multiplicity-derived weights.'),('Python / NumPy','Worked replay choice: linearly interpolate each edge at 0.1 eV from round(min(E)+0.15,1) to round(max(E)−0.15,1), excluding the upper bound. Extend L₂ to the L₃ start with (E+a)^10 b through intensity 1e−10 there and the first L₂ sample. Sum edges on the L₃ grid, then average sites by multiplicity on their common interval, excluding its upper endpoint. These numerical choices are not required of the agent.','spectrum.csv; result.json; optional archival L3 energy reference.'),('Python / Matplotlib','Plot the two weighted site spectra and their sum.','plot.png'),('Evaluator / verify.py','Compare spectral shape and edge features on the reference interior range, check site weights, and review the physical justification.','Numerical screening plus scientific review, without an exact-array requirement.')],['spectrum.csv'],thresholds={
+    [(tool,operation,artifact) for _,tool,operation,artifact in q1_steps],['spectrum.csv'],thresholds={
         'origin':'Benchmark-defined',
         'generatedBy':'Model-generated',
         'provenance':'Note, the screening thresholds and comparison settings below were not reported in the paper and are not physical uncertainty estimates. They were produced separately during the labeling process.',
