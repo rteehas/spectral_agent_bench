@@ -41,6 +41,10 @@ function fileListHTML(files, showDescription = true) {
 function promptHTML(s) {
   return `<div class="prompt-box orchestrator-prompt"><h4>Background</h4><p>${esc(s.prompt.background)}</p><h4>Input data</h4><ul class="prompt-files">${s.inputs.map(file => `<li><strong>${esc(file.name)}</strong><span>${esc(file.description)}</span><a href="${esc(safeUrl(file.url))}" target="_blank" rel="noopener noreferrer">${esc(safeUrl(file.url))}</a></li>`).join('')}</ul><h4>Task for the orchestrator</h4><p>${esc(s.prompt.instruction)}</p></div>`;
 }
+function thresholdsHTML(thresholds) {
+  if (!thresholds) return '';
+  return `<section class="threshold-box" aria-label="Benchmark thresholds"><h4>Benchmark thresholds</h4><div class="threshold-origin"><span class="badge">${esc(thresholds.origin)}</span><span class="badge">${esc(thresholds.generatedBy)}</span></div><p>${esc(thresholds.provenance)}</p><p>${esc(thresholds.description)}</p>${thresholds.data?.length ? fileListHTML(thresholds.data) : ''}</section>`;
+}
 function scenarioHTML(s, paper) {
   const review = state.reviews[s.id] || {}, current = verdict(s.id);
   return `<details class="scenario" id="scenario-${esc(s.id)}" data-id="${esc(s.id)}" data-verdict="${current}">
@@ -60,6 +64,8 @@ function scenarioHTML(s, paper) {
         <p>${esc(s.verification.description)}</p>
         ${s.verification.data?.length ? `<h4>Ground-truth data</h4>${fileListHTML(s.verification.data)}` : ''}
         ${s.verification.figures?.length ? `<h4>Comparison figures</h4><div class="verification-figures">${evidenceHTML(s.verification.figures)}</div>` : ''}
+        ${thresholdsHTML(s.verification.thresholds)}
+        ${s.verification.methods?.length ? `<h4>Worked workflow and checker</h4>${fileListHTML(s.verification.methods)}` : ''}
       </section>
       <section class="content-section example-section reasoning-section" aria-label="Ground truth reasoning for ${esc(s.id)}">
         <h3 class="workflow-heading"><span aria-hidden="true">04</span> Ground truth reasoning</h3>
@@ -82,7 +88,7 @@ function issueUrl(s, p) {
   return url.href;
 }
 function matches(p, s) {
-  return (state.category === 'all' || p.category === state.category) && (state.facility === 'all' || p.facility === state.facility) && (state.status === 'all' || verdict(s.id) === state.status) && (!state.query || [p.title, p.authors, p.doi, p.category, p.facility, s.id, s.title, s.kind, s.prompt.background, s.prompt.instruction, ...s.inputs.flatMap(file => [file.name, file.description]), s.verification.description, s.groundTruthReasoning || ''].join(' ').toLowerCase().includes(state.query));
+  return (state.category === 'all' || p.category === state.category) && (state.facility === 'all' || p.facility === state.facility) && (state.status === 'all' || verdict(s.id) === state.status) && (!state.query || [p.title, p.authors, p.doi, p.category, p.facility, s.id, s.title, s.kind, s.prompt.background, s.prompt.instruction, ...s.inputs.flatMap(file => [file.name, file.description]), s.verification.description, ...['origin', 'generatedBy', 'provenance', 'description'].map(key => s.verification.thresholds?.[key] || ''), s.groundTruthReasoning || ''].join(' ').toLowerCase().includes(state.query));
 }
 function render() {
   const open = new Set([...document.querySelectorAll('details[open][id]')].map(d => d.id));

@@ -96,6 +96,13 @@ def validate(data, public=PUBLIC):
             data_files = verification.get('data', [])
             figures = verification.get('figures', [])
             files(data_files, 'Ground-truth data')
+            files(verification.get('methods', []), 'Worked workflow and checker')
+            if 'thresholds' in verification:
+                thresholds = verification['thresholds']
+                require(isinstance(thresholds, dict), f'{sid}: thresholds must be an object')
+                for field in ('origin', 'generatedBy', 'provenance', 'description'):
+                    text(thresholds.get(field), f'Thresholds {field}')
+                files(thresholds.get('data', []), 'Threshold policy files')
             evidence(figures)
             require(bool(data_files or figures), f'{sid}: verification needs ground-truth data or comparison figures')
             for figure in figures:

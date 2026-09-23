@@ -51,6 +51,8 @@ Each example has:
 - `verification.description`: how to compare the agent's output.
 - `groundTruthReasoning`: a plain-text explanation of the expected result, the evidence or calculation supporting it, and any assumptions or limitations. Shown after Verification and excluded from the orchestrator prompt. Paragraph breaks are preserved. If omitted, the section states that reasoning has not been added yet.
 - `verification.data`: ground-truth file links, and/or `verification.figures`: comparison images from the paper, with captions and optional source links. At least one file or figure is required. Either list may be omitted or empty.
+- `verification.thresholds` (optional): a separate benchmark-thresholds component with `origin`, `generatedBy`, `provenance`, and `description` strings, plus optional `data` file links. Identify who defined/generated the thresholds and distinguish benchmark choices from paper-reported values. These fields are excluded from the agent prompt.
+- `verification.methods` (optional): worked workflow and checker file links, displayed separately from ground-truth data and excluded from the agent prompt.
 
 Example task (replace the example paths with files you add):
 
@@ -82,7 +84,7 @@ Example task (replace the example paths with files you add):
       {
         "name": "expected_coefficients.json",
         "url": "data/verification/expected_coefficients.json",
-        "description": "Expected coefficients and allowed error tolerance."
+        "description": "Expected coefficients."
       }
     ],
     "figures": [
