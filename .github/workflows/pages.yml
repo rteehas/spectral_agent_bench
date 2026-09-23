@@ -23,6 +23,19 @@ jobs:
         run: python3 scripts/validate_data.py
       - name: Check JavaScript syntax
         run: node --check docs/assets/app.js
+      - name: Version browser assets for this deployment
+        if: github.event_name != 'pull_request'
+        run: |
+          python3 - <<'PYTHON'
+          import os
+          from pathlib import Path
+          page = Path('docs/index.html')
+          html = page.read_text()
+          version = os.environ['GITHUB_SHA']
+          for asset in ('assets/app.js', 'assets/style.css'):
+              html = html.replace(f'"{asset}"', f'"{asset}?v={version}"')
+          page.write_text(html)
+          PYTHON
       - name: Upload website
         if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v4

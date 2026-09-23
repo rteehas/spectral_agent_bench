@@ -144,7 +144,10 @@ $('#import-file').addEventListener('change', async e => {
 window.addEventListener('hashchange', focusHash);
 async function init() {
   try {
-    const response = await fetch('data/benchmark.json');
+    // Match the dataset to the deployed script version to avoid stale browser/CDN files.
+    const datasetUrl = new URL('../data/benchmark.json', import.meta.url);
+    datasetUrl.search = new URL(import.meta.url).search;
+    const response = await fetch(datasetUrl, { cache: 'no-cache' });
     if (!response.ok) throw new Error(`Dataset request failed (${response.status}).`);
     state.data = await response.json();
     if (state.data.schemaVersion !== 1 || !Array.isArray(state.data.papers)) throw new Error('Unsupported dataset format.');

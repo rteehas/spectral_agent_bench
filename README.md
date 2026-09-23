@@ -98,7 +98,7 @@ Open http://localhost:8765. Use an HTTP server rather than opening the HTML file
 
 ## GitHub Pages deployment
 
-The workflow in `.github/workflows/pages.yml` validates the dataset and deploys **only `docs/`** on pushes to `main`. Pull requests run validation without deployment.
+The workflow in `.github/workflows/pages.yml` validates the dataset and deploys **only `docs/`** on pushes to `main`. Pull requests run validation without deployment. Each deployment versions the JavaScript, stylesheet, and dataset requests together so a reload does not mix cached files from earlier releases.
 
 In the repository's **Settings → Pages**, set **Source** to **GitHub Actions**. Once enabled, each successful push publishes the site at the URL above. Deployment status appears under **Actions → Deploy review site**.
 
