@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """Validate the public benchmark dataset before deployment (standard library only)."""
 import json
-import math
 import re
 import sys
 from pathlib import Path
@@ -30,6 +29,17 @@ def validate(data, public=PUBLIC):
             require(public.resolve() in path.parents, 'Asset must remain inside docs/')
             require(path.is_file(), f'Missing asset: {value}')
 
+    def files(items, field):
+        require(isinstance(items, list), f'{field} must be a list')
+        names = set()
+        for item in items:
+            require(isinstance(item, dict), f'{field} entries must be objects')
+            text(item.get('name'), f'{field} filename')
+            require(item['name'] not in names, f'Duplicate filename in {field}: {item["name"]}')
+            names.add(item['name'])
+            text(item.get('description'), f'{field} description')
+            asset(item.get('url'))
+
     def evidence(items):
         require(isinstance(items, list), 'evidence must be a list')
         for item in items:
@@ -41,7 +51,7 @@ def validate(data, public=PUBLIC):
                     asset(item[key])
 
     require(isinstance(data, dict), 'Dataset must be an object')
-    require(data.get('schemaVersion') == 1, 'schemaVersion must be 1')
+    require(data.get('schemaVersion') == 2, 'schemaVersion must be 2')
     text(data.get('datasetId'), 'datasetId')
     require(bool(re.fullmatch(r'[A-Za-z0-9_-]+', data['datasetId'])), 'datasetId must be URL-safe')
     require(isinstance(data.get('demo'), bool), 'demo must be true or false')
@@ -64,24 +74,30 @@ def validate(data, public=PUBLIC):
         require(isinstance(paper.get('scenarios'), list) and paper['scenarios'], 'Each paper needs scenarios')
         for scenario in paper['scenarios']:
             require(isinstance(scenario, dict), 'Scenario must be an object')
-            for field in ('id', 'title', 'edge', 'prompt'):
+            for field in ('id', 'title', 'kind'):
                 text(scenario.get(field), f'Scenario {field}')
             sid = scenario['id']
             require(bool(re.fullmatch(r'[A-Za-z0-9_-]+', sid)) and sid not in ('__proto__', 'constructor', 'prototype'), 'Scenario IDs must be URL-safe and non-reserved')
             require(sid not in scenario_ids, f'Duplicate scenario ID: {sid}')
             scenario_ids.add(sid)
-            truth = scenario.get('groundTruth')
-            require(isinstance(truth, dict) and bool(truth), f'{sid}: groundTruth must be a nonempty object')
-            for key, value in truth.items():
-                text(key, 'Ground truth field'); text(value, 'Ground truth value')
-            rubric = scenario.get('rubric')
-            require(isinstance(rubric, list) and bool(rubric), f'{sid}: rubric must be a nonempty list')
-            for row in rubric:
-                require(isinstance(row, dict), 'Rubric row must be an object')
-                text(row.get('criterion'), 'Rubric criterion'); text(row.get('answer'), 'Rubric answer')
-                points = row.get('points')
-                require(type(points) in (int, float) and math.isfinite(points) and points >= 0, 'Rubric points must be finite nonnegative numbers')
-            evidence(scenario.get('evidence', []))
+            require(scenario['kind'] in ('Step', 'Subhypothesis', 'Subquestion'), f'{sid}: invalid example kind')
+            inputs = scenario.get('inputs')
+            files(inputs, 'Inputs')
+            require(bool(inputs), f'{sid}: at least one input file is required')
+            prompt = scenario.get('prompt')
+            require(isinstance(prompt, dict), f'{sid}: prompt must contain background and instruction')
+            text(prompt.get('background'), 'Prompt background')
+            text(prompt.get('instruction'), 'Prompt instruction')
+            verification = scenario.get('verification')
+            require(isinstance(verification, dict), f'{sid}: verification must be an object')
+            text(verification.get('description'), 'Verification description')
+            data_files = verification.get('data', [])
+            figures = verification.get('figures', [])
+            files(data_files, 'Ground-truth data')
+            evidence(figures)
+            require(bool(data_files or figures), f'{sid}: verification needs ground-truth data or comparison figures')
+            for figure in figures:
+                asset(figure.get('image'))
     return len(paper_ids), len(scenario_ids)
 
 

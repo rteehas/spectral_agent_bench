@@ -1,0 +1,13 @@
+{
+  "synthetic": true,
+  "note": "Fictional demonstration data; not measured spectra.",
+  "fraction_A": {
+    "before_charge": 0.8,
+    "after_charge": 0.25,
+    "after_discharge": 0.78
+  },
+  "charge_change": -0.55,
+  "discharge_minus_initial": -0.02,
+  "absolute_coefficient_tolerance": 0.001,
+  "conclusion": "Recovery of a fit coefficient alone does not prove complete structural reversibility."
+}

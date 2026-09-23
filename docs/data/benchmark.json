@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 1,
-  "datasetId": "spectral-agent-demo-v1",
+  "schemaVersion": 2,
+  "datasetId": "spectral-agent-demo-v2",
   "title": "Spectral Agent Bench",
   "demo": true,
   "papers": [
@@ -15,28 +15,73 @@
       "scenarios": [
         {
           "id": "DEMO-001",
-          "title": "Copper oxide catalyst after hydrogen treatment",
-          "edge": "Cu K-edge",
-          "prompt": "A supported copper oxide catalyst is treated in a reducing atmosphere. A synthetic reference fit assigns 0.70 of the normalized signal to metallic Cu and 0.30 to CuO.\n\nWhich copper species are represented, and what are their fitted fractions? Explain one limitation of interpreting these coefficients as bulk phase fractions.",
-          "groundTruth": {"Species": "Metallic Cu and CuO", "Fitted fractions": "Cu: 0.70; CuO: 0.30", "Reasoning": "The coefficients describe the supplied normalized reference fit. Interpreting them as bulk fractions requires appropriate references, consistent normalization, and a validated mixing model."},
-          "rubric": [
-            {"criterion": "Species identification", "answer": "Identifies both metallic Cu and CuO.", "points": 2},
-            {"criterion": "Fraction recovery", "answer": "Reports 0.70 Cu and 0.30 CuO, or equivalent percentages.", "points": 2},
-            {"criterion": "Interpretation", "answer": "States a limitation involving references, normalization, or the mixing model.", "points": 1}
+          "title": "Fit the reference contributions to the supplied spectrum",
+          "prompt": {
+            "background": "This fictional study uses linear combinations of two normalized reference signals to describe a reduction series. The arrays share the same axis, in arbitrary units, and have no added noise. No physical species assignment is implied by the reference labels.",
+            "instruction": "Coordinate loading and validation of the input arrays, then fit the target with nonnegative reference coefficients constrained to sum to one. Report the coefficients, a residual summary, and an overlay of the target and reconstructed signal. Explain which assumptions would need to be checked before applying this workflow to experimental spectra."
+          },
+          "kind": "Step",
+          "inputs": [
+            {
+              "name": "reduction_spectrum.json",
+              "url": "data/demo/inputs/reduction_spectrum.json",
+              "description": "Synthetic target signal on a common axis."
+            },
+            {
+              "name": "reference_spectra.json",
+              "url": "data/demo/inputs/reference_spectra.json",
+              "description": "Two synthetic basis signals, labeled A and B."
+            }
           ],
-          "evidence": [{"image": "assets/demo-fit.svg", "label": "Synthetic fit · illustration", "caption": "Constructed reference curves and a 70:30 mixture. These curves are illustrative, not measured Cu spectra."}]
+          "verification": {
+            "description": "Compare the fitted coefficients with the ground-truth file. The overlay provides an additional visual check; it is a synthetic illustration, not a figure extracted from a publication.",
+            "data": [
+              {
+                "name": "mixture_fit.json",
+                "url": "data/demo/verification/mixture_fit.json",
+                "description": "Expected reference coefficients and numerical comparison tolerance."
+              }
+            ],
+            "figures": [
+              {
+                "image": "assets/demo-fit.svg",
+                "label": "Synthetic comparison plot · not a paper figure",
+                "caption": "The target is a 70:30 mixture of the two supplied reference signals. Curves are illustrative, not measured Cu spectra."
+              }
+            ]
+          }
         },
         {
           "id": "DEMO-002",
-          "title": "Assessing an incomplete reference library",
-          "edge": "Cu K-edge",
-          "prompt": "A copper-containing sample is fitted using only metallic Cu and CuO reference spectra. The fit shows a systematic residual near the absorption edge.\n\nIs this sufficient evidence to identify an additional phase as Cu2O? What would you check before changing the reference library?",
-          "groundTruth": {"Reference answer": "No. A systematic residual alone does not uniquely identify Cu2O.", "Checks": "Inspect energy alignment, normalization, signal quality, fit range, and the suitability of the existing references. Evaluate additional candidate references against independent evidence."},
-          "rubric": [
-            {"criterion": "Uncertainty", "answer": "Rejects a unique Cu2O assignment from the residual alone.", "points": 2},
-            {"criterion": "Next steps", "answer": "Proposes at least two relevant checks before accepting another reference.", "points": 2}
+          "title": "Can an axis misalignment explain the apparent mismatch?",
+          "prompt": {
+            "background": "A mismatch near a spectral feature may reflect calibration or alignment differences. Here the signals are synthetic, the axis is in arbitrary units, and no independent evidence for a new component is supplied.",
+            "instruction": "Test whether translating reference A along the axis can account for the supplied signal. Define your shift convention, estimate the displacement, and compare residuals before and after alignment over their common range. Report whether the mismatch alone supports adding another component, and identify remaining limitations."
+          },
+          "kind": "Subhypothesis",
+          "inputs": [
+            {
+              "name": "shifted_spectrum.json",
+              "url": "data/demo/inputs/shifted_spectrum.json",
+              "description": "Synthetic signal with an unknown axis displacement."
+            },
+            {
+              "name": "reference_spectra.json",
+              "url": "data/demo/inputs/reference_spectra.json",
+              "description": "Unshifted candidate reference signals."
+            }
           ],
-          "evidence": [{"label": "Demonstration premise", "caption": "The residual is stipulated in the prompt. No measured spectrum or source paper is attached."}]
+          "verification": {
+            "description": "Check the shift magnitude and sign convention against the ground-truth record. Allow for the stated numerical tolerance when interpolating.",
+            "data": [
+              {
+                "name": "alignment_check.json",
+                "url": "data/demo/verification/alignment_check.json",
+                "description": "Known generating shift, tolerance, and expected interpretation."
+              }
+            ],
+            "figures": []
+          }
         }
       ]
     },
@@ -49,15 +94,35 @@
       "scenarios": [
         {
           "id": "DEMO-003",
-          "title": "Recovery of a reference fit after discharge",
-          "edge": "Fe K-edge",
-          "prompt": "A synthetic two-reference fit gives reference-A fractions of 0.80 before charge, 0.25 after charge, and 0.78 after discharge.\n\nHow much does the reference-A fraction change during charge? Does the return to 0.78 establish complete structural reversibility?",
-          "groundTruth": {"Change during charge": "−0.55, a decrease of 55 percentage points.", "Interpretation": "The fitted fraction returns close to its starting value. This alone does not establish complete structural reversibility; uncertainties and other structural evidence are needed."},
-          "rubric": [
-            {"criterion": "Quantitative change", "answer": "Calculates a decrease of 0.55 or 55 percentage points.", "points": 2},
-            {"criterion": "Scope of conclusion", "answer": "Distinguishes recovery of the fitted fraction from proof of complete structural reversibility.", "points": 2}
+          "title": "How much of the fitted composition recovers after discharge?",
+          "prompt": {
+            "background": "The fictional experiment follows a sample through three states. Every signal uses the same arbitrary-unit axis and reference basis. No experimental uncertainty or independent structural measurements are available.",
+            "instruction": "Coordinate consistent nonnegative, sum-to-one fits for all three states. Plot the fraction of reference A across the cycle, calculate its change during charge and the difference between the final and initial state, and explain whether these outputs establish complete structural reversibility."
+          },
+          "kind": "Subquestion",
+          "inputs": [
+            {
+              "name": "cycle_spectra.json",
+              "url": "data/demo/inputs/cycle_spectra.json",
+              "description": "Three synthetic signals: before charge, after charge, and after discharge."
+            },
+            {
+              "name": "reference_spectra.json",
+              "url": "data/demo/inputs/reference_spectra.json",
+              "description": "Common A and B basis signals used across the cycle."
+            }
           ],
-          "evidence": [{"image": "assets/demo-cycle.svg", "label": "Synthetic fit coefficients", "caption": "Illustrative values supplied by the scenario: 0.80 → 0.25 → 0.78. No experimental uncertainties are available."}]
+          "verification": {
+            "description": "Compare the recovered fractions and their trend against the plot below. In a real example, this area can display a plot cropped from the paper PDF, with its figure number, page, and source link. This demo uses a synthetic comparison plot.",
+            "data": [],
+            "figures": [
+              {
+                "image": "assets/demo-cycle.svg",
+                "label": "Cycle comparison plot · synthetic demonstration",
+                "caption": "Reference-A fractions are 0.80 before charge, 0.25 after charge, and 0.78 after discharge. The plot illustrates the paper-figure comparison workflow; it was not extracted from a PDF."
+              }
+            ]
+          }
         }
       ]
     },
@@ -70,15 +135,35 @@
       "scenarios": [
         {
           "id": "DEMO-004",
-          "title": "An ambiguous iron-bearing sediment mixture",
-          "edge": "Fe K-edge",
-          "prompt": "Two different combinations of reference spectra fit a synthetic sediment spectrum comparably well. No independent mineralogical measurements are provided.\n\nHow should the phase assignment be reported, and what additional evidence could help distinguish the candidate explanations?",
-          "groundTruth": {"Reference answer": "Report the assignment as non-unique and describe the competing candidate fits.", "Useful follow-up": "Compare fit uncertainty and residuals, evaluate reference suitability, and seek independent mineralogical or chemical evidence before assigning a unique composition."},
-          "rubric": [
-            {"criterion": "Ambiguity", "answer": "Explicitly reports a non-unique assignment without inventing a definitive composition.", "points": 2},
-            {"criterion": "Evidence", "answer": "Suggests fit diagnostics and at least one independent source of evidence.", "points": 2}
+          "title": "Do equally good fits identify a unique composition?",
+          "prompt": {
+            "background": "Different combinations of similar reference signals may reproduce the same observation. This fictional dataset has no independent mineralogical constraints. Treat the labels as basis identifiers, not validated physical species.",
+            "instruction": "Fit the target using the candidate reference signals and test whether the recovered coefficients are unique. Find at least two different nonnegative, sum-to-one coefficient sets if possible, compare their reconstructed signals, and explain what additional evidence would be needed to choose between the interpretations."
+          },
+          "kind": "Subquestion",
+          "inputs": [
+            {
+              "name": "ambiguous_spectrum.json",
+              "url": "data/demo/inputs/ambiguous_spectrum.json",
+              "description": "Synthetic signal to be interpreted."
+            },
+            {
+              "name": "alternative_references.json",
+              "url": "data/demo/inputs/alternative_references.json",
+              "description": "Three candidate references for testing uniqueness."
+            }
           ],
-          "evidence": [{"label": "Demonstration premise", "caption": "Comparable fits are stipulated for this fictional example. Replace this note with source figures or page references for a real benchmark."}]
+          "verification": {
+            "description": "Compare the proposed alternative fits against the equivalent models in the ground-truth file. The conclusion should explicitly address non-uniqueness.",
+            "data": [
+              {
+                "name": "nonunique_fit.json",
+                "url": "data/demo/verification/nonunique_fit.json",
+                "description": "Two exact alternative solutions and the expected interpretation."
+              }
+            ],
+            "figures": []
+          }
         }
       ]
     }

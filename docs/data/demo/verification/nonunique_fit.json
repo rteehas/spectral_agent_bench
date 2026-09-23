@@ -1,0 +1,17 @@
+{
+  "synthetic": true,
+  "note": "Fictional demonstration data; not measured spectra.",
+  "equivalent_models": [
+    {
+      "A": 0.5,
+      "B": 0.5,
+      "C": 0
+    },
+    {
+      "A": 0,
+      "B": 0,
+      "C": 1
+    }
+  ],
+  "conclusion": "Reference C equals the mean of A and B, making the phase assignment non-unique. Independent evidence is needed."
+}

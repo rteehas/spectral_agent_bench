@@ -1,0 +1,9 @@
+{
+  "synthetic": true,
+  "note": "Fictional demonstration data; not measured spectra.",
+  "reference": "A",
+  "axis_shift": 0.03,
+  "shift_unit": "arbitrary units",
+  "absolute_shift_tolerance": 0.002,
+  "conclusion": "An axis shift alone generates the discrepancy. A residual does not establish an additional species."
+}

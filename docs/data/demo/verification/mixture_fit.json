@@ -1,0 +1,10 @@
+{
+  "synthetic": true,
+  "note": "Fictional demonstration data; not measured spectra.",
+  "coefficients": {
+    "A": 0.7,
+    "B": 0.3
+  },
+  "absolute_coefficient_tolerance": 0.001,
+  "note_for_review": "Compare recovered nonnegative, sum-to-one coefficients; the synthetic mixture is noiseless."
+}

@@ -32,20 +32,53 @@ function evidenceHTML(items = []) {
     return `<div class="evidence-card"><div class="evidence-label"><strong>${esc(e.label || 'Source evidence')}</strong>${image ? '<span>Click to enlarge ↗</span>' : ''}</div>${image ? `<button class="evidence-open" data-image="${esc(image)}" data-caption="${esc(e.caption)}" data-label="${esc(e.label)}" aria-label="Enlarge ${esc(e.label || 'source evidence')}"><img src="${esc(image)}" alt="${esc(e.caption || e.label)}" loading="lazy"></button>` : ''}${e.caption ? `<p>${esc(e.caption)}</p>` : ''}${source ? `<p><a href="${esc(source)}" target="_blank" rel="noopener noreferrer">Open source ↗</a></p>` : ''}</div>`;
   }).join('');
 }
+function fileListHTML(files, showDescription = true) {
+  return `<ul class="file-list">${files.map(file => {
+    const url = safeUrl(file.url);
+    return `<li><a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(file.name)} ↗</a>${showDescription ? `<span>${esc(file.description)}</span>` : ''}</li>`;
+  }).join('')}</ul>`;
+}
+function promptHTML(s) {
+  return `<div class="prompt-box orchestrator-prompt"><h4>Background</h4><p>${esc(s.prompt.background)}</p><h4>Input data</h4><ul class="prompt-files">${s.inputs.map(file => `<li><strong>${esc(file.name)}</strong><span>${esc(file.description)}</span><a href="${esc(safeUrl(file.url))}" target="_blank" rel="noopener noreferrer">${esc(safeUrl(file.url))}</a></li>`).join('')}</ul><h4>Task for the orchestrator</h4><p>${esc(s.prompt.instruction)}</p></div>`;
+}
 function scenarioHTML(s, paper) {
   const review = state.reviews[s.id] || {}, current = verdict(s.id);
-  const total = s.rubric.reduce((sum, r) => sum + r.points, 0);
-  return `<details class="scenario" id="scenario-${esc(s.id)}" data-id="${esc(s.id)}" data-verdict="${current}"><summary><span class="scenario-id">${esc(s.id)}</span><span class="scenario-title">${esc(s.title)}</span><span class="edge">${esc(s.edge)}</span><span class="verdict-badge">${labels[current]}</span><span class="chevron" aria-hidden="true"></span></summary><div class="scenario-body"><div class="section-heading"><h3>Scenario details</h3><a class="permalink" href="#scenario-${encodeURIComponent(s.id)}">Link to scenario ↗</a></div><div class="content-grid"><div><section class="content-section"><h4>Model prompt</h4><div class="prompt-box"><p>${esc(s.prompt)}</p></div></section><section class="content-section"><h4>Source evidence</h4>${s.evidence?.length ? evidenceHTML(s.evidence) : '<p class="paper-source">No source evidence attached.</p>'}</section></div><section class="content-section"><h4>Reference answer</h4><div class="truth-box"><dl>${Object.entries(s.groundTruth).map(([key, value]) => `<dt>${esc(key)}</dt><dd>${esc(value)}</dd>`).join('')}</dl></div></section></div><section class="content-section"><div class="section-heading"><h3>Scoring rubric</h3><span class="badge">${total} points total</span></div><div class="table-scroll" tabindex="0" aria-label="Scoring rubric"><table><thead><tr><th scope="col">Criterion</th><th scope="col">Reference answer / scoring criteria</th><th scope="col">Points</th></tr></thead><tbody>${s.rubric.map(r => `<tr><td>${esc(r.criterion)}</td><td>${esc(r.answer)}</td><td>${r.points}</td></tr>`).join('')}</tbody></table></div></section><section class="review-form" aria-label="Review ${esc(s.id)}"><div class="review-top"><h3>Your review</h3><button class="text-button clear-review" type="button">Clear review</button></div><div class="review-actions" role="group" aria-label="Verdict for ${esc(s.id)}">${[['correct', '✓'], ['revision', '✎'], ['unsure', '?']].map(([status, icon]) => `<button class="verdict-button" type="button" data-status="${status}" aria-pressed="${status === current}">${icon} ${labels[status]}</button>`).join('')}</div><label for="comment-${esc(s.id)}">Comments or suggested corrections</label><textarea id="comment-${esc(s.id)}" maxlength="12000" placeholder="Describe any issues with the prompt, answer, rubric, or evidence…">${esc(review.comment || '')}</textarea><div class="review-bottom"><span class="save-state">${review.updatedAt ? 'Saved in this browser' : 'Only saved in this browser'}</span><a class="issue-link" href="${esc(issueUrl(s, paper))}" target="_blank" rel="noopener noreferrer">Open GitHub issue ↗</a></div></section></div></details>`;
+  return `<details class="scenario" id="scenario-${esc(s.id)}" data-id="${esc(s.id)}" data-verdict="${current}">
+    <summary><span class="scenario-id">${esc(s.id)}</span><span class="scenario-title">${esc(s.title)}</span><span class="edge">${esc(s.kind)}</span><span class="verdict-badge">${labels[current]}</span><span class="chevron" aria-hidden="true"></span></summary>
+    <div class="scenario-body">
+      <div class="section-heading"><h3>${esc(s.kind)}</h3><a class="permalink" href="#scenario-${encodeURIComponent(s.id)}">Link to example ↗</a></div>
+      <section class="content-section example-section" aria-label="Inputs for ${esc(s.id)}">
+        <h3 class="workflow-heading"><span aria-hidden="true">01</span> Inputs</h3>
+        ${fileListHTML(s.inputs)}
+      </section>
+      <section class="content-section example-section" aria-label="Orchestrator prompt for ${esc(s.id)}">
+        <h3 class="workflow-heading"><span aria-hidden="true">02</span> Orchestrator prompt</h3>
+        ${promptHTML(s)}
+      </section>
+      <section class="content-section example-section verification-section" aria-label="Verification for ${esc(s.id)}">
+        <h3 class="workflow-heading"><span aria-hidden="true">03</span> Verification</h3>
+        <p>${esc(s.verification.description)}</p>
+        ${s.verification.data?.length ? `<h4>Ground-truth data</h4>${fileListHTML(s.verification.data)}` : ''}
+        ${s.verification.figures?.length ? `<h4>Comparison figures</h4><div class="verification-figures">${evidenceHTML(s.verification.figures)}</div>` : ''}
+      </section>
+      <section class="review-form" aria-label="Review ${esc(s.id)}">
+        <div class="review-top"><h3>Your review</h3><button class="text-button clear-review" type="button">Clear review</button></div>
+        <div class="review-actions" role="group" aria-label="Verdict for ${esc(s.id)}">${[['correct', '✓'], ['revision', '✎'], ['unsure', '?']].map(([status, icon]) => `<button class="verdict-button" type="button" data-status="${status}" aria-pressed="${status === current}">${icon} ${labels[status]}</button>`).join('')}</div>
+        <label for="comment-${esc(s.id)}">Comments or suggested corrections</label><textarea id="comment-${esc(s.id)}" maxlength="12000" placeholder="Describe any issues with the inputs, orchestrator prompt, or verification…">${esc(review.comment || '')}</textarea>
+        <div class="review-bottom"><span class="save-state">${review.updatedAt ? 'Saved in this browser' : 'Only saved in this browser'}</span><a class="issue-link" href="${esc(issueUrl(s, paper))}" target="_blank" rel="noopener noreferrer">Open GitHub issue ↗</a></div>
+      </section>
+    </div>
+  </details>`;
 }
 function issueUrl(s, p) {
   const url = new URL('https://github.com/rteehas/spectral_agent_bench/issues/new');
   url.searchParams.set('title', `[Review] ${s.id}: ${s.title}`);
   const comment = state.reviews[s.id]?.comment || 'Describe your correction here.';
-  url.searchParams.set('body', `Scenario: ${s.id}\nPaper: ${p.title}\nDataset: ${state.data.datasetId}\n${p.doi ? `DOI: ${p.doi}\n` : ''}Verdict: ${labels[verdict(s.id)]}\n\n${comment.slice(0, 1200)}${comment.length > 1200 ? '\n\n[Long comment truncated. Attach an exported review file for the full text.]' : ''}`);
+  url.searchParams.set('body', `Example: ${s.id}\nPaper: ${p.title}\nDataset: ${state.data.datasetId}\n${p.doi ? `DOI: ${p.doi}\n` : ''}Verdict: ${labels[verdict(s.id)]}\n\n${comment.slice(0, 1200)}${comment.length > 1200 ? '\n\n[Long comment truncated. Attach an exported review file for the full text.]' : ''}`);
   return url.href;
 }
 function matches(p, s) {
-  return (state.category === 'all' || p.category === state.category) && (state.facility === 'all' || p.facility === state.facility) && (state.status === 'all' || verdict(s.id) === state.status) && (!state.query || [p.title, p.authors, p.doi, p.category, p.facility, s.id, s.title, s.edge, s.prompt, ...Object.values(s.groundTruth)].join(' ').toLowerCase().includes(state.query));
+  return (state.category === 'all' || p.category === state.category) && (state.facility === 'all' || p.facility === state.facility) && (state.status === 'all' || verdict(s.id) === state.status) && (!state.query || [p.title, p.authors, p.doi, p.category, p.facility, s.id, s.title, s.kind, s.prompt.background, s.prompt.instruction, ...s.inputs.flatMap(file => [file.name, file.description]), s.verification.description].join(' ').toLowerCase().includes(state.query));
 }
 function render() {
   const open = new Set([...document.querySelectorAll('details[open][id]')].map(d => d.id));
@@ -57,10 +90,10 @@ function render() {
     const colors = palette[index % palette.length];
     const doi = p.doi ? `https://doi.org/${encodeURI(p.doi)}` : '', pdf = safeUrl(p.pdf);
     const dataUrl = safeUrl(p.dataUrl), codeUrl = safeUrl(p.codeUrl);
-    return `<details class="paper" id="paper-${esc(p.id)}" style="--paper-accent:${colors[0]};--badge-bg:${colors[1]}"><summary><span class="paper-heading"><span class="paper-title">${esc(p.title)}</span><span class="paper-meta"><span class="badge category">${esc(p.category)}</span><span class="badge facility">${esc(p.facility)}</span><span>${esc(p.authors)}</span>${p.doi ? `<span>DOI: ${esc(p.doi)}</span>` : ''}</span></span><span class="paper-count">${scenarios.length} ${scenarios.length === 1 ? 'scenario' : 'scenarios'}</span><span class="chevron" aria-hidden="true"></span></summary><div class="paper-body"><div class="paper-source">${doi ? `<a href="${esc(doi)}" target="_blank" rel="noopener noreferrer">View publication ↗</a>` : 'No publication linked'}${pdf ? ` · <a href="${esc(pdf)}" target="_blank" rel="noopener noreferrer">Open paper PDF ↗</a>` : ''}${dataUrl ? ` · <a href="${esc(dataUrl)}" target="_blank" rel="noopener noreferrer">Open data ↗</a>` : ''}${codeUrl ? ` · <a href="${esc(codeUrl)}" target="_blank" rel="noopener noreferrer">Open code ↗</a>` : ''}${state.data.demo ? ' · Demonstration examples only' : ''}</div>${p.evidence?.length ? `<details class="source-evidence"><summary>Key paper evidence</summary>${evidenceHTML(p.evidence)}</details>` : ''}${scenarios.map(s => scenarioHTML(s, p)).join('')}</div></details>`;
-  }).join('') || `<div class="empty"><strong>${entries().length ? 'No matching scenarios' : 'No examples published yet'}</strong>${entries().length ? 'Try another search or reset your filters.' : 'Benchmark examples will appear here when they are added.'}</div>`;
+    return `<details class="paper" id="paper-${esc(p.id)}" style="--paper-accent:${colors[0]};--badge-bg:${colors[1]}"><summary><span class="paper-heading"><span class="paper-title">${esc(p.title)}</span><span class="paper-meta"><span class="badge category">${esc(p.category)}</span><span class="badge facility">${esc(p.facility)}</span><span>${esc(p.authors)}</span>${p.doi ? `<span>DOI: ${esc(p.doi)}</span>` : ''}</span></span><span class="paper-count">${scenarios.length} ${scenarios.length === 1 ? 'example' : 'examples'}</span><span class="chevron" aria-hidden="true"></span></summary><div class="paper-body"><div class="paper-source">${doi ? `<a href="${esc(doi)}" target="_blank" rel="noopener noreferrer">View publication ↗</a>` : 'No publication linked'}${pdf ? ` · <a href="${esc(pdf)}" target="_blank" rel="noopener noreferrer">Open paper PDF ↗</a>` : ''}${dataUrl ? ` · <a href="${esc(dataUrl)}" target="_blank" rel="noopener noreferrer">Open data ↗</a>` : ''}${codeUrl ? ` · <a href="${esc(codeUrl)}" target="_blank" rel="noopener noreferrer">Open code ↗</a>` : ''}${state.data.demo ? ' · Demonstration examples only' : ''}</div>${p.evidence?.length ? `<details class="source-evidence"><summary>Key paper evidence</summary>${evidenceHTML(p.evidence)}</details>` : ''}${scenarios.map(s => scenarioHTML(s, p)).join('')}</div></details>`;
+  }).join('') || `<div class="empty"><strong>${entries().length ? 'No matching examples' : 'No examples published yet'}</strong>${entries().length ? 'Try another search or reset your filters.' : 'Benchmark examples will appear here when they are added.'}</div>`;
   for (const id of open) { const el = document.getElementById(id); if (el) el.open = true; }
-  $('#results').textContent = `${count} ${count === 1 ? 'scenario' : 'scenarios'} across ${papers} ${papers === 1 ? 'paper' : 'papers'}`;
+  $('#results').textContent = `${count} ${count === 1 ? 'example' : 'examples'} across ${papers} ${papers === 1 ? 'paper' : 'papers'}`;
   document.querySelectorAll('.chip').forEach(b => b.setAttribute('aria-pressed', b.dataset.category === state.category));
   updateProgress();
 }
@@ -92,7 +125,7 @@ function validateReviews(reviews) {
   if (!reviews || typeof reviews !== 'object' || Array.isArray(reviews)) throw new Error('The file does not contain a valid reviews object.');
   const allowed = new Set(entries().map(e => e.scenario.id)), result = {};
   for (const [id, r] of Object.entries(reviews)) {
-    if (!allowed.has(id)) throw new Error(`Unknown scenario: ${id}. Import a file for this dataset.`);
+    if (!allowed.has(id)) throw new Error(`Unknown example: ${id}. Import a file for this dataset.`);
     if (!r || !Object.hasOwn(labels, r.status) || typeof r.comment !== 'string' || r.comment.length > 12000 || typeof r.updatedAt !== 'string' || !Number.isFinite(Date.parse(r.updatedAt))) throw new Error(`Invalid review for ${id}.`);
     result[id] = { status: r.status, comment: r.comment, updatedAt: r.updatedAt };
   }
@@ -150,7 +183,7 @@ async function init() {
     const response = await fetch(datasetUrl, { cache: 'no-cache' });
     if (!response.ok) throw new Error(`Dataset request failed (${response.status}).`);
     state.data = await response.json();
-    if (state.data.schemaVersion !== 1 || !Array.isArray(state.data.papers)) throw new Error('Unsupported dataset format.');
+    if (state.data.schemaVersion !== 2 || !Array.isArray(state.data.papers)) throw new Error('Unsupported dataset format.');
     storageKey = `spectral-agent-bench:reviews:${state.data.datasetId}`;
     try { const stored = localStorage.getItem(storageKey); if (stored) state.reviews = validateReviews(JSON.parse(stored)); }
     catch { toast('Saved reviews could not be loaded. Existing storage has not been changed.', true); }
