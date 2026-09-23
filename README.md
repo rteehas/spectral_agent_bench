@@ -5,7 +5,7 @@ A static GitHub Pages workspace for reviewing spectral benchmark examples, inspi
 **Website:** https://rteehas.github.io/spectral_agent_bench/  
 **Review alias:** https://rteehas.github.io/spectral_agent_bench/review.html
 
-The initial dataset contains **four clearly labeled, fictional demonstration tasks across three papers**. Synthetic figures are illustrative, not experimental spectra.
+The live dataset, [`docs/data/benchmark.json`](docs/data/benchmark.json), starts empty for real labeling. The four fictional demonstration tasks are preserved separately in [`docs/data/benchmark.examples.json`](docs/data/benchmark.examples.json) as a reference; they are not loaded by the website.
 
 ## Review workflow
 
@@ -21,9 +21,26 @@ Browser storage can be cleared by the browser or unavailable in private mode; ex
 
 ## Add real benchmark examples
 
-Edit **`docs/data/benchmark.json`**. Set `demo` to `false` when replacing the fictional dataset, and use a new `datasetId` such as `spectral-agent-v1`. Change the dataset ID for releases that materially change questions, inputs, prompts, or verification criteria so old verdicts are not silently reused. Keep paper and scenario IDs stable within a dataset release.
+### Instructions for labeling agents
 
-The dataset uses `schemaVersion: 2`. The `scenarios` list now contains tasks rather than compound records. The demo dataset ID changed to `spectral-agent-demo-v2`, so verdicts on the older questions are not reused. Existing v1 review exports remain separate.
+1. Read [`docs/data/benchmark.examples.json`](docs/data/benchmark.examples.json) for complete examples of the schema, optional paper links, inputs, orchestrator prompts, verification files/figures, and ground truth reasoning. Its contents and linked assets are synthetic demonstrations, not labels or evidence for real papers.
+2. Populate [`docs/data/benchmark.json`](docs/data/benchmark.json) **from scratch using the actual papers and supplied data**. Use the reference for structure only. Do not copy its fictional paper records, task content, values, reasoning, `DEMO-*` IDs, or `data/demo/` assets into the real dataset. Leave the reference JSON intact.
+3. Add real paper records to the active file's `papers` array. Keep `demo: false`, use stable, unique paper/task IDs, and link the specific input files and verification evidence for each task. Populate `groundTruthReasoning` from the actual evidence; do not invent missing results.
+4. Run `python3 scripts/validate_data.py` before publishing. The site loads only `benchmark.json`; it never falls back to the reference examples. An empty `papers` array intentionally displays “No examples published yet.”
+
+The starting active dataset is:
+
+```json
+{
+  "schemaVersion": 2,
+  "datasetId": "spectral-agent-v1",
+  "title": "Spectral Agent Bench",
+  "demo": false,
+  "papers": []
+}
+```
+
+Change `datasetId` for releases that materially change questions, inputs, prompts, or verification criteria so old verdicts are not silently reused. Keep paper and scenario IDs stable within a dataset release. The `scenarios` list contains tasks rather than compound records. The reference dataset retains its separate `spectral-agent-demo-v2` ID.
 
 Each example has:
 
@@ -90,7 +107,7 @@ Optional paper fields:
 - `codeUrl`: an optional open-code URL (for example, the study’s GitHub repository) or local code file path. Displays **Open code** when supplied.
 - `evidence`: a list using the same format as scenario evidence, displayed under **Key paper evidence**.
 
-These resource links appear below the paper title and metadata when the paper is expanded. Omit either field when unavailable; do not add an empty string. The first demonstration paper links to this site’s sample dataset and source repository to illustrate both fields.
+These resource links appear below the paper title and metadata when the paper is expanded. Omit either field when unavailable; do not add an empty string. The first paper in the reference JSON links to the reference dataset and source repository to illustrate both fields.
 
 
 Comparison figure and paper evidence fields:
@@ -100,7 +117,7 @@ Comparison figure and paper evidence fields:
 
 Put your figures and PDFs inside `docs/assets/`. All files under `docs/` are published. Add only material you intend to share publicly and have permission to redistribute. Relative paths (without an initial `/`) work correctly under the GitHub project URL. External figures must allow loading from other sites. Text is displayed as plain text, not HTML or Markdown. Categories, facilities, and counts are computed from the data. File lists and verification data support JSON, CSV, HDF5, and other formats via ordinary links; the website does not parse or execute those files.
 
-The demonstration input and ground-truth JSON files live in `docs/data/demo/`. Recreate them with `python3 scripts/generate_demo_data.py`. They are deterministic synthetic signals, not experimental spectra. Demo comparison plots are labeled as synthetic; replace them with actual PDF figure crops for real papers.
+The reference examples’ demonstration input and ground-truth JSON files remain in `docs/data/demo/` so their links can still be inspected. Recreate them with `python3 scripts/generate_demo_data.py`. They are deterministic synthetic signals, not experimental spectra. Demo comparison plots are labeled as synthetic; replace them with actual PDF figure crops for real papers.
 
 ## Preview and validate
 
@@ -108,6 +125,7 @@ No dependencies or build step are required. From the repository root:
 
 ```sh
 python3 scripts/validate_data.py
+python3 scripts/validate_data.py docs/data/benchmark.examples.json
 node --check docs/assets/app.js
 python3 -m http.server 8765 --directory docs
 ```
@@ -126,7 +144,8 @@ In the repository's **Settings → Pages**, set **Source** to **GitHub Actions**
 - `docs/review.html`: compatibility redirect preserving query strings and scenario links.
 - `docs/assets/style.css`: responsive styles.
 - `docs/assets/app.js`: filtering, evidence viewer, local review state, JSON import/export, and issue drafts.
-- `docs/data/benchmark.json`: benchmark content.
+- `docs/data/benchmark.json`: active real benchmark dataset; starts with an empty `papers` array.
+- `docs/data/benchmark.examples.json`: preserved fictional examples for labeling agents to consult; never loaded by the review page.
 - `scripts/validate_data.py`: schema, duplicate-ID, input, verification, and local-asset checks.
 
 There are no analytics, external fonts, third-party scripts, API keys, or backend services. GitHub Pages itself is public hosting, not an author-only authentication system.

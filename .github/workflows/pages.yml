@@ -20,7 +20,9 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - name: Validate benchmark data and local evidence
-        run: python3 scripts/validate_data.py
+        run: |
+          python3 scripts/validate_data.py
+          python3 scripts/validate_data.py docs/data/benchmark.examples.json
       - name: Check JavaScript syntax
         run: node --check docs/assets/app.js
       - name: Version browser assets for this deployment
