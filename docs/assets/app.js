@@ -45,7 +45,7 @@ function thresholdsHTML(thresholds) {
   if (!thresholds) return '';
   const notes = thresholds.notes?.length ? thresholds.notes.map(note => `<p><strong>${esc(note.title)}:</strong> ${esc(note.description)}</p>`).join('') : `<p>${esc(thresholds.description)}</p>`;
   const policy = thresholds.data?.length ? `<p><strong>Comparison Policy:</strong> ${thresholds.data.map(file => `<a href="${esc(safeUrl(file.url))}" target="_blank" rel="noopener noreferrer">${esc(file.name)} ↗</a>`).join(', ')}</p>` : '';
-  return `<section class="verification-notes" aria-label="Verification notes"><h4>Notes</h4><p><strong>Provenance:</strong> ${esc(thresholds.origin)}; ${esc(thresholds.generatedBy)}. ${esc(thresholds.provenance)}</p>${notes}${policy}</section>`;
+  return `<section class="verification-notes" aria-label="Verification notes"><h4>Notes</h4><p>${esc(thresholds.provenance)}</p>${notes}${policy}</section>`;
 }
 function scenarioHTML(s, paper) {
   const review = state.reviews[s.id] || {}, current = verdict(s.id);

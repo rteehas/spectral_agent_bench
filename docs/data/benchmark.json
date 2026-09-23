@@ -85,7 +85,7 @@
             "thresholds": {
               "origin": "Benchmark-defined",
               "generatedBy": "Model-generated",
-              "provenance": "The screening thresholds and comparison settings below were not reported in the paper and are not physical uncertainty estimates. Scientific justification and plots require separate review.",
+              "provenance": "Note, the screening thresholds and comparison settings below were not reported in the paper and are not physical uncertainty estimates. They were produced separately during the labeling process.",
               "notes": [
                 {
                   "title": "Maximum Normalized RMSE",
