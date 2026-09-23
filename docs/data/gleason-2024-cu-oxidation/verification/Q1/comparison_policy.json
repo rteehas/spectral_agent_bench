@@ -1,0 +1,17 @@
+{
+  "boundary_margin_eV": 0.5,
+  "maximum_normalized_rmse": 0.02,
+  "edge_windows_eV": {
+    "L3": [
+      935.0,
+      949.0
+    ],
+    "L2": [
+      955.0,
+      971.0
+    ]
+  },
+  "maximum_peak_energy_error_eV": 0.2,
+  "maximum_relative_feature_error": 0.05,
+  "scope": "Benchmark screening tolerances for this material, not measured uncertainty. Interpolate the candidate onto reference interior energies; do not fit an energy shift, amplitude scale or baseline. Do not require the reference row count or padding function. Manually review the physical justification; defensible methods outside these tolerances can be adjudicated."
+}

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "datasetId": "spectral-agent-v2",
+  "datasetId": "spectral-agent-v3",
   "title": "Spectral Agent Bench",
   "demo": false,
   "papers": [
@@ -28,30 +28,30 @@
             {
               "name": "L2_001_Cu_xmu.dat",
               "url": "data/gleason-2024-cu-oxidation/inputs/Q1/L2_001_Cu_xmu.dat",
-              "description": "Unmodified site-resolved FEFF L2 output for Cu site 1. Column 1 is photon energy (eV), column 4 is absorption; column 3 supplies the k=0 reference marker."
+              "description": "Unmodified site-resolved FEFF L2 output for Cu site 1. Column 1 is photon energy (eV) and column 4 is absorption."
             },
             {
               "name": "L2_002_Cu_xmu.dat",
               "url": "data/gleason-2024-cu-oxidation/inputs/Q1/L2_002_Cu_xmu.dat",
-              "description": "Unmodified site-resolved FEFF L2 output for Cu site 2. Column 1 is photon energy (eV), column 4 is absorption; column 3 supplies the k=0 reference marker."
+              "description": "Unmodified site-resolved FEFF L2 output for Cu site 2. Column 1 is photon energy (eV) and column 4 is absorption."
             },
             {
               "name": "L3_001_Cu_xmu.dat",
               "url": "data/gleason-2024-cu-oxidation/inputs/Q1/L3_001_Cu_xmu.dat",
-              "description": "Unmodified site-resolved FEFF L3 output for Cu site 1. Column 1 is photon energy (eV), column 4 is absorption; column 3 supplies the k=0 reference marker."
+              "description": "Unmodified site-resolved FEFF L3 output for Cu site 1. Column 1 is photon energy (eV) and column 4 is absorption."
             },
             {
               "name": "L3_002_Cu_xmu.dat",
               "url": "data/gleason-2024-cu-oxidation/inputs/Q1/L3_002_Cu_xmu.dat",
-              "description": "Unmodified site-resolved FEFF L3 output for Cu site 2. Column 1 is photon energy (eV), column 4 is absorption; column 3 supplies the k=0 reference marker."
+              "description": "Unmodified site-resolved FEFF L3 output for Cu site 2. Column 1 is photon energy (eV) and column 4 is absorption."
             }
           ],
           "prompt": {
-            "background": "The material spectrum is the sum of its L₂ and L₃ edges, averaged over symmetry-equivalent Cu atom multiplicities. For the released numerical convention, interpolate each edge linearly at 0.1 eV from round(min(E)+0.15,1) to round(max(E)−0.15,1), excluding the upper bound. Extend L₂ down to the L₃ start with (E+a)^10 b through intensity 1e−10 at that start and the first interpolated L₂ point. Sum the edges on the L₃ grid; average sites on their common interval, excluding the upper endpoint. Use a 0.01 Å symmetry tolerance.",
-            "instruction": "Determine the inequivalent-site weights from the supplied structure and reconstruct the material spectrum. Save spectrum.csv with energy_eV,intensity and an overlay plot of weighted site contributions and their sum. In result.json report material_id, site_weights keyed by zero-based site index, points, and L3_reference_eV (the arithmetic mean of the site photon energies where column 3 equals zero). Explain why averaging the two site spectra equally is or is not justified."
+            "background": "The supplied files contain separate Cu L₂ and L₃ FEFF spectra for the inequivalent Cu sites in TbCu₅ (Materials Project ID mp-1077262). The crystal structure is included in the FEFF input file. Use a positional symmetry tolerance of 0.01 Å when identifying equivalent Cu sites.",
+            "instruction": "Construct the material-averaged Cu L₂,₃ spectrum from the supplied simulations, preserving the FEFF energy and intensity conventions and resolving both edges. Determine the site weights from the structure. Save spectrum.csv with energy_eV,intensity, an overlay plot of weighted site contributions and their sum, and result.json containing material_id, site_weights keyed by zero-based site index, and points (your output row count). Justify how you combine the edges and handle interpolation, unequal energy ranges and site multiplicities."
           },
           "verification": {
-            "description": "Require the correct multiplicities/weights and the released 545-point spectrum at rtol=1e−7, atol=1e−8. Check the energy reference to 1e−9 eV. Visually inspect the contribution overlay and require an atom-multiplicity argument. A simple 50:50 site average fails.",
+            "description": "Require multiplicity-derived site weights and physically justified edge combination. Resample the candidate onto the reference interior range, excluding 0.5 eV at each reference boundary, without fitting an energy shift, amplitude scale or baseline. Numerical screening requires ≤2% RMSE normalized by the reference intensity range, edge-peak energy errors ≤0.2 eV, and relative peak-height and edge-area errors ≤5%; see comparison_policy.json for edge windows. Different row counts, grids and padding functions are accepted. Inspect the contribution plot and reasoning; these are benchmark screening tolerances, not physical uncertainty estimates, and other defensible methods need reviewer adjudication.",
             "data": [
               {
                 "name": "expected.json",
@@ -62,6 +62,11 @@
                 "name": "spectrum.csv",
                 "url": "data/gleason-2024-cu-oxidation/verification/Q1/spectrum.csv",
                 "description": "Evaluator-only numerical comparison table."
+              },
+              {
+                "name": "comparison_policy.json",
+                "url": "data/gleason-2024-cu-oxidation/verification/Q1/comparison_policy.json",
+                "description": "Evaluator-only numerical comparison policy."
               },
               {
                 "name": "Q1_candidate_workflow.json",
@@ -81,7 +86,7 @@
             ],
             "figures": []
           },
-          "groundTruthReasoning": "The six-atom TbCu5 cell contains five Cu atoms in multiplicity groups 1 and 4, so the weights are 0.2 and 0.8. Their edge combinations yield 545 points and the saved average L3 reference is 936.3205 eV. The numerical target spectrum is copied from the authors released pre-alignment table for mp-1077262; the candidate does not read that table. This tests postprocessing of converged simulations, not a new FEFF calculation. Source: Database_Construction.ipynb cells 1, 7, 9 and 10."
+          "groundTruthReasoning": "The six-atom TbCu5 cell contains five Cu atoms in multiplicity groups 1 and 4, so the weights are 0.2 and 0.8. The reference material spectrum is copied from the authors released pre-alignment table for mp-1077262. It has 545 samples, but that count is not a required answer. The candidate workflow retains the authors interpolation/padding recipe as one worked solution; other justified numerical treatments may pass. The optional saved L3 reference is an archival diagnostic, not part of this research question. This tests postprocessing of converged simulations, not a new FEFF calculation. Source: Database_Construction.ipynb cells 1, 7, 9 and 10."
         },
         {
           "id": "GLEASON24-Q2",

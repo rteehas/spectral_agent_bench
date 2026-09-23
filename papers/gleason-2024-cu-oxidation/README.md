@@ -18,7 +18,7 @@ Q2 and Q3 share an admissibility definition but answer different questions: chem
 
 ## Where to review
 
-- `../../docs/data/benchmark.json`: active review-site entry, dataset `spectral-agent-v2`.
+- `../../docs/data/benchmark.json`: active review-site entry, dataset `spectral-agent-v3`.
 - `paper.json`: matching per-paper snapshot for author review.
 - `../../docs/data/gleason-2024-cu-oxidation/inputs/Q*/`: minimal task inputs.
 - `../../docs/data/gleason-2024-cu-oxidation/verification/Q*/`: evaluator targets.
@@ -55,6 +55,14 @@ Install the pinned dependencies in `requirements.txt` using Python 3.10. The can
 
 Numeric checks are necessary but not sufficient. Reviewers must also assess the requested interpretation and readable plots against each question's verification description. Style/pixel matching is not required. The candidate Python implementation emits numeric results, plots and `conclusion.md`; the worked JSON also records the scientific interpretation under `evidence`.
 
+## Q1: scientific reconstruction rather than exact numerical replay
+
+The Q1 background supplies the file context, material ID and a 0.01 Å positional symmetry tolerance. Interpolation, padding and endpoint choices belong to the worked candidate workflow; the agent must justify its own choices. The question no longer requests a Fermi-marker calculation.
+
+Verification checks multiplicity-derived weights, preserves the FEFF energy/intensity conventions, and resamples the submitted spectrum onto the reference interior energies. It excludes 0.5 eV at each reference boundary and allows 2% normalized RMSE, 0.2 eV edge-peak shifts, and 5% differences in edge peak heights and areas. These are benchmark screening tolerances, not measured physical uncertainties. The comparison neither shifts nor rescales the submitted spectrum. Different output lengths and numerical treatments can pass; the archived 545-point count and optional L3 reference are not required answers. Scientific justification and the contribution plot still require review, including adjudication of other defensible treatments.
+
+`verification/Q1/comparison_policy.json` records the exact windows and thresholds. `check_q1_variants.py` tests the released candidate and alternative linear/PCHIP interpolation, zero padding, grid spacings and endpoint choices, as well as rejected wrong weights, missing edges, shifts and normalization. Its record is `verification/Q1/variant_checks.json`.
+
 ## Ground-truth strength and known release differences
 
 Q1–Q4 have independently stored released-output targets. Q5 is an algebraic target with an independent author plot. Q6 is an exact code-replay target for the released snapshot, **not** an independently archived historical mixture table. Q7 has an independently recomputed numeric target and a paper-supported qualitative inference; the paper does not publish the exact peak table. These distinctions are attached to the scenarios and provenance metadata.
@@ -73,6 +81,6 @@ The missing-assignment-to-zero convention is reproduced as a historical choice. 
 
 ## Rebuild and attribution
 
-`prepare_assets.py --release PATH` projects minimal inputs and separately extracts verification targets from the downloaded open release. Q5/Q6 use the already audited source-code replay outputs under that release workspace. `build_entry.py` writes the site entry and workflow descriptions; rerun `run_candidates.py` afterwards to restore execution records. These are authoring tools, not agent inputs. See `provenance.json` for the input/verification derivation of every task.
+`prepare_assets.py --release PATH` projects minimal inputs and separately extracts verification targets from the downloaded open release. Q5/Q6 use the already audited source-code replay outputs under that release workspace. `build_entry.py` writes the site entry and workflow descriptions while retaining prior execution records. Rerun affected candidates after changing their task or verifier; a partial run preserves the other questions in the summary. These are authoring tools, not agent inputs. See `provenance.json` for the input/verification derivation of every task.
 
 Data source: Gleason, Lu and Ciston, Zenodo record 18142209 (CC BY 4.0), outer ZIP MD5 `1246825b838f77b926d0e58f6ca68e45`. Figures are unmodified author-provided Figure 1 and Figure S1 images or embedded figure outputs from the pinned companion notebook. The article is [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Minimal CSV/JSON projections are format adaptations; their prior processing and source columns are recorded. All copied assets remain attributed to the authors. No upstream notebook credentials were copied.

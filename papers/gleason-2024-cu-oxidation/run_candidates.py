@@ -22,6 +22,11 @@ def main():
             path.write_text(json.dumps(doc,ensure_ascii=False,indent=2)+'\n')
         reports.append({'question':q,'status':trace['status'],'wall_seconds':trace['wall_seconds']});print(json.dumps(reports[-1]),flush=True)
         if trace['status']=='failed':print(run.stderr,verified.stderr if verified else '',flush=True)
-    (DATA/'verification/candidate_execution.json').write_text(json.dumps({'questions':reports,'all_numeric_checks_passed':all(x['status']=='passed' for x in reports)},indent=2)+'\n')
+    summary_path=DATA/'verification/candidate_execution.json'
+    previous=json.loads(summary_path.read_text()).get('questions',[]) if summary_path.exists() else []
+    merged={x['question']:x for x in previous}
+    merged.update({x['question']:x for x in reports})
+    summary=list(sorted(merged.values(),key=lambda x:x['question']))
+    summary_path.write_text(json.dumps({'questions':summary,'all_numeric_checks_passed':all(x['status']=='passed' for x in summary)},indent=2)+'\n')
     if not all(x['status']=='passed' for x in reports):raise SystemExit(1)
 if __name__=='__main__':main()

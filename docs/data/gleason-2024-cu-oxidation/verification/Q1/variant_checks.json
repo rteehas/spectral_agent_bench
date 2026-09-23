@@ -1,0 +1,184 @@
+{
+  "dataset_id": "spectral-agent-v3",
+  "all_checks_passed": true,
+  "cases": [
+    {
+      "variant": "released_candidate",
+      "expected_pass": true,
+      "actual_pass": true,
+      "metrics": {
+        "candidate_points": 545,
+        "reference_points": 545,
+        "comparison_range_eV": [
+          934.7,
+          988.1
+        ],
+        "normalized_rmse": 2.8237475242711493e-17,
+        "edge_features": {
+          "L3": {
+            "peak_energy_error_eV": 0.0,
+            "relative_peak_height_error": 0.0,
+            "relative_area_error": 0.0
+          },
+          "L2": {
+            "peak_energy_error_eV": 0.0,
+            "relative_peak_height_error": 0.0,
+            "relative_area_error": 2.220446049250313e-16
+          }
+        }
+      },
+      "rejection": null
+    },
+    {
+      "variant": "linear_zero_pad_0p05_eV",
+      "expected_pass": true,
+      "actual_pass": true,
+      "metrics": {
+        "candidate_points": 1089,
+        "reference_points": 545,
+        "comparison_range_eV": [
+          934.7,
+          988.1
+        ],
+        "normalized_rmse": 0.005637156172005788,
+        "edge_features": {
+          "L3": {
+            "peak_energy_error_eV": 0.0,
+            "relative_peak_height_error": 8.222636407317907e-07,
+            "relative_area_error": 0.0009814002926769039
+          },
+          "L2": {
+            "peak_energy_error_eV": 0.0,
+            "relative_peak_height_error": 1.5151213617059511e-12,
+            "relative_area_error": 1.1213252548714081e-14
+          }
+        }
+      },
+      "rejection": null
+    },
+    {
+      "variant": "linear_zero_pad_0p2_eV",
+      "expected_pass": true,
+      "actual_pass": true,
+      "metrics": {
+        "candidate_points": 273,
+        "reference_points": 545,
+        "comparison_range_eV": [
+          934.7,
+          988.1
+        ],
+        "normalized_rmse": 0.005752790273890261,
+        "edge_features": {
+          "L3": {
+            "peak_energy_error_eV": 0.0,
+            "relative_peak_height_error": 8.222638800958748e-07,
+            "relative_area_error": 0.0008559809845687383
+          },
+          "L2": {
+            "peak_energy_error_eV": 0.10000000000002274,
+            "relative_peak_height_error": 0.003685537636819447,
+            "relative_area_error": 2.2638710519995442e-05
+          }
+        }
+      },
+      "rejection": null
+    },
+    {
+      "variant": "pchip_zero_pad_0p1_eV",
+      "expected_pass": true,
+      "actual_pass": true,
+      "metrics": {
+        "candidate_points": 545,
+        "reference_points": 545,
+        "comparison_range_eV": [
+          934.7,
+          988.1
+        ],
+        "normalized_rmse": 0.005777487070105628,
+        "edge_features": {
+          "L3": {
+            "peak_energy_error_eV": 0.09999999999990905,
+            "relative_peak_height_error": 0.004220970537103463,
+            "relative_area_error": 0.0011956643532701206
+          },
+          "L2": {
+            "peak_energy_error_eV": 0.0,
+            "relative_peak_height_error": 0.0001331086160445416,
+            "relative_area_error": 2.979045318984852e-05
+          }
+        }
+      },
+      "rejection": null
+    },
+    {
+      "variant": "trimmed_endpoints",
+      "expected_pass": true,
+      "actual_pass": true,
+      "metrics": {
+        "candidate_points": 541,
+        "reference_points": 545,
+        "comparison_range_eV": [
+          934.7,
+          988.1
+        ],
+        "normalized_rmse": 0.005637156172044445,
+        "edge_features": {
+          "L3": {
+            "peak_energy_error_eV": 0.0,
+            "relative_peak_height_error": 8.222637912780328e-07,
+            "relative_area_error": 0.000981400292672352
+          },
+          "L2": {
+            "peak_energy_error_eV": 0.0,
+            "relative_peak_height_error": 1.509903313490213e-14,
+            "relative_area_error": 2.220446049250313e-15
+          }
+        }
+      },
+      "rejection": null
+    },
+    {
+      "variant": "equal_site_weights",
+      "expected_pass": false,
+      "actual_pass": false,
+      "metrics": null,
+      "rejection": "result.site_weights.1: 0.5 != 0.2 (atol=1e-08)"
+    },
+    {
+      "variant": "omitted_L2",
+      "expected_pass": false,
+      "actual_pass": false,
+      "metrics": null,
+      "rejection": "Spectral shape error 0.302587 exceeds tolerance"
+    },
+    {
+      "variant": "one_eV_shift",
+      "expected_pass": false,
+      "actual_pass": false,
+      "metrics": null,
+      "rejection": "Spectrum omits the required interior energy range"
+    },
+    {
+      "variant": "unauthorized_peak_normalization",
+      "expected_pass": false,
+      "actual_pass": false,
+      "metrics": null,
+      "rejection": "Spectral shape error 0.414154 exceeds tolerance"
+    },
+    {
+      "variant": "L3_only_energy_range",
+      "expected_pass": false,
+      "actual_pass": false,
+      "metrics": null,
+      "rejection": "Spectrum omits the required interior energy range"
+    },
+    {
+      "variant": "five_eV_sampling",
+      "expected_pass": false,
+      "actual_pass": false,
+      "metrics": null,
+      "rejection": "Spectrum omits the required interior energy range"
+    }
+  ],
+  "scope": "Numerical evaluator tests. Plots are placeholders here; scientific/visual justification remains a separate review requirement. Tolerances are benchmark choices, not paper-derived uncertainty."
+}
