@@ -1,0 +1,88 @@
+{
+  "scenario_id": "GLEASON24-Q2",
+  "question": "How much of the base spectral set has an integer Cu oxidation-state label?",
+  "tool_environment": {
+    "python": "3.10.20",
+    "numpy": "1.26.2",
+    "pandas": "1.5.3",
+    "scipy": "1.15.3",
+    "matplotlib": "3.10.9",
+    "pymatgen": "2024.3.1 (Q1 only)"
+  },
+  "input_boundary": "Only the scenario inputs and its background. No released output tables, verification files, local prior traces or live API calls.",
+  "steps": [
+    {
+      "step": 1,
+      "tool": "Python / JSON",
+      "operation": "Read the saved assignment dictionaries and reference-status records.",
+      "artifact_or_check": "No live Materials Project access."
+    },
+    {
+      "step": 2,
+      "tool": "Python / NumPy",
+      "operation": "Apply the historical label and admissibility rules; count exact integer/fractional values and zero-label provenance.",
+      "artifact_or_check": "result.json"
+    },
+    {
+      "step": 3,
+      "tool": "Python / Matplotlib",
+      "operation": "Plot base-set label coverage.",
+      "artifact_or_check": "plot.png"
+    },
+    {
+      "step": 4,
+      "tool": "Evaluator / verify.py",
+      "operation": "Compare counts against the independent processed table reduction.",
+      "artifact_or_check": "Numeric pass; reviewer checks provenance interpretation."
+    }
+  ],
+  "candidate_command": "python candidate.py Q2 --inputs INPUT_DIRECTORY --output OUTPUT_DIRECTORY",
+  "verification_command": "python verify.py Q2 --output OUTPUT_DIRECTORY --truth verification/Q2",
+  "evidence": "The released processed table has 3,439 rows: 876, 1,039 and 1,291 with labels 0, 1 and 2, plus 233 fractional labels. The integer fraction is 3,206/3,439, approximately 93.2248%; 68 retained labels exceed 2. All 876 zero labels arise from missing Cu assignments in the saved dictionaries. This reproduces the released target distribution, not independent chemical validation. The targets are derived from the separate released processed table; input projections omit its answer columns. Figure 1 bar heights are not exact base-set truth because the author notebook plots after augmentation.",
+  "execution": {
+    "run_at_utc": "2026-09-23T22:14:20.867718+00:00",
+    "status": "passed",
+    "candidate_exit_code": 0,
+    "verifier_exit_code": 0,
+    "wall_seconds": 1.683,
+    "tool_calls": [
+      {
+        "tool": "shell / Python",
+        "command": [
+          "/tmp/gleason-preview-py310/bin/python",
+          "/scratch/rst306/spectrasleuth_work/spectral_agent_bench/docs/data/gleason-2024-cu-oxidation/workflows/candidate.py",
+          "Q2",
+          "--inputs",
+          "/tmp/gleason-bench-candidates-final/Q2/inputs",
+          "--output",
+          "/tmp/gleason-bench-candidates-final/Q2/output"
+        ],
+        "stdout": "{\"question\": \"Q2\", \"outputs\": [\"conclusion.md\", \"plot.png\", \"result.json\"], \"result\": {\"retained\": 3439, \"integer_counts\": {\"0\": 876, \"1\": 1039, \"2\": 1291}, \"fractional\": 233, \"integer_fraction\": 0.932247746437918, \"above_two_below_three\": 68, \"zero_from_missing\": 876, \"zero_explicit\": 0}}\n",
+        "stderr": ""
+      },
+      {
+        "tool": "shell / evaluator Python",
+        "command": [
+          "/tmp/gleason-preview-py310/bin/python",
+          "/scratch/rst306/spectrasleuth_work/spectral_agent_bench/docs/data/gleason-2024-cu-oxidation/workflows/verify.py",
+          "Q2",
+          "--output",
+          "/tmp/gleason-bench-candidates-final/Q2/output",
+          "--truth",
+          "/scratch/rst306/spectrasleuth_work/spectral_agent_bench/docs/data/gleason-2024-cu-oxidation/verification/Q2"
+        ],
+        "stdout": "{\n  \"question\": \"Q2\",\n  \"numeric_pass\": true,\n  \"compared_tables\": [],\n  \"plot_present\": true,\n  \"interpretation_and_visual_review\": \"Required separately; numeric checks do not assess scientific prose or plot readability.\"\n}\n",
+        "stderr": ""
+      }
+    ],
+    "candidate_input_access": "Candidate code only opens its staged inputs. This audit does not impose an OS/network sandbox; benchmark deployment must restrict evaluator/solution access.",
+    "input_files": [
+      "material_records.json"
+    ],
+    "retained_outputs": [
+      "data/gleason-2024-cu-oxidation/workflows/outputs/Q2/conclusion.md",
+      "data/gleason-2024-cu-oxidation/workflows/outputs/Q2/plot.png",
+      "data/gleason-2024-cu-oxidation/workflows/outputs/Q2/result.json"
+    ]
+  }
+}

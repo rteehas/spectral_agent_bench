@@ -1,0 +1,89 @@
+{
+  "scenario_id": "GLEASON24-Q4",
+  "question": "What cumulative model-input curves correspond to the Cu, Cu₂O and CuO reference spectra?",
+  "tool_environment": {
+    "python": "3.10.20",
+    "numpy": "1.26.2",
+    "pandas": "1.5.3",
+    "scipy": "1.15.3",
+    "matplotlib": "3.10.9",
+    "pymatgen": "2024.3.1 (Q1 only)"
+  },
+  "input_boundary": "Only the scenario inputs and its background. No released output tables, verification files, local prior traces or live API calls.",
+  "steps": [
+    {
+      "step": 1,
+      "tool": "Python / pandas",
+      "operation": "Load the ordinary aligned spectra; check the common energy axis.",
+      "artifact_or_check": "Three 451-point arrays."
+    },
+    {
+      "step": 2,
+      "tool": "Python / NumPy",
+      "operation": "Compute left-exclusive prefix sums and normalize each by its maximum.",
+      "artifact_or_check": "cumulative.csv; result.json"
+    },
+    {
+      "step": 3,
+      "tool": "Python / Matplotlib",
+      "operation": "Overlay the three cumulative representations.",
+      "artifact_or_check": "plot.png"
+    },
+    {
+      "step": 4,
+      "tool": "Evaluator / verify.py",
+      "operation": "Compare with cumulative arrays held back from the released table.",
+      "artifact_or_check": "Array agreement and visual interpretation."
+    }
+  ],
+  "candidate_command": "python candidate.py Q4 --inputs INPUT_DIRECTORY --output OUTPUT_DIRECTORY",
+  "verification_command": "python verify.py Q4 --output OUTPUT_DIRECTORY --truth verification/Q4",
+  "evidence": "The target cumulative arrays are copied directly from Cumulative_Spectra_TEAM_1_aligned_925_970 in the authors released table. They use sum(y[:k])/max_k(sum(y[:k])), so the first point is zero and the last is one across 451 samples. A standard inclusive cumsum or trapezoidal integral changes the representation and should not pass this convention-specific question. Source: Full_spectral_alignment.ipynb cell 60. This is a feature-construction question, not an independent oxidation-state prediction.",
+  "execution": {
+    "run_at_utc": "2026-09-23T22:14:24.483408+00:00",
+    "status": "passed",
+    "candidate_exit_code": 0,
+    "verifier_exit_code": 0,
+    "wall_seconds": 1.801,
+    "tool_calls": [
+      {
+        "tool": "shell / Python",
+        "command": [
+          "/tmp/gleason-preview-py310/bin/python",
+          "/scratch/rst306/spectrasleuth_work/spectral_agent_bench/docs/data/gleason-2024-cu-oxidation/workflows/candidate.py",
+          "Q4",
+          "--inputs",
+          "/tmp/gleason-bench-candidates-final/Q4/inputs",
+          "--output",
+          "/tmp/gleason-bench-candidates-final/Q4/output"
+        ],
+        "stdout": "{\"question\": \"Q4\", \"outputs\": [\"conclusion.md\", \"cumulative.csv\", \"plot.png\", \"result.json\"], \"result\": {\"materials\": [\"mp-30\", \"mp-361\", \"mp-704645\"], \"points\": 451, \"first_value\": 0.0, \"last_value\": 1.0}}\n",
+        "stderr": ""
+      },
+      {
+        "tool": "shell / evaluator Python",
+        "command": [
+          "/tmp/gleason-preview-py310/bin/python",
+          "/scratch/rst306/spectrasleuth_work/spectral_agent_bench/docs/data/gleason-2024-cu-oxidation/workflows/verify.py",
+          "Q4",
+          "--output",
+          "/tmp/gleason-bench-candidates-final/Q4/output",
+          "--truth",
+          "/scratch/rst306/spectrasleuth_work/spectral_agent_bench/docs/data/gleason-2024-cu-oxidation/verification/Q4"
+        ],
+        "stdout": "{\n  \"question\": \"Q4\",\n  \"numeric_pass\": true,\n  \"compared_tables\": [\n    {\n      \"file\": \"cumulative.csv\",\n      \"rows\": 451,\n      \"columns\": [\n        \"energy_eV\",\n        \"Cu\",\n        \"Cu2O\",\n        \"CuO\"\n      ]\n    }\n  ],\n  \"plot_present\": true,\n  \"interpretation_and_visual_review\": \"Required separately; numeric checks do not assess scientific prose or plot readability.\"\n}\n",
+        "stderr": ""
+      }
+    ],
+    "candidate_input_access": "Candidate code only opens its staged inputs. This audit does not impose an OS/network sandbox; benchmark deployment must restrict evaluator/solution access.",
+    "input_files": [
+      "reference_spectra.csv"
+    ],
+    "retained_outputs": [
+      "data/gleason-2024-cu-oxidation/workflows/outputs/Q4/conclusion.md",
+      "data/gleason-2024-cu-oxidation/workflows/outputs/Q4/cumulative.csv",
+      "data/gleason-2024-cu-oxidation/workflows/outputs/Q4/plot.png",
+      "data/gleason-2024-cu-oxidation/workflows/outputs/Q4/result.json"
+    ]
+  }
+}

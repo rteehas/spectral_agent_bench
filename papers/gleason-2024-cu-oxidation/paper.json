@@ -1,0 +1,392 @@
+{
+  "id": "gleason-2024-cu-oxidation",
+  "title": "Prediction of the Cu oxidation state from EELS and XAS spectra using supervised machine learning",
+  "authors": "Samuel P. Gleason, Deyu Lu and Jim Ciston (2024)",
+  "doi": "10.1038/s41524-024-01408-1",
+  "category": "Cu oxidation-state spectroscopy",
+  "facility": "Materials Project / FEFF9; NCEM Molecular Foundry; CFN Brookhaven",
+  "pdf": "https://www.nature.com/articles/s41524-024-01408-1.pdf",
+  "dataUrl": "https://zenodo.org/records/18142209",
+  "codeUrl": "https://github.com/smglsn12/ML_XAS_EELS/tree/85e0f34e448247f6c7a01705807dae39dd1d6cbd",
+  "scenarios": [
+    {
+      "id": "GLEASON24-Q1",
+      "kind": "Subquestion",
+      "title": "What material-level Cu L₂,₃ spectrum is predicted for TbCu₅?",
+      "inputs": [
+        {
+          "name": "L3_001_Cu_feff.inp",
+          "url": "data/gleason-2024-cu-oxidation/inputs/Q1/L3_001_Cu_feff.inp",
+          "description": "Unmodified FEFF input deck containing the six-atom unit cell; absorber indices in filenames are zero-based."
+        },
+        {
+          "name": "L2_001_Cu_xmu.dat",
+          "url": "data/gleason-2024-cu-oxidation/inputs/Q1/L2_001_Cu_xmu.dat",
+          "description": "Unmodified site-resolved FEFF L2 output for Cu site 1. Column 1 is photon energy (eV), column 4 is absorption; column 3 supplies the k=0 reference marker."
+        },
+        {
+          "name": "L2_002_Cu_xmu.dat",
+          "url": "data/gleason-2024-cu-oxidation/inputs/Q1/L2_002_Cu_xmu.dat",
+          "description": "Unmodified site-resolved FEFF L2 output for Cu site 2. Column 1 is photon energy (eV), column 4 is absorption; column 3 supplies the k=0 reference marker."
+        },
+        {
+          "name": "L3_001_Cu_xmu.dat",
+          "url": "data/gleason-2024-cu-oxidation/inputs/Q1/L3_001_Cu_xmu.dat",
+          "description": "Unmodified site-resolved FEFF L3 output for Cu site 1. Column 1 is photon energy (eV), column 4 is absorption; column 3 supplies the k=0 reference marker."
+        },
+        {
+          "name": "L3_002_Cu_xmu.dat",
+          "url": "data/gleason-2024-cu-oxidation/inputs/Q1/L3_002_Cu_xmu.dat",
+          "description": "Unmodified site-resolved FEFF L3 output for Cu site 2. Column 1 is photon energy (eV), column 4 is absorption; column 3 supplies the k=0 reference marker."
+        }
+      ],
+      "prompt": {
+        "background": "The material spectrum is the sum of its L₂ and L₃ edges, averaged over symmetry-equivalent Cu atom multiplicities. For the released numerical convention, interpolate each edge linearly at 0.1 eV from round(min(E)+0.15,1) to round(max(E)−0.15,1), excluding the upper bound. Extend L₂ down to the L₃ start with (E+a)^10 b through intensity 1e−10 at that start and the first interpolated L₂ point. Sum the edges on the L₃ grid; average sites on their common interval, excluding the upper endpoint. Use a 0.01 Å symmetry tolerance.",
+        "instruction": "Determine the inequivalent-site weights from the supplied structure and reconstruct the material spectrum. Save spectrum.csv with energy_eV,intensity and an overlay plot of weighted site contributions and their sum. In result.json report material_id, site_weights keyed by zero-based site index, points, and L3_reference_eV (the arithmetic mean of the site photon energies where column 3 equals zero). Explain why averaging the two site spectra equally is or is not justified."
+      },
+      "verification": {
+        "description": "Require the correct multiplicities/weights and the released 545-point spectrum at rtol=1e−7, atol=1e−8. Check the energy reference to 1e−9 eV. Visually inspect the contribution overlay and require an atom-multiplicity argument. A simple 50:50 site average fails.",
+        "data": [
+          {
+            "name": "expected.json",
+            "url": "data/gleason-2024-cu-oxidation/verification/Q1/expected.json",
+            "description": "Evaluator-only numerical targets; see provenance.json for their evidence type."
+          },
+          {
+            "name": "spectrum.csv",
+            "url": "data/gleason-2024-cu-oxidation/verification/Q1/spectrum.csv",
+            "description": "Evaluator-only numerical comparison table."
+          },
+          {
+            "name": "Q1_candidate_workflow.json",
+            "url": "data/gleason-2024-cu-oxidation/workflows/Q1.json",
+            "description": "Worked candidate tool sequence, actual execution record, and limitations. Exclude from agent inputs."
+          },
+          {
+            "name": "candidate.py",
+            "url": "data/gleason-2024-cu-oxidation/workflows/candidate.py",
+            "description": "Executable worked solutions; reads only the selected question input directory. Exclude from agent inputs."
+          },
+          {
+            "name": "verify.py",
+            "url": "data/gleason-2024-cu-oxidation/workflows/verify.py",
+            "description": "Evaluator-side numeric checker. Interpretation and figure readability require separate review."
+          }
+        ],
+        "figures": []
+      },
+      "groundTruthReasoning": "The six-atom TbCu5 cell contains five Cu atoms in multiplicity groups 1 and 4, so the weights are 0.2 and 0.8. Their edge combinations yield 545 points and the saved average L3 reference is 936.3205 eV. The numerical target spectrum is copied from the authors released pre-alignment table for mp-1077262; the candidate does not read that table. This tests postprocessing of converged simulations, not a new FEFF calculation. Source: Database_Construction.ipynb cells 1, 7, 9 and 10."
+    },
+    {
+      "id": "GLEASON24-Q2",
+      "kind": "Subquestion",
+      "title": "How much of the base spectral set has an integer Cu oxidation-state label?",
+      "inputs": [
+        {
+          "name": "material_records.json",
+          "url": "data/gleason-2024-cu-oxidation/inputs/Q2/material_records.json",
+          "description": "Projection of pre-filter release records: IDs, saved oxidation-state dictionaries and L3 reference availability. Final labels, retained masks and counts are withheld."
+        }
+      ],
+      "prompt": {
+        "background": "These are computational assignments saved by the authors, not labels inferred from the spectra. Use the saved Materials Project Cu average, rounded to two decimals. The released workflow substitutes 0 when the Cu assignment is missing. Exclude material_id=\"Failed\", records with an error or missing L3 reference, and labels ≥3. This is the historical data rule; an imputed zero is not independently established Cu(0).",
+        "instruction": "Build the admissible base-material label distribution before synthetic augmentation. Save a count plot and result.json containing retained, integer_counts (keys \"0\",\"1\",\"2\"), fractional, integer_fraction, above_two_below_three, zero_from_missing, and zero_explicit. Count fractional labels without rounding them to the nearest integer. Explain what the zero-label provenance permits you to conclude chemically."
+      },
+      "verification": {
+        "description": "Require exact counts and integer fraction within 1e−9. The interpretation must distinguish an imputed zero from an explicitly assigned Cu(0), and preserve original fractional labels. Compare against the released table, not the figure bar heights.",
+        "data": [
+          {
+            "name": "expected.json",
+            "url": "data/gleason-2024-cu-oxidation/verification/Q2/expected.json",
+            "description": "Evaluator-only numerical targets; see provenance.json for their evidence type."
+          },
+          {
+            "name": "Q2_candidate_workflow.json",
+            "url": "data/gleason-2024-cu-oxidation/workflows/Q2.json",
+            "description": "Worked candidate tool sequence, actual execution record, and limitations. Exclude from agent inputs."
+          },
+          {
+            "name": "candidate.py",
+            "url": "data/gleason-2024-cu-oxidation/workflows/candidate.py",
+            "description": "Executable worked solutions; reads only the selected question input directory. Exclude from agent inputs."
+          },
+          {
+            "name": "verify.py",
+            "url": "data/gleason-2024-cu-oxidation/workflows/verify.py",
+            "description": "Evaluator-side numeric checker. Interpretation and figure readability require separate review."
+          }
+        ],
+        "figures": []
+      },
+      "groundTruthReasoning": "The released processed table has 3,439 rows: 876, 1,039 and 1,291 with labels 0, 1 and 2, plus 233 fractional labels. The integer fraction is 3,206/3,439, approximately 93.2248%; 68 retained labels exceed 2. All 876 zero labels arise from missing Cu assignments in the saved dictionaries. This reproduces the released target distribution, not independent chemical validation. The targets are derived from the separate released processed table; input projections omit its answer columns. Figure 1 bar heights are not exact base-set truth because the author notebook plots after augmentation."
+    },
+    {
+      "id": "GLEASON24-Q3",
+      "kind": "Subquestion",
+      "title": "How do predicted stability and experimental structure evidence overlap in the retained materials?",
+      "inputs": [
+        {
+          "name": "material_records.json",
+          "url": "data/gleason-2024-cu-oxidation/inputs/Q3/material_records.json",
+          "description": "Pre-filter release metadata with oxidation dictionaries, reference status, is_stable and theoretical. Retained masks and category counts are withheld."
+        }
+      ],
+      "prompt": {
+        "background": "is_stable=True marks the saved predicted-stability category. theoretical=False marks a structure with experimental provenance; it does not mean its spectrum was measured experimentally. Use the saved Materials Project Cu average, rounded to two decimals. The released workflow substitutes 0 when the Cu assignment is missing. Exclude material_id=\"Failed\", records with an error or missing L3 reference, and labels ≥3. This is the historical data rule; an imputed zero is not independently established Cu(0).",
+        "instruction": "Determine the overlap of the two categories in the admissible base material set. Save a four-category plot and result.json with retained, stable, experimentally_known, both, stable_only, experimentally_known_only and neither. Explain whether adding the two inclusive category totals gives a valid material count."
+      },
+      "verification": {
+        "description": "Require exact inclusive and exclusive counts and explain the overlap. Do not force the release counts to equal Figure 1. The four exclusive groups must sum to the retained total.",
+        "data": [
+          {
+            "name": "expected.json",
+            "url": "data/gleason-2024-cu-oxidation/verification/Q3/expected.json",
+            "description": "Evaluator-only numerical targets; see provenance.json for their evidence type."
+          },
+          {
+            "name": "Q3_candidate_workflow.json",
+            "url": "data/gleason-2024-cu-oxidation/workflows/Q3.json",
+            "description": "Worked candidate tool sequence, actual execution record, and limitations. Exclude from agent inputs."
+          },
+          {
+            "name": "candidate.py",
+            "url": "data/gleason-2024-cu-oxidation/workflows/candidate.py",
+            "description": "Executable worked solutions; reads only the selected question input directory. Exclude from agent inputs."
+          },
+          {
+            "name": "verify.py",
+            "url": "data/gleason-2024-cu-oxidation/workflows/verify.py",
+            "description": "Evaluator-side numeric checker. Interpretation and figure readability require separate review."
+          }
+        ],
+        "figures": [
+          {
+            "image": "assets/gleason-2024-cu-oxidation/paper-figure-1.png",
+            "label": "Figure 1 · provenance context",
+            "caption": "Author-provided Figure 1. Category counts differ from the released table and must not be used as exact numerical ground truth.",
+            "url": "https://www.nature.com/articles/s41524-024-01408-1"
+          }
+        ]
+      },
+      "groundTruthReasoning": "The released retained rows give 1,706 stable and 2,879 experimentally known, with 1,198 in both categories. Exclusive counts are 508 stable only, 1,681 experimentally known only, 1,198 both and 52 neither, totaling 3,439. Inclusive totals double-count the overlap. Figure 1 reports different snapshot counts; it supplies context, not the exact target for the later released table. The verification counts are independently reduced from the processed release flags."
+    },
+    {
+      "id": "GLEASON24-Q4",
+      "kind": "Subquestion",
+      "title": "What cumulative model-input curves correspond to the Cu, Cu₂O and CuO reference spectra?",
+      "inputs": [
+        {
+          "name": "reference_spectra.csv",
+          "url": "data/gleason-2024-cu-oxidation/inputs/Q4/reference_spectra.csv",
+          "description": "Ordinary simulated spectra for mp-30, mp-361 and mp-704645, projected from the open release. Already aligned, baseline-shifted and normalized on 925–970 eV; cumulative columns are withheld."
+        }
+      ],
+      "prompt": {
+        "background": "The model representation uses cumulative spectral intensity normalized to its maximum. The released convention at sample k includes samples before k and excludes sample k. The uniform energy step is 0.1 eV; a constant integration factor cancels under normalization.",
+        "instruction": "Construct the three cumulative curves and save cumulative.csv with energy_eV,Cu,Cu2O,CuO, plus an overlay plot. Save result.json with materials in Cu/Cu2O/CuO order, points, first_value and last_value. Briefly describe where the ordinary absorption peaks produce rapid changes in the cumulative curves."
+      },
+      "verification": {
+        "description": "Compare all three 451-point curves to released cumulative arrays at rtol=1e−7, atol=1e−8. Check the zero/one endpoints and the plot axes. Review the connection between peaks and steep cumulative changes; do not infer model accuracy from this transformation alone.",
+        "data": [
+          {
+            "name": "expected.json",
+            "url": "data/gleason-2024-cu-oxidation/verification/Q4/expected.json",
+            "description": "Evaluator-only numerical targets; see provenance.json for their evidence type."
+          },
+          {
+            "name": "cumulative.csv",
+            "url": "data/gleason-2024-cu-oxidation/verification/Q4/cumulative.csv",
+            "description": "Evaluator-only numerical comparison table."
+          },
+          {
+            "name": "Q4_candidate_workflow.json",
+            "url": "data/gleason-2024-cu-oxidation/workflows/Q4.json",
+            "description": "Worked candidate tool sequence, actual execution record, and limitations. Exclude from agent inputs."
+          },
+          {
+            "name": "candidate.py",
+            "url": "data/gleason-2024-cu-oxidation/workflows/candidate.py",
+            "description": "Executable worked solutions; reads only the selected question input directory. Exclude from agent inputs."
+          },
+          {
+            "name": "verify.py",
+            "url": "data/gleason-2024-cu-oxidation/workflows/verify.py",
+            "description": "Evaluator-side numeric checker. Interpretation and figure readability require separate review."
+          }
+        ],
+        "figures": []
+      },
+      "groundTruthReasoning": "The target cumulative arrays are copied directly from Cumulative_Spectra_TEAM_1_aligned_925_970 in the authors released table. They use sum(y[:k])/max_k(sum(y[:k])), so the first point is zero and the last is one across 451 samples. A standard inclusive cumsum or trapezoidal integral changes the representation and should not pass this convention-specific question. Source: Full_spectral_alignment.ipynb cell 60. This is a feature-construction question, not an independent oxidation-state prediction."
+    },
+    {
+      "id": "GLEASON24-Q5",
+      "kind": "Subquestion",
+      "title": "What Cu L₂,₃ signal results from the paper’s displayed three-material spectral combination?",
+      "inputs": [
+        {
+          "name": "parent_spectra.csv",
+          "url": "data/gleason-2024-cu-oxidation/inputs/Q5/parent_spectra.csv",
+          "description": "Released ordinary spectra for HoCdCu4 (mp-12007), NdCuSi (mp-8120) and CuN2(Cl2O)2 (mp-1188453), already aligned and normalized. No mixture output is included."
+        }
+      ],
+      "prompt": {
+        "background": "The Figure 1 example combines these three parent signals linearly using display coefficients 0.33, 0.33 and 0.33. Use those coefficients exactly: this plotting call does not rescale them to sum to one. This task concerns the displayed signal; the training-data generator has a separate normalization rule.",
+        "instruction": "Compute the three weighted contributions and total signal on the shared energy grid. Save mixture.csv with energy_eV,weighted_0,weighted_1,weighted_2,mixture, and plot dashed components with their summed curve. Save result.json with parent_ids, coefficients, coefficient_sum and points. Explain why the summed curve can exceed each individual weighted contribution."
+      },
+      "verification": {
+        "description": "Require the weighted components and total at rtol=1e−7, atol=1e−8, including the 0.99 coefficient sum. Compare curve order, peak locations and relative heights to the embedded author plot; styling need not match. Require an additive-signal interpretation, without claiming measured mass fractions.",
+        "data": [
+          {
+            "name": "expected.json",
+            "url": "data/gleason-2024-cu-oxidation/verification/Q5/expected.json",
+            "description": "Evaluator-only numerical targets; see provenance.json for their evidence type."
+          },
+          {
+            "name": "mixture.csv",
+            "url": "data/gleason-2024-cu-oxidation/verification/Q5/mixture.csv",
+            "description": "Evaluator-only numerical comparison table."
+          },
+          {
+            "name": "Q5_candidate_workflow.json",
+            "url": "data/gleason-2024-cu-oxidation/workflows/Q5.json",
+            "description": "Worked candidate tool sequence, actual execution record, and limitations. Exclude from agent inputs."
+          },
+          {
+            "name": "candidate.py",
+            "url": "data/gleason-2024-cu-oxidation/workflows/candidate.py",
+            "description": "Executable worked solutions; reads only the selected question input directory. Exclude from agent inputs."
+          },
+          {
+            "name": "verify.py",
+            "url": "data/gleason-2024-cu-oxidation/workflows/verify.py",
+            "description": "Evaluator-side numeric checker. Interpretation and figure readability require separate review."
+          }
+        ],
+        "figures": [
+          {
+            "image": "assets/gleason-2024-cu-oxidation/notebook-ternary-mixture.png",
+            "label": "Author notebook · displayed ternary mixture",
+            "caption": "Unmodified embedded plot from Paper_Figures.ipynb cell 16, output 2. Supports the curve shapes; numeric reference is a recomputation.",
+            "url": "https://www.nature.com/articles/s41524-024-01408-1"
+          }
+        ]
+      },
+      "groundTruthReasoning": "The authors plotting call in Paper_Figures.ipynb cell 16 uses these IDs and coefficients directly. Their sum is 0.99. The evaluator table is a deterministic weighted sum recomputed from the released parent arrays; it is not a separately released mixture table. The independently embedded author plot supplies a shape check. The parents are not the Cu/Cu2O/CuO standards. The total is pointwise additive, explaining why it can exceed each weighted component."
+    },
+    {
+      "id": "GLEASON24-Q6",
+      "kind": "Subquestion",
+      "title": "How does synthetic mixture augmentation change Cu oxidation-state coverage?",
+      "inputs": [
+        {
+          "name": "ordered_base_labels.csv",
+          "url": "data/gleason-2024-cu-oxidation/inputs/Q6/ordered_base_labels.csv",
+          "description": "Only the released base material IDs and oxidation labels, in original row order. No synthetic rows or augmented counts. Spectral arrays are unnecessary for this label-coverage question."
+        }
+      ],
+      "prompt": {
+        "background": "Generate the paper’s three mixture families: all (0/1/2), 0-1 and 1-2. For each family reset NumPy RandomState(32). For each of 100 draws, select one parent from each exact-label pool in order 0,1,2 using randint, retaining input order within pools. Then draw 20 label-0 raw coefficients from linspace(1,0,101) unless family 1-2; draw 20 label-2 coefficients from linspace(0,1,101) unless family 0-1; finally draw 20 label-1 coefficients from linspace(0,1,101). Inactive coefficients are zero without an RNG call. Normalize each coefficient triple, skip all-zero triples, and round the weighted label to two decimals using NumPy scalar rounding. Retain original fractional-label materials but do not draw parents from them.",
+        "instruction": "Determine the label coverage after appending the generated mixtures to the base set. Save manifest.csv with type,id_0,id_1,id_2,weight_0,weight_1,weight_2,label. In result.json report base_rows, generated_by_family, generated, augmented, synthetic_integer_labels, augmented_integer_counts, histogram_counts, histogram_edges, histogram_total and fractional_outside_histogram. The histogram uses 20 equal bins from 0 through 2 and excludes labels exactly 0,1,2, which are separate bars. Plot the resulting coverage and explain any difference from the nominal number of requested mixtures."
+      },
+      "verification": {
+        "description": "Require exact counts, histogram bins and the parent-ID ordering in the manifest; weights/labels use rtol=1e−7, atol=1e−8. Compare qualitatively with the author distribution plot, acknowledging the released-base snapshot may differ. Require an explanation of skipped all-zero draws and rounded integer mixtures. This question does not test model training or synthetic spectral shapes.",
+        "data": [
+          {
+            "name": "expected.json",
+            "url": "data/gleason-2024-cu-oxidation/verification/Q6/expected.json",
+            "description": "Evaluator-only numerical targets; see provenance.json for their evidence type."
+          },
+          {
+            "name": "manifest.csv",
+            "url": "data/gleason-2024-cu-oxidation/verification/Q6/manifest.csv",
+            "description": "Evaluator-only numerical comparison table."
+          },
+          {
+            "name": "Q6_candidate_workflow.json",
+            "url": "data/gleason-2024-cu-oxidation/workflows/Q6.json",
+            "description": "Worked candidate tool sequence, actual execution record, and limitations. Exclude from agent inputs."
+          },
+          {
+            "name": "candidate.py",
+            "url": "data/gleason-2024-cu-oxidation/workflows/candidate.py",
+            "description": "Executable worked solutions; reads only the selected question input directory. Exclude from agent inputs."
+          },
+          {
+            "name": "verify.py",
+            "url": "data/gleason-2024-cu-oxidation/workflows/verify.py",
+            "description": "Evaluator-side numeric checker. Interpretation and figure readability require separate review."
+          }
+        ],
+        "figures": [
+          {
+            "image": "assets/gleason-2024-cu-oxidation/notebook-augmented-distribution.png",
+            "label": "Author notebook · augmented label distribution",
+            "caption": "Unmodified embedded plot from Paper_Figures.ipynb cell 13. Use for qualitative shape/context, not exact snapshot counts.",
+            "url": "https://www.nature.com/articles/s41524-024-01408-1"
+          }
+        ]
+      },
+      "groundTruthReasoning": "Replay of the unchanged author generation methods on the released base table produces 5,999 mixtures: 2,000 all, 2,000 0-1 and 1,999 1-2. One zero-sum draw is skipped. The augmented size is 9,438. Synthetic integer labels contribute 127 rows; final integer bars are 906, 1,108 and 1,319. The noninteger histogram contains 6,037 entries, while 68 original fractional labels lie above its range. This is a code-replay target, not an independently archived historical mixture table. Source: Paper_Figures.ipynb cell 4 and Analysis_objects_and_functions.py methods augment_df_with_mixtures/add_mixed_valent_spectra."
+    },
+    {
+      "id": "GLEASON24-Q7",
+      "kind": "Subquestion",
+      "title": "How separated are the experimental Cu, Cu₂O and CuO L₃ peak energies?",
+      "inputs": [
+        {
+          "name": "Cu Metal XAS.csv",
+          "url": "data/gleason-2024-cu-oxidation/inputs/Q7/Cu Metal XAS.csv",
+          "description": "Unmodified literature XAS CSV from the open release: energy in eV and intensity. These are released digitized spectra, not detector-raw measurements."
+        },
+        {
+          "name": "Cu2O XAS.csv",
+          "url": "data/gleason-2024-cu-oxidation/inputs/Q7/Cu2O XAS.csv",
+          "description": "Unmodified literature XAS CSV from the open release: energy in eV and intensity. These are released digitized spectra, not detector-raw measurements."
+        },
+        {
+          "name": "CuO XAS.csv",
+          "url": "data/gleason-2024-cu-oxidation/inputs/Q7/CuO XAS.csv",
+          "description": "Unmodified literature XAS CSV from the open release: energy in eV and intensity. These are released digitized spectra, not detector-raw measurements."
+        }
+      ],
+      "prompt": {
+        "background": "Compare the spectra on their supplied energy axes without an additional energy shift or smoothing. For this question define the L₃ peak as the largest tabulated intensity between 930 and 940 eV inclusive. Sorting is permitted for plotting; plot amplitudes may be normalized independently without changing peak positions. Fine oscillations in these digitized traces are not a target for physical interpretation.",
+        "instruction": "Locate the three L₃ peak energies and compare their separations. Save result.json with L3_peak_eV (keys \"Cu Metal\",\"Cu2O\",\"CuO\"), Cu2O_minus_Cu_eV, CuO_minus_Cu_eV and CuO_minus_Cu2O_eV. Make an overlay marking the peak positions. Explain whether peak energy alone is likely to separate all three oxidation-state references."
+      },
+      "verification": {
+        "description": "Allow 0.05 eV absolute error on peak positions and signed separations. Check that Cu/Cu2O are nearly coincident and CuO is lower in energy; compare the marked overlay with Figure S1 XAS traces. The candidate must limit its conclusion to peak energy and these supplied references.",
+        "data": [
+          {
+            "name": "expected.json",
+            "url": "data/gleason-2024-cu-oxidation/verification/Q7/expected.json",
+            "description": "Evaluator-only numerical targets; see provenance.json for their evidence type."
+          },
+          {
+            "name": "Q7_candidate_workflow.json",
+            "url": "data/gleason-2024-cu-oxidation/workflows/Q7.json",
+            "description": "Worked candidate tool sequence, actual execution record, and limitations. Exclude from agent inputs."
+          },
+          {
+            "name": "candidate.py",
+            "url": "data/gleason-2024-cu-oxidation/workflows/candidate.py",
+            "description": "Executable worked solutions; reads only the selected question input directory. Exclude from agent inputs."
+          },
+          {
+            "name": "verify.py",
+            "url": "data/gleason-2024-cu-oxidation/workflows/verify.py",
+            "description": "Evaluator-side numeric checker. Interpretation and figure readability require separate review."
+          }
+        ],
+        "figures": [
+          {
+            "image": "assets/gleason-2024-cu-oxidation/paper-figure-s1.png",
+            "label": "Figure S1 · reference spectra",
+            "caption": "Author-provided Figure S1. Its literature XAS traces were smoothed and shifted by −1.0 eV (Cu) and −1.2 eV (Cu2O/CuO). Use qualitative peak ordering only; exact targets use the supplied unshifted CSVs.",
+            "url": "https://www.nature.com/articles/s41524-024-01408-1"
+          }
+        ]
+      },
+      "groundTruthReasoning": "The supplied XAS maxima occur at 933.65 eV (Cu), 933.6691148 eV (Cu2O) and 931.2967241 eV (CuO). The first pair differs by approximately 0.0191 eV, whereas CuO is about 2.35–2.37 eV lower. These exact values are independently reduced from the supplied CSVs; the paper does not publish this exact peak table. Figure S1 supports the qualitative near-coincidence of Cu/Cu2O and lower-energy CuO feature after smoothing and author shifts of −1.0/−1.2/−1.2 eV. Its plotted absolute peak energies are not the unshifted CSV targets. The comparison supports a limitation of peak-position-only discrimination, not a claim that the complete spectra are indistinguishable."
+    }
+  ]
+}

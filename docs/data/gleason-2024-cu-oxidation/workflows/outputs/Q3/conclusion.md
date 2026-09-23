@@ -1,0 +1,1 @@
+The stable and experimentally known groups overlap in 1198 materials. Adding the two inclusive counts double-counts this intersection. The four exclusive categories sum to 3439. Experimental structure provenance does not turn a calculated spectrum into a measured one.

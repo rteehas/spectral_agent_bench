@@ -1,0 +1,40 @@
+{
+  "questions": [
+    {
+      "question": "Q1",
+      "status": "passed",
+      "wall_seconds": 2.701
+    },
+    {
+      "question": "Q2",
+      "status": "passed",
+      "wall_seconds": 1.683
+    },
+    {
+      "question": "Q3",
+      "status": "passed",
+      "wall_seconds": 1.706
+    },
+    {
+      "question": "Q4",
+      "status": "passed",
+      "wall_seconds": 1.801
+    },
+    {
+      "question": "Q5",
+      "status": "passed",
+      "wall_seconds": 1.849
+    },
+    {
+      "question": "Q6",
+      "status": "passed",
+      "wall_seconds": 2.117
+    },
+    {
+      "question": "Q7",
+      "status": "passed",
+      "wall_seconds": 1.854
+    }
+  ],
+  "all_numeric_checks_passed": true
+}

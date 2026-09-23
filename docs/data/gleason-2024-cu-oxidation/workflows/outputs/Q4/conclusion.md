@@ -1,0 +1,1 @@
+The normalized left-exclusive cumulative curves run from zero to one. Strong absorption features produce steep rises, while weaker features contribute more gradually. The CuO rise occurs at lower energy than the main Cu/Cu2O rises in these inputs. This transformation supplies model features; it does not itself infer an oxidation state or establish model accuracy.

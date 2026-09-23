@@ -1,0 +1,14 @@
+{
+  "parent_ids": [
+    "mp-12007",
+    "mp-8120",
+    "mp-1188453"
+  ],
+  "coefficients": [
+    0.33,
+    0.33,
+    0.33
+  ],
+  "coefficient_sum": 0.99,
+  "points": 451
+}

@@ -1,0 +1,1 @@
+The structure gives site weights {'1': 0.2, '2': 0.8}. Equal weighting of the two inequivalent sites would ignore their different Cu atom multiplicities. The reconstructed material curve has 545 points; its arithmetic L3 reference is 936.320500 eV. These are calculated spectra, not experimental measurements.

@@ -1,0 +1,88 @@
+{
+  "scenario_id": "GLEASON24-Q3",
+  "question": "How do predicted stability and experimental structure evidence overlap in the retained materials?",
+  "tool_environment": {
+    "python": "3.10.20",
+    "numpy": "1.26.2",
+    "pandas": "1.5.3",
+    "scipy": "1.15.3",
+    "matplotlib": "3.10.9",
+    "pymatgen": "2024.3.1 (Q1 only)"
+  },
+  "input_boundary": "Only the scenario inputs and its background. No released output tables, verification files, local prior traces or live API calls.",
+  "steps": [
+    {
+      "step": 1,
+      "tool": "Python / JSON",
+      "operation": "Read the upstream metadata and apply the stated admissibility rule.",
+      "artifact_or_check": "Retained material records."
+    },
+    {
+      "step": 2,
+      "tool": "Python / NumPy",
+      "operation": "Compute the two Boolean masks, their intersection and the four disjoint groups.",
+      "artifact_or_check": "result.json"
+    },
+    {
+      "step": 3,
+      "tool": "Python / Matplotlib",
+      "operation": "Plot the four exclusive categories.",
+      "artifact_or_check": "plot.png"
+    },
+    {
+      "step": 4,
+      "tool": "Evaluator / verify.py",
+      "operation": "Compare to the separately released retained table.",
+      "artifact_or_check": "Exact counts and set-overlap interpretation."
+    }
+  ],
+  "candidate_command": "python candidate.py Q3 --inputs INPUT_DIRECTORY --output OUTPUT_DIRECTORY",
+  "verification_command": "python verify.py Q3 --output OUTPUT_DIRECTORY --truth verification/Q3",
+  "evidence": "The released retained rows give 1,706 stable and 2,879 experimentally known, with 1,198 in both categories. Exclusive counts are 508 stable only, 1,681 experimentally known only, 1,198 both and 52 neither, totaling 3,439. Inclusive totals double-count the overlap. Figure 1 reports different snapshot counts; it supplies context, not the exact target for the later released table. The verification counts are independently reduced from the processed release flags.",
+  "execution": {
+    "run_at_utc": "2026-09-23T22:14:22.624616+00:00",
+    "status": "passed",
+    "candidate_exit_code": 0,
+    "verifier_exit_code": 0,
+    "wall_seconds": 1.706,
+    "tool_calls": [
+      {
+        "tool": "shell / Python",
+        "command": [
+          "/tmp/gleason-preview-py310/bin/python",
+          "/scratch/rst306/spectrasleuth_work/spectral_agent_bench/docs/data/gleason-2024-cu-oxidation/workflows/candidate.py",
+          "Q3",
+          "--inputs",
+          "/tmp/gleason-bench-candidates-final/Q3/inputs",
+          "--output",
+          "/tmp/gleason-bench-candidates-final/Q3/output"
+        ],
+        "stdout": "{\"question\": \"Q3\", \"outputs\": [\"conclusion.md\", \"plot.png\", \"result.json\"], \"result\": {\"retained\": 3439, \"stable\": 1706, \"experimentally_known\": 2879, \"both\": 1198, \"stable_only\": 508, \"experimentally_known_only\": 1681, \"neither\": 52}}\n",
+        "stderr": ""
+      },
+      {
+        "tool": "shell / evaluator Python",
+        "command": [
+          "/tmp/gleason-preview-py310/bin/python",
+          "/scratch/rst306/spectrasleuth_work/spectral_agent_bench/docs/data/gleason-2024-cu-oxidation/workflows/verify.py",
+          "Q3",
+          "--output",
+          "/tmp/gleason-bench-candidates-final/Q3/output",
+          "--truth",
+          "/scratch/rst306/spectrasleuth_work/spectral_agent_bench/docs/data/gleason-2024-cu-oxidation/verification/Q3"
+        ],
+        "stdout": "{\n  \"question\": \"Q3\",\n  \"numeric_pass\": true,\n  \"compared_tables\": [],\n  \"plot_present\": true,\n  \"interpretation_and_visual_review\": \"Required separately; numeric checks do not assess scientific prose or plot readability.\"\n}\n",
+        "stderr": ""
+      }
+    ],
+    "candidate_input_access": "Candidate code only opens its staged inputs. This audit does not impose an OS/network sandbox; benchmark deployment must restrict evaluator/solution access.",
+    "input_files": [
+      "material_records.json"
+    ],
+    "retained_outputs": [
+      "data/gleason-2024-cu-oxidation/workflows/outputs/Q3/conclusion.md",
+      "data/gleason-2024-cu-oxidation/workflows/outputs/Q3/plot.png",
+      "data/gleason-2024-cu-oxidation/workflows/outputs/Q3/result.json"
+    ]
+  }
+}

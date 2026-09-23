@@ -1,0 +1,95 @@
+{
+  "scenario_id": "GLEASON24-Q6",
+  "question": "How does synthetic mixture augmentation change Cu oxidation-state coverage?",
+  "tool_environment": {
+    "python": "3.10.20",
+    "numpy": "1.26.2",
+    "pandas": "1.5.3",
+    "scipy": "1.15.3",
+    "matplotlib": "3.10.9",
+    "pymatgen": "2024.3.1 (Q1 only)"
+  },
+  "input_boundary": "Only the scenario inputs and its background. No released output tables, verification files, local prior traces or live API calls.",
+  "steps": [
+    {
+      "step": 1,
+      "tool": "Python / pandas",
+      "operation": "Load ordered IDs and labels and form exact 0/1/2 parent pools.",
+      "artifact_or_check": "Ordered parent pools."
+    },
+    {
+      "step": 2,
+      "tool": "Python / NumPy RandomState",
+      "operation": "Generate parent selections and coefficients using the stated family-specific draw order.",
+      "artifact_or_check": "manifest.csv"
+    },
+    {
+      "step": 3,
+      "tool": "Python / NumPy",
+      "operation": "Append synthetic labels; compute exact-integer bars and fractional histogram.",
+      "artifact_or_check": "result.json"
+    },
+    {
+      "step": 4,
+      "tool": "Python / Matplotlib",
+      "operation": "Plot the augmented label coverage.",
+      "artifact_or_check": "plot.png"
+    },
+    {
+      "step": 5,
+      "tool": "Evaluator / verify.py",
+      "operation": "Compare with prior unchanged-author-code replay and inspect the coverage explanation.",
+      "artifact_or_check": "Replay agreement, not independent historical ground truth."
+    }
+  ],
+  "candidate_command": "python candidate.py Q6 --inputs INPUT_DIRECTORY --output OUTPUT_DIRECTORY",
+  "verification_command": "python verify.py Q6 --output OUTPUT_DIRECTORY --truth verification/Q6",
+  "evidence": "Replay of the unchanged author generation methods on the released base table produces 5,999 mixtures: 2,000 all, 2,000 0-1 and 1,999 1-2. One zero-sum draw is skipped. The augmented size is 9,438. Synthetic integer labels contribute 127 rows; final integer bars are 906, 1,108 and 1,319. The noninteger histogram contains 6,037 entries, while 68 original fractional labels lie above its range. This is a code-replay target, not an independently archived historical mixture table. Source: Paper_Figures.ipynb cell 4 and Analysis_objects_and_functions.py methods augment_df_with_mixtures/add_mixed_valent_spectra.",
+  "execution": {
+    "run_at_utc": "2026-09-23T22:14:28.605740+00:00",
+    "status": "passed",
+    "candidate_exit_code": 0,
+    "verifier_exit_code": 0,
+    "wall_seconds": 2.117,
+    "tool_calls": [
+      {
+        "tool": "shell / Python",
+        "command": [
+          "/tmp/gleason-preview-py310/bin/python",
+          "/scratch/rst306/spectrasleuth_work/spectral_agent_bench/docs/data/gleason-2024-cu-oxidation/workflows/candidate.py",
+          "Q6",
+          "--inputs",
+          "/tmp/gleason-bench-candidates-final/Q6/inputs",
+          "--output",
+          "/tmp/gleason-bench-candidates-final/Q6/output"
+        ],
+        "stdout": "{\"question\": \"Q6\", \"outputs\": [\"conclusion.md\", \"manifest.csv\", \"plot.png\", \"result.json\"], \"result\": {\"base_rows\": 3439, \"generated_by_family\": {\"all\": 2000, \"0-1\": 2000, \"1-2\": 1999}, \"generated\": 5999, \"augmented\": 9438, \"synthetic_integer_labels\": 127, \"augmented_integer_counts\": {\"0\": 906, \"1\": 1108, \"2\": 1319}, \"histogram_counts\": [98, 130, 222, 236, 383, 464, 336, 332, 370, 377, 315, 416, 309, 444, 406, 419, 353, 182, 157, 88], \"histogram_edges\": [0.0, 0.1, 0.2, 0.30000000000000004, 0.4, 0.5, 0.6000000000000001, 0.7000000000000001, 0.8, 0.9, 1.0, 1.1, 1.2000000000000002, 1.3, 1.4000000000000001, 1.5, 1.6, 1.7000000000000002, 1.8, 1.9000000000000001, 2.0], \"histogram_total\": 6037, \"fractional_outside_histogram\": 68}}\n",
+        "stderr": ""
+      },
+      {
+        "tool": "shell / evaluator Python",
+        "command": [
+          "/tmp/gleason-preview-py310/bin/python",
+          "/scratch/rst306/spectrasleuth_work/spectral_agent_bench/docs/data/gleason-2024-cu-oxidation/workflows/verify.py",
+          "Q6",
+          "--output",
+          "/tmp/gleason-bench-candidates-final/Q6/output",
+          "--truth",
+          "/scratch/rst306/spectrasleuth_work/spectral_agent_bench/docs/data/gleason-2024-cu-oxidation/verification/Q6"
+        ],
+        "stdout": "{\n  \"question\": \"Q6\",\n  \"numeric_pass\": true,\n  \"compared_tables\": [\n    {\n      \"file\": \"manifest.csv\",\n      \"rows\": 5999,\n      \"columns\": [\n        \"type\",\n        \"id_0\",\n        \"id_1\",\n        \"id_2\",\n        \"weight_0\",\n        \"weight_1\",\n        \"weight_2\",\n        \"label\"\n      ]\n    }\n  ],\n  \"plot_present\": true,\n  \"interpretation_and_visual_review\": \"Required separately; numeric checks do not assess scientific prose or plot readability.\"\n}\n",
+        "stderr": ""
+      }
+    ],
+    "candidate_input_access": "Candidate code only opens its staged inputs. This audit does not impose an OS/network sandbox; benchmark deployment must restrict evaluator/solution access.",
+    "input_files": [
+      "ordered_base_labels.csv"
+    ],
+    "retained_outputs": [
+      "data/gleason-2024-cu-oxidation/workflows/outputs/Q6/conclusion.md",
+      "data/gleason-2024-cu-oxidation/workflows/outputs/Q6/manifest.csv",
+      "data/gleason-2024-cu-oxidation/workflows/outputs/Q6/plot.png",
+      "data/gleason-2024-cu-oxidation/workflows/outputs/Q6/result.json"
+    ]
+  }
+}

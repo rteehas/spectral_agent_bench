@@ -1,0 +1,93 @@
+{
+  "scenario_id": "GLEASON24-Q1",
+  "question": "What material-level Cu L₂,₃ spectrum is predicted for TbCu₅?",
+  "tool_environment": {
+    "python": "3.10.20",
+    "numpy": "1.26.2",
+    "pandas": "1.5.3",
+    "scipy": "1.15.3",
+    "matplotlib": "3.10.9",
+    "pymatgen": "2024.3.1 (Q1 only)"
+  },
+  "input_boundary": "Only the scenario inputs and its background. No released output tables, verification files, local prior traces or live API calls.",
+  "steps": [
+    {
+      "step": 1,
+      "tool": "Python / pymatgen",
+      "operation": "Parse the structure header and identify symmetry-equivalent Cu sites.",
+      "artifact_or_check": "Multiplicity-derived weights."
+    },
+    {
+      "step": 2,
+      "tool": "Python / NumPy",
+      "operation": "Load each xmu.dat, interpolate and extend edges, sum L₂+L₃, and form the multiplicity-weighted material spectrum.",
+      "artifact_or_check": "spectrum.csv; result.json."
+    },
+    {
+      "step": 3,
+      "tool": "Python / Matplotlib",
+      "operation": "Plot the two weighted site spectra and their sum.",
+      "artifact_or_check": "plot.png"
+    },
+    {
+      "step": 4,
+      "tool": "Evaluator / verify.py",
+      "operation": "Compare to the independently saved material spectrum and inspect the site-weight explanation.",
+      "artifact_or_check": "Numeric pass plus scientific review."
+    }
+  ],
+  "candidate_command": "python candidate.py Q1 --inputs INPUT_DIRECTORY --output OUTPUT_DIRECTORY",
+  "verification_command": "python verify.py Q1 --output OUTPUT_DIRECTORY --truth verification/Q1",
+  "evidence": "The six-atom TbCu5 cell contains five Cu atoms in multiplicity groups 1 and 4, so the weights are 0.2 and 0.8. Their edge combinations yield 545 points and the saved average L3 reference is 936.3205 eV. The numerical target spectrum is copied from the authors released pre-alignment table for mp-1077262; the candidate does not read that table. This tests postprocessing of converged simulations, not a new FEFF calculation. Source: Database_Construction.ipynb cells 1, 7, 9 and 10.",
+  "execution": {
+    "run_at_utc": "2026-09-23T22:14:19.115244+00:00",
+    "status": "passed",
+    "candidate_exit_code": 0,
+    "verifier_exit_code": 0,
+    "wall_seconds": 2.701,
+    "tool_calls": [
+      {
+        "tool": "shell / Python",
+        "command": [
+          "/tmp/gleason-preview-py310/bin/python",
+          "/scratch/rst306/spectrasleuth_work/spectral_agent_bench/docs/data/gleason-2024-cu-oxidation/workflows/candidate.py",
+          "Q1",
+          "--inputs",
+          "/tmp/gleason-bench-candidates-final/Q1/inputs",
+          "--output",
+          "/tmp/gleason-bench-candidates-final/Q1/output"
+        ],
+        "stdout": "{\"question\": \"Q1\", \"outputs\": [\"conclusion.md\", \"plot.png\", \"result.json\", \"spectrum.csv\"], \"result\": {\"material_id\": \"mp-1077262\", \"site_weights\": {\"1\": 0.2, \"2\": 0.8}, \"L3_reference_eV\": 936.3205, \"points\": 545}}\n",
+        "stderr": "/tmp/gleason-preview-py310/lib/python3.10/site-packages/pymatgen/symmetry/analyzer.py:129: DeprecationWarning: dict interface is deprecated. Use attribute interface instead\n  return self._space_group_data[\"international\"]\n"
+      },
+      {
+        "tool": "shell / evaluator Python",
+        "command": [
+          "/tmp/gleason-preview-py310/bin/python",
+          "/scratch/rst306/spectrasleuth_work/spectral_agent_bench/docs/data/gleason-2024-cu-oxidation/workflows/verify.py",
+          "Q1",
+          "--output",
+          "/tmp/gleason-bench-candidates-final/Q1/output",
+          "--truth",
+          "/scratch/rst306/spectrasleuth_work/spectral_agent_bench/docs/data/gleason-2024-cu-oxidation/verification/Q1"
+        ],
+        "stdout": "{\n  \"question\": \"Q1\",\n  \"numeric_pass\": true,\n  \"compared_tables\": [\n    {\n      \"file\": \"spectrum.csv\",\n      \"rows\": 545,\n      \"columns\": [\n        \"energy_eV\",\n        \"intensity\"\n      ]\n    }\n  ],\n  \"plot_present\": true,\n  \"interpretation_and_visual_review\": \"Required separately; numeric checks do not assess scientific prose or plot readability.\"\n}\n",
+        "stderr": ""
+      }
+    ],
+    "candidate_input_access": "Candidate code only opens its staged inputs. This audit does not impose an OS/network sandbox; benchmark deployment must restrict evaluator/solution access.",
+    "input_files": [
+      "L2_001_Cu_xmu.dat",
+      "L2_002_Cu_xmu.dat",
+      "L3_001_Cu_feff.inp",
+      "L3_001_Cu_xmu.dat",
+      "L3_002_Cu_xmu.dat"
+    ],
+    "retained_outputs": [
+      "data/gleason-2024-cu-oxidation/workflows/outputs/Q1/conclusion.md",
+      "data/gleason-2024-cu-oxidation/workflows/outputs/Q1/plot.png",
+      "data/gleason-2024-cu-oxidation/workflows/outputs/Q1/result.json",
+      "data/gleason-2024-cu-oxidation/workflows/outputs/Q1/spectrum.csv"
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "retained": 3439,
+  "integer_counts": {
+    "0": 876,
+    "1": 1039,
+    "2": 1291
+  },
+  "fractional": 233,
+  "integer_fraction": 0.932247746437918,
+  "above_two_below_three": 68,
+  "zero_from_missing": 876,
+  "zero_explicit": 0
+}

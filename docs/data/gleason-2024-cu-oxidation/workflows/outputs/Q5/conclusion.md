@@ -1,0 +1,1 @@
+The curve is the pointwise sum of three nonnegative weighted contributions, so it can exceed each individual contribution. The display coefficients sum to 0.99; they were not renormalized. They parameterize this spectral illustration and are not independently measured mass or volume fractions.

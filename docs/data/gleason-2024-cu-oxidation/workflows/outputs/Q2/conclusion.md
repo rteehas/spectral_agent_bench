@@ -1,0 +1,1 @@
+Among 3439 retained materials, 93.2248% have integer labels and 233 have fractional labels. All 876 imputed-zero records lack a Cu assignment; only 0 zeros were explicitly returned. The archive establishes a labeling convention, not the chemical correctness of every Cu(0) assignment.

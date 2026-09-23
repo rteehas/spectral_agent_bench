@@ -1,0 +1,1 @@
+Cu2O minus Cu is 0.0191 eV; CuO minus Cu2O is -2.3724 eV. Cu/Cu2O peak positions nearly coincide, whereas CuO lies lower. Peak energy alone therefore has limited power to separate all three references. This does not make their complete spectra indistinguishable, and the conclusion is limited to these supplied spectra.

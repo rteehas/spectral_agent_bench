@@ -5,7 +5,7 @@ A static GitHub Pages workspace for reviewing spectral benchmark examples, inspi
 **Website:** https://rteehas.github.io/spectral_agent_bench/  
 **Review alias:** https://rteehas.github.io/spectral_agent_bench/review.html
 
-The live dataset, [`docs/data/benchmark.json`](docs/data/benchmark.json), starts empty for real labeling. The four fictional demonstration tasks are preserved separately in [`docs/data/benchmark.examples.json`](docs/data/benchmark.examples.json) as a reference; they are not loaded by the website.
+The live dataset, [`docs/data/benchmark.json`](docs/data/benchmark.json), contains seven questions for [Gleason et al. (2024)](papers/gleason-2024-cu-oxidation/README.md), with minimal input bundles, verification targets and executed candidate workflows. The four fictional demonstration tasks are preserved separately in [`docs/data/benchmark.examples.json`](docs/data/benchmark.examples.json) as a reference; they are not loaded by the website.
 
 ## Review workflow
 
@@ -144,7 +144,7 @@ In the repository's **Settings → Pages**, set **Source** to **GitHub Actions**
 - `docs/review.html`: compatibility redirect preserving query strings and scenario links.
 - `docs/assets/style.css`: responsive styles.
 - `docs/assets/app.js`: filtering, evidence viewer, local review state, JSON import/export, and issue drafts.
-- `docs/data/benchmark.json`: active real benchmark dataset; starts with an empty `papers` array.
+- `docs/data/benchmark.json`: active real benchmark dataset.
 - `docs/data/benchmark.examples.json`: preserved fictional examples for labeling agents to consult; never loaded by the review page.
 - `scripts/validate_data.py`: schema, duplicate-ID, input, verification, and local-asset checks.
 

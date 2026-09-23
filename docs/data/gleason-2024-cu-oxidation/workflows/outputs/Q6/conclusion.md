@@ -1,0 +1,1 @@
+The nominal 6,000 attempts yield 5999 mixtures because 1 all-zero coefficient triples are skipped. Appending them gives 9438 rows. Rounded integer synthetic labels contribute 127 rows to the bars; 68 original fractional labels fall outside the 0–2 histogram. This reproduces the specified release/sampling protocol, not an independently stored historical augmentation.

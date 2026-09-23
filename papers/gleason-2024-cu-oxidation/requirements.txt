@@ -1,0 +1,9 @@
+# Tested candidate/evaluator environment: Python 3.10.20
+numpy==1.26.2
+pandas==1.5.3
+matplotlib==3.10.9
+pymatgen==2024.3.1
+scipy==1.15.3
+spglib==2.7.0
+# Required only by author-side prepare_assets.py to read the released archives:
+joblib==1.1.0

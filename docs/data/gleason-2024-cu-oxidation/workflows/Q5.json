@@ -1,0 +1,89 @@
+{
+  "scenario_id": "GLEASON24-Q5",
+  "question": "What Cu L₂,₃ signal results from the paper’s displayed three-material spectral combination?",
+  "tool_environment": {
+    "python": "3.10.20",
+    "numpy": "1.26.2",
+    "pandas": "1.5.3",
+    "scipy": "1.15.3",
+    "matplotlib": "3.10.9",
+    "pymatgen": "2024.3.1 (Q1 only)"
+  },
+  "input_boundary": "Only the scenario inputs and its background. No released output tables, verification files, local prior traces or live API calls.",
+  "steps": [
+    {
+      "step": 1,
+      "tool": "Python / pandas",
+      "operation": "Load the three parent curves and shared energy axis.",
+      "artifact_or_check": "Parent spectra only."
+    },
+    {
+      "step": 2,
+      "tool": "Python / NumPy",
+      "operation": "Multiply each parent by 0.33 and sum pointwise without a second normalization.",
+      "artifact_or_check": "mixture.csv; result.json"
+    },
+    {
+      "step": 3,
+      "tool": "Python / Matplotlib",
+      "operation": "Overlay dashed contributions and the red sum.",
+      "artifact_or_check": "plot.png"
+    },
+    {
+      "step": 4,
+      "tool": "Evaluator / numerical and image comparison",
+      "operation": "Check weighted sums and compare to the author notebook figure.",
+      "artifact_or_check": "Algebraic numerical check plus independent plot evidence."
+    }
+  ],
+  "candidate_command": "python candidate.py Q5 --inputs INPUT_DIRECTORY --output OUTPUT_DIRECTORY",
+  "verification_command": "python verify.py Q5 --output OUTPUT_DIRECTORY --truth verification/Q5",
+  "evidence": "The authors plotting call in Paper_Figures.ipynb cell 16 uses these IDs and coefficients directly. Their sum is 0.99. The evaluator table is a deterministic weighted sum recomputed from the released parent arrays; it is not a separately released mixture table. The independently embedded author plot supplies a shape check. The parents are not the Cu/Cu2O/CuO standards. The total is pointwise additive, explaining why it can exceed each weighted component.",
+  "execution": {
+    "run_at_utc": "2026-09-23T22:14:26.393080+00:00",
+    "status": "passed",
+    "candidate_exit_code": 0,
+    "verifier_exit_code": 0,
+    "wall_seconds": 1.849,
+    "tool_calls": [
+      {
+        "tool": "shell / Python",
+        "command": [
+          "/tmp/gleason-preview-py310/bin/python",
+          "/scratch/rst306/spectrasleuth_work/spectral_agent_bench/docs/data/gleason-2024-cu-oxidation/workflows/candidate.py",
+          "Q5",
+          "--inputs",
+          "/tmp/gleason-bench-candidates-final/Q5/inputs",
+          "--output",
+          "/tmp/gleason-bench-candidates-final/Q5/output"
+        ],
+        "stdout": "{\"question\": \"Q5\", \"outputs\": [\"conclusion.md\", \"mixture.csv\", \"plot.png\", \"result.json\"], \"result\": {\"parent_ids\": [\"mp-12007\", \"mp-8120\", \"mp-1188453\"], \"coefficients\": [0.33, 0.33, 0.33], \"coefficient_sum\": 0.99, \"points\": 451}}\n",
+        "stderr": ""
+      },
+      {
+        "tool": "shell / evaluator Python",
+        "command": [
+          "/tmp/gleason-preview-py310/bin/python",
+          "/scratch/rst306/spectrasleuth_work/spectral_agent_bench/docs/data/gleason-2024-cu-oxidation/workflows/verify.py",
+          "Q5",
+          "--output",
+          "/tmp/gleason-bench-candidates-final/Q5/output",
+          "--truth",
+          "/scratch/rst306/spectrasleuth_work/spectral_agent_bench/docs/data/gleason-2024-cu-oxidation/verification/Q5"
+        ],
+        "stdout": "{\n  \"question\": \"Q5\",\n  \"numeric_pass\": true,\n  \"compared_tables\": [\n    {\n      \"file\": \"mixture.csv\",\n      \"rows\": 451,\n      \"columns\": [\n        \"energy_eV\",\n        \"weighted_0\",\n        \"weighted_1\",\n        \"weighted_2\",\n        \"mixture\"\n      ]\n    }\n  ],\n  \"plot_present\": true,\n  \"interpretation_and_visual_review\": \"Required separately; numeric checks do not assess scientific prose or plot readability.\"\n}\n",
+        "stderr": ""
+      }
+    ],
+    "candidate_input_access": "Candidate code only opens its staged inputs. This audit does not impose an OS/network sandbox; benchmark deployment must restrict evaluator/solution access.",
+    "input_files": [
+      "parent_spectra.csv"
+    ],
+    "retained_outputs": [
+      "data/gleason-2024-cu-oxidation/workflows/outputs/Q5/conclusion.md",
+      "data/gleason-2024-cu-oxidation/workflows/outputs/Q5/mixture.csv",
+      "data/gleason-2024-cu-oxidation/workflows/outputs/Q5/plot.png",
+      "data/gleason-2024-cu-oxidation/workflows/outputs/Q5/result.json"
+    ]
+  }
+}

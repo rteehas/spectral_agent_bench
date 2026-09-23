@@ -1,0 +1,90 @@
+{
+  "scenario_id": "GLEASON24-Q7",
+  "question": "How separated are the experimental Cu, Cu₂O and CuO L₃ peak energies?",
+  "tool_environment": {
+    "python": "3.10.20",
+    "numpy": "1.26.2",
+    "pandas": "1.5.3",
+    "scipy": "1.15.3",
+    "matplotlib": "3.10.9",
+    "pymatgen": "2024.3.1 (Q1 only)"
+  },
+  "input_boundary": "Only the scenario inputs and its background. No released output tables, verification files, local prior traces or live API calls.",
+  "steps": [
+    {
+      "step": 1,
+      "tool": "Python / pandas",
+      "operation": "Read the three unchanged XAS CSVs; retain their supplied energy calibration.",
+      "artifact_or_check": "Input data frames."
+    },
+    {
+      "step": 2,
+      "tool": "Python / NumPy",
+      "operation": "Find each maximum within the defined window and calculate signed pairwise energy differences.",
+      "artifact_or_check": "result.json"
+    },
+    {
+      "step": 3,
+      "tool": "Python / Matplotlib",
+      "operation": "Sort for display, normalize amplitudes and overlay the L₃ peaks.",
+      "artifact_or_check": "plot.png"
+    },
+    {
+      "step": 4,
+      "tool": "Evaluator / numeric and figure review",
+      "operation": "Compare peak positions to an independent CSV reduction and inspect Figure S1 consistency.",
+      "artifact_or_check": "Numerical peaks plus appropriately limited scientific inference."
+    }
+  ],
+  "candidate_command": "python candidate.py Q7 --inputs INPUT_DIRECTORY --output OUTPUT_DIRECTORY",
+  "verification_command": "python verify.py Q7 --output OUTPUT_DIRECTORY --truth verification/Q7",
+  "evidence": "The supplied XAS maxima occur at 933.65 eV (Cu), 933.6691148 eV (Cu2O) and 931.2967241 eV (CuO). The first pair differs by approximately 0.0191 eV, whereas CuO is about 2.35–2.37 eV lower. These exact values are independently reduced from the supplied CSVs; the paper does not publish this exact peak table. Figure S1 supports the qualitative near-coincidence of Cu/Cu2O and lower-energy CuO feature after smoothing and author shifts of −1.0/−1.2/−1.2 eV. Its plotted absolute peak energies are not the unshifted CSV targets. The comparison supports a limitation of peak-position-only discrimination, not a claim that the complete spectra are indistinguishable.",
+  "execution": {
+    "run_at_utc": "2026-09-23T22:14:30.552175+00:00",
+    "status": "passed",
+    "candidate_exit_code": 0,
+    "verifier_exit_code": 0,
+    "wall_seconds": 1.854,
+    "tool_calls": [
+      {
+        "tool": "shell / Python",
+        "command": [
+          "/tmp/gleason-preview-py310/bin/python",
+          "/scratch/rst306/spectrasleuth_work/spectral_agent_bench/docs/data/gleason-2024-cu-oxidation/workflows/candidate.py",
+          "Q7",
+          "--inputs",
+          "/tmp/gleason-bench-candidates-final/Q7/inputs",
+          "--output",
+          "/tmp/gleason-bench-candidates-final/Q7/output"
+        ],
+        "stdout": "{\"question\": \"Q7\", \"outputs\": [\"conclusion.md\", \"plot.png\", \"result.json\"], \"result\": {\"L3_peak_eV\": {\"Cu Metal\": 933.65, \"Cu2O\": 933.6691148, \"CuO\": 931.2967241}, \"Cu2O_minus_Cu_eV\": 0.0191148000000112, \"CuO_minus_Cu_eV\": -2.3532758999999714, \"CuO_minus_Cu2O_eV\": -2.3723906999999826}}\n",
+        "stderr": ""
+      },
+      {
+        "tool": "shell / evaluator Python",
+        "command": [
+          "/tmp/gleason-preview-py310/bin/python",
+          "/scratch/rst306/spectrasleuth_work/spectral_agent_bench/docs/data/gleason-2024-cu-oxidation/workflows/verify.py",
+          "Q7",
+          "--output",
+          "/tmp/gleason-bench-candidates-final/Q7/output",
+          "--truth",
+          "/scratch/rst306/spectrasleuth_work/spectral_agent_bench/docs/data/gleason-2024-cu-oxidation/verification/Q7"
+        ],
+        "stdout": "{\n  \"question\": \"Q7\",\n  \"numeric_pass\": true,\n  \"compared_tables\": [],\n  \"plot_present\": true,\n  \"interpretation_and_visual_review\": \"Required separately; numeric checks do not assess scientific prose or plot readability.\"\n}\n",
+        "stderr": ""
+      }
+    ],
+    "candidate_input_access": "Candidate code only opens its staged inputs. This audit does not impose an OS/network sandbox; benchmark deployment must restrict evaluator/solution access.",
+    "input_files": [
+      "Cu Metal XAS.csv",
+      "Cu2O XAS.csv",
+      "CuO XAS.csv"
+    ],
+    "retained_outputs": [
+      "data/gleason-2024-cu-oxidation/workflows/outputs/Q7/conclusion.md",
+      "data/gleason-2024-cu-oxidation/workflows/outputs/Q7/plot.png",
+      "data/gleason-2024-cu-oxidation/workflows/outputs/Q7/result.json"
+    ]
+  }
+}
