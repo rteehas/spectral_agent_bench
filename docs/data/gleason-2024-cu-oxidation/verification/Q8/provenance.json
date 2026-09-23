@@ -1,0 +1,22 @@
+{
+  "paper": "https://www.nature.com/articles/s41524-024-01408-1",
+  "release": "https://zenodo.org/records/18142209",
+  "sources": [
+    {
+      "path": "data/Dataset_generation/FEFF_simulations/Cu_full_df_with_spectra.joblib",
+      "sha256": "e3369fd17a0ecd4467298eed4aca150c6dcc745355bfbde3cc0f8c8de46edd99"
+    },
+    {
+      "path": "data/Dataset_generation/110222_Cu_DF_With_Spectra.joblib",
+      "sha256": "fb55c2c5888f2706675736bf5b46cd3c81cd3b3938a3a7d0b01642a2c4f11026"
+    },
+    {
+      "path": "data/Dataset_generation/FEFF_simulations/Stable_and_exp_Cu_with_results.zip",
+      "sha256": "a11a4325f180b31bacb5ca85ec990e15e90da9171c3d6fafda759b8ac3763c60"
+    }
+  ],
+  "input_processing": "Seed table projected to its material-ID column, retaining original order and Failed sentinels. No additional-material IDs, structures, metadata flags or spectra are supplied as answers.",
+  "reference_processing": "Raw site spectra copied from xmu.dat columns 1 and 4; material spectra copied from the released combined table; structure headers and control tags parsed from archived input decks. No candidate function generates these references.",
+  "live_search_boundary": "The historical roster is not a complete snapshot of the original MP search universe. A live response must be captured independently by the evaluation harness and reused for selection verification.",
+  "simulation_boundary": "FEFF9 must be provided by the runtime. No new simulation is claimed by this extraction."
+}

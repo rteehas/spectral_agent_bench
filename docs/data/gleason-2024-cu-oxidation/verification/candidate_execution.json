@@ -36,5 +36,6 @@
       "wall_seconds": 1.854
     }
   ],
-  "all_numeric_checks_passed": true
+  "all_numeric_checks_passed": true,
+  "scope": "Offline Q1\u2013Q7 candidate suite only. Q8 has separate component checks; live search and fresh FEFF9 execution are pending."
 }

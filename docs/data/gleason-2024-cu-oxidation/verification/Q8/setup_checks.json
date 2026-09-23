@@ -1,0 +1,42 @@
+{
+  "status": "offline_setup_and_archived_output_assembly_passed",
+  "tool_versions": {
+    "mp-api": "0.37.5",
+    "pymatgen": "2024.3.1",
+    "numpy": "1.26.2",
+    "pandas": "1.5.3",
+    "matplotlib": "3.10.9"
+  },
+  "executed_command": "/tmp/gleason-preview-py310/bin/python papers/gleason-2024-cu-oxidation/check_q8_setup.py",
+  "live_query_executed": false,
+  "new_feff_simulations_executed": false,
+  "checks": [
+    "Seed exclusion and Boolean OR selection",
+    "Three representative choices",
+    "Eight generated site/edge input decks agree with archived structures and control tags",
+    "Existing job decks cannot be overwritten",
+    "Archived outputs cannot be passed off as fresh simulations"
+  ],
+  "assembly_comparisons": [
+    {
+      "material_id": "mp-1207193",
+      "points": 549,
+      "maximum_intensity_difference": 3.042011087472929e-14
+    },
+    {
+      "material_id": "mp-1077262",
+      "points": 545,
+      "maximum_intensity_difference": 0.0
+    },
+    {
+      "material_id": "mp-10092",
+      "points": 548,
+      "maximum_intensity_difference": 2.7755575615628914e-14
+    }
+  ],
+  "remaining": [
+    "Authenticated live Materials Project search",
+    "Fresh FEFF9 execution",
+    "Evaluator capture of current query and independent reference generation for changed/new structures"
+  ]
+}

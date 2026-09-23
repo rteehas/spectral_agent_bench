@@ -1,0 +1,1410 @@
+{
+  "scope": "Historical reference cases, not mandatory simulation IDs. Compare spectra only after matching the structure, Cu absorber environment, settings and energy convention. New structures need independently generated FEFF references.",
+  "cases": [
+    {
+      "material_id": "mp-10092",
+      "historical_is_stable": false,
+      "historical_theoretical": false,
+      "jobs": [
+        {
+          "site_index": 1,
+          "edge": "L2",
+          "structure": {
+            "@module": "pymatgen.core.structure",
+            "@class": "Structure",
+            "charge": 0,
+            "lattice": {
+              "matrix": [
+                [
+                  4.007831,
+                  0.0,
+                  2.4540887028367683e-16
+                ],
+                [
+                  -2.4540887028367683e-16,
+                  4.007831,
+                  2.4540887028367683e-16
+                ],
+                [
+                  0.0,
+                  0.0,
+                  9.867752
+                ]
+              ],
+              "pbc": [
+                true,
+                true,
+                true
+              ],
+              "a": 4.007831,
+              "b": 4.007831,
+              "c": 9.867752,
+              "alpha": 90.0,
+              "beta": 90.0,
+              "gamma": 90.0,
+              "volume": 158.50283206285548
+            },
+            "properties": {},
+            "sites": [
+              {
+                "species": [
+                  {
+                    "element": "K",
+                    "occu": 1
+                  }
+                ],
+                "abc": [
+                  0.5,
+                  0.5,
+                  0.5
+                ],
+                "xyz": [
+                  2.0039155,
+                  2.0039155,
+                  4.933876
+                ],
+                "properties": {},
+                "label": "K"
+              },
+              {
+                "species": [
+                  {
+                    "element": "Cu",
+                    "occu": 1
+                  }
+                ],
+                "abc": [
+                  0.5,
+                  0.0,
+                  0.161994
+                ],
+                "xyz": [
+                  2.0039155,
+                  0.0,
+                  1.5985166174880001
+                ],
+                "properties": {},
+                "label": "Cu"
+              },
+              {
+                "species": [
+                  {
+                    "element": "Cu",
+                    "occu": 1
+                  }
+                ],
+                "abc": [
+                  0.0,
+                  0.5,
+                  0.838006
+                ],
+                "xyz": [
+                  -1.2270443514183842e-16,
+                  2.0039155,
+                  8.269235382511999
+                ],
+                "properties": {},
+                "label": "Cu"
+              },
+              {
+                "species": [
+                  {
+                    "element": "Cu",
+                    "occu": 1
+                  }
+                ],
+                "abc": [
+                  0.5,
+                  0.0,
+                  0.838006
+                ],
+                "xyz": [
+                  2.0039155,
+                  0.0,
+                  8.269235382511999
+                ],
+                "properties": {},
+                "label": "Cu"
+              },
+              {
+                "species": [
+                  {
+                    "element": "Cu",
+                    "occu": 1
+                  }
+                ],
+                "abc": [
+                  0.0,
+                  0.5,
+                  0.161994
+                ],
+                "xyz": [
+                  -1.2270443514183842e-16,
+                  2.0039155,
+                  1.5985166174880001
+                ],
+                "properties": {},
+                "label": "Cu"
+              },
+              {
+                "species": [
+                  {
+                    "element": "Se",
+                    "occu": 1
+                  }
+                ],
+                "abc": [
+                  0.0,
+                  0.0,
+                  0.301916
+                ],
+                "xyz": [
+                  0.0,
+                  0.0,
+                  2.979232212832
+                ],
+                "properties": {},
+                "label": "Se"
+              },
+              {
+                "species": [
+                  {
+                    "element": "Se",
+                    "occu": 1
+                  }
+                ],
+                "abc": [
+                  0.0,
+                  0.0,
+                  0.698084
+                ],
+                "xyz": [
+                  0.0,
+                  0.0,
+                  6.888519787168
+                ],
+                "properties": {},
+                "label": "Se"
+              },
+              {
+                "species": [
+                  {
+                    "element": "Se",
+                    "occu": 1
+                  }
+                ],
+                "abc": [
+                  0.5,
+                  0.5,
+                  0.0
+                ],
+                "xyz": [
+                  2.0039155,
+                  2.0039155,
+                  2.4540887028367683e-16
+                ],
+                "properties": {},
+                "label": "Se"
+              }
+            ]
+          },
+          "tags": {
+            "CONTROL": "1 1 1 1 1 1",
+            "COREHOLE": "NONE",
+            "S02": "0",
+            "EXCHANGE": "0 0.0 0.0 2",
+            "SCF": "7.0 0 100 0.2 3",
+            "FMS": "9.0 0",
+            "XANES": "4 0.04 0.1",
+            "RPATH": "-1",
+            "EDGE": "L2"
+          },
+          "input_member": "Stable_and_exp_Cu/Stable_and_exp_Cu/Experimental_Cu_L2/mp-10092/FEFF/001_Cu/feff.inp",
+          "xmu_member": "Stable_and_exp_Cu/Stable_and_exp_Cu/Experimental_Cu_L2/mp-10092/FEFF/001_Cu/xmu.dat",
+          "input_sha256": "cb522e81c36e401987508cf0aba038e350c62284b1ac0c46cf85c08cf583ea07",
+          "xmu_sha256": "2238135f329403c1b19185a77e227db9d019ecc56b6611a920c0feb7f337916a"
+        },
+        {
+          "site_index": 1,
+          "edge": "L3",
+          "structure": {
+            "@module": "pymatgen.core.structure",
+            "@class": "Structure",
+            "charge": 0,
+            "lattice": {
+              "matrix": [
+                [
+                  4.007831,
+                  0.0,
+                  2.4540887028367683e-16
+                ],
+                [
+                  -2.4540887028367683e-16,
+                  4.007831,
+                  2.4540887028367683e-16
+                ],
+                [
+                  0.0,
+                  0.0,
+                  9.867752
+                ]
+              ],
+              "pbc": [
+                true,
+                true,
+                true
+              ],
+              "a": 4.007831,
+              "b": 4.007831,
+              "c": 9.867752,
+              "alpha": 90.0,
+              "beta": 90.0,
+              "gamma": 90.0,
+              "volume": 158.50283206285548
+            },
+            "properties": {},
+            "sites": [
+              {
+                "species": [
+                  {
+                    "element": "K",
+                    "occu": 1
+                  }
+                ],
+                "abc": [
+                  0.5,
+                  0.5,
+                  0.5
+                ],
+                "xyz": [
+                  2.0039155,
+                  2.0039155,
+                  4.933876
+                ],
+                "properties": {},
+                "label": "K"
+              },
+              {
+                "species": [
+                  {
+                    "element": "Cu",
+                    "occu": 1
+                  }
+                ],
+                "abc": [
+                  0.5,
+                  0.0,
+                  0.161994
+                ],
+                "xyz": [
+                  2.0039155,
+                  0.0,
+                  1.5985166174880001
+                ],
+                "properties": {},
+                "label": "Cu"
+              },
+              {
+                "species": [
+                  {
+                    "element": "Cu",
+                    "occu": 1
+                  }
+                ],
+                "abc": [
+                  0.0,
+                  0.5,
+                  0.838006
+                ],
+                "xyz": [
+                  -1.2270443514183842e-16,
+                  2.0039155,
+                  8.269235382511999
+                ],
+                "properties": {},
+                "label": "Cu"
+              },
+              {
+                "species": [
+                  {
+                    "element": "Cu",
+                    "occu": 1
+                  }
+                ],
+                "abc": [
+                  0.5,
+                  0.0,
+                  0.838006
+                ],
+                "xyz": [
+                  2.0039155,
+                  0.0,
+                  8.269235382511999
+                ],
+                "properties": {},
+                "label": "Cu"
+              },
+              {
+                "species": [
+                  {
+                    "element": "Cu",
+                    "occu": 1
+                  }
+                ],
+                "abc": [
+                  0.0,
+                  0.5,
+                  0.161994
+                ],
+                "xyz": [
+                  -1.2270443514183842e-16,
+                  2.0039155,
+                  1.5985166174880001
+                ],
+                "properties": {},
+                "label": "Cu"
+              },
+              {
+                "species": [
+                  {
+                    "element": "Se",
+                    "occu": 1
+                  }
+                ],
+                "abc": [
+                  0.0,
+                  0.0,
+                  0.301916
+                ],
+                "xyz": [
+                  0.0,
+                  0.0,
+                  2.979232212832
+                ],
+                "properties": {},
+                "label": "Se"
+              },
+              {
+                "species": [
+                  {
+                    "element": "Se",
+                    "occu": 1
+                  }
+                ],
+                "abc": [
+                  0.0,
+                  0.0,
+                  0.698084
+                ],
+                "xyz": [
+                  0.0,
+                  0.0,
+                  6.888519787168
+                ],
+                "properties": {},
+                "label": "Se"
+              },
+              {
+                "species": [
+                  {
+                    "element": "Se",
+                    "occu": 1
+                  }
+                ],
+                "abc": [
+                  0.5,
+                  0.5,
+                  0.0
+                ],
+                "xyz": [
+                  2.0039155,
+                  2.0039155,
+                  2.4540887028367683e-16
+                ],
+                "properties": {},
+                "label": "Se"
+              }
+            ]
+          },
+          "tags": {
+            "CONTROL": "1 1 1 1 1 1",
+            "COREHOLE": "NONE",
+            "S02": "0",
+            "EXCHANGE": "0 0.0 0.0 2",
+            "SCF": "7.0 0 100 0.2 3",
+            "FMS": "9.0 0",
+            "XANES": "4 0.04 0.1",
+            "RPATH": "-1",
+            "EDGE": "L3"
+          },
+          "input_member": "Stable_and_exp_Cu/Stable_and_exp_Cu/Experimental_Cu_L3/mp-10092/FEFF/001_Cu/feff.inp",
+          "xmu_member": "Stable_and_exp_Cu/Stable_and_exp_Cu/Experimental_Cu_L3/mp-10092/FEFF/001_Cu/xmu.dat",
+          "input_sha256": "5cc74a3e4b3f31e33689e90aadfce2927a125e468025a72352390d3a576c1908",
+          "xmu_sha256": "329f4c40a12c1e0c7f21b1cb3893351a13f4a525504c9c62c862303c271ad379"
+        }
+      ]
+    },
+    {
+      "material_id": "mp-1077262",
+      "historical_is_stable": false,
+      "historical_theoretical": false,
+      "jobs": [
+        {
+          "site_index": 1,
+          "edge": "L2",
+          "structure": {
+            "@module": "pymatgen.core.structure",
+            "@class": "Structure",
+            "charge": 0,
+            "lattice": {
+              "matrix": [
+                [
+                  4.3151395832843,
+                  0.0,
+                  2.4913470000000006
+                ],
+                [
+                  1.438379861094767,
+                  4.068352614809095,
+                  2.4913470000000006
+                ],
+                [
+                  0.0,
+                  0.0,
+                  4.982694
+                ]
+              ],
+              "pbc": [
+                true,
+                true,
+                true
+              ],
+              "a": 4.982694,
+              "b": 4.982694,
+              "c": 4.982694,
+              "alpha": 59.99999999999999,
+              "beta": 59.99999999999999,
+              "gamma": 59.99999999999999,
+              "volume": 87.47373138880839
+            },
+            "properties": {},
+            "sites": [
+              {
+                "species": [
+                  {
+                    "element": "Tb",
+                    "occu": 1
+                  }
+                ],
+                "abc": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "xyz": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "properties": {},
+                "label": "Tb"
+              },
+              {
+                "species": [
+                  {
+                    "element": "Cu",
+                    "occu": 1
+                  }
+                ],
+                "abc": [
+                  0.25,
+                  0.25,
+                  0.25
+                ],
+                "xyz": [
+                  1.438379861094767,
+                  1.0170881537022738,
+                  2.491347
+                ],
+                "properties": {},
+                "label": "Cu"
+              },
+              {
+                "species": [
+                  {
+                    "element": "Cu",
+                    "occu": 1
+                  }
+                ],
+                "abc": [
+                  0.623748,
+                  0.623748,
+                  0.128757
+                ],
+                "xyz": [
+                  3.5887462463925544,
+                  2.5376268067819434,
+                  3.7495021484700004
+                ],
+                "properties": {},
+                "label": "Cu"
+              },
+              {
+                "species": [
+                  {
+                    "element": "Cu",
+                    "occu": 1
+                  }
+                ],
+                "abc": [
+                  0.623748,
+                  0.128757,
+                  0.623748
+                ],
+                "xyz": [
+                  2.8767611605693943,
+                  0.5238288776249747,
+                  4.982696491347
+                ],
+                "properties": {},
+                "label": "Cu"
+              },
+              {
+                "species": [
+                  {
+                    "element": "Cu",
+                    "occu": 1
+                  }
+                ],
+                "abc": [
+                  0.128757,
+                  0.623748,
+                  0.623748
+                ],
+                "xyz": [
+                  1.4527909889230752,
+                  2.5376268067819434,
+                  4.982696491347
+                ],
+                "properties": {},
+                "label": "Cu"
+              },
+              {
+                "species": [
+                  {
+                    "element": "Cu",
+                    "occu": 1
+                  }
+                ],
+                "abc": [
+                  0.623748,
+                  0.623748,
+                  0.623748
+                ],
+                "xyz": [
+                  3.5887462463925544,
+                  2.5376268067819434,
+                  6.215890834224
+                ],
+                "properties": {},
+                "label": "Cu"
+              }
+            ]
+          },
+          "tags": {
+            "CONTROL": "1 1 1 1 1 1",
+            "COREHOLE": "NONE",
+            "S02": "0",
+            "EXCHANGE": "0 0.0 0.0 2",
+            "SCF": "7.0 0 100 0.2 3",
+            "FMS": "9.0 0",
+            "XANES": "4 0.04 0.1",
+            "RPATH": "-1",
+            "EDGE": "L2"
+          },
+          "input_member": "Stable_and_exp_Cu/Stable_and_exp_Cu/Experimental_Cu_L2/mp-1077262/FEFF/001_Cu/feff.inp",
+          "xmu_member": "Stable_and_exp_Cu/Stable_and_exp_Cu/Experimental_Cu_L2/mp-1077262/FEFF/001_Cu/xmu.dat",
+          "input_sha256": "97fc0b05419aa886914c8b2955fe7704aba8b977ba12853b713f51632ab33032",
+          "xmu_sha256": "f0cfe4996e75e1db7e37932ba9745164311dd9a5fc98eb25835e62debf1f0d41"
+        },
+        {
+          "site_index": 2,
+          "edge": "L2",
+          "structure": {
+            "@module": "pymatgen.core.structure",
+            "@class": "Structure",
+            "charge": 0,
+            "lattice": {
+              "matrix": [
+                [
+                  4.3151395832843,
+                  0.0,
+                  2.4913470000000006
+                ],
+                [
+                  1.438379861094767,
+                  4.068352614809095,
+                  2.4913470000000006
+                ],
+                [
+                  0.0,
+                  0.0,
+                  4.982694
+                ]
+              ],
+              "pbc": [
+                true,
+                true,
+                true
+              ],
+              "a": 4.982694,
+              "b": 4.982694,
+              "c": 4.982694,
+              "alpha": 59.99999999999999,
+              "beta": 59.99999999999999,
+              "gamma": 59.99999999999999,
+              "volume": 87.47373138880839
+            },
+            "properties": {},
+            "sites": [
+              {
+                "species": [
+                  {
+                    "element": "Tb",
+                    "occu": 1
+                  }
+                ],
+                "abc": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "xyz": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "properties": {},
+                "label": "Tb"
+              },
+              {
+                "species": [
+                  {
+                    "element": "Cu",
+                    "occu": 1
+                  }
+                ],
+                "abc": [
+                  0.25,
+                  0.25,
+                  0.25
+                ],
+                "xyz": [
+                  1.438379861094767,
+                  1.0170881537022738,
+                  2.491347
+                ],
+                "properties": {},
+                "label": "Cu"
+              },
+              {
+                "species": [
+                  {
+                    "element": "Cu",
+                    "occu": 1
+                  }
+                ],
+                "abc": [
+                  0.623748,
+                  0.623748,
+                  0.128757
+                ],
+                "xyz": [
+                  3.5887462463925544,
+                  2.5376268067819434,
+                  3.7495021484700004
+                ],
+                "properties": {},
+                "label": "Cu"
+              },
+              {
+                "species": [
+                  {
+                    "element": "Cu",
+                    "occu": 1
+                  }
+                ],
+                "abc": [
+                  0.623748,
+                  0.128757,
+                  0.623748
+                ],
+                "xyz": [
+                  2.8767611605693943,
+                  0.5238288776249747,
+                  4.982696491347
+                ],
+                "properties": {},
+                "label": "Cu"
+              },
+              {
+                "species": [
+                  {
+                    "element": "Cu",
+                    "occu": 1
+                  }
+                ],
+                "abc": [
+                  0.128757,
+                  0.623748,
+                  0.623748
+                ],
+                "xyz": [
+                  1.4527909889230752,
+                  2.5376268067819434,
+                  4.982696491347
+                ],
+                "properties": {},
+                "label": "Cu"
+              },
+              {
+                "species": [
+                  {
+                    "element": "Cu",
+                    "occu": 1
+                  }
+                ],
+                "abc": [
+                  0.623748,
+                  0.623748,
+                  0.623748
+                ],
+                "xyz": [
+                  3.5887462463925544,
+                  2.5376268067819434,
+                  6.215890834224
+                ],
+                "properties": {},
+                "label": "Cu"
+              }
+            ]
+          },
+          "tags": {
+            "CONTROL": "1 1 1 1 1 1",
+            "COREHOLE": "NONE",
+            "S02": "0",
+            "EXCHANGE": "0 0.0 0.0 2",
+            "SCF": "7.0 0 100 0.2 3",
+            "FMS": "9.0 0",
+            "XANES": "4 0.04 0.1",
+            "RPATH": "-1",
+            "EDGE": "L2"
+          },
+          "input_member": "Stable_and_exp_Cu/Stable_and_exp_Cu/Experimental_Cu_L2/mp-1077262/FEFF/002_Cu/feff.inp",
+          "xmu_member": "Stable_and_exp_Cu/Stable_and_exp_Cu/Experimental_Cu_L2/mp-1077262/FEFF/002_Cu/xmu.dat",
+          "input_sha256": "e95281c79068c91ffdda8e595da08c5efc77a6e8f49ae5d90aeae5b1058a3972",
+          "xmu_sha256": "3e50f2206b02ba6d847cc6b2e68242424cabec45a0fe32aeacfb77a7f87859dd"
+        },
+        {
+          "site_index": 1,
+          "edge": "L3",
+          "structure": {
+            "@module": "pymatgen.core.structure",
+            "@class": "Structure",
+            "charge": 0,
+            "lattice": {
+              "matrix": [
+                [
+                  4.3151395832843,
+                  0.0,
+                  2.4913470000000006
+                ],
+                [
+                  1.438379861094767,
+                  4.068352614809095,
+                  2.4913470000000006
+                ],
+                [
+                  0.0,
+                  0.0,
+                  4.982694
+                ]
+              ],
+              "pbc": [
+                true,
+                true,
+                true
+              ],
+              "a": 4.982694,
+              "b": 4.982694,
+              "c": 4.982694,
+              "alpha": 59.99999999999999,
+              "beta": 59.99999999999999,
+              "gamma": 59.99999999999999,
+              "volume": 87.47373138880839
+            },
+            "properties": {},
+            "sites": [
+              {
+                "species": [
+                  {
+                    "element": "Tb",
+                    "occu": 1
+                  }
+                ],
+                "abc": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "xyz": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "properties": {},
+                "label": "Tb"
+              },
+              {
+                "species": [
+                  {
+                    "element": "Cu",
+                    "occu": 1
+                  }
+                ],
+                "abc": [
+                  0.25,
+                  0.25,
+                  0.25
+                ],
+                "xyz": [
+                  1.438379861094767,
+                  1.0170881537022738,
+                  2.491347
+                ],
+                "properties": {},
+                "label": "Cu"
+              },
+              {
+                "species": [
+                  {
+                    "element": "Cu",
+                    "occu": 1
+                  }
+                ],
+                "abc": [
+                  0.623748,
+                  0.623748,
+                  0.128757
+                ],
+                "xyz": [
+                  3.5887462463925544,
+                  2.5376268067819434,
+                  3.7495021484700004
+                ],
+                "properties": {},
+                "label": "Cu"
+              },
+              {
+                "species": [
+                  {
+                    "element": "Cu",
+                    "occu": 1
+                  }
+                ],
+                "abc": [
+                  0.623748,
+                  0.128757,
+                  0.623748
+                ],
+                "xyz": [
+                  2.8767611605693943,
+                  0.5238288776249747,
+                  4.982696491347
+                ],
+                "properties": {},
+                "label": "Cu"
+              },
+              {
+                "species": [
+                  {
+                    "element": "Cu",
+                    "occu": 1
+                  }
+                ],
+                "abc": [
+                  0.128757,
+                  0.623748,
+                  0.623748
+                ],
+                "xyz": [
+                  1.4527909889230752,
+                  2.5376268067819434,
+                  4.982696491347
+                ],
+                "properties": {},
+                "label": "Cu"
+              },
+              {
+                "species": [
+                  {
+                    "element": "Cu",
+                    "occu": 1
+                  }
+                ],
+                "abc": [
+                  0.623748,
+                  0.623748,
+                  0.623748
+                ],
+                "xyz": [
+                  3.5887462463925544,
+                  2.5376268067819434,
+                  6.215890834224
+                ],
+                "properties": {},
+                "label": "Cu"
+              }
+            ]
+          },
+          "tags": {
+            "CONTROL": "1 1 1 1 1 1",
+            "COREHOLE": "NONE",
+            "S02": "0",
+            "EXCHANGE": "0 0.0 0.0 2",
+            "SCF": "7.0 0 100 0.2 3",
+            "FMS": "9.0 0",
+            "XANES": "4 0.04 0.1",
+            "RPATH": "-1",
+            "EDGE": "L3"
+          },
+          "input_member": "Stable_and_exp_Cu/Stable_and_exp_Cu/Experimental_Cu_L3/mp-1077262/FEFF/001_Cu/feff.inp",
+          "xmu_member": "Stable_and_exp_Cu/Stable_and_exp_Cu/Experimental_Cu_L3/mp-1077262/FEFF/001_Cu/xmu.dat",
+          "input_sha256": "6499b22b823764fbf073f7e1c4fb159321edbb15c7c3e3b4851573fb7832e97c",
+          "xmu_sha256": "8d685248e137fd9d36314f309354fdf2c5b061efe4ffb14e511fcfba854cc87e"
+        },
+        {
+          "site_index": 2,
+          "edge": "L3",
+          "structure": {
+            "@module": "pymatgen.core.structure",
+            "@class": "Structure",
+            "charge": 0,
+            "lattice": {
+              "matrix": [
+                [
+                  4.3151395832843,
+                  0.0,
+                  2.4913470000000006
+                ],
+                [
+                  1.438379861094767,
+                  4.068352614809095,
+                  2.4913470000000006
+                ],
+                [
+                  0.0,
+                  0.0,
+                  4.982694
+                ]
+              ],
+              "pbc": [
+                true,
+                true,
+                true
+              ],
+              "a": 4.982694,
+              "b": 4.982694,
+              "c": 4.982694,
+              "alpha": 59.99999999999999,
+              "beta": 59.99999999999999,
+              "gamma": 59.99999999999999,
+              "volume": 87.47373138880839
+            },
+            "properties": {},
+            "sites": [
+              {
+                "species": [
+                  {
+                    "element": "Tb",
+                    "occu": 1
+                  }
+                ],
+                "abc": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "xyz": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "properties": {},
+                "label": "Tb"
+              },
+              {
+                "species": [
+                  {
+                    "element": "Cu",
+                    "occu": 1
+                  }
+                ],
+                "abc": [
+                  0.25,
+                  0.25,
+                  0.25
+                ],
+                "xyz": [
+                  1.438379861094767,
+                  1.0170881537022738,
+                  2.491347
+                ],
+                "properties": {},
+                "label": "Cu"
+              },
+              {
+                "species": [
+                  {
+                    "element": "Cu",
+                    "occu": 1
+                  }
+                ],
+                "abc": [
+                  0.623748,
+                  0.623748,
+                  0.128757
+                ],
+                "xyz": [
+                  3.5887462463925544,
+                  2.5376268067819434,
+                  3.7495021484700004
+                ],
+                "properties": {},
+                "label": "Cu"
+              },
+              {
+                "species": [
+                  {
+                    "element": "Cu",
+                    "occu": 1
+                  }
+                ],
+                "abc": [
+                  0.623748,
+                  0.128757,
+                  0.623748
+                ],
+                "xyz": [
+                  2.8767611605693943,
+                  0.5238288776249747,
+                  4.982696491347
+                ],
+                "properties": {},
+                "label": "Cu"
+              },
+              {
+                "species": [
+                  {
+                    "element": "Cu",
+                    "occu": 1
+                  }
+                ],
+                "abc": [
+                  0.128757,
+                  0.623748,
+                  0.623748
+                ],
+                "xyz": [
+                  1.4527909889230752,
+                  2.5376268067819434,
+                  4.982696491347
+                ],
+                "properties": {},
+                "label": "Cu"
+              },
+              {
+                "species": [
+                  {
+                    "element": "Cu",
+                    "occu": 1
+                  }
+                ],
+                "abc": [
+                  0.623748,
+                  0.623748,
+                  0.623748
+                ],
+                "xyz": [
+                  3.5887462463925544,
+                  2.5376268067819434,
+                  6.215890834224
+                ],
+                "properties": {},
+                "label": "Cu"
+              }
+            ]
+          },
+          "tags": {
+            "CONTROL": "1 1 1 1 1 1",
+            "COREHOLE": "NONE",
+            "S02": "0",
+            "EXCHANGE": "0 0.0 0.0 2",
+            "SCF": "7.0 0 100 0.2 3",
+            "FMS": "9.0 0",
+            "XANES": "4 0.04 0.1",
+            "RPATH": "-1",
+            "EDGE": "L3"
+          },
+          "input_member": "Stable_and_exp_Cu/Stable_and_exp_Cu/Experimental_Cu_L3/mp-1077262/FEFF/002_Cu/feff.inp",
+          "xmu_member": "Stable_and_exp_Cu/Stable_and_exp_Cu/Experimental_Cu_L3/mp-1077262/FEFF/002_Cu/xmu.dat",
+          "input_sha256": "8a52807d6cf4462a5363b041f490c392fd9b3439fcfc8f53839bbd1c50791680",
+          "xmu_sha256": "86e10cf0e589691f2acb28ef13767b5ca176e9f0e5097e31c0b45bebf24e18b7"
+        }
+      ]
+    },
+    {
+      "material_id": "mp-1207193",
+      "historical_is_stable": true,
+      "historical_theoretical": true,
+      "jobs": [
+        {
+          "site_index": 0,
+          "edge": "L2",
+          "structure": {
+            "@module": "pymatgen.core.structure",
+            "@class": "Structure",
+            "charge": 0,
+            "lattice": {
+              "matrix": [
+                [
+                  4.023488,
+                  0.0,
+                  2.4636758503038933e-16
+                ],
+                [
+                  -2.011743270219958,
+                  3.4844432411604456,
+                  2.4636758503038933e-16
+                ],
+                [
+                  0.0,
+                  0.0,
+                  5.09807
+                ]
+              ],
+              "pbc": [
+                true,
+                true,
+                true
+              ],
+              "a": 4.023488,
+              "b": 4.023488,
+              "c": 5.09807,
+              "alpha": 90.0,
+              "beta": 90.0,
+              "gamma": 119.999988,
+              "volume": 71.47298153615456
+            },
+            "properties": {},
+            "sites": [
+              {
+                "species": [
+                  {
+                    "element": "Cu",
+                    "occu": 1
+                  }
+                ],
+                "abc": [
+                  -0.0,
+                  0.0,
+                  0.0
+                ],
+                "xyz": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "properties": {},
+                "label": "Cu"
+              },
+              {
+                "species": [
+                  {
+                    "element": "Te",
+                    "occu": 1
+                  }
+                ],
+                "abc": [
+                  0.666667,
+                  0.333333,
+                  0.727611
+                ],
+                "xyz": [
+                  2.011746255003771,
+                  1.1614799189057348,
+                  3.7094118107700003
+                ],
+                "properties": {},
+                "label": "Te"
+              },
+              {
+                "species": [
+                  {
+                    "element": "Te",
+                    "occu": 1
+                  }
+                ],
+                "abc": [
+                  0.333333,
+                  0.666667,
+                  0.272389
+                ],
+                "xyz": [
+                  -1.525223728648939e-06,
+                  2.3229633222547106,
+                  1.38865818923
+                ],
+                "properties": {},
+                "label": "Te"
+              }
+            ]
+          },
+          "tags": {
+            "CONTROL": "1 1 1 1 1 1",
+            "COREHOLE": "NONE",
+            "S02": "0",
+            "EXCHANGE": "0 0.0 0.0 2",
+            "SCF": "7.0 0 100 0.2 3",
+            "FMS": "9.0 0",
+            "XANES": "4 0.04 0.1",
+            "RPATH": "-1",
+            "EDGE": "L2"
+          },
+          "input_member": "Stable_and_exp_Cu/Stable_and_exp_Cu/Stable_Cu_L2/mp-1207193/FEFF/000_Cu/feff.inp",
+          "xmu_member": "Stable_and_exp_Cu/Stable_and_exp_Cu/Stable_Cu_L2/mp-1207193/FEFF/000_Cu/xmu.dat",
+          "input_sha256": "cfb4ad8941713da1758d2ed31db5e76d35343a134beb6109b4ead0717b9d0524",
+          "xmu_sha256": "856db22b802573f381d641e1e6703c8c731753106e241320650132f9c709d3dc"
+        },
+        {
+          "site_index": 0,
+          "edge": "L3",
+          "structure": {
+            "@module": "pymatgen.core.structure",
+            "@class": "Structure",
+            "charge": 0,
+            "lattice": {
+              "matrix": [
+                [
+                  4.023488,
+                  0.0,
+                  2.4636758503038933e-16
+                ],
+                [
+                  -2.011743270219958,
+                  3.4844432411604456,
+                  2.4636758503038933e-16
+                ],
+                [
+                  0.0,
+                  0.0,
+                  5.09807
+                ]
+              ],
+              "pbc": [
+                true,
+                true,
+                true
+              ],
+              "a": 4.023488,
+              "b": 4.023488,
+              "c": 5.09807,
+              "alpha": 90.0,
+              "beta": 90.0,
+              "gamma": 119.999988,
+              "volume": 71.47298153615456
+            },
+            "properties": {},
+            "sites": [
+              {
+                "species": [
+                  {
+                    "element": "Cu",
+                    "occu": 1
+                  }
+                ],
+                "abc": [
+                  -0.0,
+                  0.0,
+                  0.0
+                ],
+                "xyz": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "properties": {},
+                "label": "Cu"
+              },
+              {
+                "species": [
+                  {
+                    "element": "Te",
+                    "occu": 1
+                  }
+                ],
+                "abc": [
+                  0.666667,
+                  0.333333,
+                  0.727611
+                ],
+                "xyz": [
+                  2.011746255003771,
+                  1.1614799189057348,
+                  3.7094118107700003
+                ],
+                "properties": {},
+                "label": "Te"
+              },
+              {
+                "species": [
+                  {
+                    "element": "Te",
+                    "occu": 1
+                  }
+                ],
+                "abc": [
+                  0.333333,
+                  0.666667,
+                  0.272389
+                ],
+                "xyz": [
+                  -1.525223728648939e-06,
+                  2.3229633222547106,
+                  1.38865818923
+                ],
+                "properties": {},
+                "label": "Te"
+              }
+            ]
+          },
+          "tags": {
+            "CONTROL": "1 1 1 1 1 1",
+            "COREHOLE": "NONE",
+            "S02": "0",
+            "EXCHANGE": "0 0.0 0.0 2",
+            "SCF": "7.0 0 100 0.2 3",
+            "FMS": "9.0 0",
+            "XANES": "4 0.04 0.1",
+            "RPATH": "-1",
+            "EDGE": "L3"
+          },
+          "input_member": "Stable_and_exp_Cu/Stable_and_exp_Cu/Stable_Cu_L3/mp-1207193/FEFF/000_Cu/feff.inp",
+          "xmu_member": "Stable_and_exp_Cu/Stable_and_exp_Cu/Stable_Cu_L3/mp-1207193/FEFF/000_Cu/xmu.dat",
+          "input_sha256": "294cd75da59b4bd1c0003f23a2e17907450ae3ed7399e6c63ed4caf7ff4df66c",
+          "xmu_sha256": "be17cf92b4d4fbeecedb3a86fbe3476076685762efcd34c64c1f1ea053e81f27"
+        }
+      ]
+    }
+  ]
+}

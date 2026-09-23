@@ -1,0 +1,21 @@
+{
+  "status": "draft_requires_live_search_and_fresh_FEFF_validation",
+  "question": "GLEASON24-Q8",
+  "search_ground_truth": {
+    "source": "Full live Materials Project response independently captured by the evaluation harness, pinned to database version and timestamp.",
+    "predicate": "Cu-containing, non-deprecated, (is_stable is True OR theoretical is False), and not in the valid seed-ID set.",
+    "completeness": "Check query scope and pagination against the harness capture. A list of self-reported selected IDs does not establish search completeness.",
+    "id_changes": "Check reported aliases/deprecations; the candidate must not silently reinterpret unresolved seed IDs as novel materials.",
+    "historical_count": "Do not require exactly 2,175 IDs or the paper figure counts from today\u2019s database."
+  },
+  "simulation_ground_truth": {
+    "budget": "Exactly three eligible materials, with single-site and multiple-site Cu environments represented when available.",
+    "setup": "Independently check crystal structure, equivalent Cu groups, multiplicity weights, L2/L3 job coverage and declared FEFF settings.",
+    "fresh_execution": "Require a benchmark-managed FEFF execution trace, convergence checks and raw output files. Candidate-authored logs alone are not proof of computation.",
+    "archived_references": "Use reference_cases.json and the site/material CSVs only after checking that the structures, absorber environments, settings and energy conventions agree.",
+    "new_or_changed_inputs": "Generate independent evaluator FEFF references from the pinned current structures. Do not grade new structures against unrelated archived curves.",
+    "failure_handling": "Record incomplete/failed calculations and missing multiplicity coverage. Do not declare a complete three-material answer by silently omitting failed sites.",
+    "comparison": "Assess energy axes, edge features, relative intensities, material averaging and contribution plots. No numerical FEFF threshold is claimed as calibrated before the fresh-run pilot."
+  },
+  "input_boundary": "Only seed IDs, simulation settings, necessary scientific background, live MP access and the runtime FEFF installation go to the agent. Keep reference_cases, archived spectra, runtime audit, candidate code and setup-check fixtures on the evaluator side."
+}

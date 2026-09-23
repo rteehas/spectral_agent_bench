@@ -118,6 +118,9 @@ sc.append(make('Q7','How separated are the experimental Cu, Cu₂O and CuO L₃ 
     'Allow 0.05 eV absolute error on peak positions and signed separations. Check that Cu/Cu2O are nearly coincident and CuO is lower in energy; compare the marked overlay with Figure S1 XAS traces. The candidate must limit its conclusion to peak energy and these supplied references.',
     [('Python / pandas','Read the three unchanged XAS CSVs; retain their supplied energy calibration.','Input data frames.'),('Python / NumPy','Find each maximum within the defined window and calculate signed pairwise energy differences.','result.json'),('Python / Matplotlib','Sort for display, normalize amplitudes and overlay the L₃ peaks.','plot.png'),('Evaluator / numeric and figure review','Compare peak positions to an independent CSV reduction and inspect Figure S1 consistency.','Numerical peaks plus appropriately limited scientific inference.')],[],[figure('paper-figure-s1.png','Figure S1 · reference spectra','Author-provided Figure S1. Its literature XAS traces were smoothed and shifted by −1.0 eV (Cu) and −1.2 eV (Cu2O/CuO). Use qualitative peak ordering only; exact targets use the supplied unshifted CSVs.')]))
 
+from search_simulation_question import build_scenario
+sc.append(build_scenario(DOCS,BASE))
+
 paper={'id':'gleason-2024-cu-oxidation','title':'Prediction of the Cu oxidation state from EELS and XAS spectra using supervised machine learning','authors':'Samuel P. Gleason, Deyu Lu and Jim Ciston (2024)','doi':'10.1038/s41524-024-01408-1','category':'Cu oxidation-state spectroscopy','facility':'Materials Project / FEFF9; NCEM Molecular Foundry; CFN Brookhaven','pdf':PAPER+'.pdf','dataUrl':'https://zenodo.org/records/18142209','codeUrl':CODE,'scenarios':sc}
 path=DOCS/'data/benchmark.json';data=json.loads(path.read_text());data['papers']=[p for p in data['papers'] if p['id']!=paper['id']]+[paper]
 # Q1 now tests scientific reconstruction rather than exact numerical replay.

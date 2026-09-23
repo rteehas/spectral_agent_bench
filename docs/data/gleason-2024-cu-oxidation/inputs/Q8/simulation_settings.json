@@ -1,0 +1,23 @@
+{
+  "feff_version": "9.9.1",
+  "cluster_radius_A": 10.0,
+  "symprec_A": 0.01,
+  "feff_tags": {
+    "CONTROL": "1 1 1 1 1 1",
+    "COREHOLE": "NONE",
+    "S02": 0,
+    "EXCHANGE": "0 0.0 0.0 2",
+    "SCF": "7.0 0 100 0.2 3",
+    "FMS": "9.0 0",
+    "XANES": "4 0.04 0.1",
+    "RPATH": -1
+  },
+  "source": "FEFF control tags from the released additional-material input decks. The 10 \u00c5 input cluster and 0.01 \u00c5 symmetry tolerance are the benchmark reproduction settings; the archived atom lists agree with a 10 \u00c5 cluster.",
+  "budget": {
+    "materials": 3,
+    "edges_per_inequivalent_Cu_site": [
+      "L2",
+      "L3"
+    ]
+  }
+}

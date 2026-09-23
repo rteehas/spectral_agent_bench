@@ -2,7 +2,7 @@
 
 [Paper](https://doi.org/10.1038/s41524-024-01408-1) · [Open release](https://zenodo.org/records/18142209) · [Pinned source](https://github.com/smglsn12/ML_XAS_EELS/tree/85e0f34e448247f6c7a01705807dae39dd1d6cbd)
 
-This entry contains seven independently runnable, minimal sub-questions from the paper's data preparation and spectral analysis. Each starts at its relevant stage. Inputs explicitly distinguish individual FEFF outputs, saved computational metadata, already processed simulated spectra, and digitized literature measurements. No question requires the result of another benchmark question.
+This entry contains seven offline questions and one draft question covering a live material search and fresh FEFF simulations. Each starts at its relevant stage. Inputs explicitly distinguish individual FEFF outputs, saved computational metadata, already processed simulated spectra, and digitized literature measurements. No question requires the result of another benchmark question. Q8 requires external runtime services and has only component-level validation so far.
 
 | ID | Research question | Minimal inputs | Verification basis |
 |---|---|---|---|
@@ -13,6 +13,7 @@ This entry contains seven independently runnable, minimal sub-questions from the
 | GLEASON24-Q5 | What signal results from the displayed three-material combination? | Three aligned/normalized parent spectra and specified display coefficients | Recomputed weighted sum, supported by the author's embedded plot |
 | GLEASON24-Q6 | How does mixture augmentation change label coverage? | Ordered base IDs/labels and reproducible sampling settings | Unchanged-author-code replay; qualitative figure comparison |
 | GLEASON24-Q7 | How separated are the experimental L₃ peaks? | Three unchanged literature XAS CSVs | Independent maximum search; qualitative Figure S1 comparison |
+| GLEASON24-Q8 | Which additional Cu-containing materials qualify, and what spectra are predicted for three representative cases? | Seed IDs, simulation settings, live MP access and a FEFF9 runtime | Independently captured live response; archived references only for matching structures/settings, otherwise independent evaluator FEFF runs. Draft; fresh-run validation pending |
 
 Q2 and Q3 share an admissibility definition but answer different questions: chemical-label coverage and material-source coverage. Q4 and Q5 operate on different material trios. Q6 only asks about label coverage, so it does not unnecessarily receive thousands of spectral arrays.
 
@@ -49,7 +50,7 @@ python docs/data/gleason-2024-cu-oxidation/workflows/verify.py Q1 \
   --truth docs/data/gleason-2024-cu-oxidation/verification/Q1
 ```
 
-Install the pinned dependencies in `requirements.txt` using Python 3.10. The candidate workflows never load joblib pickles, access the previous walkthrough folders, call a live API, or read verification files. Q1 uses pymatgen to identify symmetry-equivalent Cu atoms; other tasks use pandas/NumPy/Matplotlib. FEFF outputs are supplied, so a licensed FEFF executable and simulation resources are not required.
+Install the pinned dependencies in `requirements.txt` using Python 3.10. The Q1–Q7 candidate workflows never load joblib pickles, access the previous walkthrough folders, call a live API, or read verification files. Q1 uses pymatgen to identify symmetry-equivalent Cu atoms; the other offline tasks use pandas/NumPy/Matplotlib. FEFF outputs are supplied for those tasks. Q8 instead requires live MP access and a working FEFF9 installation; see below.
 
 `run_candidates.py --workdir NEW_DIRECTORY` exports each input bundle, runs its candidate, invokes the verifier separately, and records commands, stdout/stderr, versions, runtime and status in `workflows/Q*.json`. Tool names are portable descriptions (shell/Python, NumPy, pymatgen and plotting), not a requirement to use a particular agent framework.
 
@@ -75,9 +76,21 @@ The release and publication do not agree on every count. We preserve the release
 
 The missing-assignment-to-zero convention is reproduced as a historical choice. It must not be interpreted as independent evidence that every zero-labeled material contains chemically Cu(0). This distinction is part of Q2's review rubric.
 
+## Q8: live search and three fresh simulations
+
+The agent searches the full current Cu-containing Materials Project catalog, saves a response snapshot, selects materials that have experimental structure provenance or predicted stability, and excludes valid seed IDs. It then chooses three representative additions and performs both edges at every inequivalent Cu site. A case with multiple Cu environments exercises the averaging step. The user selected this scope to retain the research workflow while bounding compute.
+
+Export Q8 with `export_agent_bundle.py Q8 NEW_DIRECTORY`. Its bundle contains only seed IDs, simulation settings and the prompt. Configure `MP_API_KEY` and a local FEFF9 driver through `FEFF_COMMAND` in the benchmark runtime. The candidate program `workflows/search_and_simulate.py` has four stages, each taking `--inputs INPUT_DIRECTORY --output OUTPUT_DIRECTORY`: `search`, `prepare`, `run`, and `collect`. The driver runs in each job directory, reads `feff.inp`, writes `xmu.dat`, and must stream the FEFF version/convergence log to stdout. No author submission scripts are executed, and no credentials are copied from upstream notebooks.
+
+`prepare_q8_assets.py` projects seed IDs and extracts three evaluator reference cases from the open release. `check_q8_setup.py` tests OR selection and seed exclusion, generates eight input decks from archived structure headers, checks the decks, and reconstructs the three separately released material curves from archived raw outputs. The latter is explicitly a postprocessing test, not new simulation. The program refuses to run FEFF over pre-existing `xmu.dat` files. These checks are recorded in `verification/Q8/setup_checks.json` and the Q8 workflow record.
+
+**Execution status: partially validated.** The live query and fresh FEFF9 calculations have not been run in this environment because no runtime credential or FEFF executable is configured. Q8 is excluded from the offline candidate suite; export checks report this limitation instead of claiming a full pass. The evaluator must capture the live response independently, verify query completeness and material eligibility, and obtain independent FEFF reference results for structures/settings without a matching archived reference. Today’s MP IDs alone do not establish that archived and current structures are identical. Numerical simulation tolerances need pilot calibration before scoring.
+
+Historical compute evidence is in `verification/Q8/runtime_audit.json`: 6,839 timestamped jobs on 36 ranks total roughly 13,776 allocated core-hours, excluding 359 incompletely timed logs. The three archived examples (KCu₄Se₃, TbCu₅, CuTe₂) total 956 seconds if their eight jobs run sequentially on that allocation, or 9.56 allocated core-hours. These are historical timings, not a guarantee for new hardware or newly selected materials. A fresh pilot should establish the runtime budget and numerical comparison policy.
+
 ## Deliberately deferred questions
 
-- Exact historical selection of the first 1,533 materials, or the added-material MP search: original query/database snapshot not recovered; current API results are not a historical answer.
+- Exact historical selection of the first 1,533 materials, or exact recovery of the original additional-material MP query: the original database snapshot was not recovered. Q8 implements a new live search and captures its own snapshot; it does not claim historical membership equivalence.
 - Fully independent energy-calibration fitting from the seed file: our earlier replay froze effective offsets recovered from a processed output; using them as a hidden dependency would compromise the intended input boundary. A future question can supply independently documented calibration inputs explicitly.
 - Exact reconstruction of the entire combined table from all archived FEFF jobs: three incomplete edge pairs and remaining array mismatches prevent a clean exact target. Q1 deliberately uses a verified complete material with unequal site multiplicities.
 - Exact Figure 2 model score, uncertainty distributions, or noise-robustness curves: not yet backed here by a separately audited training/split/model workflow. We do not present unrun candidate workflows as verified tasks.

@@ -1,0 +1,178 @@
+{
+  "archive": "Dataset_generation/FEFF_simulations/Stable_and_exp_Cu_with_results.zip",
+  "log_files": 7198,
+  "materials": 2175,
+  "completed_logs": 6839,
+  "with_xmu_and_convergence_and_timing": 6620,
+  "thread_counts": {
+    "36": 7198
+  },
+  "last_completed_job_wall_seconds": {
+    "count": 6839,
+    "min": 15.0,
+    "p25": 78.0,
+    "median": 140.0,
+    "mean": 201.4342740166691,
+    "p75": 231.0,
+    "p90": 408.1999999999998,
+    "p95": 568.0,
+    "max": 1781.0,
+    "sum": 1377609.0
+  },
+  "successful_job_wall_seconds": {
+    "count": 6620,
+    "min": 15.0,
+    "p25": 76.0,
+    "median": 137.0,
+    "mean": 178.142749244713,
+    "p75": 217.0,
+    "p90": 363.0,
+    "p95": 468.0499999999993,
+    "max": 1564.0,
+    "sum": 1179305.0
+  },
+  "last_completed_jobs_allocated_core_hours": 13776.09,
+  "all_completed_attempts_allocated_core_hours": 13776.09,
+  "per_material_sequential_job_seconds": {
+    "count": 2075,
+    "min": 33.0,
+    "p25": 153.5,
+    "median": 343.0,
+    "mean": 663.9079518072289,
+    "p75": 731.5,
+    "p90": 1489.4000000000005,
+    "p95": 2267.0999999999995,
+    "max": 10585.0,
+    "sum": 1377609.0
+  },
+  "missing_timing_logs": 359,
+  "multiple_completed_attempt_logs": 0,
+  "examples": {
+    "mp-10092": [
+      {
+        "material_id": "mp-10092",
+        "site": 1,
+        "edge": "L2",
+        "log_member": "Stable_and_exp_Cu/Stable_and_exp_Cu/Experimental_Cu_L2/mp-10092/FEFF/001_Cu/feff.out",
+        "threads": 36,
+        "completed_durations_s": [
+          81.0
+        ],
+        "last_completed_s": 81.0,
+        "has_xmu": true,
+        "convergence_reported": true,
+        "start_count": 1
+      },
+      {
+        "material_id": "mp-10092",
+        "site": 1,
+        "edge": "L3",
+        "log_member": "Stable_and_exp_Cu/Stable_and_exp_Cu/Experimental_Cu_L3/mp-10092/FEFF/001_Cu/feff.out",
+        "threads": 36,
+        "completed_durations_s": [
+          92.0
+        ],
+        "last_completed_s": 92.0,
+        "has_xmu": true,
+        "convergence_reported": true,
+        "start_count": 1
+      }
+    ],
+    "mp-1077262": [
+      {
+        "material_id": "mp-1077262",
+        "site": 1,
+        "edge": "L2",
+        "log_member": "Stable_and_exp_Cu/Stable_and_exp_Cu/Experimental_Cu_L2/mp-1077262/FEFF/001_Cu/feff.out",
+        "threads": 36,
+        "completed_durations_s": [
+          138.0
+        ],
+        "last_completed_s": 138.0,
+        "has_xmu": true,
+        "convergence_reported": true,
+        "start_count": 1
+      },
+      {
+        "material_id": "mp-1077262",
+        "site": 2,
+        "edge": "L2",
+        "log_member": "Stable_and_exp_Cu/Stable_and_exp_Cu/Experimental_Cu_L2/mp-1077262/FEFF/002_Cu/feff.out",
+        "threads": 36,
+        "completed_durations_s": [
+          159.0
+        ],
+        "last_completed_s": 159.0,
+        "has_xmu": true,
+        "convergence_reported": true,
+        "start_count": 1
+      },
+      {
+        "material_id": "mp-1077262",
+        "site": 1,
+        "edge": "L3",
+        "log_member": "Stable_and_exp_Cu/Stable_and_exp_Cu/Experimental_Cu_L3/mp-1077262/FEFF/001_Cu/feff.out",
+        "threads": 36,
+        "completed_durations_s": [
+          136.0
+        ],
+        "last_completed_s": 136.0,
+        "has_xmu": true,
+        "convergence_reported": true,
+        "start_count": 1
+      },
+      {
+        "material_id": "mp-1077262",
+        "site": 2,
+        "edge": "L3",
+        "log_member": "Stable_and_exp_Cu/Stable_and_exp_Cu/Experimental_Cu_L3/mp-1077262/FEFF/002_Cu/feff.out",
+        "threads": 36,
+        "completed_durations_s": [
+          156.0
+        ],
+        "last_completed_s": 156.0,
+        "has_xmu": true,
+        "convergence_reported": true,
+        "start_count": 1
+      }
+    ],
+    "mp-1207193": [
+      {
+        "material_id": "mp-1207193",
+        "site": 0,
+        "edge": "L2",
+        "log_member": "Stable_and_exp_Cu/Stable_and_exp_Cu/Stable_Cu_L2/mp-1207193/FEFF/000_Cu/feff.out",
+        "threads": 36,
+        "completed_durations_s": [
+          96.0
+        ],
+        "last_completed_s": 96.0,
+        "has_xmu": true,
+        "convergence_reported": true,
+        "start_count": 1
+      },
+      {
+        "material_id": "mp-1207193",
+        "site": 0,
+        "edge": "L3",
+        "log_member": "Stable_and_exp_Cu/Stable_and_exp_Cu/Stable_Cu_L3/mp-1207193/FEFF/000_Cu/feff.out",
+        "threads": 36,
+        "completed_durations_s": [
+          98.0
+        ],
+        "last_completed_s": 98.0,
+        "has_xmu": true,
+        "convergence_reported": true,
+        "start_count": 1
+      }
+    ]
+  },
+  "limitations": [
+    "Recorded start/end elapsed times exclude scheduler queue waiting.",
+    "Core-hours are allocated ranks multiplied by elapsed time, not measured CPU utilization.",
+    "Incomplete logs and unrecorded attempts are not counted in totals.",
+    "These measurements describe the authors 2022 hardware and inputs; new hardware and structures need a pilot."
+  ],
+  "method": "Read each feff.out in the released archive; pair its ### feff starts/ends timestamps and read the MPI rank count. Sum elapsed seconds and elapsed_seconds \u00d7 ranks / 3600. Includes timed failures, excludes jobs without an end timestamp. No new FEFF run was performed.",
+  "example_total_seconds": 956.0
+}
