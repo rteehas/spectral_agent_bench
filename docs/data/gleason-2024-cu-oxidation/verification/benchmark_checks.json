@@ -7,12 +7,6 @@
       "perturbed_answer_rejected": true
     },
     {
-      "question": "Q2",
-      "input_bundle_only_declared_files": true,
-      "correct_candidate_passes": true,
-      "perturbed_answer_rejected": true
-    },
-    {
       "question": "Q5",
       "input_bundle_only_declared_files": true,
       "correct_candidate_passes": true,

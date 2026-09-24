@@ -128,51 +128,6 @@
           "groundTruthReasoning": "Worked solution: reconstruct the material spectrum from the supplied FEFF outputs using candidate.py. The interpolation and padding below follow the authors recipe as one valid numerical treatment; the benchmark also permits other justified treatments.\n\n1. Read the crystal structure (Python / pymatgen)\nRead L3_001_Cu_feff.inp with Python. Extract the lattice lengths, angles, species and fractional coordinates from its header, then construct a pymatgen Structure using Lattice.from_parameters.\nResult: A six-atom TbCu₅ unit cell containing one Tb atom and five Cu atoms.\n\n2. Determine the site weights (Python / pymatgen SpacegroupAnalyzer)\nIdentify equivalent atoms with SpacegroupAnalyzer(symprec=0.01).get_symmetrized_structure().equivalent_indices. Keep the Cu groups and divide each group size by the total number of Cu atoms.\nResult: Zero-based representative site 1 occurs once and site 2 represents four equivalent atoms, giving weights 1/5 = 0.2 and 4/5 = 0.8.\n\n3. Load the four edge spectra (Python / NumPy)\nUse numpy.loadtxt to read the L2 and L3 xmu.dat files for sites 001 and 002. Select column 1 for photon energy in eV and column 4 for absorption, preserving their supplied conventions.\nResult: Separate L₂ and L₃ energy–intensity arrays for each Cu environment.\n\n4. Interpolate each edge (Python / NumPy)\nFor this worked solution, use numpy.arange to make a 0.1 eV grid from round(min(E)+0.15,1) to round(max(E)−0.15,1), excluding the upper bound. Use numpy.interp for linear interpolation of each edge onto its grid.\nResult: Regularly sampled L₂ and L₃ curves ready for combination.\n\n5. Combine L₂ and L₃ for each site (Python / NumPy)\nExtend L₂ down to the L₃ grid start using b(E+a)^10. Determine a and b from an intensity of 1e−10 at that start and the first interpolated L₂ point. Prepend this extension to L₂ and add it pointwise to L₃ over the L₃ grid.\nResult: One combined Cu L₂,₃ spectrum for each representative site.\n\n6. Average the Cu sites (Python / NumPy)\nFind the overlap of the two site energy ranges, build a common 0.1 eV grid excluding its upper endpoint, and interpolate both site curves onto it. Calculate S(E) = 0.2 S₁(E) + 0.8 S₂(E). The weights account for the number of Cu atoms represented by each simulation.\nResult: The worked solution produces a material-averaged spectrum with 545 samples; this row count is specific to its numerical choices.\n\n7. Save the answer and plot the contributions (Python / pandas, json and Matplotlib)\nUse pandas.DataFrame.to_csv to save energy_eV and intensity in spectrum.csv. Use Python json to save material_id, site_weights and the output row count in result.json. Use Matplotlib to overlay the weighted site contributions and their sum in plot.png.\nResult: The requested numerical spectrum, result metadata and contribution plot. The archived run also retains an optional energy-reference diagnostic.\n\n8. Check the reconstructed answer (Evaluator / Python verify.py)\nAfter the candidate finishes, run verify.py separately to check its site weights, reported row count and spectral agreement. The evaluator reference is the mp-1077262 row of the authors released 110222_Cu_DF_With_Spectra.joblib, previously extracted with joblib and pandas by prepare_assets.py. The candidate does not read that reference. Apply the comparison policy documented in Verification.\nResult: The recorded execution passes the numerical checks, with normalized RMSE 0.0 on the comparison interval and zero reported peak-energy, peak-height and edge-area errors. Scientific interpretation and plot readability require separate review.\n\nExecution: python candidate.py Q1 --inputs INPUT_DIRECTORY --output OUTPUT_DIRECTORY. The Q1_candidate_workflow.json link in Verification records the actual commands, program versions and outputs. Source methods: Database_Construction.ipynb cells 1, 9 and 10. FEFF is the source of the supplied simulations; no new FEFF calculation is run here."
         },
         {
-          "id": "GLEASON24-Q2",
-          "kind": "Subquestion",
-          "title": "How much of the base spectral set has an integer Cu oxidation-state label?",
-          "inputs": [
-            {
-              "name": "material_records.json",
-              "url": "data/gleason-2024-cu-oxidation/inputs/Q2/material_records.json",
-              "description": "Projection of pre-filter release records: IDs, saved oxidation-state dictionaries and L3 reference availability. Final labels, retained masks and counts are withheld."
-            }
-          ],
-          "prompt": {
-            "background": "These are computational assignments saved by the authors, not labels inferred from the spectra. Use the saved Materials Project Cu average, rounded to two decimals. The released workflow substitutes 0 when the Cu assignment is missing. Exclude material_id=\"Failed\", records with an error or missing L3 reference, and labels ≥3. This is the historical data rule; an imputed zero is not independently established Cu(0).",
-            "instruction": "Build the admissible base-material label distribution before synthetic augmentation. Save a count plot and result.json containing retained, integer_counts (keys \"0\",\"1\",\"2\"), fractional, integer_fraction, above_two_below_three, zero_from_missing, and zero_explicit. Count fractional labels without rounding them to the nearest integer. Explain what the zero-label provenance permits you to conclude chemically."
-          },
-          "verification": {
-            "description": "Require exact counts and integer fraction within 1e−9. The interpretation must distinguish an imputed zero from an explicitly assigned Cu(0), and preserve original fractional labels. Compare against the released table, not the figure bar heights.",
-            "data": [
-              {
-                "name": "expected.json",
-                "url": "data/gleason-2024-cu-oxidation/verification/Q2/expected.json",
-                "description": "Evaluator-only numerical targets; see provenance.json for their evidence type."
-              }
-            ],
-            "figures": [],
-            "methods": [
-              {
-                "name": "Q2_candidate_workflow.json",
-                "url": "data/gleason-2024-cu-oxidation/workflows/Q2.json",
-                "description": "Worked candidate tool sequence, actual execution record, and limitations. Exclude from agent inputs."
-              },
-              {
-                "name": "candidate.py",
-                "url": "data/gleason-2024-cu-oxidation/workflows/candidate.py",
-                "description": "Executable worked solutions; reads only the selected question input directory. Exclude from agent inputs."
-              },
-              {
-                "name": "verify.py",
-                "url": "data/gleason-2024-cu-oxidation/workflows/verify.py",
-                "description": "Evaluator-side numeric checker. Interpretation and figure readability require separate review."
-              }
-            ]
-          },
-          "groundTruthReasoning": "The released processed table has 3,439 rows: 876, 1,039 and 1,291 with labels 0, 1 and 2, plus 233 fractional labels. The integer fraction is 3,206/3,439, approximately 93.2248%; 68 retained labels exceed 2. All 876 zero labels arise from missing Cu assignments in the saved dictionaries. This reproduces the released target distribution, not independent chemical validation. The targets are derived from the separate released processed table; input projections omit its answer columns. Figure 1 bar heights are not exact base-set truth because the author notebook plots after augmentation."
-        },
-        {
           "id": "GLEASON24-Q5",
           "kind": "Subquestion",
           "title": "What Cu L₂,₃ signal results from the paper’s displayed three-material spectral combination?",
@@ -455,6 +410,7 @@
     }
   ],
   "retiredScenarioIds": [
+    "GLEASON24-Q2",
     "GLEASON24-Q3",
     "GLEASON24-Q4"
   ]

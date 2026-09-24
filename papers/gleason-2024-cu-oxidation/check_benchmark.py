@@ -7,7 +7,7 @@ spec=importlib.util.spec_from_file_location('gleason_verifier',DATA/'workflows/v
 
 def main():
     p=argparse.ArgumentParser();p.add_argument('--candidate-runs',type=Path,required=True);a=p.parse_args();reports=[]
-    fields={'Q1':('points',1),'Q2':('zero_from_missing',-1),'Q5':('coefficient_sum',.01),'Q6':('generated',1),'Q7':('CuO_minus_Cu2O_eV',1.)}
+    fields={'Q1':('points',1),'Q5':('coefficient_sum',.01),'Q6':('generated',1),'Q7':('CuO_minus_Cu2O_eV',1.)}
     dataset=json.loads((ROOT/'docs/data/benchmark.json').read_text());paper=next(x for x in dataset['papers'] if x['id']=='gleason-2024-cu-oxidation')
     with tempfile.TemporaryDirectory(prefix='gleason-bench-check-') as temp:
         base=Path(temp)

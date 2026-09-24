@@ -20,7 +20,6 @@ def make(q,title,inputs,background,instruction,reason,check,steps,evidence,figur
     if thresholds is not None:verification['thresholds']=thresholds
     return {'id':'GLEASON24-'+q,'kind':'Subquestion','title':title,'inputs':inputs,'prompt':{'background':background,'instruction':instruction},'verification':verification,'groundTruthReasoning':reason}
 
-selection='Use the saved Materials Project Cu average, rounded to two decimals. The released workflow substitutes 0 when the Cu assignment is missing. Exclude material_id="Failed", records with an error or missing L3 reference, and labels ≥3. This is the historical data rule; an imputed zero is not independently established Cu(0).'
 q1_steps=[
     ('Read the crystal structure','Python / pymatgen',
      'Read L3_001_Cu_feff.inp with Python. Extract the lattice lengths, angles, species and fractional coordinates from its header, then construct a pymatgen Structure using Lattice.from_parameters.',
@@ -75,13 +74,6 @@ sc.append(make('Q1','What material-level Cu L₂,₃ spectrum is predicted for T
         ],
         'data':[{'name':'comparison_policy.json','url':f'{BASE}/verification/Q1/comparison_policy.json','description':'Evaluator-only, model-generated benchmark thresholds and comparison settings; includes provenance.'}]
     }))
-sc.append(make('Q2','How much of the base spectral set has an integer Cu oxidation-state label?',
-    [file('Q2','material_records.json','Projection of pre-filter release records: IDs, saved oxidation-state dictionaries and L3 reference availability. Final labels, retained masks and counts are withheld.')],
-    'These are computational assignments saved by the authors, not labels inferred from the spectra. '+selection,
-    'Build the admissible base-material label distribution before synthetic augmentation. Save a count plot and result.json containing retained, integer_counts (keys "0","1","2"), fractional, integer_fraction, above_two_below_three, zero_from_missing, and zero_explicit. Count fractional labels without rounding them to the nearest integer. Explain what the zero-label provenance permits you to conclude chemically.',
-    'The released processed table has 3,439 rows: 876, 1,039 and 1,291 with labels 0, 1 and 2, plus 233 fractional labels. The integer fraction is 3,206/3,439, approximately 93.2248%; 68 retained labels exceed 2. All 876 zero labels arise from missing Cu assignments in the saved dictionaries. This reproduces the released target distribution, not independent chemical validation. The targets are derived from the separate released processed table; input projections omit its answer columns. Figure 1 bar heights are not exact base-set truth because the author notebook plots after augmentation.',
-    'Require exact counts and integer fraction within 1e−9. The interpretation must distinguish an imputed zero from an explicitly assigned Cu(0), and preserve original fractional labels. Compare against the released table, not the figure bar heights.',
-    [('Python / JSON','Read the saved assignment dictionaries and reference-status records.','No live Materials Project access.'),('Python / NumPy','Apply the historical label and admissibility rules; count exact integer/fractional values and zero-label provenance.','result.json'),('Python / Matplotlib','Plot base-set label coverage.','plot.png'),('Evaluator / verify.py','Compare counts against the independent processed table reduction.','Numeric pass; reviewer checks provenance interpretation.')],[]))
 sc.append(make('Q5','What Cu L₂,₃ signal results from the paper’s displayed three-material spectral combination?',
     [file('Q5','parent_spectra.csv','Released ordinary spectra for HoCdCu4 (mp-12007), NdCuSi (mp-8120) and CuN2(Cl2O)2 (mp-1188453), already aligned and normalized. No mixture output is included.')],
     'The Figure 1 example combines these three parent signals linearly using display coefficients 0.33, 0.33 and 0.33. Use those coefficients exactly: this plotting call does not rescale them to sum to one. This task concerns the displayed signal; the training-data generator has a separate normalization rule.',
@@ -110,7 +102,7 @@ sc.append(build_scenario(DOCS,BASE))
 paper={'id':'gleason-2024-cu-oxidation','title':'Prediction of the Cu oxidation state from EELS and XAS spectra using supervised machine learning','authors':'Samuel P. Gleason, Deyu Lu and Jim Ciston (2024)','doi':'10.1038/s41524-024-01408-1','category':'Cu oxidation-state spectroscopy','facility':'Materials Project / FEFF9; NCEM Molecular Foundry; CFN Brookhaven','pdf':PAPER+'.pdf','dataUrl':'https://zenodo.org/records/18142209','codeUrl':CODE,'scenarios':sc}
 path=DOCS/'data/benchmark.json';data=json.loads(path.read_text());data['papers']=[p for p in data['papers'] if p['id']!=paper['id']]+[paper]
 # Keep review storage stable and retain removed IDs only for saved-review compatibility.
-data['retiredScenarioIds']=sorted(set(data.get('retiredScenarioIds',[]))|{'GLEASON24-Q3','GLEASON24-Q4'})
+data['retiredScenarioIds']=sorted(set(data.get('retiredScenarioIds',[]))|{'GLEASON24-Q2','GLEASON24-Q3','GLEASON24-Q4'})
 data['datasetId']='spectral-agent-v3';path.write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n')
 (ROOT/'papers/gleason-2024-cu-oxidation/paper.json').write_text(json.dumps(paper,ensure_ascii=False,indent=2)+'\n')
 print('Added',len(sc),'independent questions to',path)
