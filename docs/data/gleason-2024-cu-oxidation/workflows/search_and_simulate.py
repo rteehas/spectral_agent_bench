@@ -86,7 +86,7 @@ def search(inputs, output):
             if r['is_stable'] is True:
                 reasons.append('predicted stable')
             if r['theoretical'] is False:
-                reasons.append('experimental structure provenance')
+                reasons.append('experimentally synthesized (MP theoretical=False)')
             writer.writerow({**{k: r[k] for k in fields[:-1]},
                              'reason': '; '.join(reasons)})
     print(json.dumps({'returned': len(records), 'additional': len(selected)}))
@@ -120,7 +120,7 @@ def choose_three(records, tolerance):
             if cache[mid] and (cache[mid] > 1) == want_multiple:
                 chosen.append(mid)
                 break
-    # Prefer a third material that adds a different provenance category.
+    # Prefer a third material that adds a different synthesis/stability category.
     categories = {(records[mid]['is_stable'], records[mid]['theoretical']) for mid in chosen}
     candidates.sort(key=lambda r: ((r['is_stable'], r['theoretical']) in categories,
                                   len(r['structure']['sites']), int(r['material_id'][3:])))
@@ -177,7 +177,7 @@ def prepare(inputs, output, material_ids=None):
                              'directory': relative.as_posix(),
                              'input_sha256': digest(directory / 'feff.inp')})
     dump(output / 'selected_materials.json', {
-        'selection': 'Three eligible structures; prefer compact single-site and multi-site Cu cases and varied provenance.',
+        'selection': 'Three eligible structures; prefer compact single-site and multi-site Cu cases and varied synthesis/stability categories.',
         'materials': materials, 'setup_exclusions': excluded})
     dump(output / 'jobs.json', {'snapshot_sha256': digest(output / 'query_snapshot.json'),
                                 'settings_sha256': digest(inputs / 'simulation_settings.json'),
