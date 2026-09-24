@@ -5,7 +5,7 @@ A static GitHub Pages workspace for reviewing spectral benchmark examples, inspi
 **Website:** https://rteehas.github.io/spectral_agent_bench/  
 **Review alias:** https://rteehas.github.io/spectral_agent_bench/review.html
 
-The live dataset, [`docs/data/benchmark.json`](docs/data/benchmark.json), contains seven questions for [Gleason et al. (2024)](papers/gleason-2024-cu-oxidation/README.md), with minimal input bundles, verification targets and executed candidate workflows. The four fictional demonstration tasks are preserved separately in [`docs/data/benchmark.examples.json`](docs/data/benchmark.examples.json) as a reference; they are not loaded by the website.
+The live dataset, [`docs/data/benchmark.json`](docs/data/benchmark.json), contains six active questions for [Gleason et al. (2024)](papers/gleason-2024-cu-oxidation/README.md), with minimal input bundles and verification targets. Five offline questions have executed candidate workflows; Q8 covers live search and fresh simulations and remains partially validated. The four fictional demonstration tasks are preserved separately in [`docs/data/benchmark.examples.json`](docs/data/benchmark.examples.json) as a reference; they are not loaded by the website.
 
 ## Review workflow
 

@@ -116,6 +116,14 @@ def validate(data, public=PUBLIC):
             require(bool(data_files or figures), f'{sid}: verification needs ground-truth data or comparison figures')
             for figure in figures:
                 asset(figure.get('image'))
+    retired = data.get('retiredScenarioIds', [])
+    require(isinstance(retired, list), 'retiredScenarioIds must be a list')
+    retired_ids = set()
+    for sid in retired:
+        text(sid, 'Retired scenario ID')
+        require(bool(re.fullmatch(r'[A-Za-z0-9_-]+', sid)) and sid not in ('__proto__', 'constructor', 'prototype'), 'Retired scenario IDs must be URL-safe and non-reserved')
+        require(sid not in scenario_ids and sid not in retired_ids, f'Retired ID is active or duplicated: {sid}')
+        retired_ids.add(sid)
     return len(paper_ids), len(scenario_ids)
 
 

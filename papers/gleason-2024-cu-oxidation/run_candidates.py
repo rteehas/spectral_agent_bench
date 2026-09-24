@@ -5,8 +5,13 @@ from export_agent_bundle import export,ROOT
 DATA=ROOT/'docs/data/gleason-2024-cu-oxidation';WORKFLOW=DATA/'workflows'
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--workdir',type=Path,required=True);p.add_argument('--questions',nargs='+',default=[f'Q{i}' for i in range(1,8)]);a=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('--workdir',type=Path,required=True);p.add_argument('--questions',nargs='+');a=p.parse_args()
+    dataset=json.loads((ROOT/'docs/data/benchmark.json').read_text())
+    paper=next(x for x in dataset['papers'] if x['id']=='gleason-2024-cu-oxidation')
+    offline=[task['id'].split('-')[-1] for task in paper['scenarios'] if task.get('executionStatus')!='partially_validated']
+    if a.questions is None:a.questions=offline
     if 'Q8' in a.questions:p.error('Q8 uses search_and_simulate.py and requires live Materials Project access plus a FEFF9 runtime; it is not included in the offline candidate suite.')
+    if any(q not in offline for q in a.questions):p.error('Select active offline questions: '+', '.join(offline))
     a.workdir.mkdir(parents=True,exist_ok=True)
     reports=[]
     for q in a.questions:
@@ -26,9 +31,9 @@ def main():
         if trace['status']=='failed':print(run.stderr,verified.stderr if verified else '',flush=True)
     summary_path=DATA/'verification/candidate_execution.json'
     previous=json.loads(summary_path.read_text()).get('questions',[]) if summary_path.exists() else []
-    merged={x['question']:x for x in previous}
+    merged={x['question']:x for x in previous if x['question'] in offline}
     merged.update({x['question']:x for x in reports})
     summary=list(sorted(merged.values(),key=lambda x:x['question']))
-    summary_path.write_text(json.dumps({'questions':summary,'all_numeric_checks_passed':all(x['status']=='passed' for x in summary),'scope':'Offline Q1–Q7 candidate suite only. Q8 has separate component checks; live search and fresh FEFF9 execution are pending.'},indent=2)+'\n')
+    summary_path.write_text(json.dumps({'questions':summary,'all_numeric_checks_passed':all(x['status']=='passed' for x in summary),'scope':'Active offline candidate suite only ('+', '.join(offline)+'). Q8 has separate component checks; live search and fresh FEFF9 execution are pending.'},indent=2)+'\n')
     if not all(x['status']=='passed' for x in reports):raise SystemExit(1)
 if __name__=='__main__':main()

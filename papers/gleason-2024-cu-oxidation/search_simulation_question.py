@@ -130,7 +130,7 @@ def build_scenario(docs, base):
                   for i, (_, tool, operation, result) in enumerate(steps, 1)],
         'candidate_commands': [f'python search_and_simulate.py {stage} --inputs INPUT_DIRECTORY --output OUTPUT_DIRECTORY'
                                for stage in ['search', 'prepare', 'run', 'collect']],
-        'verification': 'Evaluator protocol in verification/Q8/evaluation_protocol.json; not covered by the Q1–Q7 numerical checker.',
+        'verification': 'Evaluator protocol in verification/Q8/evaluation_protocol.json; not covered by the offline numerical checker.',
         'evidence': reason,
         'execution': {'status': 'offline_components_passed_live_stages_not_run',
                       'executed_command': '/tmp/gleason-preview-py310/bin/python papers/gleason-2024-cu-oxidation/check_q8_setup.py',

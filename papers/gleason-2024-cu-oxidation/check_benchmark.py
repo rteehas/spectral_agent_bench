@@ -7,7 +7,7 @@ spec=importlib.util.spec_from_file_location('gleason_verifier',DATA/'workflows/v
 
 def main():
     p=argparse.ArgumentParser();p.add_argument('--candidate-runs',type=Path,required=True);a=p.parse_args();reports=[]
-    fields={'Q1':('points',1),'Q2':('zero_from_missing',-1),'Q3':('both',-1),'Q4':('first_value',.1),'Q5':('coefficient_sum',.01),'Q6':('generated',1),'Q7':('CuO_minus_Cu2O_eV',1.)}
+    fields={'Q1':('points',1),'Q2':('zero_from_missing',-1),'Q5':('coefficient_sum',.01),'Q6':('generated',1),'Q7':('CuO_minus_Cu2O_eV',1.)}
     dataset=json.loads((ROOT/'docs/data/benchmark.json').read_text());paper=next(x for x in dataset['papers'] if x['id']=='gleason-2024-cu-oxidation')
     with tempfile.TemporaryDirectory(prefix='gleason-bench-check-') as temp:
         base=Path(temp)
@@ -31,13 +31,13 @@ def main():
             assert rejected,(q,'incorrect answer was accepted')
             reports.append({'question':q,'input_bundle_only_declared_files':True,'correct_candidate_passes':True,'perturbed_answer_rejected':True})
         # Array-level rejection, independent of the scalar result.json checks.
-        q='Q4';wrong=base/'wrong-cumulative';shutil.copytree(a.candidate_runs/q/'output',wrong)
+        q='Q5';wrong=base/'wrong-mixture';shutil.copytree(a.candidate_runs/q/'output',wrong)
         import pandas as pd
-        d=pd.read_csv(wrong/'cumulative.csv');d.loc[200,'CuO']+=.1;d.to_csv(wrong/'cumulative.csv',index=False)
+        d=pd.read_csv(wrong/'mixture.csv');d.loc[200,'mixture']+=.1;d.to_csv(wrong/'mixture.csv',index=False)
         try:v.verify(q,wrong,DATA/'verification'/q)
         except AssertionError:array_rejected=True
         else:array_rejected=False
-        assert array_rejected,'altered cumulative array was accepted'
-    report={'checks':reports,'perturbed_cumulative_curve_rejected':array_rejected,'scope':'Input export and verifier sensitivity, not an OS-level data-access isolation test.'}
+        assert array_rejected,'altered mixture array was accepted'
+    report={'checks':reports,'perturbed_mixture_curve_rejected':array_rejected,'scope':'Active questions only: input export and verifier sensitivity, not an OS-level data-access isolation test.'}
     (DATA/'verification/benchmark_checks.json').write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(report,indent=2))
 if __name__=='__main__':main()

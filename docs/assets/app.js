@@ -135,7 +135,8 @@ function focusHash() {
 function resetFilters() { state.category = state.facility = state.status = 'all'; state.query = ''; $('#search').value = ''; $('#status').value = $('#facility').value = 'all'; render(); }
 function validateReviews(reviews) {
   if (!reviews || typeof reviews !== 'object' || Array.isArray(reviews)) throw new Error('The file does not contain a valid reviews object.');
-  const allowed = new Set(entries().map(e => e.scenario.id)), result = {};
+  // Retain historical reviews without displaying retired questions or losing active reviews.
+  const allowed = new Set([...entries().map(e => e.scenario.id), ...(state.data.retiredScenarioIds || [])]), result = {};
   for (const [id, r] of Object.entries(reviews)) {
     if (!allowed.has(id)) throw new Error(`Unknown example: ${id}. Import a file for this dataset.`);
     if (!r || !Object.hasOwn(labels, r.status) || typeof r.comment !== 'string' || r.comment.length > 12000 || typeof r.updatedAt !== 'string' || !Number.isFinite(Date.parse(r.updatedAt))) throw new Error(`Invalid review for ${id}.`);
