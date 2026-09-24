@@ -10,6 +10,7 @@
   },
   "simulation_ground_truth": {
     "budget": "Exactly three eligible materials, with single-site and multiple-site Cu environments represented when available.",
+    "scientific_rationale": "Review the selected compositions and Cu environments as candidate training examples for oxidation-state prediction. Do not infer improved prediction accuracy or established oxidation-state coverage from three simulations alone.",
     "setup": "Independently check crystal structure, equivalent Cu groups, multiplicity weights, L2/L3 job coverage and declared FEFF settings.",
     "fresh_execution": "Require a benchmark-managed FEFF execution trace, convergence checks and raw output files. Candidate-authored logs alone are not proof of computation.",
     "archived_references": "Use reference_cases.json and the site/material CSVs only after checking that the structures, absorber environments, settings and energy conventions agree.",

@@ -13,7 +13,7 @@ This entry contains seven offline questions and one draft question covering a li
 | GLEASON24-Q5 | What signal results from the displayed three-material combination? | Three aligned/normalized parent spectra and specified display coefficients | Recomputed weighted sum, supported by the author's embedded plot |
 | GLEASON24-Q6 | How does mixture augmentation change label coverage? | Ordered base IDs/labels and reproducible sampling settings | Unchanged-author-code replay; qualitative figure comparison |
 | GLEASON24-Q7 | How separated are the experimental L₃ peaks? | Three unchanged literature XAS CSVs | Independent maximum search; qualitative Figure S1 comparison |
-| GLEASON24-Q8 | Which additional Cu-containing materials qualify, and what spectra are predicted for three representative cases? | Seed IDs, simulation settings, live MP access and a FEFF9 runtime | Independently captured live response; archived references only for matching structures/settings, otherwise independent evaluator FEFF runs. Draft; fresh-run validation pending |
+| GLEASON24-Q8 | Which Cu materials can supply training spectra for oxidation-state prediction across different chemical environments? | Seed IDs, simulation settings, live MP access and a FEFF9 runtime | Independently captured live response; archived references only for matching structures/settings, otherwise independent evaluator FEFF runs. Draft; fresh-run validation pending |
 
 Q2 and Q3 share an admissibility definition but answer different questions: chemical-label coverage and material-source coverage. Q4 and Q5 operate on different material trios. Q6 only asks about label coverage, so it does not unnecessarily receive thousands of spectral arrays.
 
@@ -76,9 +76,11 @@ The release and publication do not agree on every count. We preserve the release
 
 The missing-assignment-to-zero convention is reproduced as a historical choice. It must not be interpreted as independent evidence that every zero-labeled material contains chemically Cu(0). This distinction is part of Q2's review rubric.
 
-## Q8: live search and three fresh simulations
+## Q8: training spectra across Cu chemical environments
 
-The agent searches the full current Cu-containing Materials Project catalog, saves a response snapshot, selects materials that have experimental structure provenance or predicted stability, and excludes valid seed IDs. It then chooses three representative additions and performs both edges at every inequivalent Cu site. A case with multiple Cu environments exercises the averaging step. The user selected this scope to retain the research workflow while bounding compute.
+The research motivation is to predict average Cu oxidation state from XAS and EELS across different compounds. Local chemistry also affects Cu spectral shape, making varied Cu environments relevant to the training set. Additional Materials Project structures provide sources of simulated examples beyond the seed collection; experimental structure provenance or predicted stability focuses the search on potentially experimentally accessible materials. The resulting spectra are candidates for later alignment, oxidation-state labeling and training. This subquestion does not establish an improvement in model accuracy or quantify coverage gaps in the seed set.
+
+The agent searches the full current Cu-containing Materials Project catalog, saves a response snapshot, selects eligible materials and excludes valid seed IDs. It then chooses three representative additions, explains their chemical and Cu-environment variety, and performs both edges at every inequivalent Cu site. A case with multiple Cu environments exercises the averaging step. The three-material scope keeps simulation cost bounded while retaining the search and structure-to-spectrum workflow.
 
 Export Q8 with `export_agent_bundle.py Q8 NEW_DIRECTORY`. Its bundle contains only seed IDs, simulation settings and the prompt. Configure `MP_API_KEY` and a local FEFF9 driver through `FEFF_COMMAND` in the benchmark runtime. The candidate program `workflows/search_and_simulate.py` has four stages, each taking `--inputs INPUT_DIRECTORY --output OUTPUT_DIRECTORY`: `search`, `prepare`, `run`, and `collect`. The driver runs in each job directory, reads `feff.inp`, writes `xmu.dat`, and must stream the FEFF version/convergence log to stdout. No author submission scripts are executed, and no credentials are copied from upstream notebooks.
 
