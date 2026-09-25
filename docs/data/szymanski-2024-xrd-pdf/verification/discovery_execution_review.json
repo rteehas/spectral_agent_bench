@@ -1,0 +1,153 @@
+{
+  "question": "SZYMANSKI24-Q5",
+  "status": "passed_independent_known_target_workflow_reproduction",
+  "reviewer": "Independent question-quality/execution agent; did not author discovery candidate or verifier",
+  "review_date": "2026-09-25T16:03:38.733958+00:00",
+  "candidate_sha256": "339abd1ecbcbfb41c7abff513a7585dc303d973d4e1dc9f6a644197ac1cf43cd",
+  "verifier_sha256": "82ef7c7c1795f60e14908c678af739f072775eb8e3a0fb73a7bc6f65518236de",
+  "prompt_sha256": "421d505b3a3b1d27a5f1446fa4eabae8b6513af45c9eabb2589d6c1b2a090a27",
+  "neutral_export_task_sha256": "740a2389007a581cf64019fb6560dc5e47222afd863e55b1af07579ef780ea3d",
+  "execution": {
+    "command": [
+      "/tmp/torrisi-env/bin/python",
+      "/tmp/diffraction-discovery-independent/final/runner/analysis.py",
+      "--inputs",
+      "/tmp/diffraction-discovery-independent/final/solver/inputs",
+      "--output",
+      "/tmp/diffraction-discovery-independent/final/answer"
+    ],
+    "working_directory": "/tmp/diffraction-discovery-independent/final/runner",
+    "environment": {
+      "OPENBLAS_NUM_THREADS": "1",
+      "MPLCONFIGDIR": "/tmp/discovery-independent-mpl"
+    },
+    "candidate_sha256": "339abd1ecbcbfb41c7abff513a7585dc303d973d4e1dc9f6a644197ac1cf43cd",
+    "neutral_export_task_sha256": "740a2389007a581cf64019fb6560dc5e47222afd863e55b1af07579ef780ea3d",
+    "returncode": 0,
+    "wall_seconds": 6.455032074009068,
+    "stdout": "{\"predictions\": 18504, \"elapsed_seconds\": 5.148057699203491, \"selected\": {\"Li-La-Zr-O\": \"pdf_5_40\", \"Li-Ti-P-O\": \"pdf_5_40\"}}\n",
+    "stderr": "",
+    "output_files": [
+      "conditions.csv",
+      "confusion_counts.csv",
+      "design.json",
+      "diagnostics.png",
+      "evidence.npz",
+      "execution.json",
+      "mechanism.png",
+      "metrics.csv",
+      "predictions.csv",
+      "report.md",
+      "run.py",
+      "splits.csv",
+      "training_pair_diagnostics.csv",
+      "uncertainty.json",
+      "validation_ablation.csv",
+      "validation_localization.csv"
+    ],
+    "input_files": [
+      "Li-La-Zr-O_1-Phase.json",
+      "Li-La-Zr-O_1-Phase.npz",
+      "Li-Ti-P-O_1-Phase.json",
+      "Li-Ti-P-O_1-Phase.npz"
+    ],
+    "discovery_provenance": "Candidate author knew the target. This execution tests an illustrative solution; it is not an uninformed discovery attempt."
+  },
+  "runtime_versions": {
+    "elapsed_seconds": 5.1478166580200195,
+    "candidate_sha256": "339abd1ecbcbfb41c7abff513a7585dc303d973d4e1dc9f6a644197ac1cf43cd",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "sklearn": "1.9.1",
+    "input_directory": "/tmp/diffraction-discovery-independent/final/solver/inputs"
+  },
+  "export_quality_evidence": "verification/discovery_quality_review.json",
+  "integrity_verification": {
+    "integrity_passed": true,
+    "scientific_quality": "NOT SCORED: mandatory code/execution and scientific review.",
+    "discovery_target": "NOT ASSESSED: numerical integrity cannot establish discovery.",
+    "preferred_method_names_checked": false,
+    "performance_threshold_applied": false,
+    "source_filename_truth": true,
+    "prediction_rows": 18504,
+    "metrics_source": "Independently recomputed from predictions and original source identities; all submitted report/metric claims remain subject to scientific review.",
+    "numerical_evidence_present": true,
+    "generated_signal_provenance_status": "Manual review required: match saved arrays to every claimed generated signal.",
+    "evidence_check_scope": "Array presence and finiteness only; generation, source linkage, physical transformations, and their interpretation need execution/evidence review."
+  },
+  "source_derived_summary_cells": 144,
+  "conditions": [
+    "background_0.05",
+    "background_0.25",
+    "baseline",
+    "noise_0.01_trial0",
+    "noise_0.01_trial1",
+    "noise_0.01_trial2",
+    "noise_0.04_trial0",
+    "noise_0.04_trial1",
+    "noise_0.04_trial2"
+  ],
+  "pairwise_method_comparisons": 504,
+  "deterministic_reproduction": {
+    "compared_output_files": [
+      "conditions.csv",
+      "confusion_counts.csv",
+      "design.json",
+      "diagnostics.png",
+      "evidence.npz",
+      "mechanism.png",
+      "metrics.csv",
+      "predictions.csv",
+      "report.md",
+      "run.py",
+      "splits.csv",
+      "training_pair_diagnostics.csv",
+      "uncertainty.json",
+      "validation_ablation.csv",
+      "validation_localization.csv"
+    ],
+    "all_fifteen_non_timing_outputs_match": true,
+    "output_sha256": {
+      "conditions.csv": "370fd56d9f19ace9141bede4d2f3093d2bb56f4805713499458d0ddbff9e2fce",
+      "confusion_counts.csv": "4bcb29c2f2c18d23b187569ddb034fb7f569095ff050fef6b8eb70fe190874c9",
+      "design.json": "52ba5e298fd761847b515bd0d51e8d9d216af5ab0a7e38832ebeb0673818052a",
+      "diagnostics.png": "1285796eb9358ad7eef636a3ce682e6618e1f38979c79b7fbe37943046410bf6",
+      "evidence.npz": "438cd0f166c2946511b9c846f5b07fc2352593365efc415d2bf3742d85db801f",
+      "mechanism.png": "0e74c5d375f9f23780aa2ce126d7ad8e0b32a30cf71dc5c061790b3044b27441",
+      "metrics.csv": "1b70f446324086eb7bb3495458e62d0b55b20d73ad3a0355dbd3f3148849ace4",
+      "predictions.csv": "c62895eca3dccc3b08ec2b3024a3949f2f51ef69dd4919133c306cb38e7bdf69",
+      "report.md": "3ed27bbb9e8f70b4fb882220d209865bd3ab0c3b43cf070401c39e79c309a467",
+      "run.py": "339abd1ecbcbfb41c7abff513a7585dc303d973d4e1dc9f6a644197ac1cf43cd",
+      "splits.csv": "c67790cdb9c069ed7aa912e53e49b29e7b6d9ff91f293896e0bbd87236c9bd9a",
+      "training_pair_diagnostics.csv": "8b32a557784c01509e51063084ddda04f18813c08b801ff9d15c2d785e51a1f8",
+      "uncertainty.json": "0cc3173c1767baf59984db05319a2f8decb03f1f1b0a292f2c66149bb7c12060",
+      "validation_ablation.csv": "8f5fdf9f122714a68786b4f56f4765734da8a753f4097ed1b34a810308afe664",
+      "validation_localization.csv": "d7fd34f388cdf43034daa2c36984fc55922272ecd701df592866ae78daf4dba1"
+    },
+    "scope": "Agreement establishes this illustrative workflow is reproducible, not a required prediction or discovery outcome."
+  },
+  "code_review": {
+    "input_dependencies": "The copied script loads only the two chemistry NPZ spectra archives and their two label JSON tables from --inputs. It does not read the paper, sibling questions, evaluator labels, saved target outputs, or external models.",
+    "selection_boundary": "Within-phase training, validation and test source records are disjoint. Ridge regularization, preferred method/window and best non-target competitor depend on validation accuracy. Test labels enter scoring and post-selection interpretation.",
+    "hypothesis_evidence": "Near-neighbor phase pairs derive from training templates; strongest/weakest/random-channel deletion acts on validation spectra. Reports distinguish dependence on intense channels from proof of avoidable classification error.",
+    "physical_approach": "The worked approach defines Q from the supplied wavelength and half the recorded two-theta angle, uses nonuniform-Q trapezoidal quadrature for a Q-weighted sine transform, and identifies it as uncorrected and finite-range. Scientific alternatives include signed compression, smooth-background subtraction and a smoothed derivative.",
+    "perturbations": "Independent validation/test draws and source-linked saved evidence support generated-noise/background claims. Original labels are retained for scoring; generated-signal provenance receives the separate physical audit.",
+    "uncertainty": "Paired phase-block bootstrap comparisons average synthetic draws within source spectrum and explicitly condition on one split. Reports include non-target competitors, null/small effects, and finite-data limitations."
+  },
+  "visual_review": "Both diagnostic figures were inspected. They compare all methods and artifact families in both chemistries, and show training-only near-neighbor spectra plus validation artifact localization. Labels and units are legible; numerical reports contain the associated uncertainty.",
+  "discovery_assessment": {
+    "candidate_author_exposure": "known-target",
+    "independent_execution": true,
+    "independent_discovery_demonstrated": false,
+    "statement": "An independently rerun known-target implementation demonstrates feasibility and checkability. It does not show that an uninformed scientific agent discovered the representation, and it is ineligible as evidence of unassisted discovery."
+  },
+  "execution_isolation": {
+    "fresh_neutral_export": true,
+    "fresh_working_and_output_directories": true,
+    "candidate_copied_before_execution": true,
+    "filesystem_access_controls_enforced": false,
+    "external_retrieval_used_by_candidate": false,
+    "limitations": "This reproduction uses a known solution in a fresh working directory, not a blinded discovery agent. An actual discovery run requires an isolated context/mount without this code, the source-bearing operator sidecar, neighboring questions or external retrieval. Prior model knowledge cannot be excluded."
+  },
+  "separate_required_review": "The discovery scientific review and physical evidence audit assess mechanism correctness and technical target stage separately. The integrity checker does not award either scientific correctness or discovery credit."
+}

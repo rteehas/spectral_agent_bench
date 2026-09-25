@@ -1,0 +1,8 @@
+{
+  "elapsed_seconds": 5.200683832168579,
+  "candidate_sha256": "339abd1ecbcbfb41c7abff513a7585dc303d973d4e1dc9f6a644197ac1cf43cd",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "sklearn": "1.9.1",
+  "input_directory": "/scratch/rst306/spectrasleuth_work/spectral_agent_bench/docs/data/szymanski-2024-xrd-pdf/inputs"
+}

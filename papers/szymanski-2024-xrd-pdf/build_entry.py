@@ -2,6 +2,7 @@
 """Build open research questions; analysis recipes remain evaluator-side only."""
 import json
 from pathlib import Path
+from discovery_question import build_discovery_scenario
 ROOT = Path(__file__).resolve().parents[2]
 HERE = Path(__file__).resolve().parent
 BASE = ROOT / 'docs/data/szymanski-2024-xrd-pdf'
@@ -186,6 +187,7 @@ def main():
                     'worked_approach':spec['solution'],'source_relationship':spec['source'],
                     'verification':'Independent metrics plus submission-integrity checks; scientific rubric required. No exact-reference matching.'}
         write(BASE/'workflows'/f'{q}.json',workflow)
+    scenarios.append(build_discovery_scenario(BASE, URL))
     paper = {'id':'szymanski-2024-xrd-pdf','title':'Integrated analysis of X-ray diffraction patterns and pair distribution functions for machine-learned phase identification',
              'authors':'Nathan J. Szymanski, Sean Fu, Ellen Persson and Gerbrand Ceder (2024)','doi':'10.1038/s41524-024-01230-9',
              'category':'Powder XRD and virtual pair distribution functions','facility':'Simulated powder diffraction / laboratory Cu Kα XRD',
@@ -194,6 +196,6 @@ def main():
     write(HERE/'paper.json',paper)
     path=ROOT/'docs/data/benchmark.json';dataset=json.loads(path.read_text())
     dataset['papers']=[p for p in dataset['papers'] if p['id']!=paper['id']]+[paper]
-    dataset['datasetId']='spectral-agent-v1-20260925-szymanski-prompts-v3';write(path,dataset)
+    dataset['datasetId']='spectral-agent-v1-20260925-szymanski-discovery-v4';write(path,dataset)
 
 if __name__=='__main__':main()

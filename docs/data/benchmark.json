@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "datasetId": "spectral-agent-v1-20260925-szymanski-prompts-v3-torrisi-prompts-v3",
+  "datasetId": "spectral-agent-v1-20260925-szymanski-discovery-v4",
   "title": "Spectral Agent Bench",
   "demo": false,
   "papers": [
@@ -2153,6 +2153,134 @@
                 {
                   "title": "Scientific judgment",
                   "description": "Method choice and negative findings are allowed. Checks cannot prove absence of target-label leakage from outputs alone; inspect code and execution evidence. Alternative outcomes require evidence, not agreement with the worked example."
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "SZYMANSKI24-Q5",
+          "kind": "Subquestion",
+          "title": "How can phase identification from ordinary powder diffraction become more reliable without additional measurements?",
+          "executionStatus": "worked-example-executed",
+          "inputs": [
+            {
+              "name": "Li-La-Zr-O_1-Phase.npz",
+              "url": "data/szymanski-2024-xrd-pdf/inputs/Li-La-Zr-O_1-Phase.npz",
+              "description": "Native-angle intensity arrays."
+            },
+            {
+              "name": "Li-La-Zr-O_1-Phase.json",
+              "url": "data/szymanski-2024-xrd-pdf/inputs/Li-La-Zr-O_1-Phase.json",
+              "description": "Phase labels and record metadata."
+            },
+            {
+              "name": "Li-Ti-P-O_1-Phase.npz",
+              "url": "data/szymanski-2024-xrd-pdf/inputs/Li-Ti-P-O_1-Phase.npz",
+              "description": "Native-angle intensity arrays."
+            },
+            {
+              "name": "Li-Ti-P-O_1-Phase.json",
+              "url": "data/szymanski-2024-xrd-pdf/inputs/Li-Ti-P-O_1-Phase.json",
+              "description": "Phase labels and record metadata."
+            }
+          ],
+          "prompt": {
+            "background": "The supplied single-phase simulations cover two chemical systems. Each NPZ contains a shared two-theta axis `theta` in degrees and intensity arrays keyed by record ID. Matching JSON tables give id, chemistry, phases and replicate. A phase ID specifies formula and space-group number; repeated spectra are augmented realizations of that phase. Existing simulation artifacts are part of the starting data. The radiation wavelength is 1.5406 Å.",
+            "instruction": "Investigate whether reliance on dominant peaks and sensitivity to measurement artifacts limit phase identification in these data. Develop and test a physically justified approach to address the limitations you find, using only the supplied spectra as empirical evidence. Determine what improves held-out identification, where it fails, and how strongly the evidence supports your explanation. Keep final evaluation spectra and their labels out of model training and method selection. Return report.md with your hypotheses, alternatives, quantitative evidence, uncertainty and limitations; figures; and runnable code. Supply predictions.csv with id,method,predicted (a JSON list of phase IDs), and splits.csv with id,role (train,validation,test). Add matching fold identifiers if needed. For distinct experimental conditions, add condition to predictions and describe it in conditions.csv (condition,description). Save numerical evidence for generated signals in evidence.npz, documenting source IDs and arrays."
+          },
+          "groundTruthReasoning": "1. Inspect native spectra, phase coverage and augmented repeats using Python/NumPy. Diagnose possible weaknesses of a defensible direct-diffraction baseline without assuming they occur in every phase.\n\n2. Form physical hypotheses and compare plausible remedies. The illustrative author already knows the target: a virtual pair distribution function obtained through a reciprocal-space, Q-weighted sine transform. This is one hypothesis to evaluate alongside approaches such as intensity compression or background handling; it adds no independent measurement information.\n\n3. Use training/validation spectra to set comparisons and choices. Run the held-out experiment with NumPy, SciPy, scikit-learn and Matplotlib, retain source-linked predictions and generated evidence, and quantify effects, uncertainty and failure cases. The linked candidate report records the actual results; a benefit is not assumed.\n\n4. Evaluator only: recompute metrics from released phase labels and audit partitions, code, transforms and conclusions. Assess scientific quality independently of the virtual-PDF discovery milestone. Mentioning the target name earns no discovery credit; a correct implementation, valid tests and mechanistic evidence are needed. A strong alternative can receive scientific credit while missing the specific target.\n\nThis worked analysis establishes feasibility and checkability. It does not establish that an uninformed system would independently discover the representation. Evaluate discovery only in a fresh neutral export without the paper, neighboring questions or evaluator material.",
+          "verification": {
+            "description": "Released phase identities anchor numerical scoring. The automatic checker accepts freely chosen methods and computes held-out results; it does not decide whether virtual PDFs were discovered. A separate rubric records scientific quality and the target-discovery stage. Target discovery requires a physically correct representation, valid evaluation and evidence for its proposed mechanism, even if it does not win. Alternative methods and supported negative findings remain scientifically admissible. The public review page reveals the target; use the neutral export for an actual discovery run.",
+            "data": [
+              {
+                "name": "source_labels.json",
+                "url": "data/szymanski-2024-xrd-pdf/verification/source_labels.json",
+                "description": "Evaluator-only original release identities for independent scoring."
+              },
+              {
+                "name": "discovery_audit.json",
+                "url": "data/szymanski-2024-xrd-pdf/verification/discovery_audit.json",
+                "description": "Discovery-task review and verification evidence."
+              },
+              {
+                "name": "discovery_execution_review.json",
+                "url": "data/szymanski-2024-xrd-pdf/verification/discovery_execution_review.json",
+                "description": "Discovery-task review and verification evidence."
+              },
+              {
+                "name": "discovery_quality_review.json",
+                "url": "data/szymanski-2024-xrd-pdf/verification/discovery_quality_review.json",
+                "description": "Discovery-task review and verification evidence."
+              },
+              {
+                "name": "discovery_physics_review.json",
+                "url": "data/szymanski-2024-xrd-pdf/verification/discovery_physics_review.json",
+                "description": "Discovery-task review and verification evidence."
+              },
+              {
+                "name": "discovery_scientific_review.json",
+                "url": "data/szymanski-2024-xrd-pdf/verification/discovery_scientific_review.json",
+                "description": "Discovery-task review and verification evidence."
+              },
+              {
+                "name": "packaging_checks.json",
+                "url": "data/szymanski-2024-xrd-pdf/verification/packaging_checks.json",
+                "description": "Discovery-task review and verification evidence."
+              }
+            ],
+            "methods": [
+              {
+                "name": "discovery_candidate.py",
+                "url": "data/szymanski-2024-xrd-pdf/workflows/discovery_candidate.py",
+                "description": "Illustrative known-target analysis; not evidence of independent discovery."
+              },
+              {
+                "name": "verify_discovery.py",
+                "url": "data/szymanski-2024-xrd-pdf/workflows/verify_discovery.py",
+                "description": "Source-derived numerical checks accepting freely named methods."
+              },
+              {
+                "name": "discovery_rubric.md",
+                "url": "data/szymanski-2024-xrd-pdf/verification/discovery_rubric.md",
+                "description": "Separate scientific-quality score and target-discovery assessment."
+              },
+              {
+                "name": "discovery_scientific_review.md",
+                "url": "data/szymanski-2024-xrd-pdf/verification/discovery_scientific_review.md",
+                "description": "Evidence-based assessment of the known-target worked investigation."
+              },
+              {
+                "name": "Q5.json",
+                "url": "data/szymanski-2024-xrd-pdf/workflows/Q5.json",
+                "description": "Worked-example commands, source relationship and evaluation boundaries."
+              },
+              {
+                "name": "worked_report.md",
+                "url": "data/szymanski-2024-xrd-pdf/verification/Q5/report.md",
+                "description": "Executed scientific comparison, including alternatives and limitations."
+              }
+            ],
+            "figures": [
+              {
+                "image": "data/szymanski-2024-xrd-pdf/verification/Q5/diagnostics.png",
+                "label": "Q5 illustrative investigation",
+                "caption": "Evidence from a known-target worked analysis. This demonstrates feasibility, not unprompted discovery."
+              },
+              {
+                "image": "data/szymanski-2024-xrd-pdf/verification/Q5/mechanism.png",
+                "label": "Q5 illustrative investigation",
+                "caption": "Evidence from a known-target worked analysis. This demonstrates feasibility, not unprompted discovery."
+              }
+            ],
+            "thresholds": {
+              "origin": "Benchmark evaluator: distinct integrity, scientific-quality and discovery judgments",
+              "generatedBy": "Independent discovery-task review",
+              "provenance": "No accuracy cutoff, winning representation, keyword match or illustrative output is a pass threshold.",
+              "notes": [
+                {
+                  "title": "Discovery validity",
+                  "description": "Record target exposure separately. A paper-assisted or known-target workflow cannot demonstrate independent discovery. Evaluation metadata must remain outside the solver context."
                 }
               ]
             }

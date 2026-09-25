@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "scope": "Independent numerical reimplementation of this known-target worked investigation only; no constraints on other solver methods and no claim of independent discovery.",
+  "candidate_module_imported": false,
+  "candidate_code_sha256": "339abd1ecbcbfb41c7abff513a7585dc303d973d4e1dc9f6a644197ac1cf43cd",
+  "source_test_patterns_reconstructed": 24,
+  "source_validation_ablation_patterns_reconstructed": 24,
+  "baseline_and_perturbed_transforms_checked": 216,
+  "maximum_transform_absolute_error": 3.3410774147313305e-15,
+  "generated_test_conditions_reconstructed": 8,
+  "maximum_perturbation_absolute_error": 2.220446049250313e-16,
+  "full_validation_localization_rows_checked": 16,
+  "training_pair_diagnostics_checked": 6,
+  "validation_ablation_rows_independently_refit": 6,
+  "ablation_masks_exactly_reconstructed": true,
+  "worked_accuracy_rows_recomputed": 144,
+  "reported_confusion_cells_checked": 1702,
+  "paired_bootstrap_intervals_recomputed": 48,
+  "ridge_reimplementation": "Centered dual solve with explicit -1/+1 targets and unpenalized intercept; full validation deletion scores and margins reconstructed."
+}

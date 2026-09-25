@@ -1,0 +1,17 @@
+{
+  "question": "Q5",
+  "role": "Evaluator-only known-target worked example.",
+  "runtime": "Python 3.12 with papers/szymanski-2024-xrd-pdf/requirements.txt; run from repository root.",
+  "tools": [
+    "Python",
+    "NumPy",
+    "SciPy",
+    "scikit-learn",
+    "Matplotlib"
+  ],
+  "command": "OPENBLAS_NUM_THREADS=1 MPLCONFIGDIR=/tmp/discovery-mpl /tmp/xrd-bench-env/bin/python docs/data/szymanski-2024-xrd-pdf/workflows/discovery_candidate.py --inputs docs/data/szymanski-2024-xrd-pdf/inputs --output /tmp/discovery-answer",
+  "verification_command": "/tmp/xrd-bench-env/bin/python docs/data/szymanski-2024-xrd-pdf/workflows/verify_discovery.py --output /tmp/discovery-answer",
+  "source_relationship": "Introduction, weak-feature analysis (Figs. 3\u20134), artifact analysis (Fig. 5), and Discussion. The released data lack the historical ordering sweep; the worked analysis uses the supplied single-phase library.",
+  "evaluation": "Numerical integrity, scientific quality and target discovery are separate outcomes. No required numerical advantage or exact candidate match.",
+  "discovery_boundary": "Run the neutral exported task in a fresh isolated context. Paper identity, other questions, evaluator files and this workflow reveal the target. The known-target example is not a discovery benchmark result."
+}

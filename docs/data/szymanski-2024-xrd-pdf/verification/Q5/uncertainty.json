@@ -1,0 +1,578 @@
+[
+  {
+    "chemistry": "Li-La-Zr-O",
+    "artifact": "clean",
+    "method": "sqrt_xrd",
+    "contrast": "minus_raw_xrd",
+    "estimate": -0.008928571428571428,
+    "blocks": 28,
+    "ci95": [
+      -0.026785714285714284,
+      0.0
+    ]
+  },
+  {
+    "chemistry": "Li-La-Zr-O",
+    "artifact": "clean",
+    "method": "background_subtracted_xrd",
+    "contrast": "minus_raw_xrd",
+    "estimate": 0.0,
+    "blocks": 28,
+    "ci95": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "chemistry": "Li-La-Zr-O",
+    "artifact": "clean",
+    "method": "derivative_xrd",
+    "contrast": "minus_raw_xrd",
+    "estimate": -0.09821428571428571,
+    "blocks": 28,
+    "ci95": [
+      -0.15178571428571427,
+      -0.0533482142857155
+    ]
+  },
+  {
+    "chemistry": "Li-La-Zr-O",
+    "artifact": "clean",
+    "method": "pdf_1_5",
+    "contrast": "minus_raw_xrd",
+    "estimate": -0.20535714285714285,
+    "blocks": 28,
+    "ci95": [
+      -0.30357142857142855,
+      -0.11607142857142858
+    ]
+  },
+  {
+    "chemistry": "Li-La-Zr-O",
+    "artifact": "clean",
+    "method": "pdf_5_40",
+    "contrast": "minus_raw_xrd",
+    "estimate": 0.008928571428571428,
+    "blocks": 28,
+    "ci95": [
+      -0.017857142857142856,
+      0.044642857142857144
+    ]
+  },
+  {
+    "chemistry": "Li-La-Zr-O",
+    "artifact": "clean",
+    "method": "pdf_1_40",
+    "contrast": "minus_raw_xrd",
+    "estimate": 0.0,
+    "blocks": 28,
+    "ci95": [
+      -0.03571428571428571,
+      0.03571428571428571
+    ]
+  },
+  {
+    "chemistry": "Li-La-Zr-O",
+    "artifact": "clean",
+    "method": "pdf_40_120",
+    "contrast": "minus_raw_xrd",
+    "estimate": -0.09821428571428571,
+    "blocks": 28,
+    "ci95": [
+      -0.17857142857142858,
+      -0.03571428571428571
+    ]
+  },
+  {
+    "chemistry": "Li-La-Zr-O",
+    "artifact": "noise",
+    "method": "sqrt_xrd",
+    "contrast": "minus_raw_xrd",
+    "estimate": -0.004464285714285715,
+    "blocks": 28,
+    "ci95": [
+      -0.02083333333333334,
+      0.008928571428571428
+    ]
+  },
+  {
+    "chemistry": "Li-La-Zr-O",
+    "artifact": "noise",
+    "method": "background_subtracted_xrd",
+    "contrast": "minus_raw_xrd",
+    "estimate": 0.0029761904761904765,
+    "blocks": 28,
+    "ci95": [
+      0.0,
+      0.007440476190476192
+    ]
+  },
+  {
+    "chemistry": "Li-La-Zr-O",
+    "artifact": "noise",
+    "method": "derivative_xrd",
+    "contrast": "minus_raw_xrd",
+    "estimate": -0.08333333333333333,
+    "blocks": 28,
+    "ci95": [
+      -0.13095238095238096,
+      -0.0386904761904762
+    ]
+  },
+  {
+    "chemistry": "Li-La-Zr-O",
+    "artifact": "noise",
+    "method": "pdf_1_5",
+    "contrast": "minus_raw_xrd",
+    "estimate": -0.24404761904761904,
+    "blocks": 28,
+    "ci95": [
+      -0.3586309523809524,
+      -0.14136904761904762
+    ]
+  },
+  {
+    "chemistry": "Li-La-Zr-O",
+    "artifact": "noise",
+    "method": "pdf_5_40",
+    "contrast": "minus_raw_xrd",
+    "estimate": 0.013392857142857142,
+    "blocks": 28,
+    "ci95": [
+      -0.01041666666666667,
+      0.04166666666666667
+    ]
+  },
+  {
+    "chemistry": "Li-La-Zr-O",
+    "artifact": "noise",
+    "method": "pdf_1_40",
+    "contrast": "minus_raw_xrd",
+    "estimate": 0.004464285714285715,
+    "blocks": 28,
+    "ci95": [
+      -0.03125,
+      0.04166666666666667
+    ]
+  },
+  {
+    "chemistry": "Li-La-Zr-O",
+    "artifact": "noise",
+    "method": "pdf_40_120",
+    "contrast": "minus_raw_xrd",
+    "estimate": -0.10416666666666666,
+    "blocks": 28,
+    "ci95": [
+      -0.18303571428571427,
+      -0.041666666666666664
+    ]
+  },
+  {
+    "chemistry": "Li-La-Zr-O",
+    "artifact": "background",
+    "method": "sqrt_xrd",
+    "contrast": "minus_raw_xrd",
+    "estimate": -0.004464285714285714,
+    "blocks": 28,
+    "ci95": [
+      -0.04017857142857143,
+      0.03571428571428571
+    ]
+  },
+  {
+    "chemistry": "Li-La-Zr-O",
+    "artifact": "background",
+    "method": "background_subtracted_xrd",
+    "contrast": "minus_raw_xrd",
+    "estimate": 0.05357142857142857,
+    "blocks": 28,
+    "ci95": [
+      0.017857142857142856,
+      0.09821428571428571
+    ]
+  },
+  {
+    "chemistry": "Li-La-Zr-O",
+    "artifact": "background",
+    "method": "derivative_xrd",
+    "contrast": "minus_raw_xrd",
+    "estimate": -0.044642857142857144,
+    "blocks": 28,
+    "ci95": [
+      -0.09821428571428571,
+      0.008928571428571428
+    ]
+  },
+  {
+    "chemistry": "Li-La-Zr-O",
+    "artifact": "background",
+    "method": "pdf_1_5",
+    "contrast": "minus_raw_xrd",
+    "estimate": -0.7544642857142857,
+    "blocks": 28,
+    "ci95": [
+      -0.8571428571428571,
+      -0.6473214285714286
+    ]
+  },
+  {
+    "chemistry": "Li-La-Zr-O",
+    "artifact": "background",
+    "method": "pdf_5_40",
+    "contrast": "minus_raw_xrd",
+    "estimate": 0.0625,
+    "blocks": 28,
+    "ci95": [
+      0.008928571428571428,
+      0.125
+    ]
+  },
+  {
+    "chemistry": "Li-La-Zr-O",
+    "artifact": "background",
+    "method": "pdf_1_40",
+    "contrast": "minus_raw_xrd",
+    "estimate": 0.008928571428571428,
+    "blocks": 28,
+    "ci95": [
+      -0.044642857142857144,
+      0.06696428571428571
+    ]
+  },
+  {
+    "chemistry": "Li-La-Zr-O",
+    "artifact": "background",
+    "method": "pdf_40_120",
+    "contrast": "minus_raw_xrd",
+    "estimate": -0.044642857142857144,
+    "blocks": 28,
+    "ci95": [
+      -0.125,
+      0.026785714285714284
+    ]
+  },
+  {
+    "chemistry": "Li-La-Zr-O",
+    "artifact": "clean",
+    "method": "pdf_5_40",
+    "contrast": "minus_background_subtracted_xrd",
+    "estimate": 0.008928571428571428,
+    "blocks": 28,
+    "ci95": [
+      -0.017857142857142856,
+      0.044642857142857144
+    ]
+  },
+  {
+    "chemistry": "Li-La-Zr-O",
+    "artifact": "noise",
+    "method": "pdf_5_40",
+    "contrast": "minus_background_subtracted_xrd",
+    "estimate": 0.010416666666666668,
+    "blocks": 28,
+    "ci95": [
+      -0.011904761904761904,
+      0.0386904761904762
+    ]
+  },
+  {
+    "chemistry": "Li-La-Zr-O",
+    "artifact": "background",
+    "method": "pdf_5_40",
+    "contrast": "minus_background_subtracted_xrd",
+    "estimate": 0.008928571428571428,
+    "blocks": 28,
+    "ci95": [
+      -0.017857142857142856,
+      0.044642857142857144
+    ]
+  },
+  {
+    "chemistry": "Li-Ti-P-O",
+    "artifact": "clean",
+    "method": "sqrt_xrd",
+    "contrast": "minus_raw_xrd",
+    "estimate": -0.013793103448275862,
+    "blocks": 53,
+    "ci95": [
+      -0.04895966709346991,
+      0.019867549668874173
+    ]
+  },
+  {
+    "chemistry": "Li-Ti-P-O",
+    "artifact": "clean",
+    "method": "background_subtracted_xrd",
+    "contrast": "minus_raw_xrd",
+    "estimate": -0.013793103448275862,
+    "blocks": 53,
+    "ci95": [
+      -0.03424657534246575,
+      0.0
+    ]
+  },
+  {
+    "chemistry": "Li-Ti-P-O",
+    "artifact": "clean",
+    "method": "derivative_xrd",
+    "contrast": "minus_raw_xrd",
+    "estimate": -0.06206896551724138,
+    "blocks": 53,
+    "ci95": [
+      -0.1056338028169014,
+      -0.02666666666666667
+    ]
+  },
+  {
+    "chemistry": "Li-Ti-P-O",
+    "artifact": "clean",
+    "method": "pdf_1_5",
+    "contrast": "minus_raw_xrd",
+    "estimate": -0.30344827586206896,
+    "blocks": 53,
+    "ci95": [
+      -0.4246793937627514,
+      -0.18917973917973924
+    ]
+  },
+  {
+    "chemistry": "Li-Ti-P-O",
+    "artifact": "clean",
+    "method": "pdf_5_40",
+    "contrast": "minus_raw_xrd",
+    "estimate": 0.0,
+    "blocks": 53,
+    "ci95": [
+      -0.027401983939537078,
+      0.0273972602739726
+    ]
+  },
+  {
+    "chemistry": "Li-Ti-P-O",
+    "artifact": "clean",
+    "method": "pdf_1_40",
+    "contrast": "minus_raw_xrd",
+    "estimate": -0.05517241379310345,
+    "blocks": 53,
+    "ci95": [
+      -0.11349544072948328,
+      0.0
+    ]
+  },
+  {
+    "chemistry": "Li-Ti-P-O",
+    "artifact": "clean",
+    "method": "pdf_40_120",
+    "contrast": "minus_raw_xrd",
+    "estimate": -0.09655172413793103,
+    "blocks": 53,
+    "ci95": [
+      -0.15172413793103448,
+      -0.04666666666666667
+    ]
+  },
+  {
+    "chemistry": "Li-Ti-P-O",
+    "artifact": "noise",
+    "method": "sqrt_xrd",
+    "contrast": "minus_raw_xrd",
+    "estimate": -0.01264367816091954,
+    "blocks": 53,
+    "ci95": [
+      -0.04778994985829519,
+      0.02040816326530612
+    ]
+  },
+  {
+    "chemistry": "Li-Ti-P-O",
+    "artifact": "noise",
+    "method": "background_subtracted_xrd",
+    "contrast": "minus_raw_xrd",
+    "estimate": -0.006896551724137931,
+    "blocks": 53,
+    "ci95": [
+      -0.018779342723004695,
+      0.0
+    ]
+  },
+  {
+    "chemistry": "Li-Ti-P-O",
+    "artifact": "noise",
+    "method": "derivative_xrd",
+    "contrast": "minus_raw_xrd",
+    "estimate": -0.08045977011494254,
+    "blocks": 53,
+    "ci95": [
+      -0.12731821895424839,
+      -0.041394152739395534
+    ]
+  },
+  {
+    "chemistry": "Li-Ti-P-O",
+    "artifact": "noise",
+    "method": "pdf_1_5",
+    "contrast": "minus_raw_xrd",
+    "estimate": -0.32643678160919537,
+    "blocks": 53,
+    "ci95": [
+      -0.4428927432216906,
+      -0.21642660440613035
+    ]
+  },
+  {
+    "chemistry": "Li-Ti-P-O",
+    "artifact": "noise",
+    "method": "pdf_5_40",
+    "contrast": "minus_raw_xrd",
+    "estimate": 0.002298850574712643,
+    "blocks": 53,
+    "ci95": [
+      -0.02237354625795294,
+      0.026196633825944136
+    ]
+  },
+  {
+    "chemistry": "Li-Ti-P-O",
+    "artifact": "noise",
+    "method": "pdf_1_40",
+    "contrast": "minus_raw_xrd",
+    "estimate": -0.05517241379310345,
+    "blocks": 53,
+    "ci95": [
+      -0.11403968838179364,
+      -0.0022363956916603726
+    ]
+  },
+  {
+    "chemistry": "Li-Ti-P-O",
+    "artifact": "noise",
+    "method": "pdf_40_120",
+    "contrast": "minus_raw_xrd",
+    "estimate": -0.0954022988505747,
+    "blocks": 53,
+    "ci95": [
+      -0.14336861768368617,
+      -0.04988059053408601
+    ]
+  },
+  {
+    "chemistry": "Li-Ti-P-O",
+    "artifact": "background",
+    "method": "sqrt_xrd",
+    "contrast": "minus_raw_xrd",
+    "estimate": -0.07586206896551724,
+    "blocks": 53,
+    "ci95": [
+      -0.1232876712328767,
+      -0.03236831963001031
+    ]
+  },
+  {
+    "chemistry": "Li-Ti-P-O",
+    "artifact": "background",
+    "method": "background_subtracted_xrd",
+    "contrast": "minus_raw_xrd",
+    "estimate": 0.034482758620689655,
+    "blocks": 53,
+    "ci95": [
+      0.010414870689655171,
+      0.06164383561643835
+    ]
+  },
+  {
+    "chemistry": "Li-Ti-P-O",
+    "artifact": "background",
+    "method": "derivative_xrd",
+    "contrast": "minus_raw_xrd",
+    "estimate": -0.017241379310344827,
+    "blocks": 53,
+    "ci95": [
+      -0.061606071964017996,
+      0.020833333333333332
+    ]
+  },
+  {
+    "chemistry": "Li-Ti-P-O",
+    "artifact": "background",
+    "method": "pdf_1_5",
+    "contrast": "minus_raw_xrd",
+    "estimate": -0.803448275862069,
+    "blocks": 53,
+    "ci95": [
+      -0.8795764173582642,
+      -0.7278835327234343
+    ]
+  },
+  {
+    "chemistry": "Li-Ti-P-O",
+    "artifact": "background",
+    "method": "pdf_5_40",
+    "contrast": "minus_raw_xrd",
+    "estimate": 0.041379310344827586,
+    "blocks": 53,
+    "ci95": [
+      0.007142857142857143,
+      0.08098591549295775
+    ]
+  },
+  {
+    "chemistry": "Li-Ti-P-O",
+    "artifact": "background",
+    "method": "pdf_1_40",
+    "contrast": "minus_raw_xrd",
+    "estimate": -0.06206896551724138,
+    "blocks": 53,
+    "ci95": [
+      -0.12001418439716312,
+      -0.010273972602739725
+    ]
+  },
+  {
+    "chemistry": "Li-Ti-P-O",
+    "artifact": "background",
+    "method": "pdf_40_120",
+    "contrast": "minus_raw_xrd",
+    "estimate": -0.05172413793103448,
+    "blocks": 53,
+    "ci95": [
+      -0.10948905109489052,
+      0.0034488745210727936
+    ]
+  },
+  {
+    "chemistry": "Li-Ti-P-O",
+    "artifact": "clean",
+    "method": "pdf_5_40",
+    "contrast": "minus_background_subtracted_xrd",
+    "estimate": 0.013793103448275862,
+    "blocks": 53,
+    "ci95": [
+      -0.013245033112582781,
+      0.0410958904109589
+    ]
+  },
+  {
+    "chemistry": "Li-Ti-P-O",
+    "artifact": "noise",
+    "method": "pdf_5_40",
+    "contrast": "minus_background_subtracted_xrd",
+    "estimate": 0.009195402298850575,
+    "blocks": 53,
+    "ci95": [
+      -0.010067114093959731,
+      0.02955279747832938
+    ]
+  },
+  {
+    "chemistry": "Li-Ti-P-O",
+    "artifact": "background",
+    "method": "pdf_5_40",
+    "contrast": "minus_background_subtracted_xrd",
+    "estimate": 0.006896551724137931,
+    "blocks": 53,
+    "ci95": [
+      -0.013888888888888888,
+      0.027777777777777776
+    ]
+  }
+]

@@ -66,6 +66,14 @@
       "raw_hashes_match": true,
       "prompt_is_self_contained": true,
       "nonempty_destination_rejected": true
+    },
+    {
+      "question": "Q5",
+      "raw_input_files": 4,
+      "exact_allowlist": true,
+      "raw_hashes_match": true,
+      "prompt_is_self_contained": true,
+      "nonempty_destination_rejected": true
     }
   ],
   "input_only_files": [
@@ -86,6 +94,7 @@
   "preassigned_splits_absent": true,
   "pooled_mixture_ids_opaque": true,
   "derived_metric_bookkeeping_absent_from_prompts": true,
-  "schema_validation": "Valid dataset: 3 papers, 12 scenarios.",
+  "discovery_export_hides_target_and_keeps_operator_provenance_separate": true,
+  "schema_validation": "Valid dataset: 3 papers, 13 scenarios.",
   "label_boundary": "Labels remain readable for scientific evaluation; target separation requires submitted-code/execution review, not just CSV checks."
 }

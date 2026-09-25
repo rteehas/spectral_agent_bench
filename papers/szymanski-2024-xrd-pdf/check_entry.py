@@ -12,7 +12,7 @@ HERE=Path(__file__).resolve().parent
 ROOT=HERE.parents[1]
 DATA=ROOT/'docs/data/szymanski-2024-xrd-pdf'
 CHEMS=['Li-La-Zr-O','Li-Ti-P-O']
-KINDS={'Q1':['1-Phase'],'Q2':['1-Phase','Mixtures'],'Q3':['1-Phase'],'Q4':['1-Phase','Experiments']}
+KINDS={'Q1':['1-Phase'],'Q2':['1-Phase','Mixtures'],'Q3':['1-Phase'],'Q4':['1-Phase','Experiments'],'Q5':['1-Phase']}
 
 def sha(path):return hashlib.sha256(path.read_bytes()).hexdigest()
 def require(value,message):
@@ -24,7 +24,7 @@ def main():
     paper=json.loads((HERE/'paper.json').read_text())
     dataset=json.loads((ROOT/'docs/data/benchmark.json').read_text())
     require(next(p for p in dataset['papers'] if p['id']==paper['id'])==paper,'Paper registration differs')
-    require(len(paper['scenarios'])==4,'Expected four questions')
+    require(len(paper['scenarios'])==5,'Expected five questions')
     provenance=json.loads((DATA/'provenance.json').read_text())
     require(provenance['version']=='open-research-v2','Stale provenance revision')
     raw_files={f'{chem}_{kind}.{ext}' for chem in CHEMS for kind in ['1-Phase','Mixtures','Experiments'] for ext in ['npz','json']}
@@ -77,13 +77,24 @@ def main():
             require(set(task)=={'id','title','background','instruction','inputs','data_attribution'},'Unexpected task fields')
             require(task['background']==scenario['prompt']['background'] and task['instruction']==scenario['prompt']['instruction'],'Prompt differs in export')
             require(task['inputs']==[{'name':a['name'],'path':'inputs/'+a['name'],'description':a['description']} for a in scenario['inputs']],'Input manifest differs')
+            if q=='Q5':
+                require(task['id']=='DIFFRACTION-DISCOVERY-01','Discovery task exposes paper-linked identifier')
+                solver_text=json.dumps(task,ensure_ascii=False).lower()
+                for token in ['virtual','pair distribution','fourier','real-space','real space','doi.org','10.6084','szymanski24','szymanski-2024-xrd-pdf']:
+                    require(token not in solver_text,'Discovery export reveals target/source: '+token)
+                require(re.search(r'\bpdfs?\b',solver_text) is None,'Discovery export names target representation')
+                operator_record=dest.with_name(dest.name+'.provenance.json')
+                require(operator_record.is_file() and operator_record.parent==dest.parent,'Full provenance must remain outside solver directory')
+                operator=json.loads(operator_record.read_text())
+                require(operator['source_url']=='https://doi.org/10.6084/m9.figshare.24043410.v1','Full source attribution not retained for operator')
             require(subprocess.run(command,capture_output=True).returncode!=0,'Exporter accepts contaminated destination')
             exports.append({'question':q,'raw_input_files':len(expected),'exact_allowlist':True,'raw_hashes_match':True,'prompt_is_self_contained':True,'nonempty_destination_rejected':True})
     check=subprocess.run([sys.executable,str(ROOT/'scripts/validate_data.py')],capture_output=True,text=True)
     require(check.returncode==0,check.stdout+check.stderr)
     report={'revision':'open-research-v2','status':'passed','sample_count':len(sample_ids),'inventory':inventory,'exports':exports,
             'input_only_files':sorted(raw_files),'protocol_and_schema_files_absent':True,'preassigned_splits_absent':True,
-            'pooled_mixture_ids_opaque':True,'derived_metric_bookkeeping_absent_from_prompts':True,'schema_validation':check.stdout.strip(),
+            'pooled_mixture_ids_opaque':True,'derived_metric_bookkeeping_absent_from_prompts':True,
+            'discovery_export_hides_target_and_keeps_operator_provenance_separate':True,'schema_validation':check.stdout.strip(),
             'label_boundary':'Labels remain readable for scientific evaluation; target separation requires submitted-code/execution review, not just CSV checks.'}
     (DATA/'verification/packaging_checks.json').write_text(json.dumps(report,indent=2)+'\n')
     print(json.dumps(report,indent=2))

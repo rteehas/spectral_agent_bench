@@ -1,0 +1,87 @@
+{
+  "question": "SZYMANSKI24-Q5",
+  "neutral_solver_id": "DIFFRACTION-DISCOVERY-01",
+  "status": "passed_prompt_and_neutral_export_review",
+  "reviewer": "Independent question-quality/execution agent; did not author prompt or discovery candidate",
+  "review_date": "2026-09-25T16:01:51.023177+00:00",
+  "prompt_sha256": "421d505b3a3b1d27a5f1446fa4eabae8b6513af45c9eabb2589d6c1b2a090a27",
+  "solver_projection_sha256": "f2a50ac3427b44aab7f3621f7fa4febab6422fb9cadc30c8f69a192cbe1380ff",
+  "neutral_export_task_sha256": "740a2389007a581cf64019fb6560dc5e47222afd863e55b1af07579ef780ea3d",
+  "exporter_sha256": "1b1291061d45a0ec3ffe9204dd1ad21e477183df51b1f0dc131b0094e6097058",
+  "prompt_assessment": {
+    "is_research_question": true,
+    "failure_modes_not_assumed_true": true,
+    "methods_and_expected_outcomes_unspecified": true,
+    "alternative_solutions_and_negative_findings_admissible": true,
+    "target_terms_absent": true,
+    "necessary_background_only": [
+      "raw numeric and label-table structure",
+      "two-theta units",
+      "phase-ID semantics and augmented-repeat interpretation",
+      "existing simulation artifacts",
+      "radiation wavelength"
+    ],
+    "minimal_output_contract": "Free method names, source-linked phase predictions and source-record roles; optional folds and condition descriptions when needed; report/figures/code and source-linked evidence for generated signals. No target representation enum or transform definition.",
+    "nontriviality": "Requires diagnosing a baseline limitation, forming physical hypotheses, testing competing remedies with method selection separated from evaluation, interpreting uncertainty and failures, and preserving source-linked evidence. Difficulty is not empirically calibrated against independent solver populations."
+  },
+  "export_checks": {
+    "export_command": [
+      "python",
+      "/scratch/rst306/spectrasleuth_work/spectral_agent_bench/papers/szymanski-2024-xrd-pdf/export_agent_bundle.py",
+      "Q5",
+      "--output",
+      "/tmp/diffraction-discovery-independent/final/solver"
+    ],
+    "solver_directory": "/tmp/diffraction-discovery-independent/final/solver",
+    "task_sha256": "740a2389007a581cf64019fb6560dc5e47222afd863e55b1af07579ef780ea3d",
+    "solver_files": [
+      "inputs/Li-La-Zr-O_1-Phase.json",
+      "inputs/Li-La-Zr-O_1-Phase.npz",
+      "inputs/Li-Ti-P-O_1-Phase.json",
+      "inputs/Li-Ti-P-O_1-Phase.npz",
+      "task.json"
+    ],
+    "neutral_task_identity": "DIFFRACTION-DISCOVERY-01",
+    "explicit_target_terms_absent": true,
+    "paper_doi_ids_and_sibling_questions_absent": true,
+    "creator_credit_retained": true,
+    "license_retained": true,
+    "full_provenance_outside_solver_directory": true,
+    "full_provenance_sha256": "08f1de65bcde6d77faf601644c8ef7e142773fdcbfd06283c3f23e42f29ef11e",
+    "raw_input_sha256": {
+      "Li-La-Zr-O_1-Phase.npz": "52e7994695f32ff686e77f06636eaf1b25e01911577b191fdd2a174dc78b3caf",
+      "Li-La-Zr-O_1-Phase.json": "7a508724f285fc982647c888567ecab8e71a6611d18fa60a723b2cd1b2e8ad03",
+      "Li-Ti-P-O_1-Phase.npz": "16a008c86b216ebc7f167304086e8a26a7f249cab32be792dd646ee5cd97170a",
+      "Li-Ti-P-O_1-Phase.json": "aae28c51723bd799ad48fe355e37be63a8575d19b0dac6ac452a7b22497bc38d"
+    },
+    "nonempty_export_rejected": true,
+    "important_limit": "This filesystem export does not enforce sandbox isolation or disable external retrieval. Creator identity and known raw data may permit source identification. An evaluator must separately isolate the solver and exclude target-exposing context.",
+    "archive_checks": [
+      {
+        "file": "Li-La-Zr-O_1-Phase.npz",
+        "numeric_record_count": 560,
+        "only_native_angle_and_opaque_record_keys": true,
+        "all_arrays_numeric_finite": true
+      },
+      {
+        "file": "Li-Ti-P-O_1-Phase.npz",
+        "numeric_record_count": 530,
+        "only_native_angle_and_opaque_record_keys": true,
+        "all_arrays_numeric_finite": true
+      }
+    ],
+    "native_numeric_archive_checks_reused_for_identical_file_hashes": true
+  },
+  "resolved_clarifications": [
+    "Model training and method selection are excluded from final evaluation records; legitimate per-spectrum inference fitting is not broadly prohibited.",
+    "Empirical inputs are called supplied spectra rather than measured data, because they are simulations."
+  ],
+  "residual_discovery_limits": [
+    "The public review entry, worked code, evaluator rubric, paper context, and Q1\u2013Q4 disclose the target and must remain outside an actual discovery run.",
+    "The full provenance sidecar is outside the solver directory but still readable unless a benchmark operator enforces an isolated mount or equivalent boundary.",
+    "External retrieval must be excluded for the intended neutral discovery setting; creator credit and source-data recognition may otherwise identify the source.",
+    "No export can rule out prior model knowledge or establish novelty. Record exposure and hypothesis chronology separately from technical implementation and scientific quality.",
+    "The illustrative candidate is authored with target knowledge. Its independent rerun establishes reproducibility only, never independent discovery."
+  ],
+  "no_blocking_prompt_findings": true
+}

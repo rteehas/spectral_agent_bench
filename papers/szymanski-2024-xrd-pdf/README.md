@@ -1,6 +1,6 @@
 # Szymanski 2024: open scientific research benchmark
 
-This revision replaces the prescribed baseline exercises with four open research questions. Solvers receive native numeric spectra, raw labels and a self-contained prompt. They must choose and justify their models, preprocessing, validation, combination methods, perturbations and uncertainty analysis. There is no supplied protocol or separate output-schema file.
+This entry contains five open research questions. Solvers receive native numeric spectra, raw labels and a self-contained prompt. They must choose and justify their models, preprocessing, validation, combination methods, perturbations and uncertainty analysis. There is no supplied protocol or separate output-schema file. Q5 adds an upstream discovery task that does not name the target representation.
 
 | ID | Scientific question | Decisions left to the solver |
 |---|---|---|
@@ -8,6 +8,7 @@ This revision replaces the prescribed baseline exercises with four open research
 | Q2 | Can both constituent identities and phase count be inferred from mixtures? | Reference construction, calibration, variable-cardinality inference and failure analysis. |
 | Q3 | Which real-space interval preserves identification under noise/background? | Perturbation realism, window selection, predictive discrimination and generalization of the choice. |
 | Q4 | Does virtual-PDF evidence help detect experimental secondary phases? | Transfer from simulations, full-library identification, integration, false positives and abundance-dependent claims. |
+| Q5 | How can ordinary diffraction identify phases more reliably without additional measurements? | Diagnose limitations, propose physical hypotheses, compare remedies, and test their mechanism and utility. The solver is not told to use PDFs. |
 
 These are intended to test scientific problem formulation and execution by a multi-agent system. A short reference script is not supplied to the solver. The illustrative candidate deliberately makes its own choices, and a different defensible analysis may reach different numerical results. Difficulty has not been calibrated by measuring a population of systems; the evidence here establishes feasibility, source grounding and reviewability.
 
@@ -27,9 +28,9 @@ All records now use opaque IDs. Two- and three-phase simulations are pooled into
 
 ## Prompt and input boundary
 
-Each question directly states only the data/label semantics, wavelength, virtual-PDF definition, research objective, evaluation boundary and compact output contract. No learner, parameter, grid, normalization, partition, fusion, perturbation magnitude or distance window is prescribed. Output formatting enables independent checks and does not define the analysis.
+Q1–Q4 directly state only the data/label semantics, wavelength, virtual-PDF definition, research objective, evaluation boundary and compact output contract. Q5 omits the representation name, definition and mathematical hints. No learner, parameter, grid, normalization, partition, fusion, perturbation magnitude or distance window is prescribed. Output formatting enables independent checks and does not define the analysis.
 
-Predictions need only source ID, representation and predicted labels; the partition table needs source ID and role. Method and fold identifiers are needed only to distinguish multiple comparisons. Q3 also records its experimental conditions. Constant condition labels, aggregate grouping labels and a separate metrics table are not requested. The evaluator derives chemistry, phase-count and abundance strata from source metadata and computes its own metrics. Quantitative findings and uncertainty remain part of the scientific report.
+For Q1–Q4, predictions need only source ID, representation and predicted labels; the partition table needs source ID and role. Method and fold identifiers are needed only to distinguish multiple comparisons. Q3 also records its experimental conditions. Constant condition labels, aggregate grouping labels and a separate metrics table are not requested. The evaluator derives chemistry, phase-count and abundance strata from source metadata and computes its own metrics. Quantitative findings and uncertainty remain part of the scientific report. Q5's freely named methods and condition descriptions are covered below.
 
 ```bash
 python papers/szymanski-2024-xrd-pdf/export_agent_bundle.py Q1 --output /tmp/xrd-q1-agent
@@ -38,6 +39,38 @@ python papers/szymanski-2024-xrd-pdf/export_agent_bundle.py Q1 --output /tmp/xrd
 Exports contain only `task.json` and the relevant raw NPZ/label JSON files. There is no supplementary instructions file, worked code, expected prediction, evaluator report or paper text. Attribution is included in `task.json`. The review website displays evaluator materials separately but provides no access control; isolate exported bundles for benchmark use.
 
 **Evaluation labels are readable.** They are needed for an agent to produce its own scientific comparisons. Excluding them from inference is an audited research requirement, not an enforced blinded execution environment. An output-only check cannot prove the absence of label leakage. Review submitted code, execution evidence and any tuning decisions; using target labels or target cardinality to set predictions invalidates the analysis.
+
+## Q5: discovery without naming the target
+
+Q5 presents the problems that motivate a new approach: possible over-reliance on dominant peaks and sensitivity to measurement artifacts. The solver must establish whether these limitations occur, propose a physically justified remedy, and investigate whether it works. It can choose representations, preprocessing, models or combinations. Neither a particular remedy nor a positive result is prescribed.
+
+```bash
+python papers/szymanski-2024-xrd-pdf/export_agent_bundle.py Q5 --output /tmp/diffraction-discovery-task
+```
+
+The solver directory contains only a neutrally identified task and four native single-phase input files. Creator/license credit remains in the task. The full source title, DOI and attribution are retained in the adjacent **operator-only** `/tmp/diffraction-discovery-task.provenance.json`; keep that record with the exported data when distributing it to benchmark operators. Do not include that sibling record in the solver's mounted directory or context.
+
+Run Q5 in a fresh context with only that directory and the numerical tools it needs. Exclude the paper, the public review page, Q1–Q4, worked code and evaluator files, and disable external retrieval for the unassisted-discovery track. Those materials reveal the target. The exporter does not enforce filesystem/network isolation; benchmark operators must do so. Creator credit and the data themselves can still permit source recognition, and prior model knowledge cannot be excluded. Record any known exposure and treat paper-assisted runs separately.
+
+The [discovery rubric](../../docs/data/szymanski-2024-xrd-pdf/verification/discovery_rubric.md) records **scientific quality** and **target-discovery stage** separately. A valid alternative can earn scientific credit without reaching the virtual-PDF target. Naming a PDF earns no target credit by itself: the assessor checks physical reasoning, implementation, held-out validation and mechanistic evidence. An honestly demonstrated lack of benefit does not erase a correct discovery and investigation. Source-derived predictive performance is reported separately from both judgments; there is no required accuracy or improvement threshold.
+
+The worked Q5 analysis is written with prior knowledge of the target. It establishes feasibility and provides auditable example evidence; it does not show that an uninformed system discovered the idea. Actual discovery performance remains to be measured.
+
+```bash
+OPENBLAS_NUM_THREADS=1 MPLCONFIGDIR=/tmp/discovery-mpl /tmp/xrd-bench-env/bin/python docs/data/szymanski-2024-xrd-pdf/workflows/discovery_candidate.py --inputs /tmp/diffraction-discovery-task/inputs --output /tmp/discovery-answer
+/tmp/xrd-bench-env/bin/python docs/data/szymanski-2024-xrd-pdf/workflows/verify_discovery.py --output /tmp/discovery-answer
+```
+
+Q5 predictions use freely chosen `method` identifiers rather than a prescribed representation vocabulary. Source IDs, predicted phases and source partitions support numerical checks. Named experimental conditions need descriptions; saved generated evidence and report claims require code and scientific review. The checker cannot establish conceptual discovery or verify every physical claim from output tables alone.
+
+The [question review](../../docs/data/szymanski-2024-xrd-pdf/verification/discovery_quality_review.json) checks that the neutral export withholds the target. The [execution review](../../docs/data/szymanski-2024-xrd-pdf/verification/discovery_execution_review.json) reproduces all 15 deterministic worked outputs. The [verification audit](../../docs/data/szymanski-2024-xrd-pdf/verification/discovery_audit.json) exercises invalid submissions and alternative methods. An [independent physical audit](../../docs/data/szymanski-2024-xrd-pdf/verification/discovery_physics_review.json) reconstructs transforms, perturbations, ablations, metrics and uncertainty from source arrays without importing the candidate code. The [scientific assessment](../../docs/data/szymanski-2024-xrd-pdf/verification/discovery_scientific_review.md) records evidence and limitations separately from the author's known exposure to the target.
+
+Reproduce the evaluator's audits with the unpacked release and worked output:
+
+```bash
+OPENBLAS_NUM_THREADS=1 /tmp/xrd-bench-env/bin/python papers/szymanski-2024-xrd-pdf/audit_discovery.py --release /path/to/Data --candidate-output /tmp/discovery-answer
+OPENBLAS_NUM_THREADS=1 /tmp/xrd-bench-env/bin/python papers/szymanski-2024-xrd-pdf/audit_discovery_physics.py --candidate-output /tmp/discovery-answer
+```
 
 ## Worked example, separate from the task
 

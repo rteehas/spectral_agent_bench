@@ -1,0 +1,96 @@
+{
+  "question": "Q5",
+  "candidate_code_sha256": "339abd1ecbcbfb41c7abff513a7585dc303d973d4e1dc9f6a644197ac1cf43cd",
+  "verifier_sha256": "82ef7c7c1795f60e14908c678af739f072775eb8e3a0fb73a7bc6f65518236de",
+  "reviewer_role": "Independent verification/scientific-review subagent; a different subagent authored the worked investigation and another independently reran it.",
+  "validity_gate": {
+    "status": "No disqualifying issue found for the reported, scoped scientific comparisons.",
+    "label_separation": "Code review found test labels used for scoring and transparently reported diagnostics, not selection or fitting. Declared separation alone would not establish this.",
+    "generated_signal_provenance": "Source-linked numerical evidence and executable construction were independently checked.",
+    "limits": "The independent rerun used the neutral export but was not filesystem-sandboxed away from evaluator material; authorship is explicitly known-target."
+  },
+  "scientific_quality": {
+    "score": 91,
+    "maximum": 100,
+    "dimensions": [
+      {
+        "dimension": "Physical hypothesis and competing explanations",
+        "score": 23,
+        "maximum": 25,
+        "reason": "The report links intense versus weak diffraction features and slowly varying contamination to testable alternatives. Signed compression, background subtraction, derivatives, and distance intervals share a classifier family. The weak-feature intervention is honestly distinguished from proof of excessive reliance; the hypothesis and controls were chosen by a target-aware author."
+      },
+      {
+        "dimension": "Implementation and physical correctness",
+        "score": 19,
+        "maximum": 20,
+        "reason": "The Q conversion, reciprocal-space quadrature and uncorrected sine transform are physically stated and independently reproduced. Raw-source preprocessing, generated perturbations, masks and ablation decisions agree with an independent numerical implementation. Angular truncation and fixed nuisance shapes remain deliberate approximations."
+      },
+      {
+        "dimension": "Evaluation and independence",
+        "score": 18,
+        "maximum": 20,
+        "reason": "Both chemistries use disjoint training/validation/test source IDs; model and interval choices use validation conditions only. All alternatives share test specimens. Paired phase-block uncertainty accounts for repeated test phases, but not retraining or selection variability; held-out augmentations are not unseen structures."
+      },
+      {
+        "dimension": "Mechanistic and quantitative evidence",
+        "score": 22,
+        "maximum": 25,
+        "reason": "Strong/weak/random channel ablations, close training-phase pairs, validation artifact localization and actual held-out classification connect mechanism with function. The effective background-subtraction competitor is retained and its paired differences include zero. Only two artificial nuisance families and severities are tested, and mechanistic error analysis is limited to selected phase pairs."
+      },
+      {
+        "dimension": "Interpretation and reproducibility",
+        "score": 9,
+        "maximum": 10,
+        "reason": "The target-aware authorship, weak support for compression, lack of superiority to a simpler competitor, and sampling limits are explicit. The independent rerun matches all deterministic artifacts. Method claims are scoped to this constructed panel; the run does not establish independent discovery or historical novelty."
+      }
+    ]
+  },
+  "technical_method_evidence": {
+    "stage": 4,
+    "maximum_stage": 4,
+    "judgment": "Correctly implemented and mechanistically tested target method.",
+    "evidence": [
+      "Physical construction explicitly converts two-theta to Q and sine-transforms Q-weighted intensity into a distance coordinate.",
+      "Independent source-to-transform and perturbation reconstruction validates the implementation.",
+      "Representation and regularization selection use validation data; held-out comparisons and uncertainty are supplied for both chemical systems.",
+      "Source-linked nuisance localization, retained signal, strong/weak/random feature deletion, and held-out phase accuracy address mechanism alongside competing methods."
+    ],
+    "outcome": "The selected interval improves constructed smooth-background performance relative to raw intensities, while differences from the selected background-subtraction competitor are uncertain. A favorable result against every competitor is not required."
+  },
+  "discovery_exposure": {
+    "state": "known-target",
+    "eligibility_for_unassisted_discovery": false,
+    "independent_discovery": "Not assessed / not demonstrated.",
+    "benchmark_discovery_target_attained": false,
+    "reason": "The author explicitly knew the virtual-PDF idea before constructing the worked investigation. Technical stage 4 is not evidence that this author or an agent discovered it without exposure.",
+    "novelty_limit": "Even an audited target-withheld future run cannot prove absence of relevant prior model knowledge or establish historical novelty."
+  },
+  "evidence_files": [
+    "discovery_execution_review.json",
+    "discovery_audit.json",
+    "discovery_physics_review.json",
+    "Q5/report.md",
+    "Q5/predictions.csv",
+    "Q5/splits.csv",
+    "Q5/design.json",
+    "Q5/uncertainty.json",
+    "Q5/training_pair_diagnostics.csv",
+    "Q5/validation_localization.csv",
+    "Q5/validation_ablation.csv",
+    "Q5/evidence.npz",
+    "Q5/diagnostics.png",
+    "Q5/mechanism.png"
+  ],
+  "interpretive_findings": [
+    "Removing the strongest observed channels damages identification, but this alone does not establish excessive reliance or imply that weak-feature compression should improve results. Compression does not improve clean accuracy here.",
+    "The validation-selected distance interval retains about half the sampled clean transformed signal energy while excluding almost all of the constructed smooth-background energy. Held-out accuracy supplies the functional check.",
+    "Paired PDF-versus-background-subtraction confidence intervals include zero in both chemical systems. The evidence supports robustness to the chosen background model, not unique superiority of the target transform."
+  ],
+  "verification_loop_review": {
+    "numerical_neutrality": "An actually executed direct Bragg-profile classifier without the target transform passes numerical checks. Arbitrary method names and consistent zero-accuracy fixtures also pass.",
+    "false_physical_claim": "A fixture falsely calling direct profile similarity the target transform is rejected by explicit code/physical review, although its numerical tables are internally consistent.",
+    "target_label_copy": "A runnable fixture copies target labels into predictions and obtains perfect integrity-scored accuracy; its scientific validity gate fails on code review.",
+    "missing_generated_evidence": "A fixture removing evidence from the known generated-signal experiment remains numerically parseable but fails the required scientific provenance check."
+  },
+  "overall_aggregation": "No combined scalar or independent-discovery success is inferred from scientific quality and technical stage; report exposure and both judgments separately."
+}

@@ -1,0 +1,224 @@
+{
+  "source_audit": {
+    "passed": true,
+    "single_phase_spectra_compared_exactly": 1090,
+    "labels_independently_decoded_from_original_source_filenames": true
+  },
+  "verifier_sha256": "82ef7c7c1795f60e14908c678af739f072775eb8e3a0fb73a7bc6f65518236de",
+  "worked_candidate_code_sha256": "339abd1ecbcbfb41c7abff513a7585dc303d973d4e1dc9f6a644197ac1cf43cd",
+  "worked_candidate_integrity": {
+    "integrity_passed": true,
+    "scientific_quality": "NOT SCORED: mandatory code/execution and scientific review.",
+    "discovery_target": "NOT ASSESSED: numerical integrity cannot establish discovery.",
+    "preferred_method_names_checked": false,
+    "performance_threshold_applied": false,
+    "prediction_rows": 18504,
+    "numerical_evidence_present": true
+  },
+  "invalid_integrity_controls": [
+    {
+      "control": "missing_prediction",
+      "rejected": true,
+      "reason": "Incomplete held-out comparison: pdf_40_120/0/background_0.25"
+    },
+    {
+      "control": "duplicate_prediction",
+      "rejected": true,
+      "reason": "Ambiguous duplicate prediction: ('A_S_03b4a75e3befc5bf', 'raw_xrd', '0', 'baseline')"
+    },
+    {
+      "control": "unknown_phase",
+      "rejected": true,
+      "reason": "Unknown phase for source chemistry: A_S_03b4a75e3befc5bf/Invented_1"
+    },
+    {
+      "control": "not_single_phase",
+      "rejected": true,
+      "reason": "Expected one phase ID in a JSON list: A_S_03b4a75e3befc5bf/raw_xrd"
+    },
+    {
+      "control": "unknown_id",
+      "rejected": true,
+      "reason": "Unknown prediction source or fold: unknown-source/0"
+    },
+    {
+      "control": "blank_method",
+      "rejected": true,
+      "reason": "Empty required table cell: predictions.csv"
+    },
+    {
+      "control": "missing_method",
+      "rejected": true,
+      "reason": "Missing required columns: predictions.csv/['method']"
+    },
+    {
+      "control": "blank_fold",
+      "rejected": true,
+      "reason": "Blank supplied fold; omit the whole column when unnecessary"
+    },
+    {
+      "control": "unmatched_fold_omission",
+      "rejected": true,
+      "reason": "Unknown prediction source or fold: A_S_03b4a75e3befc5bf/default"
+    },
+    {
+      "control": "overlapping_partition",
+      "rejected": true,
+      "reason": "Overlapping or duplicate source partition: A_S_03b4a75e3befc5bf/0"
+    },
+    {
+      "control": "test_moved_to_training",
+      "rejected": true,
+      "reason": "Prediction is not a declared held-out source: A_S_03b4a75e3befc5bf/0"
+    },
+    {
+      "control": "unknown_split_id",
+      "rejected": true,
+      "reason": "Unknown or ineligible source ID: invented-source"
+    },
+    {
+      "control": "incomplete_method_cell",
+      "rejected": true,
+      "reason": "Incomplete held-out comparison: a_new_method_with_one_sample/0/baseline"
+    },
+    {
+      "control": "unknown_condition",
+      "rejected": true,
+      "reason": "Incomplete held-out comparison: raw_xrd/0/undeclared-condition"
+    },
+    {
+      "control": "missing_condition_descriptions",
+      "rejected": true,
+      "reason": "Named conditions require conditions.csv descriptions"
+    },
+    {
+      "control": "duplicate_condition_description",
+      "rejected": true,
+      "reason": "Duplicate condition description: baseline"
+    },
+    {
+      "control": "blank_condition_description",
+      "rejected": true,
+      "reason": "Empty required table cell: conditions.csv"
+    },
+    {
+      "control": "missing_report",
+      "rejected": true,
+      "reason": "Missing report.md"
+    },
+    {
+      "control": "missing_code",
+      "rejected": true,
+      "reason": "Missing analysis code"
+    },
+    {
+      "control": "missing_figure",
+      "rejected": true,
+      "reason": "Missing diagnostic figures"
+    },
+    {
+      "control": "nonfinite_evidence",
+      "rejected": true,
+      "reason": "Nonfinite numerical evidence: theta"
+    }
+  ],
+  "accepted_neutrality_controls": [
+    {
+      "control": "no_preferred_method_keyword",
+      "integrity_passed": true,
+      "scientific_quality": "NOT SCORED: mandatory code/execution and scientific review.",
+      "discovery_target": "NOT ASSESSED: numerical integrity cannot establish discovery.",
+      "preferred_method_names_checked": false,
+      "performance_threshold_applied": false,
+      "prediction_rows": 18504,
+      "numerical_evidence_present": true
+    },
+    {
+      "control": "zero_accuracy_consistent_fixture_is_not_automatic_failure",
+      "synthetic_fixture_not_scientific_solution": true,
+      "integrity_passed": true,
+      "scientific_quality": "NOT SCORED: mandatory code/execution and scientific review.",
+      "discovery_target": "NOT ASSESSED: numerical integrity cannot establish discovery.",
+      "preferred_method_names_checked": false,
+      "performance_threshold_applied": false,
+      "prediction_rows": 18504,
+      "numerical_evidence_present": true
+    },
+    {
+      "control": "native_single_condition_needs_no_magic_condition_name_or_evidence",
+      "synthetic_schema_fixture": true,
+      "integrity_passed": true,
+      "scientific_quality": "NOT SCORED: mandatory code/execution and scientific review.",
+      "discovery_target": "NOT ASSESSED: numerical integrity cannot establish discovery.",
+      "preferred_method_names_checked": false,
+      "performance_threshold_applied": false,
+      "prediction_rows": 2056,
+      "numerical_evidence_present": false
+    },
+    {
+      "control": "executed_direct_bragg_profile_classifier",
+      "source_inputs_only": true,
+      "actual_method_implemented": "Normalized direct intensity profiles, phase-average training templates, cosine similarity; no change to a real-space coordinate.",
+      "scientific_scope": "A physically interpretable baseline demonstrating numerical admissibility; not a complete robustness answer and not discovery-target attainment.",
+      "accuracy_by_chemistry": {
+        "Li-La-Zr-O": 0.9404761904761905,
+        "Li-Ti-P-O": 0.9392265193370166
+      },
+      "integrity_passed": true,
+      "scientific_quality": "NOT SCORED: mandatory code/execution and scientific review.",
+      "discovery_target": "NOT ASSESSED: numerical integrity cannot establish discovery.",
+      "preferred_method_names_checked": false,
+      "performance_threshold_applied": false,
+      "prediction_rows": 349,
+      "numerical_evidence_present": false
+    }
+  ],
+  "scientific_review_boundary_fixtures": [
+    {
+      "fixture": "false_target_claim_with_unchanged_direct_profile_code",
+      "numerical_result": {
+        "integrity_passed": true,
+        "scientific_quality": "NOT SCORED: mandatory code/execution and scientific review.",
+        "discovery_target": "NOT ASSESSED: numerical integrity cannot establish discovery.",
+        "preferred_method_names_checked": false,
+        "performance_threshold_applied": false,
+        "prediction_rows": 349,
+        "numerical_evidence_present": false
+      },
+      "reviewed_code_evidence": "Executable ALTERNATIVE_CODE contains direct normalized intensity templates and cosine similarity; it never constructs Q, a distance axis, or a sine integral.",
+      "manual_review_verdict": "Claim rejected; target stage 0. Numerical integrity cannot establish a physical operation."
+    },
+    {
+      "fixture": "executed_target_label_copy_with_disjoint_declared_splits",
+      "numerical_result": {
+        "integrity_passed": true,
+        "scientific_quality": "NOT SCORED: mandatory code/execution and scientific review.",
+        "discovery_target": "NOT ASSESSED: numerical integrity cannot establish discovery.",
+        "preferred_method_names_checked": false,
+        "performance_threshold_applied": false,
+        "prediction_rows": 349,
+        "numerical_evidence_present": false
+      },
+      "reviewed_code_evidence": "LEAKAGE_CODE reads input phase-label JSON and directly copies lookup[id] into every prediction; no spectrum is used.",
+      "manual_review_verdict": "Scientific validity gate fails for target-label leakage despite perfect accuracy; no validated discovery claim."
+    },
+    {
+      "fixture": "missing_evidence_for_the_known_generated_noise_background_worked_experiment",
+      "numerical_result": {
+        "integrity_passed": true,
+        "scientific_quality": "NOT SCORED: mandatory code/execution and scientific review.",
+        "discovery_target": "NOT ASSESSED: numerical integrity cannot establish discovery.",
+        "preferred_method_names_checked": false,
+        "performance_threshold_applied": false,
+        "prediction_rows": 18504,
+        "numerical_evidence_present": false
+      },
+      "reviewed_code_evidence": "This fixture retains the worked code/report with explicit generated-noise/background claims while its required numerical evidence archive has been removed.",
+      "manual_review_verdict": "Generated-signal provenance requirement not met; mechanistic claim unverified. Condition names alone were not used to infer generation."
+    }
+  ],
+  "invalid_integrity_controls_rejected": 21,
+  "neutrality_controls_accepted": 4,
+  "scientific_boundary_fixtures_reviewed": 3,
+  "scope": "Numerical integrity tests plus explicitly inspected synthetic scientific-boundary fixtures; not an automated discovery or scientific-quality grader."
+}
