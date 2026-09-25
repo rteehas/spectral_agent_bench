@@ -128,125 +128,6 @@
           "groundTruthReasoning": "Worked solution: reconstruct the material spectrum from the supplied FEFF outputs using candidate.py. The interpolation and padding below follow the authors recipe as one valid numerical treatment; the benchmark also permits other justified treatments.\n\n1. Read the crystal structure (Python / pymatgen)\nRead L3_001_Cu_feff.inp with Python. Extract the lattice lengths, angles, species and fractional coordinates from its header, then construct a pymatgen Structure using Lattice.from_parameters.\nResult: A six-atom TbCu₅ unit cell containing one Tb atom and five Cu atoms.\n\n2. Determine the site weights (Python / pymatgen SpacegroupAnalyzer)\nIdentify equivalent atoms with SpacegroupAnalyzer(symprec=0.01).get_symmetrized_structure().equivalent_indices. Keep the Cu groups and divide each group size by the total number of Cu atoms.\nResult: Zero-based representative site 1 occurs once and site 2 represents four equivalent atoms, giving weights 1/5 = 0.2 and 4/5 = 0.8.\n\n3. Load the four edge spectra (Python / NumPy)\nUse numpy.loadtxt to read the L2 and L3 xmu.dat files for sites 001 and 002. Select column 1 for photon energy in eV and column 4 for absorption, preserving their supplied conventions.\nResult: Separate L₂ and L₃ energy–intensity arrays for each Cu environment.\n\n4. Interpolate each edge (Python / NumPy)\nFor this worked solution, use numpy.arange to make a 0.1 eV grid from round(min(E)+0.15,1) to round(max(E)−0.15,1), excluding the upper bound. Use numpy.interp for linear interpolation of each edge onto its grid.\nResult: Regularly sampled L₂ and L₃ curves ready for combination.\n\n5. Combine L₂ and L₃ for each site (Python / NumPy)\nExtend L₂ down to the L₃ grid start using b(E+a)^10. Determine a and b from an intensity of 1e−10 at that start and the first interpolated L₂ point. Prepend this extension to L₂ and add it pointwise to L₃ over the L₃ grid.\nResult: One combined Cu L₂,₃ spectrum for each representative site.\n\n6. Average the Cu sites (Python / NumPy)\nFind the overlap of the two site energy ranges, build a common 0.1 eV grid excluding its upper endpoint, and interpolate both site curves onto it. Calculate S(E) = 0.2 S₁(E) + 0.8 S₂(E). The weights account for the number of Cu atoms represented by each simulation.\nResult: The worked solution produces a material-averaged spectrum with 545 samples; this row count is specific to its numerical choices.\n\n7. Save the answer and plot the contributions (Python / pandas, json and Matplotlib)\nUse pandas.DataFrame.to_csv to save energy_eV and intensity in spectrum.csv. Use Python json to save material_id, site_weights and the output row count in result.json. Use Matplotlib to overlay the weighted site contributions and their sum in plot.png.\nResult: The requested numerical spectrum, result metadata and contribution plot. The archived run also retains an optional energy-reference diagnostic.\n\n8. Check the reconstructed answer (Evaluator / Python verify.py)\nAfter the candidate finishes, run verify.py separately to check its site weights, reported row count and spectral agreement. The evaluator reference is the mp-1077262 row of the authors released 110222_Cu_DF_With_Spectra.joblib, previously extracted with joblib and pandas by prepare_assets.py. The candidate does not read that reference. Apply the comparison policy documented in Verification.\nResult: The recorded execution passes the numerical checks, with normalized RMSE 0.0 on the comparison interval and zero reported peak-energy, peak-height and edge-area errors. Scientific interpretation and plot readability require separate review.\n\nExecution: python candidate.py Q1 --inputs INPUT_DIRECTORY --output OUTPUT_DIRECTORY. The Q1_candidate_workflow.json link in Verification records the actual commands, program versions and outputs. Source methods: Database_Construction.ipynb cells 1, 9 and 10. FEFF is the source of the supplied simulations; no new FEFF calculation is run here."
         },
         {
-          "id": "GLEASON24-Q6",
-          "kind": "Subquestion",
-          "title": "How does synthetic mixture augmentation change Cu oxidation-state coverage?",
-          "inputs": [
-            {
-              "name": "ordered_base_labels.csv",
-              "url": "data/gleason-2024-cu-oxidation/inputs/Q6/ordered_base_labels.csv",
-              "description": "Only the released base material IDs and oxidation labels, in original row order. No synthetic rows or augmented counts. Spectral arrays are unnecessary for this label-coverage question."
-            }
-          ],
-          "prompt": {
-            "background": "Generate the paper’s three mixture families: all (0/1/2), 0-1 and 1-2. For each family reset NumPy RandomState(32). For each of 100 draws, select one parent from each exact-label pool in order 0,1,2 using randint, retaining input order within pools. Then draw 20 label-0 raw coefficients from linspace(1,0,101) unless family 1-2; draw 20 label-2 coefficients from linspace(0,1,101) unless family 0-1; finally draw 20 label-1 coefficients from linspace(0,1,101). Inactive coefficients are zero without an RNG call. Normalize each coefficient triple, skip all-zero triples, and round the weighted label to two decimals using NumPy scalar rounding. Retain original fractional-label materials but do not draw parents from them.",
-            "instruction": "Determine the label coverage after appending the generated mixtures to the base set. Save manifest.csv with type,id_0,id_1,id_2,weight_0,weight_1,weight_2,label. In result.json report base_rows, generated_by_family, generated, augmented, synthetic_integer_labels, augmented_integer_counts, histogram_counts, histogram_edges, histogram_total and fractional_outside_histogram. The histogram uses 20 equal bins from 0 through 2 and excludes labels exactly 0,1,2, which are separate bars. Plot the resulting coverage and explain any difference from the nominal number of requested mixtures."
-          },
-          "verification": {
-            "description": "Require exact counts, histogram bins and the parent-ID ordering in the manifest; weights/labels use rtol=1e−7, atol=1e−8. Compare qualitatively with the author distribution plot, acknowledging the released-base snapshot may differ. Require an explanation of skipped all-zero draws and rounded integer mixtures. This question does not test model training or synthetic spectral shapes.",
-            "data": [
-              {
-                "name": "expected.json",
-                "url": "data/gleason-2024-cu-oxidation/verification/Q6/expected.json",
-                "description": "Evaluator-only numerical targets; see provenance.json for their evidence type."
-              },
-              {
-                "name": "manifest.csv",
-                "url": "data/gleason-2024-cu-oxidation/verification/Q6/manifest.csv",
-                "description": "Evaluator-only numerical comparison table."
-              }
-            ],
-            "figures": [
-              {
-                "image": "assets/gleason-2024-cu-oxidation/notebook-augmented-distribution.png",
-                "label": "Author notebook · augmented label distribution",
-                "caption": "Unmodified embedded plot from Paper_Figures.ipynb cell 13. Use for qualitative shape/context, not exact snapshot counts.",
-                "url": "https://www.nature.com/articles/s41524-024-01408-1"
-              }
-            ],
-            "methods": [
-              {
-                "name": "Q6_candidate_workflow.json",
-                "url": "data/gleason-2024-cu-oxidation/workflows/Q6.json",
-                "description": "Worked candidate tool sequence, actual execution record, and limitations. Exclude from agent inputs."
-              },
-              {
-                "name": "candidate.py",
-                "url": "data/gleason-2024-cu-oxidation/workflows/candidate.py",
-                "description": "Executable worked solutions; reads only the selected question input directory. Exclude from agent inputs."
-              },
-              {
-                "name": "verify.py",
-                "url": "data/gleason-2024-cu-oxidation/workflows/verify.py",
-                "description": "Evaluator-side numeric checker. Interpretation and figure readability require separate review."
-              }
-            ]
-          },
-          "groundTruthReasoning": "Replay of the unchanged author generation methods on the released base table produces 5,999 mixtures: 2,000 all, 2,000 0-1 and 1,999 1-2. One zero-sum draw is skipped. The augmented size is 9,438. Synthetic integer labels contribute 127 rows; final integer bars are 906, 1,108 and 1,319. The noninteger histogram contains 6,037 entries, while 68 original fractional labels lie above its range. This is a code-replay target, not an independently archived historical mixture table. Source: Paper_Figures.ipynb cell 4 and Analysis_objects_and_functions.py methods augment_df_with_mixtures/add_mixed_valent_spectra."
-        },
-        {
-          "id": "GLEASON24-Q7",
-          "kind": "Subquestion",
-          "title": "How separated are the experimental Cu, Cu₂O and CuO L₃ peak energies?",
-          "inputs": [
-            {
-              "name": "Cu Metal XAS.csv",
-              "url": "data/gleason-2024-cu-oxidation/inputs/Q7/Cu Metal XAS.csv",
-              "description": "Unmodified literature XAS CSV from the open release: energy in eV and intensity. These are released digitized spectra, not detector-raw measurements."
-            },
-            {
-              "name": "Cu2O XAS.csv",
-              "url": "data/gleason-2024-cu-oxidation/inputs/Q7/Cu2O XAS.csv",
-              "description": "Unmodified literature XAS CSV from the open release: energy in eV and intensity. These are released digitized spectra, not detector-raw measurements."
-            },
-            {
-              "name": "CuO XAS.csv",
-              "url": "data/gleason-2024-cu-oxidation/inputs/Q7/CuO XAS.csv",
-              "description": "Unmodified literature XAS CSV from the open release: energy in eV and intensity. These are released digitized spectra, not detector-raw measurements."
-            }
-          ],
-          "prompt": {
-            "background": "Compare the spectra on their supplied energy axes without an additional energy shift or smoothing. For this question define the L₃ peak as the largest tabulated intensity between 930 and 940 eV inclusive. Sorting is permitted for plotting; plot amplitudes may be normalized independently without changing peak positions. Fine oscillations in these digitized traces are not a target for physical interpretation.",
-            "instruction": "Locate the three L₃ peak energies and compare their separations. Save result.json with L3_peak_eV (keys \"Cu Metal\",\"Cu2O\",\"CuO\"), Cu2O_minus_Cu_eV, CuO_minus_Cu_eV and CuO_minus_Cu2O_eV. Make an overlay marking the peak positions. Explain whether peak energy alone is likely to separate all three oxidation-state references."
-          },
-          "verification": {
-            "description": "Allow 0.05 eV absolute error on peak positions and signed separations. Check that Cu/Cu2O are nearly coincident and CuO is lower in energy; compare the marked overlay with Figure S1 XAS traces. The candidate must limit its conclusion to peak energy and these supplied references.",
-            "data": [
-              {
-                "name": "expected.json",
-                "url": "data/gleason-2024-cu-oxidation/verification/Q7/expected.json",
-                "description": "Evaluator-only numerical targets; see provenance.json for their evidence type."
-              }
-            ],
-            "figures": [
-              {
-                "image": "assets/gleason-2024-cu-oxidation/paper-figure-s1.png",
-                "label": "Figure S1 · reference spectra",
-                "caption": "Author-provided Figure S1. Its literature XAS traces were smoothed and shifted by −1.0 eV (Cu) and −1.2 eV (Cu2O/CuO). Use qualitative peak ordering only; exact targets use the supplied unshifted CSVs.",
-                "url": "https://www.nature.com/articles/s41524-024-01408-1"
-              }
-            ],
-            "methods": [
-              {
-                "name": "Q7_candidate_workflow.json",
-                "url": "data/gleason-2024-cu-oxidation/workflows/Q7.json",
-                "description": "Worked candidate tool sequence, actual execution record, and limitations. Exclude from agent inputs."
-              },
-              {
-                "name": "candidate.py",
-                "url": "data/gleason-2024-cu-oxidation/workflows/candidate.py",
-                "description": "Executable worked solutions; reads only the selected question input directory. Exclude from agent inputs."
-              },
-              {
-                "name": "verify.py",
-                "url": "data/gleason-2024-cu-oxidation/workflows/verify.py",
-                "description": "Evaluator-side numeric checker. Interpretation and figure readability require separate review."
-              }
-            ]
-          },
-          "groundTruthReasoning": "The supplied XAS maxima occur at 933.65 eV (Cu), 933.6691148 eV (Cu2O) and 931.2967241 eV (CuO). The first pair differs by approximately 0.0191 eV, whereas CuO is about 2.35–2.37 eV lower. These exact values are independently reduced from the supplied CSVs; the paper does not publish this exact peak table. Figure S1 supports the qualitative near-coincidence of Cu/Cu2O and lower-energy CuO feature after smoothing and author shifts of −1.0/−1.2/−1.2 eV. Its plotted absolute peak energies are not the unshifted CSV targets. The comparison supports a limitation of peak-position-only discrimination, not a claim that the complete spectra are indistinguishable."
-        },
-        {
           "id": "GLEASON24-Q8",
           "kind": "Subquestion",
           "executionStatus": "partially_validated",
@@ -356,6 +237,8 @@
     "GLEASON24-Q2",
     "GLEASON24-Q3",
     "GLEASON24-Q4",
-    "GLEASON24-Q5"
+    "GLEASON24-Q5",
+    "GLEASON24-Q6",
+    "GLEASON24-Q7"
   ]
 }

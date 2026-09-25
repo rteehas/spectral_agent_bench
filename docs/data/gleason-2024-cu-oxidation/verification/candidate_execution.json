@@ -4,18 +4,8 @@
       "question": "Q1",
       "status": "passed",
       "wall_seconds": 2.657
-    },
-    {
-      "question": "Q6",
-      "status": "passed",
-      "wall_seconds": 2.117
-    },
-    {
-      "question": "Q7",
-      "status": "passed",
-      "wall_seconds": 1.854
     }
   ],
   "all_numeric_checks_passed": true,
-  "scope": "Active offline candidate suite only (Q1, Q6, Q7). Q8 has separate component checks; live search and fresh FEFF9 execution are pending."
+  "scope": "Active offline candidate suite only (Q1). Q8 has separate component checks; live search and fresh FEFF9 execution are pending."
 }

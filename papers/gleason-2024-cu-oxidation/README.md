@@ -2,16 +2,14 @@
 
 [Paper](https://doi.org/10.1038/s41524-024-01408-1) · [Open release](https://zenodo.org/records/18142209) · [Pinned source](https://github.com/smglsn12/ML_XAS_EELS/tree/85e0f34e448247f6c7a01705807dae39dd1d6cbd)
 
-This entry contains three offline questions and one draft question covering a live material search and fresh FEFF simulations. Each starts at its relevant stage. Inputs distinguish individual FEFF outputs, released oxidation labels, seed material IDs and simulation settings, and digitized literature measurements. No question requires the result of another benchmark question. Q8 requires external runtime services and has only component-level validation so far.
+This entry contains one offline question and one draft question covering a live material search and fresh FEFF simulations. Each starts at its relevant stage. Q1 supplies individual FEFF outputs; Q8 supplies seed material IDs and simulation settings. No question requires the result of another benchmark question. Q8 requires external runtime services and has only component-level validation so far.
 
 | ID | Research question | Minimal inputs | Verification basis |
 |---|---|---|---|
 | GLEASON24-Q1 | What material-level Cu L₂,₃ spectrum is predicted for TbCu₅? | Four site/edge FEFF outputs and one structure-containing input deck | Independent released material spectrum, plus structure multiplicities |
-| GLEASON24-Q6 | How does mixture augmentation change label coverage? | Ordered base IDs/labels and reproducible sampling settings | Unchanged-author-code replay; qualitative figure comparison |
-| GLEASON24-Q7 | How separated are the experimental L₃ peaks? | Three unchanged literature XAS CSVs | Independent maximum search; qualitative Figure S1 comparison |
 | GLEASON24-Q8 | Which Cu materials can supply training spectra for oxidation-state prediction across different chemical environments? | Seed IDs, simulation settings, live MP access and a FEFF9 runtime | Independently captured live response; archived references only for matching structures/settings, otherwise independent evaluator FEFF runs. Draft; fresh-run validation pending |
 
-Q2, Q3, Q4 and Q5 have been removed from the active benchmark. The remaining question IDs are unchanged. Their previous evidence and execution records remain available for audit, but they are not listed, exported or run as active questions. Q6 only asks about label coverage, so it does not unnecessarily receive thousands of spectral arrays.
+Q2 through Q7 have been removed from the active benchmark. The remaining question IDs are unchanged. Their previous evidence and execution records remain available for audit, but they are not listed, exported or run as active questions.
 
 ## Where to review
 
@@ -46,7 +44,7 @@ python docs/data/gleason-2024-cu-oxidation/workflows/verify.py Q1 \
   --truth docs/data/gleason-2024-cu-oxidation/verification/Q1
 ```
 
-Install the pinned dependencies in `requirements.txt` using Python 3.10. The active offline candidate workflows (Q1, Q6 and Q7) never load joblib pickles, access the previous walkthrough folders, call a live API, or read verification files. Q1 uses pymatgen to identify symmetry-equivalent Cu atoms; the other offline tasks use pandas/NumPy/Matplotlib. FEFF outputs are supplied for those tasks. Q8 instead requires live MP access and a working FEFF9 installation; see below.
+Install the pinned dependencies in `requirements.txt` using Python 3.10. The Q1 candidate workflow never loads joblib pickles, accesses the previous walkthrough folders, calls a live API, or reads verification files. It uses pymatgen to identify symmetry-equivalent Cu atoms and NumPy/pandas/Matplotlib to assemble and plot the supplied FEFF outputs. Q8 instead requires live MP access and a working FEFF9 installation; see below.
 
 `run_candidates.py --workdir NEW_DIRECTORY` exports each input bundle, runs its candidate, invokes the verifier separately, and records commands, stdout/stderr, versions, runtime and status in `workflows/Q*.json`. Tool names are portable descriptions (shell/Python, NumPy, pymatgen and plotting), not a requirement to use a particular agent framework.
 
@@ -64,13 +62,9 @@ The review page presents Q1's benchmark-defined acceptance criteria as plain not
 
 `verification/Q1/comparison_policy.json` records the exact windows, thresholds and their provenance. `check_q1_variants.py` tests the released candidate and alternative linear/PCHIP interpolation, zero padding, grid spacings and endpoint choices, as well as rejected wrong weights, missing edges, shifts and normalization. Its record is `verification/Q1/variant_checks.json`.
 
-## Ground-truth strength and known release differences
+## Ground-truth strength
 
-Q1 has an independently stored released-output target. Q6 is an exact code-replay target for the released snapshot, **not** an independently archived historical mixture table. Q7 has an independently recomputed numeric target and a paper-supported qualitative inference; the paper does not publish the exact peak table. These distinctions are attached to the scenarios and provenance metadata.
-
-The release and publication do not agree on every count. We preserve the released table's 3,439 base rows and its category totals. The author's figure notebook adds mixtures before drawing its label bars. Q6 expects 5,999 realized mixtures, because one all-zero draw is skipped. Q6 normalizes training-mixture weights to sum to one.
-
-The missing-assignment-to-zero convention is reproduced as a historical choice. It must not be interpreted as independent evidence that every zero-labeled material contains chemically Cu(0).
+Q1 has an independently stored released-output target. Q8 provides archived references for three historical cases; these apply only when structures and simulation settings match. Other live-search selections require independent evaluator simulations, as described below.
 
 ## Q8: training spectra across Cu chemical environments
 
@@ -98,6 +92,6 @@ Historical compute evidence is in `verification/Q8/runtime_audit.json`: 6,839 ti
 
 ## Rebuild and attribution
 
-`prepare_assets.py --release PATH` projects minimal inputs and separately extracts verification targets from the downloaded open release. Q6 uses the already audited source-code replay outputs under that release workspace. `build_entry.py` writes the site entry and workflow descriptions while retaining prior execution records. Rerun affected candidates after changing their task or verifier; a partial run preserves the other questions in the summary. These are authoring tools, not agent inputs. See `provenance.json` for the input/verification derivation of every task.
+`prepare_assets.py --release PATH` projects minimal inputs and separately extracts verification targets from the downloaded open release. `build_entry.py` writes the site entry and workflow descriptions while retaining prior execution records. Rerun affected candidates after changing their task or verifier; a partial run preserves the other questions in the summary. These are authoring tools, not agent inputs. See `provenance.json` for the input/verification derivation of every task.
 
 Data source: Gleason, Lu and Ciston, Zenodo record 18142209 (CC BY 4.0), outer ZIP MD5 `1246825b838f77b926d0e58f6ca68e45`. Figures are unmodified author-provided Figure 1 and Figure S1 images or embedded figure outputs from the pinned companion notebook. The article is [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Minimal CSV/JSON projections are format adaptations; their prior processing and source columns are recorded. All copied assets remain attributed to the authors. No upstream notebook credentials were copied.

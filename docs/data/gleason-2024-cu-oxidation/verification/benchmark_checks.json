@@ -7,24 +7,12 @@
       "perturbed_answer_rejected": true
     },
     {
-      "question": "Q6",
-      "input_bundle_only_declared_files": true,
-      "correct_candidate_passes": true,
-      "perturbed_answer_rejected": true
-    },
-    {
-      "question": "Q7",
-      "input_bundle_only_declared_files": true,
-      "correct_candidate_passes": true,
-      "perturbed_answer_rejected": true
-    },
-    {
       "question": "Q8",
       "input_bundle_only_declared_files": true,
       "end_to_end_check": "not_run",
       "reason": "Live MP access and fresh FEFF9 execution require separate runtime validation; see setup_checks.json."
     }
   ],
-  "perturbed_mixture_weight_rejected": true,
+  "perturbed_spectrum_rejected": true,
   "scope": "Active questions only: input export and verifier sensitivity, not an OS-level data-access isolation test."
 }
