@@ -199,8 +199,55 @@ def alternate_split(folder, truth):
     recompute_metrics(folder, 'Q1', truth)
 
 
+def omit_csv_columns(path, omitted):
+    fields, rows = csv_rows(path)
+    kept = [field for field in fields if field not in omitted]
+    write_csv(path, kept, [{field: row[field] for field in kept} for row in rows])
+
+
+def minimal_submission(folder, question):
+    """Keep an unambiguous comparison and omit evaluator-only bookkeeping."""
+    fields, rows = csv_rows(folder / 'predictions.csv')
+    fold = rows[0]['fold']
+    rows = [row for row in rows if row['fold'] == fold]
+    if question == 'Q3':
+        # Multiple PDF interval names genuinely need identifiers. Select one
+        # interval plus XRD before omitting method, preserving each condition.
+        methods = {representation: next(row['method'] for row in rows if row['representation'] == representation)
+                   for representation in ('XRD', 'PDF')}
+        rows = [row for row in rows if row['representation'] in methods and row['method'] == methods[row['representation']]]
+    else:
+        method = rows[0]['method']
+        rows = [row for row in rows if row['method'] == method]
+    write_csv(folder / 'predictions.csv', fields, rows)
+    mutate_csv(folder / 'splits.csv', lambda records: records.__setitem__(slice(None), [row for row in records if row['fold'] == fold]))
+    omitted = {'method', 'fold'} | ({'condition'} if question != 'Q3' else set())
+    omit_csv_columns(folder / 'predictions.csv', omitted)
+    omit_csv_columns(folder / 'splits.csv', {'fold'})
+    (folder / 'metrics.csv').unlink()
+
+
+def mixed_identifier(folder, kind):
+    if kind == 'blank_prediction_method':
+        mutate_csv(folder / 'predictions.csv', lambda rows: rows[0].__setitem__('method', ''))
+    elif kind == 'blank_prediction_fold':
+        mutate_csv(folder / 'predictions.csv', lambda rows: rows[0].__setitem__('fold', ''))
+    elif kind == 'blank_prediction_condition':
+        mutate_csv(folder / 'predictions.csv', lambda rows: rows[0].__setitem__('condition', ''))
+    elif kind == 'blank_split_fold':
+        mutate_csv(folder / 'splits.csv', lambda rows: rows[0].__setitem__('fold', ''))
+    elif kind == 'fold_omitted_in_predictions_only':
+        omit_csv_columns(folder / 'predictions.csv', {'fold'})
+    elif kind == 'fold_omitted_in_splits_only':
+        omit_csv_columns(folder / 'splits.csv', {'fold'})
+    elif kind == 'ambiguous_method_omission':
+        omit_csv_columns(folder / 'predictions.csv', {'method'})
+    elif kind == 'missing_q3_condition_column':
+        omit_csv_columns(folder / 'predictions.csv', {'condition'})
+
+
 def compact_check(result):
-    return {key: result[key] for key in ('question', 'integrity_passed', 'scientific_correctness', 'reference_predictions_compared', 'prediction_rows', 'core_metric_rows_independently_recomputed')}
+    return {key: result[key] for key in ('question', 'integrity_passed', 'scientific_correctness', 'reference_predictions_compared', 'prediction_rows', 'core_metric_rows_independently_recomputed', 'optional_metric_table_status')}
 
 
 def audit_controls(candidate_runs):
@@ -220,9 +267,13 @@ def audit_controls(candidate_runs):
                 controls[name] = lambda folder, kind=name: bad_partition(folder, kind)
             for name in ('wrong_metric', 'wrong_metric_count', 'nonfinite_metric', 'duplicate_metric', 'missing_metric'):
                 controls[name] = lambda folder, kind=name: bad_metric(folder, kind)
+            for name in ('blank_prediction_method', 'blank_prediction_fold', 'blank_prediction_condition', 'blank_split_fold', 'fold_omitted_in_predictions_only', 'fold_omitted_in_splits_only'):
+                controls[name] = lambda folder, kind=name: mixed_identifier(folder, kind)
             if question in {'Q1', 'Q3'}:
+                controls['ambiguous_method_omission'] = lambda folder: mixed_identifier(folder, 'ambiguous_method_omission')
                 controls['wrong_optional_micro_f1'] = lambda folder: mutate_csv(folder / 'metrics.csv', lambda rows: next(row for row in rows if row['metric'] == 'micro_f1').__setitem__('value', '.123456789'))
             if question == 'Q3':
+                controls['missing_q3_condition_column'] = lambda folder: mixed_identifier(folder, 'missing_q3_condition_column')
                 controls['nonfinite_evidence'] = bad_evidence
                 controls['missing_numeric_evidence'] = lambda folder: remove_suffixes(folder, {'.npz'})
                 controls['missing_background_condition'] = lambda folder: mutate_csv(folder / 'conditions.csv', lambda rows: rows.__setitem__(slice(None), [row for row in rows if row['artifact'] != 'background']))
@@ -239,6 +290,24 @@ def audit_controls(candidate_runs):
                 else:
                     raise AssertionError(f'{question} accepted invalid integrity control: {name}')
             alternatives = []
+            minimal = base / question / 'minimal_predictions_and_splits_no_metrics'
+            shutil.copytree(original, minimal)
+            minimal_submission(minimal, question)
+            checked = v.verify(question, minimal)
+            v.require(checked['optional_metric_table_status'] == 'absent_recomputed_only', 'Absent metrics status differs')
+            alternatives.append({'control': 'minimal_predictions_and_splits_omit_optional_identifiers_and_metrics', **compact_check(checked)})
+            supplemental = base / question / 'alternative_metrics_schema'
+            shutil.copytree(minimal, supplemental)
+            write_csv(supplemental / 'metrics.csv', ['analysis', 'estimate'], [{'analysis': 'custom_summary', 'estimate': '.123'}])
+            checked = v.verify(question, supplemental)
+            v.require(checked['optional_metric_table_status'] == 'supplemental_table_requires_review' and not checked['optional_metric_table_checked'], 'Supplemental metrics falsely marked checked')
+            alternatives.append({'control': 'alternative_optional_metric_table_is_supplemental_not_hidden_schema_failure', **compact_check(checked)})
+            if question != 'Q3':
+                renamed = base / question / 'arbitrary_consistent_condition_name'
+                shutil.copytree(original, renamed)
+                mutate_csv(renamed / 'predictions.csv', lambda rows: [row.__setitem__('condition', 'native_specimens') for row in rows])
+                recompute_metrics(renamed, question, truth)
+                alternatives.append({'control': 'condition_name_is_not_a_prescribed_constant', **compact_check(v.verify(question, renamed))})
             if question in {'Q1', 'Q3'}:
                 minimal = base / question / 'minimal_requested_metrics'
                 shutil.copytree(original, minimal)
@@ -275,7 +344,7 @@ def main():
     parser.add_argument('--release', type=Path, required=True)
     parser.add_argument('--candidate-runs', type=Path)
     args = parser.parse_args()
-    report = {'source_audit': audit_source(args.release)}
+    report = {'source_audit': audit_source(args.release), 'verifier_sha256': sha(DATA / 'workflows/verify.py')}
     if args.candidate_runs:
         report['verification_controls'] = audit_controls(args.candidate_runs)
         report['invalid_controls_rejected'] = sum(len(row['invalid_integrity_controls']) for row in report['verification_controls'])

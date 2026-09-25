@@ -1,0 +1,515 @@
+{
+  "paper_id": "szymanski-2024-xrd-pdf",
+  "revision": "minimal-output-contract-cleanup",
+  "status": "passed_independent_prompt_and_contract_review",
+  "reviewer": "Independent question-quality/workflow-execution agent; did not edit prompts, candidate, or verifier",
+  "review_date": "2026-09-25T15:25:58.091550+00:00",
+  "solver_projection_sha256": "4bea036a86068311ef4ee3c973c066ce38c27c800b91afa3d1b13eddd4a7b4e1",
+  "previous_solver_projection_sha256": "f711892cc61a5577a0dba8640265e889fbb0a06bef058980f195c757c25f48a5",
+  "candidate_sha256": "2c81e2aa1cea139eb7b4e2fcd04910e55dd26eb8d9b9366cef4beee128f1e6eb",
+  "verifier_sha256": "4036c1727a5dee301d2f113c2f8374f3422198442ae580f03bf3bd9b6bf7c703",
+  "scientific_design_verdict": "No blocking issue. Necessary raw-array/label/physics context and four distinct research questions remain intact; checker-specific table/stratum values and unconditional identifiers are removed. Methods and expected scientific findings remain unspecified.",
+  "prompt_changes_reviewed": [
+    "Common predictions require only id, representation, predicted; split tables require only id, role.",
+    "Method and fold identifiers distinguish multiple otherwise-ambiguous comparisons, not prescribed algorithms or partition counts.",
+    "No required metrics.csv, named metrics, chemistry/group output columns, or baseline condition outside Q3.",
+    "Q3 retains condition descriptors and saved numerical perturbation evidence because those identify the solver-designed experiment."
+  ],
+  "independent_runs": [
+    {
+      "question": "Q1",
+      "command": [
+        "/tmp/torrisi-env/bin/python",
+        "/tmp/szymanski-v2/prompt-cleanup/Q1_runner/candidate.py",
+        "Q1",
+        "--inputs",
+        "/tmp/szymanski-v2/prompt-cleanup/Q1_bundle/inputs",
+        "--output",
+        "/tmp/szymanski-v2/prompt-cleanup/Q1"
+      ],
+      "environment": {
+        "OPENBLAS_NUM_THREADS": "1",
+        "MPLCONFIGDIR": "/tmp/szymanski-v2-independent-mpl"
+      },
+      "working_directory": "/tmp/szymanski-v2/prompt-cleanup/Q1_runner",
+      "wall_seconds": 2.905531825032085,
+      "returncode": 0,
+      "export_files": [
+        "inputs/Li-La-Zr-O_1-Phase.json",
+        "inputs/Li-La-Zr-O_1-Phase.npz",
+        "inputs/Li-Ti-P-O_1-Phase.json",
+        "inputs/Li-Ti-P-O_1-Phase.npz",
+        "task.json"
+      ],
+      "input_sha256": {
+        "Li-La-Zr-O_1-Phase.npz": "52e7994695f32ff686e77f06636eaf1b25e01911577b191fdd2a174dc78b3caf",
+        "Li-La-Zr-O_1-Phase.json": "7a508724f285fc982647c888567ecab8e71a6611d18fa60a723b2cd1b2e8ad03",
+        "Li-Ti-P-O_1-Phase.npz": "16a008c86b216ebc7f167304086e8a26a7f249cab32be792dd646ee5cd97170a",
+        "Li-Ti-P-O_1-Phase.json": "aae28c51723bd799ad48fe355e37be63a8575d19b0dac6ac452a7b22497bc38d"
+      },
+      "task_sha256": "ee46a150e8b68ee4c1c333a071ae7e1d9f085789bc5b554d293f48ad50f3a4cb",
+      "candidate_sha256": "2c81e2aa1cea139eb7b4e2fcd04910e55dd26eb8d9b9366cef4beee128f1e6eb",
+      "stderr": "",
+      "output_files": [
+        "comparison.json",
+        "design.json",
+        "diagnostics.png",
+        "execution.json",
+        "metrics.csv",
+        "per_class_accuracy.csv",
+        "predictions.csv",
+        "report.md",
+        "result.json",
+        "run.py",
+        "splits.csv"
+      ],
+      "prompt_matches_reviewed_entry": true,
+      "all_deterministic_outputs_match_published_candidate": true,
+      "compared_output_files": [
+        "comparison.json",
+        "design.json",
+        "diagnostics.png",
+        "metrics.csv",
+        "per_class_accuracy.csv",
+        "predictions.csv",
+        "report.md",
+        "result.json",
+        "run.py",
+        "splits.csv"
+      ],
+      "output_sha256": {
+        "comparison.json": "66246e6064fd582aef12ff86a08f3f674b178cadb86ad7b4517e88085f4583c8",
+        "design.json": "061329de0c90525fd77b8fe8968cedb5baafab4daf0e511c128d030cec577ab2",
+        "diagnostics.png": "0cd2b52bf9e197932ca9c65eab077e2617ce87658551cd3a415eadffd879c606",
+        "metrics.csv": "5b8a014f75931f8ebe45e4d2a00c88bf2699e053f210d2b316ff3a2f0906461e",
+        "per_class_accuracy.csv": "e8af3bcb9e47c29ed90e80108be482e70878ee9a94e85ab5ab07975764660097",
+        "predictions.csv": "8ca478c2293284244f3d68a2aa36b3af19313ac5e8e69d4bb6c87fbb07900934",
+        "report.md": "db7022c9e2d44c9a2587195e8c4feb6fa5c02fcf88dd9121ae27e1263b740e52",
+        "result.json": "a299ea0843d239c02e9dd7a9215588bbb3d55ce282448bb52e3e71c3f08f97e1",
+        "run.py": "2c81e2aa1cea139eb7b4e2fcd04910e55dd26eb8d9b9366cef4beee128f1e6eb",
+        "splits.csv": "1b80220b7eb96da8a4c017706347307665678471660e16c4da5ba00116054df7"
+      }
+    },
+    {
+      "question": "Q2",
+      "command": [
+        "/tmp/torrisi-env/bin/python",
+        "/tmp/szymanski-v2/prompt-cleanup/Q2_runner/candidate.py",
+        "Q2",
+        "--inputs",
+        "/tmp/szymanski-v2/prompt-cleanup/Q2_bundle/inputs",
+        "--output",
+        "/tmp/szymanski-v2/prompt-cleanup/Q2"
+      ],
+      "environment": {
+        "OPENBLAS_NUM_THREADS": "1",
+        "MPLCONFIGDIR": "/tmp/szymanski-v2-independent-mpl"
+      },
+      "working_directory": "/tmp/szymanski-v2/prompt-cleanup/Q2_runner",
+      "wall_seconds": 3.5071015229914337,
+      "returncode": 0,
+      "export_files": [
+        "inputs/Li-La-Zr-O_1-Phase.json",
+        "inputs/Li-La-Zr-O_1-Phase.npz",
+        "inputs/Li-La-Zr-O_Mixtures.json",
+        "inputs/Li-La-Zr-O_Mixtures.npz",
+        "inputs/Li-Ti-P-O_1-Phase.json",
+        "inputs/Li-Ti-P-O_1-Phase.npz",
+        "inputs/Li-Ti-P-O_Mixtures.json",
+        "inputs/Li-Ti-P-O_Mixtures.npz",
+        "task.json"
+      ],
+      "input_sha256": {
+        "Li-La-Zr-O_1-Phase.npz": "52e7994695f32ff686e77f06636eaf1b25e01911577b191fdd2a174dc78b3caf",
+        "Li-La-Zr-O_1-Phase.json": "7a508724f285fc982647c888567ecab8e71a6611d18fa60a723b2cd1b2e8ad03",
+        "Li-La-Zr-O_Mixtures.npz": "7a3fa3492346927615dcd5bd4aa60c0a1849426d45a983cf70f88c7e9fbded08",
+        "Li-La-Zr-O_Mixtures.json": "42c4a711cf66cc91dabbd9020d48ee2e20198098601562b6f9a046394767d2f0",
+        "Li-Ti-P-O_1-Phase.npz": "16a008c86b216ebc7f167304086e8a26a7f249cab32be792dd646ee5cd97170a",
+        "Li-Ti-P-O_1-Phase.json": "aae28c51723bd799ad48fe355e37be63a8575d19b0dac6ac452a7b22497bc38d",
+        "Li-Ti-P-O_Mixtures.npz": "006c29757bf5ad9102c618cc1f90751ca7daf829acc3af9f3a56732ba1b917f6",
+        "Li-Ti-P-O_Mixtures.json": "ce8a11697e7facd841291b66df098fd46b06f52ea9004431f65d89eafa538ea9"
+      },
+      "task_sha256": "9f6d29ceb7c0ea5a74ed76f458c0dcb26fcf05b80a0e38557336238970a221ff",
+      "candidate_sha256": "2c81e2aa1cea139eb7b4e2fcd04910e55dd26eb8d9b9366cef4beee128f1e6eb",
+      "stderr": "",
+      "output_files": [
+        "additional_metrics.json",
+        "design.json",
+        "diagnostics.png",
+        "error_examples.csv",
+        "execution.json",
+        "metrics.csv",
+        "predictions.csv",
+        "report.md",
+        "result.json",
+        "run.py",
+        "splits.csv",
+        "uncertainty.json"
+      ],
+      "prompt_matches_reviewed_entry": true,
+      "all_deterministic_outputs_match_published_candidate": true,
+      "compared_output_files": [
+        "additional_metrics.json",
+        "design.json",
+        "diagnostics.png",
+        "error_examples.csv",
+        "metrics.csv",
+        "predictions.csv",
+        "report.md",
+        "result.json",
+        "run.py",
+        "splits.csv",
+        "uncertainty.json"
+      ],
+      "output_sha256": {
+        "additional_metrics.json": "fe2e4790f9e03f08a37a82720d9fc322b8aceef2a0e0802e5598714e44b27c1c",
+        "design.json": "7c576be17669875109a98da72b7b14e15cb02ba6ebdcac117fa0765a26a972e1",
+        "diagnostics.png": "ac91d99bad877d24730afd6cf30540b448d659201fec0b7a8b6364a4d8187fbd",
+        "error_examples.csv": "11b78ce81b1376344fa6ba8913b47439f31d5bb03181a8376d343521012dc730",
+        "metrics.csv": "38e9ebccfb32854f48c6e4b120249cbbd795ff54c266c5a641b329a800cb320f",
+        "predictions.csv": "540a8f1993d0a4d667e49222837af5da5aed17123acfd0cb544dd29705afafbe",
+        "report.md": "e1c783531c4bda2de120dc78e70ab8d0955e971fadcebc6e6e11c8fbe777d039",
+        "result.json": "388a84817a2896e03036ee847b7e102144c103731e2be1752e90c8ee8158778f",
+        "run.py": "2c81e2aa1cea139eb7b4e2fcd04910e55dd26eb8d9b9366cef4beee128f1e6eb",
+        "splits.csv": "9a35c9705c3ffdc9dbf07e7d2d44c660b89f7cc3f9cd1bb6d0e4f1d87b80d64c",
+        "uncertainty.json": "af598a93fe1524a1d2771ff181181c3e312c518a20f92d8051594669f71fee83"
+      }
+    },
+    {
+      "question": "Q3",
+      "command": [
+        "/tmp/torrisi-env/bin/python",
+        "/tmp/szymanski-v2/prompt-cleanup/Q3_runner/candidate.py",
+        "Q3",
+        "--inputs",
+        "/tmp/szymanski-v2/prompt-cleanup/Q3_bundle/inputs",
+        "--output",
+        "/tmp/szymanski-v2/prompt-cleanup/Q3"
+      ],
+      "environment": {
+        "OPENBLAS_NUM_THREADS": "1",
+        "MPLCONFIGDIR": "/tmp/szymanski-v2-independent-mpl"
+      },
+      "working_directory": "/tmp/szymanski-v2/prompt-cleanup/Q3_runner",
+      "wall_seconds": 2.2235685150371864,
+      "returncode": 0,
+      "export_files": [
+        "inputs/Li-Ti-P-O_1-Phase.json",
+        "inputs/Li-Ti-P-O_1-Phase.npz",
+        "task.json"
+      ],
+      "input_sha256": {
+        "Li-Ti-P-O_1-Phase.npz": "16a008c86b216ebc7f167304086e8a26a7f249cab32be792dd646ee5cd97170a",
+        "Li-Ti-P-O_1-Phase.json": "aae28c51723bd799ad48fe355e37be63a8575d19b0dac6ac452a7b22497bc38d"
+      },
+      "task_sha256": "1e25014358f08e3341ddb1e4a72b842518ef32af716507eb5b376511faaf8e3f",
+      "candidate_sha256": "2c81e2aa1cea139eb7b4e2fcd04910e55dd26eb8d9b9366cef4beee128f1e6eb",
+      "stderr": "",
+      "output_files": [
+        "conditions.csv",
+        "design.json",
+        "diagnostics.png",
+        "distortion.csv",
+        "evidence.json",
+        "evidence.npz",
+        "execution.json",
+        "metrics.csv",
+        "predictions.csv",
+        "report.md",
+        "result.json",
+        "run.py",
+        "splits.csv",
+        "uncertainty.json"
+      ],
+      "prompt_matches_reviewed_entry": true,
+      "all_deterministic_outputs_match_published_candidate": true,
+      "compared_output_files": [
+        "conditions.csv",
+        "design.json",
+        "diagnostics.png",
+        "distortion.csv",
+        "evidence.json",
+        "evidence.npz",
+        "metrics.csv",
+        "predictions.csv",
+        "report.md",
+        "result.json",
+        "run.py",
+        "splits.csv",
+        "uncertainty.json"
+      ],
+      "output_sha256": {
+        "conditions.csv": "f5970ed64224d87aa43e1c81e721db63721b5d3a266d23debae564cb6c9d387b",
+        "design.json": "80477205f549df26d0c34fa282cb55d4d7a8304d081dd7446f4f8793c3a8155b",
+        "diagnostics.png": "1833282325f2f050c50a0e260cbbbf64143e98566289fd8566bcdf661495c949",
+        "distortion.csv": "61caa8e6799948df001a83dc8dc875615f778d7e1463a04ffa3fc511be5f6c8d",
+        "evidence.json": "0a9f34d622ef68e779f488dc1f009c75bdecf8d27873084e0afeeb6bf1f028c7",
+        "evidence.npz": "f986569349f6a7a86eb76c90da12d7e81c80b37f30ab41e2b6c95477f4277487",
+        "metrics.csv": "d68dfe77146680b477666df608c6d467e44267ebf2ff79b4cb41d30e667ae986",
+        "predictions.csv": "a7ebabd638fb14497ec77d548b2fab6e0039b55c001bd823698a80810cbfc4b1",
+        "report.md": "b90248a174369e12ff8f6f88ae78d728323ed6aa3b1bdd11b621ce66ad79e293",
+        "result.json": "8e124c1b6ad7629803d0794591bb80575693159a2a62473b36ca99ac3a09e695",
+        "run.py": "2c81e2aa1cea139eb7b4e2fcd04910e55dd26eb8d9b9366cef4beee128f1e6eb",
+        "splits.csv": "e9494e268a3622c944ac24e68d08e3dcf1d1a1d123d9bf9a88111568bb1f0248",
+        "uncertainty.json": "451cfe61ffedd785da9755ae738eba43cd9da31f854dd6afcd2bf7f3b5b6a25d"
+      }
+    },
+    {
+      "question": "Q4",
+      "command": [
+        "/tmp/torrisi-env/bin/python",
+        "/tmp/szymanski-v2/prompt-cleanup/Q4_runner/candidate.py",
+        "Q4",
+        "--inputs",
+        "/tmp/szymanski-v2/prompt-cleanup/Q4_bundle/inputs",
+        "--output",
+        "/tmp/szymanski-v2/prompt-cleanup/Q4"
+      ],
+      "environment": {
+        "OPENBLAS_NUM_THREADS": "1",
+        "MPLCONFIGDIR": "/tmp/szymanski-v2-independent-mpl"
+      },
+      "working_directory": "/tmp/szymanski-v2/prompt-cleanup/Q4_runner",
+      "wall_seconds": 2.5749573259381577,
+      "returncode": 0,
+      "export_files": [
+        "inputs/Li-La-Zr-O_1-Phase.json",
+        "inputs/Li-La-Zr-O_1-Phase.npz",
+        "inputs/Li-La-Zr-O_Experiments.json",
+        "inputs/Li-La-Zr-O_Experiments.npz",
+        "inputs/Li-Ti-P-O_1-Phase.json",
+        "inputs/Li-Ti-P-O_1-Phase.npz",
+        "inputs/Li-Ti-P-O_Experiments.json",
+        "inputs/Li-Ti-P-O_Experiments.npz",
+        "task.json"
+      ],
+      "input_sha256": {
+        "Li-La-Zr-O_1-Phase.npz": "52e7994695f32ff686e77f06636eaf1b25e01911577b191fdd2a174dc78b3caf",
+        "Li-La-Zr-O_1-Phase.json": "7a508724f285fc982647c888567ecab8e71a6611d18fa60a723b2cd1b2e8ad03",
+        "Li-La-Zr-O_Experiments.npz": "fd07c6e4c614adbb377ffd7bd5a440d4f978080c6e641232a1a640e0e58fe023",
+        "Li-La-Zr-O_Experiments.json": "5068724fd1bc7416f4bde3d3b965ef9dcd6b09da7ce82a95edb330c4f0d761ac",
+        "Li-Ti-P-O_1-Phase.npz": "16a008c86b216ebc7f167304086e8a26a7f249cab32be792dd646ee5cd97170a",
+        "Li-Ti-P-O_1-Phase.json": "aae28c51723bd799ad48fe355e37be63a8575d19b0dac6ac452a7b22497bc38d",
+        "Li-Ti-P-O_Experiments.npz": "7a1662618a906b81ef21a77e5edaf10b22f17d34f3d66e76b2620b71843b3369",
+        "Li-Ti-P-O_Experiments.json": "473f498a0b1be5bbd2696b4ecbb7c9cf887bb3289ba80d54bdbe971c90606830"
+      },
+      "task_sha256": "0485541c39cd8f1417b75236e7a8d90789a07179e2cb0e78e6ac0b6ff6a77e45",
+      "candidate_sha256": "2c81e2aa1cea139eb7b4e2fcd04910e55dd26eb8d9b9366cef4beee128f1e6eb",
+      "stderr": "",
+      "output_files": [
+        "additional_metrics.json",
+        "design.json",
+        "diagnostics.png",
+        "error_examples.csv",
+        "execution.json",
+        "metrics.csv",
+        "predictions.csv",
+        "report.md",
+        "result.json",
+        "run.py",
+        "splits.csv",
+        "uncertainty.json"
+      ],
+      "prompt_matches_reviewed_entry": true,
+      "all_deterministic_outputs_match_published_candidate": true,
+      "compared_output_files": [
+        "additional_metrics.json",
+        "design.json",
+        "diagnostics.png",
+        "error_examples.csv",
+        "metrics.csv",
+        "predictions.csv",
+        "report.md",
+        "result.json",
+        "run.py",
+        "splits.csv",
+        "uncertainty.json"
+      ],
+      "output_sha256": {
+        "additional_metrics.json": "8e9fc54eac12dd7fbcdb8e2cc9756dbe4056c158a229e07c408700170b25073e",
+        "design.json": "b0499fe21687fd917552049f84fb9378b9dc51700f5d3d23b53693846a7d55a0",
+        "diagnostics.png": "ed34b8f34b5a46cd8fa89b265e75c786adb72c4b1fbee8512e92e5381de34d79",
+        "error_examples.csv": "45bccbe4b9c2970b3b9f43020c4e1ca977796cbfcb9b0204662bbc2d9d8a74d7",
+        "metrics.csv": "2fa4c7e0f6718b0b1fca811c5a5bc3e34a8748e8947ccf69a5c824f9eec585aa",
+        "predictions.csv": "dc3db1c504487b9bb737dda2128fddd1eb8131b6a936fd22a6aeb39d54f1caaf",
+        "report.md": "9ea081abb20332b7c117e5b77c56958d38825a3ad2e2a4ec7ce3fa53d5280bb5",
+        "result.json": "9b2d990841848d633dbf0810a5796510fd06dd545667aae406d5edf3d68e2813",
+        "run.py": "2c81e2aa1cea139eb7b4e2fcd04910e55dd26eb8d9b9366cef4beee128f1e6eb",
+        "splits.csv": "6821fb42d3e6c0319a8f4cf322fa031737ab60169b83911c932cf46413315e13",
+        "uncertainty.json": "7227fe150320b8018a740e0f79ee7ab9254996dd189d7a069b39999fcd315a42"
+      }
+    }
+  ],
+  "contract_tests": [
+    {
+      "question": "Q1",
+      "test": "original",
+      "expected_acceptance": true,
+      "accepted": true,
+      "passed": true,
+      "prediction_rows": 1542,
+      "derived_metric_rows": 24,
+      "metric_table_status": "legacy_table_checked"
+    },
+    {
+      "question": "Q1",
+      "test": "minimal",
+      "expected_acceptance": true,
+      "accepted": true,
+      "passed": true,
+      "prediction_rows": 1542,
+      "derived_metric_rows": 24,
+      "metric_table_status": "absent_recomputed_only",
+      "prediction_columns": [
+        "id",
+        "method",
+        "representation",
+        "predicted"
+      ],
+      "split_columns": [
+        "id",
+        "role"
+      ],
+      "all_derived_metrics_identical_to_rich_output": true
+    },
+    {
+      "question": "Q2",
+      "test": "original",
+      "expected_acceptance": true,
+      "accepted": true,
+      "passed": true,
+      "prediction_rows": 4800,
+      "derived_metric_rows": 36,
+      "metric_table_status": "legacy_table_checked"
+    },
+    {
+      "question": "Q2",
+      "test": "minimal",
+      "expected_acceptance": true,
+      "accepted": true,
+      "passed": true,
+      "prediction_rows": 4800,
+      "derived_metric_rows": 36,
+      "metric_table_status": "absent_recomputed_only",
+      "prediction_columns": [
+        "id",
+        "representation",
+        "predicted"
+      ],
+      "split_columns": [
+        "id",
+        "role"
+      ],
+      "all_derived_metrics_identical_to_rich_output": true
+    },
+    {
+      "question": "Q3",
+      "test": "original",
+      "expected_acceptance": true,
+      "accepted": true,
+      "passed": true,
+      "prediction_rows": 6525,
+      "derived_metric_rows": 90,
+      "metric_table_status": "legacy_table_checked"
+    },
+    {
+      "question": "Q3",
+      "test": "minimal",
+      "expected_acceptance": true,
+      "accepted": true,
+      "passed": true,
+      "prediction_rows": 6525,
+      "derived_metric_rows": 90,
+      "metric_table_status": "absent_recomputed_only",
+      "prediction_columns": [
+        "id",
+        "method",
+        "representation",
+        "condition",
+        "predicted"
+      ],
+      "split_columns": [
+        "id",
+        "role"
+      ],
+      "all_derived_metrics_identical_to_rich_output": true
+    },
+    {
+      "question": "Q4",
+      "test": "original",
+      "expected_acceptance": true,
+      "accepted": true,
+      "passed": true,
+      "prediction_rows": 720,
+      "derived_metric_rows": 180,
+      "metric_table_status": "legacy_table_checked"
+    },
+    {
+      "question": "Q4",
+      "test": "minimal",
+      "expected_acceptance": true,
+      "accepted": true,
+      "passed": true,
+      "prediction_rows": 720,
+      "derived_metric_rows": 180,
+      "metric_table_status": "absent_recomputed_only",
+      "prediction_columns": [
+        "id",
+        "representation",
+        "predicted"
+      ],
+      "split_columns": [
+        "id",
+        "role"
+      ],
+      "all_derived_metrics_identical_to_rich_output": true
+    },
+    {
+      "question": "Q2",
+      "test": "supplemental_metrics",
+      "expected_acceptance": true,
+      "accepted": true,
+      "passed": true,
+      "prediction_rows": 4800,
+      "derived_metric_rows": 36,
+      "metric_table_status": "supplemental_table_requires_review"
+    },
+    {
+      "question": "Q1",
+      "test": "ambiguous_method",
+      "expected_acceptance": false,
+      "accepted": false,
+      "passed": true,
+      "error": "AssertionError: Duplicate prediction: ('A_S_03b4a75e3befc5bf', 'default', 'XRD', 'baseline', 'default')"
+    },
+    {
+      "question": "Q3",
+      "test": "missing_condition",
+      "expected_acceptance": false,
+      "accepted": false,
+      "passed": true,
+      "error": "AssertionError: Missing CSV columns in predictions.csv: ['condition']"
+    },
+    {
+      "question": "Q2",
+      "test": "optional_nonstandard_condition",
+      "expected_acceptance": true,
+      "accepted": true,
+      "passed": true,
+      "condition": "native_specimens",
+      "prediction_rows": 4800,
+      "derived_metric_rows": 36,
+      "metric_table_status": "absent_recomputed_only"
+    }
+  ],
+  "contract_test_count": 12,
+  "all_contract_tests_passed": true,
+  "test_interpretation": "Minimal-contract fixtures project the independently generated scientific outputs onto the smaller schema, removing metrics.csv and only unambiguous method/fold/condition columns. Source-derived metric values remain identical. Tests validate the output interface; scientific reports/code are still evaluated by the separate rubric.",
+  "history": "workflow_execution_review.json is preserved as a historical reproduction record under the preceding prompt projection. This artifact records fresh executions from the cleaned prompts and the current verifier.",
+  "limitations": [
+    "Solver label tables remain readable; execution/source-code review is still necessary to detect leakage.",
+    "An integrity pass does not establish scientific correctness or validate every quantitative claim in the report.",
+    "Unrecognized optional metrics tables are accepted as supplemental evidence requiring review; compatible legacy tables can still be independently checked.",
+    "Minimal CSV fixtures were produced by an explicit output projection for interface testing; the unchanged worked script itself emits richer optional evidence."
+  ]
+}

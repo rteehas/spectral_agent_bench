@@ -20,13 +20,11 @@ PHYSICS = ('The radiation wavelength is 1.5406 Å. Here a virtual PDF is the unc
 SIM_FORMAT = ('Simulation NPZ files contain a shared two-theta axis `theta` in degrees and one native intensity array per record ID. '
               'The matching JSON tables give `id`, `chemistry`, and `phases`; single-phase records also have a native `replicate` index. '
               'Simulated phase IDs combine formula and space-group number. Repeated spectra are augmented realizations of those phases.')
-OUTPUT = ('Return report.md with your scientific answer, methodological justification, uncertainty and limitations; '
-          'diagnostic figures; and runnable analysis code. For numerical checking, supply predictions.csv with columns '
-          'id,method,representation,condition,fold,predicted, where predicted is a JSON list of phase IDs '
-          'and representation is XRD, PDF or Combined. Supply splits.csv with id,fold,role '
-          '(train,validation,test; each fold records disjoint source-record partitions). '
-          'Use consistent method/fold identifiers across comparisons. Supply metrics.csv with '
-          'chemistry,group,method,representation,condition,fold,metric,value,n; n is the number of evaluated records. ')
+OUTPUT = ('Return report.md with your scientific answer, quantitative evidence, methodological justification, uncertainty and limitations; '
+          'diagnostic figures; and runnable analysis code. Supply predictions.csv with id,representation,predicted '
+          '(predicted is a JSON list of phase IDs; representation is XRD, PDF or Combined), '
+          'and splits.csv with id,role (train,validation,test). Add method or fold identifiers where needed '
+          'to distinguish methods or evaluation splits, using matching fold identifiers in both files. ')
 QUESTIONS = [
     {
         'q': 'Q1',
@@ -37,8 +35,7 @@ QUESTIONS = [
                         'on reasonable analysis choices and whether the two representations fail on the same cases. '
                         'Use genuinely held-out spectra; target labels and record IDs must not enter prediction as features. '
                         'Choose and justify the analysis and evaluation design. ' + OUTPUT +
-                        'For Q1 use condition=baseline and group=all; report exact_match. '
-                        'Include XRD, PDF and Combined predictions on the same held-out records within each fold.'),
+                        'Include XRD, PDF and Combined predictions on the same held-out records.'),
         'kinds': ['1-Phase'],
         'chems': CHEMS,
         'source': ('Representation comparison and complementary errors in the single-phase part of Fig. 2. '
@@ -59,9 +56,7 @@ QUESTIONS = [
                         'the results support about mixture complexity. Choose and justify any training, calibration and model-selection '
                         'procedures without using the released mixture labels until final evaluation; do not use the true phase count '
                         'to select predictions. Evaluate every released mixture. ' + OUTPUT +
-                        'For Q2 use condition=baseline and group equal to the true phase count at scoring time; '
-                        'report exact_match, micro_f1 and phase_count_accuracy. Each fold places all released mixtures in test '
-                        'and uses only single-phase source records for training or validation. Include XRD and PDF predictions; '
+                        'Include XRD and PDF predictions; '
                         'Combined predictions are optional.'),
         'kinds': ['1-Phase', 'Mixtures'],
         'chems': CHEMS,
@@ -85,8 +80,7 @@ QUESTIONS = [
                         'beyond the cases used to select it, and quantify the robustness–discrimination tradeoff relative to XRD. '
                         'Choose and justify perturbations, severities, intervals and validation; changes in signal energy alone '
                         'do not establish phase-identification performance. ' + OUTPUT +
-                        'For Q3 use group=all and report exact_match for clean and perturbed held-out spectra. '
-                        'Use method to distinguish interval/model choices and condition to distinguish perturbations and trials; '
+                        'Include a condition column in predictions.csv to distinguish clean spectra, perturbations and trials; '
                         'provide conditions.csv with condition,artifact,description, where artifact is clean,noise or background. '
                         'Save the generated numerical perturbation evidence in evidence.npz and document its arrays in the report '
                         'so the experiment can be reconstructed. Include XRD and PDF predictions. Record IDs always refer to '
@@ -114,9 +108,6 @@ QUESTIONS = [
                         'abundance-dependent conclusion. Choose and justify the transfer and validation strategy without '
                         'using experimental identities or abundances for fitting, tuning or candidate restriction. '
                         'Evaluate every experimental spectrum. ' + OUTPUT.replace('JSON list of phase IDs', 'JSON list of formulas') +
-                        'For Q4 predicted contains formulas, condition=baseline, and group is the secondary weight percentage '
-                        'as a string at scoring time; report exact_match, micro_f1 and minor_recall. Each fold places all '
-                        'experimental records in test and uses only simulated single-phase records for training or validation. '
                         'Include XRD, PDF and Combined predictions.'),
         'kinds': ['1-Phase', 'Experiments'],
         'chems': CHEMS,
@@ -147,7 +138,7 @@ def main():
             asset('provenance.json', 'provenance.json', 'Source archive identity, raw-value projection and availability limits.'),
         ]
         for name in ['verification_audit.json', 'workflow_execution_review.json', 'question_quality_review.json',
-                     'scientific_review.json', 'independent_candidate_evidence_review.json', 'packaging_checks.json']:
+                     'scientific_review.json', 'independent_candidate_evidence_review.json', 'prompt_cleanup_review.json', 'packaging_checks.json']:
             if (BASE/'verification'/name).exists():
                 evidence.append(asset(name, 'verification/'+name, 'Independent audit/review evidence for this open research revision.'))
         methods = [asset('candidate.py', 'workflows/candidate.py', 'One executed worked solution; model and numerical choices are not mandatory.'),
@@ -203,6 +194,6 @@ def main():
     write(HERE/'paper.json',paper)
     path=ROOT/'docs/data/benchmark.json';dataset=json.loads(path.read_text())
     dataset['papers']=[p for p in dataset['papers'] if p['id']!=paper['id']]+[paper]
-    dataset['datasetId']='spectral-agent-v1-20260925-szymanski-research-v2';write(path,dataset)
+    dataset['datasetId']='spectral-agent-v1-20260925-szymanski-prompts-v3';write(path,dataset)
 
 if __name__=='__main__':main()

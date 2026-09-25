@@ -60,9 +60,10 @@ def main():
             q=scenario['id'].rsplit('-',1)[-1];expected=expected_inputs(q)
             require({a['name'] for a in scenario['inputs']}==expected,'Wrong per-question raw input set')
             prompt='\n'.join(scenario['prompt'].values())
-            for token in ['protocol.json','output_schema.json','RidgeClassifier','NNLS','paired training/test protocol','prescribed single-phase training']:
+            for token in ['protocol.json','output_schema.json','RidgeClassifier','NNLS','paired training/test protocol',
+                          'prescribed single-phase training','condition=baseline','group=','metrics.csv','exact_match','micro_f1']:
                 require(token not in prompt,'Hidden recipe in prompt: '+token)
-            for field in ['predictions.csv','splits.csv','metrics.csv','report.md']:
+            for field in ['predictions.csv','splits.csv','report.md']:
                 require(field in prompt,'Output essentials not inline: '+field)
             require('the paper' not in prompt.lower() and 'doi.org' not in prompt.lower(),'Paper-dependent prompt')
             dest=Path(temporary)/q
@@ -82,7 +83,7 @@ def main():
     require(check.returncode==0,check.stdout+check.stderr)
     report={'revision':'open-research-v2','status':'passed','sample_count':len(sample_ids),'inventory':inventory,'exports':exports,
             'input_only_files':sorted(raw_files),'protocol_and_schema_files_absent':True,'preassigned_splits_absent':True,
-            'pooled_mixture_ids_opaque':True,'schema_validation':check.stdout.strip(),
+            'pooled_mixture_ids_opaque':True,'derived_metric_bookkeeping_absent_from_prompts':True,'schema_validation':check.stdout.strip(),
             'label_boundary':'Labels remain readable for scientific evaluation; target separation requires submitted-code/execution review, not just CSV checks.'}
     (DATA/'verification/packaging_checks.json').write_text(json.dumps(report,indent=2)+'\n')
     print(json.dumps(report,indent=2))

@@ -29,6 +29,8 @@ All records now use opaque IDs. Two- and three-phase simulations are pooled into
 
 Each question directly states only the data/label semantics, wavelength, virtual-PDF definition, research objective, evaluation boundary and compact output contract. No learner, parameter, grid, normalization, partition, fusion, perturbation magnitude or distance window is prescribed. Output formatting enables independent checks and does not define the analysis.
 
+Predictions need only source ID, representation and predicted labels; the partition table needs source ID and role. Method and fold identifiers are needed only to distinguish multiple comparisons. Q3 also records its experimental conditions. Constant condition labels, aggregate grouping labels and a separate metrics table are not requested. The evaluator derives chemistry, phase-count and abundance strata from source metadata and computes its own metrics. Quantitative findings and uncertainty remain part of the scientific report.
+
 ```bash
 python papers/szymanski-2024-xrd-pdf/export_agent_bundle.py Q1 --output /tmp/xrd-q1-agent
 ```
@@ -61,7 +63,7 @@ python scripts/validate_data.py
 
 Repeat the first command for Q2–Q4.
 
-The automatic checker recovers labels from original release filenames, verifies source-record partitions, checks prediction coverage and allowed labels, and independently recomputes reported metrics. It does not load the candidate's predictions or require its estimator, split, transforms, score fusion, windows or outcomes. Additional source audits compare every packaged spectrum against its original release member. Positive controls exercise alternative methods/splits; negative controls test corrupted submissions.
+The automatic checker recovers labels from original release filenames, verifies source-record partitions, checks prediction coverage and allowed labels, and independently computes metrics from predictions. If a supplemental metrics table uses the worked example's recognized format, its arithmetic is checked too; other report tables require scientific review. It does not load the candidate's predictions or require its estimator, split, transforms, score fusion, windows or outcomes. Additional source audits compare every packaged spectrum against its original release member. Positive controls exercise alternative methods/splits and minimal submissions; negative controls test corrupted submissions.
 
 A separate [scientific rubric](../../docs/data/szymanski-2024-xrd-pdf/verification/scientific_review_rubric.md) evaluates design validity, physical/numerical treatment, evaluation and uncertainty, evidence-supported conclusions, and reproducibility. The automatic verdict is **submission integrity only**. A poor or trivial model can submit arithmetically consistent predictions and still fail scientific review. Unsupported causal claims, target leakage or fabricated evidence cannot pass by matching a numerical table.
 

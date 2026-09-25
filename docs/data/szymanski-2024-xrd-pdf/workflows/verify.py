@@ -16,7 +16,7 @@ import numpy as np
 
 DATA = Path(__file__).resolve().parents[1]
 REPRESENTATIONS = {'XRD', 'PDF', 'Combined'}
-PREDICTION_FIELDS = {'id', 'method', 'representation', 'condition', 'fold', 'predicted'}
+PREDICTION_FIELDS = {'id', 'representation', 'predicted'}
 METRIC_FIELDS = {'chemistry', 'group', 'method', 'representation', 'condition', 'fold', 'metric', 'value', 'n'}
 
 
@@ -33,6 +33,7 @@ def read_json(path):
 def read_csv(path, required):
     with Path(path).open(newline='') as stream:
         reader = csv.DictReader(stream)
+        require(len(reader.fieldnames or []) == len(set(reader.fieldnames or [])), f'Duplicate CSV columns: {path.name}')
         require(required <= set(reader.fieldnames or []), f'Missing CSV columns in {path.name}: {sorted(required - set(reader.fieldnames or []))}')
         rows = list(reader)
     require(rows, f'Empty CSV: {path.name}')
@@ -66,9 +67,20 @@ def source_truth(data=DATA):
     return truth
 
 
-def load_predictions(path):
+def default_identifier(row, field, default):
+    """Only absent columns get defaults; mixed blank identifiers are ambiguous."""
+    if field not in row:
+        row[field] = default
+    require(isinstance(row[field], str) and row[field].strip(), f'Blank or missing supplied {field} identifier')
+
+
+def load_predictions(path, question=None):
     predictions = {}
-    for row in read_csv(Path(path), PREDICTION_FIELDS):
+    required = PREDICTION_FIELDS | ({'condition'} if question == 'Q3' else set())
+    for row in read_csv(Path(path), required):
+        default_identifier(row, 'method', 'default')
+        default_identifier(row, 'fold', 'default')
+        default_identifier(row, 'condition', 'baseline')
         key = tuple(row[field] for field in ('id', 'method', 'representation', 'condition', 'fold'))
         require(key not in predictions, f'Duplicate prediction: {key}')
         require(all(str(item).strip() for item in key), f'Empty prediction identifier: {key}')
@@ -85,7 +97,8 @@ def check_partitions(path, question, truth):
     splits = defaultdict(lambda: defaultdict(set))
     seen = set()
     allowed_kinds = {'1-Phase'} if question in ('Q1', 'Q3') else {'1-Phase', '2-Phase', '3-Phase'} if question == 'Q2' else {'1-Phase', 'Experiments'}
-    for row in read_csv(Path(path), {'id', 'fold', 'role'}):
+    for row in read_csv(Path(path), {'id', 'role'}):
+        default_identifier(row, 'fold', 'default')
         sid, fold, role = row['id'], row['fold'], row['role']
         require(sid in truth, f'Unknown split source ID: {sid}')
         require(fold.strip() and role in {'train', 'validation', 'test'}, f'Invalid split role/fold: {row}')
@@ -190,11 +203,11 @@ def check_prediction_coverage(question, predictions, splits, truth, conditions):
     require({key[3] for key in grouped} == set(splits), 'A declared fold has no predictions')
     for key, ids in grouped.items():
         require(ids == splits[key[3]]['test'], f'Missing or extra evaluation targets: {key}')
-    methods = {(method, fold) for method, _, _, fold in grouped}
     if question != 'Q3':
-        for method, fold in methods:
+        comparisons = {(method, fold, condition) for method, _, condition, fold in grouped}
+        for method, fold, condition in comparisons:
             required = {'XRD', 'PDF'} if question == 'Q2' else REPRESENTATIONS
-            require(required <= {representation for m, representation, _, f in grouped if (m, f) == (method, fold)}, f'Missing representation comparison: {method}/{fold}')
+            require(required <= {representation for m, representation, c, f in grouped if (m, f, c) == (method, fold, condition)}, f'Missing representation comparison: {method}/{fold}/{condition}')
     else:
         require({'XRD', 'PDF'} <= {key[1] for key in grouped}, 'Q3 needs XRD and PDF classification comparisons')
         for method, representation, _, fold in grouped:
@@ -260,19 +273,36 @@ def verify(question, output, reference=None, data=DATA):
             require(row['artifact'] in {'clean', 'noise', 'background'} and row['description'].strip(), 'Unknown or undescribed perturbation condition')
             conditions[row['condition']] = row
         require({row['artifact'] for row in conditions.values()} == {'clean', 'noise', 'background'}, 'Q3 requires clean, noise, and background conditions')
-    predictions = load_predictions(output / 'predictions.csv')
+    predictions = load_predictions(output / 'predictions.csv', question)
+    if question != 'Q3':
+        conditions = {row['condition']: {'artifact': 'clean'} for row in predictions.values()}
     comparisons = check_prediction_coverage(question, predictions, splits, truth, conditions)
     metrics = independent_metrics(question, predictions, truth)
     optional_metrics = {'micro_f1'} if question in {'Q1', 'Q3'} else set()
-    unchecked_metrics = check_metrics(output / 'metrics.csv', metrics, optional_metrics)
+    metric_path = output / 'metrics.csv'
+    metric_table_status = 'absent_recomputed_only'
+    metric_columns, unchecked_metrics = [], []
+    if metric_path.exists():
+        with metric_path.open(newline='') as stream:
+            metric_columns = next(csv.reader(stream), [])
+        if METRIC_FIELDS <= set(metric_columns):
+            unchecked_metrics = check_metrics(metric_path, metrics, optional_metrics)
+            metric_table_status = 'legacy_table_checked'
+        else:
+            metric_table_status = 'supplemental_table_requires_review'
     return {'question': question, 'integrity_passed': True,
             'scientific_correctness': 'NOT DETERMINED: mandatory execution/code audit and scored scientific review remain.',
             'reference_predictions_compared': False, 'source_filename_truth': True,
             'prediction_rows': len(predictions), 'comparison_cells': comparisons,
             'core_metric_rows_independently_recomputed': len(metrics), 'metrics': metrics,
+            'optional_metric_table_checked': metric_table_status == 'legacy_table_checked',
+            'optional_metric_table_status': metric_table_status,
+            'supplemental_metric_columns': metric_columns if metric_table_status == 'supplemental_table_requires_review' else [],
+            'report_claims_checked': False,
             'complementarity': complementarity(predictions, truth),
             'unchecked_extra_metrics': unchecked_metrics, **evidence,
-            'limitations': ['Output declarations cannot prove that test labels were not used in fitting, tuning, phase-count selection, or interpretation.',
+            'limitations': ['Quantitative claims in report.md require scientific review against the evaluator-recomputed metrics; a submitted metrics.csv is optional.',
+                           'Output declarations cannot prove that test labels were not used in fitting, tuning, phase-count selection, or interpretation.',
                            'Disjoint sample IDs do not establish independence of augmented or related source structures.',
                            'Plots, code presence, and finite evidence arrays do not establish physical or scientific validity.',
                            'No minimum accuracy or preferred representation is imposed; meaningful negative findings can earn full scientific credit.'],

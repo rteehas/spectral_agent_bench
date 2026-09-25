@@ -2,6 +2,8 @@
 
 The automatic verifier checks source identities, declared partition disjointness, prediction coverage, label vocabulary, core metric arithmetic, and artifact presence. `integrity_passed` is **not** a scientific-correctness verdict. Its checks neither select an algorithm nor require matching illustrative candidate predictions. Evaluate the submitted code, execution traces, report, figures, and saved evidence before assigning the following score. A defensible negative result may earn full credit; agreement with a paper's conclusions is not a scoring criterion.
 
+The evaluator derives its metrics and subgroups directly from predictions and source metadata. No separate metrics table is required from the solver. Compare quantitative claims in the report with those recomputed values; an automatic integrity pass does not validate prose claims or unrecognized supplemental tables.
+
 ## Mandatory validity gate
 
 Evidence of test-label use in fitting, tuning, deciding phase count, or choosing a reported window invalidates the affected scientific comparison. Fabricated spectra/results or an execution trace that fails to support the reported analysis also invalidate it. Record the evidence, do not infer misconduct from low accuracy or an unexpected result. Source metadata labels are readable for independent scoring; automatic checks cannot prove that the scientific separation was respected. Rerun the submission in a fresh solver bundle and trace data dependencies. If execution cannot be reproduced, report that limitation rather than silently accepting the numbers.

@@ -85,6 +85,7 @@
   "protocol_and_schema_files_absent": true,
   "preassigned_splits_absent": true,
   "pooled_mixture_ids_opaque": true,
+  "derived_metric_bookkeeping_absent_from_prompts": true,
   "schema_validation": "Valid dataset: 3 papers, 12 scenarios.",
   "label_boundary": "Labels remain readable for scientific evaluation; target separation requires submitted-code/execution review, not just CSV checks."
 }

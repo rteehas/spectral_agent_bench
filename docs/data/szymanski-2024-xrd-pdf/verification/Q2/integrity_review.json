@@ -405,6 +405,10 @@
       "n": 400
     }
   ],
+  "optional_metric_table_checked": true,
+  "optional_metric_table_status": "legacy_table_checked",
+  "supplemental_metric_columns": [],
+  "report_claims_checked": false,
   "complementarity": [
     {
       "method": "NNLS",
@@ -432,6 +436,7 @@
   "unchecked_extra_metrics": [],
   "numeric_evidence_check": "Not applicable",
   "limitations": [
+    "Quantitative claims in report.md require scientific review against the evaluator-recomputed metrics; a submitted metrics.csv is optional.",
     "Output declarations cannot prove that test labels were not used in fitting, tuning, phase-count selection, or interpretation.",
     "Disjoint sample IDs do not establish independence of augmented or related source structures.",
     "Plots, code presence, and finite evidence arrays do not establish physical or scientific validity.",

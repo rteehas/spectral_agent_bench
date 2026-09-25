@@ -42,6 +42,7 @@
       "Readable target metadata labels are for scoring; declared partitions alone cannot prove they were not used during inference."
     ]
   },
+  "verifier_sha256": "4036c1727a5dee301d2f113c2f8374f3422198442ae580f03bf3bd9b6bf7c703",
   "verification_controls": [
     {
       "question": "Q1",
@@ -51,9 +52,40 @@
         "scientific_correctness": "NOT DETERMINED: mandatory execution/code audit and scored scientific review remain.",
         "reference_predictions_compared": false,
         "prediction_rows": 1542,
-        "core_metric_rows_independently_recomputed": 24
+        "core_metric_rows_independently_recomputed": 24,
+        "optional_metric_table_status": "legacy_table_checked"
       },
       "synthetic_alternative_integrity_controls": [
+        {
+          "control": "minimal_predictions_and_splits_omit_optional_identifiers_and_metrics",
+          "question": "Q1",
+          "integrity_passed": true,
+          "scientific_correctness": "NOT DETERMINED: mandatory execution/code audit and scored scientific review remain.",
+          "reference_predictions_compared": false,
+          "prediction_rows": 771,
+          "core_metric_rows_independently_recomputed": 12,
+          "optional_metric_table_status": "absent_recomputed_only"
+        },
+        {
+          "control": "alternative_optional_metric_table_is_supplemental_not_hidden_schema_failure",
+          "question": "Q1",
+          "integrity_passed": true,
+          "scientific_correctness": "NOT DETERMINED: mandatory execution/code audit and scored scientific review remain.",
+          "reference_predictions_compared": false,
+          "prediction_rows": 771,
+          "core_metric_rows_independently_recomputed": 12,
+          "optional_metric_table_status": "supplemental_table_requires_review"
+        },
+        {
+          "control": "condition_name_is_not_a_prescribed_constant",
+          "question": "Q1",
+          "integrity_passed": true,
+          "scientific_correctness": "NOT DETERMINED: mandatory execution/code audit and scored scientific review remain.",
+          "reference_predictions_compared": false,
+          "prediction_rows": 1542,
+          "core_metric_rows_independently_recomputed": 24,
+          "optional_metric_table_status": "legacy_table_checked"
+        },
         {
           "control": "optional_redundant_micro_f1_omitted",
           "question": "Q1",
@@ -61,7 +93,8 @@
           "scientific_correctness": "NOT DETERMINED: mandatory execution/code audit and scored scientific review remain.",
           "reference_predictions_compared": false,
           "prediction_rows": 1542,
-          "core_metric_rows_independently_recomputed": 24
+          "core_metric_rows_independently_recomputed": 24,
+          "optional_metric_table_status": "legacy_table_checked"
         },
         {
           "control": "different_method_and_predictions_with_correctly_recomputed_metrics",
@@ -70,7 +103,8 @@
           "scientific_correctness": "NOT DETERMINED: mandatory execution/code audit and scored scientific review remain.",
           "reference_predictions_compared": false,
           "prediction_rows": 1542,
-          "core_metric_rows_independently_recomputed": 24
+          "core_metric_rows_independently_recomputed": 24,
+          "optional_metric_table_status": "legacy_table_checked"
         },
         {
           "control": "different_disjoint_solver_chosen_split",
@@ -79,7 +113,8 @@
           "scientific_correctness": "NOT DETERMINED: mandatory execution/code audit and scored scientific review remain.",
           "reference_predictions_compared": false,
           "prediction_rows": 1542,
-          "core_metric_rows_independently_recomputed": 24
+          "core_metric_rows_independently_recomputed": 24,
+          "optional_metric_table_status": "legacy_table_checked"
         }
       ],
       "invalid_integrity_controls": [
@@ -126,12 +161,12 @@
         {
           "control": "missing_representation",
           "rejected": true,
-          "reason": "Missing representation comparison: Ridge/0"
+          "reason": "Missing representation comparison: Ridge/0/baseline"
         },
         {
           "control": "unknown_condition",
           "rejected": true,
-          "reason": "Undeclared condition: undeclared-condition"
+          "reason": "Missing or extra evaluation targets: ('Ridge', 'XRD', 'undeclared-condition', '0')"
         },
         {
           "control": "overlapping_partition",
@@ -174,6 +209,41 @@
           "reason": "Missing reported core metric: ('Li-La-Zr-O', 'all', 'RBF-SVM', 'Combined', 'baseline', '0', 'exact_match')"
         },
         {
+          "control": "blank_prediction_method",
+          "rejected": true,
+          "reason": "Blank or missing supplied method identifier"
+        },
+        {
+          "control": "blank_prediction_fold",
+          "rejected": true,
+          "reason": "Blank or missing supplied fold identifier"
+        },
+        {
+          "control": "blank_prediction_condition",
+          "rejected": true,
+          "reason": "Blank or missing supplied condition identifier"
+        },
+        {
+          "control": "blank_split_fold",
+          "rejected": true,
+          "reason": "Blank or missing supplied fold identifier"
+        },
+        {
+          "control": "fold_omitted_in_predictions_only",
+          "rejected": true,
+          "reason": "Unknown prediction source or fold: A_S_03b4a75e3befc5bf/default"
+        },
+        {
+          "control": "fold_omitted_in_splits_only",
+          "rejected": true,
+          "reason": "Unknown prediction source or fold: A_S_03b4a75e3befc5bf/0"
+        },
+        {
+          "control": "ambiguous_method_omission",
+          "rejected": true,
+          "reason": "Duplicate prediction: ('A_S_03b4a75e3befc5bf', 'default', 'XRD', 'baseline', '0')"
+        },
+        {
           "control": "wrong_optional_micro_f1",
           "rejected": true,
           "reason": "Reported metric disagrees with source-derived truth: ('Li-La-Zr-O', 'all', 'RBF-SVM', 'Combined', 'baseline', '0', 'micro_f1')"
@@ -188,9 +258,40 @@
         "scientific_correctness": "NOT DETERMINED: mandatory execution/code audit and scored scientific review remain.",
         "reference_predictions_compared": false,
         "prediction_rows": 4800,
-        "core_metric_rows_independently_recomputed": 36
+        "core_metric_rows_independently_recomputed": 36,
+        "optional_metric_table_status": "legacy_table_checked"
       },
       "synthetic_alternative_integrity_controls": [
+        {
+          "control": "minimal_predictions_and_splits_omit_optional_identifiers_and_metrics",
+          "question": "Q2",
+          "integrity_passed": true,
+          "scientific_correctness": "NOT DETERMINED: mandatory execution/code audit and scored scientific review remain.",
+          "reference_predictions_compared": false,
+          "prediction_rows": 4800,
+          "core_metric_rows_independently_recomputed": 36,
+          "optional_metric_table_status": "absent_recomputed_only"
+        },
+        {
+          "control": "alternative_optional_metric_table_is_supplemental_not_hidden_schema_failure",
+          "question": "Q2",
+          "integrity_passed": true,
+          "scientific_correctness": "NOT DETERMINED: mandatory execution/code audit and scored scientific review remain.",
+          "reference_predictions_compared": false,
+          "prediction_rows": 4800,
+          "core_metric_rows_independently_recomputed": 36,
+          "optional_metric_table_status": "supplemental_table_requires_review"
+        },
+        {
+          "control": "condition_name_is_not_a_prescribed_constant",
+          "question": "Q2",
+          "integrity_passed": true,
+          "scientific_correctness": "NOT DETERMINED: mandatory execution/code audit and scored scientific review remain.",
+          "reference_predictions_compared": false,
+          "prediction_rows": 4800,
+          "core_metric_rows_independently_recomputed": 36,
+          "optional_metric_table_status": "legacy_table_checked"
+        },
         {
           "control": "different_method_and_predictions_with_correctly_recomputed_metrics",
           "question": "Q2",
@@ -198,7 +299,8 @@
           "scientific_correctness": "NOT DETERMINED: mandatory execution/code audit and scored scientific review remain.",
           "reference_predictions_compared": false,
           "prediction_rows": 4800,
-          "core_metric_rows_independently_recomputed": 36
+          "core_metric_rows_independently_recomputed": 36,
+          "optional_metric_table_status": "legacy_table_checked"
         }
       ],
       "invalid_integrity_controls": [
@@ -245,12 +347,12 @@
         {
           "control": "missing_representation",
           "rejected": true,
-          "reason": "Missing representation comparison: NNLS/0"
+          "reason": "Missing representation comparison: NNLS/0/baseline"
         },
         {
           "control": "unknown_condition",
           "rejected": true,
-          "reason": "Undeclared condition: undeclared-condition"
+          "reason": "Missing or extra evaluation targets: ('NNLS', 'XRD', 'undeclared-condition', '0')"
         },
         {
           "control": "overlapping_partition",
@@ -291,6 +393,36 @@
           "control": "missing_metric",
           "rejected": true,
           "reason": "Missing reported core metric: ('Li-La-Zr-O', '2', 'NNLS', 'Combined', 'baseline', '0', 'exact_match')"
+        },
+        {
+          "control": "blank_prediction_method",
+          "rejected": true,
+          "reason": "Blank or missing supplied method identifier"
+        },
+        {
+          "control": "blank_prediction_fold",
+          "rejected": true,
+          "reason": "Blank or missing supplied fold identifier"
+        },
+        {
+          "control": "blank_prediction_condition",
+          "rejected": true,
+          "reason": "Blank or missing supplied condition identifier"
+        },
+        {
+          "control": "blank_split_fold",
+          "rejected": true,
+          "reason": "Blank or missing supplied fold identifier"
+        },
+        {
+          "control": "fold_omitted_in_predictions_only",
+          "rejected": true,
+          "reason": "Unknown prediction source or fold: A_M_00275cb210c13ff4/default"
+        },
+        {
+          "control": "fold_omitted_in_splits_only",
+          "rejected": true,
+          "reason": "Unknown prediction source or fold: A_M_00275cb210c13ff4/0"
         }
       ]
     },
@@ -302,9 +434,30 @@
         "scientific_correctness": "NOT DETERMINED: mandatory execution/code audit and scored scientific review remain.",
         "reference_predictions_compared": false,
         "prediction_rows": 6525,
-        "core_metric_rows_independently_recomputed": 90
+        "core_metric_rows_independently_recomputed": 90,
+        "optional_metric_table_status": "legacy_table_checked"
       },
       "synthetic_alternative_integrity_controls": [
+        {
+          "control": "minimal_predictions_and_splits_omit_optional_identifiers_and_metrics",
+          "question": "Q3",
+          "integrity_passed": true,
+          "scientific_correctness": "NOT DETERMINED: mandatory execution/code audit and scored scientific review remain.",
+          "reference_predictions_compared": false,
+          "prediction_rows": 2610,
+          "core_metric_rows_independently_recomputed": 36,
+          "optional_metric_table_status": "absent_recomputed_only"
+        },
+        {
+          "control": "alternative_optional_metric_table_is_supplemental_not_hidden_schema_failure",
+          "question": "Q3",
+          "integrity_passed": true,
+          "scientific_correctness": "NOT DETERMINED: mandatory execution/code audit and scored scientific review remain.",
+          "reference_predictions_compared": false,
+          "prediction_rows": 2610,
+          "core_metric_rows_independently_recomputed": 36,
+          "optional_metric_table_status": "supplemental_table_requires_review"
+        },
         {
           "control": "optional_redundant_micro_f1_omitted",
           "question": "Q3",
@@ -312,7 +465,8 @@
           "scientific_correctness": "NOT DETERMINED: mandatory execution/code audit and scored scientific review remain.",
           "reference_predictions_compared": false,
           "prediction_rows": 6525,
-          "core_metric_rows_independently_recomputed": 90
+          "core_metric_rows_independently_recomputed": 90,
+          "optional_metric_table_status": "legacy_table_checked"
         },
         {
           "control": "different_method_and_predictions_with_correctly_recomputed_metrics",
@@ -321,7 +475,8 @@
           "scientific_correctness": "NOT DETERMINED: mandatory execution/code audit and scored scientific review remain.",
           "reference_predictions_compared": false,
           "prediction_rows": 6525,
-          "core_metric_rows_independently_recomputed": 90
+          "core_metric_rows_independently_recomputed": 90,
+          "optional_metric_table_status": "legacy_table_checked"
         },
         {
           "control": "finite_but_scientifically_unsupported_transform_is_outside_automatic_scope",
@@ -331,7 +486,8 @@
           "scientific_correctness": "NOT DETERMINED: mandatory execution/code audit and scored scientific review remain.",
           "reference_predictions_compared": false,
           "prediction_rows": 6525,
-          "core_metric_rows_independently_recomputed": 90
+          "core_metric_rows_independently_recomputed": 90,
+          "optional_metric_table_status": "legacy_table_checked"
         }
       ],
       "invalid_integrity_controls": [
@@ -426,9 +582,49 @@
           "reason": "Missing reported core metric: ('Li-Ti-P-O', 'all', 'Ridge', 'XRD', 'background_0.05', '0', 'exact_match')"
         },
         {
+          "control": "blank_prediction_method",
+          "rejected": true,
+          "reason": "Blank or missing supplied method identifier"
+        },
+        {
+          "control": "blank_prediction_fold",
+          "rejected": true,
+          "reason": "Blank or missing supplied fold identifier"
+        },
+        {
+          "control": "blank_prediction_condition",
+          "rejected": true,
+          "reason": "Blank or missing supplied condition identifier"
+        },
+        {
+          "control": "blank_split_fold",
+          "rejected": true,
+          "reason": "Blank or missing supplied fold identifier"
+        },
+        {
+          "control": "fold_omitted_in_predictions_only",
+          "rejected": true,
+          "reason": "Unknown prediction source or fold: B_S_02723e6d57e53340/default"
+        },
+        {
+          "control": "fold_omitted_in_splits_only",
+          "rejected": true,
+          "reason": "Unknown prediction source or fold: B_S_02723e6d57e53340/0"
+        },
+        {
+          "control": "ambiguous_method_omission",
+          "rejected": true,
+          "reason": "Duplicate prediction: ('B_S_02723e6d57e53340', 'default', 'PDF', 'baseline', '0')"
+        },
+        {
           "control": "wrong_optional_micro_f1",
           "rejected": true,
           "reason": "Reported metric disagrees with source-derived truth: ('Li-Ti-P-O', 'all', 'Ridge', 'XRD', 'background_0.05', '0', 'micro_f1')"
+        },
+        {
+          "control": "missing_q3_condition_column",
+          "rejected": true,
+          "reason": "Missing CSV columns in predictions.csv: ['condition']"
         },
         {
           "control": "nonfinite_evidence",
@@ -460,9 +656,40 @@
         "scientific_correctness": "NOT DETERMINED: mandatory execution/code audit and scored scientific review remain.",
         "reference_predictions_compared": false,
         "prediction_rows": 720,
-        "core_metric_rows_independently_recomputed": 180
+        "core_metric_rows_independently_recomputed": 180,
+        "optional_metric_table_status": "legacy_table_checked"
       },
       "synthetic_alternative_integrity_controls": [
+        {
+          "control": "minimal_predictions_and_splits_omit_optional_identifiers_and_metrics",
+          "question": "Q4",
+          "integrity_passed": true,
+          "scientific_correctness": "NOT DETERMINED: mandatory execution/code audit and scored scientific review remain.",
+          "reference_predictions_compared": false,
+          "prediction_rows": 720,
+          "core_metric_rows_independently_recomputed": 180,
+          "optional_metric_table_status": "absent_recomputed_only"
+        },
+        {
+          "control": "alternative_optional_metric_table_is_supplemental_not_hidden_schema_failure",
+          "question": "Q4",
+          "integrity_passed": true,
+          "scientific_correctness": "NOT DETERMINED: mandatory execution/code audit and scored scientific review remain.",
+          "reference_predictions_compared": false,
+          "prediction_rows": 720,
+          "core_metric_rows_independently_recomputed": 180,
+          "optional_metric_table_status": "supplemental_table_requires_review"
+        },
+        {
+          "control": "condition_name_is_not_a_prescribed_constant",
+          "question": "Q4",
+          "integrity_passed": true,
+          "scientific_correctness": "NOT DETERMINED: mandatory execution/code audit and scored scientific review remain.",
+          "reference_predictions_compared": false,
+          "prediction_rows": 720,
+          "core_metric_rows_independently_recomputed": 180,
+          "optional_metric_table_status": "legacy_table_checked"
+        },
         {
           "control": "different_method_and_predictions_with_correctly_recomputed_metrics",
           "question": "Q4",
@@ -470,7 +697,8 @@
           "scientific_correctness": "NOT DETERMINED: mandatory execution/code audit and scored scientific review remain.",
           "reference_predictions_compared": false,
           "prediction_rows": 720,
-          "core_metric_rows_independently_recomputed": 180
+          "core_metric_rows_independently_recomputed": 180,
+          "optional_metric_table_status": "legacy_table_checked"
         }
       ],
       "invalid_integrity_controls": [
@@ -517,12 +745,12 @@
         {
           "control": "missing_representation",
           "rejected": true,
-          "reason": "Missing representation comparison: NNLS/0"
+          "reason": "Missing representation comparison: NNLS/0/baseline"
         },
         {
           "control": "unknown_condition",
           "rejected": true,
-          "reason": "Undeclared condition: undeclared-condition"
+          "reason": "Missing or extra evaluation targets: ('NNLS', 'XRD', 'undeclared-condition', '0')"
         },
         {
           "control": "overlapping_partition",
@@ -563,11 +791,41 @@
           "control": "missing_metric",
           "rejected": true,
           "reason": "Missing reported core metric: ('Li-La-Zr-O', '10', 'NNLS', 'Combined', 'baseline', '0', 'exact_match')"
+        },
+        {
+          "control": "blank_prediction_method",
+          "rejected": true,
+          "reason": "Blank or missing supplied method identifier"
+        },
+        {
+          "control": "blank_prediction_fold",
+          "rejected": true,
+          "reason": "Blank or missing supplied fold identifier"
+        },
+        {
+          "control": "blank_prediction_condition",
+          "rejected": true,
+          "reason": "Blank or missing supplied condition identifier"
+        },
+        {
+          "control": "blank_split_fold",
+          "rejected": true,
+          "reason": "Blank or missing supplied fold identifier"
+        },
+        {
+          "control": "fold_omitted_in_predictions_only",
+          "rejected": true,
+          "reason": "Unknown prediction source or fold: A_E_017c5016a5c515d3/default"
+        },
+        {
+          "control": "fold_omitted_in_splits_only",
+          "rejected": true,
+          "reason": "Unknown prediction source or fold: A_E_017c5016a5c515d3/0"
         }
       ]
     }
   ],
-  "invalid_controls_rejected": 78,
-  "alternative_integrity_controls_accepted": 8,
+  "invalid_controls_rejected": 105,
+  "alternative_integrity_controls_accepted": 19,
   "scope": "Source projection and automated integrity checks only. Alternative controls are synthetic verifier tests, not scientific results. Mandatory execution/code audit and scored scientific review are separate."
 }
