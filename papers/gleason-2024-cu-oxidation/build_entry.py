@@ -76,6 +76,8 @@ sc.append(make('Q1','What material-level Cu L₂,₃ spectrum is predicted for T
     }))
 from search_simulation_question import build_scenario
 sc.append(build_scenario(DOCS,BASE))
+from oxidation_label_question import build_scenario as build_label_scenario
+sc.append(build_label_scenario(DOCS,BASE))
 
 paper={'id':'gleason-2024-cu-oxidation','title':'Prediction of the Cu oxidation state from EELS and XAS spectra using supervised machine learning','authors':'Samuel P. Gleason, Deyu Lu and Jim Ciston (2024)','doi':'10.1038/s41524-024-01408-1','category':'Cu oxidation-state spectroscopy','facility':'Materials Project / FEFF9; NCEM Molecular Foundry; CFN Brookhaven','pdf':PAPER+'.pdf','dataUrl':'https://zenodo.org/records/18142209','codeUrl':CODE,'scenarios':sc}
 path=DOCS/'data/benchmark.json';data=json.loads(path.read_text());data['papers']=[p for p in data['papers'] if p['id']!=paper['id']]+[paper]

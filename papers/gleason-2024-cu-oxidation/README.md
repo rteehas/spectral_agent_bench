@@ -2,12 +2,13 @@
 
 [Paper](https://doi.org/10.1038/s41524-024-01408-1) · [Open release](https://zenodo.org/records/18142209) · [Pinned source](https://github.com/smglsn12/ML_XAS_EELS/tree/85e0f34e448247f6c7a01705807dae39dd1d6cbd)
 
-This entry contains one offline question and one draft question covering a live material search and fresh FEFF simulations. Each starts at its relevant stage. Q1 supplies individual FEFF outputs; Q8 supplies seed material IDs and simulation settings. No question requires the result of another benchmark question. Q8 requires external runtime services and has only component-level validation so far.
+This entry contains one offline question and two questions requiring live Materials Project access. Each starts at its relevant stage. Q1 supplies individual FEFF outputs; Q8 supplies seed material IDs and simulation settings; Q9 supplies a spectrum-to-material ID table for oxidation-state labeling. No question requires the result of another benchmark question. Q8 and Q9 require external runtime services and have only component-level validation so far.
 
 | ID | Research question | Minimal inputs | Verification basis |
 |---|---|---|---|
 | GLEASON24-Q1 | What material-level Cu L₂,₃ spectrum is predicted for TbCu₅? | Four site/edge FEFF outputs and one structure-containing input deck | Independent released material spectrum, plus structure multiplicities |
 | GLEASON24-Q8 | Which Cu materials can supply training spectra for oxidation-state prediction across different chemical environments? | Seed IDs, simulation settings, live MP access and a FEFF9 runtime | Independently captured live response; archived references only for matching structures/settings, otherwise independent evaluator FEFF runs. Draft; fresh-run validation pending |
+| GLEASON24-Q9 | What average Cu oxidation state should label each simulated spectrum? | Spectrum-to-material ID table and live MP access | Independent MP oxidation-state records from the same database version; held-back historical dictionaries and labels document changes and missing assignments. Live validation pending |
 
 Q2 through Q7 have been removed from the active benchmark. The remaining question IDs are unchanged. Their previous evidence and execution records remain available for audit, but they are not listed, exported or run as active questions.
 
@@ -64,7 +65,7 @@ The review page presents Q1's benchmark-defined acceptance criteria as plain not
 
 ## Ground-truth strength
 
-Q1 has an independently stored released-output target. Q8 provides archived references for three historical cases; these apply only when structures and simulation settings match. Other live-search selections require independent evaluator simulations, as described below.
+Q1 has an independently stored released-output target. Q8 provides archived references for three historical cases; these apply only when structures and simulation settings match. Other live-search selections require independent evaluator simulations, as described below. Q9 has directly projected historical dictionaries and labels; a live candidate needs an independent reference from the same MP database version. MP labels are computational assignments, not experimentally measured chemical truth.
 
 ## Q8: training spectra across Cu chemical environments
 
@@ -82,6 +83,18 @@ Q8's Verification section gives six output-to-reference comparisons: the query s
 
 Historical compute evidence is in `verification/Q8/runtime_audit.json`: 6,839 timestamped jobs on 36 ranks total roughly 13,776 allocated core-hours, excluding 359 incompletely timed logs. The three archived examples (KCu₄Se₃, TbCu₅, CuTe₂) total 956 seconds if their eight jobs run sequentially on that allocation, or 9.56 allocated core-hours. These are historical timings, not a guarantee for new hardware or newly selected materials. A fresh pilot should establish the runtime budget and numerical comparison policy.
 
+## Q9: Cu oxidation-state labels from material IDs
+
+The task asks the agent to assign a material-average Cu oxidation state to every simulated spectrum using its MP ID. The input CSV has only `spectrum_id` and `mp_id`; it contains all 3,439 retained materials from the processed spectral release. Their spectra had previously been filtered, site-averaged, aligned, resampled and normalized. The exact upstream filters and label-dependent alignment are documented in `verification/Q9/provenance.json`. No spectral arrays, oxidation-state dictionaries or labels are agent inputs, and the prompt does not disclose the API route or field used by the worked solution.
+
+Export with `export_agent_bundle.py Q9 NEW_DIRECTORY`. The runtime supplies `MP_API_KEY`. Run `workflows/assign_oxidation_states.py all --inputs INPUT_DIRECTORY --output OUTPUT_DIRECTORY` to retrieve current records and write a complete `labels.csv` with evidence and unresolved cases. The separate `fetch` and `label` stages allow inspection of the captured response. The candidate preserves fractional values and distinguishes an explicit zero from an unavailable assignment.
+
+The historical data contain 2,563 available Cu averages and 876 missing Cu assignments for this ID list. The authors later replaced those missing assignments with zero. Q9 does not require reproducing that replacement: an absent assignment alone does not establish Cu(0). The historical dictionaries and processed labels are both retained for evaluator audit. Current MP records may provide different values or coverage.
+
+`prepare_q9_assets.py` extracts the input IDs and held-back references directly from the release. `check_q9_labels.py` stages an input-only bundle, runs the candidate label stage against an explicitly identified historical-response projection, and checks all 3,439 rows. It also verifies rejection of missing-to-zero replacement, integer rounding of fractional labels, wrong mappings, duplicate rows and missing rows. A synthetic fixture tests an explicitly returned zero and repeated material IDs. Execution records are in `verification/Q9/component_checks.json`; retained outputs are labeled as an offline replay.
+
+**Execution status: partially validated.** The label stage and evaluator checks passed, but no authenticated live request or independent live reference capture has been executed here. The historical projection was supplied by the test harness, not acquired by an agent starting from IDs. Q9 is excluded from the end-to-end offline suite. The evaluator protocol directs comparison against independently captured current MP records, with historical differences reported separately. Alias resolution, deprecated records and alternative chemically justified assignments require reviewer assessment.
+
 ## Deliberately deferred questions
 
 - Exact historical selection of the first 1,533 materials, or exact recovery of the original additional-material MP query: the original database snapshot was not recovered. Q8 implements a new live search and captures its own snapshot; it does not claim historical membership equivalence.
@@ -92,6 +105,6 @@ Historical compute evidence is in `verification/Q8/runtime_audit.json`: 6,839 ti
 
 ## Rebuild and attribution
 
-`prepare_assets.py --release PATH` projects minimal inputs and separately extracts verification targets from the downloaded open release. `build_entry.py` writes the site entry and workflow descriptions while retaining prior execution records. Rerun affected candidates after changing their task or verifier; a partial run preserves the other questions in the summary. These are authoring tools, not agent inputs. See `provenance.json` for the input/verification derivation of every task.
+`prepare_assets.py --release PATH` projects the original task assets; `prepare_q8_assets.py` and `prepare_q9_assets.py` prepare the subsequently added questions. `build_entry.py` writes the site entry and workflow descriptions while retaining prior execution records. For Q9, prepare assets, build the entry, run `check_q9_labels.py`, then rebuild to embed the execution record. Rerun affected candidates after changing their task or verifier; a partial run preserves the other questions in the summary. These are authoring tools, not agent inputs. See the global and question-specific `provenance.json` files for input/verification derivation.
 
 Data source: Gleason, Lu and Ciston, Zenodo record 18142209 (CC BY 4.0), outer ZIP MD5 `1246825b838f77b926d0e58f6ca68e45`. Figures are unmodified author-provided Figure 1 and Figure S1 images or embedded figure outputs from the pinned companion notebook. The article is [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Minimal CSV/JSON projections are format adaptations; their prior processing and source columns are recorded. All copied assets remain attributed to the authors. No upstream notebook credentials were copied.

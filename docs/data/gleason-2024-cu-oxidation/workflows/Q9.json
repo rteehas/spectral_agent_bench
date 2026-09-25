@@ -1,0 +1,101 @@
+{
+  "scenario_id": "GLEASON24-Q9",
+  "question": "What average Cu oxidation state should label each simulated spectrum?",
+  "runtime_requirements": [
+    "Authenticated Materials Project API access via runtime MP_API_KEY",
+    "Python with mp-api; no FEFF executable or spectral arrays are required"
+  ],
+  "input_boundary": "Only inputs/Q9/spectrum_material_ids.csv, minimal background and runtime MP access. Do not supply historical dictionaries, labels, workflows or evaluation files to the agent.",
+  "steps": [
+    {
+      "step": 1,
+      "tool": "Python / csv",
+      "operation": "Read spectrum_material_ids.csv. Preserve every spectrum_id and mp_id pairing; query each distinct material ID once and map its result back to all associated spectra.",
+      "artifact_or_check": "The supplied mapping contains 3,439 spectra and 3,439 distinct MP IDs. The material IDs are projected from the released processed spectral table; spectrum_id is an added row identifier."
+    },
+    {
+      "step": 2,
+      "tool": "Python / mp-api MPRester",
+      "operation": "Use MPRester.materials.oxidation_states.search(material_ids=..., all_fields=True) in batches, with all result pages enabled. Save returned records in query_snapshot.json along with queries, retrieval times, database versions and client version. Keep request failures distinct from successful requests that return no record or no Cu assignment. Check identifier changes or conflicting records before assigning a label.",
+      "artifact_or_check": "A live response snapshot tied to the input IDs. This authenticated stage has not been executed here. The offline check uses a clearly identified projection of historical dictionaries, not a new API response."
+    },
+    {
+      "step": 3,
+      "tool": "Python / JSON processing; MP oxidation-state documents",
+      "operation": "For each matched document, select average_oxidation_states[\"Cu\"]. This is an average over Cu atoms; it can be fractional. Preserve the returned value and the document method where available. A separate recalculation of bond-valence descriptors is not needed for this worked solution.",
+      "artifact_or_check": "One supported Cu average for each record that supplies it. Offline replay of the archived dictionaries yields 2,563 available Cu averages, including fractional values."
+    },
+    {
+      "step": 4,
+      "tool": "Python / data validation",
+      "operation": "Leave the value blank and explain an unresolved case if the Cu assignment is absent, a record is missing, a request failed or an identifier needs review. Distinguish an explicitly returned numeric zero from an absent assignment. Do not remove the associated spectrum from the output.",
+      "artifact_or_check": "The archived dictionaries leave 876 of the retained spectra unresolved. The paper pipeline later replaced these missing values with zero; those released zero labels are historical processing outputs, not independent evidence of Cu(0). Live coverage can differ."
+    },
+    {
+      "step": 5,
+      "tool": "Python / csv, json and hashlib",
+      "operation": "Write labels.csv with spectrum_id, mp_id, cu_oxidation_state, status, reason and evidence. Link each row to its saved source record. Save a result summary identifying the snapshot and explaining the handling of fractional and unavailable assignments.",
+      "artifact_or_check": "A complete spectrum-to-label table, query snapshot and method explanation. The offline projection replay preserves all 3,439 input rows; it does not perform spectral simulation, alignment or model training."
+    },
+    {
+      "step": 6,
+      "tool": "Evaluator / mp-api and verify_oxidation_states.py",
+      "operation": "Capture the same MP query scope independently at the same database version and compare material mappings, Cu averages and unavailable assignments. Review database drift against historical_labels.json separately. The numeric checker does not itself establish independent retrieval or chemical correctness.",
+      "artifact_or_check": "The historical replay and deliberately incorrect-answer checks are recorded in component_checks.json. Live API execution and independent live reference capture remain pending."
+    }
+  ],
+  "candidate_command": "python assign_oxidation_states.py all --inputs INPUT_DIRECTORY --output OUTPUT_DIRECTORY",
+  "verification_command": "python verify_oxidation_states.py --inputs INPUT_DIRECTORY --output OUTPUT_DIRECTORY --reference INDEPENDENT_MP_SNAPSHOT.json",
+  "execution": {
+    "status": "partially_validated",
+    "live_query_executed": false,
+    "component_checks": {
+      "status": "offline_components_passed_live_lookup_not_run",
+      "checked_at_utc": "2026-09-25T06:39:48.299599+00:00",
+      "command": "/usr/bin/python3 papers/gleason-2024-cu-oxidation/check_q9_labels.py",
+      "live_query_executed": false,
+      "independent_live_reference_captured": false,
+      "input_bundle_contains_only_prompt_and_ids": true,
+      "historical_projection_replay": {
+        "rows": 3439,
+        "assigned_matched": 2563,
+        "unresolved_matched": 876,
+        "manual_review": [],
+        "numeric_check_complete": true,
+        "scope": "Label/mapping comparison only; does not certify independent live retrieval or chemical correctness."
+      },
+      "assigned_labels_match_released_values_after_two_decimal_rounding": true,
+      "rejected_incorrect_answers": [
+        "missing_to_zero",
+        "fractional_to_integer",
+        "wrong_mapping",
+        "duplicate_row",
+        "missing_row"
+      ],
+      "synthetic_checks": [
+        "Explicit zero retained as assigned",
+        "Repeated material ID maps back to all spectra",
+        "Fractional average preserved",
+        "Two-decimal reporting accepted"
+      ],
+      "tool_calls": [
+        {
+          "command": [
+            "/usr/bin/python3",
+            "/scratch/rst306/spectrasleuth_work/spectral_agent_bench/docs/data/gleason-2024-cu-oxidation/workflows/assign_oxidation_states.py",
+            "label",
+            "--inputs",
+            "/tmp/gleason-q9-eb9kocca/agent/inputs",
+            "--output",
+            "/tmp/gleason-q9-eb9kocca/offline_projection_replay"
+          ],
+          "stdout": "{\"spectra\": 3439, \"assigned\": 2563, \"unresolved\": 876, \"snapshot_source\": \"Offline fixture projected from authors saved full_ox_states dictionaries; NOT a complete or live API response.\", \"snapshot_sha256\": \"317359b15e9584eb0dbf50d51345bb82503901e2a033c270663dc43cf665110b\", \"method\": \"Use the returned average Cu oxidation state without integer rounding or missing-to-zero imputation.\"}\n",
+          "stderr": "",
+          "exit_code": 0
+        }
+      ],
+      "limitations": "The response projection was supplied by the test harness; this is component validation, not an end-to-end run from IDs using a live API. No OS access-control sandbox was imposed."
+    }
+  },
+  "evidence": "Worked solution: retrieve material-level oxidation-state assignments and attach the Cu average to each simulated spectrum. API lookup is the candidate method; the released historical labels are held back for evaluator comparison.\n\n1. Read the spectrum-to-material mapping (Python / csv)\nRead spectrum_material_ids.csv. Preserve every spectrum_id and mp_id pairing; query each distinct material ID once and map its result back to all associated spectra.\nOutput/status: The supplied mapping contains 3,439 spectra and 3,439 distinct MP IDs. The material IDs are projected from the released processed spectral table; spectrum_id is an added row identifier.\n\n2. Retrieve the material oxidation-state records (Python / mp-api MPRester)\nUse MPRester.materials.oxidation_states.search(material_ids=..., all_fields=True) in batches, with all result pages enabled. Save returned records in query_snapshot.json along with queries, retrieval times, database versions and client version. Keep request failures distinct from successful requests that return no record or no Cu assignment. Check identifier changes or conflicting records before assigning a label.\nOutput/status: A live response snapshot tied to the input IDs. This authenticated stage has not been executed here. The offline check uses a clearly identified projection of historical dictionaries, not a new API response.\n\n3. Determine the material-average Cu label (Python / JSON processing; MP oxidation-state documents)\nFor each matched document, select average_oxidation_states[\"Cu\"]. This is an average over Cu atoms; it can be fractional. Preserve the returned value and the document method where available. A separate recalculation of bond-valence descriptors is not needed for this worked solution.\nOutput/status: One supported Cu average for each record that supplies it. Offline replay of the archived dictionaries yields 2,563 available Cu averages, including fractional values.\n\n4. Represent unavailable assignments explicitly (Python / data validation)\nLeave the value blank and explain an unresolved case if the Cu assignment is absent, a record is missing, a request failed or an identifier needs review. Distinguish an explicitly returned numeric zero from an absent assignment. Do not remove the associated spectrum from the output.\nOutput/status: The archived dictionaries leave 876 of the retained spectra unresolved. The paper pipeline later replaced these missing values with zero; those released zero labels are historical processing outputs, not independent evidence of Cu(0). Live coverage can differ.\n\n5. Save labels and provenance (Python / csv, json and hashlib)\nWrite labels.csv with spectrum_id, mp_id, cu_oxidation_state, status, reason and evidence. Link each row to its saved source record. Save a result summary identifying the snapshot and explaining the handling of fractional and unavailable assignments.\nOutput/status: A complete spectrum-to-label table, query snapshot and method explanation. The offline projection replay preserves all 3,439 input rows; it does not perform spectral simulation, alignment or model training.\n\n6. Compare the answer with independent records (Evaluator / mp-api and verify_oxidation_states.py)\nCapture the same MP query scope independently at the same database version and compare material mappings, Cu averages and unavailable assignments. Review database drift against historical_labels.json separately. The numeric checker does not itself establish independent retrieval or chemical correctness.\nOutput/status: The historical replay and deliberately incorrect-answer checks are recorded in component_checks.json. Live API execution and independent live reference capture remain pending."
+}

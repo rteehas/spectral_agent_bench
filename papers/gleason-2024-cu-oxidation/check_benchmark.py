@@ -21,7 +21,7 @@ def main():
                 source=ROOT/'docs'/f['url'];assert source.read_bytes()==(bundle/'inputs'/f['name']).read_bytes()
             if task.get('executionStatus')=='partially_validated':
                 reports.append({'question':q,'input_bundle_only_declared_files':True,
-                                'end_to_end_check':'not_run','reason':'Live MP access and fresh FEFF9 execution require separate runtime validation; see setup_checks.json.'})
+                                'end_to_end_check':'not_run','reason':'Live runtime stages require separate validation; see the question-specific component checks and evaluation protocol.'})
                 continue
             original=a.candidate_runs/q/'output';v.verify(q,original,DATA/'verification'/q)
             wrong=bundle/'wrong';shutil.copytree(original,wrong);j=json.loads((wrong/'result.json').read_text());field,delta=fields[q];j[field]+=delta;(wrong/'result.json').write_text(json.dumps(j))

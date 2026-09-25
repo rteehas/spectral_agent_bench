@@ -7,5 +7,5 @@
     }
   ],
   "all_numeric_checks_passed": true,
-  "scope": "Active offline candidate suite only (Q1). Q8 has separate component checks; live search and fresh FEFF9 execution are pending."
+  "scope": "Active offline candidate suite only (Q1). Q8 and Q9 have separate component checks; their live runtime stages are pending."
 }

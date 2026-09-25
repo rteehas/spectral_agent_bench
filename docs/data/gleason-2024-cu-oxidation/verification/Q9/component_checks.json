@@ -1,0 +1,47 @@
+{
+  "status": "offline_components_passed_live_lookup_not_run",
+  "checked_at_utc": "2026-09-25T06:39:48.299599+00:00",
+  "command": "/usr/bin/python3 papers/gleason-2024-cu-oxidation/check_q9_labels.py",
+  "live_query_executed": false,
+  "independent_live_reference_captured": false,
+  "input_bundle_contains_only_prompt_and_ids": true,
+  "historical_projection_replay": {
+    "rows": 3439,
+    "assigned_matched": 2563,
+    "unresolved_matched": 876,
+    "manual_review": [],
+    "numeric_check_complete": true,
+    "scope": "Label/mapping comparison only; does not certify independent live retrieval or chemical correctness."
+  },
+  "assigned_labels_match_released_values_after_two_decimal_rounding": true,
+  "rejected_incorrect_answers": [
+    "missing_to_zero",
+    "fractional_to_integer",
+    "wrong_mapping",
+    "duplicate_row",
+    "missing_row"
+  ],
+  "synthetic_checks": [
+    "Explicit zero retained as assigned",
+    "Repeated material ID maps back to all spectra",
+    "Fractional average preserved",
+    "Two-decimal reporting accepted"
+  ],
+  "tool_calls": [
+    {
+      "command": [
+        "/usr/bin/python3",
+        "/scratch/rst306/spectrasleuth_work/spectral_agent_bench/docs/data/gleason-2024-cu-oxidation/workflows/assign_oxidation_states.py",
+        "label",
+        "--inputs",
+        "/tmp/gleason-q9-eb9kocca/agent/inputs",
+        "--output",
+        "/tmp/gleason-q9-eb9kocca/offline_projection_replay"
+      ],
+      "stdout": "{\"spectra\": 3439, \"assigned\": 2563, \"unresolved\": 876, \"snapshot_source\": \"Offline fixture projected from authors saved full_ox_states dictionaries; NOT a complete or live API response.\", \"snapshot_sha256\": \"317359b15e9584eb0dbf50d51345bb82503901e2a033c270663dc43cf665110b\", \"method\": \"Use the returned average Cu oxidation state without integer rounding or missing-to-zero imputation.\"}\n",
+      "stderr": "",
+      "exit_code": 0
+    }
+  ],
+  "limitations": "The response projection was supplied by the test harness; this is component validation, not an end-to-end run from IDs using a live API. No OS access-control sandbox was imposed."
+}

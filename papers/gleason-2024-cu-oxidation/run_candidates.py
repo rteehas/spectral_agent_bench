@@ -10,7 +10,7 @@ def main():
     paper=next(x for x in dataset['papers'] if x['id']=='gleason-2024-cu-oxidation')
     offline=[task['id'].split('-')[-1] for task in paper['scenarios'] if task.get('executionStatus')!='partially_validated']
     if a.questions is None:a.questions=offline
-    if 'Q8' in a.questions:p.error('Q8 uses search_and_simulate.py and requires live Materials Project access plus a FEFF9 runtime; it is not included in the offline candidate suite.')
+    if any(q in a.questions for q in ['Q8','Q9']):p.error('Q8 and Q9 have separate live workflows and component checks; they are not included in the offline candidate suite.')
     if any(q not in offline for q in a.questions):p.error('Select active offline questions: '+', '.join(offline))
     a.workdir.mkdir(parents=True,exist_ok=True)
     reports=[]
@@ -34,6 +34,6 @@ def main():
     merged={x['question']:x for x in previous if x['question'] in offline}
     merged.update({x['question']:x for x in reports})
     summary=list(sorted(merged.values(),key=lambda x:x['question']))
-    summary_path.write_text(json.dumps({'questions':summary,'all_numeric_checks_passed':all(x['status']=='passed' for x in summary),'scope':'Active offline candidate suite only ('+', '.join(offline)+'). Q8 has separate component checks; live search and fresh FEFF9 execution are pending.'},indent=2)+'\n')
+    summary_path.write_text(json.dumps({'questions':summary,'all_numeric_checks_passed':all(x['status']=='passed' for x in summary),'scope':'Active offline candidate suite only ('+', '.join(offline)+'). Q8 and Q9 have separate component checks; their live runtime stages are pending.'},indent=2)+'\n')
     if not all(x['status']=='passed' for x in reports):raise SystemExit(1)
 if __name__=='__main__':main()

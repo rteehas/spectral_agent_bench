@@ -1,0 +1,8 @@
+{
+  "spectra": 3439,
+  "assigned": 2563,
+  "unresolved": 876,
+  "snapshot_source": "Offline fixture projected from authors saved full_ox_states dictionaries; NOT a complete or live API response.",
+  "snapshot_sha256": "317359b15e9584eb0dbf50d51345bb82503901e2a033c270663dc43cf665110b",
+  "method": "Use the returned average Cu oxidation state without integer rounding or missing-to-zero imputation."
+}

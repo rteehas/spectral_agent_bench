@@ -10,7 +10,13 @@
       "question": "Q8",
       "input_bundle_only_declared_files": true,
       "end_to_end_check": "not_run",
-      "reason": "Live MP access and fresh FEFF9 execution require separate runtime validation; see setup_checks.json."
+      "reason": "Live runtime stages require separate validation; see the question-specific component checks and evaluation protocol."
+    },
+    {
+      "question": "Q9",
+      "input_bundle_only_declared_files": true,
+      "end_to_end_check": "not_run",
+      "reason": "Live runtime stages require separate validation; see the question-specific component checks and evaluation protocol."
     }
   ],
   "perturbed_spectrum_rejected": true,

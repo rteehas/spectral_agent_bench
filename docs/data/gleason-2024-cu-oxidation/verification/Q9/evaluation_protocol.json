@@ -1,0 +1,55 @@
+{
+  "scenario_id": "GLEASON24-Q9",
+  "comparisons": [
+    {
+      "step": 1,
+      "title": "Compare spectrum and material coverage",
+      "compare": "labels.csv spectrum_id/mp_id pairs.",
+      "reference": "The supplied spectrum_material_ids.csv.",
+      "how": "Join by spectrum_id and require exactly one output row for every input spectrum. Compare the associated mp_id, reporting missing rows, duplicates and changed mappings. Document and independently confirm any alias resolution instead of silently replacing an ID."
+    },
+    {
+      "step": 2,
+      "title": "Compare the saved source records",
+      "compare": "query_snapshot.json, retrieval metadata and row-level evidence.",
+      "reference": "An evaluator capture of Materials Project oxidation-state records for the same input IDs and database version, or an independently logged runtime response.",
+      "how": "Match records by material ID; compare the returned Cu assignments, method when present and query coverage. Verify that requests completed and all pages were retrieved. A failed request cannot establish that a label is unavailable. Resolve database-version or identifier differences before scoring. The candidate snapshot alone is not an independent reference."
+    },
+    {
+      "step": 3,
+      "title": "Compare the assigned Cu averages",
+      "compare": "Each numeric cu_oxidation_state in labels.csv.",
+      "reference": "The Cu value in average_oxidation_states of the independently captured matching MP record.",
+      "how": "Compare values after the verified material-ID join using the numeric comparison note below. Check fractional averages as well as integer values; do not accept integer rounding that changes a fractional label. The label is a Cu-atom average, not an average over all chemical elements or an unweighted average of inequivalent Cu sites. An alternative evidence-supported derivation needs reviewer assessment."
+    },
+    {
+      "step": 4,
+      "title": "Compare unresolved cases and historical differences",
+      "compare": "Blank labels, status/reason fields and the explanation of missing assignments.",
+      "reference": "The independent MP capture for current availability, plus historical_labels.json for archived values and missing-label provenance.",
+      "how": "Require an explanation for each unresolved spectrum and retain its row. Check that an explicit Cu value of zero is distinguished from absent data. Do not require zero just because the paper replaced an absent assignment with zero. Compare changed current values with the historical dictionaries and report the differences without treating confirmed database drift as an agent error. Missing or deprecated records and alternative chemical assignments require review; do not silently mark them chemically validated."
+    }
+  ],
+  "comparison_settings": {
+    "origin": "Benchmark-defined",
+    "generatedBy": "Model-generated",
+    "provenance": "Note, the screening thresholds and comparison settings below were not reported in the paper and are not physical uncertainty estimates. They were produced separately during the labeling process.",
+    "notes": [
+      {
+        "title": "Maximum Absolute Label Difference",
+        "description": "0.0051 oxidation-state units against an unrounded reference value, allowing reporting to two decimal places. This is a numerical reporting allowance, not uncertainty in the oxidation-state assignment."
+      },
+      {
+        "title": "Coverage",
+        "description": "Every supplied spectrum must have an output row, including unresolved assignments. Compare mappings by spectrum_id rather than row order."
+      },
+      {
+        "title": "Reference Version",
+        "description": "Use an independently captured reference from the same MP database version. Historical labels are an audit reference; a changed live value is not automatically an error."
+      }
+    ]
+  },
+  "execution_status": "partially_validated; historical projection replay only, live capture pending",
+  "input_boundary": "Only inputs/Q9/spectrum_material_ids.csv, minimal background and runtime MP access. Do not supply historical dictionaries, labels, workflows or evaluation files to the agent.",
+  "reference_limits": "MP assignments are computational reference labels, not independently measured chemical truth. The supplied historical projection omits method and database version. The generic numeric checker supports direct ID matches; aliases, deprecated records and alternative chemical derivations require reviewer adjudication."
+}
