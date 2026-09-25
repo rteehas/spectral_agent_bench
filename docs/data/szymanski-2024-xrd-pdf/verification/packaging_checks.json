@@ -1,0 +1,86 @@
+{
+  "paper_id": "szymanski-2024-xrd-pdf",
+  "status": "passed",
+  "questions": 4,
+  "sample_count": 2930,
+  "inventory": [
+    {
+      "chemistry": "Li-La-Zr-O",
+      "kind": "1-Phase",
+      "patterns": 560
+    },
+    {
+      "chemistry": "Li-La-Zr-O",
+      "kind": "2-Phase",
+      "patterns": 400
+    },
+    {
+      "chemistry": "Li-La-Zr-O",
+      "kind": "3-Phase",
+      "patterns": 400
+    },
+    {
+      "chemistry": "Li-La-Zr-O",
+      "kind": "Experiments",
+      "patterns": 120
+    },
+    {
+      "chemistry": "Li-Ti-P-O",
+      "kind": "1-Phase",
+      "patterns": 530
+    },
+    {
+      "chemistry": "Li-Ti-P-O",
+      "kind": "2-Phase",
+      "patterns": 400
+    },
+    {
+      "chemistry": "Li-Ti-P-O",
+      "kind": "3-Phase",
+      "patterns": 400
+    },
+    {
+      "chemistry": "Li-Ti-P-O",
+      "kind": "Experiments",
+      "patterns": 120
+    }
+  ],
+  "input_hashes_match": true,
+  "paper_matches_active_dataset": true,
+  "exports": [
+    {
+      "question": "Q1",
+      "input_files": 7,
+      "exact_allowlist_passed": true,
+      "raw_input_hashes_match": true,
+      "protocol_and_schema_have_only_relevant_sections": true,
+      "nonempty_destination_rejected": true
+    },
+    {
+      "question": "Q2",
+      "input_files": 15,
+      "exact_allowlist_passed": true,
+      "raw_input_hashes_match": true,
+      "protocol_and_schema_have_only_relevant_sections": true,
+      "nonempty_destination_rejected": true
+    },
+    {
+      "question": "Q3",
+      "input_files": 5,
+      "exact_allowlist_passed": true,
+      "raw_input_hashes_match": true,
+      "protocol_and_schema_have_only_relevant_sections": true,
+      "nonempty_destination_rejected": true
+    },
+    {
+      "question": "Q4",
+      "input_files": 11,
+      "exact_allowlist_passed": true,
+      "raw_input_hashes_match": true,
+      "protocol_and_schema_have_only_relevant_sections": true,
+      "nonempty_destination_rejected": true
+    }
+  ],
+  "schema_validation": "Valid dataset: 3 papers, 12 scenarios.",
+  "answer_boundary": "Exports contain only task.json, reading instructions and the exact relevant numeric inputs, released label/split metadata, protocol, output schema and field definitions. No candidate implementation, fitted parameters, predictions, reference results, verification files or paper metadata are exported. Released labels are evaluation data; output-only validation cannot prove no target-label leakage."
+}

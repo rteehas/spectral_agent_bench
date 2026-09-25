@@ -1,0 +1,73 @@
+{
+  "question": "Q1",
+  "summaries": [
+    {
+      "chemistry": "Li-La-Zr-O",
+      "group": "single",
+      "model": "Fused",
+      "n": 168,
+      "micro_f1": 0.9464285714285714,
+      "exact_match": 0.9464285714285714
+    },
+    {
+      "chemistry": "Li-La-Zr-O",
+      "group": "single",
+      "model": "PDF",
+      "n": 168,
+      "micro_f1": 0.9345238095238095,
+      "exact_match": 0.9345238095238095
+    },
+    {
+      "chemistry": "Li-La-Zr-O",
+      "group": "single",
+      "model": "XRD",
+      "n": 168,
+      "micro_f1": 0.9107142857142857,
+      "exact_match": 0.9107142857142857
+    },
+    {
+      "chemistry": "Li-Ti-P-O",
+      "group": "single",
+      "model": "Fused",
+      "n": 181,
+      "micro_f1": 0.9558011049723757,
+      "exact_match": 0.9558011049723757
+    },
+    {
+      "chemistry": "Li-Ti-P-O",
+      "group": "single",
+      "model": "PDF",
+      "n": 181,
+      "micro_f1": 0.9502762430939227,
+      "exact_match": 0.9502762430939227
+    },
+    {
+      "chemistry": "Li-Ti-P-O",
+      "group": "single",
+      "model": "XRD",
+      "n": 181,
+      "micro_f1": 0.9226519337016574,
+      "exact_match": 0.9226519337016574
+    }
+  ],
+  "complementarity": [
+    {
+      "chemistry": "Li-La-Zr-O",
+      "group": "single",
+      "n": 168,
+      "xrd_only_correct": 2,
+      "pdf_only_correct": 6,
+      "both_correct": 151,
+      "neither_correct": 9
+    },
+    {
+      "chemistry": "Li-Ti-P-O",
+      "group": "single",
+      "n": 181,
+      "xrd_only_correct": 4,
+      "pdf_only_correct": 9,
+      "both_correct": 163,
+      "neither_correct": 5
+    }
+  ]
+}

@@ -1,0 +1,1442 @@
+[
+  {
+    "id": "A_Experiments_0000",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "La(OH)3",
+      "Li2CO3"
+    ],
+    "major": "La(OH)3",
+    "minor": "Li2CO3",
+    "minor_weight_percent": 20
+  },
+  {
+    "id": "A_Experiments_0001",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "La(OH)3",
+      "Li2CO3"
+    ],
+    "major": "La(OH)3",
+    "minor": "Li2CO3",
+    "minor_weight_percent": 18
+  },
+  {
+    "id": "A_Experiments_0002",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "La(OH)3",
+      "Li2CO3"
+    ],
+    "major": "La(OH)3",
+    "minor": "Li2CO3",
+    "minor_weight_percent": 16
+  },
+  {
+    "id": "A_Experiments_0003",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "La(OH)3",
+      "Li2CO3"
+    ],
+    "major": "La(OH)3",
+    "minor": "Li2CO3",
+    "minor_weight_percent": 14
+  },
+  {
+    "id": "A_Experiments_0004",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "La(OH)3",
+      "Li2CO3"
+    ],
+    "major": "La(OH)3",
+    "minor": "Li2CO3",
+    "minor_weight_percent": 12
+  },
+  {
+    "id": "A_Experiments_0005",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "La(OH)3",
+      "Li2CO3"
+    ],
+    "major": "La(OH)3",
+    "minor": "Li2CO3",
+    "minor_weight_percent": 10
+  },
+  {
+    "id": "A_Experiments_0006",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "La(OH)3",
+      "Li2CO3"
+    ],
+    "major": "La(OH)3",
+    "minor": "Li2CO3",
+    "minor_weight_percent": 8
+  },
+  {
+    "id": "A_Experiments_0007",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "La(OH)3",
+      "Li2CO3"
+    ],
+    "major": "La(OH)3",
+    "minor": "Li2CO3",
+    "minor_weight_percent": 6
+  },
+  {
+    "id": "A_Experiments_0008",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "La(OH)3",
+      "Li2CO3"
+    ],
+    "major": "La(OH)3",
+    "minor": "Li2CO3",
+    "minor_weight_percent": 4
+  },
+  {
+    "id": "A_Experiments_0009",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "La(OH)3",
+      "Li2CO3"
+    ],
+    "major": "La(OH)3",
+    "minor": "Li2CO3",
+    "minor_weight_percent": 2
+  },
+  {
+    "id": "A_Experiments_0010",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "La(OH)3",
+      "LiOH"
+    ],
+    "major": "La(OH)3",
+    "minor": "LiOH",
+    "minor_weight_percent": 20
+  },
+  {
+    "id": "A_Experiments_0011",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "La(OH)3",
+      "LiOH"
+    ],
+    "major": "La(OH)3",
+    "minor": "LiOH",
+    "minor_weight_percent": 18
+  },
+  {
+    "id": "A_Experiments_0012",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "La(OH)3",
+      "LiOH"
+    ],
+    "major": "La(OH)3",
+    "minor": "LiOH",
+    "minor_weight_percent": 16
+  },
+  {
+    "id": "A_Experiments_0013",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "La(OH)3",
+      "LiOH"
+    ],
+    "major": "La(OH)3",
+    "minor": "LiOH",
+    "minor_weight_percent": 14
+  },
+  {
+    "id": "A_Experiments_0014",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "La(OH)3",
+      "LiOH"
+    ],
+    "major": "La(OH)3",
+    "minor": "LiOH",
+    "minor_weight_percent": 12
+  },
+  {
+    "id": "A_Experiments_0015",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "La(OH)3",
+      "LiOH"
+    ],
+    "major": "La(OH)3",
+    "minor": "LiOH",
+    "minor_weight_percent": 10
+  },
+  {
+    "id": "A_Experiments_0016",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "La(OH)3",
+      "LiOH"
+    ],
+    "major": "La(OH)3",
+    "minor": "LiOH",
+    "minor_weight_percent": 8
+  },
+  {
+    "id": "A_Experiments_0017",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "La(OH)3",
+      "LiOH"
+    ],
+    "major": "La(OH)3",
+    "minor": "LiOH",
+    "minor_weight_percent": 6
+  },
+  {
+    "id": "A_Experiments_0018",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "La(OH)3",
+      "LiOH"
+    ],
+    "major": "La(OH)3",
+    "minor": "LiOH",
+    "minor_weight_percent": 4
+  },
+  {
+    "id": "A_Experiments_0019",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "La(OH)3",
+      "LiOH"
+    ],
+    "major": "La(OH)3",
+    "minor": "LiOH",
+    "minor_weight_percent": 2
+  },
+  {
+    "id": "A_Experiments_0020",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "La(OH)3",
+      "ZrO2"
+    ],
+    "major": "La(OH)3",
+    "minor": "ZrO2",
+    "minor_weight_percent": 20
+  },
+  {
+    "id": "A_Experiments_0021",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "La(OH)3",
+      "ZrO2"
+    ],
+    "major": "La(OH)3",
+    "minor": "ZrO2",
+    "minor_weight_percent": 18
+  },
+  {
+    "id": "A_Experiments_0022",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "La(OH)3",
+      "ZrO2"
+    ],
+    "major": "La(OH)3",
+    "minor": "ZrO2",
+    "minor_weight_percent": 16
+  },
+  {
+    "id": "A_Experiments_0023",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "La(OH)3",
+      "ZrO2"
+    ],
+    "major": "La(OH)3",
+    "minor": "ZrO2",
+    "minor_weight_percent": 14
+  },
+  {
+    "id": "A_Experiments_0024",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "La(OH)3",
+      "ZrO2"
+    ],
+    "major": "La(OH)3",
+    "minor": "ZrO2",
+    "minor_weight_percent": 12
+  },
+  {
+    "id": "A_Experiments_0025",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "La(OH)3",
+      "ZrO2"
+    ],
+    "major": "La(OH)3",
+    "minor": "ZrO2",
+    "minor_weight_percent": 10
+  },
+  {
+    "id": "A_Experiments_0026",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "La(OH)3",
+      "ZrO2"
+    ],
+    "major": "La(OH)3",
+    "minor": "ZrO2",
+    "minor_weight_percent": 8
+  },
+  {
+    "id": "A_Experiments_0027",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "La(OH)3",
+      "ZrO2"
+    ],
+    "major": "La(OH)3",
+    "minor": "ZrO2",
+    "minor_weight_percent": 6
+  },
+  {
+    "id": "A_Experiments_0028",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "La(OH)3",
+      "ZrO2"
+    ],
+    "major": "La(OH)3",
+    "minor": "ZrO2",
+    "minor_weight_percent": 4
+  },
+  {
+    "id": "A_Experiments_0029",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "La(OH)3",
+      "ZrO2"
+    ],
+    "major": "La(OH)3",
+    "minor": "ZrO2",
+    "minor_weight_percent": 2
+  },
+  {
+    "id": "A_Experiments_0030",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "Li2CO3",
+      "La(OH)3"
+    ],
+    "major": "Li2CO3",
+    "minor": "La(OH)3",
+    "minor_weight_percent": 20
+  },
+  {
+    "id": "A_Experiments_0031",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "Li2CO3",
+      "La(OH)3"
+    ],
+    "major": "Li2CO3",
+    "minor": "La(OH)3",
+    "minor_weight_percent": 18
+  },
+  {
+    "id": "A_Experiments_0032",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "Li2CO3",
+      "La(OH)3"
+    ],
+    "major": "Li2CO3",
+    "minor": "La(OH)3",
+    "minor_weight_percent": 16
+  },
+  {
+    "id": "A_Experiments_0033",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "Li2CO3",
+      "La(OH)3"
+    ],
+    "major": "Li2CO3",
+    "minor": "La(OH)3",
+    "minor_weight_percent": 14
+  },
+  {
+    "id": "A_Experiments_0034",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "Li2CO3",
+      "La(OH)3"
+    ],
+    "major": "Li2CO3",
+    "minor": "La(OH)3",
+    "minor_weight_percent": 12
+  },
+  {
+    "id": "A_Experiments_0035",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "Li2CO3",
+      "La(OH)3"
+    ],
+    "major": "Li2CO3",
+    "minor": "La(OH)3",
+    "minor_weight_percent": 10
+  },
+  {
+    "id": "A_Experiments_0036",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "Li2CO3",
+      "La(OH)3"
+    ],
+    "major": "Li2CO3",
+    "minor": "La(OH)3",
+    "minor_weight_percent": 8
+  },
+  {
+    "id": "A_Experiments_0037",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "Li2CO3",
+      "La(OH)3"
+    ],
+    "major": "Li2CO3",
+    "minor": "La(OH)3",
+    "minor_weight_percent": 6
+  },
+  {
+    "id": "A_Experiments_0038",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "Li2CO3",
+      "La(OH)3"
+    ],
+    "major": "Li2CO3",
+    "minor": "La(OH)3",
+    "minor_weight_percent": 4
+  },
+  {
+    "id": "A_Experiments_0039",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "Li2CO3",
+      "La(OH)3"
+    ],
+    "major": "Li2CO3",
+    "minor": "La(OH)3",
+    "minor_weight_percent": 2
+  },
+  {
+    "id": "A_Experiments_0040",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "Li2CO3",
+      "LiOH"
+    ],
+    "major": "Li2CO3",
+    "minor": "LiOH",
+    "minor_weight_percent": 20
+  },
+  {
+    "id": "A_Experiments_0041",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "Li2CO3",
+      "LiOH"
+    ],
+    "major": "Li2CO3",
+    "minor": "LiOH",
+    "minor_weight_percent": 18
+  },
+  {
+    "id": "A_Experiments_0042",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "Li2CO3",
+      "LiOH"
+    ],
+    "major": "Li2CO3",
+    "minor": "LiOH",
+    "minor_weight_percent": 16
+  },
+  {
+    "id": "A_Experiments_0043",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "Li2CO3",
+      "LiOH"
+    ],
+    "major": "Li2CO3",
+    "minor": "LiOH",
+    "minor_weight_percent": 14
+  },
+  {
+    "id": "A_Experiments_0044",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "Li2CO3",
+      "LiOH"
+    ],
+    "major": "Li2CO3",
+    "minor": "LiOH",
+    "minor_weight_percent": 12
+  },
+  {
+    "id": "A_Experiments_0045",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "Li2CO3",
+      "LiOH"
+    ],
+    "major": "Li2CO3",
+    "minor": "LiOH",
+    "minor_weight_percent": 10
+  },
+  {
+    "id": "A_Experiments_0046",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "Li2CO3",
+      "LiOH"
+    ],
+    "major": "Li2CO3",
+    "minor": "LiOH",
+    "minor_weight_percent": 8
+  },
+  {
+    "id": "A_Experiments_0047",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "Li2CO3",
+      "LiOH"
+    ],
+    "major": "Li2CO3",
+    "minor": "LiOH",
+    "minor_weight_percent": 6
+  },
+  {
+    "id": "A_Experiments_0048",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "Li2CO3",
+      "LiOH"
+    ],
+    "major": "Li2CO3",
+    "minor": "LiOH",
+    "minor_weight_percent": 4
+  },
+  {
+    "id": "A_Experiments_0049",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "Li2CO3",
+      "LiOH"
+    ],
+    "major": "Li2CO3",
+    "minor": "LiOH",
+    "minor_weight_percent": 2
+  },
+  {
+    "id": "A_Experiments_0050",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "Li2CO3",
+      "ZrO2"
+    ],
+    "major": "Li2CO3",
+    "minor": "ZrO2",
+    "minor_weight_percent": 20
+  },
+  {
+    "id": "A_Experiments_0051",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "Li2CO3",
+      "ZrO2"
+    ],
+    "major": "Li2CO3",
+    "minor": "ZrO2",
+    "minor_weight_percent": 18
+  },
+  {
+    "id": "A_Experiments_0052",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "Li2CO3",
+      "ZrO2"
+    ],
+    "major": "Li2CO3",
+    "minor": "ZrO2",
+    "minor_weight_percent": 16
+  },
+  {
+    "id": "A_Experiments_0053",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "Li2CO3",
+      "ZrO2"
+    ],
+    "major": "Li2CO3",
+    "minor": "ZrO2",
+    "minor_weight_percent": 14
+  },
+  {
+    "id": "A_Experiments_0054",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "Li2CO3",
+      "ZrO2"
+    ],
+    "major": "Li2CO3",
+    "minor": "ZrO2",
+    "minor_weight_percent": 12
+  },
+  {
+    "id": "A_Experiments_0055",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "Li2CO3",
+      "ZrO2"
+    ],
+    "major": "Li2CO3",
+    "minor": "ZrO2",
+    "minor_weight_percent": 10
+  },
+  {
+    "id": "A_Experiments_0056",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "Li2CO3",
+      "ZrO2"
+    ],
+    "major": "Li2CO3",
+    "minor": "ZrO2",
+    "minor_weight_percent": 8
+  },
+  {
+    "id": "A_Experiments_0057",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "Li2CO3",
+      "ZrO2"
+    ],
+    "major": "Li2CO3",
+    "minor": "ZrO2",
+    "minor_weight_percent": 6
+  },
+  {
+    "id": "A_Experiments_0058",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "Li2CO3",
+      "ZrO2"
+    ],
+    "major": "Li2CO3",
+    "minor": "ZrO2",
+    "minor_weight_percent": 4
+  },
+  {
+    "id": "A_Experiments_0059",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "Li2CO3",
+      "ZrO2"
+    ],
+    "major": "Li2CO3",
+    "minor": "ZrO2",
+    "minor_weight_percent": 2
+  },
+  {
+    "id": "A_Experiments_0060",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "LiOH",
+      "La(OH)3"
+    ],
+    "major": "LiOH",
+    "minor": "La(OH)3",
+    "minor_weight_percent": 20
+  },
+  {
+    "id": "A_Experiments_0061",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "LiOH",
+      "La(OH)3"
+    ],
+    "major": "LiOH",
+    "minor": "La(OH)3",
+    "minor_weight_percent": 18
+  },
+  {
+    "id": "A_Experiments_0062",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "LiOH",
+      "La(OH)3"
+    ],
+    "major": "LiOH",
+    "minor": "La(OH)3",
+    "minor_weight_percent": 16
+  },
+  {
+    "id": "A_Experiments_0063",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "LiOH",
+      "La(OH)3"
+    ],
+    "major": "LiOH",
+    "minor": "La(OH)3",
+    "minor_weight_percent": 14
+  },
+  {
+    "id": "A_Experiments_0064",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "LiOH",
+      "La(OH)3"
+    ],
+    "major": "LiOH",
+    "minor": "La(OH)3",
+    "minor_weight_percent": 12
+  },
+  {
+    "id": "A_Experiments_0065",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "LiOH",
+      "La(OH)3"
+    ],
+    "major": "LiOH",
+    "minor": "La(OH)3",
+    "minor_weight_percent": 10
+  },
+  {
+    "id": "A_Experiments_0066",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "LiOH",
+      "La(OH)3"
+    ],
+    "major": "LiOH",
+    "minor": "La(OH)3",
+    "minor_weight_percent": 8
+  },
+  {
+    "id": "A_Experiments_0067",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "LiOH",
+      "La(OH)3"
+    ],
+    "major": "LiOH",
+    "minor": "La(OH)3",
+    "minor_weight_percent": 6
+  },
+  {
+    "id": "A_Experiments_0068",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "LiOH",
+      "La(OH)3"
+    ],
+    "major": "LiOH",
+    "minor": "La(OH)3",
+    "minor_weight_percent": 4
+  },
+  {
+    "id": "A_Experiments_0069",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "LiOH",
+      "La(OH)3"
+    ],
+    "major": "LiOH",
+    "minor": "La(OH)3",
+    "minor_weight_percent": 2
+  },
+  {
+    "id": "A_Experiments_0070",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "LiOH",
+      "Li2CO3"
+    ],
+    "major": "LiOH",
+    "minor": "Li2CO3",
+    "minor_weight_percent": 20
+  },
+  {
+    "id": "A_Experiments_0071",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "LiOH",
+      "Li2CO3"
+    ],
+    "major": "LiOH",
+    "minor": "Li2CO3",
+    "minor_weight_percent": 18
+  },
+  {
+    "id": "A_Experiments_0072",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "LiOH",
+      "Li2CO3"
+    ],
+    "major": "LiOH",
+    "minor": "Li2CO3",
+    "minor_weight_percent": 16
+  },
+  {
+    "id": "A_Experiments_0073",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "LiOH",
+      "Li2CO3"
+    ],
+    "major": "LiOH",
+    "minor": "Li2CO3",
+    "minor_weight_percent": 14
+  },
+  {
+    "id": "A_Experiments_0074",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "LiOH",
+      "Li2CO3"
+    ],
+    "major": "LiOH",
+    "minor": "Li2CO3",
+    "minor_weight_percent": 12
+  },
+  {
+    "id": "A_Experiments_0075",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "LiOH",
+      "Li2CO3"
+    ],
+    "major": "LiOH",
+    "minor": "Li2CO3",
+    "minor_weight_percent": 10
+  },
+  {
+    "id": "A_Experiments_0076",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "LiOH",
+      "Li2CO3"
+    ],
+    "major": "LiOH",
+    "minor": "Li2CO3",
+    "minor_weight_percent": 8
+  },
+  {
+    "id": "A_Experiments_0077",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "LiOH",
+      "Li2CO3"
+    ],
+    "major": "LiOH",
+    "minor": "Li2CO3",
+    "minor_weight_percent": 6
+  },
+  {
+    "id": "A_Experiments_0078",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "LiOH",
+      "Li2CO3"
+    ],
+    "major": "LiOH",
+    "minor": "Li2CO3",
+    "minor_weight_percent": 4
+  },
+  {
+    "id": "A_Experiments_0079",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "LiOH",
+      "Li2CO3"
+    ],
+    "major": "LiOH",
+    "minor": "Li2CO3",
+    "minor_weight_percent": 2
+  },
+  {
+    "id": "A_Experiments_0080",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "LiOH",
+      "ZrO2"
+    ],
+    "major": "LiOH",
+    "minor": "ZrO2",
+    "minor_weight_percent": 20
+  },
+  {
+    "id": "A_Experiments_0081",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "LiOH",
+      "ZrO2"
+    ],
+    "major": "LiOH",
+    "minor": "ZrO2",
+    "minor_weight_percent": 18
+  },
+  {
+    "id": "A_Experiments_0082",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "LiOH",
+      "ZrO2"
+    ],
+    "major": "LiOH",
+    "minor": "ZrO2",
+    "minor_weight_percent": 16
+  },
+  {
+    "id": "A_Experiments_0083",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "LiOH",
+      "ZrO2"
+    ],
+    "major": "LiOH",
+    "minor": "ZrO2",
+    "minor_weight_percent": 14
+  },
+  {
+    "id": "A_Experiments_0084",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "LiOH",
+      "ZrO2"
+    ],
+    "major": "LiOH",
+    "minor": "ZrO2",
+    "minor_weight_percent": 12
+  },
+  {
+    "id": "A_Experiments_0085",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "LiOH",
+      "ZrO2"
+    ],
+    "major": "LiOH",
+    "minor": "ZrO2",
+    "minor_weight_percent": 10
+  },
+  {
+    "id": "A_Experiments_0086",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "LiOH",
+      "ZrO2"
+    ],
+    "major": "LiOH",
+    "minor": "ZrO2",
+    "minor_weight_percent": 8
+  },
+  {
+    "id": "A_Experiments_0087",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "LiOH",
+      "ZrO2"
+    ],
+    "major": "LiOH",
+    "minor": "ZrO2",
+    "minor_weight_percent": 6
+  },
+  {
+    "id": "A_Experiments_0088",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "LiOH",
+      "ZrO2"
+    ],
+    "major": "LiOH",
+    "minor": "ZrO2",
+    "minor_weight_percent": 4
+  },
+  {
+    "id": "A_Experiments_0089",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "LiOH",
+      "ZrO2"
+    ],
+    "major": "LiOH",
+    "minor": "ZrO2",
+    "minor_weight_percent": 2
+  },
+  {
+    "id": "A_Experiments_0090",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "ZrO2",
+      "La(OH)3"
+    ],
+    "major": "ZrO2",
+    "minor": "La(OH)3",
+    "minor_weight_percent": 20
+  },
+  {
+    "id": "A_Experiments_0091",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "ZrO2",
+      "La(OH)3"
+    ],
+    "major": "ZrO2",
+    "minor": "La(OH)3",
+    "minor_weight_percent": 18
+  },
+  {
+    "id": "A_Experiments_0092",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "ZrO2",
+      "La(OH)3"
+    ],
+    "major": "ZrO2",
+    "minor": "La(OH)3",
+    "minor_weight_percent": 16
+  },
+  {
+    "id": "A_Experiments_0093",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "ZrO2",
+      "La(OH)3"
+    ],
+    "major": "ZrO2",
+    "minor": "La(OH)3",
+    "minor_weight_percent": 14
+  },
+  {
+    "id": "A_Experiments_0094",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "ZrO2",
+      "La(OH)3"
+    ],
+    "major": "ZrO2",
+    "minor": "La(OH)3",
+    "minor_weight_percent": 12
+  },
+  {
+    "id": "A_Experiments_0095",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "ZrO2",
+      "La(OH)3"
+    ],
+    "major": "ZrO2",
+    "minor": "La(OH)3",
+    "minor_weight_percent": 10
+  },
+  {
+    "id": "A_Experiments_0096",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "ZrO2",
+      "La(OH)3"
+    ],
+    "major": "ZrO2",
+    "minor": "La(OH)3",
+    "minor_weight_percent": 8
+  },
+  {
+    "id": "A_Experiments_0097",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "ZrO2",
+      "La(OH)3"
+    ],
+    "major": "ZrO2",
+    "minor": "La(OH)3",
+    "minor_weight_percent": 6
+  },
+  {
+    "id": "A_Experiments_0098",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "ZrO2",
+      "La(OH)3"
+    ],
+    "major": "ZrO2",
+    "minor": "La(OH)3",
+    "minor_weight_percent": 4
+  },
+  {
+    "id": "A_Experiments_0099",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "ZrO2",
+      "La(OH)3"
+    ],
+    "major": "ZrO2",
+    "minor": "La(OH)3",
+    "minor_weight_percent": 2
+  },
+  {
+    "id": "A_Experiments_0100",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "ZrO2",
+      "Li2CO3"
+    ],
+    "major": "ZrO2",
+    "minor": "Li2CO3",
+    "minor_weight_percent": 20
+  },
+  {
+    "id": "A_Experiments_0101",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "ZrO2",
+      "Li2CO3"
+    ],
+    "major": "ZrO2",
+    "minor": "Li2CO3",
+    "minor_weight_percent": 18
+  },
+  {
+    "id": "A_Experiments_0102",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "ZrO2",
+      "Li2CO3"
+    ],
+    "major": "ZrO2",
+    "minor": "Li2CO3",
+    "minor_weight_percent": 16
+  },
+  {
+    "id": "A_Experiments_0103",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "ZrO2",
+      "Li2CO3"
+    ],
+    "major": "ZrO2",
+    "minor": "Li2CO3",
+    "minor_weight_percent": 14
+  },
+  {
+    "id": "A_Experiments_0104",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "ZrO2",
+      "Li2CO3"
+    ],
+    "major": "ZrO2",
+    "minor": "Li2CO3",
+    "minor_weight_percent": 12
+  },
+  {
+    "id": "A_Experiments_0105",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "ZrO2",
+      "Li2CO3"
+    ],
+    "major": "ZrO2",
+    "minor": "Li2CO3",
+    "minor_weight_percent": 10
+  },
+  {
+    "id": "A_Experiments_0106",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "ZrO2",
+      "Li2CO3"
+    ],
+    "major": "ZrO2",
+    "minor": "Li2CO3",
+    "minor_weight_percent": 8
+  },
+  {
+    "id": "A_Experiments_0107",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "ZrO2",
+      "Li2CO3"
+    ],
+    "major": "ZrO2",
+    "minor": "Li2CO3",
+    "minor_weight_percent": 6
+  },
+  {
+    "id": "A_Experiments_0108",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "ZrO2",
+      "Li2CO3"
+    ],
+    "major": "ZrO2",
+    "minor": "Li2CO3",
+    "minor_weight_percent": 4
+  },
+  {
+    "id": "A_Experiments_0109",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "ZrO2",
+      "Li2CO3"
+    ],
+    "major": "ZrO2",
+    "minor": "Li2CO3",
+    "minor_weight_percent": 2
+  },
+  {
+    "id": "A_Experiments_0110",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "ZrO2",
+      "LiOH"
+    ],
+    "major": "ZrO2",
+    "minor": "LiOH",
+    "minor_weight_percent": 20
+  },
+  {
+    "id": "A_Experiments_0111",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "ZrO2",
+      "LiOH"
+    ],
+    "major": "ZrO2",
+    "minor": "LiOH",
+    "minor_weight_percent": 18
+  },
+  {
+    "id": "A_Experiments_0112",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "ZrO2",
+      "LiOH"
+    ],
+    "major": "ZrO2",
+    "minor": "LiOH",
+    "minor_weight_percent": 16
+  },
+  {
+    "id": "A_Experiments_0113",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "ZrO2",
+      "LiOH"
+    ],
+    "major": "ZrO2",
+    "minor": "LiOH",
+    "minor_weight_percent": 14
+  },
+  {
+    "id": "A_Experiments_0114",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "ZrO2",
+      "LiOH"
+    ],
+    "major": "ZrO2",
+    "minor": "LiOH",
+    "minor_weight_percent": 12
+  },
+  {
+    "id": "A_Experiments_0115",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "ZrO2",
+      "LiOH"
+    ],
+    "major": "ZrO2",
+    "minor": "LiOH",
+    "minor_weight_percent": 10
+  },
+  {
+    "id": "A_Experiments_0116",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "ZrO2",
+      "LiOH"
+    ],
+    "major": "ZrO2",
+    "minor": "LiOH",
+    "minor_weight_percent": 8
+  },
+  {
+    "id": "A_Experiments_0117",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "ZrO2",
+      "LiOH"
+    ],
+    "major": "ZrO2",
+    "minor": "LiOH",
+    "minor_weight_percent": 6
+  },
+  {
+    "id": "A_Experiments_0118",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "ZrO2",
+      "LiOH"
+    ],
+    "major": "ZrO2",
+    "minor": "LiOH",
+    "minor_weight_percent": 4
+  },
+  {
+    "id": "A_Experiments_0119",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "Experiments",
+    "phases": [
+      "ZrO2",
+      "LiOH"
+    ],
+    "major": "ZrO2",
+    "minor": "LiOH",
+    "minor_weight_percent": 2
+  }
+]

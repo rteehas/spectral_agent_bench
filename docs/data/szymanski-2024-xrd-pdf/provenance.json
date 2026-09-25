@@ -1,0 +1,72 @@
+{
+  "paper_doi": "10.1038/s41524-024-01230-9",
+  "data_doi": "10.6084/m9.figshare.24043410.v1",
+  "download_url": "https://ndownloader.figshare.com/files/42159903",
+  "archive_sha256": "92194b2523dec90b7cbf88a30d997bf5456284910e4af2b46586835cf6c4da24",
+  "archive_md5": "d14717a5db3884253806f8802cd8d61a",
+  "archive_bytes": 264508800,
+  "license": "CC BY 4.0",
+  "attribution": "Nathan Szymanski (2023), Integrated analysis of XRD patterns and PDFs, figshare, version 1.",
+  "code_commit": "bf32082521e45c0fcf5cf9ae9bd1321e76bf9012",
+  "input_transformation": "Each numeric text file parsed into float64 arrays without resampling, normalization, cropping, or fitting. Anonymous stable IDs replace answer-bearing filenames; labels are separate metadata for scientific evaluation. All native numeric values are preserved at float64 precision.",
+  "inventory": {
+    "Li-La-Zr-O_1-Phase": {
+      "patterns": 560,
+      "classes": 28
+    },
+    "Li-La-Zr-O_2-Phase": {
+      "patterns": 400,
+      "classes": 28
+    },
+    "Li-La-Zr-O_3-Phase": {
+      "patterns": 400,
+      "classes": 28
+    },
+    "Li-La-Zr-O_Experiments": {
+      "patterns": 120,
+      "classes": 4
+    },
+    "Li-Ti-P-O_1-Phase": {
+      "patterns": 530,
+      "classes": 53
+    },
+    "Li-Ti-P-O_2-Phase": {
+      "patterns": 400,
+      "classes": 53
+    },
+    "Li-Ti-P-O_3-Phase": {
+      "patterns": 400,
+      "classes": 53
+    },
+    "Li-Ti-P-O_Experiments": {
+      "patterns": 120,
+      "classes": 4
+    }
+  },
+  "input_files": {
+    "Li-La-Zr-O_1-Phase.json": "3bc2afad4de565568e0e47e489f1497b1990f9845038eedd48e1b25a7e2778d2",
+    "Li-La-Zr-O_1-Phase.npz": "5a8a05dac97594a482ea4a5e256ed14370cf2b87c6e7b7dbaa0adbb18de709f2",
+    "Li-La-Zr-O_2-Phase.json": "1d8e6d18f45b4a7dd47c4e45240f3650973df050ee572dbb623f4f2b8b638340",
+    "Li-La-Zr-O_2-Phase.npz": "f9379b1a693d2811451388677368cf8c25d906993144250b54cc4d453a856df6",
+    "Li-La-Zr-O_3-Phase.json": "7c2fbc97b17eaa54779c8faa291d0573f64ce5432abe1bd40707eaa529fc6057",
+    "Li-La-Zr-O_3-Phase.npz": "d94194bd8be3e9e3bae82940a040a13cd7aa7a99a69f24ca9c423e593e4de139",
+    "Li-La-Zr-O_Experiments.json": "b0a830dc346d73c7251c44403504a3c91ead742a61810b302b651253cc3c4140",
+    "Li-La-Zr-O_Experiments.npz": "6d9b07cc317b7ae7dabc0f711b26b8cc71d71796b6a24cad8c0329bd5b8d185f",
+    "Li-Ti-P-O_1-Phase.json": "b684343c8b83ce4c0c78899e15c11e8055e2aa070e08190bc2a7a94cad6d66d8",
+    "Li-Ti-P-O_1-Phase.npz": "cbd807bcc5c822700bffae5089a0032154804df28c619d823804b88ea89c8411",
+    "Li-Ti-P-O_2-Phase.json": "a05df5fe312054efa2dad6b6b5a0d41afea265df0298233968cd312bc385da70",
+    "Li-Ti-P-O_2-Phase.npz": "b87fb410748e82a26d9c88de3db5f7b7fdc25fc59f455c64eca00d2c82670b13",
+    "Li-Ti-P-O_3-Phase.json": "20f66f4b84d1ff4363ab2f08123610178944fc85a6446effa721b6052a26432b",
+    "Li-Ti-P-O_3-Phase.npz": "0d741cf48ef5d36aed0eb89343e31a3371066b1355df4cf2b4e6762c2734fa0e",
+    "Li-Ti-P-O_Experiments.json": "80b3e045b457d4ad0faeb5606d92cad4b687c954dc1a9a1f6e516b15dc0b045b",
+    "Li-Ti-P-O_Experiments.npz": "4a351960ab48bd489278744f25ed601678e74d001ea2ff86745c0466cb11e374",
+    "README.md": "ca574dc9d513ad928d7164af8a22c5b75e175f31ecf8accb6e9e71d5a8287db0",
+    "output_schema.json": "7b74a53970946b5f58db06afb974dfe1276c04df63ed909e3455ca9789f850ab",
+    "protocol.json": "56fdac2b2676b08f228eab7ebf3a9737066cdebdfd634c8500d05f012f8b8a58"
+  },
+  "availability_limitations": [
+    "2690 simulated patterns rather than 8000 reported; 28 LLZO and 53 LTPO single-phase classes rather than article 28 and45.",
+    "No separate LiTiO2 occupancy sweep, categorized artifact dataset, training splits, CAM arrays, or historical predictions in Figshare v1.",
+    "Raw here means earliest released numeric spectra; no detector frames. Simulations contain augmentations already."
+  ]
+}

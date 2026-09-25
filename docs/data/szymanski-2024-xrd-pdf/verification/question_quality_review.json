@@ -1,0 +1,65 @@
+{
+  "reviewer_role": "Independent question-quality sub-agent",
+  "verdict": "pass_after_revision",
+  "scope": "Standalone research framing, nontriviality, distinctness, sufficient raw inputs, necessary background, answer leakage, and solver-contract consistency. Numerical execution and verifier correctness are separate reviews.",
+  "questions": [
+    {
+      "id": "SZYMANSKI24-Q1",
+      "verdict": "pass",
+      "title": "Which representation gives more reliable phase identification on held-out simulated patterns?"
+    },
+    {
+      "id": "SZYMANSKI24-Q2",
+      "verdict": "pass",
+      "title": "How does increasing phase count affect recovery of constituent identities from XRD and virtual-PDF template fits?"
+    },
+    {
+      "id": "SZYMANSKI24-Q3",
+      "verdict": "pass",
+      "title": "How do additive noise and smooth background alter virtual PDFs across distance windows?"
+    },
+    {
+      "id": "SZYMANSKI24-Q4",
+      "verdict": "pass",
+      "title": "How well do simulation-derived references recover secondary phases in measured binary mixtures as abundance decreases?"
+    }
+  ],
+  "findings": [
+    {
+      "id": "QUALITY-01",
+      "status": "resolved",
+      "issue": "split_trace schema initially implied every recorded single-phase test ID is evaluated by Q2/Q4.",
+      "resolution": "Schema now identifies complete reference partition and directs evaluated mixture IDs to predictions.csv."
+    },
+    {
+      "id": "QUALITY-02",
+      "status": "resolved",
+      "issue": "README initially omitted explicitly referenced protocol sections from applicable definitions.",
+      "resolution": "README now includes referenced section definitions and states that no other question result is needed."
+    }
+  ],
+  "reviewed_solver_projection": {
+    "path": "papers/szymanski-2024-xrd-pdf/paper.json",
+    "fields": [
+      "id",
+      "title",
+      "inputs",
+      "prompt"
+    ],
+    "canonicalization": "json.dumps(projection, sort_keys=True, separators=(\",\",\":\"), ensure_ascii=False).encode()",
+    "sha256": "5a30e0091a434836588ac9e78b88712041a2be2d8c4cf9d32d205ae2637747c8"
+  },
+  "reviewed_contract_files": {
+    "docs/data/szymanski-2024-xrd-pdf/inputs/protocol.json": "56fdac2b2676b08f228eab7ebf3a9737066cdebdfd634c8500d05f012f8b8a58",
+    "docs/data/szymanski-2024-xrd-pdf/inputs/output_schema.json": "7b74a53970946b5f58db06afb974dfe1276c04df63ed909e3455ca9789f850ab",
+    "docs/data/szymanski-2024-xrd-pdf/inputs/README.md": "ca574dc9d513ad928d7164af8a22c5b75e175f31ecf8accb6e9e71d5a8287db0"
+  },
+  "limitations": [
+    "Labels remain supplied separately for scientific evaluation; anonymized names do not by themselves enforce label-blind inference.",
+    "Controlled baseline references do not reproduce historical CNN results.",
+    "Q2 phase-count groups differ in constituent composition; interpretation is descriptive.",
+    "Q3 energy retention does not establish retained classification accuracy.",
+    "Q4 candidate formulas and binary cardinality are known; intensity coefficients are not mass fractions."
+  ],
+  "open_blocking_findings": []
+}

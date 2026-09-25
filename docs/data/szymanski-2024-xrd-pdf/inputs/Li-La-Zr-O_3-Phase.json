@@ -1,0 +1,4002 @@
+[
+  {
+    "id": "A_3-Phase_0000",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La(OH)3_176",
+      "La2O3_164",
+      "ZrO2_19"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0001",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La(OH)3_176",
+      "La2O3_206",
+      "Li2O2_194"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0002",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La(OH)3_176",
+      "La2O3_206",
+      "Li2O_225"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0003",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La(OH)3_176",
+      "LaOOH_11",
+      "Li7La3Zr2O12_230"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0004",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La(OH)3_176",
+      "LaOOH_11",
+      "ZrO2_62"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0005",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La(OH)3_176",
+      "Li2CO3_15",
+      "ZrO2_225"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0006",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La(OH)3_176",
+      "Li2CO3_15",
+      "ZrO2_62"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0007",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La(OH)3_176",
+      "Li2O_225",
+      "La2O3_164"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0008",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La(OH)3_176",
+      "Li2O_225",
+      "ZrO2_62"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0009",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La(OH)3_176",
+      "Li6Zr2O7_15",
+      "Li2CO3_15"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0010",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La(OH)3_176",
+      "Li6Zr2O7_15",
+      "Zr3O_182"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0011",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La(OH)3_176",
+      "LiLaO2_14",
+      "Li2ZrO3_15"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0012",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La(OH)3_176",
+      "LiLaO2_14",
+      "ZrO2_225"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0013",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La(OH)3_176",
+      "LiLaO2_14",
+      "ZrO_225"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0014",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La(OH)3_176",
+      "LiO2_58",
+      "La2O3_206"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0015",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La(OH)3_176",
+      "LiO2_58",
+      "Zr2O_224"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0016",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La(OH)3_176",
+      "LiO2_58",
+      "Zr3O_167"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0017",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La(OH)3_176",
+      "LiOH-H2O_12",
+      "Zr2O_224"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0018",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La(OH)3_176",
+      "LiOH_129",
+      "ZrO2_14"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0019",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La(OH)3_176",
+      "ZrO2_225",
+      "ZrO2_61"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0020",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La(OH)3_176",
+      "ZrO_189",
+      "La2O3_206"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0021",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La(OH)3_176",
+      "ZrO_189",
+      "ZrO2_137"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0022",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La2O3_164",
+      "La(OH)3_176",
+      "La2O3_206"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0023",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La2O3_164",
+      "La2Zr2O7_227",
+      "ZrO2_14"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0024",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La2O3_164",
+      "Li2CO3_15",
+      "ZrO2_19"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0025",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La2O3_164",
+      "Li2O2_194",
+      "La(OH)3_176"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0026",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La2O3_164",
+      "Li2ZrO3_15",
+      "ZrO2_137"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0027",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La2O3_164",
+      "Li6Zr2O7_15",
+      "LiLaO2_14"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0028",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La2O3_164",
+      "Li6Zr2O7_15",
+      "ZrO_225"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0029",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La2O3_164",
+      "Li7La3Zr2O12_230",
+      "La2O3_206"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0030",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La2O3_164",
+      "LiLaO2_14",
+      "Zr3O_167"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0031",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La2O3_164",
+      "LiO2_58",
+      "Li4Zr3O8_141"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0032",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La2O3_164",
+      "LiO2_58",
+      "Li7La3Zr2O12_142"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0033",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La2O3_164",
+      "LiOH_129",
+      "Li6Zr2O7_15"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0034",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La2O3_164",
+      "ZrO2_19",
+      "Li7La3Zr2O12_142"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0035",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La2O3_164",
+      "ZrO2_19",
+      "Li7La3Zr2O12_230"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0036",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La2O3_164",
+      "ZrO2_225",
+      "LiLaO2_14"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0037",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La2O3_164",
+      "ZrO_189",
+      "La2O3_206"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0038",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La2O3_206",
+      "La(OH)3_176",
+      "Zr2O_224"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0039",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La2O3_206",
+      "LaOOH_11",
+      "Zr3O_167"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0040",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La2O3_206",
+      "Li2CO3_15",
+      "Zr2O_224"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0041",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La2O3_206",
+      "Li2CO3_15",
+      "ZrO2_225"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0042",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La2O3_206",
+      "Li6Zr2O7_15",
+      "ZrO2_137"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0043",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La2O3_206",
+      "LiOH-H2O_12",
+      "Zr3O_167"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0044",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La2O3_206",
+      "LiOH_129",
+      "LiO2_58"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0045",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La2O3_206",
+      "Zr3O_182",
+      "ZrO2_137"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0046",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La2O3_206",
+      "ZrO2_19",
+      "ZrO_225"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0047",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La2O3_206",
+      "ZrO2_225",
+      "La2Zr2O7_227"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0048",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La2O3_206",
+      "ZrO2_61",
+      "La(OH)3_176"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0049",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La2O3_206",
+      "ZrO2_62",
+      "ZrO2_61"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0050",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La2O3_206",
+      "ZrO_189",
+      "ZrO2_137"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0051",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La2Zr2O7_227",
+      "La(OH)3_176",
+      "ZrO_225"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0052",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La2Zr2O7_227",
+      "La2O3_164",
+      "ZrO_189"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0053",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La2Zr2O7_227",
+      "LaOOH_11",
+      "ZrO2_61"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0054",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La2Zr2O7_227",
+      "Li2CO3_15",
+      "La2O3_164"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0055",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La2Zr2O7_227",
+      "Li4Zr3O8_141",
+      "LiOH_129"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0056",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La2Zr2O7_227",
+      "Li4Zr3O8_141",
+      "ZrO_225"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0057",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La2Zr2O7_227",
+      "Li6Zr2O7_15",
+      "Li2O_225"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0058",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La2Zr2O7_227",
+      "Li7La3Zr2O12_230",
+      "Zr3O_167"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0059",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La2Zr2O7_227",
+      "LiLaO2_14",
+      "ZrO_189"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0060",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La2Zr2O7_227",
+      "LiOH-H2O_12",
+      "ZrO2_137"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0061",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La2Zr2O7_227",
+      "LiOH-H2O_12",
+      "ZrO2_19"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0062",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La2Zr2O7_227",
+      "ZrO2_19",
+      "Li6Zr2O7_15"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0063",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La2Zr2O7_227",
+      "ZrO2_61",
+      "Li2CO3_15"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0064",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "La2Zr2O7_227",
+      "ZrO2_62",
+      "Zr2O_224"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0065",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LaOOH_11",
+      "La(OH)3_176",
+      "ZrO2_225"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0066",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LaOOH_11",
+      "Li2O2_194",
+      "Li7La3Zr2O12_230"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0067",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LaOOH_11",
+      "Li2O2_194",
+      "ZrO2_19"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0068",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LaOOH_11",
+      "Li6Zr2O7_15",
+      "La2O3_164"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0069",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LaOOH_11",
+      "LiO2_58",
+      "Li7La3Zr2O12_142"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0070",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LaOOH_11",
+      "LiO2_58",
+      "ZrO2_19"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0071",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LaOOH_11",
+      "ZrO2_137",
+      "La2O3_164"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0072",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LaOOH_11",
+      "ZrO2_137",
+      "La2Zr2O7_227"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0073",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LaOOH_11",
+      "ZrO2_225",
+      "LiO2_58"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0074",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LaOOH_11",
+      "ZrO2_62",
+      "LiO2_58"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0075",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LaOOH_11",
+      "ZrO_189",
+      "La2Zr2O7_227"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0076",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li2CO3_15",
+      "LaOOH_11",
+      "LiOH_129"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0077",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li2CO3_15",
+      "LaOOH_11",
+      "Zr2O_224"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0078",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li2CO3_15",
+      "Li2O_225",
+      "Zr3O_182"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0079",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li2CO3_15",
+      "Li4Zr3O8_141",
+      "La2Zr2O7_227"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0080",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li2CO3_15",
+      "Li6Zr2O7_15",
+      "La(OH)3_176"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0081",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li2CO3_15",
+      "Li7La3Zr2O12_142",
+      "Li2O2_194"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0082",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li2CO3_15",
+      "Zr3O_167",
+      "ZrO2_61"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0083",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li2CO3_15",
+      "ZrO2_14",
+      "La2Zr2O7_227"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0084",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li2CO3_15",
+      "ZrO2_19",
+      "Zr2O_224"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0085",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li2CO3_15",
+      "ZrO2_225",
+      "Zr3O_167"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0086",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li2CO3_15",
+      "ZrO2_61",
+      "Li2O_225"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0087",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li2CO3_15",
+      "ZrO2_61",
+      "ZrO_225"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0088",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li2CO3_15",
+      "ZrO_189",
+      "ZrO_225"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0089",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li2O2_194",
+      "La(OH)3_176",
+      "ZrO_225"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0090",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li2O2_194",
+      "LaOOH_11",
+      "Li6Zr2O7_15"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0091",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li2O2_194",
+      "Li2O_225",
+      "LaOOH_11"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0092",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li2O2_194",
+      "Li4Zr3O8_141",
+      "LiOH-H2O_12"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0093",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li2O2_194",
+      "Li7La3Zr2O12_142",
+      "ZrO2_14"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0094",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li2O2_194",
+      "Li7La3Zr2O12_230",
+      "LiOH-H2O_12"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0095",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li2O2_194",
+      "LiO2_58",
+      "La2Zr2O7_227"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0096",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li2O2_194",
+      "Zr2O_224",
+      "Li2ZrO3_15"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0097",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li2O2_194",
+      "Zr3O_167",
+      "Li6Zr2O7_15"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0098",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li2O2_194",
+      "ZrO2_14",
+      "LiOH-H2O_12"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0099",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li2O2_194",
+      "ZrO2_14",
+      "ZrO2_137"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0100",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li2O2_194",
+      "ZrO2_62",
+      "LaOOH_11"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0101",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li2O2_194",
+      "ZrO_189",
+      "Li6Zr2O7_15"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0102",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li2O_225",
+      "La(OH)3_176",
+      "Li7La3Zr2O12_230"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0103",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li2O_225",
+      "La2O3_164",
+      "ZrO2_225"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0104",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li2O_225",
+      "La2Zr2O7_227",
+      "Li2O2_194"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0105",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li2O_225",
+      "Li2CO3_15",
+      "La2Zr2O7_227"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0106",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li2O_225",
+      "Li7La3Zr2O12_142",
+      "La2Zr2O7_227"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0107",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li2O_225",
+      "LiLaO2_14",
+      "ZrO2_137"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0108",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li2O_225",
+      "LiO2_58",
+      "Zr3O_182"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0109",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li2O_225",
+      "LiOH-H2O_12",
+      "La2O3_206"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0110",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li2O_225",
+      "Zr2O_224",
+      "La2Zr2O7_227"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0111",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li2O_225",
+      "Zr3O_182",
+      "Li6Zr2O7_15"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0112",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li2O_225",
+      "Zr3O_182",
+      "Li7La3Zr2O12_142"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0113",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li2O_225",
+      "Zr3O_182",
+      "LiOH_129"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0114",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li2O_225",
+      "ZrO2_14",
+      "Li6Zr2O7_15"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0115",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li2O_225",
+      "ZrO2_14",
+      "Zr2O_224"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0116",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li2O_225",
+      "ZrO2_225",
+      "ZrO_225"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0117",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li2O_225",
+      "ZrO2_61",
+      "LaOOH_11"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0118",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li2O_225",
+      "ZrO2_62",
+      "LiLaO2_14"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0119",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li2O_225",
+      "ZrO_189",
+      "La2Zr2O7_227"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0120",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li2O_225",
+      "ZrO_189",
+      "Li4Zr3O8_141"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0121",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li2O_225",
+      "ZrO_225",
+      "ZrO2_62"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0122",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li2ZrO3_15",
+      "La(OH)3_176",
+      "Li4Zr3O8_141"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0123",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li2ZrO3_15",
+      "La(OH)3_176",
+      "ZrO_189"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0124",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li2ZrO3_15",
+      "La2Zr2O7_227",
+      "ZrO2_62"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0125",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li2ZrO3_15",
+      "Li2CO3_15",
+      "Zr2O_224"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0126",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li2ZrO3_15",
+      "Li2CO3_15",
+      "Zr3O_167"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0127",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li2ZrO3_15",
+      "Li2O_225",
+      "La2O3_206"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0128",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li2ZrO3_15",
+      "LiO2_58",
+      "ZrO2_137"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0129",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li2ZrO3_15",
+      "ZrO2_137",
+      "La(OH)3_176"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0130",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li2ZrO3_15",
+      "ZrO_189",
+      "La2Zr2O7_227"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0131",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li2ZrO3_15",
+      "ZrO_189",
+      "LiOH_129"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0132",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li4Zr3O8_141",
+      "La2O3_164",
+      "La2Zr2O7_227"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0133",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li4Zr3O8_141",
+      "La2O3_206",
+      "Zr3O_167"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0134",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li4Zr3O8_141",
+      "La2Zr2O7_227",
+      "Li2O_225"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0135",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li4Zr3O8_141",
+      "LaOOH_11",
+      "La2O3_206"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0136",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li4Zr3O8_141",
+      "LaOOH_11",
+      "Zr3O_167"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0137",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li4Zr3O8_141",
+      "Li2CO3_15",
+      "LiOH_129"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0138",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li4Zr3O8_141",
+      "Li2ZrO3_15",
+      "ZrO2_19"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0139",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li4Zr3O8_141",
+      "Li2ZrO3_15",
+      "ZrO2_62"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0140",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li4Zr3O8_141",
+      "Li6Zr2O7_15",
+      "ZrO2_225"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0141",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li4Zr3O8_141",
+      "LiLaO2_14",
+      "ZrO2_225"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0142",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li4Zr3O8_141",
+      "LiOH-H2O_12",
+      "ZrO2_61"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0143",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li4Zr3O8_141",
+      "Zr2O_224",
+      "ZrO2_62"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0144",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li4Zr3O8_141",
+      "Zr3O_167",
+      "LiLaO2_14"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0145",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li4Zr3O8_141",
+      "ZrO2_19",
+      "Li7La3Zr2O12_142"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0146",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li4Zr3O8_141",
+      "ZrO2_61",
+      "Zr3O_182"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0147",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li4Zr3O8_141",
+      "ZrO2_62",
+      "Li2O_225"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0148",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li6Zr2O7_15",
+      "La2O3_206",
+      "La2Zr2O7_227"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0149",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li6Zr2O7_15",
+      "La2O3_206",
+      "Li7La3Zr2O12_230"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0150",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li6Zr2O7_15",
+      "La2Zr2O7_227",
+      "Li2CO3_15"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0151",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li6Zr2O7_15",
+      "La2Zr2O7_227",
+      "LiOH-H2O_12"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0152",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li6Zr2O7_15",
+      "Li2CO3_15",
+      "Li4Zr3O8_141"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0153",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li6Zr2O7_15",
+      "Li2CO3_15",
+      "Li7La3Zr2O12_230"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0154",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li6Zr2O7_15",
+      "Li2CO3_15",
+      "ZrO2_19"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0155",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li6Zr2O7_15",
+      "Li2O2_194",
+      "La(OH)3_176"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0156",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li6Zr2O7_15",
+      "Li7La3Zr2O12_142",
+      "LiO2_58"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0157",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li6Zr2O7_15",
+      "Li7La3Zr2O12_142",
+      "ZrO2_61"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0158",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li6Zr2O7_15",
+      "LiLaO2_14",
+      "LiO2_58"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0159",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li6Zr2O7_15",
+      "LiOH_129",
+      "ZrO2_62"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0160",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li6Zr2O7_15",
+      "ZrO2_137",
+      "ZrO2_61"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0161",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li6Zr2O7_15",
+      "ZrO2_62",
+      "LiO2_58"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0162",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li6Zr2O7_15",
+      "ZrO2_62",
+      "LiOH_129"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0163",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li6Zr2O7_15",
+      "ZrO_225",
+      "Li2ZrO3_15"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0164",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li7La3Zr2O12_142",
+      "La(OH)3_176",
+      "Zr3O_182"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0165",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li7La3Zr2O12_142",
+      "La2O3_206",
+      "LaOOH_11"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0166",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li7La3Zr2O12_142",
+      "Li2CO3_15",
+      "ZrO2_137"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0167",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li7La3Zr2O12_142",
+      "Li2O2_194",
+      "ZrO_225"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0168",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li7La3Zr2O12_142",
+      "Li6Zr2O7_15",
+      "Li2ZrO3_15"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0169",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li7La3Zr2O12_142",
+      "Zr2O_224",
+      "Zr3O_167"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0170",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li7La3Zr2O12_142",
+      "ZrO2_14",
+      "LaOOH_11"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0171",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li7La3Zr2O12_142",
+      "ZrO2_225",
+      "Zr3O_167"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0172",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li7La3Zr2O12_230",
+      "La2Zr2O7_227",
+      "ZrO_189"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0173",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li7La3Zr2O12_230",
+      "LaOOH_11",
+      "La2Zr2O7_227"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0174",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li7La3Zr2O12_230",
+      "Li2O2_194",
+      "LiOH_129"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0175",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li7La3Zr2O12_230",
+      "Li2ZrO3_15",
+      "La2O3_164"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0176",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li7La3Zr2O12_230",
+      "Li2ZrO3_15",
+      "Li7La3Zr2O12_142"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0177",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li7La3Zr2O12_230",
+      "Li2ZrO3_15",
+      "ZrO2_19"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0178",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li7La3Zr2O12_230",
+      "Li4Zr3O8_141",
+      "Zr3O_182"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0179",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li7La3Zr2O12_230",
+      "LiLaO2_14",
+      "La2O3_206"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0180",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li7La3Zr2O12_230",
+      "LiLaO2_14",
+      "Li2CO3_15"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0181",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li7La3Zr2O12_230",
+      "LiO2_58",
+      "ZrO_189"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0182",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li7La3Zr2O12_230",
+      "Zr2O_224",
+      "La2O3_206"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0183",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li7La3Zr2O12_230",
+      "Zr3O_167",
+      "ZrO2_62"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0184",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li7La3Zr2O12_230",
+      "Zr3O_182",
+      "Li2O2_194"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0185",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li7La3Zr2O12_230",
+      "ZrO2_137",
+      "ZrO2_225"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0186",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li7La3Zr2O12_230",
+      "ZrO2_14",
+      "ZrO_225"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0187",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li7La3Zr2O12_230",
+      "ZrO2_225",
+      "LiLaO2_14"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0188",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li7La3Zr2O12_230",
+      "ZrO2_61",
+      "ZrO2_225"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0189",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li7La3Zr2O12_230",
+      "ZrO_189",
+      "LaOOH_11"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0190",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Li7La3Zr2O12_230",
+      "ZrO_225",
+      "Li4Zr3O8_141"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0191",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LiLaO2_14",
+      "La2Zr2O7_227",
+      "ZrO2_19"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0192",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LiLaO2_14",
+      "Li2CO3_15",
+      "Li2O_225"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0193",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LiLaO2_14",
+      "Li2O2_194",
+      "La2O3_206"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0194",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LiLaO2_14",
+      "Li2O_225",
+      "Li2ZrO3_15"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0195",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LiLaO2_14",
+      "Li4Zr3O8_141",
+      "ZrO_225"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0196",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LiLaO2_14",
+      "LiO2_58",
+      "Li2ZrO3_15"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0197",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LiLaO2_14",
+      "LiOH-H2O_12",
+      "ZrO_189"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0198",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LiLaO2_14",
+      "Zr2O_224",
+      "ZrO_189"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0199",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LiLaO2_14",
+      "Zr3O_167",
+      "ZrO_225"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0200",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LiLaO2_14",
+      "Zr3O_182",
+      "Li2O_225"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0201",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LiLaO2_14",
+      "Zr3O_182",
+      "LiO2_58"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0202",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LiLaO2_14",
+      "ZrO2_137",
+      "Li2O_225"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0203",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LiLaO2_14",
+      "ZrO2_137",
+      "LiOH_129"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0204",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LiLaO2_14",
+      "ZrO2_137",
+      "Zr2O_224"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0205",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LiLaO2_14",
+      "ZrO2_14",
+      "La(OH)3_176"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0206",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LiLaO2_14",
+      "ZrO2_225",
+      "Li7La3Zr2O12_230"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0207",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LiLaO2_14",
+      "ZrO2_61",
+      "La2Zr2O7_227"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0208",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LiO2_58",
+      "La(OH)3_176",
+      "LiOH_129"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0209",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LiO2_58",
+      "La2O3_206",
+      "Li2O_225"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0210",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LiO2_58",
+      "LaOOH_11",
+      "Li2ZrO3_15"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0211",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LiO2_58",
+      "Li2CO3_15",
+      "LiOH-H2O_12"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0212",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LiO2_58",
+      "Li2O2_194",
+      "La2O3_164"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0213",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LiO2_58",
+      "Li2O2_194",
+      "Zr3O_182"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0214",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LiO2_58",
+      "Li4Zr3O8_141",
+      "La2O3_164"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0215",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LiO2_58",
+      "Li6Zr2O7_15",
+      "La2O3_164"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0216",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LiO2_58",
+      "Li7La3Zr2O12_142",
+      "La(OH)3_176"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0217",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LiO2_58",
+      "LiOH_129",
+      "La2O3_206"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0218",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LiO2_58",
+      "Zr2O_224",
+      "ZrO2_61"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0219",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LiO2_58",
+      "ZrO2_14",
+      "Zr3O_167"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0220",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LiO2_58",
+      "ZrO2_62",
+      "Li4Zr3O8_141"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0221",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LiO2_58",
+      "ZrO2_62",
+      "LiLaO2_14"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0222",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LiO2_58",
+      "ZrO_225",
+      "Li6Zr2O7_15"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0223",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LiOH-H2O_12",
+      "La(OH)3_176",
+      "ZrO2_137"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0224",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LiOH-H2O_12",
+      "La2O3_206",
+      "LaOOH_11"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0225",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LiOH-H2O_12",
+      "Li2O2_194",
+      "Zr3O_182"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0226",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LiOH-H2O_12",
+      "Li2O_225",
+      "Li2ZrO3_15"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0227",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LiOH-H2O_12",
+      "Li2O_225",
+      "ZrO2_61"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0228",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LiOH-H2O_12",
+      "Li2ZrO3_15",
+      "LiO2_58"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0229",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LiOH-H2O_12",
+      "Li7La3Zr2O12_142",
+      "LiOH_129"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0230",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LiOH-H2O_12",
+      "Zr2O_224",
+      "Li2O2_194"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0231",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LiOH-H2O_12",
+      "ZrO2_137",
+      "ZrO2_14"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0232",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LiOH-H2O_12",
+      "ZrO2_225",
+      "ZrO2_61"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0233",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LiOH-H2O_12",
+      "ZrO2_61",
+      "Zr3O_182"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0234",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LiOH-H2O_12",
+      "ZrO2_62",
+      "Li6Zr2O7_15"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0235",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LiOH-H2O_12",
+      "ZrO_225",
+      "Li2O_225"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0236",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LiOH-H2O_12",
+      "ZrO_225",
+      "ZrO2_61"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0237",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LiOH_129",
+      "La2O3_206",
+      "Li2ZrO3_15"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0238",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LiOH_129",
+      "LaOOH_11",
+      "La2O3_164"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0239",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LiOH_129",
+      "LaOOH_11",
+      "LiO2_58"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0240",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LiOH_129",
+      "Li2ZrO3_15",
+      "Li6Zr2O7_15"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0241",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LiOH_129",
+      "Li6Zr2O7_15",
+      "Li4Zr3O8_141"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0242",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LiOH_129",
+      "Li7La3Zr2O12_142",
+      "La2O3_206"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0243",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LiOH_129",
+      "LiO2_58",
+      "ZrO_189"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0244",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LiOH_129",
+      "LiOH-H2O_12",
+      "ZrO2_62"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0245",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LiOH_129",
+      "Zr3O_167",
+      "ZrO2_62"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0246",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LiOH_129",
+      "ZrO2_14",
+      "La2O3_206"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0247",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LiOH_129",
+      "ZrO2_14",
+      "ZrO2_62"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0248",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LiOH_129",
+      "ZrO2_19",
+      "ZrO_189"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0249",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LiOH_129",
+      "ZrO2_61",
+      "LiO2_58"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0250",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LiOH_129",
+      "ZrO2_62",
+      "ZrO_189"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0251",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "LiOH_129",
+      "ZrO_189",
+      "La2Zr2O7_227"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0252",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Zr2O_224",
+      "La2O3_164",
+      "La2Zr2O7_227"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0253",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Zr2O_224",
+      "La2O3_164",
+      "LiOH_129"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0254",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Zr2O_224",
+      "Li2CO3_15",
+      "LiOH-H2O_12"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0255",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Zr2O_224",
+      "LiOH-H2O_12",
+      "Li6Zr2O7_15"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0256",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Zr2O_224",
+      "LiOH-H2O_12",
+      "ZrO2_14"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0257",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Zr2O_224",
+      "LiOH-H2O_12",
+      "ZrO2_225"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0258",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Zr2O_224",
+      "LiOH-H2O_12",
+      "ZrO_225"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0259",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Zr2O_224",
+      "Zr3O_167",
+      "LiOH_129"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0260",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Zr2O_224",
+      "Zr3O_167",
+      "Zr3O_182"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0261",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Zr2O_224",
+      "ZrO2_19",
+      "Li4Zr3O8_141"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0262",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Zr2O_224",
+      "ZrO_189",
+      "ZrO2_62"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0263",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Zr3O_167",
+      "La2O3_206",
+      "Zr3O_182"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0264",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Zr3O_167",
+      "Li2CO3_15",
+      "Li4Zr3O8_141"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0265",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Zr3O_167",
+      "Li6Zr2O7_15",
+      "Li7La3Zr2O12_230"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0266",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Zr3O_167",
+      "LiLaO2_14",
+      "LaOOH_11"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0267",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Zr3O_167",
+      "LiOH_129",
+      "Li7La3Zr2O12_142"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0268",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Zr3O_167",
+      "ZrO2_137",
+      "LiOH-H2O_12"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0269",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Zr3O_167",
+      "ZrO_225",
+      "Li2CO3_15"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0270",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Zr3O_167",
+      "ZrO_225",
+      "ZrO2_137"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0271",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Zr3O_182",
+      "La2O3_206",
+      "Li7La3Zr2O12_230"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0272",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Zr3O_182",
+      "La2Zr2O7_227",
+      "La(OH)3_176"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0273",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Zr3O_182",
+      "La2Zr2O7_227",
+      "Li6Zr2O7_15"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0274",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Zr3O_182",
+      "LaOOH_11",
+      "La2O3_164"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0275",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Zr3O_182",
+      "Li2CO3_15",
+      "Li7La3Zr2O12_230"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0276",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Zr3O_182",
+      "Li2ZrO3_15",
+      "ZrO_189"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0277",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Zr3O_182",
+      "Li2ZrO3_15",
+      "ZrO_225"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0278",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Zr3O_182",
+      "Li4Zr3O8_141",
+      "La2Zr2O7_227"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0279",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Zr3O_182",
+      "LiLaO2_14",
+      "La2O3_164"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0280",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Zr3O_182",
+      "LiOH-H2O_12",
+      "Li6Zr2O7_15"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0281",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Zr3O_182",
+      "LiOH_129",
+      "ZrO2_62"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0282",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Zr3O_182",
+      "Zr3O_167",
+      "Li2ZrO3_15"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0283",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Zr3O_182",
+      "ZrO2_14",
+      "Zr3O_167"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0284",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Zr3O_182",
+      "ZrO2_19",
+      "Li4Zr3O8_141"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0285",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Zr3O_182",
+      "ZrO2_61",
+      "Li7La3Zr2O12_230"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0286",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Zr3O_182",
+      "ZrO2_62",
+      "ZrO2_137"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0287",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "Zr3O_182",
+      "ZrO_189",
+      "LiO2_58"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0288",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_137",
+      "La2O3_164",
+      "La2Zr2O7_227"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0289",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_137",
+      "Li2O2_194",
+      "ZrO2_14"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0290",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_137",
+      "Li2ZrO3_15",
+      "ZrO2_225"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0291",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_137",
+      "Li4Zr3O8_141",
+      "LaOOH_11"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0292",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_137",
+      "Li4Zr3O8_141",
+      "LiO2_58"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0293",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_137",
+      "Li6Zr2O7_15",
+      "Li4Zr3O8_141"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0294",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_137",
+      "LiO2_58",
+      "Li2ZrO3_15"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0295",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_137",
+      "LiO2_58",
+      "ZrO2_62"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0296",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_137",
+      "LiOH-H2O_12",
+      "LaOOH_11"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0297",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_137",
+      "ZrO_189",
+      "Li4Zr3O8_141"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0298",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_14",
+      "La2O3_164",
+      "Li2O_225"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0299",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_14",
+      "La2O3_164",
+      "Li7La3Zr2O12_142"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0300",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_14",
+      "La2O3_206",
+      "LiOH-H2O_12"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0301",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_14",
+      "LaOOH_11",
+      "ZrO2_225"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0302",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_14",
+      "Li2O_225",
+      "LaOOH_11"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0303",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_14",
+      "Li2ZrO3_15",
+      "LiOH_129"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0304",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_14",
+      "Li4Zr3O8_141",
+      "LiOH_129"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0305",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_14",
+      "Zr2O_224",
+      "LaOOH_11"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0306",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_14",
+      "Zr3O_182",
+      "LaOOH_11"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0307",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_14",
+      "Zr3O_182",
+      "LiOH-H2O_12"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0308",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_14",
+      "ZrO2_19",
+      "La2Zr2O7_227"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0309",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_14",
+      "ZrO2_225",
+      "Li2CO3_15"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0310",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_14",
+      "ZrO2_225",
+      "Li7La3Zr2O12_142"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0311",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_14",
+      "ZrO_225",
+      "ZrO2_225"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0312",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_19",
+      "La(OH)3_176",
+      "ZrO2_61"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0313",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_19",
+      "La2Zr2O7_227",
+      "ZrO2_137"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0314",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_19",
+      "LaOOH_11",
+      "Li2O_225"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0315",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_19",
+      "Li2CO3_15",
+      "LiO2_58"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0316",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_19",
+      "Li4Zr3O8_141",
+      "La2O3_206"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0317",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_19",
+      "Li7La3Zr2O12_230",
+      "Zr3O_182"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0318",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_19",
+      "Li7La3Zr2O12_230",
+      "ZrO_225"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0319",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_19",
+      "LiO2_58",
+      "La2O3_164"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0320",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_19",
+      "LiO2_58",
+      "Li7La3Zr2O12_142"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0321",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_19",
+      "LiOH_129",
+      "ZrO_225"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0322",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_19",
+      "Zr2O_224",
+      "La2O3_164"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0323",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_19",
+      "Zr3O_167",
+      "ZrO2_61"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0324",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_19",
+      "ZrO2_137",
+      "ZrO2_14"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0325",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_19",
+      "ZrO2_225",
+      "Li6Zr2O7_15"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0326",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_19",
+      "ZrO_225",
+      "LiOH-H2O_12"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0327",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_19",
+      "ZrO_225",
+      "LiOH_129"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0328",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_225",
+      "La(OH)3_176",
+      "La2O3_164"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0329",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_225",
+      "La(OH)3_176",
+      "Li6Zr2O7_15"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0330",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_225",
+      "La(OH)3_176",
+      "Li7La3Zr2O12_142"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0331",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_225",
+      "La2O3_206",
+      "Li7La3Zr2O12_142"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0332",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_225",
+      "La2O3_206",
+      "Zr3O_182"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0333",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_225",
+      "La2Zr2O7_227",
+      "Li4Zr3O8_141"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0334",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_225",
+      "Li2CO3_15",
+      "LaOOH_11"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0335",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_225",
+      "Li2O_225",
+      "La2Zr2O7_227"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0336",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_225",
+      "Li2ZrO3_15",
+      "Li2O2_194"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0337",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_225",
+      "Li2ZrO3_15",
+      "LiOH-H2O_12"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0338",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_225",
+      "Li2ZrO3_15",
+      "ZrO2_137"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0339",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_225",
+      "Li4Zr3O8_141",
+      "Li7La3Zr2O12_230"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0340",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_225",
+      "Li6Zr2O7_15",
+      "Zr3O_167"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0341",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_225",
+      "LiLaO2_14",
+      "Li2O2_194"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0342",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_225",
+      "LiLaO2_14",
+      "Li7La3Zr2O12_142"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0343",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_225",
+      "LiOH-H2O_12",
+      "ZrO2_137"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0344",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_225",
+      "Zr2O_224",
+      "Li4Zr3O8_141"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0345",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_225",
+      "ZrO2_62",
+      "Zr2O_224"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0346",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_61",
+      "La2O3_164",
+      "LiOH_129"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0347",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_61",
+      "La2Zr2O7_227",
+      "ZrO2_14"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0348",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_61",
+      "La2Zr2O7_227",
+      "ZrO2_225"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0349",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_61",
+      "LaOOH_11",
+      "LiLaO2_14"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0350",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_61",
+      "LiOH-H2O_12",
+      "Zr2O_224"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0351",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_61",
+      "LiOH-H2O_12",
+      "ZrO2_62"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0352",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_62",
+      "La(OH)3_176",
+      "Li2CO3_15"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0353",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_62",
+      "La2O3_164",
+      "La2O3_206"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0354",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_62",
+      "La2O3_206",
+      "Li2CO3_15"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0355",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_62",
+      "Li2CO3_15",
+      "ZrO2_137"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0356",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_62",
+      "Li2ZrO3_15",
+      "La2O3_164"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0357",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_62",
+      "Li2ZrO3_15",
+      "Li2CO3_15"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0358",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_62",
+      "Li2ZrO3_15",
+      "Li7La3Zr2O12_142"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0359",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_62",
+      "Li4Zr3O8_141",
+      "Zr2O_224"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0360",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_62",
+      "Li6Zr2O7_15",
+      "Li2ZrO3_15"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0361",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_62",
+      "LiLaO2_14",
+      "LiO2_58"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0362",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_62",
+      "LiOH_129",
+      "Li6Zr2O7_15"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0363",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_62",
+      "Zr2O_224",
+      "La2Zr2O7_227"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0364",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_62",
+      "Zr2O_224",
+      "LiO2_58"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0365",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_62",
+      "ZrO2_19",
+      "ZrO2_137"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0366",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO2_62",
+      "ZrO_225",
+      "Zr3O_167"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0367",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO_189",
+      "La(OH)3_176",
+      "Li7La3Zr2O12_142"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0368",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO_189",
+      "Li2CO3_15",
+      "Zr2O_224"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0369",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO_189",
+      "Li7La3Zr2O12_230",
+      "Li7La3Zr2O12_142"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0370",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO_189",
+      "Li7La3Zr2O12_230",
+      "ZrO2_62"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0371",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO_189",
+      "LiLaO2_14",
+      "Li7La3Zr2O12_142"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0372",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO_189",
+      "LiO2_58",
+      "ZrO2_137"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0373",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO_189",
+      "LiOH-H2O_12",
+      "Li7La3Zr2O12_142"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0374",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO_189",
+      "LiOH-H2O_12",
+      "ZrO_225"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0375",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO_189",
+      "LiOH_129",
+      "Li2CO3_15"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0376",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO_189",
+      "LiOH_129",
+      "Li2ZrO3_15"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0377",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO_189",
+      "LiOH_129",
+      "ZrO2_14"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0378",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO_189",
+      "Zr2O_224",
+      "Li7La3Zr2O12_142"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0379",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO_189",
+      "Zr2O_224",
+      "LiO2_58"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0380",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO_189",
+      "Zr3O_182",
+      "Zr3O_167"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0381",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO_189",
+      "ZrO2_14",
+      "LaOOH_11"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0382",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO_189",
+      "ZrO2_62",
+      "La2O3_206"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0383",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO_189",
+      "ZrO2_62",
+      "Li6Zr2O7_15"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0384",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO_225",
+      "La2O3_206",
+      "La(OH)3_176"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0385",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO_225",
+      "La2O3_206",
+      "LiLaO2_14"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0386",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO_225",
+      "La2Zr2O7_227",
+      "LiOH_129"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0387",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO_225",
+      "La2Zr2O7_227",
+      "ZrO2_137"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0388",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO_225",
+      "Li2CO3_15",
+      "ZrO2_19"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0389",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO_225",
+      "Li2O2_194",
+      "ZrO2_14"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0390",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO_225",
+      "Li2O2_194",
+      "ZrO2_62"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0391",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO_225",
+      "Li2ZrO3_15",
+      "Li2CO3_15"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0392",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO_225",
+      "Li4Zr3O8_141",
+      "ZrO2_137"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0393",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO_225",
+      "Li4Zr3O8_141",
+      "ZrO2_19"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0394",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO_225",
+      "LiO2_58",
+      "ZrO_189"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0395",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO_225",
+      "LiOH_129",
+      "Zr3O_167"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0396",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO_225",
+      "ZrO2_225",
+      "Zr2O_224"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0397",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO_225",
+      "ZrO2_61",
+      "Li2ZrO3_15"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0398",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO_225",
+      "ZrO2_61",
+      "LiOH-H2O_12"
+    ]
+  },
+  {
+    "id": "A_3-Phase_0399",
+    "chemistry": "Li-La-Zr-O",
+    "kind": "3-Phase",
+    "phases": [
+      "ZrO_225",
+      "ZrO2_62",
+      "Zr3O_182"
+    ]
+  }
+]

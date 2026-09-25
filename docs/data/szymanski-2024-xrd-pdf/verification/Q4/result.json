@@ -1,0 +1,727 @@
+{
+  "question": "Q4",
+  "summaries": [
+    {
+      "chemistry": "Li-La-Zr-O",
+      "group": "10",
+      "model": "Fused",
+      "n": 12,
+      "micro_f1": 0.75,
+      "exact_match": 0.5,
+      "minor_recall": 0.5
+    },
+    {
+      "chemistry": "Li-La-Zr-O",
+      "group": "10",
+      "model": "PDF",
+      "n": 12,
+      "micro_f1": 0.7083333333333334,
+      "exact_match": 0.4166666666666667,
+      "minor_recall": 0.4166666666666667
+    },
+    {
+      "chemistry": "Li-La-Zr-O",
+      "group": "10",
+      "model": "XRD",
+      "n": 12,
+      "micro_f1": 0.7083333333333334,
+      "exact_match": 0.5,
+      "minor_recall": 0.5
+    },
+    {
+      "chemistry": "Li-La-Zr-O",
+      "group": "12",
+      "model": "Fused",
+      "n": 12,
+      "micro_f1": 0.75,
+      "exact_match": 0.5,
+      "minor_recall": 0.5
+    },
+    {
+      "chemistry": "Li-La-Zr-O",
+      "group": "12",
+      "model": "PDF",
+      "n": 12,
+      "micro_f1": 0.7916666666666666,
+      "exact_match": 0.5833333333333334,
+      "minor_recall": 0.5833333333333334
+    },
+    {
+      "chemistry": "Li-La-Zr-O",
+      "group": "12",
+      "model": "XRD",
+      "n": 12,
+      "micro_f1": 0.6666666666666666,
+      "exact_match": 0.3333333333333333,
+      "minor_recall": 0.4166666666666667
+    },
+    {
+      "chemistry": "Li-La-Zr-O",
+      "group": "14",
+      "model": "Fused",
+      "n": 12,
+      "micro_f1": 0.7916666666666666,
+      "exact_match": 0.5833333333333334,
+      "minor_recall": 0.5833333333333334
+    },
+    {
+      "chemistry": "Li-La-Zr-O",
+      "group": "14",
+      "model": "PDF",
+      "n": 12,
+      "micro_f1": 0.7916666666666666,
+      "exact_match": 0.5833333333333334,
+      "minor_recall": 0.5833333333333334
+    },
+    {
+      "chemistry": "Li-La-Zr-O",
+      "group": "14",
+      "model": "XRD",
+      "n": 12,
+      "micro_f1": 0.75,
+      "exact_match": 0.5,
+      "minor_recall": 0.5
+    },
+    {
+      "chemistry": "Li-La-Zr-O",
+      "group": "16",
+      "model": "Fused",
+      "n": 12,
+      "micro_f1": 0.7916666666666666,
+      "exact_match": 0.5833333333333334,
+      "minor_recall": 0.5833333333333334
+    },
+    {
+      "chemistry": "Li-La-Zr-O",
+      "group": "16",
+      "model": "PDF",
+      "n": 12,
+      "micro_f1": 0.8333333333333334,
+      "exact_match": 0.6666666666666666,
+      "minor_recall": 0.6666666666666666
+    },
+    {
+      "chemistry": "Li-La-Zr-O",
+      "group": "16",
+      "model": "XRD",
+      "n": 12,
+      "micro_f1": 0.7916666666666666,
+      "exact_match": 0.5833333333333334,
+      "minor_recall": 0.6666666666666666
+    },
+    {
+      "chemistry": "Li-La-Zr-O",
+      "group": "18",
+      "model": "Fused",
+      "n": 12,
+      "micro_f1": 0.8333333333333334,
+      "exact_match": 0.6666666666666666,
+      "minor_recall": 0.6666666666666666
+    },
+    {
+      "chemistry": "Li-La-Zr-O",
+      "group": "18",
+      "model": "PDF",
+      "n": 12,
+      "micro_f1": 0.8333333333333334,
+      "exact_match": 0.6666666666666666,
+      "minor_recall": 0.6666666666666666
+    },
+    {
+      "chemistry": "Li-La-Zr-O",
+      "group": "18",
+      "model": "XRD",
+      "n": 12,
+      "micro_f1": 0.7916666666666666,
+      "exact_match": 0.5833333333333334,
+      "minor_recall": 0.5833333333333334
+    },
+    {
+      "chemistry": "Li-La-Zr-O",
+      "group": "2",
+      "model": "Fused",
+      "n": 12,
+      "micro_f1": 0.6666666666666666,
+      "exact_match": 0.3333333333333333,
+      "minor_recall": 0.3333333333333333
+    },
+    {
+      "chemistry": "Li-La-Zr-O",
+      "group": "2",
+      "model": "PDF",
+      "n": 12,
+      "micro_f1": 0.6666666666666666,
+      "exact_match": 0.3333333333333333,
+      "minor_recall": 0.3333333333333333
+    },
+    {
+      "chemistry": "Li-La-Zr-O",
+      "group": "2",
+      "model": "XRD",
+      "n": 12,
+      "micro_f1": 0.75,
+      "exact_match": 0.5,
+      "minor_recall": 0.5
+    },
+    {
+      "chemistry": "Li-La-Zr-O",
+      "group": "20",
+      "model": "Fused",
+      "n": 12,
+      "micro_f1": 0.8333333333333334,
+      "exact_match": 0.6666666666666666,
+      "minor_recall": 0.6666666666666666
+    },
+    {
+      "chemistry": "Li-La-Zr-O",
+      "group": "20",
+      "model": "PDF",
+      "n": 12,
+      "micro_f1": 0.8333333333333334,
+      "exact_match": 0.6666666666666666,
+      "minor_recall": 0.6666666666666666
+    },
+    {
+      "chemistry": "Li-La-Zr-O",
+      "group": "20",
+      "model": "XRD",
+      "n": 12,
+      "micro_f1": 0.7916666666666666,
+      "exact_match": 0.5833333333333334,
+      "minor_recall": 0.6666666666666666
+    },
+    {
+      "chemistry": "Li-La-Zr-O",
+      "group": "4",
+      "model": "Fused",
+      "n": 12,
+      "micro_f1": 0.7083333333333334,
+      "exact_match": 0.4166666666666667,
+      "minor_recall": 0.4166666666666667
+    },
+    {
+      "chemistry": "Li-La-Zr-O",
+      "group": "4",
+      "model": "PDF",
+      "n": 12,
+      "micro_f1": 0.7083333333333334,
+      "exact_match": 0.4166666666666667,
+      "minor_recall": 0.4166666666666667
+    },
+    {
+      "chemistry": "Li-La-Zr-O",
+      "group": "4",
+      "model": "XRD",
+      "n": 12,
+      "micro_f1": 0.75,
+      "exact_match": 0.5,
+      "minor_recall": 0.5
+    },
+    {
+      "chemistry": "Li-La-Zr-O",
+      "group": "6",
+      "model": "Fused",
+      "n": 12,
+      "micro_f1": 0.7083333333333334,
+      "exact_match": 0.4166666666666667,
+      "minor_recall": 0.4166666666666667
+    },
+    {
+      "chemistry": "Li-La-Zr-O",
+      "group": "6",
+      "model": "PDF",
+      "n": 12,
+      "micro_f1": 0.6666666666666666,
+      "exact_match": 0.3333333333333333,
+      "minor_recall": 0.3333333333333333
+    },
+    {
+      "chemistry": "Li-La-Zr-O",
+      "group": "6",
+      "model": "XRD",
+      "n": 12,
+      "micro_f1": 0.6666666666666666,
+      "exact_match": 0.4166666666666667,
+      "minor_recall": 0.4166666666666667
+    },
+    {
+      "chemistry": "Li-La-Zr-O",
+      "group": "8",
+      "model": "Fused",
+      "n": 12,
+      "micro_f1": 0.7083333333333334,
+      "exact_match": 0.4166666666666667,
+      "minor_recall": 0.4166666666666667
+    },
+    {
+      "chemistry": "Li-La-Zr-O",
+      "group": "8",
+      "model": "PDF",
+      "n": 12,
+      "micro_f1": 0.75,
+      "exact_match": 0.5,
+      "minor_recall": 0.5
+    },
+    {
+      "chemistry": "Li-La-Zr-O",
+      "group": "8",
+      "model": "XRD",
+      "n": 12,
+      "micro_f1": 0.6666666666666666,
+      "exact_match": 0.4166666666666667,
+      "minor_recall": 0.4166666666666667
+    },
+    {
+      "chemistry": "Li-Ti-P-O",
+      "group": "10",
+      "model": "Fused",
+      "n": 12,
+      "micro_f1": 0.8333333333333334,
+      "exact_match": 0.6666666666666666,
+      "minor_recall": 0.6666666666666666
+    },
+    {
+      "chemistry": "Li-Ti-P-O",
+      "group": "10",
+      "model": "PDF",
+      "n": 12,
+      "micro_f1": 0.875,
+      "exact_match": 0.75,
+      "minor_recall": 0.75
+    },
+    {
+      "chemistry": "Li-Ti-P-O",
+      "group": "10",
+      "model": "XRD",
+      "n": 12,
+      "micro_f1": 0.7916666666666666,
+      "exact_match": 0.5833333333333334,
+      "minor_recall": 0.5833333333333334
+    },
+    {
+      "chemistry": "Li-Ti-P-O",
+      "group": "12",
+      "model": "Fused",
+      "n": 12,
+      "micro_f1": 0.8333333333333334,
+      "exact_match": 0.6666666666666666,
+      "minor_recall": 0.6666666666666666
+    },
+    {
+      "chemistry": "Li-Ti-P-O",
+      "group": "12",
+      "model": "PDF",
+      "n": 12,
+      "micro_f1": 0.9166666666666666,
+      "exact_match": 0.8333333333333334,
+      "minor_recall": 0.8333333333333334
+    },
+    {
+      "chemistry": "Li-Ti-P-O",
+      "group": "12",
+      "model": "XRD",
+      "n": 12,
+      "micro_f1": 0.8333333333333334,
+      "exact_match": 0.6666666666666666,
+      "minor_recall": 0.6666666666666666
+    },
+    {
+      "chemistry": "Li-Ti-P-O",
+      "group": "14",
+      "model": "Fused",
+      "n": 12,
+      "micro_f1": 0.875,
+      "exact_match": 0.75,
+      "minor_recall": 0.75
+    },
+    {
+      "chemistry": "Li-Ti-P-O",
+      "group": "14",
+      "model": "PDF",
+      "n": 12,
+      "micro_f1": 0.9583333333333334,
+      "exact_match": 0.9166666666666666,
+      "minor_recall": 0.9166666666666666
+    },
+    {
+      "chemistry": "Li-Ti-P-O",
+      "group": "14",
+      "model": "XRD",
+      "n": 12,
+      "micro_f1": 0.8333333333333334,
+      "exact_match": 0.6666666666666666,
+      "minor_recall": 0.6666666666666666
+    },
+    {
+      "chemistry": "Li-Ti-P-O",
+      "group": "16",
+      "model": "Fused",
+      "n": 12,
+      "micro_f1": 0.875,
+      "exact_match": 0.75,
+      "minor_recall": 0.75
+    },
+    {
+      "chemistry": "Li-Ti-P-O",
+      "group": "16",
+      "model": "PDF",
+      "n": 12,
+      "micro_f1": 0.9583333333333334,
+      "exact_match": 0.9166666666666666,
+      "minor_recall": 0.9166666666666666
+    },
+    {
+      "chemistry": "Li-Ti-P-O",
+      "group": "16",
+      "model": "XRD",
+      "n": 12,
+      "micro_f1": 0.875,
+      "exact_match": 0.75,
+      "minor_recall": 0.75
+    },
+    {
+      "chemistry": "Li-Ti-P-O",
+      "group": "18",
+      "model": "Fused",
+      "n": 12,
+      "micro_f1": 0.9166666666666666,
+      "exact_match": 0.8333333333333334,
+      "minor_recall": 0.8333333333333334
+    },
+    {
+      "chemistry": "Li-Ti-P-O",
+      "group": "18",
+      "model": "PDF",
+      "n": 12,
+      "micro_f1": 0.9583333333333334,
+      "exact_match": 0.9166666666666666,
+      "minor_recall": 0.9166666666666666
+    },
+    {
+      "chemistry": "Li-Ti-P-O",
+      "group": "18",
+      "model": "XRD",
+      "n": 12,
+      "micro_f1": 0.875,
+      "exact_match": 0.75,
+      "minor_recall": 0.75
+    },
+    {
+      "chemistry": "Li-Ti-P-O",
+      "group": "2",
+      "model": "Fused",
+      "n": 12,
+      "micro_f1": 0.75,
+      "exact_match": 0.5,
+      "minor_recall": 0.5
+    },
+    {
+      "chemistry": "Li-Ti-P-O",
+      "group": "2",
+      "model": "PDF",
+      "n": 12,
+      "micro_f1": 0.6666666666666666,
+      "exact_match": 0.3333333333333333,
+      "minor_recall": 0.3333333333333333
+    },
+    {
+      "chemistry": "Li-Ti-P-O",
+      "group": "2",
+      "model": "XRD",
+      "n": 12,
+      "micro_f1": 0.7083333333333334,
+      "exact_match": 0.4166666666666667,
+      "minor_recall": 0.4166666666666667
+    },
+    {
+      "chemistry": "Li-Ti-P-O",
+      "group": "20",
+      "model": "Fused",
+      "n": 12,
+      "micro_f1": 0.9166666666666666,
+      "exact_match": 0.8333333333333334,
+      "minor_recall": 0.8333333333333334
+    },
+    {
+      "chemistry": "Li-Ti-P-O",
+      "group": "20",
+      "model": "PDF",
+      "n": 12,
+      "micro_f1": 0.9583333333333334,
+      "exact_match": 0.9166666666666666,
+      "minor_recall": 0.9166666666666666
+    },
+    {
+      "chemistry": "Li-Ti-P-O",
+      "group": "20",
+      "model": "XRD",
+      "n": 12,
+      "micro_f1": 0.875,
+      "exact_match": 0.75,
+      "minor_recall": 0.75
+    },
+    {
+      "chemistry": "Li-Ti-P-O",
+      "group": "4",
+      "model": "Fused",
+      "n": 12,
+      "micro_f1": 0.75,
+      "exact_match": 0.5,
+      "minor_recall": 0.5
+    },
+    {
+      "chemistry": "Li-Ti-P-O",
+      "group": "4",
+      "model": "PDF",
+      "n": 12,
+      "micro_f1": 0.7083333333333334,
+      "exact_match": 0.4166666666666667,
+      "minor_recall": 0.4166666666666667
+    },
+    {
+      "chemistry": "Li-Ti-P-O",
+      "group": "4",
+      "model": "XRD",
+      "n": 12,
+      "micro_f1": 0.7083333333333334,
+      "exact_match": 0.4166666666666667,
+      "minor_recall": 0.4166666666666667
+    },
+    {
+      "chemistry": "Li-Ti-P-O",
+      "group": "6",
+      "model": "Fused",
+      "n": 12,
+      "micro_f1": 0.7916666666666666,
+      "exact_match": 0.5833333333333334,
+      "minor_recall": 0.5833333333333334
+    },
+    {
+      "chemistry": "Li-Ti-P-O",
+      "group": "6",
+      "model": "PDF",
+      "n": 12,
+      "micro_f1": 0.75,
+      "exact_match": 0.5,
+      "minor_recall": 0.5
+    },
+    {
+      "chemistry": "Li-Ti-P-O",
+      "group": "6",
+      "model": "XRD",
+      "n": 12,
+      "micro_f1": 0.75,
+      "exact_match": 0.5,
+      "minor_recall": 0.5
+    },
+    {
+      "chemistry": "Li-Ti-P-O",
+      "group": "8",
+      "model": "Fused",
+      "n": 12,
+      "micro_f1": 0.8333333333333334,
+      "exact_match": 0.6666666666666666,
+      "minor_recall": 0.6666666666666666
+    },
+    {
+      "chemistry": "Li-Ti-P-O",
+      "group": "8",
+      "model": "PDF",
+      "n": 12,
+      "micro_f1": 0.8333333333333334,
+      "exact_match": 0.6666666666666666,
+      "minor_recall": 0.6666666666666666
+    },
+    {
+      "chemistry": "Li-Ti-P-O",
+      "group": "8",
+      "model": "XRD",
+      "n": 12,
+      "micro_f1": 0.75,
+      "exact_match": 0.5,
+      "minor_recall": 0.5
+    }
+  ],
+  "complementarity": [
+    {
+      "chemistry": "Li-La-Zr-O",
+      "group": "10",
+      "n": 12,
+      "xrd_only_correct": 2,
+      "pdf_only_correct": 1,
+      "both_correct": 4,
+      "neither_correct": 5
+    },
+    {
+      "chemistry": "Li-La-Zr-O",
+      "group": "12",
+      "n": 12,
+      "xrd_only_correct": 1,
+      "pdf_only_correct": 4,
+      "both_correct": 3,
+      "neither_correct": 4
+    },
+    {
+      "chemistry": "Li-La-Zr-O",
+      "group": "14",
+      "n": 12,
+      "xrd_only_correct": 2,
+      "pdf_only_correct": 3,
+      "both_correct": 4,
+      "neither_correct": 3
+    },
+    {
+      "chemistry": "Li-La-Zr-O",
+      "group": "16",
+      "n": 12,
+      "xrd_only_correct": 1,
+      "pdf_only_correct": 2,
+      "both_correct": 6,
+      "neither_correct": 3
+    },
+    {
+      "chemistry": "Li-La-Zr-O",
+      "group": "18",
+      "n": 12,
+      "xrd_only_correct": 1,
+      "pdf_only_correct": 2,
+      "both_correct": 6,
+      "neither_correct": 3
+    },
+    {
+      "chemistry": "Li-La-Zr-O",
+      "group": "2",
+      "n": 12,
+      "xrd_only_correct": 3,
+      "pdf_only_correct": 1,
+      "both_correct": 3,
+      "neither_correct": 5
+    },
+    {
+      "chemistry": "Li-La-Zr-O",
+      "group": "20",
+      "n": 12,
+      "xrd_only_correct": 1,
+      "pdf_only_correct": 2,
+      "both_correct": 6,
+      "neither_correct": 3
+    },
+    {
+      "chemistry": "Li-La-Zr-O",
+      "group": "4",
+      "n": 12,
+      "xrd_only_correct": 2,
+      "pdf_only_correct": 1,
+      "both_correct": 4,
+      "neither_correct": 5
+    },
+    {
+      "chemistry": "Li-La-Zr-O",
+      "group": "6",
+      "n": 12,
+      "xrd_only_correct": 2,
+      "pdf_only_correct": 1,
+      "both_correct": 3,
+      "neither_correct": 6
+    },
+    {
+      "chemistry": "Li-La-Zr-O",
+      "group": "8",
+      "n": 12,
+      "xrd_only_correct": 1,
+      "pdf_only_correct": 2,
+      "both_correct": 4,
+      "neither_correct": 5
+    },
+    {
+      "chemistry": "Li-Ti-P-O",
+      "group": "10",
+      "n": 12,
+      "xrd_only_correct": 0,
+      "pdf_only_correct": 2,
+      "both_correct": 7,
+      "neither_correct": 3
+    },
+    {
+      "chemistry": "Li-Ti-P-O",
+      "group": "12",
+      "n": 12,
+      "xrd_only_correct": 0,
+      "pdf_only_correct": 2,
+      "both_correct": 8,
+      "neither_correct": 2
+    },
+    {
+      "chemistry": "Li-Ti-P-O",
+      "group": "14",
+      "n": 12,
+      "xrd_only_correct": 0,
+      "pdf_only_correct": 3,
+      "both_correct": 8,
+      "neither_correct": 1
+    },
+    {
+      "chemistry": "Li-Ti-P-O",
+      "group": "16",
+      "n": 12,
+      "xrd_only_correct": 0,
+      "pdf_only_correct": 2,
+      "both_correct": 9,
+      "neither_correct": 1
+    },
+    {
+      "chemistry": "Li-Ti-P-O",
+      "group": "18",
+      "n": 12,
+      "xrd_only_correct": 0,
+      "pdf_only_correct": 2,
+      "both_correct": 9,
+      "neither_correct": 1
+    },
+    {
+      "chemistry": "Li-Ti-P-O",
+      "group": "2",
+      "n": 12,
+      "xrd_only_correct": 4,
+      "pdf_only_correct": 3,
+      "both_correct": 1,
+      "neither_correct": 4
+    },
+    {
+      "chemistry": "Li-Ti-P-O",
+      "group": "20",
+      "n": 12,
+      "xrd_only_correct": 0,
+      "pdf_only_correct": 2,
+      "both_correct": 9,
+      "neither_correct": 1
+    },
+    {
+      "chemistry": "Li-Ti-P-O",
+      "group": "4",
+      "n": 12,
+      "xrd_only_correct": 3,
+      "pdf_only_correct": 3,
+      "both_correct": 2,
+      "neither_correct": 4
+    },
+    {
+      "chemistry": "Li-Ti-P-O",
+      "group": "6",
+      "n": 12,
+      "xrd_only_correct": 2,
+      "pdf_only_correct": 2,
+      "both_correct": 4,
+      "neither_correct": 4
+    },
+    {
+      "chemistry": "Li-Ti-P-O",
+      "group": "8",
+      "n": 12,
+      "xrd_only_correct": 1,
+      "pdf_only_correct": 3,
+      "both_correct": 5,
+      "neither_correct": 3
+    }
+  ]
+}

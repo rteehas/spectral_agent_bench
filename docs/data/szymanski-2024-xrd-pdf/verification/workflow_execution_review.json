@@ -1,0 +1,278 @@
+{
+  "reviewer": "independent workflow execution subagent",
+  "status": "passed",
+  "method": "Each question run in fresh sandbox with copied candidate.py and only required copied packaged input files; no raw-source tree, other question outputs, reference artifacts or verifier files copied. Isolated by working-directory/input layout, not an operating-system network/filesystem sandbox.",
+  "python": "3.12.14 (main, Aug 13 2026, 00:00:00) [GCC 14.3.1 20251022 (Red Hat 14.3.1-4)]",
+  "platform": "Linux-6.12.0-211.47.1.el10_2.x86_64-x86_64-with-glibc2.39",
+  "versions": {
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "matplotlib": "3.11.2"
+  },
+  "runs": [
+    {
+      "question": "Q1",
+      "command": [
+        "/tmp/torrisi-env/bin/python",
+        "/tmp/szymanski-2024/independent_final/Q1_sandbox/candidate.py",
+        "Q1",
+        "--inputs",
+        "/tmp/szymanski-2024/independent_final/Q1_sandbox/inputs",
+        "--output",
+        "/tmp/szymanski-2024/independent_final/Q1"
+      ],
+      "environment": {
+        "OPENBLAS_NUM_THREADS": "1",
+        "MPLCONFIGDIR": "/tmp/szymanski-exec-mpl"
+      },
+      "working_directory": "/tmp/szymanski-2024/independent_final/Q1_sandbox",
+      "wall_seconds": 2.0497078895568848,
+      "returncode": 0,
+      "required_input_files": [
+        "Li-La-Zr-O_1-Phase.json",
+        "Li-La-Zr-O_1-Phase.npz",
+        "Li-Ti-P-O_1-Phase.json",
+        "Li-Ti-P-O_1-Phase.npz"
+      ],
+      "candidate_sha256": "e0184d3e32d870152d0b5431252efe257356fe14840cf1b076b31c88a69093d7",
+      "stderr": "",
+      "output_files": [
+        "conclusion.md",
+        "diagnostics.png",
+        "execution.json",
+        "predictions.csv",
+        "probe.npz",
+        "result.json",
+        "split_trace.json"
+      ]
+    },
+    {
+      "question": "Q2",
+      "command": [
+        "/tmp/torrisi-env/bin/python",
+        "/tmp/szymanski-2024/independent_final/Q2_sandbox/candidate.py",
+        "Q2",
+        "--inputs",
+        "/tmp/szymanski-2024/independent_final/Q2_sandbox/inputs",
+        "--output",
+        "/tmp/szymanski-2024/independent_final/Q2"
+      ],
+      "environment": {
+        "OPENBLAS_NUM_THREADS": "1",
+        "MPLCONFIGDIR": "/tmp/szymanski-exec-mpl"
+      },
+      "working_directory": "/tmp/szymanski-2024/independent_final/Q2_sandbox",
+      "wall_seconds": 3.330043077468872,
+      "returncode": 0,
+      "required_input_files": [
+        "Li-La-Zr-O_1-Phase.json",
+        "Li-La-Zr-O_1-Phase.npz",
+        "Li-La-Zr-O_2-Phase.json",
+        "Li-La-Zr-O_2-Phase.npz",
+        "Li-La-Zr-O_3-Phase.json",
+        "Li-La-Zr-O_3-Phase.npz",
+        "Li-Ti-P-O_1-Phase.json",
+        "Li-Ti-P-O_1-Phase.npz",
+        "Li-Ti-P-O_2-Phase.json",
+        "Li-Ti-P-O_2-Phase.npz",
+        "Li-Ti-P-O_3-Phase.json",
+        "Li-Ti-P-O_3-Phase.npz"
+      ],
+      "candidate_sha256": "e0184d3e32d870152d0b5431252efe257356fe14840cf1b076b31c88a69093d7",
+      "stderr": "",
+      "output_files": [
+        "conclusion.md",
+        "diagnostics.png",
+        "execution.json",
+        "predictions.csv",
+        "probe.npz",
+        "result.json",
+        "split_trace.json"
+      ]
+    },
+    {
+      "question": "Q3",
+      "command": [
+        "/tmp/torrisi-env/bin/python",
+        "/tmp/szymanski-2024/independent_final/Q3_sandbox/candidate.py",
+        "Q3",
+        "--inputs",
+        "/tmp/szymanski-2024/independent_final/Q3_sandbox/inputs",
+        "--output",
+        "/tmp/szymanski-2024/independent_final/Q3"
+      ],
+      "environment": {
+        "OPENBLAS_NUM_THREADS": "1",
+        "MPLCONFIGDIR": "/tmp/szymanski-exec-mpl"
+      },
+      "working_directory": "/tmp/szymanski-2024/independent_final/Q3_sandbox",
+      "wall_seconds": 1.7256145477294922,
+      "returncode": 0,
+      "required_input_files": [
+        "Li-Ti-P-O_1-Phase.json",
+        "Li-Ti-P-O_1-Phase.npz"
+      ],
+      "candidate_sha256": "e0184d3e32d870152d0b5431252efe257356fe14840cf1b076b31c88a69093d7",
+      "stderr": "",
+      "output_files": [
+        "conclusion.md",
+        "curves.npz",
+        "diagnostics.png",
+        "execution.json",
+        "metrics.csv",
+        "probe.npz",
+        "result.json"
+      ]
+    },
+    {
+      "question": "Q4",
+      "command": [
+        "/tmp/torrisi-env/bin/python",
+        "/tmp/szymanski-2024/independent_final/Q4_sandbox/candidate.py",
+        "Q4",
+        "--inputs",
+        "/tmp/szymanski-2024/independent_final/Q4_sandbox/inputs",
+        "--output",
+        "/tmp/szymanski-2024/independent_final/Q4"
+      ],
+      "environment": {
+        "OPENBLAS_NUM_THREADS": "1",
+        "MPLCONFIGDIR": "/tmp/szymanski-exec-mpl"
+      },
+      "working_directory": "/tmp/szymanski-2024/independent_final/Q4_sandbox",
+      "wall_seconds": 2.245741128921509,
+      "returncode": 0,
+      "required_input_files": [
+        "Li-La-Zr-O_1-Phase.json",
+        "Li-La-Zr-O_1-Phase.npz",
+        "Li-La-Zr-O_Experiments.json",
+        "Li-La-Zr-O_Experiments.npz",
+        "Li-Ti-P-O_1-Phase.json",
+        "Li-Ti-P-O_1-Phase.npz",
+        "Li-Ti-P-O_Experiments.json",
+        "Li-Ti-P-O_Experiments.npz"
+      ],
+      "candidate_sha256": "e0184d3e32d870152d0b5431252efe257356fe14840cf1b076b31c88a69093d7",
+      "stderr": "",
+      "output_files": [
+        "conclusion.md",
+        "diagnostics.png",
+        "execution.json",
+        "predictions.csv",
+        "probe.npz",
+        "result.json",
+        "split_trace.json"
+      ]
+    }
+  ],
+  "packaged_array_audit": {
+    "checked_arrays": 2930,
+    "archives": 8,
+    "all_numeric_values_equal_to_source": true,
+    "source_labels_unique": true,
+    "errors": []
+  },
+  "scientific_review": {
+    "transform": "Reviewed q=4*pi*sin(theta/2)/1.5406, nonuniform-q trapezoidal weights and 2/pi prefactor; signed sine transform preserved. Intensity is an uncorrected PDF-like representation, correctly caveated.",
+    "classifier": "Q1 uses only train split fitting, evaluates held-out repeats of known phases, equal-weight uncalibrated-score fusion; no claims about unseen-phase generalization.",
+    "mixtures": "Q2 average training templates with nonnegative coefficients in XRD and signed transform spaces; exact supplied phase count required; normalized coefficients correctly described as spectral contributions rather than mass fractions.",
+    "experimental": "Q4 uses simulated templates restricted by precursor formula list; merges polymorph weights by formula before ranking; minor percentages only used for aggregation/evaluation.",
+    "artifacts": "Q3 uses controlled additive noise/background on already artifact-bearing release spectra; identical random standard normal draws across amplitudes create paired comparisons; 11 source repeats, 5 noise draws per level; windows are half-open except final endpoint inclusion. Signal-energy retention is correctly distinguished from retained classification information.",
+    "numerical_detail": "NNLS Gram matrix includes 1e-10 diagonal numerical regularization. This yields negligible-ridge NNLS rather than an algebraically exact unregularized objective."
+  },
+  "plot_review": {
+    "Q1": "Viewed both chemistry panels; three method markers consistent with result metrics. Generic Mixture group xlabel is harmless for single-phase condition.",
+    "Q2": "Viewed both panels; F1 decreases with phase count. Method ordering differs by system/group, consistent with numerical results.",
+    "Q3": "Viewed noise and background panels; high-r region amplifies relative noise and low-r region dominates smooth-background distortion. Overlapping window definitions are clear as separate comparisons.",
+    "Q4": "Viewed both panels; grouped secondary-phase recall varies non-monotonically with concentration for some methods; conclusions do not overclaim a universal detection limit."
+  },
+  "missing_runtime_steps": [],
+  "reference_comparison": [
+    {
+      "question": "Q1",
+      "reference_directory": "verification/Q1",
+      "exact_file_comparisons": {
+        "result.json": true,
+        "diagnostics.png": true,
+        "conclusion.md": true,
+        "predictions.csv": true,
+        "split_trace.json": true
+      },
+      "array_comparisons": {
+        "probe.npz": {
+          "same_keys": true,
+          "all_values_exactly_equal": true,
+          "arrays": 5
+        }
+      }
+    },
+    {
+      "question": "Q2",
+      "reference_directory": "verification/Q2",
+      "exact_file_comparisons": {
+        "result.json": true,
+        "diagnostics.png": true,
+        "conclusion.md": true,
+        "predictions.csv": true,
+        "split_trace.json": true
+      },
+      "array_comparisons": {
+        "probe.npz": {
+          "same_keys": true,
+          "all_values_exactly_equal": true,
+          "arrays": 5
+        }
+      }
+    },
+    {
+      "question": "Q3",
+      "reference_directory": "verification/Q3",
+      "exact_file_comparisons": {
+        "result.json": true,
+        "diagnostics.png": true,
+        "conclusion.md": true,
+        "metrics.csv": true
+      },
+      "array_comparisons": {
+        "probe.npz": {
+          "same_keys": true,
+          "all_values_exactly_equal": true,
+          "arrays": 5
+        },
+        "curves.npz": {
+          "same_keys": true,
+          "all_values_exactly_equal": true,
+          "arrays": 144
+        }
+      }
+    },
+    {
+      "question": "Q4",
+      "reference_directory": "verification/Q4",
+      "exact_file_comparisons": {
+        "result.json": true,
+        "diagnostics.png": true,
+        "conclusion.md": true,
+        "predictions.csv": true,
+        "split_trace.json": true
+      },
+      "array_comparisons": {
+        "probe.npz": {
+          "same_keys": true,
+          "all_values_exactly_equal": true,
+          "arrays": 5
+        }
+      }
+    }
+  ],
+  "updated_conclusion_review": {
+    "Q1": "PDF minus XRD differences and fusion improvement over best standalone match recorded results; complementarity count uses exactly-one-representation-correct cases and is restricted to fixed within-phase split.",
+    "Q2": "Two-to-three phase effect sizes match group metrics; composition and abundance confounding is expressly acknowledged.",
+    "Q3": "5\u201340 \u00c5 compromise justified jointly by small smooth-background distortion, lower relative noise than 40\u2013120 \u00c5 and approximately 60% retained baseline energy; conditional scope and approximately 40% energy sacrifice stated.",
+    "Q4": "Endpoint recalls and counts of decreasing adjacent abundance steps match per-group data. Twelve mixtures per concentration and reused component identities acknowledged."
+  },
+  "source_preservation_report": "input_projection_audit.json",
+  "candidate_sha256": "e0184d3e32d870152d0b5431252efe257356fe14840cf1b076b31c88a69093d7",
+  "runtime_setup": "Used the existing /tmp/torrisi-env Python environment with versions matching the pinned requirements; did not claim a fresh network package installation. All four analysis runs used new copied-code/input directories and fresh outputs."
+}

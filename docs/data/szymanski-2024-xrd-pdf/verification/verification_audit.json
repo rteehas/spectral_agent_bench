@@ -1,0 +1,481 @@
+{
+  "source_audit": {
+    "passed": true,
+    "raw_spectra_compared_exactly": 2930,
+    "byte_unique_source_files": 2930,
+    "inventory": {
+      "Li-La-Zr-O_1-Phase": {
+        "spectra": 560,
+        "phase_labels": 28
+      },
+      "Li-La-Zr-O_2-Phase": {
+        "spectra": 400,
+        "phase_labels": 28
+      },
+      "Li-La-Zr-O_3-Phase": {
+        "spectra": 400,
+        "phase_labels": 28
+      },
+      "Li-La-Zr-O_Experiments": {
+        "spectra": 120,
+        "phase_labels": 4
+      },
+      "Li-Ti-P-O_1-Phase": {
+        "spectra": 530,
+        "phase_labels": 53
+      },
+      "Li-Ti-P-O_2-Phase": {
+        "spectra": 400,
+        "phase_labels": 53
+      },
+      "Li-Ti-P-O_3-Phase": {
+        "spectra": 400,
+        "phase_labels": 53
+      },
+      "Li-Ti-P-O_Experiments": {
+        "spectra": 120,
+        "phase_labels": 4
+      }
+    },
+    "native_grids": {
+      "6139 points, 10.000000000 to 140.000000000 degrees": 2690,
+      "6442 points, 10.003433220 to 79.994173260 degrees": 220,
+      "6452 points, 9.995433220 to 80.094837660 degrees": 20
+    },
+    "label_anchor": "Original release basenames, checked independently against all input metadata.",
+    "data_anchor": "All float64 NPZ arrays equal np.loadtxt(original release file) exactly.",
+    "limitations": [
+      "Source labels establish nominal composition and phase identity; they are not independently measured sample purity.",
+      "The release has 2690 simulated and 240 experimental spectra; it does not supply the complete historical model test set.",
+      "Deterministic prediction references are new benchmark baseline outputs, not author-released predictions."
+    ]
+  },
+  "verification_controls": [
+    {
+      "question": "Q1",
+      "positive_control": {
+        "question": "Q1",
+        "passed": true,
+        "prediction_rows": 1047,
+        "source_filename_truth": true,
+        "independent_metric_recomputation": true,
+        "source_derived_partitions_checked": true,
+        "independent_transform_max_absolute_error": 6.140921104957897e-16,
+        "manual_review_required": "Plot meaning, conclusions, and causal limits."
+      },
+      "negative_controls": [
+        {
+          "control": "wrong_reported_metric",
+          "rejected": true,
+          "reason": "Numerical mismatch /summaries/0/n: 169 vs 168"
+        },
+        {
+          "control": "incorrect_sine_transform",
+          "rejected": true,
+          "reason": "Not equal to tolerance rtol=1e-09, atol=1e-09"
+        },
+        {
+          "control": "missing_plot",
+          "rejected": true,
+          "reason": "No nonempty plot artifact"
+        },
+        {
+          "control": "wrong_probe_id",
+          "rejected": true,
+          "reason": "Probe ID is not the first evaluated source required by the contract"
+        },
+        {
+          "control": "wrong_probe_grid",
+          "rejected": true,
+          "reason": "Arrays are not equal"
+        },
+        {
+          "control": "missing_prediction_row",
+          "rejected": true,
+          "reason": "Missing or unexpected prediction rows"
+        },
+        {
+          "control": "duplicate_prediction_row",
+          "rejected": true,
+          "reason": "Duplicate prediction ('A_1-Phase_0006', 'XRD')"
+        },
+        {
+          "control": "unknown_phase",
+          "rejected": true,
+          "reason": "Predictions violate top-K selection: ('A_1-Phase_0006', 'XRD')"
+        },
+        {
+          "control": "nonfinite_score",
+          "rejected": true,
+          "reason": "Not equal to tolerance rtol=1e-10, atol=1e-10"
+        },
+        {
+          "control": "incorrect_scores",
+          "rejected": true,
+          "reason": "Not equal to tolerance rtol=1e-10, atol=1e-10"
+        },
+        {
+          "control": "wrong_split",
+          "rejected": true,
+          "reason": "Source-derived split differs: Li-La-Zr-O/train"
+        },
+        {
+          "control": "missing_split",
+          "rejected": true,
+          "reason": "[Errno 2] No such file or directory: '/tmp/szymanski-verifier-audit-v9jvw7wg/Q1/missing_split/split_trace.json'"
+        }
+      ]
+    },
+    {
+      "question": "Q2",
+      "positive_control": {
+        "question": "Q2",
+        "passed": true,
+        "prediction_rows": 4800,
+        "source_filename_truth": true,
+        "independent_metric_recomputation": true,
+        "source_derived_partitions_checked": true,
+        "independent_transform_max_absolute_error": 9.71445146547012e-16,
+        "manual_review_required": "Plot meaning, conclusions, and causal limits."
+      },
+      "negative_controls": [
+        {
+          "control": "wrong_reported_metric",
+          "rejected": true,
+          "reason": "Numerical mismatch /summaries/0/n: 401 vs 400"
+        },
+        {
+          "control": "incorrect_sine_transform",
+          "rejected": true,
+          "reason": "Not equal to tolerance rtol=1e-09, atol=1e-09"
+        },
+        {
+          "control": "missing_plot",
+          "rejected": true,
+          "reason": "No nonempty plot artifact"
+        },
+        {
+          "control": "wrong_probe_id",
+          "rejected": true,
+          "reason": "Probe ID is not the first evaluated source required by the contract"
+        },
+        {
+          "control": "wrong_probe_grid",
+          "rejected": true,
+          "reason": "Arrays are not equal"
+        },
+        {
+          "control": "missing_prediction_row",
+          "rejected": true,
+          "reason": "Missing or unexpected prediction rows"
+        },
+        {
+          "control": "duplicate_prediction_row",
+          "rejected": true,
+          "reason": "Duplicate prediction ('A_2-Phase_0000', 'XRD')"
+        },
+        {
+          "control": "unknown_phase",
+          "rejected": true,
+          "reason": "Predictions violate top-K selection: ('A_2-Phase_0000', 'XRD')"
+        },
+        {
+          "control": "nonfinite_score",
+          "rejected": true,
+          "reason": "Not equal to tolerance rtol=1e-10, atol=1e-10"
+        },
+        {
+          "control": "incorrect_scores",
+          "rejected": true,
+          "reason": "Not equal to tolerance rtol=1e-10, atol=1e-10"
+        },
+        {
+          "control": "wrong_split",
+          "rejected": true,
+          "reason": "Source-derived split differs: Li-La-Zr-O/train"
+        },
+        {
+          "control": "missing_split",
+          "rejected": true,
+          "reason": "[Errno 2] No such file or directory: '/tmp/szymanski-verifier-audit-v9jvw7wg/Q2/missing_split/split_trace.json'"
+        }
+      ]
+    },
+    {
+      "question": "Q3",
+      "positive_control": {
+        "question": "Q3",
+        "passed": true,
+        "curves_reconstructed_from_source": 143,
+        "independent_metric_rows": 528,
+        "independent_transform_max_absolute_error": 1.2234137314326432e-15,
+        "manual_review_required": "Plot meaning, window tradeoffs, and causal limits."
+      },
+      "negative_controls": [
+        {
+          "control": "wrong_reported_metric",
+          "rejected": true,
+          "reason": "Numerical mismatch /summaries/0/n: 56 vs 55"
+        },
+        {
+          "control": "incorrect_sine_transform",
+          "rejected": true,
+          "reason": "Not equal to tolerance rtol=1e-09, atol=1e-09"
+        },
+        {
+          "control": "missing_plot",
+          "rejected": true,
+          "reason": "No nonempty plot artifact"
+        },
+        {
+          "control": "wrong_probe_id",
+          "rejected": true,
+          "reason": "Probe ID is not the first evaluated source required by the contract"
+        },
+        {
+          "control": "wrong_probe_grid",
+          "rejected": true,
+          "reason": "Arrays are not equal"
+        },
+        {
+          "control": "duplicated_artifact_metric",
+          "rejected": true,
+          "reason": "Wrong number of artifact metric CSV rows"
+        },
+        {
+          "control": "corrupted_artifact_curve",
+          "rejected": true,
+          "reason": "Not equal to tolerance rtol=1e-08, atol=1e-09"
+        }
+      ]
+    },
+    {
+      "question": "Q4",
+      "positive_control": {
+        "question": "Q4",
+        "passed": true,
+        "prediction_rows": 720,
+        "source_filename_truth": true,
+        "independent_metric_recomputation": true,
+        "source_derived_partitions_checked": true,
+        "independent_transform_max_absolute_error": 4.128641872824801e-16,
+        "manual_review_required": "Plot meaning, conclusions, and causal limits."
+      },
+      "negative_controls": [
+        {
+          "control": "wrong_reported_metric",
+          "rejected": true,
+          "reason": "Numerical mismatch /summaries/0/n: 13 vs 12"
+        },
+        {
+          "control": "incorrect_sine_transform",
+          "rejected": true,
+          "reason": "Not equal to tolerance rtol=1e-09, atol=1e-09"
+        },
+        {
+          "control": "missing_plot",
+          "rejected": true,
+          "reason": "No nonempty plot artifact"
+        },
+        {
+          "control": "wrong_probe_id",
+          "rejected": true,
+          "reason": "Probe ID is not the first evaluated source required by the contract"
+        },
+        {
+          "control": "wrong_probe_grid",
+          "rejected": true,
+          "reason": "Arrays are not equal"
+        },
+        {
+          "control": "missing_prediction_row",
+          "rejected": true,
+          "reason": "Missing or unexpected prediction rows"
+        },
+        {
+          "control": "duplicate_prediction_row",
+          "rejected": true,
+          "reason": "Duplicate prediction ('A_Experiments_0000', 'XRD')"
+        },
+        {
+          "control": "unknown_phase",
+          "rejected": true,
+          "reason": "Predictions violate top-K selection: ('A_Experiments_0000', 'XRD')"
+        },
+        {
+          "control": "nonfinite_score",
+          "rejected": true,
+          "reason": "Not equal to tolerance rtol=1e-10, atol=1e-10"
+        },
+        {
+          "control": "incorrect_scores",
+          "rejected": true,
+          "reason": "Not equal to tolerance rtol=1e-10, atol=1e-10"
+        },
+        {
+          "control": "wrong_split",
+          "rejected": true,
+          "reason": "Source-derived split differs: Li-La-Zr-O/train"
+        },
+        {
+          "control": "missing_split",
+          "rejected": true,
+          "reason": "[Errno 2] No such file or directory: '/tmp/szymanski-verifier-audit-v9jvw7wg/Q4/missing_split/split_trace.json'"
+        }
+      ]
+    }
+  ],
+  "independent_model_probes": {
+    "passed": true,
+    "candidate_module_imported": false,
+    "ridge_method": "Centered dual linear solve with explicit -1/+1 targets and softmax.",
+    "nnls_method": "Direct tall spectral design plus sqrt(1e-10) identity rows.",
+    "probes": [
+      {
+        "question": "Q1",
+        "chemistry": "Li-La-Zr-O",
+        "model": "XRD",
+        "source_ids": [
+          "A_1-Phase_0006",
+          "A_1-Phase_0286",
+          "A_1-Phase_0551"
+        ],
+        "scores_checked": 84,
+        "maximum_absolute_difference": 4.163336342344337e-16
+      },
+      {
+        "question": "Q1",
+        "chemistry": "Li-La-Zr-O",
+        "model": "PDF",
+        "source_ids": [
+          "A_1-Phase_0006",
+          "A_1-Phase_0286",
+          "A_1-Phase_0551"
+        ],
+        "scores_checked": 84,
+        "maximum_absolute_difference": 1.6653345369377348e-16
+      },
+      {
+        "question": "Q2",
+        "chemistry": "Li-La-Zr-O",
+        "model": "XRD",
+        "source_ids": [
+          "A_2-Phase_0000",
+          "A_3-Phase_0000",
+          "A_3-Phase_0399"
+        ],
+        "scores_checked": 84,
+        "maximum_absolute_difference": 6.813993813636898e-15
+      },
+      {
+        "question": "Q2",
+        "chemistry": "Li-La-Zr-O",
+        "model": "PDF",
+        "source_ids": [
+          "A_2-Phase_0000",
+          "A_3-Phase_0000",
+          "A_3-Phase_0399"
+        ],
+        "scores_checked": 84,
+        "maximum_absolute_difference": 2.55351295663786e-15
+      },
+      {
+        "question": "Q4",
+        "chemistry": "Li-La-Zr-O",
+        "model": "XRD",
+        "source_ids": [
+          "A_Experiments_0000",
+          "A_Experiments_0060",
+          "A_Experiments_0119"
+        ],
+        "scores_checked": 12,
+        "maximum_absolute_difference": 5.551115123125783e-16
+      },
+      {
+        "question": "Q4",
+        "chemistry": "Li-La-Zr-O",
+        "model": "PDF",
+        "source_ids": [
+          "A_Experiments_0000",
+          "A_Experiments_0060",
+          "A_Experiments_0119"
+        ],
+        "scores_checked": 12,
+        "maximum_absolute_difference": 1.4988010832439613e-15
+      },
+      {
+        "question": "Q1",
+        "chemistry": "Li-Ti-P-O",
+        "model": "XRD",
+        "source_ids": [
+          "B_1-Phase_0004",
+          "B_1-Phase_0266",
+          "B_1-Phase_0525"
+        ],
+        "scores_checked": 159,
+        "maximum_absolute_difference": 1.3877787807814457e-16
+      },
+      {
+        "question": "Q1",
+        "chemistry": "Li-Ti-P-O",
+        "model": "PDF",
+        "source_ids": [
+          "B_1-Phase_0004",
+          "B_1-Phase_0266",
+          "B_1-Phase_0525"
+        ],
+        "scores_checked": 159,
+        "maximum_absolute_difference": 2.220446049250313e-16
+      },
+      {
+        "question": "Q2",
+        "chemistry": "Li-Ti-P-O",
+        "model": "XRD",
+        "source_ids": [
+          "B_2-Phase_0000",
+          "B_3-Phase_0000",
+          "B_3-Phase_0399"
+        ],
+        "scores_checked": 159,
+        "maximum_absolute_difference": 8.881784197001252e-16
+      },
+      {
+        "question": "Q2",
+        "chemistry": "Li-Ti-P-O",
+        "model": "PDF",
+        "source_ids": [
+          "B_2-Phase_0000",
+          "B_3-Phase_0000",
+          "B_3-Phase_0399"
+        ],
+        "scores_checked": 159,
+        "maximum_absolute_difference": 2.213507155346406e-15
+      },
+      {
+        "question": "Q4",
+        "chemistry": "Li-Ti-P-O",
+        "model": "XRD",
+        "source_ids": [
+          "B_Experiments_0000",
+          "B_Experiments_0060",
+          "B_Experiments_0119"
+        ],
+        "scores_checked": 12,
+        "maximum_absolute_difference": 2.220446049250313e-16
+      },
+      {
+        "question": "Q4",
+        "chemistry": "Li-Ti-P-O",
+        "model": "PDF",
+        "source_ids": [
+          "B_Experiments_0000",
+          "B_Experiments_0060",
+          "B_Experiments_0119"
+        ],
+        "scores_checked": 12,
+        "maximum_absolute_difference": 1.7763568394002505e-15
+      }
+    ]
+  },
+  "scope": "Independent source and numerical checks; scientific interpretation and plot legibility also require reviewer inspection."
+}
