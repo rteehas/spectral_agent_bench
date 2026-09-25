@@ -1,65 +1,96 @@
 {
-  "reviewer_role": "Independent question-quality sub-agent",
-  "verdict": "pass_after_revision",
-  "scope": "Standalone research framing, nontriviality, distinctness, sufficient raw inputs, necessary background, answer leakage, and solver-contract consistency. Numerical execution and verifier correctness are separate reviews.",
-  "questions": [
+  "paper_id": "szymanski-2024-xrd-pdf",
+  "revision": "open-research-v2",
+  "reviewer": "Independent question-quality and workflow-execution agent; did not author candidate implementation",
+  "status": "passed_scientific_task_design",
+  "review_date": "2026-09-25T15:05:10.245015+00:00",
+  "solver_projection_sha256": "f711892cc61a5577a0dba8640265e889fbb0a06bef058980f195c757c25f48a5",
+  "question_prompt_sha256": {
+    "SZYMANSKI24-Q1": "29dc9a883b5a928e93b7ea4d724c6f65d6df30c70317bdb263d35e98c8cdd0f8",
+    "SZYMANSKI24-Q2": "5c61bca38fc7cd20e74dcf51216c0b2672a785c37ea001cde60e1f610a155296",
+    "SZYMANSKI24-Q3": "a0fe3074d4d53bdc8e0d90256ec49efe3e39a24c7ebc896fefb1dd89224f7ff1",
+    "SZYMANSKI24-Q4": "6c511bdf5ebf948f38df4270375d1d2b18bf87d51975fefbf6927be2e5fedbde"
+  },
+  "review_markdown_sha256": "9c68bad56aa65eb5fbb315af81f91cd358a10575bd6196908aa9f0037799fadc",
+  "input_files": {
+    "Li-La-Zr-O_1-Phase.json": "7a508724f285fc982647c888567ecab8e71a6611d18fa60a723b2cd1b2e8ad03",
+    "Li-La-Zr-O_1-Phase.npz": "52e7994695f32ff686e77f06636eaf1b25e01911577b191fdd2a174dc78b3caf",
+    "Li-La-Zr-O_Experiments.json": "5068724fd1bc7416f4bde3d3b965ef9dcd6b09da7ce82a95edb330c4f0d761ac",
+    "Li-La-Zr-O_Experiments.npz": "fd07c6e4c614adbb377ffd7bd5a440d4f978080c6e641232a1a640e0e58fe023",
+    "Li-La-Zr-O_Mixtures.json": "42c4a711cf66cc91dabbd9020d48ee2e20198098601562b6f9a046394767d2f0",
+    "Li-La-Zr-O_Mixtures.npz": "7a3fa3492346927615dcd5bd4aa60c0a1849426d45a983cf70f88c7e9fbded08",
+    "Li-Ti-P-O_1-Phase.json": "aae28c51723bd799ad48fe355e37be63a8575d19b0dac6ac452a7b22497bc38d",
+    "Li-Ti-P-O_1-Phase.npz": "16a008c86b216ebc7f167304086e8a26a7f249cab32be792dd646ee5cd97170a",
+    "Li-Ti-P-O_Experiments.json": "473f498a0b1be5bbd2696b4ecbb7c9cf887bb3289ba80d54bdbe971c90606830",
+    "Li-Ti-P-O_Experiments.npz": "7a1662618a906b81ef21a77e5edaf10b22f17d34f3d66e76b2620b71843b3369",
+    "Li-Ti-P-O_Mixtures.json": "ce8a11697e7facd841291b66df098fd46b06f52ea9004431f65d89eafa538ea9",
+    "Li-Ti-P-O_Mixtures.npz": "006c29757bf5ad9102c618cc1f90751ca7daf829acc3af9f3a56732ba1b917f6"
+  },
+  "findings": {
+    "only_raw_numeric_and_label_inputs": true,
+    "protocol_and_schema_files_removed": true,
+    "required_background_and_output_contract_inline": true,
+    "solver_methods_not_prescribed": true,
+    "questions_do_not_reference_paper_or_results": true,
+    "unknown_mixture_count_not_revealed_by_numeric_ids_or_filenames": true,
+    "q3_tests_discrimination_not_energy_only": true,
+    "q4_uses_full_same_chemistry_library": true,
+    "no_blocking_quality_findings": true
+  },
+  "question_assessments": [
     {
-      "id": "SZYMANSKI24-Q1",
-      "verdict": "pass",
-      "title": "Which representation gives more reliable phase identification on held-out simulated patterns?"
+      "question": "Q1",
+      "distinct_step": "Representation reliability and complementary errors",
+      "scientific_decisions": [
+        "evaluation design",
+        "model/representation comparison",
+        "information combination",
+        "uncertainty and sensitivity"
+      ],
+      "verdict": "pass"
     },
     {
-      "id": "SZYMANSKI24-Q2",
-      "verdict": "pass",
-      "title": "How does increasing phase count affect recovery of constituent identities from XRD and virtual-PDF template fits?"
+      "question": "Q2",
+      "distinct_step": "Unknown-cardinality mixture identification",
+      "scientific_decisions": [
+        "reference construction",
+        "calibration without target mixture labels",
+        "phase count selection",
+        "complexity/failure interpretation"
+      ],
+      "verdict": "pass"
     },
     {
-      "id": "SZYMANSKI24-Q3",
-      "verdict": "pass",
-      "title": "How do additive noise and smooth background alter virtual PDFs across distance windows?"
+      "question": "Q3",
+      "distinct_step": "Artifact robustness versus phase discrimination",
+      "scientific_decisions": [
+        "perturbation design",
+        "interval selection",
+        "independent validation",
+        "robustness-discrimination evidence"
+      ],
+      "verdict": "pass"
     },
     {
-      "id": "SZYMANSKI24-Q4",
-      "verdict": "pass",
-      "title": "How well do simulation-derived references recover secondary phases in measured binary mixtures as abundance decreases?"
+      "question": "Q4",
+      "distinct_step": "Simulation-to-measurement transfer and secondary detection",
+      "scientific_decisions": [
+        "transfer strategy",
+        "full-library inference",
+        "false-positive analysis",
+        "abundance dependence and correlated samples"
+      ],
+      "verdict": "pass"
     }
   ],
-  "findings": [
-    {
-      "id": "QUALITY-01",
-      "status": "resolved",
-      "issue": "split_trace schema initially implied every recorded single-phase test ID is evaluated by Q2/Q4.",
-      "resolution": "Schema now identifies complete reference partition and directs evaluated mixture IDs to predictions.csv."
-    },
-    {
-      "id": "QUALITY-02",
-      "status": "resolved",
-      "issue": "README initially omitted explicitly referenced protocol sections from applicable definitions.",
-      "resolution": "README now includes referenced section definitions and states that no other question result is needed."
-    }
+  "resolved_minor_findings": [
+    "Removed mandatory redundant micro_f1 output for the single-label Q1/Q3 tasks.",
+    "Q4 output wording identifies formula labels rather than polymorph phase IDs."
   ],
-  "reviewed_solver_projection": {
-    "path": "papers/szymanski-2024-xrd-pdf/paper.json",
-    "fields": [
-      "id",
-      "title",
-      "inputs",
-      "prompt"
-    ],
-    "canonicalization": "json.dumps(projection, sort_keys=True, separators=(\",\",\":\"), ensure_ascii=False).encode()",
-    "sha256": "5a30e0091a434836588ac9e78b88712041a2be2d8c4cf9d32d205ae2637747c8"
-  },
-  "reviewed_contract_files": {
-    "docs/data/szymanski-2024-xrd-pdf/inputs/protocol.json": "56fdac2b2676b08f228eab7ebf3a9737066cdebdfd634c8500d05f012f8b8a58",
-    "docs/data/szymanski-2024-xrd-pdf/inputs/output_schema.json": "7b74a53970946b5f58db06afb974dfe1276c04df63ed909e3455ca9789f850ab",
-    "docs/data/szymanski-2024-xrd-pdf/inputs/README.md": "ca574dc9d513ad928d7164af8a22c5b75e175f31ecf8accb6e9e71d5a8287db0"
-  },
   "limitations": [
-    "Labels remain supplied separately for scientific evaluation; anonymized names do not by themselves enforce label-blind inference.",
-    "Controlled baseline references do not reproduce historical CNN results.",
-    "Q2 phase-count groups differ in constituent composition; interpretation is descriptive.",
-    "Q3 energy retention does not establish retained classification accuracy.",
-    "Q4 candidate formulas and binary cardinality are known; intensity coefficients are not mass fractions."
-  ],
-  "open_blocking_findings": []
+    "Difficulty is design intent, not calibrated across independent solver success rates.",
+    "Target-label tables remain readable; code and execution audit are necessary to detect leakage.",
+    "An output-integrity pass is not a scientific-validity verdict.",
+    "Evaluation must accept defensible negative findings and methods that differ from the worked answer."
+  ]
 }

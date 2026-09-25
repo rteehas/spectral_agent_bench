@@ -1,278 +1,467 @@
 {
-  "reviewer": "independent workflow execution subagent",
-  "status": "passed",
-  "method": "Each question run in fresh sandbox with copied candidate.py and only required copied packaged input files; no raw-source tree, other question outputs, reference artifacts or verifier files copied. Isolated by working-directory/input layout, not an operating-system network/filesystem sandbox.",
-  "python": "3.12.14 (main, Aug 13 2026, 00:00:00) [GCC 14.3.1 20251022 (Red Hat 14.3.1-4)]",
-  "platform": "Linux-6.12.0-211.47.1.el10_2.x86_64-x86_64-with-glibc2.39",
-  "versions": {
+  "paper_id": "szymanski-2024-xrd-pdf",
+  "revision": "open-research-v2",
+  "status": "passed_independent_reproduction",
+  "reviewer": "Independent question-quality and workflow-execution agent; did not author candidate implementation",
+  "candidate_sha256": "2c81e2aa1cea139eb7b4e2fcd04910e55dd26eb8d9b9366cef4beee128f1e6eb",
+  "verifier_sha256": "8e666109703eafe5da6e8165f54e2298a53f4f5a69216286ae4eb850685d8d01",
+  "solver_projection_sha256": "f711892cc61a5577a0dba8640265e889fbb0a06bef058980f195c757c25f48a5",
+  "interpreter": "/tmp/torrisi-env/bin/python",
+  "dependency_versions": {
+    "questions": [
+      "Q1"
+    ],
+    "elapsed_seconds": 1.792184829711914,
+    "input_directory": "/tmp/szymanski-v2/independent/final/Q1_bundle/inputs",
+    "candidate_sha256": "2c81e2aa1cea139eb7b4e2fcd04910e55dd26eb8d9b9366cef4beee128f1e6eb",
     "numpy": "2.5.3",
     "scipy": "1.18.1",
-    "scikit-learn": "1.9.1",
-    "matplotlib": "3.11.2"
+    "sklearn": "1.9.1"
   },
   "runs": [
     {
       "question": "Q1",
       "command": [
         "/tmp/torrisi-env/bin/python",
-        "/tmp/szymanski-2024/independent_final/Q1_sandbox/candidate.py",
+        "/tmp/szymanski-v2/independent/final/Q1_runner/candidate.py",
         "Q1",
         "--inputs",
-        "/tmp/szymanski-2024/independent_final/Q1_sandbox/inputs",
+        "/tmp/szymanski-v2/independent/final/Q1_bundle/inputs",
         "--output",
-        "/tmp/szymanski-2024/independent_final/Q1"
+        "/tmp/szymanski-v2/independent/final/Q1"
       ],
       "environment": {
         "OPENBLAS_NUM_THREADS": "1",
-        "MPLCONFIGDIR": "/tmp/szymanski-exec-mpl"
+        "MPLCONFIGDIR": "/tmp/szymanski-v2-independent-mpl"
       },
-      "working_directory": "/tmp/szymanski-2024/independent_final/Q1_sandbox",
-      "wall_seconds": 2.0497078895568848,
+      "working_directory": "/tmp/szymanski-v2/independent/final/Q1_runner",
+      "wall_seconds": 2.905410078004934,
       "returncode": 0,
-      "required_input_files": [
-        "Li-La-Zr-O_1-Phase.json",
-        "Li-La-Zr-O_1-Phase.npz",
-        "Li-Ti-P-O_1-Phase.json",
-        "Li-Ti-P-O_1-Phase.npz"
+      "export_files": [
+        "inputs/Li-La-Zr-O_1-Phase.json",
+        "inputs/Li-La-Zr-O_1-Phase.npz",
+        "inputs/Li-Ti-P-O_1-Phase.json",
+        "inputs/Li-Ti-P-O_1-Phase.npz",
+        "task.json"
       ],
-      "candidate_sha256": "e0184d3e32d870152d0b5431252efe257356fe14840cf1b076b31c88a69093d7",
+      "input_sha256": {
+        "Li-La-Zr-O_1-Phase.npz": "52e7994695f32ff686e77f06636eaf1b25e01911577b191fdd2a174dc78b3caf",
+        "Li-La-Zr-O_1-Phase.json": "7a508724f285fc982647c888567ecab8e71a6611d18fa60a723b2cd1b2e8ad03",
+        "Li-Ti-P-O_1-Phase.npz": "16a008c86b216ebc7f167304086e8a26a7f249cab32be792dd646ee5cd97170a",
+        "Li-Ti-P-O_1-Phase.json": "aae28c51723bd799ad48fe355e37be63a8575d19b0dac6ac452a7b22497bc38d"
+      },
+      "task_sha256": "82e55e0aa57488bf2d01ea9ae31406e2a720570363459ee9c2d9a6ad305b4979",
+      "candidate_sha256": "2c81e2aa1cea139eb7b4e2fcd04910e55dd26eb8d9b9366cef4beee128f1e6eb",
       "stderr": "",
       "output_files": [
-        "conclusion.md",
-        "diagnostics.png",
-        "execution.json",
-        "predictions.csv",
-        "probe.npz",
-        "result.json",
-        "split_trace.json"
-      ]
-    },
-    {
-      "question": "Q2",
-      "command": [
-        "/tmp/torrisi-env/bin/python",
-        "/tmp/szymanski-2024/independent_final/Q2_sandbox/candidate.py",
-        "Q2",
-        "--inputs",
-        "/tmp/szymanski-2024/independent_final/Q2_sandbox/inputs",
-        "--output",
-        "/tmp/szymanski-2024/independent_final/Q2"
-      ],
-      "environment": {
-        "OPENBLAS_NUM_THREADS": "1",
-        "MPLCONFIGDIR": "/tmp/szymanski-exec-mpl"
-      },
-      "working_directory": "/tmp/szymanski-2024/independent_final/Q2_sandbox",
-      "wall_seconds": 3.330043077468872,
-      "returncode": 0,
-      "required_input_files": [
-        "Li-La-Zr-O_1-Phase.json",
-        "Li-La-Zr-O_1-Phase.npz",
-        "Li-La-Zr-O_2-Phase.json",
-        "Li-La-Zr-O_2-Phase.npz",
-        "Li-La-Zr-O_3-Phase.json",
-        "Li-La-Zr-O_3-Phase.npz",
-        "Li-Ti-P-O_1-Phase.json",
-        "Li-Ti-P-O_1-Phase.npz",
-        "Li-Ti-P-O_2-Phase.json",
-        "Li-Ti-P-O_2-Phase.npz",
-        "Li-Ti-P-O_3-Phase.json",
-        "Li-Ti-P-O_3-Phase.npz"
-      ],
-      "candidate_sha256": "e0184d3e32d870152d0b5431252efe257356fe14840cf1b076b31c88a69093d7",
-      "stderr": "",
-      "output_files": [
-        "conclusion.md",
-        "diagnostics.png",
-        "execution.json",
-        "predictions.csv",
-        "probe.npz",
-        "result.json",
-        "split_trace.json"
-      ]
-    },
-    {
-      "question": "Q3",
-      "command": [
-        "/tmp/torrisi-env/bin/python",
-        "/tmp/szymanski-2024/independent_final/Q3_sandbox/candidate.py",
-        "Q3",
-        "--inputs",
-        "/tmp/szymanski-2024/independent_final/Q3_sandbox/inputs",
-        "--output",
-        "/tmp/szymanski-2024/independent_final/Q3"
-      ],
-      "environment": {
-        "OPENBLAS_NUM_THREADS": "1",
-        "MPLCONFIGDIR": "/tmp/szymanski-exec-mpl"
-      },
-      "working_directory": "/tmp/szymanski-2024/independent_final/Q3_sandbox",
-      "wall_seconds": 1.7256145477294922,
-      "returncode": 0,
-      "required_input_files": [
-        "Li-Ti-P-O_1-Phase.json",
-        "Li-Ti-P-O_1-Phase.npz"
-      ],
-      "candidate_sha256": "e0184d3e32d870152d0b5431252efe257356fe14840cf1b076b31c88a69093d7",
-      "stderr": "",
-      "output_files": [
-        "conclusion.md",
-        "curves.npz",
+        "comparison.json",
+        "design.json",
         "diagnostics.png",
         "execution.json",
         "metrics.csv",
-        "probe.npz",
-        "result.json"
-      ]
+        "per_class_accuracy.csv",
+        "predictions.csv",
+        "report.md",
+        "result.json",
+        "run.py",
+        "splits.csv"
+      ],
+      "integrity_verification": {
+        "integrity_passed": true,
+        "scientific_correctness": "NOT DETERMINED: mandatory execution/code audit and scored scientific review remain.",
+        "reference_predictions_compared": false,
+        "source_filename_truth": true,
+        "prediction_rows": 1542,
+        "core_metric_rows_independently_recomputed": 24
+      },
+      "deterministic_reproduction": {
+        "compared_files": [
+          "comparison.json",
+          "design.json",
+          "diagnostics.png",
+          "metrics.csv",
+          "per_class_accuracy.csv",
+          "predictions.csv",
+          "report.md",
+          "result.json",
+          "run.py",
+          "splits.csv"
+        ],
+        "all_non_timing_files_match": true,
+        "note": "Agreement establishes repeatability of this worked answer, not a score requirement for alternative scientific methods."
+      },
+      "documentation_only_update_check": {
+        "unchanged_numerical_files": [
+          "comparison.json",
+          "design.json",
+          "diagnostics.png",
+          "metrics.csv",
+          "per_class_accuracy.csv",
+          "predictions.csv",
+          "result.json",
+          "splits.csv"
+        ],
+        "all_unchanged": true
+      },
+      "output_sha256": {
+        "comparison.json": "66246e6064fd582aef12ff86a08f3f674b178cadb86ad7b4517e88085f4583c8",
+        "design.json": "061329de0c90525fd77b8fe8968cedb5baafab4daf0e511c128d030cec577ab2",
+        "diagnostics.png": "0cd2b52bf9e197932ca9c65eab077e2617ce87658551cd3a415eadffd879c606",
+        "metrics.csv": "5b8a014f75931f8ebe45e4d2a00c88bf2699e053f210d2b316ff3a2f0906461e",
+        "per_class_accuracy.csv": "e8af3bcb9e47c29ed90e80108be482e70878ee9a94e85ab5ab07975764660097",
+        "predictions.csv": "8ca478c2293284244f3d68a2aa36b3af19313ac5e8e69d4bb6c87fbb07900934",
+        "report.md": "db7022c9e2d44c9a2587195e8c4feb6fa5c02fcf88dd9121ae27e1263b740e52",
+        "result.json": "a299ea0843d239c02e9dd7a9215588bbb3d55ce282448bb52e3e71c3f08f97e1",
+        "run.py": "2c81e2aa1cea139eb7b4e2fcd04910e55dd26eb8d9b9366cef4beee128f1e6eb",
+        "splits.csv": "1b80220b7eb96da8a4c017706347307665678471660e16c4da5ba00116054df7"
+      }
+    },
+    {
+      "question": "Q2",
+      "command": [
+        "/tmp/torrisi-env/bin/python",
+        "/tmp/szymanski-v2/independent/final/Q2_runner/candidate.py",
+        "Q2",
+        "--inputs",
+        "/tmp/szymanski-v2/independent/final/Q2_bundle/inputs",
+        "--output",
+        "/tmp/szymanski-v2/independent/final/Q2"
+      ],
+      "environment": {
+        "OPENBLAS_NUM_THREADS": "1",
+        "MPLCONFIGDIR": "/tmp/szymanski-v2-independent-mpl"
+      },
+      "working_directory": "/tmp/szymanski-v2/independent/final/Q2_runner",
+      "wall_seconds": 3.6955702169798315,
+      "returncode": 0,
+      "export_files": [
+        "inputs/Li-La-Zr-O_1-Phase.json",
+        "inputs/Li-La-Zr-O_1-Phase.npz",
+        "inputs/Li-La-Zr-O_Mixtures.json",
+        "inputs/Li-La-Zr-O_Mixtures.npz",
+        "inputs/Li-Ti-P-O_1-Phase.json",
+        "inputs/Li-Ti-P-O_1-Phase.npz",
+        "inputs/Li-Ti-P-O_Mixtures.json",
+        "inputs/Li-Ti-P-O_Mixtures.npz",
+        "task.json"
+      ],
+      "input_sha256": {
+        "Li-La-Zr-O_1-Phase.npz": "52e7994695f32ff686e77f06636eaf1b25e01911577b191fdd2a174dc78b3caf",
+        "Li-La-Zr-O_1-Phase.json": "7a508724f285fc982647c888567ecab8e71a6611d18fa60a723b2cd1b2e8ad03",
+        "Li-La-Zr-O_Mixtures.npz": "7a3fa3492346927615dcd5bd4aa60c0a1849426d45a983cf70f88c7e9fbded08",
+        "Li-La-Zr-O_Mixtures.json": "42c4a711cf66cc91dabbd9020d48ee2e20198098601562b6f9a046394767d2f0",
+        "Li-Ti-P-O_1-Phase.npz": "16a008c86b216ebc7f167304086e8a26a7f249cab32be792dd646ee5cd97170a",
+        "Li-Ti-P-O_1-Phase.json": "aae28c51723bd799ad48fe355e37be63a8575d19b0dac6ac452a7b22497bc38d",
+        "Li-Ti-P-O_Mixtures.npz": "006c29757bf5ad9102c618cc1f90751ca7daf829acc3af9f3a56732ba1b917f6",
+        "Li-Ti-P-O_Mixtures.json": "ce8a11697e7facd841291b66df098fd46b06f52ea9004431f65d89eafa538ea9"
+      },
+      "task_sha256": "314ad7a6a71d124047f0065e831dd0b6d2ad3fd5f13bf58c3232dd2770d972db",
+      "candidate_sha256": "2c81e2aa1cea139eb7b4e2fcd04910e55dd26eb8d9b9366cef4beee128f1e6eb",
+      "stderr": "",
+      "output_files": [
+        "additional_metrics.json",
+        "design.json",
+        "diagnostics.png",
+        "error_examples.csv",
+        "execution.json",
+        "metrics.csv",
+        "predictions.csv",
+        "report.md",
+        "result.json",
+        "run.py",
+        "splits.csv",
+        "uncertainty.json"
+      ],
+      "integrity_verification": {
+        "integrity_passed": true,
+        "scientific_correctness": "NOT DETERMINED: mandatory execution/code audit and scored scientific review remain.",
+        "reference_predictions_compared": false,
+        "source_filename_truth": true,
+        "prediction_rows": 4800,
+        "core_metric_rows_independently_recomputed": 36
+      },
+      "deterministic_reproduction": {
+        "compared_files": [
+          "additional_metrics.json",
+          "design.json",
+          "diagnostics.png",
+          "error_examples.csv",
+          "metrics.csv",
+          "predictions.csv",
+          "report.md",
+          "result.json",
+          "run.py",
+          "splits.csv",
+          "uncertainty.json"
+        ],
+        "all_non_timing_files_match": true,
+        "note": "Agreement establishes repeatability of this worked answer, not a score requirement for alternative scientific methods."
+      },
+      "documentation_only_update_check": {
+        "unchanged_numerical_files": [
+          "additional_metrics.json",
+          "design.json",
+          "diagnostics.png",
+          "error_examples.csv",
+          "metrics.csv",
+          "predictions.csv",
+          "result.json",
+          "splits.csv",
+          "uncertainty.json"
+        ],
+        "all_unchanged": true
+      },
+      "output_sha256": {
+        "additional_metrics.json": "fe2e4790f9e03f08a37a82720d9fc322b8aceef2a0e0802e5598714e44b27c1c",
+        "design.json": "7c576be17669875109a98da72b7b14e15cb02ba6ebdcac117fa0765a26a972e1",
+        "diagnostics.png": "ac91d99bad877d24730afd6cf30540b448d659201fec0b7a8b6364a4d8187fbd",
+        "error_examples.csv": "11b78ce81b1376344fa6ba8913b47439f31d5bb03181a8376d343521012dc730",
+        "metrics.csv": "38e9ebccfb32854f48c6e4b120249cbbd795ff54c266c5a641b329a800cb320f",
+        "predictions.csv": "540a8f1993d0a4d667e49222837af5da5aed17123acfd0cb544dd29705afafbe",
+        "report.md": "e1c783531c4bda2de120dc78e70ab8d0955e971fadcebc6e6e11c8fbe777d039",
+        "result.json": "388a84817a2896e03036ee847b7e102144c103731e2be1752e90c8ee8158778f",
+        "run.py": "2c81e2aa1cea139eb7b4e2fcd04910e55dd26eb8d9b9366cef4beee128f1e6eb",
+        "splits.csv": "9a35c9705c3ffdc9dbf07e7d2d44c660b89f7cc3f9cd1bb6d0e4f1d87b80d64c",
+        "uncertainty.json": "af598a93fe1524a1d2771ff181181c3e312c518a20f92d8051594669f71fee83"
+      }
+    },
+    {
+      "question": "Q3",
+      "command": [
+        "/tmp/torrisi-env/bin/python",
+        "/tmp/szymanski-v2/independent/final/Q3_runner/candidate.py",
+        "Q3",
+        "--inputs",
+        "/tmp/szymanski-v2/independent/final/Q3_bundle/inputs",
+        "--output",
+        "/tmp/szymanski-v2/independent/final/Q3"
+      ],
+      "environment": {
+        "OPENBLAS_NUM_THREADS": "1",
+        "MPLCONFIGDIR": "/tmp/szymanski-v2-independent-mpl"
+      },
+      "working_directory": "/tmp/szymanski-v2/independent/final/Q3_runner",
+      "wall_seconds": 2.2433493139687926,
+      "returncode": 0,
+      "export_files": [
+        "inputs/Li-Ti-P-O_1-Phase.json",
+        "inputs/Li-Ti-P-O_1-Phase.npz",
+        "task.json"
+      ],
+      "input_sha256": {
+        "Li-Ti-P-O_1-Phase.npz": "16a008c86b216ebc7f167304086e8a26a7f249cab32be792dd646ee5cd97170a",
+        "Li-Ti-P-O_1-Phase.json": "aae28c51723bd799ad48fe355e37be63a8575d19b0dac6ac452a7b22497bc38d"
+      },
+      "task_sha256": "c5d625405e5201b1c5f808b1dc96a5ce4421402206a5c563ced1ad2344128ae1",
+      "candidate_sha256": "2c81e2aa1cea139eb7b4e2fcd04910e55dd26eb8d9b9366cef4beee128f1e6eb",
+      "stderr": "",
+      "output_files": [
+        "conditions.csv",
+        "design.json",
+        "diagnostics.png",
+        "distortion.csv",
+        "evidence.json",
+        "evidence.npz",
+        "execution.json",
+        "metrics.csv",
+        "predictions.csv",
+        "report.md",
+        "result.json",
+        "run.py",
+        "splits.csv",
+        "uncertainty.json"
+      ],
+      "integrity_verification": {
+        "integrity_passed": true,
+        "scientific_correctness": "NOT DETERMINED: mandatory execution/code audit and scored scientific review remain.",
+        "reference_predictions_compared": false,
+        "source_filename_truth": true,
+        "prediction_rows": 6525,
+        "core_metric_rows_independently_recomputed": 90
+      },
+      "deterministic_reproduction": {
+        "compared_files": [
+          "conditions.csv",
+          "design.json",
+          "diagnostics.png",
+          "distortion.csv",
+          "evidence.json",
+          "evidence.npz",
+          "metrics.csv",
+          "predictions.csv",
+          "report.md",
+          "result.json",
+          "run.py",
+          "splits.csv",
+          "uncertainty.json"
+        ],
+        "all_non_timing_files_match": true,
+        "note": "Agreement establishes repeatability of this worked answer, not a score requirement for alternative scientific methods."
+      },
+      "documentation_only_update_check": {
+        "unchanged_numerical_files": [
+          "conditions.csv",
+          "design.json",
+          "diagnostics.png",
+          "distortion.csv",
+          "evidence.json",
+          "evidence.npz",
+          "metrics.csv",
+          "predictions.csv",
+          "result.json",
+          "splits.csv",
+          "uncertainty.json"
+        ],
+        "all_unchanged": true
+      },
+      "output_sha256": {
+        "conditions.csv": "f5970ed64224d87aa43e1c81e721db63721b5d3a266d23debae564cb6c9d387b",
+        "design.json": "80477205f549df26d0c34fa282cb55d4d7a8304d081dd7446f4f8793c3a8155b",
+        "diagnostics.png": "1833282325f2f050c50a0e260cbbbf64143e98566289fd8566bcdf661495c949",
+        "distortion.csv": "61caa8e6799948df001a83dc8dc875615f778d7e1463a04ffa3fc511be5f6c8d",
+        "evidence.json": "0a9f34d622ef68e779f488dc1f009c75bdecf8d27873084e0afeeb6bf1f028c7",
+        "evidence.npz": "f986569349f6a7a86eb76c90da12d7e81c80b37f30ab41e2b6c95477f4277487",
+        "metrics.csv": "d68dfe77146680b477666df608c6d467e44267ebf2ff79b4cb41d30e667ae986",
+        "predictions.csv": "a7ebabd638fb14497ec77d548b2fab6e0039b55c001bd823698a80810cbfc4b1",
+        "report.md": "b90248a174369e12ff8f6f88ae78d728323ed6aa3b1bdd11b621ce66ad79e293",
+        "result.json": "8e124c1b6ad7629803d0794591bb80575693159a2a62473b36ca99ac3a09e695",
+        "run.py": "2c81e2aa1cea139eb7b4e2fcd04910e55dd26eb8d9b9366cef4beee128f1e6eb",
+        "splits.csv": "e9494e268a3622c944ac24e68d08e3dcf1d1a1d123d9bf9a88111568bb1f0248",
+        "uncertainty.json": "451cfe61ffedd785da9755ae738eba43cd9da31f854dd6afcd2bf7f3b5b6a25d"
+      }
     },
     {
       "question": "Q4",
       "command": [
         "/tmp/torrisi-env/bin/python",
-        "/tmp/szymanski-2024/independent_final/Q4_sandbox/candidate.py",
+        "/tmp/szymanski-v2/independent/final/Q4_runner/candidate.py",
         "Q4",
         "--inputs",
-        "/tmp/szymanski-2024/independent_final/Q4_sandbox/inputs",
+        "/tmp/szymanski-v2/independent/final/Q4_bundle/inputs",
         "--output",
-        "/tmp/szymanski-2024/independent_final/Q4"
+        "/tmp/szymanski-v2/independent/final/Q4"
       ],
       "environment": {
         "OPENBLAS_NUM_THREADS": "1",
-        "MPLCONFIGDIR": "/tmp/szymanski-exec-mpl"
+        "MPLCONFIGDIR": "/tmp/szymanski-v2-independent-mpl"
       },
-      "working_directory": "/tmp/szymanski-2024/independent_final/Q4_sandbox",
-      "wall_seconds": 2.245741128921509,
+      "working_directory": "/tmp/szymanski-v2/independent/final/Q4_runner",
+      "wall_seconds": 2.630263936938718,
       "returncode": 0,
-      "required_input_files": [
-        "Li-La-Zr-O_1-Phase.json",
-        "Li-La-Zr-O_1-Phase.npz",
-        "Li-La-Zr-O_Experiments.json",
-        "Li-La-Zr-O_Experiments.npz",
-        "Li-Ti-P-O_1-Phase.json",
-        "Li-Ti-P-O_1-Phase.npz",
-        "Li-Ti-P-O_Experiments.json",
-        "Li-Ti-P-O_Experiments.npz"
+      "export_files": [
+        "inputs/Li-La-Zr-O_1-Phase.json",
+        "inputs/Li-La-Zr-O_1-Phase.npz",
+        "inputs/Li-La-Zr-O_Experiments.json",
+        "inputs/Li-La-Zr-O_Experiments.npz",
+        "inputs/Li-Ti-P-O_1-Phase.json",
+        "inputs/Li-Ti-P-O_1-Phase.npz",
+        "inputs/Li-Ti-P-O_Experiments.json",
+        "inputs/Li-Ti-P-O_Experiments.npz",
+        "task.json"
       ],
-      "candidate_sha256": "e0184d3e32d870152d0b5431252efe257356fe14840cf1b076b31c88a69093d7",
+      "input_sha256": {
+        "Li-La-Zr-O_1-Phase.npz": "52e7994695f32ff686e77f06636eaf1b25e01911577b191fdd2a174dc78b3caf",
+        "Li-La-Zr-O_1-Phase.json": "7a508724f285fc982647c888567ecab8e71a6611d18fa60a723b2cd1b2e8ad03",
+        "Li-La-Zr-O_Experiments.npz": "fd07c6e4c614adbb377ffd7bd5a440d4f978080c6e641232a1a640e0e58fe023",
+        "Li-La-Zr-O_Experiments.json": "5068724fd1bc7416f4bde3d3b965ef9dcd6b09da7ce82a95edb330c4f0d761ac",
+        "Li-Ti-P-O_1-Phase.npz": "16a008c86b216ebc7f167304086e8a26a7f249cab32be792dd646ee5cd97170a",
+        "Li-Ti-P-O_1-Phase.json": "aae28c51723bd799ad48fe355e37be63a8575d19b0dac6ac452a7b22497bc38d",
+        "Li-Ti-P-O_Experiments.npz": "7a1662618a906b81ef21a77e5edaf10b22f17d34f3d66e76b2620b71843b3369",
+        "Li-Ti-P-O_Experiments.json": "473f498a0b1be5bbd2696b4ecbb7c9cf887bb3289ba80d54bdbe971c90606830"
+      },
+      "task_sha256": "9135100f1fca80244189e0074062c306630e8e3bdb420b51be71c47e08e34484",
+      "candidate_sha256": "2c81e2aa1cea139eb7b4e2fcd04910e55dd26eb8d9b9366cef4beee128f1e6eb",
       "stderr": "",
       "output_files": [
-        "conclusion.md",
+        "additional_metrics.json",
+        "design.json",
         "diagnostics.png",
+        "error_examples.csv",
         "execution.json",
+        "metrics.csv",
         "predictions.csv",
-        "probe.npz",
+        "report.md",
         "result.json",
-        "split_trace.json"
-      ]
-    }
-  ],
-  "packaged_array_audit": {
-    "checked_arrays": 2930,
-    "archives": 8,
-    "all_numeric_values_equal_to_source": true,
-    "source_labels_unique": true,
-    "errors": []
-  },
-  "scientific_review": {
-    "transform": "Reviewed q=4*pi*sin(theta/2)/1.5406, nonuniform-q trapezoidal weights and 2/pi prefactor; signed sine transform preserved. Intensity is an uncorrected PDF-like representation, correctly caveated.",
-    "classifier": "Q1 uses only train split fitting, evaluates held-out repeats of known phases, equal-weight uncalibrated-score fusion; no claims about unseen-phase generalization.",
-    "mixtures": "Q2 average training templates with nonnegative coefficients in XRD and signed transform spaces; exact supplied phase count required; normalized coefficients correctly described as spectral contributions rather than mass fractions.",
-    "experimental": "Q4 uses simulated templates restricted by precursor formula list; merges polymorph weights by formula before ranking; minor percentages only used for aggregation/evaluation.",
-    "artifacts": "Q3 uses controlled additive noise/background on already artifact-bearing release spectra; identical random standard normal draws across amplitudes create paired comparisons; 11 source repeats, 5 noise draws per level; windows are half-open except final endpoint inclusion. Signal-energy retention is correctly distinguished from retained classification information.",
-    "numerical_detail": "NNLS Gram matrix includes 1e-10 diagonal numerical regularization. This yields negligible-ridge NNLS rather than an algebraically exact unregularized objective."
-  },
-  "plot_review": {
-    "Q1": "Viewed both chemistry panels; three method markers consistent with result metrics. Generic Mixture group xlabel is harmless for single-phase condition.",
-    "Q2": "Viewed both panels; F1 decreases with phase count. Method ordering differs by system/group, consistent with numerical results.",
-    "Q3": "Viewed noise and background panels; high-r region amplifies relative noise and low-r region dominates smooth-background distortion. Overlapping window definitions are clear as separate comparisons.",
-    "Q4": "Viewed both panels; grouped secondary-phase recall varies non-monotonically with concentration for some methods; conclusions do not overclaim a universal detection limit."
-  },
-  "missing_runtime_steps": [],
-  "reference_comparison": [
-    {
-      "question": "Q1",
-      "reference_directory": "verification/Q1",
-      "exact_file_comparisons": {
-        "result.json": true,
-        "diagnostics.png": true,
-        "conclusion.md": true,
-        "predictions.csv": true,
-        "split_trace.json": true
+        "run.py",
+        "splits.csv",
+        "uncertainty.json"
+      ],
+      "integrity_verification": {
+        "integrity_passed": true,
+        "scientific_correctness": "NOT DETERMINED: mandatory execution/code audit and scored scientific review remain.",
+        "reference_predictions_compared": false,
+        "source_filename_truth": true,
+        "prediction_rows": 720,
+        "core_metric_rows_independently_recomputed": 180
       },
-      "array_comparisons": {
-        "probe.npz": {
-          "same_keys": true,
-          "all_values_exactly_equal": true,
-          "arrays": 5
-        }
-      }
-    },
-    {
-      "question": "Q2",
-      "reference_directory": "verification/Q2",
-      "exact_file_comparisons": {
-        "result.json": true,
-        "diagnostics.png": true,
-        "conclusion.md": true,
-        "predictions.csv": true,
-        "split_trace.json": true
+      "deterministic_reproduction": {
+        "compared_files": [
+          "additional_metrics.json",
+          "design.json",
+          "diagnostics.png",
+          "error_examples.csv",
+          "metrics.csv",
+          "predictions.csv",
+          "report.md",
+          "result.json",
+          "run.py",
+          "splits.csv",
+          "uncertainty.json"
+        ],
+        "all_non_timing_files_match": true,
+        "note": "Agreement establishes repeatability of this worked answer, not a score requirement for alternative scientific methods."
       },
-      "array_comparisons": {
-        "probe.npz": {
-          "same_keys": true,
-          "all_values_exactly_equal": true,
-          "arrays": 5
-        }
-      }
-    },
-    {
-      "question": "Q3",
-      "reference_directory": "verification/Q3",
-      "exact_file_comparisons": {
-        "result.json": true,
-        "diagnostics.png": true,
-        "conclusion.md": true,
-        "metrics.csv": true
+      "documentation_only_update_check": {
+        "unchanged_numerical_files": [
+          "additional_metrics.json",
+          "design.json",
+          "diagnostics.png",
+          "error_examples.csv",
+          "metrics.csv",
+          "predictions.csv",
+          "result.json",
+          "splits.csv",
+          "uncertainty.json"
+        ],
+        "all_unchanged": true
       },
-      "array_comparisons": {
-        "probe.npz": {
-          "same_keys": true,
-          "all_values_exactly_equal": true,
-          "arrays": 5
-        },
-        "curves.npz": {
-          "same_keys": true,
-          "all_values_exactly_equal": true,
-          "arrays": 144
-        }
-      }
-    },
-    {
-      "question": "Q4",
-      "reference_directory": "verification/Q4",
-      "exact_file_comparisons": {
-        "result.json": true,
-        "diagnostics.png": true,
-        "conclusion.md": true,
-        "predictions.csv": true,
-        "split_trace.json": true
-      },
-      "array_comparisons": {
-        "probe.npz": {
-          "same_keys": true,
-          "all_values_exactly_equal": true,
-          "arrays": 5
-        }
+      "output_sha256": {
+        "additional_metrics.json": "8e9fc54eac12dd7fbcdb8e2cc9756dbe4056c158a229e07c408700170b25073e",
+        "design.json": "b0499fe21687fd917552049f84fb9378b9dc51700f5d3d23b53693846a7d55a0",
+        "diagnostics.png": "ed34b8f34b5a46cd8fa89b265e75c786adb72c4b1fbee8512e92e5381de34d79",
+        "error_examples.csv": "45bccbe4b9c2970b3b9f43020c4e1ca977796cbfcb9b0204662bbc2d9d8a74d7",
+        "metrics.csv": "2fa4c7e0f6718b0b1fca811c5a5bc3e34a8748e8947ccf69a5c824f9eec585aa",
+        "predictions.csv": "dc3db1c504487b9bb737dda2128fddd1eb8131b6a936fd22a6aeb39d54f1caaf",
+        "report.md": "9ea081abb20332b7c117e5b77c56958d38825a3ad2e2a4ec7ce3fa53d5280bb5",
+        "result.json": "9b2d990841848d633dbf0810a5796510fd06dd545667aae406d5edf3d68e2813",
+        "run.py": "2c81e2aa1cea139eb7b4e2fcd04910e55dd26eb8d9b9366cef4beee128f1e6eb",
+        "splits.csv": "6821fb42d3e6c0319a8f4cf322fa031737ab60169b83911c932cf46413315e13",
+        "uncertainty.json": "7227fe150320b8018a740e0f79ee7ab9254996dd189d7a069b39999fcd315a42"
       }
     }
   ],
-  "updated_conclusion_review": {
-    "Q1": "PDF minus XRD differences and fusion improvement over best standalone match recorded results; complementarity count uses exactly-one-representation-correct cases and is restricted to fixed within-phase split.",
-    "Q2": "Two-to-three phase effect sizes match group metrics; composition and abundance confounding is expressly acknowledged.",
-    "Q3": "5\u201340 \u00c5 compromise justified jointly by small smooth-background distortion, lower relative noise than 40\u2013120 \u00c5 and approximately 60% retained baseline energy; conditional scope and approximately 40% energy sacrifice stated.",
-    "Q4": "Endpoint recalls and counts of decreasing adjacent abundance steps match per-group data. Twelve mixtures per concentration and reused component identities acknowledged."
+  "numerical_evidence_review": {
+    "source_records_reconstructed": 12,
+    "pdf_distances_checked_per_record": 1191,
+    "raw_preprocessing_max_abs_error": 0.0,
+    "independent_direct_quadrature_max_abs_error": 1.2004286453759505e-15,
+    "smooth_background_reconstruction_max_abs_error": 0.0,
+    "scope": "Independent reconstruction of the saved Q3 source/evidence subset using native raw inputs and np.trapezoid; no candidate module imported. Noise reproducibility was established by separate full workflow execution, not this narrow analytic check."
   },
-  "source_preservation_report": "input_projection_audit.json",
-  "candidate_sha256": "e0184d3e32d870152d0b5431252efe257356fe14840cf1b076b31c88a69093d7",
-  "runtime_setup": "Used the existing /tmp/torrisi-env Python environment with versions matching the pinned requirements; did not claim a fresh network package installation. All four analysis runs used new copied-code/input directories and fresh outputs."
+  "code_review": {
+    "source_access": "Candidate reads input spectra and companion metadata from --inputs and imports numerical/plotting libraries. It does not read evaluator outputs, paper text, source filenames, trained external models, or another question answer.",
+    "q1": "Classifier and fusion settings selected on validation repeats; test record labels used for scoring and scientific summaries. Two learner families are compared.",
+    "q2": "Phase templates use training singles; support thresholds and fusion are calibrated on synthetic mixtures from disjoint validation singles. All released mixtures are final targets. Phase count follows thresholded spectral scores and never truth-list length.",
+    "q3": "Artifact/window choices are analyst-defined, all phases participate, window selection uses validation records, and held-out source records and their perturbations remain outside fitting/selection. Classification performance is evaluated separately from distortion/energy.",
+    "q4": "All simulated phase IDs are used; polymorph scores aggregate to formula level. Experimental formulas and weight fractions are used after inference for evaluation, not candidate restriction or threshold tuning."
+  },
+  "figure_review": "All four produced diagnostic figures were visually inspected: labels and scientific comparisons are legible and consistent with their reports. Uncertainty is tabulated in companion numerical evidence and reports.",
+  "scope_limits": [
+    "Reproduction runs use separate fresh working directories and copied final code with exporter-generated input bundles, but not OS-enforced filesystem denial of evaluator paths. Code inspection supplies the complementary input-boundary check.",
+    "The numerical checker reports output integrity only; scientific evaluation follows the separate rubric.",
+    "This is a newly executed worked analysis, not reproduction of historical author CNN predictions.",
+    "Single-split, finite-data and analyst-chosen perturbation/calibration limitations remain in the candidate reports."
+  ],
+  "final_rerun_note": "Final candidate documentation-only fixes were followed by a fresh copied-code rerun of all four questions in new exporter-produced bundles. Numerical outputs are unchanged from the preceding independent execution.",
+  "review_date": "2026-09-25T15:09:59.845807+00:00"
 }

@@ -8,33 +8,25 @@
         "spectra": 560,
         "phase_labels": 28
       },
-      "Li-La-Zr-O_2-Phase": {
-        "spectra": 400,
-        "phase_labels": 28
-      },
-      "Li-La-Zr-O_3-Phase": {
-        "spectra": 400,
-        "phase_labels": 28
-      },
       "Li-La-Zr-O_Experiments": {
         "spectra": 120,
         "phase_labels": 4
+      },
+      "Li-La-Zr-O_Mixtures": {
+        "spectra": 800,
+        "phase_labels": 28
       },
       "Li-Ti-P-O_1-Phase": {
         "spectra": 530,
         "phase_labels": 53
       },
-      "Li-Ti-P-O_2-Phase": {
-        "spectra": 400,
-        "phase_labels": 53
-      },
-      "Li-Ti-P-O_3-Phase": {
-        "spectra": 400,
-        "phase_labels": 53
-      },
       "Li-Ti-P-O_Experiments": {
         "spectra": 120,
         "phase_labels": 4
+      },
+      "Li-Ti-P-O_Mixtures": {
+        "spectra": 800,
+        "phase_labels": 53
       }
     },
     "native_grids": {
@@ -42,440 +34,540 @@
       "6442 points, 10.003433220 to 79.994173260 degrees": 220,
       "6452 points, 9.995433220 to 80.094837660 degrees": 20
     },
-    "label_anchor": "Original release basenames, checked independently against all input metadata.",
-    "data_anchor": "All float64 NPZ arrays equal np.loadtxt(original release file) exactly.",
+    "label_anchor": "Original release basenames; each packaged metadata label checked independently.",
+    "data_anchor": "Every float64 NPZ array equals np.loadtxt(original release file) exactly.",
     "limitations": [
-      "Source labels establish nominal composition and phase identity; they are not independently measured sample purity.",
-      "The release has 2690 simulated and 240 experimental spectra; it does not supply the complete historical model test set.",
-      "Deterministic prediction references are new benchmark baseline outputs, not author-released predictions."
+      "Source labels establish nominal composition and identity, not independently measured experimental purity.",
+      "The released spectra are the benchmark data, not the complete historical training/test set.",
+      "Readable target metadata labels are for scoring; declared partitions alone cannot prove they were not used during inference."
     ]
   },
   "verification_controls": [
     {
       "question": "Q1",
-      "positive_control": {
+      "candidate_integrity_control": {
         "question": "Q1",
-        "passed": true,
-        "prediction_rows": 1047,
-        "source_filename_truth": true,
-        "independent_metric_recomputation": true,
-        "source_derived_partitions_checked": true,
-        "independent_transform_max_absolute_error": 6.140921104957897e-16,
-        "manual_review_required": "Plot meaning, conclusions, and causal limits."
+        "integrity_passed": true,
+        "scientific_correctness": "NOT DETERMINED: mandatory execution/code audit and scored scientific review remain.",
+        "reference_predictions_compared": false,
+        "prediction_rows": 1542,
+        "core_metric_rows_independently_recomputed": 24
       },
-      "negative_controls": [
+      "synthetic_alternative_integrity_controls": [
         {
-          "control": "wrong_reported_metric",
-          "rejected": true,
-          "reason": "Numerical mismatch /summaries/0/n: 169 vs 168"
+          "control": "optional_redundant_micro_f1_omitted",
+          "question": "Q1",
+          "integrity_passed": true,
+          "scientific_correctness": "NOT DETERMINED: mandatory execution/code audit and scored scientific review remain.",
+          "reference_predictions_compared": false,
+          "prediction_rows": 1542,
+          "core_metric_rows_independently_recomputed": 24
         },
         {
-          "control": "incorrect_sine_transform",
-          "rejected": true,
-          "reason": "Not equal to tolerance rtol=1e-09, atol=1e-09"
+          "control": "different_method_and_predictions_with_correctly_recomputed_metrics",
+          "question": "Q1",
+          "integrity_passed": true,
+          "scientific_correctness": "NOT DETERMINED: mandatory execution/code audit and scored scientific review remain.",
+          "reference_predictions_compared": false,
+          "prediction_rows": 1542,
+          "core_metric_rows_independently_recomputed": 24
         },
         {
-          "control": "missing_plot",
+          "control": "different_disjoint_solver_chosen_split",
+          "question": "Q1",
+          "integrity_passed": true,
+          "scientific_correctness": "NOT DETERMINED: mandatory execution/code audit and scored scientific review remain.",
+          "reference_predictions_compared": false,
+          "prediction_rows": 1542,
+          "core_metric_rows_independently_recomputed": 24
+        }
+      ],
+      "invalid_integrity_controls": [
+        {
+          "control": "missing_report",
           "rejected": true,
-          "reason": "No nonempty plot artifact"
+          "reason": "Missing substantive report.md"
         },
         {
-          "control": "wrong_probe_id",
+          "control": "missing_figure",
           "rejected": true,
-          "reason": "Probe ID is not the first evaluated source required by the contract"
+          "reason": "Missing nonempty figure artifact"
         },
         {
-          "control": "wrong_probe_grid",
+          "control": "missing_code",
           "rejected": true,
-          "reason": "Arrays are not equal"
+          "reason": "Missing runnable analysis code artifact"
         },
         {
-          "control": "missing_prediction_row",
+          "control": "missing_prediction",
           "rejected": true,
-          "reason": "Missing or unexpected prediction rows"
+          "reason": "Missing or extra evaluation targets: ('RBF-SVM', 'Combined', 'baseline', '0')"
         },
         {
-          "control": "duplicate_prediction_row",
+          "control": "duplicate_prediction",
           "rejected": true,
-          "reason": "Duplicate prediction ('A_1-Phase_0006', 'XRD')"
+          "reason": "Duplicate prediction: ('A_S_03b4a75e3befc5bf', 'Ridge', 'XRD', 'baseline', '0')"
         },
         {
           "control": "unknown_phase",
           "rejected": true,
-          "reason": "Predictions violate top-K selection: ('A_1-Phase_0006', 'XRD')"
+          "reason": "Unknown predicted phase for chemistry: A_S_03b4a75e3befc5bf"
         },
         {
-          "control": "nonfinite_score",
+          "control": "duplicate_phase",
           "rejected": true,
-          "reason": "Not equal to tolerance rtol=1e-10, atol=1e-10"
+          "reason": "Duplicate predicted phase: ('A_S_03b4a75e3befc5bf', 'Ridge', 'XRD', 'baseline', '0')"
         },
         {
-          "control": "incorrect_scores",
+          "control": "unknown_fold",
           "rejected": true,
-          "reason": "Not equal to tolerance rtol=1e-10, atol=1e-10"
+          "reason": "Unknown prediction source or fold: A_S_03b4a75e3befc5bf/undeclared-fold"
         },
         {
-          "control": "wrong_split",
+          "control": "missing_representation",
           "rejected": true,
-          "reason": "Source-derived split differs: Li-La-Zr-O/train"
+          "reason": "Missing representation comparison: Ridge/0"
         },
         {
-          "control": "missing_split",
+          "control": "unknown_condition",
           "rejected": true,
-          "reason": "[Errno 2] No such file or directory: '/tmp/szymanski-verifier-audit-v9jvw7wg/Q1/missing_split/split_trace.json'"
+          "reason": "Undeclared condition: undeclared-condition"
+        },
+        {
+          "control": "overlapping_partition",
+          "rejected": true,
+          "reason": "Duplicate or overlapping split ID: A_S_03b4a75e3befc5bf/0"
+        },
+        {
+          "control": "test_target_used_in_training",
+          "rejected": true,
+          "reason": "Prediction is not held out: A_S_03b4a75e3befc5bf/0"
+        },
+        {
+          "control": "unknown_split_id",
+          "rejected": true,
+          "reason": "Unknown split source ID: invented-source"
+        },
+        {
+          "control": "wrong_metric",
+          "rejected": true,
+          "reason": "Reported metric disagrees with source-derived truth: ('Li-La-Zr-O', 'all', 'RBF-SVM', 'Combined', 'baseline', '0', 'exact_match')"
+        },
+        {
+          "control": "wrong_metric_count",
+          "rejected": true,
+          "reason": "Reported metric disagrees with source-derived truth: ('Li-La-Zr-O', 'all', 'RBF-SVM', 'Combined', 'baseline', '0', 'exact_match')"
+        },
+        {
+          "control": "nonfinite_metric",
+          "rejected": true,
+          "reason": "Invalid metric numeric values: ('Li-La-Zr-O', 'all', 'RBF-SVM', 'Combined', 'baseline', '0', 'exact_match')"
+        },
+        {
+          "control": "duplicate_metric",
+          "rejected": true,
+          "reason": "Duplicate metric row: ('Li-La-Zr-O', 'all', 'RBF-SVM', 'Combined', 'baseline', '0', 'exact_match')"
+        },
+        {
+          "control": "missing_metric",
+          "rejected": true,
+          "reason": "Missing reported core metric: ('Li-La-Zr-O', 'all', 'RBF-SVM', 'Combined', 'baseline', '0', 'exact_match')"
+        },
+        {
+          "control": "wrong_optional_micro_f1",
+          "rejected": true,
+          "reason": "Reported metric disagrees with source-derived truth: ('Li-La-Zr-O', 'all', 'RBF-SVM', 'Combined', 'baseline', '0', 'micro_f1')"
         }
       ]
     },
     {
       "question": "Q2",
-      "positive_control": {
+      "candidate_integrity_control": {
         "question": "Q2",
-        "passed": true,
+        "integrity_passed": true,
+        "scientific_correctness": "NOT DETERMINED: mandatory execution/code audit and scored scientific review remain.",
+        "reference_predictions_compared": false,
         "prediction_rows": 4800,
-        "source_filename_truth": true,
-        "independent_metric_recomputation": true,
-        "source_derived_partitions_checked": true,
-        "independent_transform_max_absolute_error": 9.71445146547012e-16,
-        "manual_review_required": "Plot meaning, conclusions, and causal limits."
+        "core_metric_rows_independently_recomputed": 36
       },
-      "negative_controls": [
+      "synthetic_alternative_integrity_controls": [
         {
-          "control": "wrong_reported_metric",
+          "control": "different_method_and_predictions_with_correctly_recomputed_metrics",
+          "question": "Q2",
+          "integrity_passed": true,
+          "scientific_correctness": "NOT DETERMINED: mandatory execution/code audit and scored scientific review remain.",
+          "reference_predictions_compared": false,
+          "prediction_rows": 4800,
+          "core_metric_rows_independently_recomputed": 36
+        }
+      ],
+      "invalid_integrity_controls": [
+        {
+          "control": "missing_report",
           "rejected": true,
-          "reason": "Numerical mismatch /summaries/0/n: 401 vs 400"
+          "reason": "Missing substantive report.md"
         },
         {
-          "control": "incorrect_sine_transform",
+          "control": "missing_figure",
           "rejected": true,
-          "reason": "Not equal to tolerance rtol=1e-09, atol=1e-09"
+          "reason": "Missing nonempty figure artifact"
         },
         {
-          "control": "missing_plot",
+          "control": "missing_code",
           "rejected": true,
-          "reason": "No nonempty plot artifact"
+          "reason": "Missing runnable analysis code artifact"
         },
         {
-          "control": "wrong_probe_id",
+          "control": "missing_prediction",
           "rejected": true,
-          "reason": "Probe ID is not the first evaluated source required by the contract"
+          "reason": "Missing or extra evaluation targets: ('NNLS', 'Combined', 'baseline', '0')"
         },
         {
-          "control": "wrong_probe_grid",
+          "control": "duplicate_prediction",
           "rejected": true,
-          "reason": "Arrays are not equal"
-        },
-        {
-          "control": "missing_prediction_row",
-          "rejected": true,
-          "reason": "Missing or unexpected prediction rows"
-        },
-        {
-          "control": "duplicate_prediction_row",
-          "rejected": true,
-          "reason": "Duplicate prediction ('A_2-Phase_0000', 'XRD')"
+          "reason": "Duplicate prediction: ('A_M_00275cb210c13ff4', 'NNLS', 'XRD', 'baseline', '0')"
         },
         {
           "control": "unknown_phase",
           "rejected": true,
-          "reason": "Predictions violate top-K selection: ('A_2-Phase_0000', 'XRD')"
+          "reason": "Unknown predicted phase for chemistry: A_M_00275cb210c13ff4"
         },
         {
-          "control": "nonfinite_score",
+          "control": "duplicate_phase",
           "rejected": true,
-          "reason": "Not equal to tolerance rtol=1e-10, atol=1e-10"
+          "reason": "Duplicate predicted phase: ('A_M_00275cb210c13ff4', 'NNLS', 'XRD', 'baseline', '0')"
         },
         {
-          "control": "incorrect_scores",
+          "control": "unknown_fold",
           "rejected": true,
-          "reason": "Not equal to tolerance rtol=1e-10, atol=1e-10"
+          "reason": "Unknown prediction source or fold: A_M_00275cb210c13ff4/undeclared-fold"
         },
         {
-          "control": "wrong_split",
+          "control": "missing_representation",
           "rejected": true,
-          "reason": "Source-derived split differs: Li-La-Zr-O/train"
+          "reason": "Missing representation comparison: NNLS/0"
         },
         {
-          "control": "missing_split",
+          "control": "unknown_condition",
           "rejected": true,
-          "reason": "[Errno 2] No such file or directory: '/tmp/szymanski-verifier-audit-v9jvw7wg/Q2/missing_split/split_trace.json'"
+          "reason": "Undeclared condition: undeclared-condition"
+        },
+        {
+          "control": "overlapping_partition",
+          "rejected": true,
+          "reason": "Duplicate or overlapping split ID: A_M_00275cb210c13ff4/0"
+        },
+        {
+          "control": "test_target_used_in_training",
+          "rejected": true,
+          "reason": "Target source included in fitting/tuning: A_M_00275cb210c13ff4"
+        },
+        {
+          "control": "unknown_split_id",
+          "rejected": true,
+          "reason": "Unknown split source ID: invented-source"
+        },
+        {
+          "control": "wrong_metric",
+          "rejected": true,
+          "reason": "Reported metric disagrees with source-derived truth: ('Li-La-Zr-O', '2', 'NNLS', 'Combined', 'baseline', '0', 'exact_match')"
+        },
+        {
+          "control": "wrong_metric_count",
+          "rejected": true,
+          "reason": "Reported metric disagrees with source-derived truth: ('Li-La-Zr-O', '2', 'NNLS', 'Combined', 'baseline', '0', 'exact_match')"
+        },
+        {
+          "control": "nonfinite_metric",
+          "rejected": true,
+          "reason": "Invalid metric numeric values: ('Li-La-Zr-O', '2', 'NNLS', 'Combined', 'baseline', '0', 'exact_match')"
+        },
+        {
+          "control": "duplicate_metric",
+          "rejected": true,
+          "reason": "Duplicate metric row: ('Li-La-Zr-O', '2', 'NNLS', 'Combined', 'baseline', '0', 'exact_match')"
+        },
+        {
+          "control": "missing_metric",
+          "rejected": true,
+          "reason": "Missing reported core metric: ('Li-La-Zr-O', '2', 'NNLS', 'Combined', 'baseline', '0', 'exact_match')"
         }
       ]
     },
     {
       "question": "Q3",
-      "positive_control": {
+      "candidate_integrity_control": {
         "question": "Q3",
-        "passed": true,
-        "curves_reconstructed_from_source": 143,
-        "independent_metric_rows": 528,
-        "independent_transform_max_absolute_error": 1.2234137314326432e-15,
-        "manual_review_required": "Plot meaning, window tradeoffs, and causal limits."
+        "integrity_passed": true,
+        "scientific_correctness": "NOT DETERMINED: mandatory execution/code audit and scored scientific review remain.",
+        "reference_predictions_compared": false,
+        "prediction_rows": 6525,
+        "core_metric_rows_independently_recomputed": 90
       },
-      "negative_controls": [
+      "synthetic_alternative_integrity_controls": [
         {
-          "control": "wrong_reported_metric",
-          "rejected": true,
-          "reason": "Numerical mismatch /summaries/0/n: 56 vs 55"
+          "control": "optional_redundant_micro_f1_omitted",
+          "question": "Q3",
+          "integrity_passed": true,
+          "scientific_correctness": "NOT DETERMINED: mandatory execution/code audit and scored scientific review remain.",
+          "reference_predictions_compared": false,
+          "prediction_rows": 6525,
+          "core_metric_rows_independently_recomputed": 90
         },
         {
-          "control": "incorrect_sine_transform",
-          "rejected": true,
-          "reason": "Not equal to tolerance rtol=1e-09, atol=1e-09"
+          "control": "different_method_and_predictions_with_correctly_recomputed_metrics",
+          "question": "Q3",
+          "integrity_passed": true,
+          "scientific_correctness": "NOT DETERMINED: mandatory execution/code audit and scored scientific review remain.",
+          "reference_predictions_compared": false,
+          "prediction_rows": 6525,
+          "core_metric_rows_independently_recomputed": 90
         },
         {
-          "control": "missing_plot",
+          "control": "finite_but_scientifically_unsupported_transform_is_outside_automatic_scope",
+          "review_required": "The saved transform is deliberately corrupted. Numerical presence checks cannot certify its physical validity; execution/code/evidence audit must reject the claimed transform.",
+          "question": "Q3",
+          "integrity_passed": true,
+          "scientific_correctness": "NOT DETERMINED: mandatory execution/code audit and scored scientific review remain.",
+          "reference_predictions_compared": false,
+          "prediction_rows": 6525,
+          "core_metric_rows_independently_recomputed": 90
+        }
+      ],
+      "invalid_integrity_controls": [
+        {
+          "control": "missing_report",
           "rejected": true,
-          "reason": "No nonempty plot artifact"
+          "reason": "Missing substantive report.md"
         },
         {
-          "control": "wrong_probe_id",
+          "control": "missing_figure",
           "rejected": true,
-          "reason": "Probe ID is not the first evaluated source required by the contract"
+          "reason": "Missing nonempty figure artifact"
         },
         {
-          "control": "wrong_probe_grid",
+          "control": "missing_code",
           "rejected": true,
-          "reason": "Arrays are not equal"
+          "reason": "Missing runnable analysis code artifact"
         },
         {
-          "control": "duplicated_artifact_metric",
+          "control": "missing_prediction",
           "rejected": true,
-          "reason": "Wrong number of artifact metric CSV rows"
+          "reason": "Missing or extra evaluation targets: ('Ridge_r40_120', 'PDF', 'background_0.25', '0')"
         },
         {
-          "control": "corrupted_artifact_curve",
+          "control": "duplicate_prediction",
           "rejected": true,
-          "reason": "Not equal to tolerance rtol=1e-08, atol=1e-09"
+          "reason": "Duplicate prediction: ('B_S_02723e6d57e53340', 'Ridge', 'XRD', 'baseline', '0')"
+        },
+        {
+          "control": "unknown_phase",
+          "rejected": true,
+          "reason": "Unknown predicted phase for chemistry: B_S_02723e6d57e53340"
+        },
+        {
+          "control": "duplicate_phase",
+          "rejected": true,
+          "reason": "Duplicate predicted phase: ('B_S_02723e6d57e53340', 'Ridge', 'XRD', 'baseline', '0')"
+        },
+        {
+          "control": "unknown_fold",
+          "rejected": true,
+          "reason": "Unknown prediction source or fold: B_S_02723e6d57e53340/undeclared-fold"
+        },
+        {
+          "control": "missing_representation",
+          "rejected": true,
+          "reason": "Q3 needs XRD and PDF classification comparisons"
+        },
+        {
+          "control": "unknown_condition",
+          "rejected": true,
+          "reason": "Undeclared condition: undeclared-condition"
+        },
+        {
+          "control": "overlapping_partition",
+          "rejected": true,
+          "reason": "Duplicate or overlapping split ID: B_S_02723e6d57e53340/0"
+        },
+        {
+          "control": "test_target_used_in_training",
+          "rejected": true,
+          "reason": "Prediction is not held out: B_S_02723e6d57e53340/0"
+        },
+        {
+          "control": "unknown_split_id",
+          "rejected": true,
+          "reason": "Unknown split source ID: invented-source"
+        },
+        {
+          "control": "wrong_metric",
+          "rejected": true,
+          "reason": "Reported metric disagrees with source-derived truth: ('Li-Ti-P-O', 'all', 'Ridge', 'XRD', 'background_0.05', '0', 'exact_match')"
+        },
+        {
+          "control": "wrong_metric_count",
+          "rejected": true,
+          "reason": "Reported metric disagrees with source-derived truth: ('Li-Ti-P-O', 'all', 'Ridge', 'XRD', 'background_0.05', '0', 'exact_match')"
+        },
+        {
+          "control": "nonfinite_metric",
+          "rejected": true,
+          "reason": "Invalid metric numeric values: ('Li-Ti-P-O', 'all', 'Ridge', 'XRD', 'background_0.05', '0', 'exact_match')"
+        },
+        {
+          "control": "duplicate_metric",
+          "rejected": true,
+          "reason": "Duplicate metric row: ('Li-Ti-P-O', 'all', 'Ridge', 'XRD', 'background_0.05', '0', 'exact_match')"
+        },
+        {
+          "control": "missing_metric",
+          "rejected": true,
+          "reason": "Missing reported core metric: ('Li-Ti-P-O', 'all', 'Ridge', 'XRD', 'background_0.05', '0', 'exact_match')"
+        },
+        {
+          "control": "wrong_optional_micro_f1",
+          "rejected": true,
+          "reason": "Reported metric disagrees with source-derived truth: ('Li-Ti-P-O', 'all', 'Ridge', 'XRD', 'background_0.05', '0', 'micro_f1')"
+        },
+        {
+          "control": "nonfinite_evidence",
+          "rejected": true,
+          "reason": "Non-finite numeric evidence: evidence.npz/theta"
+        },
+        {
+          "control": "missing_numeric_evidence",
+          "rejected": true,
+          "reason": "Q3 needs evidence.npz with saved numeric perturbation and representation evidence"
+        },
+        {
+          "control": "missing_background_condition",
+          "rejected": true,
+          "reason": "Q3 requires clean, noise, and background conditions"
+        },
+        {
+          "control": "duplicate_condition",
+          "rejected": true,
+          "reason": "Duplicate/empty condition"
         }
       ]
     },
     {
       "question": "Q4",
-      "positive_control": {
+      "candidate_integrity_control": {
         "question": "Q4",
-        "passed": true,
+        "integrity_passed": true,
+        "scientific_correctness": "NOT DETERMINED: mandatory execution/code audit and scored scientific review remain.",
+        "reference_predictions_compared": false,
         "prediction_rows": 720,
-        "source_filename_truth": true,
-        "independent_metric_recomputation": true,
-        "source_derived_partitions_checked": true,
-        "independent_transform_max_absolute_error": 4.128641872824801e-16,
-        "manual_review_required": "Plot meaning, conclusions, and causal limits."
+        "core_metric_rows_independently_recomputed": 180
       },
-      "negative_controls": [
+      "synthetic_alternative_integrity_controls": [
         {
-          "control": "wrong_reported_metric",
+          "control": "different_method_and_predictions_with_correctly_recomputed_metrics",
+          "question": "Q4",
+          "integrity_passed": true,
+          "scientific_correctness": "NOT DETERMINED: mandatory execution/code audit and scored scientific review remain.",
+          "reference_predictions_compared": false,
+          "prediction_rows": 720,
+          "core_metric_rows_independently_recomputed": 180
+        }
+      ],
+      "invalid_integrity_controls": [
+        {
+          "control": "missing_report",
           "rejected": true,
-          "reason": "Numerical mismatch /summaries/0/n: 13 vs 12"
+          "reason": "Missing substantive report.md"
         },
         {
-          "control": "incorrect_sine_transform",
+          "control": "missing_figure",
           "rejected": true,
-          "reason": "Not equal to tolerance rtol=1e-09, atol=1e-09"
+          "reason": "Missing nonempty figure artifact"
         },
         {
-          "control": "missing_plot",
+          "control": "missing_code",
           "rejected": true,
-          "reason": "No nonempty plot artifact"
+          "reason": "Missing runnable analysis code artifact"
         },
         {
-          "control": "wrong_probe_id",
+          "control": "missing_prediction",
           "rejected": true,
-          "reason": "Probe ID is not the first evaluated source required by the contract"
+          "reason": "Missing or extra evaluation targets: ('NNLS', 'Combined', 'baseline', '0')"
         },
         {
-          "control": "wrong_probe_grid",
+          "control": "duplicate_prediction",
           "rejected": true,
-          "reason": "Arrays are not equal"
-        },
-        {
-          "control": "missing_prediction_row",
-          "rejected": true,
-          "reason": "Missing or unexpected prediction rows"
-        },
-        {
-          "control": "duplicate_prediction_row",
-          "rejected": true,
-          "reason": "Duplicate prediction ('A_Experiments_0000', 'XRD')"
+          "reason": "Duplicate prediction: ('A_E_017c5016a5c515d3', 'NNLS', 'XRD', 'baseline', '0')"
         },
         {
           "control": "unknown_phase",
           "rejected": true,
-          "reason": "Predictions violate top-K selection: ('A_Experiments_0000', 'XRD')"
+          "reason": "Unknown predicted phase for chemistry: A_E_017c5016a5c515d3"
         },
         {
-          "control": "nonfinite_score",
+          "control": "duplicate_phase",
           "rejected": true,
-          "reason": "Not equal to tolerance rtol=1e-10, atol=1e-10"
+          "reason": "Duplicate predicted phase: ('A_E_017c5016a5c515d3', 'NNLS', 'XRD', 'baseline', '0')"
         },
         {
-          "control": "incorrect_scores",
+          "control": "unknown_fold",
           "rejected": true,
-          "reason": "Not equal to tolerance rtol=1e-10, atol=1e-10"
+          "reason": "Unknown prediction source or fold: A_E_017c5016a5c515d3/undeclared-fold"
         },
         {
-          "control": "wrong_split",
+          "control": "missing_representation",
           "rejected": true,
-          "reason": "Source-derived split differs: Li-La-Zr-O/train"
+          "reason": "Missing representation comparison: NNLS/0"
         },
         {
-          "control": "missing_split",
+          "control": "unknown_condition",
           "rejected": true,
-          "reason": "[Errno 2] No such file or directory: '/tmp/szymanski-verifier-audit-v9jvw7wg/Q4/missing_split/split_trace.json'"
+          "reason": "Undeclared condition: undeclared-condition"
+        },
+        {
+          "control": "overlapping_partition",
+          "rejected": true,
+          "reason": "Duplicate or overlapping split ID: A_E_017c5016a5c515d3/0"
+        },
+        {
+          "control": "test_target_used_in_training",
+          "rejected": true,
+          "reason": "Target source included in fitting/tuning: A_E_017c5016a5c515d3"
+        },
+        {
+          "control": "unknown_split_id",
+          "rejected": true,
+          "reason": "Unknown split source ID: invented-source"
+        },
+        {
+          "control": "wrong_metric",
+          "rejected": true,
+          "reason": "Reported metric disagrees with source-derived truth: ('Li-La-Zr-O', '10', 'NNLS', 'Combined', 'baseline', '0', 'exact_match')"
+        },
+        {
+          "control": "wrong_metric_count",
+          "rejected": true,
+          "reason": "Reported metric disagrees with source-derived truth: ('Li-La-Zr-O', '10', 'NNLS', 'Combined', 'baseline', '0', 'exact_match')"
+        },
+        {
+          "control": "nonfinite_metric",
+          "rejected": true,
+          "reason": "Invalid metric numeric values: ('Li-La-Zr-O', '10', 'NNLS', 'Combined', 'baseline', '0', 'exact_match')"
+        },
+        {
+          "control": "duplicate_metric",
+          "rejected": true,
+          "reason": "Duplicate metric row: ('Li-La-Zr-O', '10', 'NNLS', 'Combined', 'baseline', '0', 'exact_match')"
+        },
+        {
+          "control": "missing_metric",
+          "rejected": true,
+          "reason": "Missing reported core metric: ('Li-La-Zr-O', '10', 'NNLS', 'Combined', 'baseline', '0', 'exact_match')"
         }
       ]
     }
   ],
-  "independent_model_probes": {
-    "passed": true,
-    "candidate_module_imported": false,
-    "ridge_method": "Centered dual linear solve with explicit -1/+1 targets and softmax.",
-    "nnls_method": "Direct tall spectral design plus sqrt(1e-10) identity rows.",
-    "probes": [
-      {
-        "question": "Q1",
-        "chemistry": "Li-La-Zr-O",
-        "model": "XRD",
-        "source_ids": [
-          "A_1-Phase_0006",
-          "A_1-Phase_0286",
-          "A_1-Phase_0551"
-        ],
-        "scores_checked": 84,
-        "maximum_absolute_difference": 4.163336342344337e-16
-      },
-      {
-        "question": "Q1",
-        "chemistry": "Li-La-Zr-O",
-        "model": "PDF",
-        "source_ids": [
-          "A_1-Phase_0006",
-          "A_1-Phase_0286",
-          "A_1-Phase_0551"
-        ],
-        "scores_checked": 84,
-        "maximum_absolute_difference": 1.6653345369377348e-16
-      },
-      {
-        "question": "Q2",
-        "chemistry": "Li-La-Zr-O",
-        "model": "XRD",
-        "source_ids": [
-          "A_2-Phase_0000",
-          "A_3-Phase_0000",
-          "A_3-Phase_0399"
-        ],
-        "scores_checked": 84,
-        "maximum_absolute_difference": 6.813993813636898e-15
-      },
-      {
-        "question": "Q2",
-        "chemistry": "Li-La-Zr-O",
-        "model": "PDF",
-        "source_ids": [
-          "A_2-Phase_0000",
-          "A_3-Phase_0000",
-          "A_3-Phase_0399"
-        ],
-        "scores_checked": 84,
-        "maximum_absolute_difference": 2.55351295663786e-15
-      },
-      {
-        "question": "Q4",
-        "chemistry": "Li-La-Zr-O",
-        "model": "XRD",
-        "source_ids": [
-          "A_Experiments_0000",
-          "A_Experiments_0060",
-          "A_Experiments_0119"
-        ],
-        "scores_checked": 12,
-        "maximum_absolute_difference": 5.551115123125783e-16
-      },
-      {
-        "question": "Q4",
-        "chemistry": "Li-La-Zr-O",
-        "model": "PDF",
-        "source_ids": [
-          "A_Experiments_0000",
-          "A_Experiments_0060",
-          "A_Experiments_0119"
-        ],
-        "scores_checked": 12,
-        "maximum_absolute_difference": 1.4988010832439613e-15
-      },
-      {
-        "question": "Q1",
-        "chemistry": "Li-Ti-P-O",
-        "model": "XRD",
-        "source_ids": [
-          "B_1-Phase_0004",
-          "B_1-Phase_0266",
-          "B_1-Phase_0525"
-        ],
-        "scores_checked": 159,
-        "maximum_absolute_difference": 1.3877787807814457e-16
-      },
-      {
-        "question": "Q1",
-        "chemistry": "Li-Ti-P-O",
-        "model": "PDF",
-        "source_ids": [
-          "B_1-Phase_0004",
-          "B_1-Phase_0266",
-          "B_1-Phase_0525"
-        ],
-        "scores_checked": 159,
-        "maximum_absolute_difference": 2.220446049250313e-16
-      },
-      {
-        "question": "Q2",
-        "chemistry": "Li-Ti-P-O",
-        "model": "XRD",
-        "source_ids": [
-          "B_2-Phase_0000",
-          "B_3-Phase_0000",
-          "B_3-Phase_0399"
-        ],
-        "scores_checked": 159,
-        "maximum_absolute_difference": 8.881784197001252e-16
-      },
-      {
-        "question": "Q2",
-        "chemistry": "Li-Ti-P-O",
-        "model": "PDF",
-        "source_ids": [
-          "B_2-Phase_0000",
-          "B_3-Phase_0000",
-          "B_3-Phase_0399"
-        ],
-        "scores_checked": 159,
-        "maximum_absolute_difference": 2.213507155346406e-15
-      },
-      {
-        "question": "Q4",
-        "chemistry": "Li-Ti-P-O",
-        "model": "XRD",
-        "source_ids": [
-          "B_Experiments_0000",
-          "B_Experiments_0060",
-          "B_Experiments_0119"
-        ],
-        "scores_checked": 12,
-        "maximum_absolute_difference": 2.220446049250313e-16
-      },
-      {
-        "question": "Q4",
-        "chemistry": "Li-Ti-P-O",
-        "model": "PDF",
-        "source_ids": [
-          "B_Experiments_0000",
-          "B_Experiments_0060",
-          "B_Experiments_0119"
-        ],
-        "scores_checked": 12,
-        "maximum_absolute_difference": 1.7763568394002505e-15
-      }
-    ]
-  },
-  "scope": "Independent source and numerical checks; scientific interpretation and plot legibility also require reviewer inspection."
+  "invalid_controls_rejected": 78,
+  "alternative_integrity_controls_accepted": 8,
+  "scope": "Source projection and automated integrity checks only. Alternative controls are synthetic verifier tests, not scientific results. Mandatory execution/code audit and scored scientific review are separate."
 }

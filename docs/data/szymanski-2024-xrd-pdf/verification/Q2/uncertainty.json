@@ -1,0 +1,218 @@
+[
+  {
+    "chemistry": "Li-La-Zr-O",
+    "representation": "XRD",
+    "group": "all",
+    "metric": "exact_match",
+    "estimate": 0.4,
+    "blocks": 682,
+    "ci95": [
+      0.3645537344920965,
+      0.4360271720054329
+    ]
+  },
+  {
+    "chemistry": "Li-La-Zr-O",
+    "representation": "XRD",
+    "group": "2",
+    "metric": "exact_match",
+    "estimate": 0.6525,
+    "blocks": 299,
+    "ci95": [
+      0.6034384048433798,
+      0.7015428519892806
+    ]
+  },
+  {
+    "chemistry": "Li-La-Zr-O",
+    "representation": "XRD",
+    "group": "3",
+    "metric": "exact_match",
+    "estimate": 0.1475,
+    "blocks": 383,
+    "ci95": [
+      0.11471321695760599,
+      0.18453865336658354
+    ]
+  },
+  {
+    "chemistry": "Li-La-Zr-O",
+    "representation": "PDF",
+    "group": "all",
+    "metric": "exact_match",
+    "estimate": 0.41625,
+    "blocks": 682,
+    "ci95": [
+      0.38088575840988387,
+      0.4506172839506173
+    ]
+  },
+  {
+    "chemistry": "Li-La-Zr-O",
+    "representation": "PDF",
+    "group": "2",
+    "metric": "exact_match",
+    "estimate": 0.67,
+    "blocks": 299,
+    "ci95": [
+      0.6231456677813335,
+      0.7153562723023571
+    ]
+  },
+  {
+    "chemistry": "Li-La-Zr-O",
+    "representation": "PDF",
+    "group": "3",
+    "metric": "exact_match",
+    "estimate": 0.1625,
+    "blocks": 383,
+    "ci95": [
+      0.12903225806451613,
+      0.19950140043978723
+    ]
+  },
+  {
+    "chemistry": "Li-La-Zr-O",
+    "representation": "Combined",
+    "group": "all",
+    "metric": "exact_match",
+    "estimate": 0.41875,
+    "blocks": 682,
+    "ci95": [
+      0.38195194141287403,
+      0.4542106702065701
+    ]
+  },
+  {
+    "chemistry": "Li-La-Zr-O",
+    "representation": "Combined",
+    "group": "2",
+    "metric": "exact_match",
+    "estimate": 0.675,
+    "blocks": 299,
+    "ci95": [
+      0.629153927017031,
+      0.7222257926306769
+    ]
+  },
+  {
+    "chemistry": "Li-La-Zr-O",
+    "representation": "Combined",
+    "group": "3",
+    "metric": "exact_match",
+    "estimate": 0.1625,
+    "blocks": 383,
+    "ci95": [
+      0.12870663640671373,
+      0.2
+    ]
+  },
+  {
+    "chemistry": "Li-Ti-P-O",
+    "representation": "XRD",
+    "group": "all",
+    "metric": "exact_match",
+    "estimate": 0.43125,
+    "blocks": 762,
+    "ci95": [
+      0.39974153554658537,
+      0.46575384331982445
+    ]
+  },
+  {
+    "chemistry": "Li-Ti-P-O",
+    "representation": "XRD",
+    "group": "2",
+    "metric": "exact_match",
+    "estimate": 0.7,
+    "blocks": 364,
+    "ci95": [
+      0.6566397053239158,
+      0.7432762836185819
+    ]
+  },
+  {
+    "chemistry": "Li-Ti-P-O",
+    "representation": "XRD",
+    "group": "3",
+    "metric": "exact_match",
+    "estimate": 0.1625,
+    "blocks": 398,
+    "ci95": [
+      0.1275,
+      0.1985359182688439
+    ]
+  },
+  {
+    "chemistry": "Li-Ti-P-O",
+    "representation": "PDF",
+    "group": "all",
+    "metric": "exact_match",
+    "estimate": 0.48625,
+    "blocks": 762,
+    "ci95": [
+      0.4513704676362192,
+      0.5206063826850343
+    ]
+  },
+  {
+    "chemistry": "Li-Ti-P-O",
+    "representation": "PDF",
+    "group": "2",
+    "metric": "exact_match",
+    "estimate": 0.69,
+    "blocks": 364,
+    "ci95": [
+      0.6439306526806526,
+      0.7333374083129583
+    ]
+  },
+  {
+    "chemistry": "Li-Ti-P-O",
+    "representation": "PDF",
+    "group": "3",
+    "metric": "exact_match",
+    "estimate": 0.2825,
+    "blocks": 398,
+    "ci95": [
+      0.23938660810659917,
+      0.3258145363408521
+    ]
+  },
+  {
+    "chemistry": "Li-Ti-P-O",
+    "representation": "Combined",
+    "group": "all",
+    "metric": "exact_match",
+    "estimate": 0.48625,
+    "blocks": 762,
+    "ci95": [
+      0.4513704676362192,
+      0.5206063826850343
+    ]
+  },
+  {
+    "chemistry": "Li-Ti-P-O",
+    "representation": "Combined",
+    "group": "2",
+    "metric": "exact_match",
+    "estimate": 0.69,
+    "blocks": 364,
+    "ci95": [
+      0.6439306526806526,
+      0.7333374083129583
+    ]
+  },
+  {
+    "chemistry": "Li-Ti-P-O",
+    "representation": "Combined",
+    "group": "3",
+    "metric": "exact_match",
+    "estimate": 0.2825,
+    "blocks": 398,
+    "ci95": [
+      0.23938660810659917,
+      0.3258145363408521
+    ]
+  }
+]

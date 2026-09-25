@@ -1,5602 +1,4482 @@
 [
   {
-    "id": "A_1-Phase_0000",
+    "id": "A_S_008a8c505c38d000",
     "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La(OH)3_176"
-    ],
-    "replicate": 0,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0001",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La(OH)3_176"
-    ],
-    "replicate": 1,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0002",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La(OH)3_176"
-    ],
-    "replicate": 10,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0003",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La(OH)3_176"
-    ],
-    "replicate": 11,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0004",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La(OH)3_176"
-    ],
-    "replicate": 12,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0005",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La(OH)3_176"
-    ],
-    "replicate": 13,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0006",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La(OH)3_176"
-    ],
-    "replicate": 14,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0007",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La(OH)3_176"
-    ],
-    "replicate": 15,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0008",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La(OH)3_176"
-    ],
-    "replicate": 16,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0009",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La(OH)3_176"
-    ],
-    "replicate": 17,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0010",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La(OH)3_176"
-    ],
-    "replicate": 18,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0011",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La(OH)3_176"
-    ],
-    "replicate": 19,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0012",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La(OH)3_176"
-    ],
-    "replicate": 2,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0013",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La(OH)3_176"
-    ],
-    "replicate": 3,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0014",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La(OH)3_176"
-    ],
-    "replicate": 4,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0015",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La(OH)3_176"
-    ],
-    "replicate": 5,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0016",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La(OH)3_176"
-    ],
-    "replicate": 6,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0017",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La(OH)3_176"
-    ],
-    "replicate": 7,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0018",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La(OH)3_176"
-    ],
-    "replicate": 8,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0019",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La(OH)3_176"
-    ],
-    "replicate": 9,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0020",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La2O3_164"
-    ],
-    "replicate": 0,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0021",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La2O3_164"
-    ],
-    "replicate": 1,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0022",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La2O3_164"
-    ],
-    "replicate": 10,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0023",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La2O3_164"
-    ],
-    "replicate": 11,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0024",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La2O3_164"
-    ],
-    "replicate": 12,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0025",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La2O3_164"
-    ],
-    "replicate": 13,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0026",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La2O3_164"
-    ],
-    "replicate": 14,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0027",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La2O3_164"
-    ],
-    "replicate": 15,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0028",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La2O3_164"
-    ],
-    "replicate": 16,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0029",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La2O3_164"
-    ],
-    "replicate": 17,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0030",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La2O3_164"
-    ],
-    "replicate": 18,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0031",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La2O3_164"
-    ],
-    "replicate": 19,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0032",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La2O3_164"
-    ],
-    "replicate": 2,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0033",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La2O3_164"
-    ],
-    "replicate": 3,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0034",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La2O3_164"
-    ],
-    "replicate": 4,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0035",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La2O3_164"
-    ],
-    "replicate": 5,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0036",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La2O3_164"
-    ],
-    "replicate": 6,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0037",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La2O3_164"
-    ],
-    "replicate": 7,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0038",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La2O3_164"
-    ],
-    "replicate": 8,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0039",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La2O3_164"
-    ],
-    "replicate": 9,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0040",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La2O3_206"
-    ],
-    "replicate": 0,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0041",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La2O3_206"
-    ],
-    "replicate": 1,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0042",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La2O3_206"
-    ],
-    "replicate": 10,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0043",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La2O3_206"
-    ],
-    "replicate": 11,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0044",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La2O3_206"
-    ],
-    "replicate": 12,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0045",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La2O3_206"
-    ],
-    "replicate": 13,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0046",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La2O3_206"
-    ],
-    "replicate": 14,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0047",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La2O3_206"
-    ],
-    "replicate": 15,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0048",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La2O3_206"
-    ],
-    "replicate": 16,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0049",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La2O3_206"
-    ],
-    "replicate": 17,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0050",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La2O3_206"
-    ],
-    "replicate": 18,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0051",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La2O3_206"
-    ],
-    "replicate": 19,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0052",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La2O3_206"
-    ],
-    "replicate": 2,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0053",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La2O3_206"
-    ],
-    "replicate": 3,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0054",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La2O3_206"
-    ],
-    "replicate": 4,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0055",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La2O3_206"
-    ],
-    "replicate": 5,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0056",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La2O3_206"
-    ],
-    "replicate": 6,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0057",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La2O3_206"
-    ],
-    "replicate": 7,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0058",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La2O3_206"
-    ],
-    "replicate": 8,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0059",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La2O3_206"
-    ],
-    "replicate": 9,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0060",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La2Zr2O7_227"
-    ],
-    "replicate": 0,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0061",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La2Zr2O7_227"
-    ],
-    "replicate": 1,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0062",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La2Zr2O7_227"
-    ],
-    "replicate": 10,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0063",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La2Zr2O7_227"
-    ],
-    "replicate": 11,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0064",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La2Zr2O7_227"
-    ],
-    "replicate": 12,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0065",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La2Zr2O7_227"
-    ],
-    "replicate": 13,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0066",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La2Zr2O7_227"
-    ],
-    "replicate": 14,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0067",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La2Zr2O7_227"
-    ],
-    "replicate": 15,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0068",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La2Zr2O7_227"
-    ],
-    "replicate": 16,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0069",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La2Zr2O7_227"
-    ],
-    "replicate": 17,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0070",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La2Zr2O7_227"
-    ],
-    "replicate": 18,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0071",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La2Zr2O7_227"
-    ],
-    "replicate": 19,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0072",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La2Zr2O7_227"
-    ],
-    "replicate": 2,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0073",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La2Zr2O7_227"
-    ],
-    "replicate": 3,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0074",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La2Zr2O7_227"
-    ],
-    "replicate": 4,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0075",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La2Zr2O7_227"
-    ],
-    "replicate": 5,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0076",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La2Zr2O7_227"
-    ],
-    "replicate": 6,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0077",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La2Zr2O7_227"
-    ],
-    "replicate": 7,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0078",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La2Zr2O7_227"
-    ],
-    "replicate": 8,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0079",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "La2Zr2O7_227"
-    ],
-    "replicate": 9,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0080",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LaOOH_11"
-    ],
-    "replicate": 0,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0081",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LaOOH_11"
-    ],
-    "replicate": 1,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0082",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LaOOH_11"
-    ],
-    "replicate": 10,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0083",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LaOOH_11"
-    ],
-    "replicate": 11,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0084",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LaOOH_11"
-    ],
-    "replicate": 12,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0085",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LaOOH_11"
-    ],
-    "replicate": 13,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0086",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LaOOH_11"
-    ],
-    "replicate": 14,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0087",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LaOOH_11"
-    ],
-    "replicate": 15,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0088",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LaOOH_11"
-    ],
-    "replicate": 16,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0089",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LaOOH_11"
-    ],
-    "replicate": 17,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0090",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LaOOH_11"
-    ],
-    "replicate": 18,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0091",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LaOOH_11"
-    ],
-    "replicate": 19,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0092",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LaOOH_11"
-    ],
-    "replicate": 2,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0093",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LaOOH_11"
-    ],
-    "replicate": 3,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0094",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LaOOH_11"
-    ],
-    "replicate": 4,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0095",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LaOOH_11"
-    ],
-    "replicate": 5,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0096",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LaOOH_11"
-    ],
-    "replicate": 6,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0097",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LaOOH_11"
-    ],
-    "replicate": 7,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0098",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LaOOH_11"
-    ],
-    "replicate": 8,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0099",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LaOOH_11"
-    ],
-    "replicate": 9,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0100",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2CO3_15"
-    ],
-    "replicate": 0,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0101",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2CO3_15"
-    ],
-    "replicate": 1,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0102",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2CO3_15"
-    ],
-    "replicate": 10,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0103",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2CO3_15"
-    ],
-    "replicate": 11,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0104",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2CO3_15"
-    ],
-    "replicate": 12,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0105",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2CO3_15"
-    ],
-    "replicate": 13,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0106",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2CO3_15"
-    ],
-    "replicate": 14,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0107",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2CO3_15"
-    ],
-    "replicate": 15,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0108",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2CO3_15"
-    ],
-    "replicate": 16,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0109",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2CO3_15"
-    ],
-    "replicate": 17,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0110",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2CO3_15"
-    ],
-    "replicate": 18,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0111",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2CO3_15"
-    ],
-    "replicate": 19,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0112",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2CO3_15"
-    ],
-    "replicate": 2,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0113",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2CO3_15"
-    ],
-    "replicate": 3,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0114",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2CO3_15"
-    ],
-    "replicate": 4,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0115",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2CO3_15"
-    ],
-    "replicate": 5,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0116",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2CO3_15"
-    ],
-    "replicate": 6,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0117",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2CO3_15"
-    ],
-    "replicate": 7,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0118",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2CO3_15"
-    ],
-    "replicate": 8,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0119",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2CO3_15"
-    ],
-    "replicate": 9,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0120",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2O2_194"
-    ],
-    "replicate": 0,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0121",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2O2_194"
-    ],
-    "replicate": 1,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0122",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2O2_194"
-    ],
-    "replicate": 10,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0123",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2O2_194"
-    ],
-    "replicate": 11,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0124",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2O2_194"
-    ],
-    "replicate": 12,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0125",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2O2_194"
-    ],
-    "replicate": 13,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0126",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2O2_194"
-    ],
-    "replicate": 14,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0127",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2O2_194"
-    ],
-    "replicate": 15,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0128",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2O2_194"
-    ],
-    "replicate": 16,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0129",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2O2_194"
-    ],
-    "replicate": 17,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0130",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2O2_194"
-    ],
-    "replicate": 18,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0131",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2O2_194"
-    ],
-    "replicate": 19,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0132",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2O2_194"
-    ],
-    "replicate": 2,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0133",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2O2_194"
-    ],
-    "replicate": 3,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0134",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2O2_194"
-    ],
-    "replicate": 4,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0135",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2O2_194"
-    ],
-    "replicate": 5,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0136",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2O2_194"
-    ],
-    "replicate": 6,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0137",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2O2_194"
-    ],
-    "replicate": 7,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0138",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2O2_194"
-    ],
-    "replicate": 8,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0139",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2O2_194"
-    ],
-    "replicate": 9,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0140",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2O_225"
-    ],
-    "replicate": 0,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0141",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2O_225"
-    ],
-    "replicate": 1,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0142",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2O_225"
-    ],
-    "replicate": 10,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0143",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2O_225"
-    ],
-    "replicate": 11,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0144",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2O_225"
-    ],
-    "replicate": 12,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0145",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2O_225"
-    ],
-    "replicate": 13,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0146",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2O_225"
-    ],
-    "replicate": 14,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0147",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2O_225"
-    ],
-    "replicate": 15,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0148",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2O_225"
-    ],
-    "replicate": 16,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0149",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2O_225"
-    ],
-    "replicate": 17,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0150",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2O_225"
-    ],
-    "replicate": 18,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0151",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2O_225"
-    ],
-    "replicate": 19,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0152",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2O_225"
-    ],
-    "replicate": 2,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0153",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2O_225"
-    ],
-    "replicate": 3,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0154",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2O_225"
-    ],
-    "replicate": 4,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0155",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2O_225"
-    ],
-    "replicate": 5,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0156",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2O_225"
-    ],
-    "replicate": 6,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0157",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2O_225"
-    ],
-    "replicate": 7,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0158",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2O_225"
-    ],
-    "replicate": 8,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0159",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2O_225"
-    ],
-    "replicate": 9,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0160",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2ZrO3_15"
-    ],
-    "replicate": 0,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0161",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2ZrO3_15"
-    ],
-    "replicate": 1,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0162",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2ZrO3_15"
-    ],
-    "replicate": 10,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0163",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2ZrO3_15"
-    ],
-    "replicate": 11,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0164",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2ZrO3_15"
-    ],
-    "replicate": 12,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0165",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2ZrO3_15"
-    ],
-    "replicate": 13,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0166",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2ZrO3_15"
-    ],
-    "replicate": 14,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0167",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2ZrO3_15"
-    ],
-    "replicate": 15,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0168",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2ZrO3_15"
-    ],
-    "replicate": 16,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0169",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2ZrO3_15"
-    ],
-    "replicate": 17,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0170",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2ZrO3_15"
-    ],
-    "replicate": 18,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0171",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2ZrO3_15"
-    ],
-    "replicate": 19,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0172",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2ZrO3_15"
-    ],
-    "replicate": 2,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0173",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2ZrO3_15"
-    ],
-    "replicate": 3,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0174",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2ZrO3_15"
-    ],
-    "replicate": 4,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0175",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2ZrO3_15"
-    ],
-    "replicate": 5,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0176",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2ZrO3_15"
-    ],
-    "replicate": 6,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0177",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2ZrO3_15"
-    ],
-    "replicate": 7,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0178",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2ZrO3_15"
-    ],
-    "replicate": 8,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0179",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li2ZrO3_15"
-    ],
-    "replicate": 9,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0180",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li4Zr3O8_141"
-    ],
-    "replicate": 0,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0181",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li4Zr3O8_141"
-    ],
-    "replicate": 1,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0182",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li4Zr3O8_141"
-    ],
-    "replicate": 10,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0183",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li4Zr3O8_141"
-    ],
-    "replicate": 11,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0184",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li4Zr3O8_141"
-    ],
-    "replicate": 12,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0185",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li4Zr3O8_141"
-    ],
-    "replicate": 13,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0186",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li4Zr3O8_141"
-    ],
-    "replicate": 14,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0187",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li4Zr3O8_141"
-    ],
-    "replicate": 15,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0188",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li4Zr3O8_141"
-    ],
-    "replicate": 16,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0189",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li4Zr3O8_141"
-    ],
-    "replicate": 17,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0190",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li4Zr3O8_141"
-    ],
-    "replicate": 18,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0191",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li4Zr3O8_141"
-    ],
-    "replicate": 19,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0192",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li4Zr3O8_141"
-    ],
-    "replicate": 2,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0193",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li4Zr3O8_141"
-    ],
-    "replicate": 3,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0194",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li4Zr3O8_141"
-    ],
-    "replicate": 4,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0195",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li4Zr3O8_141"
-    ],
-    "replicate": 5,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0196",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li4Zr3O8_141"
-    ],
-    "replicate": 6,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0197",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li4Zr3O8_141"
-    ],
-    "replicate": 7,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0198",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li4Zr3O8_141"
-    ],
-    "replicate": 8,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0199",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li4Zr3O8_141"
-    ],
-    "replicate": 9,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0200",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li6Zr2O7_15"
-    ],
-    "replicate": 0,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0201",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li6Zr2O7_15"
-    ],
-    "replicate": 1,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0202",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li6Zr2O7_15"
-    ],
-    "replicate": 10,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0203",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li6Zr2O7_15"
-    ],
-    "replicate": 11,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0204",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li6Zr2O7_15"
-    ],
-    "replicate": 12,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0205",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li6Zr2O7_15"
-    ],
-    "replicate": 13,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0206",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li6Zr2O7_15"
-    ],
-    "replicate": 14,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0207",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li6Zr2O7_15"
-    ],
-    "replicate": 15,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0208",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li6Zr2O7_15"
-    ],
-    "replicate": 16,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0209",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li6Zr2O7_15"
-    ],
-    "replicate": 17,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0210",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li6Zr2O7_15"
-    ],
-    "replicate": 18,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0211",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li6Zr2O7_15"
-    ],
-    "replicate": 19,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0212",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li6Zr2O7_15"
-    ],
-    "replicate": 2,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0213",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li6Zr2O7_15"
-    ],
-    "replicate": 3,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0214",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li6Zr2O7_15"
-    ],
-    "replicate": 4,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0215",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li6Zr2O7_15"
-    ],
-    "replicate": 5,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0216",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li6Zr2O7_15"
-    ],
-    "replicate": 6,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0217",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li6Zr2O7_15"
-    ],
-    "replicate": 7,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0218",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li6Zr2O7_15"
-    ],
-    "replicate": 8,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0219",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li6Zr2O7_15"
-    ],
-    "replicate": 9,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0220",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li7La3Zr2O12_142"
-    ],
-    "replicate": 0,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0221",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li7La3Zr2O12_142"
-    ],
-    "replicate": 1,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0222",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li7La3Zr2O12_142"
-    ],
-    "replicate": 10,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0223",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li7La3Zr2O12_142"
-    ],
-    "replicate": 11,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0224",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li7La3Zr2O12_142"
-    ],
-    "replicate": 12,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0225",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li7La3Zr2O12_142"
-    ],
-    "replicate": 13,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0226",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li7La3Zr2O12_142"
-    ],
-    "replicate": 14,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0227",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li7La3Zr2O12_142"
-    ],
-    "replicate": 15,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0228",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li7La3Zr2O12_142"
-    ],
-    "replicate": 16,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0229",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li7La3Zr2O12_142"
-    ],
-    "replicate": 17,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0230",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li7La3Zr2O12_142"
-    ],
-    "replicate": 18,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0231",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li7La3Zr2O12_142"
-    ],
-    "replicate": 19,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0232",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li7La3Zr2O12_142"
-    ],
-    "replicate": 2,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0233",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li7La3Zr2O12_142"
-    ],
-    "replicate": 3,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0234",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li7La3Zr2O12_142"
-    ],
-    "replicate": 4,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0235",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li7La3Zr2O12_142"
-    ],
-    "replicate": 5,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0236",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li7La3Zr2O12_142"
-    ],
-    "replicate": 6,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0237",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li7La3Zr2O12_142"
-    ],
-    "replicate": 7,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0238",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li7La3Zr2O12_142"
-    ],
-    "replicate": 8,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0239",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li7La3Zr2O12_142"
-    ],
-    "replicate": 9,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0240",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li7La3Zr2O12_230"
-    ],
-    "replicate": 0,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0241",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li7La3Zr2O12_230"
-    ],
-    "replicate": 1,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0242",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li7La3Zr2O12_230"
-    ],
-    "replicate": 10,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0243",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li7La3Zr2O12_230"
-    ],
-    "replicate": 11,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0244",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li7La3Zr2O12_230"
-    ],
-    "replicate": 12,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0245",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li7La3Zr2O12_230"
-    ],
-    "replicate": 13,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0246",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li7La3Zr2O12_230"
-    ],
-    "replicate": 14,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0247",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li7La3Zr2O12_230"
-    ],
-    "replicate": 15,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0248",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li7La3Zr2O12_230"
-    ],
-    "replicate": 16,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0249",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li7La3Zr2O12_230"
-    ],
-    "replicate": 17,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0250",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li7La3Zr2O12_230"
-    ],
-    "replicate": 18,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0251",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li7La3Zr2O12_230"
-    ],
-    "replicate": 19,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0252",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li7La3Zr2O12_230"
-    ],
-    "replicate": 2,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0253",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li7La3Zr2O12_230"
-    ],
-    "replicate": 3,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0254",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li7La3Zr2O12_230"
-    ],
-    "replicate": 4,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0255",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li7La3Zr2O12_230"
-    ],
-    "replicate": 5,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0256",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li7La3Zr2O12_230"
-    ],
-    "replicate": 6,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0257",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li7La3Zr2O12_230"
-    ],
-    "replicate": 7,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0258",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li7La3Zr2O12_230"
-    ],
-    "replicate": 8,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0259",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Li7La3Zr2O12_230"
-    ],
-    "replicate": 9,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0260",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LiLaO2_14"
-    ],
-    "replicate": 0,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0261",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LiLaO2_14"
-    ],
-    "replicate": 1,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0262",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LiLaO2_14"
-    ],
-    "replicate": 10,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0263",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LiLaO2_14"
-    ],
-    "replicate": 11,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0264",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LiLaO2_14"
-    ],
-    "replicate": 12,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0265",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LiLaO2_14"
-    ],
-    "replicate": 13,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0266",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LiLaO2_14"
-    ],
-    "replicate": 14,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0267",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LiLaO2_14"
-    ],
-    "replicate": 15,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0268",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LiLaO2_14"
-    ],
-    "replicate": 16,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0269",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LiLaO2_14"
-    ],
-    "replicate": 17,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0270",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LiLaO2_14"
-    ],
-    "replicate": 18,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0271",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LiLaO2_14"
-    ],
-    "replicate": 19,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0272",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LiLaO2_14"
-    ],
-    "replicate": 2,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0273",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LiLaO2_14"
-    ],
-    "replicate": 3,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0274",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LiLaO2_14"
-    ],
-    "replicate": 4,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0275",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LiLaO2_14"
-    ],
-    "replicate": 5,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0276",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LiLaO2_14"
-    ],
-    "replicate": 6,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0277",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LiLaO2_14"
-    ],
-    "replicate": 7,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0278",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LiLaO2_14"
-    ],
-    "replicate": 8,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0279",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LiLaO2_14"
-    ],
-    "replicate": 9,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0280",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LiO2_58"
-    ],
-    "replicate": 0,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0281",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LiO2_58"
-    ],
-    "replicate": 1,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0282",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LiO2_58"
-    ],
-    "replicate": 10,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0283",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LiO2_58"
-    ],
-    "replicate": 11,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0284",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LiO2_58"
-    ],
-    "replicate": 12,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0285",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LiO2_58"
-    ],
-    "replicate": 13,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0286",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LiO2_58"
-    ],
-    "replicate": 14,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0287",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LiO2_58"
-    ],
-    "replicate": 15,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0288",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LiO2_58"
-    ],
-    "replicate": 16,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0289",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LiO2_58"
-    ],
-    "replicate": 17,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0290",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LiO2_58"
-    ],
-    "replicate": 18,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0291",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LiO2_58"
-    ],
-    "replicate": 19,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0292",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LiO2_58"
-    ],
-    "replicate": 2,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0293",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LiO2_58"
-    ],
-    "replicate": 3,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0294",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LiO2_58"
-    ],
-    "replicate": 4,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0295",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LiO2_58"
-    ],
-    "replicate": 5,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0296",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LiO2_58"
-    ],
-    "replicate": 6,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0297",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LiO2_58"
-    ],
-    "replicate": 7,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0298",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LiO2_58"
-    ],
-    "replicate": 8,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0299",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LiO2_58"
-    ],
-    "replicate": 9,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0300",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LiOH-H2O_12"
-    ],
-    "replicate": 0,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0301",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LiOH-H2O_12"
-    ],
-    "replicate": 1,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0302",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LiOH-H2O_12"
-    ],
-    "replicate": 10,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0303",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LiOH-H2O_12"
-    ],
-    "replicate": 11,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0304",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LiOH-H2O_12"
-    ],
-    "replicate": 12,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0305",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LiOH-H2O_12"
-    ],
-    "replicate": 13,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0306",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LiOH-H2O_12"
-    ],
-    "replicate": 14,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0307",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LiOH-H2O_12"
-    ],
-    "replicate": 15,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0308",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LiOH-H2O_12"
-    ],
-    "replicate": 16,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0309",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LiOH-H2O_12"
-    ],
-    "replicate": 17,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0310",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LiOH-H2O_12"
-    ],
-    "replicate": 18,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0311",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LiOH-H2O_12"
-    ],
-    "replicate": 19,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0312",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LiOH-H2O_12"
-    ],
-    "replicate": 2,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0313",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LiOH-H2O_12"
-    ],
-    "replicate": 3,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0314",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LiOH-H2O_12"
-    ],
-    "replicate": 4,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0315",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LiOH-H2O_12"
-    ],
-    "replicate": 5,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0316",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LiOH-H2O_12"
-    ],
-    "replicate": 6,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0317",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LiOH-H2O_12"
-    ],
-    "replicate": 7,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0318",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LiOH-H2O_12"
-    ],
-    "replicate": 8,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0319",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "LiOH-H2O_12"
-    ],
-    "replicate": 9,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0320",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
     "phases": [
       "LiOH_129"
     ],
-    "replicate": 0,
-    "split": "train"
+    "replicate": 11
   },
   {
-    "id": "A_1-Phase_0321",
+    "id": "A_S_0161f1e404703118",
     "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
+    "phases": [
+      "La2O3_206"
+    ],
+    "replicate": 9
+  },
+  {
+    "id": "A_S_01dae63a8d8551c6",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li7La3Zr2O12_230"
+    ],
+    "replicate": 18
+  },
+  {
+    "id": "A_S_03378055a446a1e0",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2CO3_15"
+    ],
+    "replicate": 15
+  },
+  {
+    "id": "A_S_03893b8626861f37",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Zr2O_224"
+    ],
+    "replicate": 16
+  },
+  {
+    "id": "A_S_03b4a75e3befc5bf",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La(OH)3_176"
+    ],
+    "replicate": 6
+  },
+  {
+    "id": "A_S_0405c4de22006aca",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_61"
+    ],
+    "replicate": 0
+  },
+  {
+    "id": "A_S_04489593606bd65f",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2CO3_15"
+    ],
+    "replicate": 8
+  },
+  {
+    "id": "A_S_0460b9c0af2db0d6",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_19"
+    ],
+    "replicate": 12
+  },
+  {
+    "id": "A_S_05b8f15ca25c65bf",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LiO2_58"
+    ],
+    "replicate": 8
+  },
+  {
+    "id": "A_S_05ed2cef592c88a3",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_225"
+    ],
+    "replicate": 0
+  },
+  {
+    "id": "A_S_067e234cc2d31892",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2O_225"
+    ],
+    "replicate": 9
+  },
+  {
+    "id": "A_S_068e2ee64db544b3",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_19"
+    ],
+    "replicate": 7
+  },
+  {
+    "id": "A_S_06a4eaf08519a276",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li6Zr2O7_15"
+    ],
+    "replicate": 19
+  },
+  {
+    "id": "A_S_08395c0fdc35a3af",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La2O3_164"
+    ],
+    "replicate": 18
+  },
+  {
+    "id": "A_S_086616f7960ff206",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Zr2O_224"
+    ],
+    "replicate": 6
+  },
+  {
+    "id": "A_S_093e101d57b0db98",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La2O3_206"
+    ],
+    "replicate": 4
+  },
+  {
+    "id": "A_S_095a68a3f186b3ba",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Zr2O_224"
+    ],
+    "replicate": 19
+  },
+  {
+    "id": "A_S_09681ac6f35265eb",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Zr3O_182"
+    ],
+    "replicate": 3
+  },
+  {
+    "id": "A_S_09c7ea2fb21cd5f7",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2CO3_15"
+    ],
+    "replicate": 11
+  },
+  {
+    "id": "A_S_0a0713c88c1df367",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_14"
+    ],
+    "replicate": 11
+  },
+  {
+    "id": "A_S_0a08d2ca309bb882",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La2O3_164"
+    ],
+    "replicate": 13
+  },
+  {
+    "id": "A_S_0aa9ddf0410e4edf",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_14"
+    ],
+    "replicate": 6
+  },
+  {
+    "id": "A_S_0aaee1139c9cfff7",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La2Zr2O7_227"
+    ],
+    "replicate": 12
+  },
+  {
+    "id": "A_S_0b1b6e6e7efdb6d7",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_62"
+    ],
+    "replicate": 12
+  },
+  {
+    "id": "A_S_0b53bd7b8dd1bd19",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La2O3_164"
+    ],
+    "replicate": 16
+  },
+  {
+    "id": "A_S_0bb01cdca5cafb49",
+    "chemistry": "Li-La-Zr-O",
     "phases": [
       "LiOH_129"
     ],
-    "replicate": 1,
-    "split": "train"
+    "replicate": 18
   },
   {
-    "id": "A_1-Phase_0322",
+    "id": "A_S_0be653716acc4902",
     "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
+    "phases": [
+      "ZrO2_62"
+    ],
+    "replicate": 4
+  },
+  {
+    "id": "A_S_0c3e7846470c3162",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Zr2O_224"
+    ],
+    "replicate": 8
+  },
+  {
+    "id": "A_S_0c8c1303ed0b2153",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_225"
+    ],
+    "replicate": 7
+  },
+  {
+    "id": "A_S_0cd8c90cd1efb94a",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LiO2_58"
+    ],
+    "replicate": 12
+  },
+  {
+    "id": "A_S_0d650f8c03947787",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_62"
+    ],
+    "replicate": 2
+  },
+  {
+    "id": "A_S_0d770f3dc9e0a811",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_225"
+    ],
+    "replicate": 15
+  },
+  {
+    "id": "A_S_0dba479cb2551f3a",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_14"
+    ],
+    "replicate": 8
+  },
+  {
+    "id": "A_S_0e710160e0144414",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La2O3_206"
+    ],
+    "replicate": 17
+  },
+  {
+    "id": "A_S_0ed7bd36748730aa",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La2O3_164"
+    ],
+    "replicate": 12
+  },
+  {
+    "id": "A_S_0fc9c5802c0860aa",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La2O3_206"
+    ],
+    "replicate": 3
+  },
+  {
+    "id": "A_S_1005020e78f07dac",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LaOOH_11"
+    ],
+    "replicate": 6
+  },
+  {
+    "id": "A_S_103e90c305c632e7",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_14"
+    ],
+    "replicate": 7
+  },
+  {
+    "id": "A_S_107880b70b56b88f",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2O2_194"
+    ],
+    "replicate": 6
+  },
+  {
+    "id": "A_S_110c371288bfafc9",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li7La3Zr2O12_142"
+    ],
+    "replicate": 16
+  },
+  {
+    "id": "A_S_11d79d88eb1d67eb",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li7La3Zr2O12_142"
+    ],
+    "replicate": 4
+  },
+  {
+    "id": "A_S_124ce673b2bf8235",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Zr3O_182"
+    ],
+    "replicate": 7
+  },
+  {
+    "id": "A_S_124e54fe831850b2",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li4Zr3O8_141"
+    ],
+    "replicate": 3
+  },
+  {
+    "id": "A_S_125bf8f89b687134",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li6Zr2O7_15"
+    ],
+    "replicate": 14
+  },
+  {
+    "id": "A_S_13209c8cd6f622e1",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_137"
+    ],
+    "replicate": 16
+  },
+  {
+    "id": "A_S_132b2377331c3710",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li7La3Zr2O12_230"
+    ],
+    "replicate": 5
+  },
+  {
+    "id": "A_S_1413e354480242c7",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2O_225"
+    ],
+    "replicate": 1
+  },
+  {
+    "id": "A_S_14edc7edceb719cc",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Zr3O_167"
+    ],
+    "replicate": 10
+  },
+  {
+    "id": "A_S_14f4fa0b10adaec3",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2O_225"
+    ],
+    "replicate": 6
+  },
+  {
+    "id": "A_S_1518dd7d8a3b196d",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_62"
+    ],
+    "replicate": 13
+  },
+  {
+    "id": "A_S_15228c51dfa4042a",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La2Zr2O7_227"
+    ],
+    "replicate": 18
+  },
+  {
+    "id": "A_S_156339aad240951f",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO_225"
+    ],
+    "replicate": 13
+  },
+  {
+    "id": "A_S_15a6da8cf31c5423",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LiLaO2_14"
+    ],
+    "replicate": 10
+  },
+  {
+    "id": "A_S_15bd2ce7160c48d1",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2CO3_15"
+    ],
+    "replicate": 14
+  },
+  {
+    "id": "A_S_1617100b76617313",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2ZrO3_15"
+    ],
+    "replicate": 9
+  },
+  {
+    "id": "A_S_17829bb4883cdf8a",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LiOH-H2O_12"
+    ],
+    "replicate": 11
+  },
+  {
+    "id": "A_S_179d7f7a747cb944",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_137"
+    ],
+    "replicate": 19
+  },
+  {
+    "id": "A_S_17ad92a107662832",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li6Zr2O7_15"
+    ],
+    "replicate": 4
+  },
+  {
+    "id": "A_S_18b147639b7e2473",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LaOOH_11"
+    ],
+    "replicate": 0
+  },
+  {
+    "id": "A_S_18cb3bc817c25a9d",
+    "chemistry": "Li-La-Zr-O",
     "phases": [
       "LiOH_129"
     ],
-    "replicate": 10,
-    "split": "train"
+    "replicate": 19
   },
   {
-    "id": "A_1-Phase_0323",
+    "id": "A_S_19910814fc4e56d3",
     "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
+    "phases": [
+      "Li2O2_194"
+    ],
+    "replicate": 12
+  },
+  {
+    "id": "A_S_19a0a8583aad74bf",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LiOH-H2O_12"
+    ],
+    "replicate": 18
+  },
+  {
+    "id": "A_S_19f9acc514d8b63d",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2O_225"
+    ],
+    "replicate": 8
+  },
+  {
+    "id": "A_S_1a29dd9c9dfcd54e",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li4Zr3O8_141"
+    ],
+    "replicate": 12
+  },
+  {
+    "id": "A_S_1a2fd7fb75daf062",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Zr3O_182"
+    ],
+    "replicate": 16
+  },
+  {
+    "id": "A_S_1a3dfbd8cb68091a",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La2Zr2O7_227"
+    ],
+    "replicate": 7
+  },
+  {
+    "id": "A_S_1a43b8a57c4320b2",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Zr3O_182"
+    ],
+    "replicate": 14
+  },
+  {
+    "id": "A_S_1b12d276b7980492",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Zr2O_224"
+    ],
+    "replicate": 17
+  },
+  {
+    "id": "A_S_1b144372650ef4a9",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LiLaO2_14"
+    ],
+    "replicate": 1
+  },
+  {
+    "id": "A_S_1b5ef06e63c42c64",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2CO3_15"
+    ],
+    "replicate": 6
+  },
+  {
+    "id": "A_S_1d4e9402a827a898",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_225"
+    ],
+    "replicate": 9
+  },
+  {
+    "id": "A_S_1e0d6dd73f4474cd",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Zr3O_167"
+    ],
+    "replicate": 0
+  },
+  {
+    "id": "A_S_1ea65f3c55682bbf",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_225"
+    ],
+    "replicate": 2
+  },
+  {
+    "id": "A_S_1f2b00dbc078f5d5",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La2O3_206"
+    ],
+    "replicate": 10
+  },
+  {
+    "id": "A_S_1ff860748fa8c347",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LiOH-H2O_12"
+    ],
+    "replicate": 16
+  },
+  {
+    "id": "A_S_2019a6a28f19953a",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_225"
+    ],
+    "replicate": 4
+  },
+  {
+    "id": "A_S_2026f356a446600a",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO_189"
+    ],
+    "replicate": 10
+  },
+  {
+    "id": "A_S_2032d79555418cff",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li4Zr3O8_141"
+    ],
+    "replicate": 2
+  },
+  {
+    "id": "A_S_20b4ab3b26f00f9b",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO_225"
+    ],
+    "replicate": 14
+  },
+  {
+    "id": "A_S_20f12535aab49417",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li6Zr2O7_15"
+    ],
+    "replicate": 3
+  },
+  {
+    "id": "A_S_2135f0f9b8270497",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_14"
+    ],
+    "replicate": 1
+  },
+  {
+    "id": "A_S_214252c478288a82",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2O_225"
+    ],
+    "replicate": 7
+  },
+  {
+    "id": "A_S_22373d251d1dd940",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_61"
+    ],
+    "replicate": 4
+  },
+  {
+    "id": "A_S_2278a1c17044e5b2",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2O2_194"
+    ],
+    "replicate": 16
+  },
+  {
+    "id": "A_S_22857223efc80aa6",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LiLaO2_14"
+    ],
+    "replicate": 16
+  },
+  {
+    "id": "A_S_23b3d74cee25bf56",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_19"
+    ],
+    "replicate": 4
+  },
+  {
+    "id": "A_S_23c1257f540b70a3",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Zr3O_182"
+    ],
+    "replicate": 5
+  },
+  {
+    "id": "A_S_23faed6e743c750b",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li4Zr3O8_141"
+    ],
+    "replicate": 18
+  },
+  {
+    "id": "A_S_25a947264da9bb26",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La2O3_206"
+    ],
+    "replicate": 7
+  },
+  {
+    "id": "A_S_2603d3eb7e9bb343",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li4Zr3O8_141"
+    ],
+    "replicate": 11
+  },
+  {
+    "id": "A_S_269af13526155f64",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO_225"
+    ],
+    "replicate": 8
+  },
+  {
+    "id": "A_S_26b0a7dc56ab38ba",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La2Zr2O7_227"
+    ],
+    "replicate": 1
+  },
+  {
+    "id": "A_S_26d704b038838f27",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2CO3_15"
+    ],
+    "replicate": 3
+  },
+  {
+    "id": "A_S_26e75d5143da8c17",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2CO3_15"
+    ],
+    "replicate": 16
+  },
+  {
+    "id": "A_S_26f93b9a06e11abc",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LiLaO2_14"
+    ],
+    "replicate": 5
+  },
+  {
+    "id": "A_S_2798f8344476759e",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La2O3_206"
+    ],
+    "replicate": 18
+  },
+  {
+    "id": "A_S_27a9cf3335c3b001",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La2O3_206"
+    ],
+    "replicate": 15
+  },
+  {
+    "id": "A_S_282cc7e5f92fef92",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Zr3O_182"
+    ],
+    "replicate": 10
+  },
+  {
+    "id": "A_S_288f565484d6a70f",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Zr2O_224"
+    ],
+    "replicate": 14
+  },
+  {
+    "id": "A_S_28ddda2796075b27",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LiOH-H2O_12"
+    ],
+    "replicate": 3
+  },
+  {
+    "id": "A_S_28e792bd932b6359",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li7La3Zr2O12_142"
+    ],
+    "replicate": 3
+  },
+  {
+    "id": "A_S_28e947d70d8cc980",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LiO2_58"
+    ],
+    "replicate": 3
+  },
+  {
+    "id": "A_S_28edd9f2d2c15f03",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_19"
+    ],
+    "replicate": 16
+  },
+  {
+    "id": "A_S_29f05ca00981057d",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li7La3Zr2O12_142"
+    ],
+    "replicate": 15
+  },
+  {
+    "id": "A_S_29f40ac242615fc1",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LiOH-H2O_12"
+    ],
+    "replicate": 12
+  },
+  {
+    "id": "A_S_2a16c9e664f3dbd3",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2O_225"
+    ],
+    "replicate": 2
+  },
+  {
+    "id": "A_S_2a94172c703ed7d1",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li7La3Zr2O12_142"
+    ],
+    "replicate": 10
+  },
+  {
+    "id": "A_S_2ab54745132f00b1",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO_225"
+    ],
+    "replicate": 17
+  },
+  {
+    "id": "A_S_2ae87eddfb5cf398",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_137"
+    ],
+    "replicate": 0
+  },
+  {
+    "id": "A_S_2aedfbec2b4532a6",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_19"
+    ],
+    "replicate": 8
+  },
+  {
+    "id": "A_S_2ba176c1b7508243",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_19"
+    ],
+    "replicate": 6
+  },
+  {
+    "id": "A_S_2bf870683367c0d0",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Zr3O_167"
+    ],
+    "replicate": 6
+  },
+  {
+    "id": "A_S_2c2b6797e9494d96",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La2O3_164"
+    ],
+    "replicate": 10
+  },
+  {
+    "id": "A_S_2cafb92688dfe7b8",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_61"
+    ],
+    "replicate": 19
+  },
+  {
+    "id": "A_S_2cbe3ee7285b9aea",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2CO3_15"
+    ],
+    "replicate": 12
+  },
+  {
+    "id": "A_S_2d16a5956be4dc8c",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO_225"
+    ],
+    "replicate": 6
+  },
+  {
+    "id": "A_S_2d27a769e8a0d148",
+    "chemistry": "Li-La-Zr-O",
     "phases": [
       "LiOH_129"
     ],
-    "replicate": 11,
-    "split": "train"
+    "replicate": 6
   },
   {
-    "id": "A_1-Phase_0324",
+    "id": "A_S_2d92ddf4ee10aac1",
     "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
+    "phases": [
+      "ZrO2_19"
+    ],
+    "replicate": 1
+  },
+  {
+    "id": "A_S_2da50529b41df253",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2O2_194"
+    ],
+    "replicate": 18
+  },
+  {
+    "id": "A_S_2de54d6121eaf431",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La2Zr2O7_227"
+    ],
+    "replicate": 14
+  },
+  {
+    "id": "A_S_2dfd9a9b2010d4de",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La(OH)3_176"
+    ],
+    "replicate": 10
+  },
+  {
+    "id": "A_S_2fac081303c8148c",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2ZrO3_15"
+    ],
+    "replicate": 16
+  },
+  {
+    "id": "A_S_2fde774f146e5b76",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Zr3O_167"
+    ],
+    "replicate": 2
+  },
+  {
+    "id": "A_S_2fe12d7d50d13a63",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Zr3O_167"
+    ],
+    "replicate": 19
+  },
+  {
+    "id": "A_S_30d77b1d8c86ae5e",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO_225"
+    ],
+    "replicate": 1
+  },
+  {
+    "id": "A_S_317dd5cb31493835",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2ZrO3_15"
+    ],
+    "replicate": 2
+  },
+  {
+    "id": "A_S_327b249f674adcb1",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li7La3Zr2O12_230"
+    ],
+    "replicate": 13
+  },
+  {
+    "id": "A_S_32bc50fd08843ccc",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO_189"
+    ],
+    "replicate": 9
+  },
+  {
+    "id": "A_S_32ebf822dd3735ba",
+    "chemistry": "Li-La-Zr-O",
     "phases": [
       "LiOH_129"
     ],
-    "replicate": 12,
-    "split": "train"
+    "replicate": 3
   },
   {
-    "id": "A_1-Phase_0325",
+    "id": "A_S_335452cf40be663d",
     "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
+    "phases": [
+      "ZrO2_62"
+    ],
+    "replicate": 17
+  },
+  {
+    "id": "A_S_34d2fb17648202dd",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO_225"
+    ],
+    "replicate": 10
+  },
+  {
+    "id": "A_S_35664879efdd6fff",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_61"
+    ],
+    "replicate": 11
+  },
+  {
+    "id": "A_S_35754a3fb8f4a0c5",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li7La3Zr2O12_142"
+    ],
+    "replicate": 19
+  },
+  {
+    "id": "A_S_3738b6cbe731562b",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO_225"
+    ],
+    "replicate": 5
+  },
+  {
+    "id": "A_S_37ff1995da75e0a1",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Zr3O_167"
+    ],
+    "replicate": 18
+  },
+  {
+    "id": "A_S_3849b476dd470aee",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LiLaO2_14"
+    ],
+    "replicate": 0
+  },
+  {
+    "id": "A_S_38592616b5b899ca",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_225"
+    ],
+    "replicate": 12
+  },
+  {
+    "id": "A_S_392d62ea5b290455",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO_189"
+    ],
+    "replicate": 11
+  },
+  {
+    "id": "A_S_3b0f7002f10022f4",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La(OH)3_176"
+    ],
+    "replicate": 8
+  },
+  {
+    "id": "A_S_3b8c2ade80451834",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La2O3_164"
+    ],
+    "replicate": 15
+  },
+  {
+    "id": "A_S_3b9fef08a8b26be9",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2ZrO3_15"
+    ],
+    "replicate": 5
+  },
+  {
+    "id": "A_S_3d31541983cf1e02",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Zr3O_167"
+    ],
+    "replicate": 1
+  },
+  {
+    "id": "A_S_3d8761e7addf9c62",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2O_225"
+    ],
+    "replicate": 17
+  },
+  {
+    "id": "A_S_3db57c74e63fa729",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li7La3Zr2O12_142"
+    ],
+    "replicate": 11
+  },
+  {
+    "id": "A_S_3f15a87d803e6874",
+    "chemistry": "Li-La-Zr-O",
     "phases": [
       "LiOH_129"
     ],
-    "replicate": 13,
-    "split": "train"
+    "replicate": 13
   },
   {
-    "id": "A_1-Phase_0326",
+    "id": "A_S_3f2cfbd2fa85a3d3",
     "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
+    "phases": [
+      "Li2CO3_15"
+    ],
+    "replicate": 9
+  },
+  {
+    "id": "A_S_4089f3991428e2ed",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LiLaO2_14"
+    ],
+    "replicate": 19
+  },
+  {
+    "id": "A_S_40c31383f608830a",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Zr3O_167"
+    ],
+    "replicate": 8
+  },
+  {
+    "id": "A_S_41b77fb67321fc31",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LiLaO2_14"
+    ],
+    "replicate": 12
+  },
+  {
+    "id": "A_S_41c145309e20114b",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2CO3_15"
+    ],
+    "replicate": 10
+  },
+  {
+    "id": "A_S_4219d9500600c801",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO_189"
+    ],
+    "replicate": 15
+  },
+  {
+    "id": "A_S_43717e04539e15c7",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Zr3O_182"
+    ],
+    "replicate": 9
+  },
+  {
+    "id": "A_S_43ca0432bb04a8a5",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La(OH)3_176"
+    ],
+    "replicate": 4
+  },
+  {
+    "id": "A_S_43d830a069da6668",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La2O3_206"
+    ],
+    "replicate": 2
+  },
+  {
+    "id": "A_S_4456c513c8740534",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_19"
+    ],
+    "replicate": 11
+  },
+  {
+    "id": "A_S_44aafd7a143613eb",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LaOOH_11"
+    ],
+    "replicate": 4
+  },
+  {
+    "id": "A_S_44fb55f695abe327",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LiLaO2_14"
+    ],
+    "replicate": 4
+  },
+  {
+    "id": "A_S_4529d021e8621f7b",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La2Zr2O7_227"
+    ],
+    "replicate": 5
+  },
+  {
+    "id": "A_S_456a6e13839df403",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO_189"
+    ],
+    "replicate": 4
+  },
+  {
+    "id": "A_S_45a3b6c49995819b",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La2O3_206"
+    ],
+    "replicate": 1
+  },
+  {
+    "id": "A_S_45c90459ce026755",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LiLaO2_14"
+    ],
+    "replicate": 8
+  },
+  {
+    "id": "A_S_46374ce3b9044c64",
+    "chemistry": "Li-La-Zr-O",
     "phases": [
       "LiOH_129"
     ],
-    "replicate": 14,
-    "split": "test"
+    "replicate": 17
   },
   {
-    "id": "A_1-Phase_0327",
+    "id": "A_S_4646680a5b50eb10",
     "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
+    "phases": [
+      "Li4Zr3O8_141"
+    ],
+    "replicate": 16
+  },
+  {
+    "id": "A_S_466d0216d98f590b",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La2Zr2O7_227"
+    ],
+    "replicate": 19
+  },
+  {
+    "id": "A_S_467a89793092b80a",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2O2_194"
+    ],
+    "replicate": 13
+  },
+  {
+    "id": "A_S_46b2957322e5c7c9",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_62"
+    ],
+    "replicate": 0
+  },
+  {
+    "id": "A_S_46d337e6fe04da01",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La(OH)3_176"
+    ],
+    "replicate": 17
+  },
+  {
+    "id": "A_S_47654d99f6159614",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Zr2O_224"
+    ],
+    "replicate": 9
+  },
+  {
+    "id": "A_S_4863be0c048b12ad",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_61"
+    ],
+    "replicate": 6
+  },
+  {
+    "id": "A_S_48816b0872bf1681",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Zr2O_224"
+    ],
+    "replicate": 3
+  },
+  {
+    "id": "A_S_48965dd438d48d18",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LiOH-H2O_12"
+    ],
+    "replicate": 19
+  },
+  {
+    "id": "A_S_48f764092f2567ae",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li6Zr2O7_15"
+    ],
+    "replicate": 1
+  },
+  {
+    "id": "A_S_4906fb7b43e98de7",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li4Zr3O8_141"
+    ],
+    "replicate": 15
+  },
+  {
+    "id": "A_S_4989a5884300fa7f",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LaOOH_11"
+    ],
+    "replicate": 12
+  },
+  {
+    "id": "A_S_4a50784daa476ab1",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LiLaO2_14"
+    ],
+    "replicate": 15
+  },
+  {
+    "id": "A_S_4a67a1d4ef7042f5",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_19"
+    ],
+    "replicate": 2
+  },
+  {
+    "id": "A_S_4a78b33e0a03b402",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LiLaO2_14"
+    ],
+    "replicate": 14
+  },
+  {
+    "id": "A_S_4acec7d5fcff2dda",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2O2_194"
+    ],
+    "replicate": 10
+  },
+  {
+    "id": "A_S_4b099512873a3641",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2O2_194"
+    ],
+    "replicate": 17
+  },
+  {
+    "id": "A_S_4b36d06827739e2b",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_19"
+    ],
+    "replicate": 19
+  },
+  {
+    "id": "A_S_4b45f72224394626",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Zr3O_167"
+    ],
+    "replicate": 15
+  },
+  {
+    "id": "A_S_4b8446c22843877b",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LaOOH_11"
+    ],
+    "replicate": 11
+  },
+  {
+    "id": "A_S_4c7ac429bdd944a9",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Zr3O_182"
+    ],
+    "replicate": 12
+  },
+  {
+    "id": "A_S_4d245a6ec3b4d285",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2O2_194"
+    ],
+    "replicate": 2
+  },
+  {
+    "id": "A_S_4df6ea1163824f40",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_19"
+    ],
+    "replicate": 5
+  },
+  {
+    "id": "A_S_4ece97573673efa0",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li7La3Zr2O12_142"
+    ],
+    "replicate": 13
+  },
+  {
+    "id": "A_S_4ff40911365ea673",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_225"
+    ],
+    "replicate": 18
+  },
+  {
+    "id": "A_S_509b9007a8d1c7a2",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_137"
+    ],
+    "replicate": 7
+  },
+  {
+    "id": "A_S_512f95bf50846f42",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Zr3O_167"
+    ],
+    "replicate": 13
+  },
+  {
+    "id": "A_S_51c47dfd25162f5f",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li4Zr3O8_141"
+    ],
+    "replicate": 9
+  },
+  {
+    "id": "A_S_51d51038d14c9b17",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La2Zr2O7_227"
+    ],
+    "replicate": 6
+  },
+  {
+    "id": "A_S_5396a46b2c3a9213",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li7La3Zr2O12_230"
+    ],
+    "replicate": 11
+  },
+  {
+    "id": "A_S_53ed7e1a6b963b33",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_14"
+    ],
+    "replicate": 5
+  },
+  {
+    "id": "A_S_540645062d5c128d",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LaOOH_11"
+    ],
+    "replicate": 9
+  },
+  {
+    "id": "A_S_550ac0537a2ac9ed",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Zr3O_167"
+    ],
+    "replicate": 12
+  },
+  {
+    "id": "A_S_5629ae2696b6636e",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_137"
+    ],
+    "replicate": 5
+  },
+  {
+    "id": "A_S_5662416155b96efd",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LiO2_58"
+    ],
+    "replicate": 6
+  },
+  {
+    "id": "A_S_566830f5c8b305cb",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_62"
+    ],
+    "replicate": 1
+  },
+  {
+    "id": "A_S_56ac59c085a04eff",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La2O3_206"
+    ],
+    "replicate": 13
+  },
+  {
+    "id": "A_S_57901577409f0d13",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La2O3_164"
+    ],
+    "replicate": 1
+  },
+  {
+    "id": "A_S_57deb72690d073b8",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO_225"
+    ],
+    "replicate": 0
+  },
+  {
+    "id": "A_S_5986a9df04bed3f2",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO_189"
+    ],
+    "replicate": 19
+  },
+  {
+    "id": "A_S_59913200274d2465",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La2Zr2O7_227"
+    ],
+    "replicate": 2
+  },
+  {
+    "id": "A_S_5a4763d35d860018",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La2O3_206"
+    ],
+    "replicate": 0
+  },
+  {
+    "id": "A_S_5a5236e0ade1341a",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LiOH-H2O_12"
+    ],
+    "replicate": 4
+  },
+  {
+    "id": "A_S_5a770d482f914679",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La2O3_164"
+    ],
+    "replicate": 3
+  },
+  {
+    "id": "A_S_5b2c50da22d33c3f",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_225"
+    ],
+    "replicate": 11
+  },
+  {
+    "id": "A_S_5ba140e93f45fd92",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li6Zr2O7_15"
+    ],
+    "replicate": 9
+  },
+  {
+    "id": "A_S_5ce9b095eedaf98a",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LiO2_58"
+    ],
+    "replicate": 2
+  },
+  {
+    "id": "A_S_5d7ef9c284883b9e",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_225"
+    ],
+    "replicate": 10
+  },
+  {
+    "id": "A_S_5dcdef93b5385179",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2O2_194"
+    ],
+    "replicate": 19
+  },
+  {
+    "id": "A_S_607b8c507c1ccf22",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_62"
+    ],
+    "replicate": 6
+  },
+  {
+    "id": "A_S_60dac5d86f6b87f1",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Zr2O_224"
+    ],
+    "replicate": 12
+  },
+  {
+    "id": "A_S_61d7f7a2a593ff5c",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO_189"
+    ],
+    "replicate": 2
+  },
+  {
+    "id": "A_S_61eba52dd59b9ea1",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Zr3O_167"
+    ],
+    "replicate": 17
+  },
+  {
+    "id": "A_S_63a0176c9e23034a",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_14"
+    ],
+    "replicate": 3
+  },
+  {
+    "id": "A_S_63ff92539e6ff93e",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_225"
+    ],
+    "replicate": 6
+  },
+  {
+    "id": "A_S_64103ce069bbeed4",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2CO3_15"
+    ],
+    "replicate": 4
+  },
+  {
+    "id": "A_S_652941ad1380df19",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li7La3Zr2O12_142"
+    ],
+    "replicate": 14
+  },
+  {
+    "id": "A_S_65c4003a52e8e5a1",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La2Zr2O7_227"
+    ],
+    "replicate": 3
+  },
+  {
+    "id": "A_S_65eab40f2d31c0fe",
+    "chemistry": "Li-La-Zr-O",
     "phases": [
       "LiOH_129"
     ],
-    "replicate": 15,
-    "split": "test"
+    "replicate": 8
   },
   {
-    "id": "A_1-Phase_0328",
+    "id": "A_S_65f2b2d6307d85db",
     "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
+    "phases": [
+      "LaOOH_11"
+    ],
+    "replicate": 16
+  },
+  {
+    "id": "A_S_66bdeb5528e3dd6e",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li7La3Zr2O12_230"
+    ],
+    "replicate": 10
+  },
+  {
+    "id": "A_S_670e60283594e21f",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li7La3Zr2O12_230"
+    ],
+    "replicate": 7
+  },
+  {
+    "id": "A_S_6751613dfdb3b1f1",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_137"
+    ],
+    "replicate": 4
+  },
+  {
+    "id": "A_S_676e4e6e9c03f630",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_14"
+    ],
+    "replicate": 10
+  },
+  {
+    "id": "A_S_67b97988f31cc679",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LaOOH_11"
+    ],
+    "replicate": 19
+  },
+  {
+    "id": "A_S_67fbd24c6a2ea0fb",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li6Zr2O7_15"
+    ],
+    "replicate": 18
+  },
+  {
+    "id": "A_S_6810160f368e2013",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li4Zr3O8_141"
+    ],
+    "replicate": 17
+  },
+  {
+    "id": "A_S_684417753d3a9226",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LaOOH_11"
+    ],
+    "replicate": 5
+  },
+  {
+    "id": "A_S_686e1e7b10a88d9a",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_62"
+    ],
+    "replicate": 8
+  },
+  {
+    "id": "A_S_6875e5cd5dee75c4",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La2Zr2O7_227"
+    ],
+    "replicate": 13
+  },
+  {
+    "id": "A_S_689d4962b46f454a",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_137"
+    ],
+    "replicate": 1
+  },
+  {
+    "id": "A_S_68b752e8803964e3",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_61"
+    ],
+    "replicate": 18
+  },
+  {
+    "id": "A_S_6a177b9f6e4751fd",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO_189"
+    ],
+    "replicate": 12
+  },
+  {
+    "id": "A_S_6a2d967c6031a068",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO_189"
+    ],
+    "replicate": 14
+  },
+  {
+    "id": "A_S_6ac682c95aae7ac1",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_61"
+    ],
+    "replicate": 12
+  },
+  {
+    "id": "A_S_6af1f62b8927bc5c",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_19"
+    ],
+    "replicate": 14
+  },
+  {
+    "id": "A_S_6b0da8215b134df1",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La2O3_206"
+    ],
+    "replicate": 6
+  },
+  {
+    "id": "A_S_6b72e2226ff3744e",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_19"
+    ],
+    "replicate": 10
+  },
+  {
+    "id": "A_S_6c620699bc07e38a",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li6Zr2O7_15"
+    ],
+    "replicate": 0
+  },
+  {
+    "id": "A_S_6c9d167fccbf7100",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LiOH-H2O_12"
+    ],
+    "replicate": 17
+  },
+  {
+    "id": "A_S_6dc625311d14a123",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Zr3O_182"
+    ],
+    "replicate": 2
+  },
+  {
+    "id": "A_S_6e203e8535d901de",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La2O3_206"
+    ],
+    "replicate": 11
+  },
+  {
+    "id": "A_S_6ed8d2bfcacfbe54",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li4Zr3O8_141"
+    ],
+    "replicate": 0
+  },
+  {
+    "id": "A_S_6f27d82a24d91b9b",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2O_225"
+    ],
+    "replicate": 19
+  },
+  {
+    "id": "A_S_6f9899c3bef679c1",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2CO3_15"
+    ],
+    "replicate": 19
+  },
+  {
+    "id": "A_S_6fc707fbd3dbc085",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_137"
+    ],
+    "replicate": 17
+  },
+  {
+    "id": "A_S_701c3102ef9e358b",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2ZrO3_15"
+    ],
+    "replicate": 1
+  },
+  {
+    "id": "A_S_701f268053a21fa5",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li7La3Zr2O12_142"
+    ],
+    "replicate": 17
+  },
+  {
+    "id": "A_S_70ec7c775d4132ef",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2ZrO3_15"
+    ],
+    "replicate": 17
+  },
+  {
+    "id": "A_S_70fcb4e009244bb3",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2O_225"
+    ],
+    "replicate": 10
+  },
+  {
+    "id": "A_S_72958096b5fabdf7",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li4Zr3O8_141"
+    ],
+    "replicate": 7
+  },
+  {
+    "id": "A_S_72ab02f8a23c07bf",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LiO2_58"
+    ],
+    "replicate": 5
+  },
+  {
+    "id": "A_S_732ea372c40369ba",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LaOOH_11"
+    ],
+    "replicate": 17
+  },
+  {
+    "id": "A_S_7406cc1b98cd1e1f",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li7La3Zr2O12_230"
+    ],
+    "replicate": 2
+  },
+  {
+    "id": "A_S_7420cbc89e8abe32",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2CO3_15"
+    ],
+    "replicate": 5
+  },
+  {
+    "id": "A_S_742fdf0254b1b511",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2O_225"
+    ],
+    "replicate": 14
+  },
+  {
+    "id": "A_S_7488f21c0c966021",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_14"
+    ],
+    "replicate": 16
+  },
+  {
+    "id": "A_S_74a3ac4ea931a967",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LaOOH_11"
+    ],
+    "replicate": 8
+  },
+  {
+    "id": "A_S_754a832698593acc",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_137"
+    ],
+    "replicate": 10
+  },
+  {
+    "id": "A_S_762ea52fe039e547",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2CO3_15"
+    ],
+    "replicate": 2
+  },
+  {
+    "id": "A_S_766b6801ab9a37ac",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_61"
+    ],
+    "replicate": 5
+  },
+  {
+    "id": "A_S_769fd43fe53f3a54",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li6Zr2O7_15"
+    ],
+    "replicate": 7
+  },
+  {
+    "id": "A_S_76ba8d2ba7703499",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_137"
+    ],
+    "replicate": 3
+  },
+  {
+    "id": "A_S_774fe743fdc4b09c",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LiOH-H2O_12"
+    ],
+    "replicate": 9
+  },
+  {
+    "id": "A_S_77603f8919546ee8",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li4Zr3O8_141"
+    ],
+    "replicate": 5
+  },
+  {
+    "id": "A_S_778321fa2a77b5ec",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La2O3_164"
+    ],
+    "replicate": 14
+  },
+  {
+    "id": "A_S_779698d0b76c8d07",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2ZrO3_15"
+    ],
+    "replicate": 7
+  },
+  {
+    "id": "A_S_77e373bd60147463",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2CO3_15"
+    ],
+    "replicate": 7
+  },
+  {
+    "id": "A_S_79706157e99f7c6a",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_62"
+    ],
+    "replicate": 3
+  },
+  {
+    "id": "A_S_799d923c60440b0a",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li4Zr3O8_141"
+    ],
+    "replicate": 8
+  },
+  {
+    "id": "A_S_79cfa519821737ea",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Zr3O_167"
+    ],
+    "replicate": 3
+  },
+  {
+    "id": "A_S_79d95e446112ffc7",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_61"
+    ],
+    "replicate": 7
+  },
+  {
+    "id": "A_S_7ad37050cddf31f7",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_61"
+    ],
+    "replicate": 14
+  },
+  {
+    "id": "A_S_7b3c0f7b38770550",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LiO2_58"
+    ],
+    "replicate": 9
+  },
+  {
+    "id": "A_S_7b9ce5617b05cca6",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li7La3Zr2O12_230"
+    ],
+    "replicate": 17
+  },
+  {
+    "id": "A_S_7bc0440270583088",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_225"
+    ],
+    "replicate": 13
+  },
+  {
+    "id": "A_S_7c1b1685b0a00df5",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2O_225"
+    ],
+    "replicate": 4
+  },
+  {
+    "id": "A_S_7c21777fc0e7c183",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_61"
+    ],
+    "replicate": 9
+  },
+  {
+    "id": "A_S_7c8b33a89a8e4c84",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_14"
+    ],
+    "replicate": 18
+  },
+  {
+    "id": "A_S_7ce4e7f422d0f896",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_14"
+    ],
+    "replicate": 12
+  },
+  {
+    "id": "A_S_7d3fb3652da418f3",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2ZrO3_15"
+    ],
+    "replicate": 8
+  },
+  {
+    "id": "A_S_7d57937457adeef6",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LiO2_58"
+    ],
+    "replicate": 7
+  },
+  {
+    "id": "A_S_7db160016cd77da7",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La2Zr2O7_227"
+    ],
+    "replicate": 17
+  },
+  {
+    "id": "A_S_7de2d0e2e85aefae",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La2Zr2O7_227"
+    ],
+    "replicate": 15
+  },
+  {
+    "id": "A_S_7ebd1658d19d164e",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li7La3Zr2O12_142"
+    ],
+    "replicate": 2
+  },
+  {
+    "id": "A_S_7ee3a7a6349dd467",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Zr2O_224"
+    ],
+    "replicate": 15
+  },
+  {
+    "id": "A_S_7fcb4612180cb56f",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li7La3Zr2O12_142"
+    ],
+    "replicate": 12
+  },
+  {
+    "id": "A_S_7fd9ea4856c6bcc3",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2ZrO3_15"
+    ],
+    "replicate": 19
+  },
+  {
+    "id": "A_S_8142068a84aa425a",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Zr2O_224"
+    ],
+    "replicate": 7
+  },
+  {
+    "id": "A_S_81daba518684c09b",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_61"
+    ],
+    "replicate": 10
+  },
+  {
+    "id": "A_S_82380ac966817107",
+    "chemistry": "Li-La-Zr-O",
     "phases": [
       "LiOH_129"
     ],
-    "replicate": 16,
-    "split": "test"
+    "replicate": 5
   },
   {
-    "id": "A_1-Phase_0329",
+    "id": "A_S_8271d6343b6362c2",
     "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
+    "phases": [
+      "ZrO2_61"
+    ],
+    "replicate": 17
+  },
+  {
+    "id": "A_S_83919a7284bf9afd",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_225"
+    ],
+    "replicate": 5
+  },
+  {
+    "id": "A_S_858163438d1e7db2",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li7La3Zr2O12_230"
+    ],
+    "replicate": 4
+  },
+  {
+    "id": "A_S_8630658aef394ece",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_19"
+    ],
+    "replicate": 0
+  },
+  {
+    "id": "A_S_86ae12aa7f1f9b74",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO_189"
+    ],
+    "replicate": 17
+  },
+  {
+    "id": "A_S_8834b5183e360690",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Zr3O_182"
+    ],
+    "replicate": 17
+  },
+  {
+    "id": "A_S_88791c092a90de8e",
+    "chemistry": "Li-La-Zr-O",
     "phases": [
       "LiOH_129"
     ],
-    "replicate": 17,
-    "split": "test"
+    "replicate": 12
   },
   {
-    "id": "A_1-Phase_0330",
+    "id": "A_S_88ec68f624514b96",
     "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
+    "phases": [
+      "La2O3_164"
+    ],
+    "replicate": 17
+  },
+  {
+    "id": "A_S_893ae1bfe55c4b30",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LiO2_58"
+    ],
+    "replicate": 4
+  },
+  {
+    "id": "A_S_8a2b056ce4368eaa",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LiO2_58"
+    ],
+    "replicate": 10
+  },
+  {
+    "id": "A_S_8b2a45fe50a72ee5",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO_225"
+    ],
+    "replicate": 18
+  },
+  {
+    "id": "A_S_8bf38141c0882a02",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La2O3_206"
+    ],
+    "replicate": 8
+  },
+  {
+    "id": "A_S_8c9ce2bbec2c5cae",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LiLaO2_14"
+    ],
+    "replicate": 6
+  },
+  {
+    "id": "A_S_8d5f0bea52ccb94e",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO_189"
+    ],
+    "replicate": 5
+  },
+  {
+    "id": "A_S_8d6c9da1dfcdf277",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO_225"
+    ],
+    "replicate": 3
+  },
+  {
+    "id": "A_S_8d79233fe8896e8e",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Zr3O_182"
+    ],
+    "replicate": 4
+  },
+  {
+    "id": "A_S_8e138b194414cae3",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_61"
+    ],
+    "replicate": 16
+  },
+  {
+    "id": "A_S_8e5a588430f4d79e",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Zr2O_224"
+    ],
+    "replicate": 0
+  },
+  {
+    "id": "A_S_8f1c206704e1c20b",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La2O3_206"
+    ],
+    "replicate": 19
+  },
+  {
+    "id": "A_S_8fb7f1d832dc5c33",
+    "chemistry": "Li-La-Zr-O",
     "phases": [
       "LiOH_129"
     ],
-    "replicate": 18,
-    "split": "test"
+    "replicate": 15
   },
   {
-    "id": "A_1-Phase_0331",
+    "id": "A_S_8ff1d62db6b29b63",
     "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
+    "phases": [
+      "ZrO2_19"
+    ],
+    "replicate": 15
+  },
+  {
+    "id": "A_S_9050ebad092becdf",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_137"
+    ],
+    "replicate": 9
+  },
+  {
+    "id": "A_S_9074b47cae77c661",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Zr3O_182"
+    ],
+    "replicate": 0
+  },
+  {
+    "id": "A_S_907b7ed0452f92a2",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Zr2O_224"
+    ],
+    "replicate": 13
+  },
+  {
+    "id": "A_S_907d06870795cd2f",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_14"
+    ],
+    "replicate": 2
+  },
+  {
+    "id": "A_S_90c79cda39729baa",
+    "chemistry": "Li-La-Zr-O",
     "phases": [
       "LiOH_129"
     ],
-    "replicate": 19,
-    "split": "test"
+    "replicate": 1
   },
   {
-    "id": "A_1-Phase_0332",
+    "id": "A_S_913976fcaf684c12",
     "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
+    "phases": [
+      "ZrO2_14"
+    ],
+    "replicate": 15
+  },
+  {
+    "id": "A_S_91ffe68af9e0da4d",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_137"
+    ],
+    "replicate": 14
+  },
+  {
+    "id": "A_S_9244086976b64ca8",
+    "chemistry": "Li-La-Zr-O",
     "phases": [
       "LiOH_129"
     ],
-    "replicate": 2,
-    "split": "train"
+    "replicate": 14
   },
   {
-    "id": "A_1-Phase_0333",
+    "id": "A_S_92ab0fd127ef3223",
     "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
+    "phases": [
+      "Li4Zr3O8_141"
+    ],
+    "replicate": 1
+  },
+  {
+    "id": "A_S_95568dc742a1c719",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La2O3_164"
+    ],
+    "replicate": 4
+  },
+  {
+    "id": "A_S_95b422b11998ff3c",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO_189"
+    ],
+    "replicate": 8
+  },
+  {
+    "id": "A_S_964c4975da3dc388",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LaOOH_11"
+    ],
+    "replicate": 13
+  },
+  {
+    "id": "A_S_973916c1a58712fc",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2O2_194"
+    ],
+    "replicate": 15
+  },
+  {
+    "id": "A_S_973d4dca41727526",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Zr3O_167"
+    ],
+    "replicate": 5
+  },
+  {
+    "id": "A_S_985504d0c8fac332",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Zr3O_182"
+    ],
+    "replicate": 6
+  },
+  {
+    "id": "A_S_992aa3705d9c6ee2",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La2Zr2O7_227"
+    ],
+    "replicate": 4
+  },
+  {
+    "id": "A_S_994f38aa760cb910",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LiO2_58"
+    ],
+    "replicate": 15
+  },
+  {
+    "id": "A_S_9963fe7ebd4984de",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La(OH)3_176"
+    ],
+    "replicate": 7
+  },
+  {
+    "id": "A_S_99d96dd59f93cbd3",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_225"
+    ],
+    "replicate": 16
+  },
+  {
+    "id": "A_S_99f26d731e051460",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2O_225"
+    ],
+    "replicate": 18
+  },
+  {
+    "id": "A_S_9a4deff3eda9f55a",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_62"
+    ],
+    "replicate": 11
+  },
+  {
+    "id": "A_S_9b7a0cb71be193f3",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2O_225"
+    ],
+    "replicate": 11
+  },
+  {
+    "id": "A_S_9bd12e01d7934650",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li7La3Zr2O12_142"
+    ],
+    "replicate": 6
+  },
+  {
+    "id": "A_S_9cd22c688baac2d9",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_14"
+    ],
+    "replicate": 0
+  },
+  {
+    "id": "A_S_9d54f2b2fa8dd7cb",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2O2_194"
+    ],
+    "replicate": 8
+  },
+  {
+    "id": "A_S_9ede1f4dd095f062",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LiO2_58"
+    ],
+    "replicate": 11
+  },
+  {
+    "id": "A_S_9f08df599f6bbaea",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2ZrO3_15"
+    ],
+    "replicate": 3
+  },
+  {
+    "id": "A_S_9f63b089f10b59ea",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2CO3_15"
+    ],
+    "replicate": 18
+  },
+  {
+    "id": "A_S_a0a065edb1dd439a",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_61"
+    ],
+    "replicate": 2
+  },
+  {
+    "id": "A_S_a0b90fb20e59a7da",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La2Zr2O7_227"
+    ],
+    "replicate": 9
+  },
+  {
+    "id": "A_S_a0d288048230a9a1",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La(OH)3_176"
+    ],
+    "replicate": 12
+  },
+  {
+    "id": "A_S_a0e6c7bc410a21ed",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2O2_194"
+    ],
+    "replicate": 4
+  },
+  {
+    "id": "A_S_a1a3acb628a9a2ce",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LaOOH_11"
+    ],
+    "replicate": 7
+  },
+  {
+    "id": "A_S_a1c08a07a20a153c",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li7La3Zr2O12_230"
+    ],
+    "replicate": 0
+  },
+  {
+    "id": "A_S_a24727c1ddec8de5",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li7La3Zr2O12_142"
+    ],
+    "replicate": 5
+  },
+  {
+    "id": "A_S_a2fe815e2a2da685",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LiOH-H2O_12"
+    ],
+    "replicate": 14
+  },
+  {
+    "id": "A_S_a31ef6111fb2cde9",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Zr3O_182"
+    ],
+    "replicate": 8
+  },
+  {
+    "id": "A_S_a32735c61744a504",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO_189"
+    ],
+    "replicate": 13
+  },
+  {
+    "id": "A_S_a358781db3835e58",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LiOH-H2O_12"
+    ],
+    "replicate": 7
+  },
+  {
+    "id": "A_S_a3631901363e2fd1",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_19"
+    ],
+    "replicate": 3
+  },
+  {
+    "id": "A_S_a36f6c31b8a20818",
+    "chemistry": "Li-La-Zr-O",
     "phases": [
       "LiOH_129"
     ],
-    "replicate": 3,
-    "split": "train"
+    "replicate": 4
   },
   {
-    "id": "A_1-Phase_0334",
+    "id": "A_S_a4014aba66a6b64c",
     "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
+    "phases": [
+      "La2O3_206"
+    ],
+    "replicate": 5
+  },
+  {
+    "id": "A_S_a451d8eee8f0ce4b",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2O2_194"
+    ],
+    "replicate": 14
+  },
+  {
+    "id": "A_S_a458b6ec898d0e2d",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La(OH)3_176"
+    ],
+    "replicate": 15
+  },
+  {
+    "id": "A_S_a467bfe8d6709811",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_225"
+    ],
+    "replicate": 14
+  },
+  {
+    "id": "A_S_a484e44e000b2175",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LiLaO2_14"
+    ],
+    "replicate": 9
+  },
+  {
+    "id": "A_S_a4b174113ec95291",
+    "chemistry": "Li-La-Zr-O",
     "phases": [
       "LiOH_129"
     ],
-    "replicate": 4,
-    "split": "train"
+    "replicate": 10
   },
   {
-    "id": "A_1-Phase_0335",
+    "id": "A_S_a598630898353213",
     "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
+    "phases": [
+      "ZrO2_61"
+    ],
+    "replicate": 1
+  },
+  {
+    "id": "A_S_a5c0f4653f437b36",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La2O3_164"
+    ],
+    "replicate": 9
+  },
+  {
+    "id": "A_S_a5cdbfcb3e97f7dd",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2O2_194"
+    ],
+    "replicate": 0
+  },
+  {
+    "id": "A_S_a6297b21e6d2e436",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_61"
+    ],
+    "replicate": 8
+  },
+  {
+    "id": "A_S_a631e79cc51aa572",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La(OH)3_176"
+    ],
+    "replicate": 9
+  },
+  {
+    "id": "A_S_a6d57a37643d427e",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO_225"
+    ],
+    "replicate": 11
+  },
+  {
+    "id": "A_S_a77c8d8faddb6a9b",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2ZrO3_15"
+    ],
+    "replicate": 18
+  },
+  {
+    "id": "A_S_a8436a55fa43815b",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO_225"
+    ],
+    "replicate": 16
+  },
+  {
+    "id": "A_S_a8b51725ce1b97a1",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2ZrO3_15"
+    ],
+    "replicate": 12
+  },
+  {
+    "id": "A_S_a8fd900c5ddac22f",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Zr3O_167"
+    ],
+    "replicate": 14
+  },
+  {
+    "id": "A_S_a94dd008cb184865",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li4Zr3O8_141"
+    ],
+    "replicate": 13
+  },
+  {
+    "id": "A_S_a9e5544482a1610f",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La2O3_164"
+    ],
+    "replicate": 11
+  },
+  {
+    "id": "A_S_aadb3a7a53eb92b2",
+    "chemistry": "Li-La-Zr-O",
     "phases": [
       "LiOH_129"
     ],
-    "replicate": 5,
-    "split": "train"
+    "replicate": 16
   },
   {
-    "id": "A_1-Phase_0336",
+    "id": "A_S_ab73922b3775b22e",
     "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
+    "phases": [
+      "La(OH)3_176"
+    ],
+    "replicate": 19
+  },
+  {
+    "id": "A_S_ab98b806c218d40e",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_137"
+    ],
+    "replicate": 6
+  },
+  {
+    "id": "A_S_ad96e3ee2eb892f5",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_62"
+    ],
+    "replicate": 9
+  },
+  {
+    "id": "A_S_adcc0677eb568006",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li6Zr2O7_15"
+    ],
+    "replicate": 13
+  },
+  {
+    "id": "A_S_adce9f5ba47229e7",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO_189"
+    ],
+    "replicate": 18
+  },
+  {
+    "id": "A_S_ae288cf97d6494c5",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_19"
+    ],
+    "replicate": 17
+  },
+  {
+    "id": "A_S_ae58a38867eed751",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_19"
+    ],
+    "replicate": 18
+  },
+  {
+    "id": "A_S_ae96c2a7268bef09",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La2O3_164"
+    ],
+    "replicate": 7
+  },
+  {
+    "id": "A_S_af14435dbb410c07",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li7La3Zr2O12_230"
+    ],
+    "replicate": 9
+  },
+  {
+    "id": "A_S_afb4fc724d4eff2b",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO_225"
+    ],
+    "replicate": 19
+  },
+  {
+    "id": "A_S_b1a348a3976bfc34",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_62"
+    ],
+    "replicate": 19
+  },
+  {
+    "id": "A_S_b1f080eef559ae1a",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Zr3O_167"
+    ],
+    "replicate": 7
+  },
+  {
+    "id": "A_S_b25c42c495c601db",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LiOH-H2O_12"
+    ],
+    "replicate": 15
+  },
+  {
+    "id": "A_S_b2f4c4b19ef2931b",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Zr2O_224"
+    ],
+    "replicate": 18
+  },
+  {
+    "id": "A_S_b2f8acd3f584e18e",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_225"
+    ],
+    "replicate": 8
+  },
+  {
+    "id": "A_S_b32ceeea06eee846",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_137"
+    ],
+    "replicate": 11
+  },
+  {
+    "id": "A_S_b34e3674785511e2",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2O2_194"
+    ],
+    "replicate": 9
+  },
+  {
+    "id": "A_S_b3c9438193b512c9",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_62"
+    ],
+    "replicate": 16
+  },
+  {
+    "id": "A_S_b3fa076386b9afac",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Zr3O_182"
+    ],
+    "replicate": 19
+  },
+  {
+    "id": "A_S_b431ff18876d50f3",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LiLaO2_14"
+    ],
+    "replicate": 11
+  },
+  {
+    "id": "A_S_b4b7b7ffe29c3894",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2O_225"
+    ],
+    "replicate": 5
+  },
+  {
+    "id": "A_S_b55173b5829930d0",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LiLaO2_14"
+    ],
+    "replicate": 18
+  },
+  {
+    "id": "A_S_b56bd7eb717195ca",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La2O3_164"
+    ],
+    "replicate": 6
+  },
+  {
+    "id": "A_S_b5d6bf5f2ac9de7b",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_137"
+    ],
+    "replicate": 2
+  },
+  {
+    "id": "A_S_b62a928678a44aba",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_61"
+    ],
+    "replicate": 15
+  },
+  {
+    "id": "A_S_b6a7525d122f10fc",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li6Zr2O7_15"
+    ],
+    "replicate": 2
+  },
+  {
+    "id": "A_S_b6ba90111b8f306d",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LiOH-H2O_12"
+    ],
+    "replicate": 10
+  },
+  {
+    "id": "A_S_b780e060b745d7d7",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La2O3_206"
+    ],
+    "replicate": 16
+  },
+  {
+    "id": "A_S_b79366ccc5934c54",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_14"
+    ],
+    "replicate": 19
+  },
+  {
+    "id": "A_S_b79f56577f459c92",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La2Zr2O7_227"
+    ],
+    "replicate": 8
+  },
+  {
+    "id": "A_S_b7e26018955f3987",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li6Zr2O7_15"
+    ],
+    "replicate": 6
+  },
+  {
+    "id": "A_S_b7f2a4a75e5ec05f",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La2O3_164"
+    ],
+    "replicate": 5
+  },
+  {
+    "id": "A_S_b82b80fb06490474",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_19"
+    ],
+    "replicate": 13
+  },
+  {
+    "id": "A_S_b82c85f0d601a027",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Zr3O_182"
+    ],
+    "replicate": 11
+  },
+  {
+    "id": "A_S_b83f7a1fa3f10d5d",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LiOH-H2O_12"
+    ],
+    "replicate": 5
+  },
+  {
+    "id": "A_S_b84fbcf784e5b70d",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li6Zr2O7_15"
+    ],
+    "replicate": 10
+  },
+  {
+    "id": "A_S_b9467f374725112e",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li7La3Zr2O12_230"
+    ],
+    "replicate": 16
+  },
+  {
+    "id": "A_S_b99c38bb9230521f",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LiO2_58"
+    ],
+    "replicate": 0
+  },
+  {
+    "id": "A_S_b9f9e789fafb996a",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_137"
+    ],
+    "replicate": 18
+  },
+  {
+    "id": "A_S_b9fb6185f59e11b0",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li7La3Zr2O12_142"
+    ],
+    "replicate": 9
+  },
+  {
+    "id": "A_S_bac68ee513d6f24f",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_61"
+    ],
+    "replicate": 13
+  },
+  {
+    "id": "A_S_badc298062e4d6d1",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li7La3Zr2O12_230"
+    ],
+    "replicate": 1
+  },
+  {
+    "id": "A_S_bb42cb0a6f74651d",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_225"
+    ],
+    "replicate": 1
+  },
+  {
+    "id": "A_S_bc3312e373789fb9",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LaOOH_11"
+    ],
+    "replicate": 18
+  },
+  {
+    "id": "A_S_bc90e5b4cd8ffd6a",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La(OH)3_176"
+    ],
+    "replicate": 5
+  },
+  {
+    "id": "A_S_bcea1de52a103db7",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Zr3O_167"
+    ],
+    "replicate": 9
+  },
+  {
+    "id": "A_S_bd349b9ca762eadd",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li7La3Zr2O12_230"
+    ],
+    "replicate": 12
+  },
+  {
+    "id": "A_S_be8f326ffdd00c31",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La2Zr2O7_227"
+    ],
+    "replicate": 16
+  },
+  {
+    "id": "A_S_bec5c847134ea797",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_14"
+    ],
+    "replicate": 17
+  },
+  {
+    "id": "A_S_bf5c0e4c81e3ac34",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_61"
+    ],
+    "replicate": 3
+  },
+  {
+    "id": "A_S_c072125fb071bb90",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La2O3_164"
+    ],
+    "replicate": 8
+  },
+  {
+    "id": "A_S_c16e248a70cdb86e",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2ZrO3_15"
+    ],
+    "replicate": 6
+  },
+  {
+    "id": "A_S_c192e2a208985dcd",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La2O3_164"
+    ],
+    "replicate": 19
+  },
+  {
+    "id": "A_S_c1e393696c9840fe",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO_225"
+    ],
+    "replicate": 2
+  },
+  {
+    "id": "A_S_c22b652477e82a0c",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li6Zr2O7_15"
+    ],
+    "replicate": 12
+  },
+  {
+    "id": "A_S_c2fe0cddfe35dae2",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li6Zr2O7_15"
+    ],
+    "replicate": 17
+  },
+  {
+    "id": "A_S_c39b9e0a013858d1",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_62"
+    ],
+    "replicate": 18
+  },
+  {
+    "id": "A_S_c4317f4e08d92d13",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La(OH)3_176"
+    ],
+    "replicate": 16
+  },
+  {
+    "id": "A_S_c432b26663b5e9e6",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li7La3Zr2O12_230"
+    ],
+    "replicate": 15
+  },
+  {
+    "id": "A_S_c4a3b6224b26be4d",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2ZrO3_15"
+    ],
+    "replicate": 4
+  },
+  {
+    "id": "A_S_c51aca1bf23bc86e",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Zr3O_167"
+    ],
+    "replicate": 4
+  },
+  {
+    "id": "A_S_c5d8ef37624b8cb9",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Zr2O_224"
+    ],
+    "replicate": 1
+  },
+  {
+    "id": "A_S_c7429857d5b92b7b",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li7La3Zr2O12_142"
+    ],
+    "replicate": 18
+  },
+  {
+    "id": "A_S_c74e976b16365e4d",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Zr3O_182"
+    ],
+    "replicate": 13
+  },
+  {
+    "id": "A_S_c7d783c2804a9ee8",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Zr3O_167"
+    ],
+    "replicate": 11
+  },
+  {
+    "id": "A_S_c83481f9c49dae2b",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO_225"
+    ],
+    "replicate": 9
+  },
+  {
+    "id": "A_S_c8f8fd0f079fe449",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LaOOH_11"
+    ],
+    "replicate": 1
+  },
+  {
+    "id": "A_S_caa01480a04832f4",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li6Zr2O7_15"
+    ],
+    "replicate": 11
+  },
+  {
+    "id": "A_S_caaf6d35cff8ebcc",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_14"
+    ],
+    "replicate": 9
+  },
+  {
+    "id": "A_S_cac138d12732ddea",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La2O3_164"
+    ],
+    "replicate": 2
+  },
+  {
+    "id": "A_S_cada4b5a18ca5e2a",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Zr3O_167"
+    ],
+    "replicate": 16
+  },
+  {
+    "id": "A_S_cb03f490de2bc142",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li4Zr3O8_141"
+    ],
+    "replicate": 10
+  },
+  {
+    "id": "A_S_cb4c96edf432e9c7",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2O2_194"
+    ],
+    "replicate": 3
+  },
+  {
+    "id": "A_S_cb7f61c372dbebb0",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li7La3Zr2O12_142"
+    ],
+    "replicate": 7
+  },
+  {
+    "id": "A_S_ccaf2bfff1012480",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Zr2O_224"
+    ],
+    "replicate": 4
+  },
+  {
+    "id": "A_S_ce247886ba8537ed",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LiLaO2_14"
+    ],
+    "replicate": 17
+  },
+  {
+    "id": "A_S_ce2d412f153accfe",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_62"
+    ],
+    "replicate": 5
+  },
+  {
+    "id": "A_S_cee7a984abf1699e",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2O_225"
+    ],
+    "replicate": 0
+  },
+  {
+    "id": "A_S_cfa2c65f41b0989b",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2O2_194"
+    ],
+    "replicate": 7
+  },
+  {
+    "id": "A_S_cfc88a3a50c0acc5",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LiOH-H2O_12"
+    ],
+    "replicate": 8
+  },
+  {
+    "id": "A_S_d085e79e105b6c5c",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2O2_194"
+    ],
+    "replicate": 11
+  },
+  {
+    "id": "A_S_d12314c112b14ddd",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2O_225"
+    ],
+    "replicate": 3
+  },
+  {
+    "id": "A_S_d15be190c13d0afa",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LiLaO2_14"
+    ],
+    "replicate": 7
+  },
+  {
+    "id": "A_S_d19b6815f2705362",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO_189"
+    ],
+    "replicate": 7
+  },
+  {
+    "id": "A_S_d443bb4b568bd706",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LiO2_58"
+    ],
+    "replicate": 16
+  },
+  {
+    "id": "A_S_d493eb96e42f714b",
+    "chemistry": "Li-La-Zr-O",
     "phases": [
       "LiOH_129"
     ],
-    "replicate": 6,
-    "split": "train"
+    "replicate": 2
   },
   {
-    "id": "A_1-Phase_0337",
+    "id": "A_S_d4bd99e5264b96cf",
     "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
+    "phases": [
+      "LiO2_58"
+    ],
+    "replicate": 14
+  },
+  {
+    "id": "A_S_d4e40633d617f03c",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2ZrO3_15"
+    ],
+    "replicate": 14
+  },
+  {
+    "id": "A_S_d5970444be4795aa",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_14"
+    ],
+    "replicate": 4
+  },
+  {
+    "id": "A_S_d5b24bf140b86505",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2O_225"
+    ],
+    "replicate": 15
+  },
+  {
+    "id": "A_S_d5e72c1846c2af5d",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La2Zr2O7_227"
+    ],
+    "replicate": 11
+  },
+  {
+    "id": "A_S_d60108c9f1b354dd",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La2O3_206"
+    ],
+    "replicate": 12
+  },
+  {
+    "id": "A_S_d60836b71ee80f53",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO_225"
+    ],
+    "replicate": 4
+  },
+  {
+    "id": "A_S_d647533c08dd6af6",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La(OH)3_176"
+    ],
+    "replicate": 3
+  },
+  {
+    "id": "A_S_d66555db95bf577c",
+    "chemistry": "Li-La-Zr-O",
     "phases": [
       "LiOH_129"
     ],
-    "replicate": 7,
-    "split": "train"
+    "replicate": 0
   },
   {
-    "id": "A_1-Phase_0338",
+    "id": "A_S_d68a9d99ae5302cd",
     "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
+    "phases": [
+      "Zr2O_224"
+    ],
+    "replicate": 10
+  },
+  {
+    "id": "A_S_d7a8d5a2f482f383",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2O2_194"
+    ],
+    "replicate": 5
+  },
+  {
+    "id": "A_S_d8122eb6b9ca24b9",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_225"
+    ],
+    "replicate": 3
+  },
+  {
+    "id": "A_S_d864889bd74201d0",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li4Zr3O8_141"
+    ],
+    "replicate": 19
+  },
+  {
+    "id": "A_S_d898d49d9c9b286e",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La(OH)3_176"
+    ],
+    "replicate": 1
+  },
+  {
+    "id": "A_S_d8af629a8e73f2e2",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2CO3_15"
+    ],
+    "replicate": 13
+  },
+  {
+    "id": "A_S_d8da04b93daaf299",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LiOH-H2O_12"
+    ],
+    "replicate": 6
+  },
+  {
+    "id": "A_S_d97d9df6de3bc4ad",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO_189"
+    ],
+    "replicate": 0
+  },
+  {
+    "id": "A_S_d9ad785bec0de3d1",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LiLaO2_14"
+    ],
+    "replicate": 2
+  },
+  {
+    "id": "A_S_d9d95eb3b9a0f5ce",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LaOOH_11"
+    ],
+    "replicate": 3
+  },
+  {
+    "id": "A_S_d9e78c7cee15d161",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LiO2_58"
+    ],
+    "replicate": 19
+  },
+  {
+    "id": "A_S_da065f828c44fdb7",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2CO3_15"
+    ],
+    "replicate": 17
+  },
+  {
+    "id": "A_S_da3d40aa60855e0c",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_62"
+    ],
+    "replicate": 7
+  },
+  {
+    "id": "A_S_da5c99e6299db26a",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LiOH-H2O_12"
+    ],
+    "replicate": 1
+  },
+  {
+    "id": "A_S_dbdcd4478752ff4e",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2CO3_15"
+    ],
+    "replicate": 0
+  },
+  {
+    "id": "A_S_dd5299f2223087a9",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2O_225"
+    ],
+    "replicate": 13
+  },
+  {
+    "id": "A_S_ddc976386cc84925",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li7La3Zr2O12_142"
+    ],
+    "replicate": 0
+  },
+  {
+    "id": "A_S_dded1c55ee4e4b1d",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LaOOH_11"
+    ],
+    "replicate": 10
+  },
+  {
+    "id": "A_S_de00a68d752bdb87",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li4Zr3O8_141"
+    ],
+    "replicate": 14
+  },
+  {
+    "id": "A_S_de4a1f717d6a1c65",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li6Zr2O7_15"
+    ],
+    "replicate": 8
+  },
+  {
+    "id": "A_S_de6572a6dfc2942a",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2ZrO3_15"
+    ],
+    "replicate": 13
+  },
+  {
+    "id": "A_S_dee1c1dc0b5c0f50",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li4Zr3O8_141"
+    ],
+    "replicate": 4
+  },
+  {
+    "id": "A_S_e08ef88b5bd72f4d",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2ZrO3_15"
+    ],
+    "replicate": 15
+  },
+  {
+    "id": "A_S_e0b5c52302a6242a",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LiO2_58"
+    ],
+    "replicate": 17
+  },
+  {
+    "id": "A_S_e12defd0fe81427c",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Zr3O_182"
+    ],
+    "replicate": 18
+  },
+  {
+    "id": "A_S_e18b071396ece63f",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_19"
+    ],
+    "replicate": 9
+  },
+  {
+    "id": "A_S_e1bea54bef5cac77",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2ZrO3_15"
+    ],
+    "replicate": 10
+  },
+  {
+    "id": "A_S_e2d4dee61d3b4125",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2O_225"
+    ],
+    "replicate": 12
+  },
+  {
+    "id": "A_S_e2d82593e2984856",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_62"
+    ],
+    "replicate": 15
+  },
+  {
+    "id": "A_S_e3687eafaa681ace",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_225"
+    ],
+    "replicate": 17
+  },
+  {
+    "id": "A_S_e38f951fdd8da676",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li7La3Zr2O12_230"
+    ],
+    "replicate": 8
+  },
+  {
+    "id": "A_S_e3ef58be206ad3b9",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Zr2O_224"
+    ],
+    "replicate": 2
+  },
+  {
+    "id": "A_S_e4090e84ef872d79",
+    "chemistry": "Li-La-Zr-O",
     "phases": [
       "LiOH_129"
     ],
-    "replicate": 8,
-    "split": "train"
+    "replicate": 7
   },
   {
-    "id": "A_1-Phase_0339",
+    "id": "A_S_e431890148fe4a80",
     "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
+    "phases": [
+      "LiOH-H2O_12"
+    ],
+    "replicate": 2
+  },
+  {
+    "id": "A_S_e489932a967bd78e",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2ZrO3_15"
+    ],
+    "replicate": 11
+  },
+  {
+    "id": "A_S_e5391f4bd70d7fe7",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La2Zr2O7_227"
+    ],
+    "replicate": 0
+  },
+  {
+    "id": "A_S_e58457d15205a5f1",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_225"
+    ],
+    "replicate": 19
+  },
+  {
+    "id": "A_S_e6e4e98dd6c9b481",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2CO3_15"
+    ],
+    "replicate": 1
+  },
+  {
+    "id": "A_S_e74a65164895ebdc",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Zr3O_182"
+    ],
+    "replicate": 15
+  },
+  {
+    "id": "A_S_e7cf81bd4fe9a60a",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li6Zr2O7_15"
+    ],
+    "replicate": 5
+  },
+  {
+    "id": "A_S_e8872a37d212278b",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_14"
+    ],
+    "replicate": 13
+  },
+  {
+    "id": "A_S_e88a0e3a3e0f7de6",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li7La3Zr2O12_230"
+    ],
+    "replicate": 19
+  },
+  {
+    "id": "A_S_e90c34bc2b4b707b",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_14"
+    ],
+    "replicate": 14
+  },
+  {
+    "id": "A_S_e91d5fec947e1a91",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO_189"
+    ],
+    "replicate": 1
+  },
+  {
+    "id": "A_S_e9b31f08a19c3c61",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO_225"
+    ],
+    "replicate": 12
+  },
+  {
+    "id": "A_S_e9cdceac800aa8b1",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2ZrO3_15"
+    ],
+    "replicate": 0
+  },
+  {
+    "id": "A_S_ea705435bfea81f5",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li7La3Zr2O12_230"
+    ],
+    "replicate": 14
+  },
+  {
+    "id": "A_S_ead7cdb6b65c1be1",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li6Zr2O7_15"
+    ],
+    "replicate": 16
+  },
+  {
+    "id": "A_S_eb23d14d6a31da91",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La(OH)3_176"
+    ],
+    "replicate": 14
+  },
+  {
+    "id": "A_S_ebc4877655c731a7",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_62"
+    ],
+    "replicate": 14
+  },
+  {
+    "id": "A_S_ebf806baab87dfa9",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2O_225"
+    ],
+    "replicate": 16
+  },
+  {
+    "id": "A_S_ec4d714dcb5407e4",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li7La3Zr2O12_142"
+    ],
+    "replicate": 8
+  },
+  {
+    "id": "A_S_ec6f739e40d79697",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO_189"
+    ],
+    "replicate": 3
+  },
+  {
+    "id": "A_S_ec7b525d42000189",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Zr2O_224"
+    ],
+    "replicate": 11
+  },
+  {
+    "id": "A_S_ed4ffffebab36988",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La2O3_206"
+    ],
+    "replicate": 14
+  },
+  {
+    "id": "A_S_ed78f3d38c4c744a",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Zr2O_224"
+    ],
+    "replicate": 5
+  },
+  {
+    "id": "A_S_ed7d1a3fa8ab2c3b",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO_189"
+    ],
+    "replicate": 16
+  },
+  {
+    "id": "A_S_edb9ccd461fc558f",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La(OH)3_176"
+    ],
+    "replicate": 18
+  },
+  {
+    "id": "A_S_edbe34ad7d87f796",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO_225"
+    ],
+    "replicate": 15
+  },
+  {
+    "id": "A_S_edc098994a111529",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO_225"
+    ],
+    "replicate": 7
+  },
+  {
+    "id": "A_S_edc5555913dd7ef2",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Zr3O_182"
+    ],
+    "replicate": 1
+  },
+  {
+    "id": "A_S_edd85f17325ab88a",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li2O2_194"
+    ],
+    "replicate": 1
+  },
+  {
+    "id": "A_S_ee88708cea7f676d",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La(OH)3_176"
+    ],
+    "replicate": 0
+  },
+  {
+    "id": "A_S_eefbb74d3efaea07",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La(OH)3_176"
+    ],
+    "replicate": 2
+  },
+  {
+    "id": "A_S_ef140b8e53fd4ca8",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LaOOH_11"
+    ],
+    "replicate": 2
+  },
+  {
+    "id": "A_S_ef67a70867f061af",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_137"
+    ],
+    "replicate": 12
+  },
+  {
+    "id": "A_S_f01121a9d0a24502",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li7La3Zr2O12_230"
+    ],
+    "replicate": 6
+  },
+  {
+    "id": "A_S_f07bee03d7a8c102",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La(OH)3_176"
+    ],
+    "replicate": 13
+  },
+  {
+    "id": "A_S_f088224c5285ec68",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li7La3Zr2O12_142"
+    ],
+    "replicate": 1
+  },
+  {
+    "id": "A_S_f137fa2b3ed218d0",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LiO2_58"
+    ],
+    "replicate": 13
+  },
+  {
+    "id": "A_S_f142b16a4912ef6d",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li7La3Zr2O12_230"
+    ],
+    "replicate": 3
+  },
+  {
+    "id": "A_S_f18370f9964221fe",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO_189"
+    ],
+    "replicate": 6
+  },
+  {
+    "id": "A_S_f2a72e45a3b58203",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LaOOH_11"
+    ],
+    "replicate": 14
+  },
+  {
+    "id": "A_S_f4654fb0a6e3274b",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La(OH)3_176"
+    ],
+    "replicate": 11
+  },
+  {
+    "id": "A_S_f586fff2be4355a8",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LiLaO2_14"
+    ],
+    "replicate": 13
+  },
+  {
+    "id": "A_S_f5dec87f52bf0dfd",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LaOOH_11"
+    ],
+    "replicate": 15
+  },
+  {
+    "id": "A_S_f6eb43a75cd75846",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La2O3_164"
+    ],
+    "replicate": 0
+  },
+  {
+    "id": "A_S_f8904d354a439f4d",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_137"
+    ],
+    "replicate": 13
+  },
+  {
+    "id": "A_S_f926b6c611447eff",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LiO2_58"
+    ],
+    "replicate": 18
+  },
+  {
+    "id": "A_S_f99f69710179894a",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li4Zr3O8_141"
+    ],
+    "replicate": 6
+  },
+  {
+    "id": "A_S_fa49bc0d2d291802",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_137"
+    ],
+    "replicate": 15
+  },
+  {
+    "id": "A_S_fa7f0498bb3e8447",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LiLaO2_14"
+    ],
+    "replicate": 3
+  },
+  {
+    "id": "A_S_fc00c87a7ce6feea",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_62"
+    ],
+    "replicate": 10
+  },
+  {
+    "id": "A_S_fc369b5c7a5cb401",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "La2Zr2O7_227"
+    ],
+    "replicate": 10
+  },
+  {
+    "id": "A_S_fd05ec817eb3077f",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "ZrO2_137"
+    ],
+    "replicate": 8
+  },
+  {
+    "id": "A_S_fdd502485639241c",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LiO2_58"
+    ],
+    "replicate": 1
+  },
+  {
+    "id": "A_S_fddd3fa658a122fd",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "Li6Zr2O7_15"
+    ],
+    "replicate": 15
+  },
+  {
+    "id": "A_S_ff4c3670b98c0932",
+    "chemistry": "Li-La-Zr-O",
+    "phases": [
+      "LiOH-H2O_12"
+    ],
+    "replicate": 0
+  },
+  {
+    "id": "A_S_ff8da8ffe5fc167c",
+    "chemistry": "Li-La-Zr-O",
     "phases": [
       "LiOH_129"
     ],
-    "replicate": 9,
-    "split": "train"
+    "replicate": 9
   },
   {
-    "id": "A_1-Phase_0340",
+    "id": "A_S_ffd9d58c7efa5afc",
     "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
     "phases": [
-      "Zr2O_224"
+      "LiOH-H2O_12"
     ],
-    "replicate": 0,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0341",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Zr2O_224"
-    ],
-    "replicate": 1,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0342",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Zr2O_224"
-    ],
-    "replicate": 10,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0343",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Zr2O_224"
-    ],
-    "replicate": 11,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0344",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Zr2O_224"
-    ],
-    "replicate": 12,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0345",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Zr2O_224"
-    ],
-    "replicate": 13,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0346",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Zr2O_224"
-    ],
-    "replicate": 14,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0347",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Zr2O_224"
-    ],
-    "replicate": 15,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0348",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Zr2O_224"
-    ],
-    "replicate": 16,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0349",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Zr2O_224"
-    ],
-    "replicate": 17,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0350",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Zr2O_224"
-    ],
-    "replicate": 18,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0351",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Zr2O_224"
-    ],
-    "replicate": 19,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0352",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Zr2O_224"
-    ],
-    "replicate": 2,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0353",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Zr2O_224"
-    ],
-    "replicate": 3,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0354",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Zr2O_224"
-    ],
-    "replicate": 4,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0355",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Zr2O_224"
-    ],
-    "replicate": 5,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0356",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Zr2O_224"
-    ],
-    "replicate": 6,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0357",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Zr2O_224"
-    ],
-    "replicate": 7,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0358",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Zr2O_224"
-    ],
-    "replicate": 8,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0359",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Zr2O_224"
-    ],
-    "replicate": 9,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0360",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Zr3O_167"
-    ],
-    "replicate": 0,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0361",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Zr3O_167"
-    ],
-    "replicate": 1,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0362",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Zr3O_167"
-    ],
-    "replicate": 10,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0363",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Zr3O_167"
-    ],
-    "replicate": 11,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0364",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Zr3O_167"
-    ],
-    "replicate": 12,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0365",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Zr3O_167"
-    ],
-    "replicate": 13,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0366",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Zr3O_167"
-    ],
-    "replicate": 14,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0367",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Zr3O_167"
-    ],
-    "replicate": 15,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0368",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Zr3O_167"
-    ],
-    "replicate": 16,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0369",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Zr3O_167"
-    ],
-    "replicate": 17,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0370",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Zr3O_167"
-    ],
-    "replicate": 18,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0371",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Zr3O_167"
-    ],
-    "replicate": 19,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0372",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Zr3O_167"
-    ],
-    "replicate": 2,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0373",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Zr3O_167"
-    ],
-    "replicate": 3,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0374",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Zr3O_167"
-    ],
-    "replicate": 4,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0375",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Zr3O_167"
-    ],
-    "replicate": 5,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0376",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Zr3O_167"
-    ],
-    "replicate": 6,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0377",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Zr3O_167"
-    ],
-    "replicate": 7,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0378",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Zr3O_167"
-    ],
-    "replicate": 8,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0379",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Zr3O_167"
-    ],
-    "replicate": 9,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0380",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Zr3O_182"
-    ],
-    "replicate": 0,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0381",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Zr3O_182"
-    ],
-    "replicate": 1,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0382",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Zr3O_182"
-    ],
-    "replicate": 10,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0383",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Zr3O_182"
-    ],
-    "replicate": 11,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0384",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Zr3O_182"
-    ],
-    "replicate": 12,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0385",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Zr3O_182"
-    ],
-    "replicate": 13,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0386",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Zr3O_182"
-    ],
-    "replicate": 14,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0387",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Zr3O_182"
-    ],
-    "replicate": 15,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0388",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Zr3O_182"
-    ],
-    "replicate": 16,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0389",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Zr3O_182"
-    ],
-    "replicate": 17,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0390",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Zr3O_182"
-    ],
-    "replicate": 18,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0391",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Zr3O_182"
-    ],
-    "replicate": 19,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0392",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Zr3O_182"
-    ],
-    "replicate": 2,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0393",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Zr3O_182"
-    ],
-    "replicate": 3,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0394",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Zr3O_182"
-    ],
-    "replicate": 4,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0395",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Zr3O_182"
-    ],
-    "replicate": 5,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0396",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Zr3O_182"
-    ],
-    "replicate": 6,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0397",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Zr3O_182"
-    ],
-    "replicate": 7,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0398",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Zr3O_182"
-    ],
-    "replicate": 8,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0399",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "Zr3O_182"
-    ],
-    "replicate": 9,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0400",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_137"
-    ],
-    "replicate": 0,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0401",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_137"
-    ],
-    "replicate": 1,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0402",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_137"
-    ],
-    "replicate": 10,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0403",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_137"
-    ],
-    "replicate": 11,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0404",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_137"
-    ],
-    "replicate": 12,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0405",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_137"
-    ],
-    "replicate": 13,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0406",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_137"
-    ],
-    "replicate": 14,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0407",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_137"
-    ],
-    "replicate": 15,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0408",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_137"
-    ],
-    "replicate": 16,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0409",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_137"
-    ],
-    "replicate": 17,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0410",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_137"
-    ],
-    "replicate": 18,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0411",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_137"
-    ],
-    "replicate": 19,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0412",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_137"
-    ],
-    "replicate": 2,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0413",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_137"
-    ],
-    "replicate": 3,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0414",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_137"
-    ],
-    "replicate": 4,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0415",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_137"
-    ],
-    "replicate": 5,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0416",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_137"
-    ],
-    "replicate": 6,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0417",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_137"
-    ],
-    "replicate": 7,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0418",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_137"
-    ],
-    "replicate": 8,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0419",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_137"
-    ],
-    "replicate": 9,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0420",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_14"
-    ],
-    "replicate": 0,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0421",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_14"
-    ],
-    "replicate": 1,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0422",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_14"
-    ],
-    "replicate": 10,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0423",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_14"
-    ],
-    "replicate": 11,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0424",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_14"
-    ],
-    "replicate": 12,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0425",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_14"
-    ],
-    "replicate": 13,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0426",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_14"
-    ],
-    "replicate": 14,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0427",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_14"
-    ],
-    "replicate": 15,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0428",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_14"
-    ],
-    "replicate": 16,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0429",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_14"
-    ],
-    "replicate": 17,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0430",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_14"
-    ],
-    "replicate": 18,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0431",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_14"
-    ],
-    "replicate": 19,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0432",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_14"
-    ],
-    "replicate": 2,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0433",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_14"
-    ],
-    "replicate": 3,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0434",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_14"
-    ],
-    "replicate": 4,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0435",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_14"
-    ],
-    "replicate": 5,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0436",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_14"
-    ],
-    "replicate": 6,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0437",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_14"
-    ],
-    "replicate": 7,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0438",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_14"
-    ],
-    "replicate": 8,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0439",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_14"
-    ],
-    "replicate": 9,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0440",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_19"
-    ],
-    "replicate": 0,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0441",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_19"
-    ],
-    "replicate": 1,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0442",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_19"
-    ],
-    "replicate": 10,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0443",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_19"
-    ],
-    "replicate": 11,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0444",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_19"
-    ],
-    "replicate": 12,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0445",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_19"
-    ],
-    "replicate": 13,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0446",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_19"
-    ],
-    "replicate": 14,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0447",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_19"
-    ],
-    "replicate": 15,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0448",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_19"
-    ],
-    "replicate": 16,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0449",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_19"
-    ],
-    "replicate": 17,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0450",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_19"
-    ],
-    "replicate": 18,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0451",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_19"
-    ],
-    "replicate": 19,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0452",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_19"
-    ],
-    "replicate": 2,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0453",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_19"
-    ],
-    "replicate": 3,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0454",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_19"
-    ],
-    "replicate": 4,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0455",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_19"
-    ],
-    "replicate": 5,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0456",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_19"
-    ],
-    "replicate": 6,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0457",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_19"
-    ],
-    "replicate": 7,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0458",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_19"
-    ],
-    "replicate": 8,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0459",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_19"
-    ],
-    "replicate": 9,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0460",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_225"
-    ],
-    "replicate": 0,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0461",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_225"
-    ],
-    "replicate": 1,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0462",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_225"
-    ],
-    "replicate": 10,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0463",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_225"
-    ],
-    "replicate": 11,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0464",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_225"
-    ],
-    "replicate": 12,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0465",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_225"
-    ],
-    "replicate": 13,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0466",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_225"
-    ],
-    "replicate": 14,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0467",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_225"
-    ],
-    "replicate": 15,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0468",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_225"
-    ],
-    "replicate": 16,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0469",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_225"
-    ],
-    "replicate": 17,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0470",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_225"
-    ],
-    "replicate": 18,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0471",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_225"
-    ],
-    "replicate": 19,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0472",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_225"
-    ],
-    "replicate": 2,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0473",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_225"
-    ],
-    "replicate": 3,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0474",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_225"
-    ],
-    "replicate": 4,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0475",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_225"
-    ],
-    "replicate": 5,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0476",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_225"
-    ],
-    "replicate": 6,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0477",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_225"
-    ],
-    "replicate": 7,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0478",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_225"
-    ],
-    "replicate": 8,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0479",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_225"
-    ],
-    "replicate": 9,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0480",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_61"
-    ],
-    "replicate": 0,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0481",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_61"
-    ],
-    "replicate": 1,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0482",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_61"
-    ],
-    "replicate": 10,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0483",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_61"
-    ],
-    "replicate": 11,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0484",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_61"
-    ],
-    "replicate": 12,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0485",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_61"
-    ],
-    "replicate": 13,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0486",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_61"
-    ],
-    "replicate": 14,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0487",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_61"
-    ],
-    "replicate": 15,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0488",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_61"
-    ],
-    "replicate": 16,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0489",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_61"
-    ],
-    "replicate": 17,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0490",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_61"
-    ],
-    "replicate": 18,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0491",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_61"
-    ],
-    "replicate": 19,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0492",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_61"
-    ],
-    "replicate": 2,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0493",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_61"
-    ],
-    "replicate": 3,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0494",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_61"
-    ],
-    "replicate": 4,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0495",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_61"
-    ],
-    "replicate": 5,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0496",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_61"
-    ],
-    "replicate": 6,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0497",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_61"
-    ],
-    "replicate": 7,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0498",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_61"
-    ],
-    "replicate": 8,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0499",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_61"
-    ],
-    "replicate": 9,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0500",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_62"
-    ],
-    "replicate": 0,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0501",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_62"
-    ],
-    "replicate": 1,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0502",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_62"
-    ],
-    "replicate": 10,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0503",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_62"
-    ],
-    "replicate": 11,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0504",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_62"
-    ],
-    "replicate": 12,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0505",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_62"
-    ],
-    "replicate": 13,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0506",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_62"
-    ],
-    "replicate": 14,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0507",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_62"
-    ],
-    "replicate": 15,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0508",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_62"
-    ],
-    "replicate": 16,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0509",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_62"
-    ],
-    "replicate": 17,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0510",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_62"
-    ],
-    "replicate": 18,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0511",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_62"
-    ],
-    "replicate": 19,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0512",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_62"
-    ],
-    "replicate": 2,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0513",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_62"
-    ],
-    "replicate": 3,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0514",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_62"
-    ],
-    "replicate": 4,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0515",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_62"
-    ],
-    "replicate": 5,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0516",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_62"
-    ],
-    "replicate": 6,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0517",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_62"
-    ],
-    "replicate": 7,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0518",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_62"
-    ],
-    "replicate": 8,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0519",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO2_62"
-    ],
-    "replicate": 9,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0520",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO_189"
-    ],
-    "replicate": 0,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0521",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO_189"
-    ],
-    "replicate": 1,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0522",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO_189"
-    ],
-    "replicate": 10,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0523",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO_189"
-    ],
-    "replicate": 11,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0524",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO_189"
-    ],
-    "replicate": 12,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0525",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO_189"
-    ],
-    "replicate": 13,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0526",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO_189"
-    ],
-    "replicate": 14,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0527",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO_189"
-    ],
-    "replicate": 15,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0528",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO_189"
-    ],
-    "replicate": 16,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0529",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO_189"
-    ],
-    "replicate": 17,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0530",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO_189"
-    ],
-    "replicate": 18,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0531",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO_189"
-    ],
-    "replicate": 19,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0532",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO_189"
-    ],
-    "replicate": 2,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0533",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO_189"
-    ],
-    "replicate": 3,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0534",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO_189"
-    ],
-    "replicate": 4,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0535",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO_189"
-    ],
-    "replicate": 5,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0536",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO_189"
-    ],
-    "replicate": 6,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0537",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO_189"
-    ],
-    "replicate": 7,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0538",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO_189"
-    ],
-    "replicate": 8,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0539",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO_189"
-    ],
-    "replicate": 9,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0540",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO_225"
-    ],
-    "replicate": 0,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0541",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO_225"
-    ],
-    "replicate": 1,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0542",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO_225"
-    ],
-    "replicate": 10,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0543",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO_225"
-    ],
-    "replicate": 11,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0544",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO_225"
-    ],
-    "replicate": 12,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0545",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO_225"
-    ],
-    "replicate": 13,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0546",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO_225"
-    ],
-    "replicate": 14,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0547",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO_225"
-    ],
-    "replicate": 15,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0548",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO_225"
-    ],
-    "replicate": 16,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0549",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO_225"
-    ],
-    "replicate": 17,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0550",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO_225"
-    ],
-    "replicate": 18,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0551",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO_225"
-    ],
-    "replicate": 19,
-    "split": "test"
-  },
-  {
-    "id": "A_1-Phase_0552",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO_225"
-    ],
-    "replicate": 2,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0553",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO_225"
-    ],
-    "replicate": 3,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0554",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO_225"
-    ],
-    "replicate": 4,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0555",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO_225"
-    ],
-    "replicate": 5,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0556",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO_225"
-    ],
-    "replicate": 6,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0557",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO_225"
-    ],
-    "replicate": 7,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0558",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO_225"
-    ],
-    "replicate": 8,
-    "split": "train"
-  },
-  {
-    "id": "A_1-Phase_0559",
-    "chemistry": "Li-La-Zr-O",
-    "kind": "1-Phase",
-    "phases": [
-      "ZrO_225"
-    ],
-    "replicate": 9,
-    "split": "train"
+    "replicate": 13
   }
 ]

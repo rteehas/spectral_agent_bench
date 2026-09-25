@@ -1,0 +1,24 @@
+{
+  "array_order": "perturbed arrays: condition, sample, feature; clean arrays: sample,feature",
+  "windows": {
+    "Ridge_r1_5": [
+      1.0,
+      5.0
+    ],
+    "Ridge_r5_40": [
+      5.0,
+      40.0
+    ],
+    "Ridge_r1_40": [
+      1.0,
+      40.0
+    ],
+    "Ridge_r40_120": [
+      40.0,
+      120.00001
+    ]
+  },
+  "source_preprocessing": "Interpolate to theta, subtract 10th percentile per spectrum, divide by max.",
+  "transform": "2/pi integral Q I(Q) sin(Qr) dQ; nonuniform-Q trapezoid; wavelength1.5406 \u00c5",
+  "audit_subset": "first twelve held-out IDs, selected before seeing predictions"
+}

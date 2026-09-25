@@ -1,0 +1,138 @@
+[
+  {
+    "chemistry": "Li-La-Zr-O",
+    "method": "Ridge",
+    "n": 112,
+    "complementarity": {
+      "both_correct": 107,
+      "xrd_only_correct": 0,
+      "pdf_only_correct": 2,
+      "neither_correct": 3
+    },
+    "comparisons": {
+      "PDF_minus_XRD": {
+        "difference": 0.017857142857142856,
+        "cluster_bootstrap_95ci": [
+          0.0,
+          0.044642857142857144
+        ]
+      },
+      "Combined_minus_XRD": {
+        "difference": 0.017857142857142856,
+        "cluster_bootstrap_95ci": [
+          0.0,
+          0.044642857142857144
+        ]
+      },
+      "Combined_minus_PDF": {
+        "difference": 0.0,
+        "cluster_bootstrap_95ci": [
+          0.0,
+          0.0
+        ]
+      }
+    }
+  },
+  {
+    "chemistry": "Li-La-Zr-O",
+    "method": "RBF-SVM",
+    "n": 112,
+    "complementarity": {
+      "both_correct": 107,
+      "xrd_only_correct": 3,
+      "pdf_only_correct": 1,
+      "neither_correct": 1
+    },
+    "comparisons": {
+      "PDF_minus_XRD": {
+        "difference": -0.017857142857142856,
+        "cluster_bootstrap_95ci": [
+          -0.05357142857142857,
+          0.017857142857142856
+        ]
+      },
+      "Combined_minus_XRD": {
+        "difference": 0.008928571428571428,
+        "cluster_bootstrap_95ci": [
+          0.0,
+          0.026785714285714284
+        ]
+      },
+      "Combined_minus_PDF": {
+        "difference": 0.026785714285714284,
+        "cluster_bootstrap_95ci": [
+          0.0,
+          0.05357142857142857
+        ]
+      }
+    }
+  },
+  {
+    "chemistry": "Li-Ti-P-O",
+    "method": "Ridge",
+    "n": 145,
+    "complementarity": {
+      "both_correct": 136,
+      "xrd_only_correct": 1,
+      "pdf_only_correct": 3,
+      "neither_correct": 5
+    },
+    "comparisons": {
+      "PDF_minus_XRD": {
+        "difference": 0.013793103448275862,
+        "cluster_bootstrap_95ci": [
+          -0.013071895424836602,
+          0.041666666666666664
+        ]
+      },
+      "Combined_minus_XRD": {
+        "difference": 0.013793103448275862,
+        "cluster_bootstrap_95ci": [
+          -0.013422818791946308,
+          0.04195804195804196
+        ]
+      },
+      "Combined_minus_PDF": {
+        "difference": 0.0,
+        "cluster_bootstrap_95ci": [
+          0.0,
+          0.0
+        ]
+      }
+    }
+  },
+  {
+    "chemistry": "Li-Ti-P-O",
+    "method": "RBF-SVM",
+    "n": 145,
+    "complementarity": {
+      "both_correct": 133,
+      "xrd_only_correct": 2,
+      "pdf_only_correct": 8,
+      "neither_correct": 2
+    },
+    "comparisons": {
+      "PDF_minus_XRD": {
+        "difference": 0.041379310344827586,
+        "cluster_bootstrap_95ci": [
+          0.013696300437983411,
+          0.07534246575342465
+        ]
+      },
+      "Combined_minus_XRD": {
+        "difference": 0.041379310344827586,
+        "cluster_bootstrap_95ci": [
+          0.013513513513513514,
+          0.07482993197278912
+        ]
+      },
+      "Combined_minus_PDF": {
+        "difference": 0.0,
+        "cluster_bootstrap_95ci": [
+          0.0,
+          0.0
+        ]
+      }
+    }
+  }
+]

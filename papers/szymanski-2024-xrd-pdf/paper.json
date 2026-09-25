@@ -12,131 +12,131 @@
     {
       "id": "SZYMANSKI24-Q1",
       "kind": "Subquestion",
-      "executionStatus": "validated",
-      "title": "Which representation gives more reliable phase identification on held-out simulated patterns?",
+      "executionStatus": "worked-example-executed",
+      "title": "Does diffraction representation offer a reproducible advantage for phase identification?",
       "inputs": [
         {
           "name": "Li-La-Zr-O_1-Phase.npz",
           "url": "data/szymanski-2024-xrd-pdf/inputs/Li-La-Zr-O_1-Phase.npz",
-          "description": "Native-angle numeric spectra with anonymous record IDs; no resampling or derived features."
+          "description": "Native-angle numeric spectra keyed by opaque record ID; no derived features."
         },
         {
           "name": "Li-La-Zr-O_1-Phase.json",
           "url": "data/szymanski-2024-xrd-pdf/inputs/Li-La-Zr-O_1-Phase.json",
-          "description": "Record identities, raw labels and evaluation metadata; target labels excluded during inference."
+          "description": "Raw phase/preparation labels and record metadata; no assigned split or analysis settings."
         },
         {
           "name": "Li-Ti-P-O_1-Phase.npz",
           "url": "data/szymanski-2024-xrd-pdf/inputs/Li-Ti-P-O_1-Phase.npz",
-          "description": "Native-angle numeric spectra with anonymous record IDs; no resampling or derived features."
+          "description": "Native-angle numeric spectra keyed by opaque record ID; no derived features."
         },
         {
           "name": "Li-Ti-P-O_1-Phase.json",
           "url": "data/szymanski-2024-xrd-pdf/inputs/Li-Ti-P-O_1-Phase.json",
-          "description": "Record identities, raw labels and evaluation metadata; target labels excluded during inference."
-        },
-        {
-          "name": "protocol.json",
-          "url": "data/szymanski-2024-xrd-pdf/inputs/protocol.json",
-          "description": "Fixed paired comparison design and numerical conventions, with no fitted outputs."
-        },
-        {
-          "name": "output_schema.json",
-          "url": "data/szymanski-2024-xrd-pdf/inputs/output_schema.json",
-          "description": "Required numerical outputs and trace format."
-        },
-        {
-          "name": "README.md",
-          "url": "data/szymanski-2024-xrd-pdf/inputs/README.md",
-          "description": "Input array definitions, units and label semantics."
+          "description": "Raw phase/preparation labels and record metadata; no assigned split or analysis settings."
         }
       ],
       "prompt": {
-        "background": "The supplied powder diffraction simulations cover two chemical spaces and contain repeated augmented patterns of known crystalline phases. Each phase identity includes a formula and a space-group identifier. A virtual PDF is an alternative representation obtained by a sine transform of the diffraction intensities.",
-        "instruction": "Compare phase identification from XRD and virtual-PDF representations using the paired training/test protocol. Determine whether averaging their scores improves identification and whether their errors occur on the same samples. Report chemistry-specific held-out performance, paired error counts, diagnostic plots and a concise interpretation of what this split establishes. Use protocol.json and output_schema.json for the controlled comparison and output contract."
+        "background": "Simulation NPZ files contain a shared two-theta axis `theta` in degrees and one native intensity array per record ID. The matching JSON tables give `id`, `chemistry`, and `phases`; single-phase records also have a native `replicate` index. Simulated phase IDs combine formula and space-group number. Repeated spectra are augmented realizations of those phases. The radiation wavelength is 1.5406 Å. Here a virtual PDF is the uncorrected representation G(r)=(2/π)∫Q I(Q) sin(Qr)dQ, with Q=4π sin(θ)/λ and θ half the recorded angle; it is not a quantitatively normalized total-scattering PDF.",
+        "instruction": "Determine whether XRD or virtual PDFs give more reliable phase identification in each chemistry, and whether combining their information improves it. Establish how strongly your conclusion depends on reasonable analysis choices and whether the two representations fail on the same cases. Use genuinely held-out spectra; target labels and record IDs must not enter prediction as features. Choose and justify the analysis and evaluation design. Return report.md with your scientific answer, methodological justification, uncertainty and limitations; diagnostic figures; and runnable analysis code. For numerical checking, supply predictions.csv with columns id,method,representation,condition,fold,predicted, where predicted is a JSON list of phase IDs and representation is XRD, PDF or Combined. Supply splits.csv with id,fold,role (train,validation,test; each fold records disjoint source-record partitions). Use consistent method/fold identifiers across comparisons. Supply metrics.csv with chemistry,group,method,representation,condition,fold,metric,value,n; n is the number of evaluated records. For Q1 use condition=baseline and group=all; report exact_match. Include XRD, PDF and Combined predictions on the same held-out records within each fold."
       },
-      "groundTruthReasoning": "1. Use Python/NumPy to read only the linked raw numeric NPZ arrays and metadata. Interpolate onto the shared angular interval, subtract the declared intensity percentile and scale by peak height. The source audit verifies every packaged array against the release.\n\n2. Use NumPy to compute the uncorrected sine-transform representation with nonuniform-Q trapezoidal quadrature. The independent verifier recomputes a raw-linked transform probe without importing the candidate.\n\n3. Fit separate scikit-learn RidgeClassifier models on unit-length XRD and virtual-PDF features from training IDs. Predict withheld repeats, convert decision vectors to relative scores and average across representations. Use Python set/count operations to calculate phase accuracy and paired exact-correctness categories.\n\n4. Use Matplotlib to save diagnostics.png and write an evidence-backed conclusion alongside the numerical outputs. Executed results: Li-La-Zr-O single Fused F1 0.9464, exact 0.9464; Li-La-Zr-O single PDF F1 0.9345, exact 0.9345; Li-La-Zr-O single XRD F1 0.9107, exact 0.9107; Li-Ti-P-O single Fused F1 0.9558, exact 0.9558; Li-Ti-P-O single PDF F1 0.9503, exact 0.9503; Li-Ti-P-O single XRD F1 0.9227, exact 0.9227.\n\n5. Evaluator only: run the independently implemented verifier against the original-filename label map, numerical reference and raw-linked transform check. Apply deliberately corrupted-output controls and inspect the scientific conclusion and plots. The separate execution agent reruns every question from packaged inputs in a clean output directory.\n\nSource relationship: Single-phase identification and complementary representation errors; related to Results: Influence of the number of phases present and Fig.2. Ridge models and the fixed split are benchmark choices, not historical CNN reconstructions.",
+      "groundTruthReasoning": "1. Inspect the supplied native spectra and raw metadata using Python/NumPy; identify data support, class coverage and appropriate evaluation units. Choose the analysis without reading evaluator references.\n\n2. One candidate creates its own train/validation/test partitions, constructs both representations, compares two learner families and selects combination settings using validation data. It records held-out predictions, paired comparisons and uncertainty before drawing a scoped conclusion. These are worked-example choices, not solver requirements.\n\n3. Execute the candidate with NumPy, SciPy, scikit-learn and Matplotlib. Save prediction-level evidence, source-record partitions, reported metrics, plots and a scientific report. The linked report records the actual findings and limitations of this worked example.\n\n4. Evaluator only: independently recover truth from the original release filenames, recompute metrics from predictions, and check source partitions and artifact evidence. Do not compare a solver’s predictions with the candidate’s exact outputs. Apply the scientific rubric to validity of design, physical handling, uncertainty, reproducibility and the support for conclusions; a numerical integrity pass is not a research-quality pass.\n\nSource relationship: Representation comparison and complementary errors in the single-phase part of Fig. 2. The benchmark asks the solver to design the validation and assess sensitivity to analysis choices; no historical CNN score or particular learner is a target.",
       "verification": {
-        "description": "Recompute metrics against original source labels (or independently regenerated perturbations for Q3), validate row coverage, train/test separation, normalized scores, fusion and raw-linked sine transform. Compare with the executed deterministic baseline reference. Require an evidence-backed scientific conclusion and diagnostic plots. Passing numerical checks alone cannot establish absence of label leakage; use an isolated input bundle and retain execution traces.",
+        "description": "Ground truth is the released phase/preparation metadata. The checker recomputes metrics and checks numerical/evaluation integrity without requiring a particular model, split, normalization, score fusion, perturbation, interval or outcome. Scientific success requires the separate evidence rubric and review of runnable code, figures and conclusions. The worked solution is illustrative, not a prediction target.",
         "data": [
-          {
-            "name": "result.json",
-            "url": "data/szymanski-2024-xrd-pdf/verification/Q1/result.json",
-            "description": "Executed modern baseline targets; not historical model scores."
-          },
           {
             "name": "source_labels.json",
             "url": "data/szymanski-2024-xrd-pdf/verification/source_labels.json",
-            "description": "Evaluator-only original-filename/source-hash mapping anchoring labels."
+            "description": "Evaluator-only original source paths and raw labels for independent scoring."
           },
           {
             "name": "provenance.json",
             "url": "data/szymanski-2024-xrd-pdf/provenance.json",
-            "description": "Archive checksum, inventory, raw-value packaging and availability limits."
-          },
-          {
-            "name": "workflow_execution_review.json",
-            "url": "data/szymanski-2024-xrd-pdf/verification/workflow_execution_review.json",
-            "description": "Independent review/execution evidence."
+            "description": "Source archive identity, raw-value projection and availability limits."
           },
           {
             "name": "verification_audit.json",
             "url": "data/szymanski-2024-xrd-pdf/verification/verification_audit.json",
-            "description": "Independent review/execution evidence."
+            "description": "Independent audit/review evidence for this open research revision."
+          },
+          {
+            "name": "workflow_execution_review.json",
+            "url": "data/szymanski-2024-xrd-pdf/verification/workflow_execution_review.json",
+            "description": "Independent audit/review evidence for this open research revision."
           },
           {
             "name": "question_quality_review.json",
             "url": "data/szymanski-2024-xrd-pdf/verification/question_quality_review.json",
-            "description": "Independent review/execution evidence."
+            "description": "Independent audit/review evidence for this open research revision."
           },
           {
-            "name": "input_projection_audit.json",
-            "url": "data/szymanski-2024-xrd-pdf/verification/input_projection_audit.json",
-            "description": "Independent review/execution evidence."
+            "name": "scientific_review.json",
+            "url": "data/szymanski-2024-xrd-pdf/verification/scientific_review.json",
+            "description": "Independent audit/review evidence for this open research revision."
           },
           {
-            "name": "predictions.csv",
-            "url": "data/szymanski-2024-xrd-pdf/verification/Q1/predictions.csv",
-            "description": "Held-back numerical reference output for this fixed protocol."
-          }
-        ],
-        "figures": [
+            "name": "independent_candidate_evidence_review.json",
+            "url": "data/szymanski-2024-xrd-pdf/verification/independent_candidate_evidence_review.json",
+            "description": "Independent audit/review evidence for this open research revision."
+          },
           {
-            "image": "data/szymanski-2024-xrd-pdf/verification/Q1/diagnostics.png",
-            "label": "Q1 executed baseline diagnostics",
-            "caption": "Benchmark-generated comparison, not a paper figure. Single-phase identification and complementary representation errors; related to Results: Influence of the number of phases present and Fig.2. Ridge models and the fixed split are benchmark choices, not historical CNN reconstructions."
+            "name": "packaging_checks.json",
+            "url": "data/szymanski-2024-xrd-pdf/verification/packaging_checks.json",
+            "description": "Independent audit/review evidence for this open research revision."
           }
         ],
         "methods": [
           {
             "name": "candidate.py",
             "url": "data/szymanski-2024-xrd-pdf/workflows/candidate.py",
-            "description": "Executed worked solution using only the raw input bundle."
-          },
-          {
-            "name": "conclusion.md",
-            "url": "data/szymanski-2024-xrd-pdf/verification/Q1/conclusion.md",
-            "description": "Executed evidence-backed scientific interpretation and scope limits."
+            "description": "One executed worked solution; model and numerical choices are not mandatory."
           },
           {
             "name": "verify.py",
             "url": "data/szymanski-2024-xrd-pdf/workflows/verify.py",
-            "description": "Independent numerical checker; evaluator-side only."
+            "description": "Method-neutral submission-integrity checks and independent metric recomputation."
           },
           {
             "name": "Q1.json",
             "url": "data/szymanski-2024-xrd-pdf/workflows/Q1.json",
-            "description": "Tool calls, command, outputs and source relationship."
+            "description": "Worked-example tool calls and source relationship."
+          },
+          {
+            "name": "scientific_review_rubric.md",
+            "url": "data/szymanski-2024-xrd-pdf/verification/scientific_review_rubric.md",
+            "description": "Scientific validity and evidence rubric, separate from numerical integrity."
+          },
+          {
+            "name": "worked_report.md",
+            "url": "data/szymanski-2024-xrd-pdf/verification/Q1/report.md",
+            "description": "Illustrative worked-example output; not an exact answer key."
+          },
+          {
+            "name": "worked_metrics.csv",
+            "url": "data/szymanski-2024-xrd-pdf/verification/Q1/metrics.csv",
+            "description": "Illustrative worked-example output; not an exact answer key."
+          },
+          {
+            "name": "worked_design.json",
+            "url": "data/szymanski-2024-xrd-pdf/verification/Q1/design.json",
+            "description": "Illustrative worked-example output; not an exact answer key."
+          }
+        ],
+        "figures": [
+          {
+            "image": "data/szymanski-2024-xrd-pdf/verification/Q1/diagnostics.png",
+            "label": "Q1 worked-example diagnostics",
+            "caption": "An executed illustrative analysis. Alternative valid methods can produce different results. Representation comparison and complementary errors in the single-phase part of Fig. 2. The benchmark asks the solver to design the validation and assess sensitivity to analysis choices; no historical CNN score or particular learner is a target."
           }
         ],
         "thresholds": {
-          "origin": "Benchmark-defined numerical reproducibility tolerances",
-          "generatedBy": "Independent verification agent; reviewed against deterministic double-precision outputs.",
-          "provenance": "These are software agreement tolerances, not measurement error bars or paper-reported thresholds. Original filename labels are exact anchors; model targets are newly computed controlled baselines.",
+          "origin": "Benchmark evaluator: arithmetic checks and scientific rubric",
+          "generatedBy": "Independent verification review",
+          "provenance": "Numerical tolerances concern arithmetic consistency only. No historical or candidate performance number is a pass threshold.",
           "notes": [
             {
-              "title": "Numerics",
-              "description": "Exact sample/label coverage and counts; per-score and metric agreement follows verify.py (relative 1e-6 and absolute 1e-7 for model scores; absolute 1e-10 for classification metrics; Q3 metric agreement within 1e-9; transforms within relative/absolute 1e-9). Scientific interpretation and equivalent-method answers require evaluator review."
+              "title": "Scientific judgment",
+              "description": "Method choice and negative findings are allowed. Checks cannot prove absence of target-label leakage from outputs alone; inspect code and execution evidence. Alternative outcomes require evidence, not agreement with the worked example."
             }
           ]
         }
@@ -145,171 +145,151 @@
     {
       "id": "SZYMANSKI24-Q2",
       "kind": "Subquestion",
-      "executionStatus": "validated",
-      "title": "How does increasing phase count affect recovery of constituent identities from XRD and virtual-PDF template fits?",
+      "executionStatus": "worked-example-executed",
+      "title": "How reliably can diffraction data determine both the identities and number of phases in a mixture?",
       "inputs": [
         {
           "name": "Li-La-Zr-O_1-Phase.npz",
           "url": "data/szymanski-2024-xrd-pdf/inputs/Li-La-Zr-O_1-Phase.npz",
-          "description": "Native-angle numeric spectra with anonymous record IDs; no resampling or derived features."
+          "description": "Native-angle numeric spectra keyed by opaque record ID; no derived features."
         },
         {
           "name": "Li-La-Zr-O_1-Phase.json",
           "url": "data/szymanski-2024-xrd-pdf/inputs/Li-La-Zr-O_1-Phase.json",
-          "description": "Record identities, raw labels and evaluation metadata; target labels excluded during inference."
+          "description": "Raw phase/preparation labels and record metadata; no assigned split or analysis settings."
         },
         {
-          "name": "Li-La-Zr-O_2-Phase.npz",
-          "url": "data/szymanski-2024-xrd-pdf/inputs/Li-La-Zr-O_2-Phase.npz",
-          "description": "Native-angle numeric spectra with anonymous record IDs; no resampling or derived features."
+          "name": "Li-La-Zr-O_Mixtures.npz",
+          "url": "data/szymanski-2024-xrd-pdf/inputs/Li-La-Zr-O_Mixtures.npz",
+          "description": "Native-angle numeric spectra keyed by opaque record ID; no derived features."
         },
         {
-          "name": "Li-La-Zr-O_2-Phase.json",
-          "url": "data/szymanski-2024-xrd-pdf/inputs/Li-La-Zr-O_2-Phase.json",
-          "description": "Record identities, raw labels and evaluation metadata; target labels excluded during inference."
-        },
-        {
-          "name": "Li-La-Zr-O_3-Phase.npz",
-          "url": "data/szymanski-2024-xrd-pdf/inputs/Li-La-Zr-O_3-Phase.npz",
-          "description": "Native-angle numeric spectra with anonymous record IDs; no resampling or derived features."
-        },
-        {
-          "name": "Li-La-Zr-O_3-Phase.json",
-          "url": "data/szymanski-2024-xrd-pdf/inputs/Li-La-Zr-O_3-Phase.json",
-          "description": "Record identities, raw labels and evaluation metadata; target labels excluded during inference."
+          "name": "Li-La-Zr-O_Mixtures.json",
+          "url": "data/szymanski-2024-xrd-pdf/inputs/Li-La-Zr-O_Mixtures.json",
+          "description": "Raw phase/preparation labels and record metadata; no assigned split or analysis settings."
         },
         {
           "name": "Li-Ti-P-O_1-Phase.npz",
           "url": "data/szymanski-2024-xrd-pdf/inputs/Li-Ti-P-O_1-Phase.npz",
-          "description": "Native-angle numeric spectra with anonymous record IDs; no resampling or derived features."
+          "description": "Native-angle numeric spectra keyed by opaque record ID; no derived features."
         },
         {
           "name": "Li-Ti-P-O_1-Phase.json",
           "url": "data/szymanski-2024-xrd-pdf/inputs/Li-Ti-P-O_1-Phase.json",
-          "description": "Record identities, raw labels and evaluation metadata; target labels excluded during inference."
+          "description": "Raw phase/preparation labels and record metadata; no assigned split or analysis settings."
         },
         {
-          "name": "Li-Ti-P-O_2-Phase.npz",
-          "url": "data/szymanski-2024-xrd-pdf/inputs/Li-Ti-P-O_2-Phase.npz",
-          "description": "Native-angle numeric spectra with anonymous record IDs; no resampling or derived features."
+          "name": "Li-Ti-P-O_Mixtures.npz",
+          "url": "data/szymanski-2024-xrd-pdf/inputs/Li-Ti-P-O_Mixtures.npz",
+          "description": "Native-angle numeric spectra keyed by opaque record ID; no derived features."
         },
         {
-          "name": "Li-Ti-P-O_2-Phase.json",
-          "url": "data/szymanski-2024-xrd-pdf/inputs/Li-Ti-P-O_2-Phase.json",
-          "description": "Record identities, raw labels and evaluation metadata; target labels excluded during inference."
-        },
-        {
-          "name": "Li-Ti-P-O_3-Phase.npz",
-          "url": "data/szymanski-2024-xrd-pdf/inputs/Li-Ti-P-O_3-Phase.npz",
-          "description": "Native-angle numeric spectra with anonymous record IDs; no resampling or derived features."
-        },
-        {
-          "name": "Li-Ti-P-O_3-Phase.json",
-          "url": "data/szymanski-2024-xrd-pdf/inputs/Li-Ti-P-O_3-Phase.json",
-          "description": "Record identities, raw labels and evaluation metadata; target labels excluded during inference."
-        },
-        {
-          "name": "protocol.json",
-          "url": "data/szymanski-2024-xrd-pdf/inputs/protocol.json",
-          "description": "Fixed paired comparison design and numerical conventions, with no fitted outputs."
-        },
-        {
-          "name": "output_schema.json",
-          "url": "data/szymanski-2024-xrd-pdf/inputs/output_schema.json",
-          "description": "Required numerical outputs and trace format."
-        },
-        {
-          "name": "README.md",
-          "url": "data/szymanski-2024-xrd-pdf/inputs/README.md",
-          "description": "Input array definitions, units and label semantics."
+          "name": "Li-Ti-P-O_Mixtures.json",
+          "url": "data/szymanski-2024-xrd-pdf/inputs/Li-Ti-P-O_Mixtures.json",
+          "description": "Raw phase/preparation labels and record metadata; no assigned split or analysis settings."
         }
       ],
       "prompt": {
-        "background": "The inputs include single-phase reference simulations and simulated mixtures containing either two or three crystalline phases. The number of constituents is supplied, while their identities must be inferred from the spectra. Spectral contribution coefficients need not equal mass fractions.",
-        "instruction": "Build references from the prescribed single-phase training subset and compare nonnegative template recovery in XRD and virtual-PDF space as the number of phases increases. Evaluate both individual representations and averaged scores, including exact phase-set recovery, micro-F1 and complementary errors. Explain what the results support about overlapping phases and what supplying the phase count leaves untested. Use protocol.json and output_schema.json for the controlled comparison and output contract."
+        "background": "Simulation NPZ files contain a shared two-theta axis `theta` in degrees and one native intensity array per record ID. The matching JSON tables give `id`, `chemistry`, and `phases`; single-phase records also have a native `replicate` index. Simulated phase IDs combine formula and space-group number. Repeated spectra are augmented realizations of those phases. Mixture spectra are pooled under opaque IDs. Their phase-label tables are for evaluation only; constituent identities and counts are unavailable to the inference procedure. The radiation wavelength is 1.5406 Å. Here a virtual PDF is the uncorrected representation G(r)=(2/π)∫Q I(Q) sin(Qr)dQ, with Q=4π sin(θ)/λ and θ half the recorded angle; it is not a quantitatively normalized total-scattering PDF.",
+        "instruction": "Recover constituent identities and their number from the mixture spectra using the available single-phase data. Compare XRD and virtual-PDF evidence, investigate disagreement and failure cases, and determine what the results support about mixture complexity. Choose and justify any training, calibration and model-selection procedures without using the released mixture labels until final evaluation; do not use the true phase count to select predictions. Evaluate every released mixture. Return report.md with your scientific answer, methodological justification, uncertainty and limitations; diagnostic figures; and runnable analysis code. For numerical checking, supply predictions.csv with columns id,method,representation,condition,fold,predicted, where predicted is a JSON list of phase IDs and representation is XRD, PDF or Combined. Supply splits.csv with id,fold,role (train,validation,test; each fold records disjoint source-record partitions). Use consistent method/fold identifiers across comparisons. Supply metrics.csv with chemistry,group,method,representation,condition,fold,metric,value,n; n is the number of evaluated records. For Q2 use condition=baseline and group equal to the true phase count at scoring time; report exact_match, micro_f1 and phase_count_accuracy. Each fold places all released mixtures in test and uses only single-phase source records for training or validation. Include XRD and PDF predictions; Combined predictions are optional."
       },
-      "groundTruthReasoning": "1. Use Python/NumPy to read only the linked raw numeric NPZ arrays and metadata. Interpolate onto the shared angular interval, subtract the declared intensity percentile and scale by peak height. The source audit verifies every packaged array against the release.\n\n2. Use NumPy to compute the uncorrected sine-transform representation with nonuniform-Q trapezoidal quadrature. The independent verifier recomputes a raw-linked transform probe without importing the candidate.\n\n3. Average only training spectra by phase identity. Use SciPy nonnegative least squares (with the declared tiny L2 penalty) to fit unit-normalized templates to mixture spectra in each representation. Normalize coefficients and average scores. Select the supplied number of constituents, then compute identity-recovery metrics separately for two- and three-phase mixtures.\n\n4. Use Matplotlib to save diagnostics.png and write an evidence-backed conclusion alongside the numerical outputs. Executed results: Li-La-Zr-O 2-Phase Fused F1 0.8950, exact 0.7950; Li-La-Zr-O 2-Phase PDF F1 0.8962, exact 0.8000; Li-La-Zr-O 2-Phase XRD F1 0.8738, exact 0.7625; Li-La-Zr-O 3-Phase Fused F1 0.7692, exact 0.3925; Li-La-Zr-O 3-Phase PDF F1 0.7650, exact 0.3975; Li-La-Zr-O 3-Phase XRD F1 0.7583, exact 0.3700; Li-Ti-P-O 2-Phase Fused F1 0.9175, exact 0.8400; Li-Ti-P-O 2-Phase PDF F1 0.9113, exact 0.8325; Li-Ti-P-O 2-Phase XRD F1 0.9075, exact 0.8200; Li-Ti-P-O 3-Phase Fused F1 0.7858, exact 0.4125; Li-Ti-P-O 3-Phase PDF F1 0.7742, exact 0.3925; Li-Ti-P-O 3-Phase XRD F1 0.7642, exact 0.3750.\n\n5. Evaluator only: run the independently implemented verifier against the original-filename label map, numerical reference and raw-linked transform check. Apply deliberately corrupted-output controls and inspect the scientific conclusion and plots. The separate execution agent reruns every question from packaged inputs in a clean output directory.\n\nSource relationship: Multiphase recovery from Fig.2 and the discussion of overlapping PDF features. Nonnegative mean-template fitting with supplied cardinality is a controlled baseline and does not reproduce iterative CNN/subtraction.",
+      "groundTruthReasoning": "1. Inspect the supplied native spectra and raw metadata using Python/NumPy; identify data support, class coverage and appropriate evaluation units. Choose the analysis without reading evaluator references.\n\n2. One candidate builds a reference library from a solver-chosen subset of single-phase spectra and fits nonnegative contributions in each representation. It chooses support thresholds using newly generated validation mixtures without reading released target labels, then infers variable-size phase sets for all released mixtures. Other calibrated identification strategies are admissible.\n\n3. Execute the candidate with NumPy, SciPy, scikit-learn and Matplotlib. Save prediction-level evidence, source-record partitions, reported metrics, plots and a scientific report. The linked report records the actual findings and limitations of this worked example.\n\n4. Evaluator only: independently recover truth from the original release filenames, recompute metrics from predictions, and check source partitions and artifact evidence. Do not compare a solver’s predictions with the candidate’s exact outputs. Apply the scientific rubric to validity of design, physical handling, uncertainty, reproducibility and the support for conclusions; a numerical integrity pass is not a research-quality pass.\n\nSource relationship: Multiphase phase identification in Fig. 2 and iterative identification in Methods. The v2 question removes the earlier supplied-cardinality shortcut. The released mixture cohorts differ in component identities and amounts as well as count; a causal explanation requires evidence beyond aggregate score differences.",
       "verification": {
-        "description": "Recompute metrics against original source labels (or independently regenerated perturbations for Q3), validate row coverage, train/test separation, normalized scores, fusion and raw-linked sine transform. Compare with the executed deterministic baseline reference. Require an evidence-backed scientific conclusion and diagnostic plots. Passing numerical checks alone cannot establish absence of label leakage; use an isolated input bundle and retain execution traces.",
+        "description": "Ground truth is the released phase/preparation metadata. The checker recomputes metrics and checks numerical/evaluation integrity without requiring a particular model, split, normalization, score fusion, perturbation, interval or outcome. Scientific success requires the separate evidence rubric and review of runnable code, figures and conclusions. The worked solution is illustrative, not a prediction target.",
         "data": [
-          {
-            "name": "result.json",
-            "url": "data/szymanski-2024-xrd-pdf/verification/Q2/result.json",
-            "description": "Executed modern baseline targets; not historical model scores."
-          },
           {
             "name": "source_labels.json",
             "url": "data/szymanski-2024-xrd-pdf/verification/source_labels.json",
-            "description": "Evaluator-only original-filename/source-hash mapping anchoring labels."
+            "description": "Evaluator-only original source paths and raw labels for independent scoring."
           },
           {
             "name": "provenance.json",
             "url": "data/szymanski-2024-xrd-pdf/provenance.json",
-            "description": "Archive checksum, inventory, raw-value packaging and availability limits."
-          },
-          {
-            "name": "workflow_execution_review.json",
-            "url": "data/szymanski-2024-xrd-pdf/verification/workflow_execution_review.json",
-            "description": "Independent review/execution evidence."
+            "description": "Source archive identity, raw-value projection and availability limits."
           },
           {
             "name": "verification_audit.json",
             "url": "data/szymanski-2024-xrd-pdf/verification/verification_audit.json",
-            "description": "Independent review/execution evidence."
+            "description": "Independent audit/review evidence for this open research revision."
+          },
+          {
+            "name": "workflow_execution_review.json",
+            "url": "data/szymanski-2024-xrd-pdf/verification/workflow_execution_review.json",
+            "description": "Independent audit/review evidence for this open research revision."
           },
           {
             "name": "question_quality_review.json",
             "url": "data/szymanski-2024-xrd-pdf/verification/question_quality_review.json",
-            "description": "Independent review/execution evidence."
+            "description": "Independent audit/review evidence for this open research revision."
           },
           {
-            "name": "input_projection_audit.json",
-            "url": "data/szymanski-2024-xrd-pdf/verification/input_projection_audit.json",
-            "description": "Independent review/execution evidence."
+            "name": "scientific_review.json",
+            "url": "data/szymanski-2024-xrd-pdf/verification/scientific_review.json",
+            "description": "Independent audit/review evidence for this open research revision."
           },
           {
-            "name": "predictions.csv",
-            "url": "data/szymanski-2024-xrd-pdf/verification/Q2/predictions.csv",
-            "description": "Held-back numerical reference output for this fixed protocol."
-          }
-        ],
-        "figures": [
+            "name": "independent_candidate_evidence_review.json",
+            "url": "data/szymanski-2024-xrd-pdf/verification/independent_candidate_evidence_review.json",
+            "description": "Independent audit/review evidence for this open research revision."
+          },
           {
-            "image": "data/szymanski-2024-xrd-pdf/verification/Q2/diagnostics.png",
-            "label": "Q2 executed baseline diagnostics",
-            "caption": "Benchmark-generated comparison, not a paper figure. Multiphase recovery from Fig.2 and the discussion of overlapping PDF features. Nonnegative mean-template fitting with supplied cardinality is a controlled baseline and does not reproduce iterative CNN/subtraction."
+            "name": "packaging_checks.json",
+            "url": "data/szymanski-2024-xrd-pdf/verification/packaging_checks.json",
+            "description": "Independent audit/review evidence for this open research revision."
           }
         ],
         "methods": [
           {
             "name": "candidate.py",
             "url": "data/szymanski-2024-xrd-pdf/workflows/candidate.py",
-            "description": "Executed worked solution using only the raw input bundle."
-          },
-          {
-            "name": "conclusion.md",
-            "url": "data/szymanski-2024-xrd-pdf/verification/Q2/conclusion.md",
-            "description": "Executed evidence-backed scientific interpretation and scope limits."
+            "description": "One executed worked solution; model and numerical choices are not mandatory."
           },
           {
             "name": "verify.py",
             "url": "data/szymanski-2024-xrd-pdf/workflows/verify.py",
-            "description": "Independent numerical checker; evaluator-side only."
+            "description": "Method-neutral submission-integrity checks and independent metric recomputation."
           },
           {
             "name": "Q2.json",
             "url": "data/szymanski-2024-xrd-pdf/workflows/Q2.json",
-            "description": "Tool calls, command, outputs and source relationship."
+            "description": "Worked-example tool calls and source relationship."
+          },
+          {
+            "name": "scientific_review_rubric.md",
+            "url": "data/szymanski-2024-xrd-pdf/verification/scientific_review_rubric.md",
+            "description": "Scientific validity and evidence rubric, separate from numerical integrity."
+          },
+          {
+            "name": "worked_report.md",
+            "url": "data/szymanski-2024-xrd-pdf/verification/Q2/report.md",
+            "description": "Illustrative worked-example output; not an exact answer key."
+          },
+          {
+            "name": "worked_metrics.csv",
+            "url": "data/szymanski-2024-xrd-pdf/verification/Q2/metrics.csv",
+            "description": "Illustrative worked-example output; not an exact answer key."
+          },
+          {
+            "name": "worked_design.json",
+            "url": "data/szymanski-2024-xrd-pdf/verification/Q2/design.json",
+            "description": "Illustrative worked-example output; not an exact answer key."
+          }
+        ],
+        "figures": [
+          {
+            "image": "data/szymanski-2024-xrd-pdf/verification/Q2/diagnostics.png",
+            "label": "Q2 worked-example diagnostics",
+            "caption": "An executed illustrative analysis. Alternative valid methods can produce different results. Multiphase phase identification in Fig. 2 and iterative identification in Methods. The v2 question removes the earlier supplied-cardinality shortcut. The released mixture cohorts differ in component identities and amounts as well as count; a causal explanation requires evidence beyond aggregate score differences."
           }
         ],
         "thresholds": {
-          "origin": "Benchmark-defined numerical reproducibility tolerances",
-          "generatedBy": "Independent verification agent; reviewed against deterministic double-precision outputs.",
-          "provenance": "These are software agreement tolerances, not measurement error bars or paper-reported thresholds. Original filename labels are exact anchors; model targets are newly computed controlled baselines.",
+          "origin": "Benchmark evaluator: arithmetic checks and scientific rubric",
+          "generatedBy": "Independent verification review",
+          "provenance": "Numerical tolerances concern arithmetic consistency only. No historical or candidate performance number is a pass threshold.",
           "notes": [
             {
-              "title": "Numerics",
-              "description": "Exact sample/label coverage and counts; per-score and metric agreement follows verify.py (relative 1e-6 and absolute 1e-7 for model scores; absolute 1e-10 for classification metrics; Q3 metric agreement within 1e-9; transforms within relative/absolute 1e-9). Scientific interpretation and equivalent-method answers require evaluator review."
+              "title": "Scientific judgment",
+              "description": "Method choice and negative findings are allowed. Checks cannot prove absence of target-label leakage from outputs alone; inspect code and execution evidence. Alternative outcomes require evidence, not agreement with the worked example."
             }
           ]
         }
@@ -318,126 +298,121 @@
     {
       "id": "SZYMANSKI24-Q3",
       "kind": "Subquestion",
-      "executionStatus": "validated",
-      "title": "How do additive noise and smooth background alter virtual PDFs across distance windows?",
+      "executionStatus": "worked-example-executed",
+      "title": "Which real-space interval preserves phase identification under noise and smooth background?",
       "inputs": [
         {
           "name": "Li-Ti-P-O_1-Phase.npz",
           "url": "data/szymanski-2024-xrd-pdf/inputs/Li-Ti-P-O_1-Phase.npz",
-          "description": "Native-angle numeric spectra with anonymous record IDs; no resampling or derived features."
+          "description": "Native-angle numeric spectra keyed by opaque record ID; no derived features."
         },
         {
           "name": "Li-Ti-P-O_1-Phase.json",
           "url": "data/szymanski-2024-xrd-pdf/inputs/Li-Ti-P-O_1-Phase.json",
-          "description": "Record identities, raw labels and evaluation metadata; target labels excluded during inference."
-        },
-        {
-          "name": "protocol.json",
-          "url": "data/szymanski-2024-xrd-pdf/inputs/protocol.json",
-          "description": "Fixed paired comparison design and numerical conventions, with no fitted outputs."
-        },
-        {
-          "name": "output_schema.json",
-          "url": "data/szymanski-2024-xrd-pdf/inputs/output_schema.json",
-          "description": "Required numerical outputs and trace format."
-        },
-        {
-          "name": "README.md",
-          "url": "data/szymanski-2024-xrd-pdf/inputs/README.md",
-          "description": "Input array definitions, units and label semantics."
+          "description": "Raw phase/preparation labels and record metadata; no assigned split or analysis settings."
         }
       ],
       "prompt": {
-        "background": "The supplied single-phase simulations include several realizations of Li2TiO3. Their existing artifacts remain part of the baseline. Controlled added perturbations can reveal how representation and distance-window choices change sensitivity.",
-        "instruction": "Using the specified repeated noise and smooth-background perturbations, determine how distortion varies across distance windows and how much baseline signal each window retains. Produce per-trial measurements, aggregated comparisons and diagnostic plots, then recommend a window for these perturbations with a quantified tradeoff. Distinguish retained signal energy from evidence of retained phase-identification accuracy. Use protocol.json and output_schema.json for the controlled comparison and output contract."
+        "background": "Simulation NPZ files contain a shared two-theta axis `theta` in degrees and one native intensity array per record ID. The matching JSON tables give `id`, `chemistry`, and `phases`; single-phase records also have a native `replicate` index. Simulated phase IDs combine formula and space-group number. Repeated spectra are augmented realizations of those phases. These inputs cover the Li-Ti-P-O chemistry. Their existing simulation artifacts remain part of the starting spectra. The radiation wavelength is 1.5406 Å. Here a virtual PDF is the uncorrected representation G(r)=(2/π)∫Q I(Q) sin(Qr)dQ, with Q=4π sin(θ)/λ and θ half the recorded angle; it is not a quantitatively normalized total-scattering PDF.",
+        "instruction": "Determine whether a real-space interval can make phase identification more robust to added measurement noise and smooth background without sacrificing discrimination among phases. Design a controlled investigation across the supplied phase library, establish whether the interval choice generalizes beyond the cases used to select it, and quantify the robustness–discrimination tradeoff relative to XRD. Choose and justify perturbations, severities, intervals and validation; changes in signal energy alone do not establish phase-identification performance. Return report.md with your scientific answer, methodological justification, uncertainty and limitations; diagnostic figures; and runnable analysis code. For numerical checking, supply predictions.csv with columns id,method,representation,condition,fold,predicted, where predicted is a JSON list of phase IDs and representation is XRD, PDF or Combined. Supply splits.csv with id,fold,role (train,validation,test; each fold records disjoint source-record partitions). Use consistent method/fold identifiers across comparisons. Supply metrics.csv with chemistry,group,method,representation,condition,fold,metric,value,n; n is the number of evaluated records. For Q3 use group=all and report exact_match for clean and perturbed held-out spectra. Use method to distinguish interval/model choices and condition to distinguish perturbations and trials; provide conditions.csv with condition,artifact,description, where artifact is clean,noise or background. Save the generated numerical perturbation evidence in evidence.npz and document its arrays in the report so the experiment can be reconstructed. Include XRD and PDF predictions. Record IDs always refer to the original spectrum, so every derivative of a test record stays out of training and selection."
       },
-      "groundTruthReasoning": "1. Use Python/NumPy to read only the linked raw numeric NPZ arrays and metadata. Interpolate onto the shared angular interval, subtract the declared intensity percentile and scale by peak height. The source audit verifies every packaged array against the release.\n\n2. Use NumPy to compute the uncorrected sine-transform representation with nonuniform-Q trapezoidal quadrature. The independent verifier recomputes a raw-linked transform probe without importing the candidate.\n\n3. Select all 11 released Li2TiO3_15 realizations. Use NumPy PCG64 draws for five repeated noise perturbations at each of two amplitudes and construct two smooth Gaussian backgrounds. Transform baseline and perturbed traces through r=120 Å. Compute per-window relative distortions and sampled signal/artifact energy fractions, then aggregate over trials and baselines.\n\n4. Use Matplotlib to save diagnostics.png and write an evidence-backed conclusion alongside the numerical outputs. Executed 5–40 Å tradeoff: noise, amplitude 0.03: mean PDF distortion 0.06800, retained baseline energy 0.6006; background, amplitude 0.2: mean PDF distortion 0.00727, retained baseline energy 0.6006.\n\n5. Evaluator only: run the independently implemented verifier against the original-filename label map, numerical reference and raw-linked transform check. Apply deliberately corrupted-output controls and inspect the scientific conclusion and plots. The separate execution agent reruns every question from packaged inputs in a clean output directory.\n\nSource relationship: Artifact localization and r-window design related to Fig.5 and the Methods/Discussion. These perturbations are generated during solving from raw released baselines; they are not the missing categorized historical artifact dataset.",
+      "groundTruthReasoning": "1. Inspect the supplied native spectra and raw metadata using Python/NumPy; identify data support, class coverage and appropriate evaluation units. Choose the analysis without reading evaluator references.\n\n2. One candidate chooses several real-space intervals and realistic added-noise/background levels, trains phase classifiers on clean training data, and selects an interval using perturbed validation data. It evaluates clean and perturbed held-out records, retains paired numerical evidence and compares classification performance with signal distortion. Its intervals and perturbations are illustrative.\n\n3. Execute the candidate with NumPy, SciPy, scikit-learn and Matplotlib. Save prediction-level evidence, source-record partitions, reported metrics, plots and a scientific report. The linked report records the actual findings and limitations of this worked example.\n\n4. Evaluator only: independently recover truth from the original release filenames, recompute metrics from predictions, and check source partitions and artifact evidence. Do not compare a solver’s predictions with the candidate’s exact outputs. Apply the scientific rubric to validity of design, physical handling, uncertainty, reproducibility and the support for conclusions; a numerical integrity pass is not a research-quality pass.\n\nSource relationship: Artifact localization and distance-range selection in Fig. 5 and Methods/Discussion. The separated historical artifact dataset is unavailable. The solver generates a controlled experiment from released raw baselines and must test predictive discrimination, extending the earlier energy-only task.",
       "verification": {
-        "description": "Recompute metrics against original source labels (or independently regenerated perturbations for Q3), validate row coverage, train/test separation, normalized scores, fusion and raw-linked sine transform. Compare with the executed deterministic baseline reference. Require an evidence-backed scientific conclusion and diagnostic plots. Passing numerical checks alone cannot establish absence of label leakage; use an isolated input bundle and retain execution traces.",
+        "description": "Ground truth is the released phase/preparation metadata. The checker recomputes metrics and checks numerical/evaluation integrity without requiring a particular model, split, normalization, score fusion, perturbation, interval or outcome. Scientific success requires the separate evidence rubric and review of runnable code, figures and conclusions. The worked solution is illustrative, not a prediction target.",
         "data": [
-          {
-            "name": "result.json",
-            "url": "data/szymanski-2024-xrd-pdf/verification/Q3/result.json",
-            "description": "Executed modern baseline targets; not historical model scores."
-          },
           {
             "name": "source_labels.json",
             "url": "data/szymanski-2024-xrd-pdf/verification/source_labels.json",
-            "description": "Evaluator-only original-filename/source-hash mapping anchoring labels."
+            "description": "Evaluator-only original source paths and raw labels for independent scoring."
           },
           {
             "name": "provenance.json",
             "url": "data/szymanski-2024-xrd-pdf/provenance.json",
-            "description": "Archive checksum, inventory, raw-value packaging and availability limits."
-          },
-          {
-            "name": "workflow_execution_review.json",
-            "url": "data/szymanski-2024-xrd-pdf/verification/workflow_execution_review.json",
-            "description": "Independent review/execution evidence."
+            "description": "Source archive identity, raw-value projection and availability limits."
           },
           {
             "name": "verification_audit.json",
             "url": "data/szymanski-2024-xrd-pdf/verification/verification_audit.json",
-            "description": "Independent review/execution evidence."
+            "description": "Independent audit/review evidence for this open research revision."
+          },
+          {
+            "name": "workflow_execution_review.json",
+            "url": "data/szymanski-2024-xrd-pdf/verification/workflow_execution_review.json",
+            "description": "Independent audit/review evidence for this open research revision."
           },
           {
             "name": "question_quality_review.json",
             "url": "data/szymanski-2024-xrd-pdf/verification/question_quality_review.json",
-            "description": "Independent review/execution evidence."
+            "description": "Independent audit/review evidence for this open research revision."
           },
           {
-            "name": "input_projection_audit.json",
-            "url": "data/szymanski-2024-xrd-pdf/verification/input_projection_audit.json",
-            "description": "Independent review/execution evidence."
+            "name": "scientific_review.json",
+            "url": "data/szymanski-2024-xrd-pdf/verification/scientific_review.json",
+            "description": "Independent audit/review evidence for this open research revision."
           },
           {
-            "name": "metrics.csv",
-            "url": "data/szymanski-2024-xrd-pdf/verification/Q3/metrics.csv",
-            "description": "Held-back numerical reference output for this fixed protocol."
+            "name": "independent_candidate_evidence_review.json",
+            "url": "data/szymanski-2024-xrd-pdf/verification/independent_candidate_evidence_review.json",
+            "description": "Independent audit/review evidence for this open research revision."
           },
           {
-            "name": "curves.npz",
-            "url": "data/szymanski-2024-xrd-pdf/verification/Q3/curves.npz",
-            "description": "Held-back numerical reference output for this fixed protocol."
-          }
-        ],
-        "figures": [
-          {
-            "image": "data/szymanski-2024-xrd-pdf/verification/Q3/diagnostics.png",
-            "label": "Q3 executed baseline diagnostics",
-            "caption": "Benchmark-generated comparison, not a paper figure. Artifact localization and r-window design related to Fig.5 and the Methods/Discussion. These perturbations are generated during solving from raw released baselines; they are not the missing categorized historical artifact dataset."
+            "name": "packaging_checks.json",
+            "url": "data/szymanski-2024-xrd-pdf/verification/packaging_checks.json",
+            "description": "Independent audit/review evidence for this open research revision."
           }
         ],
         "methods": [
           {
             "name": "candidate.py",
             "url": "data/szymanski-2024-xrd-pdf/workflows/candidate.py",
-            "description": "Executed worked solution using only the raw input bundle."
-          },
-          {
-            "name": "conclusion.md",
-            "url": "data/szymanski-2024-xrd-pdf/verification/Q3/conclusion.md",
-            "description": "Executed evidence-backed scientific interpretation and scope limits."
+            "description": "One executed worked solution; model and numerical choices are not mandatory."
           },
           {
             "name": "verify.py",
             "url": "data/szymanski-2024-xrd-pdf/workflows/verify.py",
-            "description": "Independent numerical checker; evaluator-side only."
+            "description": "Method-neutral submission-integrity checks and independent metric recomputation."
           },
           {
             "name": "Q3.json",
             "url": "data/szymanski-2024-xrd-pdf/workflows/Q3.json",
-            "description": "Tool calls, command, outputs and source relationship."
+            "description": "Worked-example tool calls and source relationship."
+          },
+          {
+            "name": "scientific_review_rubric.md",
+            "url": "data/szymanski-2024-xrd-pdf/verification/scientific_review_rubric.md",
+            "description": "Scientific validity and evidence rubric, separate from numerical integrity."
+          },
+          {
+            "name": "worked_report.md",
+            "url": "data/szymanski-2024-xrd-pdf/verification/Q3/report.md",
+            "description": "Illustrative worked-example output; not an exact answer key."
+          },
+          {
+            "name": "worked_metrics.csv",
+            "url": "data/szymanski-2024-xrd-pdf/verification/Q3/metrics.csv",
+            "description": "Illustrative worked-example output; not an exact answer key."
+          },
+          {
+            "name": "worked_design.json",
+            "url": "data/szymanski-2024-xrd-pdf/verification/Q3/design.json",
+            "description": "Illustrative worked-example output; not an exact answer key."
+          }
+        ],
+        "figures": [
+          {
+            "image": "data/szymanski-2024-xrd-pdf/verification/Q3/diagnostics.png",
+            "label": "Q3 worked-example diagnostics",
+            "caption": "An executed illustrative analysis. Alternative valid methods can produce different results. Artifact localization and distance-range selection in Fig. 5 and Methods/Discussion. The separated historical artifact dataset is unavailable. The solver generates a controlled experiment from released raw baselines and must test predictive discrimination, extending the earlier energy-only task."
           }
         ],
         "thresholds": {
-          "origin": "Benchmark-defined numerical reproducibility tolerances",
-          "generatedBy": "Independent verification agent; reviewed against deterministic double-precision outputs.",
-          "provenance": "These are software agreement tolerances, not measurement error bars or paper-reported thresholds. Original filename labels are exact anchors; model targets are newly computed controlled baselines.",
+          "origin": "Benchmark evaluator: arithmetic checks and scientific rubric",
+          "generatedBy": "Independent verification review",
+          "provenance": "Numerical tolerances concern arithmetic consistency only. No historical or candidate performance number is a pass threshold.",
           "notes": [
             {
-              "title": "Numerics",
-              "description": "Exact sample/label coverage and counts; per-score and metric agreement follows verify.py (relative 1e-6 and absolute 1e-7 for model scores; absolute 1e-10 for classification metrics; Q3 metric agreement within 1e-9; transforms within relative/absolute 1e-9). Scientific interpretation and equivalent-method answers require evaluator review."
+              "title": "Scientific judgment",
+              "description": "Method choice and negative findings are allowed. Checks cannot prove absence of target-label leakage from outputs alone; inspect code and execution evidence. Alternative outcomes require evidence, not agreement with the worked example."
             }
           ]
         }
@@ -446,151 +421,151 @@
     {
       "id": "SZYMANSKI24-Q4",
       "kind": "Subquestion",
-      "executionStatus": "validated",
-      "title": "How well do simulation-derived references recover secondary phases in measured binary mixtures as abundance decreases?",
+      "executionStatus": "worked-example-executed",
+      "title": "Does virtual-PDF evidence improve detection of secondary phases in measured mixtures?",
       "inputs": [
         {
           "name": "Li-La-Zr-O_1-Phase.npz",
           "url": "data/szymanski-2024-xrd-pdf/inputs/Li-La-Zr-O_1-Phase.npz",
-          "description": "Native-angle numeric spectra with anonymous record IDs; no resampling or derived features."
+          "description": "Native-angle numeric spectra keyed by opaque record ID; no derived features."
         },
         {
           "name": "Li-La-Zr-O_1-Phase.json",
           "url": "data/szymanski-2024-xrd-pdf/inputs/Li-La-Zr-O_1-Phase.json",
-          "description": "Record identities, raw labels and evaluation metadata; target labels excluded during inference."
+          "description": "Raw phase/preparation labels and record metadata; no assigned split or analysis settings."
         },
         {
           "name": "Li-La-Zr-O_Experiments.npz",
           "url": "data/szymanski-2024-xrd-pdf/inputs/Li-La-Zr-O_Experiments.npz",
-          "description": "Native-angle numeric spectra with anonymous record IDs; no resampling or derived features."
+          "description": "Native-angle numeric spectra keyed by opaque record ID; no derived features."
         },
         {
           "name": "Li-La-Zr-O_Experiments.json",
           "url": "data/szymanski-2024-xrd-pdf/inputs/Li-La-Zr-O_Experiments.json",
-          "description": "Record identities, raw labels and evaluation metadata; target labels excluded during inference."
+          "description": "Raw phase/preparation labels and record metadata; no assigned split or analysis settings."
         },
         {
           "name": "Li-Ti-P-O_1-Phase.npz",
           "url": "data/szymanski-2024-xrd-pdf/inputs/Li-Ti-P-O_1-Phase.npz",
-          "description": "Native-angle numeric spectra with anonymous record IDs; no resampling or derived features."
+          "description": "Native-angle numeric spectra keyed by opaque record ID; no derived features."
         },
         {
           "name": "Li-Ti-P-O_1-Phase.json",
           "url": "data/szymanski-2024-xrd-pdf/inputs/Li-Ti-P-O_1-Phase.json",
-          "description": "Record identities, raw labels and evaluation metadata; target labels excluded during inference."
+          "description": "Raw phase/preparation labels and record metadata; no assigned split or analysis settings."
         },
         {
           "name": "Li-Ti-P-O_Experiments.npz",
           "url": "data/szymanski-2024-xrd-pdf/inputs/Li-Ti-P-O_Experiments.npz",
-          "description": "Native-angle numeric spectra with anonymous record IDs; no resampling or derived features."
+          "description": "Native-angle numeric spectra keyed by opaque record ID; no derived features."
         },
         {
           "name": "Li-Ti-P-O_Experiments.json",
           "url": "data/szymanski-2024-xrd-pdf/inputs/Li-Ti-P-O_Experiments.json",
-          "description": "Record identities, raw labels and evaluation metadata; target labels excluded during inference."
-        },
-        {
-          "name": "protocol.json",
-          "url": "data/szymanski-2024-xrd-pdf/inputs/protocol.json",
-          "description": "Fixed paired comparison design and numerical conventions, with no fitted outputs."
-        },
-        {
-          "name": "output_schema.json",
-          "url": "data/szymanski-2024-xrd-pdf/inputs/output_schema.json",
-          "description": "Required numerical outputs and trace format."
-        },
-        {
-          "name": "README.md",
-          "url": "data/szymanski-2024-xrd-pdf/inputs/README.md",
-          "description": "Input array definitions, units and label semantics."
+          "description": "Raw phase/preparation labels and record metadata; no assigned split or analysis settings."
         }
       ],
       "prompt": {
-        "background": "The measured powder diffraction patterns are binary mixtures in two chemical spaces. Each chemistry has four candidate reagent formulas, potentially represented by several simulated polymorphs. Preparation labels identify the secondary formula and its known weight percentage for evaluation.",
-        "instruction": "Use simulation-derived references to identify both formulas in every measured mixture without using its preparation labels during fitting. Compare XRD, virtual-PDF and averaged-score predictions across secondary-phase abundance. Report formula-level micro-F1, exact-pair accuracy and secondary-phase recall by chemistry and abundance, and explain whether a consistent detection trend is supported. State the limits of interpreting template coefficients and drawing detection-limit conclusions. Use protocol.json and output_schema.json for the controlled comparison and output contract."
+        "background": "Simulation NPZ files contain a shared two-theta axis `theta` in degrees and one native intensity array per record ID. The matching JSON tables give `id`, `chemistry`, and `phases`; single-phase records also have a native `replicate` index. Simulated phase IDs combine formula and space-group number. Repeated spectra are augmented realizations of those phases. Experimental NPZ entries are native two-column arrays (two-theta in degrees, intensity). Their JSON labels give major and minor formulas and minor_weight_percent from sample preparation, for scoring only. Experimental identities are evaluated at formula level, which does not distinguish polymorphs. The candidate phases are the full supplied simulation library for that chemistry. The radiation wavelength is 1.5406 Å. Here a virtual PDF is the uncorrected representation G(r)=(2/π)∫Q I(Q) sin(Qr)dQ, with Q=4π sin(θ)/λ and θ half the recorded angle; it is not a quantitatively normalized total-scattering PDF.",
+        "instruction": "Identify the phases in the measured patterns using the simulation library and determine whether integrating virtual-PDF evidence helps detect secondary phases as their abundance falls. Assess missed and spurious phases, differences between chemistries and the strength of any abundance-dependent conclusion. Choose and justify the transfer and validation strategy without using experimental identities or abundances for fitting, tuning or candidate restriction. Evaluate every experimental spectrum. Return report.md with your scientific answer, methodological justification, uncertainty and limitations; diagnostic figures; and runnable analysis code. For numerical checking, supply predictions.csv with columns id,method,representation,condition,fold,predicted, where predicted is a JSON list of formulas and representation is XRD, PDF or Combined. Supply splits.csv with id,fold,role (train,validation,test; each fold records disjoint source-record partitions). Use consistent method/fold identifiers across comparisons. Supply metrics.csv with chemistry,group,method,representation,condition,fold,metric,value,n; n is the number of evaluated records. For Q4 predicted contains formulas, condition=baseline, and group is the secondary weight percentage as a string at scoring time; report exact_match, micro_f1 and minor_recall. Each fold places all experimental records in test and uses only simulated single-phase records for training or validation. Include XRD, PDF and Combined predictions."
       },
-      "groundTruthReasoning": "1. Use Python/NumPy to read only the linked raw numeric NPZ arrays and metadata. Interpolate onto the shared angular interval, subtract the declared intensity percentile and scale by peak height. The source audit verifies every packaged array against the release.\n\n2. Use NumPy to compute the uncorrected sine-transform representation with nonuniform-Q trapezoidal quadrature. The independent verifier recomputes a raw-linked transform probe without importing the candidate.\n\n3. Restrict single-phase references to the four candidate formulas per chemistry, retaining their polymorphs. Use the same nonnegative template fit as the simulation benchmark; sum coefficient scores by formula, average representations and select two formulas. Only afterward use preparation labels to evaluate secondary recall, exact pair recovery and micro-F1 at each abundance.\n\n4. Use Matplotlib to save diagnostics.png and write an evidence-backed conclusion alongside the numerical outputs. Endpoint results: Li-La-Zr-O 2 wt% Fused secondary recall 0.333; Li-La-Zr-O 2 wt% PDF secondary recall 0.333; Li-La-Zr-O 2 wt% XRD secondary recall 0.500; Li-La-Zr-O 20 wt% Fused secondary recall 0.667; Li-La-Zr-O 20 wt% PDF secondary recall 0.667; Li-La-Zr-O 20 wt% XRD secondary recall 0.667; Li-Ti-P-O 2 wt% Fused secondary recall 0.500; Li-Ti-P-O 2 wt% PDF secondary recall 0.333; Li-Ti-P-O 2 wt% XRD secondary recall 0.417; Li-Ti-P-O 20 wt% Fused secondary recall 0.833; Li-Ti-P-O 20 wt% PDF secondary recall 0.917; Li-Ti-P-O 20 wt% XRD secondary recall 0.750.\n\n5. Evaluator only: run the independently implemented verifier against the original-filename label map, numerical reference and raw-linked transform check. Apply deliberately corrupted-output controls and inspect the scientific conclusion and plots. The separate execution agent reruns every question from packaged inputs in a clean output directory.\n\nSource relationship: Experimental validation and secondary-abundance dependence related to Fig.6. Known four-formula libraries and nonnegative fits differ from the paper CNNs. Formula-level scoring cannot resolve polymorph correctness.",
+      "groundTruthReasoning": "1. Inspect the supplied native spectra and raw metadata using Python/NumPy; identify data support, class coverage and appropriate evaluation units. Choose the analysis without reading evaluator references.\n\n2. One candidate calibrates full-library phase-support thresholds using simulated validation mixtures, then evaluates raw experimental spectra after documented preprocessing. It combines polymorph evidence at formula level and compares standalone/integrated inference using preparation labels only after predictions are saved. Abundance-specific recall, false positives and uncertainty support the conclusion.\n\n3. Execute the candidate with NumPy, SciPy, scikit-learn and Matplotlib. Save prediction-level evidence, source-record partitions, reported metrics, plots and a scientific report. The linked report records the actual findings and limitations of this worked example.\n\n4. Evaluator only: independently recover truth from the original release filenames, recompute metrics from predictions, and check source partitions and artifact evidence. Do not compare a solver’s predictions with the candidate’s exact outputs. Apply the scientific rubric to validity of design, physical handling, uncertainty, reproducibility and the support for conclusions; a numerical integrity pass is not a research-quality pass.\n\nSource relationship: Transfer to measured specimens and secondary-phase abundance in Fig. 6. The v2 question removes the four-formula shortlist. Formula-level preparation labels are independent scoring anchors, but are not independent measurements of sample purity or a universal detection limit.",
       "verification": {
-        "description": "Recompute metrics against original source labels (or independently regenerated perturbations for Q3), validate row coverage, train/test separation, normalized scores, fusion and raw-linked sine transform. Compare with the executed deterministic baseline reference. Require an evidence-backed scientific conclusion and diagnostic plots. Passing numerical checks alone cannot establish absence of label leakage; use an isolated input bundle and retain execution traces.",
+        "description": "Ground truth is the released phase/preparation metadata. The checker recomputes metrics and checks numerical/evaluation integrity without requiring a particular model, split, normalization, score fusion, perturbation, interval or outcome. Scientific success requires the separate evidence rubric and review of runnable code, figures and conclusions. The worked solution is illustrative, not a prediction target.",
         "data": [
-          {
-            "name": "result.json",
-            "url": "data/szymanski-2024-xrd-pdf/verification/Q4/result.json",
-            "description": "Executed modern baseline targets; not historical model scores."
-          },
           {
             "name": "source_labels.json",
             "url": "data/szymanski-2024-xrd-pdf/verification/source_labels.json",
-            "description": "Evaluator-only original-filename/source-hash mapping anchoring labels."
+            "description": "Evaluator-only original source paths and raw labels for independent scoring."
           },
           {
             "name": "provenance.json",
             "url": "data/szymanski-2024-xrd-pdf/provenance.json",
-            "description": "Archive checksum, inventory, raw-value packaging and availability limits."
-          },
-          {
-            "name": "workflow_execution_review.json",
-            "url": "data/szymanski-2024-xrd-pdf/verification/workflow_execution_review.json",
-            "description": "Independent review/execution evidence."
+            "description": "Source archive identity, raw-value projection and availability limits."
           },
           {
             "name": "verification_audit.json",
             "url": "data/szymanski-2024-xrd-pdf/verification/verification_audit.json",
-            "description": "Independent review/execution evidence."
+            "description": "Independent audit/review evidence for this open research revision."
+          },
+          {
+            "name": "workflow_execution_review.json",
+            "url": "data/szymanski-2024-xrd-pdf/verification/workflow_execution_review.json",
+            "description": "Independent audit/review evidence for this open research revision."
           },
           {
             "name": "question_quality_review.json",
             "url": "data/szymanski-2024-xrd-pdf/verification/question_quality_review.json",
-            "description": "Independent review/execution evidence."
+            "description": "Independent audit/review evidence for this open research revision."
           },
           {
-            "name": "input_projection_audit.json",
-            "url": "data/szymanski-2024-xrd-pdf/verification/input_projection_audit.json",
-            "description": "Independent review/execution evidence."
+            "name": "scientific_review.json",
+            "url": "data/szymanski-2024-xrd-pdf/verification/scientific_review.json",
+            "description": "Independent audit/review evidence for this open research revision."
           },
           {
-            "name": "predictions.csv",
-            "url": "data/szymanski-2024-xrd-pdf/verification/Q4/predictions.csv",
-            "description": "Held-back numerical reference output for this fixed protocol."
-          }
-        ],
-        "figures": [
+            "name": "independent_candidate_evidence_review.json",
+            "url": "data/szymanski-2024-xrd-pdf/verification/independent_candidate_evidence_review.json",
+            "description": "Independent audit/review evidence for this open research revision."
+          },
           {
-            "image": "data/szymanski-2024-xrd-pdf/verification/Q4/diagnostics.png",
-            "label": "Q4 executed baseline diagnostics",
-            "caption": "Benchmark-generated comparison, not a paper figure. Experimental validation and secondary-abundance dependence related to Fig.6. Known four-formula libraries and nonnegative fits differ from the paper CNNs. Formula-level scoring cannot resolve polymorph correctness."
+            "name": "packaging_checks.json",
+            "url": "data/szymanski-2024-xrd-pdf/verification/packaging_checks.json",
+            "description": "Independent audit/review evidence for this open research revision."
           }
         ],
         "methods": [
           {
             "name": "candidate.py",
             "url": "data/szymanski-2024-xrd-pdf/workflows/candidate.py",
-            "description": "Executed worked solution using only the raw input bundle."
-          },
-          {
-            "name": "conclusion.md",
-            "url": "data/szymanski-2024-xrd-pdf/verification/Q4/conclusion.md",
-            "description": "Executed evidence-backed scientific interpretation and scope limits."
+            "description": "One executed worked solution; model and numerical choices are not mandatory."
           },
           {
             "name": "verify.py",
             "url": "data/szymanski-2024-xrd-pdf/workflows/verify.py",
-            "description": "Independent numerical checker; evaluator-side only."
+            "description": "Method-neutral submission-integrity checks and independent metric recomputation."
           },
           {
             "name": "Q4.json",
             "url": "data/szymanski-2024-xrd-pdf/workflows/Q4.json",
-            "description": "Tool calls, command, outputs and source relationship."
+            "description": "Worked-example tool calls and source relationship."
+          },
+          {
+            "name": "scientific_review_rubric.md",
+            "url": "data/szymanski-2024-xrd-pdf/verification/scientific_review_rubric.md",
+            "description": "Scientific validity and evidence rubric, separate from numerical integrity."
+          },
+          {
+            "name": "worked_report.md",
+            "url": "data/szymanski-2024-xrd-pdf/verification/Q4/report.md",
+            "description": "Illustrative worked-example output; not an exact answer key."
+          },
+          {
+            "name": "worked_metrics.csv",
+            "url": "data/szymanski-2024-xrd-pdf/verification/Q4/metrics.csv",
+            "description": "Illustrative worked-example output; not an exact answer key."
+          },
+          {
+            "name": "worked_design.json",
+            "url": "data/szymanski-2024-xrd-pdf/verification/Q4/design.json",
+            "description": "Illustrative worked-example output; not an exact answer key."
+          }
+        ],
+        "figures": [
+          {
+            "image": "data/szymanski-2024-xrd-pdf/verification/Q4/diagnostics.png",
+            "label": "Q4 worked-example diagnostics",
+            "caption": "An executed illustrative analysis. Alternative valid methods can produce different results. Transfer to measured specimens and secondary-phase abundance in Fig. 6. The v2 question removes the four-formula shortlist. Formula-level preparation labels are independent scoring anchors, but are not independent measurements of sample purity or a universal detection limit."
           }
         ],
         "thresholds": {
-          "origin": "Benchmark-defined numerical reproducibility tolerances",
-          "generatedBy": "Independent verification agent; reviewed against deterministic double-precision outputs.",
-          "provenance": "These are software agreement tolerances, not measurement error bars or paper-reported thresholds. Original filename labels are exact anchors; model targets are newly computed controlled baselines.",
+          "origin": "Benchmark evaluator: arithmetic checks and scientific rubric",
+          "generatedBy": "Independent verification review",
+          "provenance": "Numerical tolerances concern arithmetic consistency only. No historical or candidate performance number is a pass threshold.",
           "notes": [
             {
-              "title": "Numerics",
-              "description": "Exact sample/label coverage and counts; per-score and metric agreement follows verify.py (relative 1e-6 and absolute 1e-7 for model scores; absolute 1e-10 for classification metrics; Q3 metric agreement within 1e-9; transforms within relative/absolute 1e-9). Scientific interpretation and equivalent-method answers require evaluator review."
+              "title": "Scientific judgment",
+              "description": "Method choice and negative findings are allowed. Checks cannot prove absence of target-label leakage from outputs alone; inspect code and execution evidence. Alternative outcomes require evidence, not agreement with the worked example."
             }
           ]
         }

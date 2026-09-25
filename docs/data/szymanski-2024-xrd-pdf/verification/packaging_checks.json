@@ -1,7 +1,6 @@
 {
-  "paper_id": "szymanski-2024-xrd-pdf",
+  "revision": "open-research-v2",
   "status": "passed",
-  "questions": 4,
   "sample_count": 2930,
   "inventory": [
     {
@@ -11,13 +10,8 @@
     },
     {
       "chemistry": "Li-La-Zr-O",
-      "kind": "2-Phase",
-      "patterns": 400
-    },
-    {
-      "chemistry": "Li-La-Zr-O",
-      "kind": "3-Phase",
-      "patterns": 400
+      "kind": "Mixtures",
+      "patterns": 800
     },
     {
       "chemistry": "Li-La-Zr-O",
@@ -31,13 +25,8 @@
     },
     {
       "chemistry": "Li-Ti-P-O",
-      "kind": "2-Phase",
-      "patterns": 400
-    },
-    {
-      "chemistry": "Li-Ti-P-O",
-      "kind": "3-Phase",
-      "patterns": 400
+      "kind": "Mixtures",
+      "patterns": 800
     },
     {
       "chemistry": "Li-Ti-P-O",
@@ -45,42 +34,57 @@
       "patterns": 120
     }
   ],
-  "input_hashes_match": true,
-  "paper_matches_active_dataset": true,
   "exports": [
     {
       "question": "Q1",
-      "input_files": 7,
-      "exact_allowlist_passed": true,
-      "raw_input_hashes_match": true,
-      "protocol_and_schema_have_only_relevant_sections": true,
+      "raw_input_files": 4,
+      "exact_allowlist": true,
+      "raw_hashes_match": true,
+      "prompt_is_self_contained": true,
       "nonempty_destination_rejected": true
     },
     {
       "question": "Q2",
-      "input_files": 15,
-      "exact_allowlist_passed": true,
-      "raw_input_hashes_match": true,
-      "protocol_and_schema_have_only_relevant_sections": true,
+      "raw_input_files": 8,
+      "exact_allowlist": true,
+      "raw_hashes_match": true,
+      "prompt_is_self_contained": true,
       "nonempty_destination_rejected": true
     },
     {
       "question": "Q3",
-      "input_files": 5,
-      "exact_allowlist_passed": true,
-      "raw_input_hashes_match": true,
-      "protocol_and_schema_have_only_relevant_sections": true,
+      "raw_input_files": 2,
+      "exact_allowlist": true,
+      "raw_hashes_match": true,
+      "prompt_is_self_contained": true,
       "nonempty_destination_rejected": true
     },
     {
       "question": "Q4",
-      "input_files": 11,
-      "exact_allowlist_passed": true,
-      "raw_input_hashes_match": true,
-      "protocol_and_schema_have_only_relevant_sections": true,
+      "raw_input_files": 8,
+      "exact_allowlist": true,
+      "raw_hashes_match": true,
+      "prompt_is_self_contained": true,
       "nonempty_destination_rejected": true
     }
   ],
+  "input_only_files": [
+    "Li-La-Zr-O_1-Phase.json",
+    "Li-La-Zr-O_1-Phase.npz",
+    "Li-La-Zr-O_Experiments.json",
+    "Li-La-Zr-O_Experiments.npz",
+    "Li-La-Zr-O_Mixtures.json",
+    "Li-La-Zr-O_Mixtures.npz",
+    "Li-Ti-P-O_1-Phase.json",
+    "Li-Ti-P-O_1-Phase.npz",
+    "Li-Ti-P-O_Experiments.json",
+    "Li-Ti-P-O_Experiments.npz",
+    "Li-Ti-P-O_Mixtures.json",
+    "Li-Ti-P-O_Mixtures.npz"
+  ],
+  "protocol_and_schema_files_absent": true,
+  "preassigned_splits_absent": true,
+  "pooled_mixture_ids_opaque": true,
   "schema_validation": "Valid dataset: 3 papers, 12 scenarios.",
-  "answer_boundary": "Exports contain only task.json, reading instructions and the exact relevant numeric inputs, released label/split metadata, protocol, output schema and field definitions. No candidate implementation, fitted parameters, predictions, reference results, verification files or paper metadata are exported. Released labels are evaluation data; output-only validation cannot prove no target-label leakage."
+  "label_boundary": "Labels remain readable for scientific evaluation; target separation requires submitted-code/execution review, not just CSV checks."
 }

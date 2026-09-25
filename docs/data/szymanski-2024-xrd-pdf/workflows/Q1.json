@@ -1,22 +1,17 @@
 {
   "question": "Q1",
-  "runtime": "Use the Python interpreter from the pinned environment created in the entry README; run from the spectral_agent_bench root.",
+  "role": "Evaluator-only illustrative workflow; none of these choices is a solver requirement.",
+  "runtime": "Python 3.12 with the entry requirements; run from spectral_agent_bench root.",
   "tools": [
-    "Python 3.12",
+    "Python",
     "NumPy",
     "SciPy",
     "scikit-learn",
     "Matplotlib"
   ],
-  "analysis": "Fresh supervised models; separate representations and paired errors.",
-  "command": "OPENBLAS_NUM_THREADS=1 MPLCONFIGDIR=/tmp/szymanski-mpl /tmp/xrd-bench-env/bin/python docs/data/szymanski-2024-xrd-pdf/workflows/candidate.py Q1 --inputs docs/data/szymanski-2024-xrd-pdf/inputs --output /tmp/szymanski-answer/Q1",
-  "verification_command": "/tmp/xrd-bench-env/bin/python docs/data/szymanski-2024-xrd-pdf/workflows/verify.py --question Q1 --output /tmp/szymanski-answer/Q1",
-  "source_relationship": "Single-phase identification and complementary representation errors; related to Results: Influence of the number of phases present and Fig.2. Ridge models and the fixed split are benchmark choices, not historical CNN reconstructions.",
-  "steps": [
-    "1. Use Python/NumPy to read only the linked raw numeric NPZ arrays and metadata. Interpolate onto the shared angular interval, subtract the declared intensity percentile and scale by peak height. The source audit verifies every packaged array against the release.\n\n2. Use NumPy to compute the uncorrected sine-transform representation with nonuniform-Q trapezoidal quadrature. The independent verifier recomputes a raw-linked transform probe without importing the candidate.\n\n",
-    "Fit separate scikit-learn RidgeClassifier models on unit-length XRD and virtual-PDF features from training IDs. Predict withheld repeats, convert decision vectors to relative scores and average across representations. Use Python set/count operations to calculate phase accuracy and paired exact-correctness categories.",
-    "Write predictions/metrics, result.json, probe.npz, diagnostics.png and conclusion.md.",
-    "Evaluator independently checks outputs against source labels, transform calculation and executed references."
-  ],
-  "input_boundary": "Candidate has no need to read paper, released models, original answer-bearing paths, reference outputs or other question outputs."
+  "command": "OPENBLAS_NUM_THREADS=1 MPLCONFIGDIR=/tmp/xrd-mpl /tmp/xrd-bench-env/bin/python docs/data/szymanski-2024-xrd-pdf/workflows/candidate.py Q1 --inputs docs/data/szymanski-2024-xrd-pdf/inputs --output /tmp/xrd-answer/Q1",
+  "verification_command": "/tmp/xrd-bench-env/bin/python docs/data/szymanski-2024-xrd-pdf/workflows/verify.py --question Q1 --output /tmp/xrd-answer/Q1",
+  "worked_approach": "One candidate creates its own train/validation/test partitions, constructs both representations, compares two learner families and selects combination settings using validation data. It records held-out predictions, paired comparisons and uncertainty before drawing a scoped conclusion. These are worked-example choices, not solver requirements.",
+  "source_relationship": "Representation comparison and complementary errors in the single-phase part of Fig. 2. The benchmark asks the solver to design the validation and assess sensitivity to analysis choices; no historical CNN score or particular learner is a target.",
+  "verification": "Independent metrics plus submission-integrity checks; scientific rubric required. No exact-reference matching."
 }

@@ -1,0 +1,6802 @@
+[
+  {
+    "id": "B_M_000aa4a09933e8cb",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP2O9_14",
+      "LiTi2O4_31",
+      "LiPO3_13"
+    ]
+  },
+  {
+    "id": "B_M_000d90cfcdec0fea",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2CO3_15",
+      "Li3PO4_31"
+    ]
+  },
+  {
+    "id": "B_M_00231e8e2b3aca8d",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti2P2O11_2",
+      "Ti3PO2_164",
+      "Li2O_225"
+    ]
+  },
+  {
+    "id": "B_M_00866cec7707ce50",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiPO4_31",
+      "LiOH-H2O_12"
+    ]
+  },
+  {
+    "id": "B_M_00c15e25263a8980",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiO2_136",
+      "Ti2P2O11_2"
+    ]
+  },
+  {
+    "id": "B_M_00d3234aa01ebbe2",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiP_14",
+      "Li4P2O7_2",
+      "LiTiPO5_2"
+    ]
+  },
+  {
+    "id": "B_M_00d7f266bb8674ec",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3PO4_62",
+      "LiTiPO5_62",
+      "Ti2P2O9_2"
+    ]
+  },
+  {
+    "id": "B_M_0132e86b4ea9473d",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiPO5_62",
+      "LiPO3_14"
+    ]
+  },
+  {
+    "id": "B_M_0164a4d06136c085",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti2P2O9_2",
+      "Li2CO3_15"
+    ]
+  },
+  {
+    "id": "B_M_0186ce537d86fc00",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiO2_227",
+      "TiP_193"
+    ]
+  },
+  {
+    "id": "B_M_01c3066b27d66f33",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_12",
+      "Li4Ti5O12_227"
+    ]
+  },
+  {
+    "id": "B_M_02d4692b536d0cd5",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti2P2O11_2",
+      "Li2TiO3_15"
+    ]
+  },
+  {
+    "id": "B_M_02d7f6c121e47966",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti5(PO5)4_19",
+      "Li4TiO4_63",
+      "TiP2_62"
+    ]
+  },
+  {
+    "id": "B_M_02fb30e37962837c",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3PO4_62",
+      "LiPO3_13",
+      "LiPO4_146"
+    ]
+  },
+  {
+    "id": "B_M_03efc950aded7653",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3Ti4O8_3",
+      "Ti(PO3)3_9",
+      "Li4P2O7_14"
+    ]
+  },
+  {
+    "id": "B_M_045a31eb09ca291f",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiPO5_2",
+      "LiOH_129"
+    ]
+  },
+  {
+    "id": "B_M_0554683203739864",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiPO5_2",
+      "LiPO3_14"
+    ]
+  },
+  {
+    "id": "B_M_0564ba864d2595b5",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti2P2O11_2",
+      "LiP_14"
+    ]
+  },
+  {
+    "id": "B_M_05740af49f050bae",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_12",
+      "Ti5(PO5)4_19",
+      "LiTiPO5_62"
+    ]
+  },
+  {
+    "id": "B_M_060619c37aadda2c",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiP_14",
+      "Ti5(PO5)4_19"
+    ]
+  },
+  {
+    "id": "B_M_061e31c41016f1f4",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiO2_141",
+      "Li2TiO3_15"
+    ]
+  },
+  {
+    "id": "B_M_065af82d7d5784c4",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_31",
+      "TiP2O7_205",
+      "LiTi2O4_58"
+    ]
+  },
+  {
+    "id": "B_M_06aa537a7c07558a",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti2P2O9_2",
+      "Li4TiO4_63",
+      "P2O5_62"
+    ]
+  },
+  {
+    "id": "B_M_06ed07a251c833c9",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4P2O7_14",
+      "NH4H2PO4_122",
+      "P2O5_62"
+    ]
+  },
+  {
+    "id": "B_M_070454e8bad915a5",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li8PO3_221",
+      "LiTiPO5_2"
+    ]
+  },
+  {
+    "id": "B_M_073238034a80bfc6",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiPO4_14",
+      "Li2Ti3O7_11",
+      "LiOH-H2O_12"
+    ]
+  },
+  {
+    "id": "B_M_073577519ff26c8e",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3PO4_31",
+      "LiTiO2_227"
+    ]
+  },
+  {
+    "id": "B_M_07547dd332204534",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti2P2O9_2",
+      "Li4TiO4_63"
+    ]
+  },
+  {
+    "id": "B_M_07f136055124510e",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_12",
+      "LiTi2(PO4)3_167"
+    ]
+  },
+  {
+    "id": "B_M_0803dd3ed1def780",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_11",
+      "LiTi2O4_227"
+    ]
+  },
+  {
+    "id": "B_M_081398453cfc6136",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti3PO2_164",
+      "LiTiPO5_2",
+      "LiOH_129"
+    ]
+  },
+  {
+    "id": "B_M_081bf46df6ffb607",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiPO4_14",
+      "TiPO4_31"
+    ]
+  },
+  {
+    "id": "B_M_088966d709bfb08d",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiP_14",
+      "Li8PO3_221",
+      "NH4H2PO4_122"
+    ]
+  },
+  {
+    "id": "B_M_089f1c1702943d44",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiP2O7_4",
+      "LiTi2O4_11",
+      "Li2Ti3O7_11"
+    ]
+  },
+  {
+    "id": "B_M_08a3a36f8cec7ca3",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiO2_227",
+      "Li4TiO4_63"
+    ]
+  },
+  {
+    "id": "B_M_08e5575d87246a8e",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti3PO2_164",
+      "LiTiO2_141"
+    ]
+  },
+  {
+    "id": "B_M_094f7e1a59ecb716",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiOH-H2O_12",
+      "Li3PO4_31",
+      "Li2Ti2(PO4)3_60"
+    ]
+  },
+  {
+    "id": "B_M_098f36d070e96898",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4TiO4_63",
+      "LiTi2O4_227",
+      "TiP2O7_205"
+    ]
+  },
+  {
+    "id": "B_M_0a325b62aa071fb8",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiPO4_11",
+      "Li4P4O17_15"
+    ]
+  },
+  {
+    "id": "B_M_0a5b651ac04d6a6b",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiP_14",
+      "TiO2_136",
+      "LiPO3_13"
+    ]
+  },
+  {
+    "id": "B_M_0a83ed96e41cee6a",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3PO4_31",
+      "LiP_14"
+    ]
+  },
+  {
+    "id": "B_M_0a8ed75110d8aadd",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_12",
+      "TiP2O9_14",
+      "Li4P2O7_2"
+    ]
+  },
+  {
+    "id": "B_M_0acf184880e290c7",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiPO5_2",
+      "Li2TiO3_15"
+    ]
+  },
+  {
+    "id": "B_M_0b299c315467b295",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2(PO4)3_167",
+      "LiTiO2_227",
+      "TiP2O9_14"
+    ]
+  },
+  {
+    "id": "B_M_0b5e8b6288c1f2af",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiO2_227",
+      "TiP2O9_14",
+      "TiP_194"
+    ]
+  },
+  {
+    "id": "B_M_0b77ffd632220cb0",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti(PO3)3_9",
+      "Ti2P2O11_2"
+    ]
+  },
+  {
+    "id": "B_M_0b8f95b646290dd4",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti2P2O9_2",
+      "TiO2_136"
+    ]
+  },
+  {
+    "id": "B_M_0b94bb17c41233dc",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiO2_141",
+      "LiTi2O4_58"
+    ]
+  },
+  {
+    "id": "B_M_0bf7ed49dd6adf0d",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti2P2O11_2",
+      "LiTiPO5_2",
+      "TiO2_136"
+    ]
+  },
+  {
+    "id": "B_M_0c42b147a02b56e2",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2O_225",
+      "TiP_193",
+      "LiPO4_146"
+    ]
+  },
+  {
+    "id": "B_M_0c6ceab8b8171e10",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiPO5_62",
+      "LiTi2O4_227",
+      "TiP2O7_205"
+    ]
+  },
+  {
+    "id": "B_M_0c8073132afa7bec",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "P2O5_43",
+      "Li4P4O17_15"
+    ]
+  },
+  {
+    "id": "B_M_0cdd6c74ef4777e7",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4Ti5O12_227",
+      "LiTi2O4_227"
+    ]
+  },
+  {
+    "id": "B_M_0d9a4d76f2e87bda",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4TiO4_63",
+      "LiPO3_13"
+    ]
+  },
+  {
+    "id": "B_M_0e8dd0538c54d5de",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4TiO4_63",
+      "LiTi2O4_11",
+      "LiPO4_146"
+    ]
+  },
+  {
+    "id": "B_M_0f39ed754da1b0f0",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP_194",
+      "Li2O_225",
+      "LiTi2O4_227"
+    ]
+  },
+  {
+    "id": "B_M_1181bbce055d435f",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiPO3_14",
+      "Li2Ti2(PO4)3_60",
+      "LiTiO2_141"
+    ]
+  },
+  {
+    "id": "B_M_11a1bed2e8115482",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP_194",
+      "TiPO4_31",
+      "TiP2O7_205"
+    ]
+  },
+  {
+    "id": "B_M_11cd3d0439d77935",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2TiO3_15",
+      "Li2CO3_15",
+      "Li4TiO4_63"
+    ]
+  },
+  {
+    "id": "B_M_11eea646333a94d6",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_227",
+      "TiPO4_11",
+      "Li2TiO3_15"
+    ]
+  },
+  {
+    "id": "B_M_1257334200f97c12",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiPO4_14",
+      "LiOH_129"
+    ]
+  },
+  {
+    "id": "B_M_128bc229de129f3a",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti2P2O11_2",
+      "TiPO4_14",
+      "NH4H2PO4_122"
+    ]
+  },
+  {
+    "id": "B_M_1308d750df3bb0c3",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_12",
+      "P2O5_43"
+    ]
+  },
+  {
+    "id": "B_M_13a3a9712df4011d",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4P2O7_2",
+      "Ti(PO3)3_9",
+      "LiTi2O4_31"
+    ]
+  },
+  {
+    "id": "B_M_13b4a10056ce6a48",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti2P2O9_2",
+      "LiTi2O4_31",
+      "TiP_194"
+    ]
+  },
+  {
+    "id": "B_M_13b8d962e63ed7a5",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiO2_141",
+      "P2O5_43"
+    ]
+  },
+  {
+    "id": "B_M_13d2cc8aae716a6d",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2TiO3_15",
+      "Li2CO3_15",
+      "TiP2_62"
+    ]
+  },
+  {
+    "id": "B_M_1428d5563c5040ca",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP_193",
+      "Li2O_166"
+    ]
+  },
+  {
+    "id": "B_M_14298f470448cb3a",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiPO5_62",
+      "Li4P2O7_14"
+    ]
+  },
+  {
+    "id": "B_M_15216f801f19d778",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4Ti5O12_227",
+      "Li2CO3_15"
+    ]
+  },
+  {
+    "id": "B_M_159e6fa692a24f27",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "NH4H2PO4_122",
+      "LiOH_129"
+    ]
+  },
+  {
+    "id": "B_M_15d9035dbf85c4df",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_12",
+      "Ti2P2O9_2",
+      "Li2TiO3_15"
+    ]
+  },
+  {
+    "id": "B_M_164aa80c56db78c6",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP_193",
+      "Li3PO4_62"
+    ]
+  },
+  {
+    "id": "B_M_16964ce7bcb3f966",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiO2_141",
+      "P2O5_161"
+    ]
+  },
+  {
+    "id": "B_M_16bdee638812a17c",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti(PO5)2_4",
+      "LiTi2O4_227"
+    ]
+  },
+  {
+    "id": "B_M_16cc17558c1965a9",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiPO3_13",
+      "Li3Ti4O8_3"
+    ]
+  },
+  {
+    "id": "B_M_16f805f6aaf199cf",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_227",
+      "Ti2P2O9_2"
+    ]
+  },
+  {
+    "id": "B_M_1730988dd74cab6f",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2TiO3_15",
+      "LiP_14",
+      "LiTiPO5_2"
+    ]
+  },
+  {
+    "id": "B_M_17438ae0f51c39ae",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4P2O7_14",
+      "LiPO3_13"
+    ]
+  },
+  {
+    "id": "B_M_17fced56a9a06b3b",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti(PO5)2_4",
+      "LiTi2O4_58"
+    ]
+  },
+  {
+    "id": "B_M_18457876fb634e80",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiPO5_2",
+      "LiTiO2_227"
+    ]
+  },
+  {
+    "id": "B_M_18949373b02d0e26",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "P2O5_161",
+      "TiPO4_31",
+      "LiOH_129"
+    ]
+  },
+  {
+    "id": "B_M_1899ce87be409d34",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiPO3_14",
+      "Li4P2O7_14",
+      "P2O5_62"
+    ]
+  },
+  {
+    "id": "B_M_190db3dffbfe368b",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4TiO4_63",
+      "Li2Ti2(PO4)3_60",
+      "LiTiP2O7_4"
+    ]
+  },
+  {
+    "id": "B_M_191b466fb37f6ae4",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiPO3_13",
+      "LiOH-H2O_12"
+    ]
+  },
+  {
+    "id": "B_M_192c361d68ae7f15",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4P2O7_14",
+      "LiTi2O4_12"
+    ]
+  },
+  {
+    "id": "B_M_19b4a126cad14bc1",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiO2_227",
+      "Li3PO4_31",
+      "Li4P2O7_2"
+    ]
+  },
+  {
+    "id": "B_M_1a726d29b00027ad",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiO2_141",
+      "Ti5(PO5)4_19"
+    ]
+  },
+  {
+    "id": "B_M_1ac3bc95d0ed26b5",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiO2_141",
+      "LiTi2(PO4)3_167"
+    ]
+  },
+  {
+    "id": "B_M_1acc9e8a31c23035",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiOH_129",
+      "TiP_193",
+      "Ti5(PO5)4_19"
+    ]
+  },
+  {
+    "id": "B_M_1ae3a04d75537cb8",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti(PO3)3_9",
+      "TiP2O9_14"
+    ]
+  },
+  {
+    "id": "B_M_1b476b585d6de2c8",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiPO4_14",
+      "LiTi2O4_31"
+    ]
+  },
+  {
+    "id": "B_M_1bb11b5b39be3246",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2(PO4)3_167",
+      "LiTiP2O7_4",
+      "Li2Ti2(PO4)3_60"
+    ]
+  },
+  {
+    "id": "B_M_1bfa127ff022015f",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti(PO3)3_9",
+      "LiTiO2_227",
+      "Ti4(PO5)3_43"
+    ]
+  },
+  {
+    "id": "B_M_1c0bf4e3afa41dba",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti(PO5)2_4",
+      "LiTi2O4_11"
+    ]
+  },
+  {
+    "id": "B_M_1ce41a898717c46b",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "P2O5_62",
+      "Li4TiO4_63",
+      "Ti3PO2_164"
+    ]
+  },
+  {
+    "id": "B_M_1e1e207bfe5c064c",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiO2_141",
+      "Li3PO4_62"
+    ]
+  },
+  {
+    "id": "B_M_1ea794347973a5db",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2CO3_15",
+      "Li4P4O17_15",
+      "TiP2O7_205"
+    ]
+  },
+  {
+    "id": "B_M_1eaa750054f9d4e7",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiOH_129",
+      "TiP2_62",
+      "LiP_14"
+    ]
+  },
+  {
+    "id": "B_M_1ef0ef2f22402100",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_31",
+      "TiPO4_11",
+      "P2O5_43"
+    ]
+  },
+  {
+    "id": "B_M_1f383e9e0e633c95",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiPO4_31",
+      "TiP2O9_14",
+      "LiTi2O4_12"
+    ]
+  },
+  {
+    "id": "B_M_1f5959857d98ff9e",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiPO5_62",
+      "Li4TiO4_63",
+      "LiTi2O4_227"
+    ]
+  },
+  {
+    "id": "B_M_205372778f1c8f7b",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP2O9_14",
+      "LiTiO2_227",
+      "LiTi2O4_31"
+    ]
+  },
+  {
+    "id": "B_M_20be539703f6582c",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4P2O7_2",
+      "Ti2P2O9_2",
+      "Ti3PO2_164"
+    ]
+  },
+  {
+    "id": "B_M_20f831e7965cc664",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3PO4_31",
+      "Li4TiO4_63",
+      "Ti4(PO5)3_43"
+    ]
+  },
+  {
+    "id": "B_M_211962b1489efb63",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP2O7_205",
+      "TiPO4_11",
+      "LiTi2O4_11"
+    ]
+  },
+  {
+    "id": "B_M_218171e104611fac",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiO2_136",
+      "TiP2O7_205",
+      "LiTiPO5_2"
+    ]
+  },
+  {
+    "id": "B_M_22264c1eb0a7480a",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti5(PO5)4_19",
+      "Li4P4O17_15"
+    ]
+  },
+  {
+    "id": "B_M_22274a9a4e0e2b11",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiO2_141",
+      "Li4P2O7_14"
+    ]
+  },
+  {
+    "id": "B_M_225b7b1a76d3bb1d",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3PO4_31",
+      "TiP_193"
+    ]
+  },
+  {
+    "id": "B_M_2262c1860bed24ed",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti4(PO5)3_43",
+      "Li2Ti3O7_11",
+      "LiTi2O4_227"
+    ]
+  },
+  {
+    "id": "B_M_22822865d2f3e314",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2CO3_15",
+      "LiTi2(PO4)3_167"
+    ]
+  },
+  {
+    "id": "B_M_22a8d6ac54202354",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiPO3_13",
+      "Li4P2O7_14",
+      "LiPO4_146"
+    ]
+  },
+  {
+    "id": "B_M_22b6bb7e1a4295a6",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP2O9_14",
+      "TiO2_141"
+    ]
+  },
+  {
+    "id": "B_M_22f9e6ddd23bad28",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3PO4_31",
+      "LiPO4_146"
+    ]
+  },
+  {
+    "id": "B_M_2385ccc99d79f057",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4P2O7_14",
+      "TiO2_136",
+      "P2O5_62"
+    ]
+  },
+  {
+    "id": "B_M_23a71a07073d0165",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP_194",
+      "TiP2O9_14",
+      "LiTiPO5_2"
+    ]
+  },
+  {
+    "id": "B_M_23e1673d48525297",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiO2_141",
+      "Ti3PO2_164",
+      "LiPO3_14"
+    ]
+  },
+  {
+    "id": "B_M_2425c8ac24de7efe",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4P4O17_15",
+      "LiTi2O4_58",
+      "Li4Ti5O12_227"
+    ]
+  },
+  {
+    "id": "B_M_242ba480a7f52e50",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti(PO3)3_9",
+      "LiPO4_146"
+    ]
+  },
+  {
+    "id": "B_M_2463b6080b63ba20",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2TiO3_15",
+      "LiTi2O4_11",
+      "Ti2P2O9_2"
+    ]
+  },
+  {
+    "id": "B_M_24b5b574e84ebb2d",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2O_225",
+      "Ti2P2O9_2"
+    ]
+  },
+  {
+    "id": "B_M_24cea5144e68ed8e",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4TiO4_63",
+      "Li2TiO3_15"
+    ]
+  },
+  {
+    "id": "B_M_24d6ad5f651508ae",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti3PO2_164",
+      "Li2O_166"
+    ]
+  },
+  {
+    "id": "B_M_25054ce6aa177fbe",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiPO5_62",
+      "Li3PO4_31"
+    ]
+  },
+  {
+    "id": "B_M_25112f4b8773535f",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4TiO4_63",
+      "LiOH_129"
+    ]
+  },
+  {
+    "id": "B_M_266a54a87f8bdcef",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3PO4_31",
+      "TiO2_136",
+      "P2O5_161"
+    ]
+  },
+  {
+    "id": "B_M_26737f52ad296bbb",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "P2O5_62",
+      "LiTiP2O7_4",
+      "Li4Ti5O12_227"
+    ]
+  },
+  {
+    "id": "B_M_26ff1826a86f9be2",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiOH_129",
+      "Li3PO4_62"
+    ]
+  },
+  {
+    "id": "B_M_270b966eca6a8173",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "P2O5_43",
+      "Li2O_225",
+      "Li4TiO4_63"
+    ]
+  },
+  {
+    "id": "B_M_273534561ea33f85",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_227",
+      "LiTiPO5_62"
+    ]
+  },
+  {
+    "id": "B_M_274cc1d754683ff3",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiO2_141",
+      "Li2Ti3O7_11"
+    ]
+  },
+  {
+    "id": "B_M_276b2d8659e52b0d",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiO2_141",
+      "P2O5_43",
+      "Li2O_166"
+    ]
+  },
+  {
+    "id": "B_M_27a1c467dbca1ecf",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_12",
+      "LiPO4_146",
+      "Li2O_166"
+    ]
+  },
+  {
+    "id": "B_M_27eee28200de1fbd",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2TiO3_15",
+      "LiPO4_146",
+      "TiP_193"
+    ]
+  },
+  {
+    "id": "B_M_283ad18bce6d5d5b",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti2P2O9_2",
+      "LiPO4_146",
+      "NH4H2PO4_122"
+    ]
+  },
+  {
+    "id": "B_M_2849ceeea8ae71b8",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "NH4H2PO4_122",
+      "Li4Ti5O12_227"
+    ]
+  },
+  {
+    "id": "B_M_28611b78d4a508f6",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2Ti3O7_11",
+      "Li2O_166"
+    ]
+  },
+  {
+    "id": "B_M_2903669b9c07159d",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiOH-H2O_12",
+      "TiPO4_11"
+    ]
+  },
+  {
+    "id": "B_M_29c07ae1e230f4bb",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP2O7_205",
+      "LiOH_129"
+    ]
+  },
+  {
+    "id": "B_M_29de8e63531b5d52",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiO2_141",
+      "TiPO4_11",
+      "Li2O_225"
+    ]
+  },
+  {
+    "id": "B_M_2a1467cda5e15c07",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti(PO5)2_4",
+      "Li4P2O7_14"
+    ]
+  },
+  {
+    "id": "B_M_2a437a779666961c",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2O_225",
+      "TiP2O9_14",
+      "P2O5_43"
+    ]
+  },
+  {
+    "id": "B_M_2b355f938625fa7f",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "P2O5_161",
+      "TiO2_136",
+      "LiOH_129"
+    ]
+  },
+  {
+    "id": "B_M_2b3988fc9c487fd7",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti2P2O9_2",
+      "TiPO4_11",
+      "Ti2P2O11_2"
+    ]
+  },
+  {
+    "id": "B_M_2b62926c88f1e172",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti5(PO5)4_19",
+      "Li2CO3_15",
+      "Li2O_166"
+    ]
+  },
+  {
+    "id": "B_M_2bdf64019e2428eb",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2Ti3O7_11",
+      "Li3Ti4O8_3",
+      "Li2Ti2(PO4)3_60"
+    ]
+  },
+  {
+    "id": "B_M_2caa5ac7c94d7da2",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "NH4H2PO4_122",
+      "Li3PO4_62"
+    ]
+  },
+  {
+    "id": "B_M_2cab411f658afe09",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_58",
+      "Ti2P2O11_2"
+    ]
+  },
+  {
+    "id": "B_M_2cf17ee881ba0b24",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2O_225",
+      "Li2Ti3O7_11",
+      "TiP_194"
+    ]
+  },
+  {
+    "id": "B_M_2d11657d9ae83858",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2O_225",
+      "TiP_193"
+    ]
+  },
+  {
+    "id": "B_M_2d296a3d2c97bc97",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiP2O7_4",
+      "TiPO4_11",
+      "Li2O_166"
+    ]
+  },
+  {
+    "id": "B_M_2d8816aede30ea0f",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiPO4_146",
+      "P2O5_161"
+    ]
+  },
+  {
+    "id": "B_M_2de91deea54238c6",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP2_62",
+      "LiTi2O4_58",
+      "LiPO3_14"
+    ]
+  },
+  {
+    "id": "B_M_2de9d5bdee23b294",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2O_166",
+      "TiO2_141"
+    ]
+  },
+  {
+    "id": "B_M_2dea10f87c0c28d0",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiO2_227",
+      "Li4Ti5O12_227",
+      "Li3Ti4O8_3"
+    ]
+  },
+  {
+    "id": "B_M_2df9ea95d9dd3699",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2Ti3O7_11",
+      "Ti(PO5)2_4"
+    ]
+  },
+  {
+    "id": "B_M_2e0eec8801ee5215",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti2P2O11_2",
+      "Li2TiO3_15",
+      "Ti5(PO5)4_19"
+    ]
+  },
+  {
+    "id": "B_M_2e9558c0b7a1f86e",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_227",
+      "LiTiPO5_2",
+      "TiPO4_11"
+    ]
+  },
+  {
+    "id": "B_M_2f256e5a9f535867",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_12",
+      "Ti(PO5)2_4"
+    ]
+  },
+  {
+    "id": "B_M_2f49f1513a9d0eb2",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "NH4H2PO4_122",
+      "Ti2P2O9_2"
+    ]
+  },
+  {
+    "id": "B_M_2f62ed0bd1a5e90b",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiO2_136",
+      "TiP2O9_14",
+      "LiPO3_13"
+    ]
+  },
+  {
+    "id": "B_M_2f7616d3ccf9f154",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4P2O7_2",
+      "TiPO4_14"
+    ]
+  },
+  {
+    "id": "B_M_2f80884b74c7c454",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3Ti4O8_3",
+      "Li2Ti2(PO4)3_60",
+      "LiTiPO5_62"
+    ]
+  },
+  {
+    "id": "B_M_2fdadd26b0d0f054",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiPO3_13",
+      "Li4TiO4_63",
+      "TiO2_141"
+    ]
+  },
+  {
+    "id": "B_M_30abbb8c139af7fd",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "NH4H2PO4_122",
+      "Ti3PO2_164",
+      "Li2Ti3O7_11"
+    ]
+  },
+  {
+    "id": "B_M_30be46f088e0fc87",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2Ti2(PO4)3_60",
+      "P2O5_43"
+    ]
+  },
+  {
+    "id": "B_M_321d2aeb90a7d947",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2Ti3O7_11",
+      "LiPO3_13"
+    ]
+  },
+  {
+    "id": "B_M_32767888fb404bac",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3Ti4O8_3",
+      "Ti5(PO5)4_19",
+      "Ti2P2O9_2"
+    ]
+  },
+  {
+    "id": "B_M_32a2512ab35ca70c",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiPO4_31",
+      "Li4TiO4_63",
+      "Li2Ti2(PO4)3_60"
+    ]
+  },
+  {
+    "id": "B_M_32a53c4fbe313349",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "NH4H2PO4_122",
+      "LiTi2O4_12"
+    ]
+  },
+  {
+    "id": "B_M_32bd94f63df93f01",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2O_225",
+      "Ti(PO3)3_9",
+      "LiTi2O4_11"
+    ]
+  },
+  {
+    "id": "B_M_3310f5dc41e9e64b",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti2P2O11_2",
+      "LiTi2O4_31"
+    ]
+  },
+  {
+    "id": "B_M_338c1d1597dd933d",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiO2_141",
+      "TiP2O7_205"
+    ]
+  },
+  {
+    "id": "B_M_35137830f62b6074",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li8PO3_221",
+      "LiPO4_146"
+    ]
+  },
+  {
+    "id": "B_M_359cc1d0dbe3e54e",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiPO4_11",
+      "P2O5_43"
+    ]
+  },
+  {
+    "id": "B_M_35a163a944b377b5",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "P2O5_62",
+      "P2O5_161",
+      "Li2O_166"
+    ]
+  },
+  {
+    "id": "B_M_35b878ca2f8b769b",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti2P2O9_2",
+      "TiP2_62",
+      "Ti(PO3)3_9"
+    ]
+  },
+  {
+    "id": "B_M_35d6741f1589bc19",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_11",
+      "NH4H2PO4_122",
+      "Ti5(PO5)4_19"
+    ]
+  },
+  {
+    "id": "B_M_35dd22eca634dcfc",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2Ti2(PO4)3_60",
+      "LiOH-H2O_12"
+    ]
+  },
+  {
+    "id": "B_M_36d93d1402b662be",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_227",
+      "TiP_194",
+      "P2O5_161"
+    ]
+  },
+  {
+    "id": "B_M_3710e19f2aa7142a",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiPO3_14",
+      "LiTi2(PO4)3_167",
+      "LiTiPO5_2"
+    ]
+  },
+  {
+    "id": "B_M_371adceb0f387415",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti(PO3)3_9",
+      "LiTiO2_227"
+    ]
+  },
+  {
+    "id": "B_M_373cafe6d2f97de5",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiOH-H2O_12",
+      "LiTi2O4_227",
+      "LiPO3_14"
+    ]
+  },
+  {
+    "id": "B_M_37a2b245af3ba8a8",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP2O7_205",
+      "Ti2P2O11_2"
+    ]
+  },
+  {
+    "id": "B_M_38aca30477068fda",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiP_14",
+      "Ti4(PO5)3_43",
+      "LiTi2O4_58"
+    ]
+  },
+  {
+    "id": "B_M_3a4d7854c23b15e3",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2O_166",
+      "LiTiO2_227"
+    ]
+  },
+  {
+    "id": "B_M_3a64c505ade23626",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiPO3_13",
+      "Li4P4O17_15",
+      "Li2O_225"
+    ]
+  },
+  {
+    "id": "B_M_3a93611f2be4e9d5",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti(PO3)3_9",
+      "Li4P4O17_15",
+      "LiP_14"
+    ]
+  },
+  {
+    "id": "B_M_3aa5d8b851e79632",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiO2_141",
+      "Li2Ti3O7_11",
+      "TiP2O7_205"
+    ]
+  },
+  {
+    "id": "B_M_3adab762053017a5",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiPO4_146",
+      "Li4P2O7_2",
+      "TiPO4_14"
+    ]
+  },
+  {
+    "id": "B_M_3ae60059793a5f16",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP_194",
+      "Li3PO4_31",
+      "P2O5_43"
+    ]
+  },
+  {
+    "id": "B_M_3b09f6b99b9f109c",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3Ti4O8_3",
+      "Li4P2O7_14"
+    ]
+  },
+  {
+    "id": "B_M_3b6a47e8c67e50df",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_58",
+      "Ti4(PO5)3_43"
+    ]
+  },
+  {
+    "id": "B_M_3b902812436263e3",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2CO3_15",
+      "Li4TiO4_63"
+    ]
+  },
+  {
+    "id": "B_M_3bf98384dfc3f8fc",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4P2O7_14",
+      "Li4Ti5O12_227"
+    ]
+  },
+  {
+    "id": "B_M_3c740d663f4bd896",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2(PO4)3_167",
+      "LiTiPO5_2"
+    ]
+  },
+  {
+    "id": "B_M_3cde718b2557959e",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiP2O7_4",
+      "Li4P4O17_15"
+    ]
+  },
+  {
+    "id": "B_M_3cf40fd6707fdaea",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP_193",
+      "TiO2_141"
+    ]
+  },
+  {
+    "id": "B_M_3d3cb8e81bbd4242",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP2O7_205",
+      "Li2O_225"
+    ]
+  },
+  {
+    "id": "B_M_3d531cbb6cc8f454",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_58",
+      "Ti(PO5)2_4",
+      "P2O5_62"
+    ]
+  },
+  {
+    "id": "B_M_3daa5eb253c7204e",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4TiO4_63",
+      "LiOH_129",
+      "LiP_14"
+    ]
+  },
+  {
+    "id": "B_M_3ddf4c91338d8e0a",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3PO4_62",
+      "LiPO3_14",
+      "Li4P2O7_14"
+    ]
+  },
+  {
+    "id": "B_M_3df544aec1ee7c82",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4P2O7_14",
+      "TiO2_141"
+    ]
+  },
+  {
+    "id": "B_M_3dfcfdd3defea549",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti(PO3)3_9",
+      "LiTi2O4_227",
+      "Ti2P2O11_2"
+    ]
+  },
+  {
+    "id": "B_M_3e35b449d3476d8a",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_12",
+      "Li8PO3_221",
+      "P2O5_161"
+    ]
+  },
+  {
+    "id": "B_M_3e3a731b4fa2d14f",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4P4O17_15",
+      "Li8PO3_221",
+      "Ti3PO2_164"
+    ]
+  },
+  {
+    "id": "B_M_3fbdde7507c986af",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4Ti5O12_227",
+      "Li4P4O17_15",
+      "TiO2_136"
+    ]
+  },
+  {
+    "id": "B_M_3fcb9ba10e08d432",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiPO4_146",
+      "LiOH_129"
+    ]
+  },
+  {
+    "id": "B_M_4078c482be266225",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiO2_227",
+      "Ti(PO3)3_9"
+    ]
+  },
+  {
+    "id": "B_M_4098e4369e6e61a9",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_31",
+      "LiTi2O4_11"
+    ]
+  },
+  {
+    "id": "B_M_41c7e66ab37632a4",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiPO4_11",
+      "LiTi2O4_31"
+    ]
+  },
+  {
+    "id": "B_M_41fbea36480a4b47",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP_193",
+      "Li2CO3_15",
+      "TiP_194"
+    ]
+  },
+  {
+    "id": "B_M_42165c1ad09fecb3",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "P2O5_161",
+      "LiTiP2O7_4",
+      "Li8PO3_221"
+    ]
+  },
+  {
+    "id": "B_M_423e7eed4879e584",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4TiO4_63",
+      "P2O5_161",
+      "Li2O_225"
+    ]
+  },
+  {
+    "id": "B_M_426acb87d76aea46",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "NH4H2PO4_122",
+      "Li2Ti2(PO4)3_60",
+      "TiP_193"
+    ]
+  },
+  {
+    "id": "B_M_42b666bc81797da9",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiO2_141",
+      "Li3PO4_62",
+      "P2O5_43"
+    ]
+  },
+  {
+    "id": "B_M_43132bbeb0c23f70",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4P4O17_15",
+      "LiOH_129",
+      "LiTi2O4_31"
+    ]
+  },
+  {
+    "id": "B_M_431ec5bff14c18d3",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2CO3_15",
+      "Li2Ti2(PO4)3_60"
+    ]
+  },
+  {
+    "id": "B_M_43de5d7aa6e9bbc6",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP_193",
+      "LiTiO2_227"
+    ]
+  },
+  {
+    "id": "B_M_43dfec3422183e01",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "NH4H2PO4_122",
+      "LiTi2O4_58"
+    ]
+  },
+  {
+    "id": "B_M_442a460856b1a979",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti(PO3)3_9",
+      "Li2O_225"
+    ]
+  },
+  {
+    "id": "B_M_4480c27124ba9e41",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2O_166",
+      "LiOH_129",
+      "TiPO4_31"
+    ]
+  },
+  {
+    "id": "B_M_44a48c0634982cdb",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP2O7_205",
+      "LiTiPO5_62"
+    ]
+  },
+  {
+    "id": "B_M_44ab1a91520eefe5",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiP_14",
+      "LiPO3_13"
+    ]
+  },
+  {
+    "id": "B_M_44d080a9c9a7a808",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiPO3_14",
+      "Li2CO3_15"
+    ]
+  },
+  {
+    "id": "B_M_44e1846af83d6d5d",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiPO5_62",
+      "Li2Ti3O7_11",
+      "LiTi2(PO4)3_167"
+    ]
+  },
+  {
+    "id": "B_M_452556cd02ea01f8",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4TiO4_63",
+      "LiTiP2O7_4"
+    ]
+  },
+  {
+    "id": "B_M_452d47bbaebd6ca4",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP2O9_14",
+      "Li2TiO3_15"
+    ]
+  },
+  {
+    "id": "B_M_452faeea5e2f95ff",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2Ti3O7_11",
+      "LiTi2O4_58"
+    ]
+  },
+  {
+    "id": "B_M_453fffa2c3ecf815",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "P2O5_43",
+      "LiOH-H2O_12"
+    ]
+  },
+  {
+    "id": "B_M_45690d3be3cfc9c7",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4P4O17_15",
+      "LiTi2O4_11"
+    ]
+  },
+  {
+    "id": "B_M_45ebe86dcbd46ad7",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiPO4_14",
+      "TiP2O7_205",
+      "LiOH-H2O_12"
+    ]
+  },
+  {
+    "id": "B_M_46356525ffcc5d32",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "P2O5_43",
+      "TiP_194"
+    ]
+  },
+  {
+    "id": "B_M_4726ad355b18ade6",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "NH4H2PO4_122",
+      "Li2O_225"
+    ]
+  },
+  {
+    "id": "B_M_47c0945f12337d07",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2O_166",
+      "Li2O_225",
+      "TiP2O9_14"
+    ]
+  },
+  {
+    "id": "B_M_47cc313967e30355",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_58",
+      "TiPO4_14",
+      "Ti4(PO5)3_43"
+    ]
+  },
+  {
+    "id": "B_M_482f79f142534da9",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiP_14",
+      "LiTiPO5_2",
+      "Ti(PO3)3_9"
+    ]
+  },
+  {
+    "id": "B_M_48934008474a566b",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP_194",
+      "Ti3PO2_164"
+    ]
+  },
+  {
+    "id": "B_M_491911324afdae91",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2(PO4)3_167",
+      "Li2O_166"
+    ]
+  },
+  {
+    "id": "B_M_4964be9af6ca4e25",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2O_225",
+      "P2O5_62"
+    ]
+  },
+  {
+    "id": "B_M_4972e6db18783c90",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP2_62",
+      "Ti3PO2_164"
+    ]
+  },
+  {
+    "id": "B_M_4a6bf1028f46ed06",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "P2O5_161",
+      "Li2O_225",
+      "Li2Ti3O7_11"
+    ]
+  },
+  {
+    "id": "B_M_4b250e9319933bea",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiP2O7_4",
+      "TiO2_136",
+      "LiTiO2_141"
+    ]
+  },
+  {
+    "id": "B_M_4c21857272ebb5fd",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiOH_129",
+      "Ti2P2O11_2"
+    ]
+  },
+  {
+    "id": "B_M_4c345dd279529e3a",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti4(PO5)3_43",
+      "Li4P4O17_15",
+      "LiTiO2_227"
+    ]
+  },
+  {
+    "id": "B_M_4c682132ad7b3206",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4P2O7_2",
+      "TiP_193",
+      "Li3PO4_62"
+    ]
+  },
+  {
+    "id": "B_M_4d1e96ea76a5069b",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiPO4_146",
+      "LiTiPO5_2",
+      "LiTi2O4_11"
+    ]
+  },
+  {
+    "id": "B_M_4d67fc8d9a46d23e",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiPO3_14",
+      "TiPO4_11",
+      "TiPO4_31"
+    ]
+  },
+  {
+    "id": "B_M_4dedb363a67b347d",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiPO5_2",
+      "LiTi2O4_58"
+    ]
+  },
+  {
+    "id": "B_M_4df0abb644382aab",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_31",
+      "LiTiO2_141",
+      "Li2Ti3O7_11"
+    ]
+  },
+  {
+    "id": "B_M_4e25cffba0adbed0",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiPO4_14",
+      "Li8PO3_221"
+    ]
+  },
+  {
+    "id": "B_M_4e66b613acec674d",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiPO4_14",
+      "Li4Ti5O12_227",
+      "LiTi2O4_227"
+    ]
+  },
+  {
+    "id": "B_M_4e8cd9df3810784e",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP2O9_14",
+      "LiP_14",
+      "TiPO4_14"
+    ]
+  },
+  {
+    "id": "B_M_4ea0b17733348ce0",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "NH4H2PO4_122",
+      "LiTiO2_141"
+    ]
+  },
+  {
+    "id": "B_M_4eae053736546a6e",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_227",
+      "LiPO4_146",
+      "Li8PO3_221"
+    ]
+  },
+  {
+    "id": "B_M_4eee65ea8c14fec8",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3PO4_31",
+      "Li4P2O7_2",
+      "P2O5_161"
+    ]
+  },
+  {
+    "id": "B_M_4ef9dcbdba565c20",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiO2_227",
+      "LiTi2O4_227",
+      "Li2CO3_15"
+    ]
+  },
+  {
+    "id": "B_M_4f303e687ead786e",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2Ti2(PO4)3_60",
+      "LiPO3_13"
+    ]
+  },
+  {
+    "id": "B_M_4f3a2d12c4c72370",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "P2O5_43",
+      "LiTi2O4_58",
+      "LiTi2(PO4)3_167"
+    ]
+  },
+  {
+    "id": "B_M_4fabd54632ab6ec0",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2Ti2(PO4)3_60",
+      "Ti4(PO5)3_43"
+    ]
+  },
+  {
+    "id": "B_M_503250fdfb944c75",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti3PO2_164",
+      "LiP_14"
+    ]
+  },
+  {
+    "id": "B_M_513774e0da3aff3e",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP2O7_205",
+      "Ti(PO3)3_9",
+      "Li4P2O7_2"
+    ]
+  },
+  {
+    "id": "B_M_5192846cb578fdb5",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP2O9_14",
+      "LiTi2O4_227",
+      "LiPO3_13"
+    ]
+  },
+  {
+    "id": "B_M_5227295fcc8b47f4",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP_194",
+      "Li2CO3_15"
+    ]
+  },
+  {
+    "id": "B_M_5270094ffad1885b",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti(PO5)2_4",
+      "Ti(PO3)3_9",
+      "LiTi2O4_11"
+    ]
+  },
+  {
+    "id": "B_M_52db66c37aab90b5",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiPO3_14",
+      "Ti3PO2_164"
+    ]
+  },
+  {
+    "id": "B_M_52ef2cfe460f88b8",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4TiO4_63",
+      "P2O5_62",
+      "Ti4(PO5)3_43"
+    ]
+  },
+  {
+    "id": "B_M_54260a23f119de80",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti5(PO5)4_19",
+      "Li4P2O7_2"
+    ]
+  },
+  {
+    "id": "B_M_5431095ffcf53db8",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiPO5_62",
+      "P2O5_62",
+      "LiPO4_146"
+    ]
+  },
+  {
+    "id": "B_M_54655a46bc957ecf",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti3PO2_164",
+      "LiPO4_146",
+      "LiTi2O4_227"
+    ]
+  },
+  {
+    "id": "B_M_5478f8c36caab7ed",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiP2O7_4",
+      "NH4H2PO4_122"
+    ]
+  },
+  {
+    "id": "B_M_549bc0219c73c8cd",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiO2_141",
+      "Li2Ti2(PO4)3_60"
+    ]
+  },
+  {
+    "id": "B_M_55019eeb8ea37498",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_58",
+      "Ti3PO2_164"
+    ]
+  },
+  {
+    "id": "B_M_550d071941056673",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti(PO3)3_9",
+      "Li3PO4_31",
+      "Li4P2O7_2"
+    ]
+  },
+  {
+    "id": "B_M_55435ef9fc26879e",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP2O9_14",
+      "LiTi2(PO4)3_167"
+    ]
+  },
+  {
+    "id": "B_M_55c151df9dfb5a29",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP2O9_14",
+      "LiPO3_14"
+    ]
+  },
+  {
+    "id": "B_M_55f2e21a7a06574f",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP_194",
+      "LiOH_129"
+    ]
+  },
+  {
+    "id": "B_M_572c64b2f46186cf",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4P2O7_2",
+      "TiO2_136",
+      "TiO2_141"
+    ]
+  },
+  {
+    "id": "B_M_580826c038ec14c8",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiPO4_14",
+      "LiTi2(PO4)3_167"
+    ]
+  },
+  {
+    "id": "B_M_5886bae310890ca2",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3PO4_62",
+      "Li4TiO4_63"
+    ]
+  },
+  {
+    "id": "B_M_59c152c4c19bbeee",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2Ti3O7_11",
+      "P2O5_43",
+      "TiO2_141"
+    ]
+  },
+  {
+    "id": "B_M_5a1e21fbc2dddc39",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2Ti3O7_11",
+      "LiOH-H2O_12"
+    ]
+  },
+  {
+    "id": "B_M_5a79d151e5dd1d63",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP_193",
+      "LiPO4_146"
+    ]
+  },
+  {
+    "id": "B_M_5a8a0d8a0691c7c1",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiO2_136",
+      "LiTiO2_141"
+    ]
+  },
+  {
+    "id": "B_M_5add418733cf0174",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti(PO5)2_4",
+      "Li3PO4_31"
+    ]
+  },
+  {
+    "id": "B_M_5b89c6bbff219a44",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP2O7_205",
+      "Li4P2O7_2",
+      "LiTiO2_141"
+    ]
+  },
+  {
+    "id": "B_M_5bb46b36490c30c4",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti(PO5)2_4",
+      "Li2O_225"
+    ]
+  },
+  {
+    "id": "B_M_5bce1f2cc3de21dd",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3PO4_62",
+      "Ti(PO3)3_9",
+      "TiO2_141"
+    ]
+  },
+  {
+    "id": "B_M_5bd0eeb64b437f3a",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2O_166",
+      "Li3PO4_31"
+    ]
+  },
+  {
+    "id": "B_M_5be29159849428d7",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiOH-H2O_12",
+      "Ti(PO3)3_9",
+      "Li2TiO3_15"
+    ]
+  },
+  {
+    "id": "B_M_5c5e57c14071d7ff",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2TiO3_15",
+      "LiTi2O4_12",
+      "TiP2O7_205"
+    ]
+  },
+  {
+    "id": "B_M_5c716360507eab2a",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2TiO3_15",
+      "LiP_14"
+    ]
+  },
+  {
+    "id": "B_M_5c921068783c514c",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti2P2O9_2",
+      "Ti(PO3)3_9",
+      "TiP_194"
+    ]
+  },
+  {
+    "id": "B_M_5d58116d8474df4b",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "P2O5_161",
+      "Ti5(PO5)4_19",
+      "LiTi2O4_11"
+    ]
+  },
+  {
+    "id": "B_M_5d6280d638b12feb",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4P2O7_14",
+      "Li3Ti4O8_3"
+    ]
+  },
+  {
+    "id": "B_M_5d76f3140eac305d",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiP_14",
+      "LiOH-H2O_12",
+      "LiTiO2_141"
+    ]
+  },
+  {
+    "id": "B_M_5d96a67a64ba96f8",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_58",
+      "TiP2O9_14",
+      "LiTiO2_227"
+    ]
+  },
+  {
+    "id": "B_M_5e5e50df32784fb3",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiPO4_14",
+      "TiPO4_31",
+      "Li4P4O17_15"
+    ]
+  },
+  {
+    "id": "B_M_5ec729e368f532d3",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3PO4_31",
+      "Li2CO3_15",
+      "LiPO3_13"
+    ]
+  },
+  {
+    "id": "B_M_5efdf174ce2b26aa",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "P2O5_161",
+      "Ti(PO3)3_9",
+      "LiTi2O4_31"
+    ]
+  },
+  {
+    "id": "B_M_5f067b8b96dd9c85",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3PO4_31",
+      "LiOH_129",
+      "Li4Ti5O12_227"
+    ]
+  },
+  {
+    "id": "B_M_5f1a3c55b5325bf0",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiOH_129",
+      "TiP_193"
+    ]
+  },
+  {
+    "id": "B_M_601febde643b78f2",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4Ti5O12_227",
+      "TiP2O7_205"
+    ]
+  },
+  {
+    "id": "B_M_6042d62256ded65f",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti2P2O9_2",
+      "LiPO3_13",
+      "P2O5_43"
+    ]
+  },
+  {
+    "id": "B_M_606636d0224898c4",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "P2O5_62",
+      "Ti3PO2_164"
+    ]
+  },
+  {
+    "id": "B_M_60d8741dcad96a2d",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP2O9_14",
+      "LiTi2O4_31",
+      "P2O5_161"
+    ]
+  },
+  {
+    "id": "B_M_61e6e42c19e906ab",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2Ti2(PO4)3_60",
+      "Ti4(PO5)3_43",
+      "LiTiO2_141"
+    ]
+  },
+  {
+    "id": "B_M_624fbc2fb4ee71fe",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti4(PO5)3_43",
+      "Ti2P2O9_2"
+    ]
+  },
+  {
+    "id": "B_M_626a8d653e1446b5",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiPO5_2",
+      "Li2O_225"
+    ]
+  },
+  {
+    "id": "B_M_62d98b77b258057e",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiPO4_31",
+      "Ti2P2O9_2"
+    ]
+  },
+  {
+    "id": "B_M_631ead503e290eb1",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "P2O5_62",
+      "LiTiO2_227",
+      "P2O5_161"
+    ]
+  },
+  {
+    "id": "B_M_634c1dced7cc79a3",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti(PO5)2_4",
+      "Li4P2O7_14",
+      "TiPO4_14"
+    ]
+  },
+  {
+    "id": "B_M_6366582c886b7c88",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4Ti5O12_227",
+      "LiTiO2_227",
+      "TiP2_62"
+    ]
+  },
+  {
+    "id": "B_M_646a3c5ed749624d",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_31",
+      "TiP_193",
+      "TiPO4_11"
+    ]
+  },
+  {
+    "id": "B_M_64884d17293fe319",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3PO4_62",
+      "P2O5_43",
+      "LiTiP2O7_4"
+    ]
+  },
+  {
+    "id": "B_M_64f666584c51e551",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiPO5_62",
+      "P2O5_62",
+      "LiTiO2_141"
+    ]
+  },
+  {
+    "id": "B_M_650a70b5e88daabc",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3PO4_62",
+      "Li2Ti2(PO4)3_60"
+    ]
+  },
+  {
+    "id": "B_M_652c431f5463cd61",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP2_62",
+      "LiPO3_13",
+      "LiTi2O4_12"
+    ]
+  },
+  {
+    "id": "B_M_65392875befc3c57",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4TiO4_63",
+      "TiO2_141",
+      "Ti2P2O9_2"
+    ]
+  },
+  {
+    "id": "B_M_6561e1bf163eaf7c",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiPO4_146",
+      "Ti2P2O11_2"
+    ]
+  },
+  {
+    "id": "B_M_6573b324e1fea45f",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiO2_227",
+      "LiTiPO5_62",
+      "TiO2_136"
+    ]
+  },
+  {
+    "id": "B_M_661be764a1f69197",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti2P2O11_2",
+      "Li2O_225",
+      "Li4TiO4_63"
+    ]
+  },
+  {
+    "id": "B_M_664698035e6f0229",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP2O7_205",
+      "LiTiP2O7_4"
+    ]
+  },
+  {
+    "id": "B_M_668cfb9be706bcc3",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "NH4H2PO4_122",
+      "TiP2_62",
+      "TiP_193"
+    ]
+  },
+  {
+    "id": "B_M_66a923c6f147911d",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2Ti2(PO4)3_60",
+      "Li2Ti3O7_11"
+    ]
+  },
+  {
+    "id": "B_M_678f741bf7f3a201",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4P2O7_14",
+      "TiO2_136",
+      "Li3PO4_62"
+    ]
+  },
+  {
+    "id": "B_M_67a965f921c3245d",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiP2O7_4",
+      "Li2O_166",
+      "Ti3PO2_164"
+    ]
+  },
+  {
+    "id": "B_M_67d544de1ed8beb8",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti(PO5)2_4",
+      "TiO2_136"
+    ]
+  },
+  {
+    "id": "B_M_68cfd31e704766f1",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "P2O5_43",
+      "NH4H2PO4_122",
+      "TiP_194"
+    ]
+  },
+  {
+    "id": "B_M_69117b97390705f6",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiPO4_11",
+      "Ti(PO3)3_9"
+    ]
+  },
+  {
+    "id": "B_M_693b821968a80a38",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2CO3_15",
+      "Li3PO4_62",
+      "TiO2_141"
+    ]
+  },
+  {
+    "id": "B_M_69f09992e07eb3c0",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti2P2O11_2",
+      "LiTi2(PO4)3_167"
+    ]
+  },
+  {
+    "id": "B_M_6aabe6866f2f3fc4",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2CO3_15",
+      "Ti3PO2_164"
+    ]
+  },
+  {
+    "id": "B_M_6ac2c5f995982a1f",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3PO4_62",
+      "LiTiP2O7_4",
+      "LiTi2O4_31"
+    ]
+  },
+  {
+    "id": "B_M_6ad45acaff7d4fb2",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti3PO2_164",
+      "LiPO3_13"
+    ]
+  },
+  {
+    "id": "B_M_6b59f0605f350cb3",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiP_14",
+      "LiTiPO5_62"
+    ]
+  },
+  {
+    "id": "B_M_6bf8a3dc5fe8bae6",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_227",
+      "Ti(PO5)2_4"
+    ]
+  },
+  {
+    "id": "B_M_6c1e6d962f68c04e",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "P2O5_43",
+      "TiP2O9_14"
+    ]
+  },
+  {
+    "id": "B_M_6c9b691bfcb4c3c8",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li8PO3_221",
+      "TiP2_62"
+    ]
+  },
+  {
+    "id": "B_M_6d2a393b5f9c75b4",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_58",
+      "TiPO4_14",
+      "LiTi2O4_12"
+    ]
+  },
+  {
+    "id": "B_M_6d5d579265c06b29",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti(PO5)2_4",
+      "TiPO4_31"
+    ]
+  },
+  {
+    "id": "B_M_6db7405a51f63290",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2O_225",
+      "TiP_193",
+      "Li2Ti2(PO4)3_60"
+    ]
+  },
+  {
+    "id": "B_M_6dc2d9b316b89a54",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti2P2O11_2",
+      "Ti(PO3)3_9",
+      "LiTi2O4_227"
+    ]
+  },
+  {
+    "id": "B_M_6de0e562fd28da14",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_11",
+      "LiP_14"
+    ]
+  },
+  {
+    "id": "B_M_6e098b7429506865",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_58",
+      "LiTi2O4_31"
+    ]
+  },
+  {
+    "id": "B_M_6e6290bb00055c58",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_11",
+      "Ti2P2O9_2",
+      "LiPO3_14"
+    ]
+  },
+  {
+    "id": "B_M_6e7fb4d77801dcdd",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiOH-H2O_12",
+      "Li2O_225"
+    ]
+  },
+  {
+    "id": "B_M_6e8a1b55c2ac0d15",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_31",
+      "LiTi2O4_11",
+      "TiP_194"
+    ]
+  },
+  {
+    "id": "B_M_6f218b48754cc5a8",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2Ti3O7_11",
+      "LiTiO2_141"
+    ]
+  },
+  {
+    "id": "B_M_6f496d20dd32c08e",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiPO3_14",
+      "TiP2_62",
+      "LiTiO2_227"
+    ]
+  },
+  {
+    "id": "B_M_6f71ef0792abdfec",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4P2O7_2",
+      "TiP2O7_205",
+      "LiTi2O4_227"
+    ]
+  },
+  {
+    "id": "B_M_6f825f84c731756f",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiP2O7_4",
+      "TiPO4_11"
+    ]
+  },
+  {
+    "id": "B_M_6fa6c3a27279e99b",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "NH4H2PO4_122",
+      "LiPO4_146",
+      "P2O5_62"
+    ]
+  },
+  {
+    "id": "B_M_6ffe9b0f214834e7",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiOH_129",
+      "TiPO4_14"
+    ]
+  },
+  {
+    "id": "B_M_705212ffd0c317b2",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiPO3_14",
+      "NH4H2PO4_122"
+    ]
+  },
+  {
+    "id": "B_M_711eda22e7e772eb",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiOH_129",
+      "LiTi2O4_12",
+      "TiO2_136"
+    ]
+  },
+  {
+    "id": "B_M_7127b77203dd490a",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_58",
+      "LiTiPO5_62"
+    ]
+  },
+  {
+    "id": "B_M_713140cb7ece0dfa",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4Ti5O12_227",
+      "LiTiO2_141",
+      "Li2Ti2(PO4)3_60"
+    ]
+  },
+  {
+    "id": "B_M_72062c355c213d6a",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4P4O17_15",
+      "Li2O_225"
+    ]
+  },
+  {
+    "id": "B_M_72238b1bb6c562f8",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiO2_136",
+      "TiPO4_14"
+    ]
+  },
+  {
+    "id": "B_M_726c0914e8d6c217",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti2P2O9_2",
+      "Li4P2O7_14",
+      "TiPO4_31"
+    ]
+  },
+  {
+    "id": "B_M_72b9fc0f523fcfac",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "P2O5_161",
+      "LiTi2O4_11"
+    ]
+  },
+  {
+    "id": "B_M_72e53e92b969525d",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti5(PO5)4_19",
+      "Li8PO3_221"
+    ]
+  },
+  {
+    "id": "B_M_72f795e258282e49",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4P2O7_14",
+      "TiPO4_31",
+      "Li2TiO3_15"
+    ]
+  },
+  {
+    "id": "B_M_732fa599268b861b",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li8PO3_221",
+      "LiTiP2O7_4",
+      "NH4H2PO4_122"
+    ]
+  },
+  {
+    "id": "B_M_735e07174a9b15d9",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP_193",
+      "Li2TiO3_15",
+      "Li2Ti3O7_11"
+    ]
+  },
+  {
+    "id": "B_M_73f8be4c9280bcf4",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiO2_136",
+      "P2O5_62"
+    ]
+  },
+  {
+    "id": "B_M_74244d550b859e4d",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti2P2O11_2",
+      "LiTi2O4_227"
+    ]
+  },
+  {
+    "id": "B_M_7550372108f9a019",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti2P2O11_2",
+      "TiP2O7_205",
+      "Li4TiO4_63"
+    ]
+  },
+  {
+    "id": "B_M_76c0a53760ee169d",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti4(PO5)3_43",
+      "Li2CO3_15"
+    ]
+  },
+  {
+    "id": "B_M_76cb42784544e5ca",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiO2_227",
+      "LiTi2(PO4)3_167"
+    ]
+  },
+  {
+    "id": "B_M_76d661582027ae47",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4Ti5O12_227",
+      "LiTiO2_227",
+      "NH4H2PO4_122"
+    ]
+  },
+  {
+    "id": "B_M_77000c24a07f1175",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2Ti2(PO4)3_60",
+      "Li2O_166"
+    ]
+  },
+  {
+    "id": "B_M_7798033055bf1176",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiPO3_14",
+      "Li4P2O7_2",
+      "Li2CO3_15"
+    ]
+  },
+  {
+    "id": "B_M_77c8298af28487e1",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2O_225",
+      "TiP2_62"
+    ]
+  },
+  {
+    "id": "B_M_77d6010dcddeeecd",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4TiO4_63",
+      "TiP_193",
+      "TiP2O7_205"
+    ]
+  },
+  {
+    "id": "B_M_77fa4dd9c8722ddb",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti4(PO5)3_43",
+      "LiTi2O4_227",
+      "Ti2P2O9_2"
+    ]
+  },
+  {
+    "id": "B_M_78bdc9cbf9b09500",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3Ti4O8_3",
+      "Ti5(PO5)4_19"
+    ]
+  },
+  {
+    "id": "B_M_78e97640318d3f75",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "P2O5_161",
+      "Li4P2O7_14"
+    ]
+  },
+  {
+    "id": "B_M_7975b19fafed4cc9",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "P2O5_161",
+      "TiP_194",
+      "TiP2O7_205"
+    ]
+  },
+  {
+    "id": "B_M_7995a8e5b56c0de9",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "P2O5_43",
+      "P2O5_161"
+    ]
+  },
+  {
+    "id": "B_M_799da0830b828ea5",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiO2_141",
+      "Ti5(PO5)4_19"
+    ]
+  },
+  {
+    "id": "B_M_79e1fc2aadbce446",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_12",
+      "LiPO3_13",
+      "P2O5_161"
+    ]
+  },
+  {
+    "id": "B_M_7a0ffaed1c6e781f",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP2O9_14",
+      "Li3PO4_62",
+      "Li2O_225"
+    ]
+  },
+  {
+    "id": "B_M_7a2f82dc7b5324ae",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti5(PO5)4_19",
+      "TiPO4_31",
+      "LiPO3_13"
+    ]
+  },
+  {
+    "id": "B_M_7ab5cd285e9908ff",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiO2_141",
+      "LiPO3_14"
+    ]
+  },
+  {
+    "id": "B_M_7af0c441d1ea3d55",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_11",
+      "LiTiP2O7_4"
+    ]
+  },
+  {
+    "id": "B_M_7b3d0b7723c40c55",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiPO3_13",
+      "Li2TiO3_15"
+    ]
+  },
+  {
+    "id": "B_M_7b448515a3b9d96c",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiPO5_62",
+      "P2O5_161"
+    ]
+  },
+  {
+    "id": "B_M_7bdb635d610885aa",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiP_14",
+      "TiP2O9_14",
+      "Ti(PO3)3_9"
+    ]
+  },
+  {
+    "id": "B_M_7c1626d298b94212",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2(PO4)3_167",
+      "Ti2P2O9_2"
+    ]
+  },
+  {
+    "id": "B_M_7c455020b06b9caa",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2O_166",
+      "Li2CO3_15"
+    ]
+  },
+  {
+    "id": "B_M_7c7ee1a6eae9c172",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiPO4_11",
+      "TiO2_136",
+      "Li2TiO3_15"
+    ]
+  },
+  {
+    "id": "B_M_7d1e6d815358b8cc",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2(PO4)3_167",
+      "LiTi2O4_11",
+      "Li2O_225"
+    ]
+  },
+  {
+    "id": "B_M_7d2af8d8bbded482",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiO2_141",
+      "Li2O_166"
+    ]
+  },
+  {
+    "id": "B_M_7d5d78a98b0ef1e7",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3Ti4O8_3",
+      "Li2TiO3_15",
+      "TiP2_62"
+    ]
+  },
+  {
+    "id": "B_M_7d9bff6fdf56483a",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2TiO3_15",
+      "TiO2_136"
+    ]
+  },
+  {
+    "id": "B_M_7daa0ca1451f3555",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "P2O5_161",
+      "Li2O_225"
+    ]
+  },
+  {
+    "id": "B_M_7e62e661beb86671",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiPO3_14",
+      "LiTiPO5_62"
+    ]
+  },
+  {
+    "id": "B_M_7e68952c09e57354",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiPO3_13",
+      "TiPO4_14"
+    ]
+  },
+  {
+    "id": "B_M_7f51802f43ff5dfd",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti4(PO5)3_43",
+      "TiP2O7_205"
+    ]
+  },
+  {
+    "id": "B_M_7f601aca08c8fb28",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP_194",
+      "Li8PO3_221",
+      "Ti5(PO5)4_19"
+    ]
+  },
+  {
+    "id": "B_M_7f70bcda4e9099fa",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP_194",
+      "LiTiPO5_2"
+    ]
+  },
+  {
+    "id": "B_M_7f96c4f6a5f4d221",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti(PO5)2_4",
+      "Ti3PO2_164"
+    ]
+  },
+  {
+    "id": "B_M_7fc3cc948c4e5732",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2O_225",
+      "LiPO3_13",
+      "NH4H2PO4_122"
+    ]
+  },
+  {
+    "id": "B_M_7fc501fb058d682f",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiPO4_11",
+      "Li4P2O7_14",
+      "TiP_194"
+    ]
+  },
+  {
+    "id": "B_M_7ff8992b4b07c0d8",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2(PO4)3_167",
+      "TiPO4_11"
+    ]
+  },
+  {
+    "id": "B_M_80cfa91904d25a5f",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2TiO3_15",
+      "TiO2_136",
+      "LiP_14"
+    ]
+  },
+  {
+    "id": "B_M_8147a35cbf321529",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li8PO3_221",
+      "P2O5_161"
+    ]
+  },
+  {
+    "id": "B_M_81b0835ee34477c5",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti2P2O11_2",
+      "TiPO4_14"
+    ]
+  },
+  {
+    "id": "B_M_81ccd0b059b16830",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_12",
+      "Li3PO4_62"
+    ]
+  },
+  {
+    "id": "B_M_822034c1c841674b",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiP_14",
+      "Li4P4O17_15",
+      "P2O5_62"
+    ]
+  },
+  {
+    "id": "B_M_83b716afd200bf83",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_58",
+      "TiP_194",
+      "LiTi2O4_227"
+    ]
+  },
+  {
+    "id": "B_M_83f595f2190a9444",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiPO3_14",
+      "LiTiO2_227",
+      "P2O5_43"
+    ]
+  },
+  {
+    "id": "B_M_8414aaeb8cd691bd",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP2O9_14",
+      "P2O5_62"
+    ]
+  },
+  {
+    "id": "B_M_843a71b9a090b0f5",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4Ti5O12_227",
+      "Li4P4O17_15"
+    ]
+  },
+  {
+    "id": "B_M_846f3b00672e5441",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiPO4_31",
+      "P2O5_62",
+      "Ti2P2O11_2"
+    ]
+  },
+  {
+    "id": "B_M_84cc42bf0d29b598",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2O_166",
+      "LiTiPO5_2"
+    ]
+  },
+  {
+    "id": "B_M_85b8fdcaf8c92896",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2TiO3_15",
+      "P2O5_161",
+      "Li8PO3_221"
+    ]
+  },
+  {
+    "id": "B_M_85ca6414508757de",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "P2O5_62",
+      "LiPO3_13",
+      "Li4TiO4_63"
+    ]
+  },
+  {
+    "id": "B_M_8601e894ab86fd23",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiPO3_13",
+      "Ti2P2O9_2"
+    ]
+  },
+  {
+    "id": "B_M_864ee87698032f79",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2O_166",
+      "TiPO4_14",
+      "TiO2_136"
+    ]
+  },
+  {
+    "id": "B_M_86710ab37520952a",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti5(PO5)4_19",
+      "LiTi2O4_31",
+      "LiTi2O4_58"
+    ]
+  },
+  {
+    "id": "B_M_867dc29058078249",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4P2O7_2",
+      "P2O5_62",
+      "Li3PO4_62"
+    ]
+  },
+  {
+    "id": "B_M_86e7bf9fe860f898",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiOH_129",
+      "LiTiPO5_62"
+    ]
+  },
+  {
+    "id": "B_M_8737957e155fe5bb",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiPO4_14",
+      "Li2O_166"
+    ]
+  },
+  {
+    "id": "B_M_873ff101203fd522",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti(PO5)2_4",
+      "TiP2O7_205",
+      "Ti2P2O11_2"
+    ]
+  },
+  {
+    "id": "B_M_874ea802c65c2df3",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti4(PO5)3_43",
+      "NH4H2PO4_122",
+      "Ti5(PO5)4_19"
+    ]
+  },
+  {
+    "id": "B_M_87db86d9a389832d",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiOH_129",
+      "TiP2O7_205",
+      "TiP_194"
+    ]
+  },
+  {
+    "id": "B_M_8885d612bf2b2ef0",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiPO3_14",
+      "LiOH_129",
+      "Ti3PO2_164"
+    ]
+  },
+  {
+    "id": "B_M_8899375bc8bc0d99",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP2O7_205",
+      "TiO2_136"
+    ]
+  },
+  {
+    "id": "B_M_894e4859d6a843e6",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti3PO2_164",
+      "TiP2_62"
+    ]
+  },
+  {
+    "id": "B_M_8a59e081417c6d86",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4P2O7_14",
+      "TiP2_62",
+      "LiTiP2O7_4"
+    ]
+  },
+  {
+    "id": "B_M_8ae956b8e1985c5f",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP2_62",
+      "LiTiO2_141",
+      "TiO2_136"
+    ]
+  },
+  {
+    "id": "B_M_8aecd09d74162eef",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4TiO4_63",
+      "Li8PO3_221",
+      "Ti2P2O11_2"
+    ]
+  },
+  {
+    "id": "B_M_8b29ae5aa473391b",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2CO3_15",
+      "Ti5(PO5)4_19",
+      "Li4P2O7_14"
+    ]
+  },
+  {
+    "id": "B_M_8b4462fd316e84cb",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti4(PO5)3_43",
+      "LiTi2O4_12",
+      "LiOH_129"
+    ]
+  },
+  {
+    "id": "B_M_8ba6014a23a6e17e",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP2O9_14",
+      "Li2Ti3O7_11",
+      "Li8PO3_221"
+    ]
+  },
+  {
+    "id": "B_M_8cdabf714568d770",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2Ti3O7_11",
+      "LiTi2(PO4)3_167"
+    ]
+  },
+  {
+    "id": "B_M_8d3a2e39527df7d7",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_31",
+      "Li3PO4_31",
+      "LiPO3_13"
+    ]
+  },
+  {
+    "id": "B_M_8d5032e71a431df9",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiOH-H2O_12",
+      "TiP2O9_14",
+      "LiTiPO5_62"
+    ]
+  },
+  {
+    "id": "B_M_8d7a0d1758a36ddc",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti4(PO5)3_43",
+      "Li3Ti4O8_3"
+    ]
+  },
+  {
+    "id": "B_M_8dc2ccc4f08655f6",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiPO4_14",
+      "Ti3PO2_164"
+    ]
+  },
+  {
+    "id": "B_M_8e6ced1675b1b6df",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti(PO5)2_4",
+      "LiTi2O4_12",
+      "Ti5(PO5)4_19"
+    ]
+  },
+  {
+    "id": "B_M_8e870dcf4bcae397",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2Ti3O7_11",
+      "Ti3PO2_164"
+    ]
+  },
+  {
+    "id": "B_M_8ec28c3dd3204656",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4P2O7_2",
+      "LiTiPO5_2",
+      "Ti2P2O9_2"
+    ]
+  },
+  {
+    "id": "B_M_8f0df1e322e3c736",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4P2O7_2",
+      "TiPO4_14",
+      "LiPO4_146"
+    ]
+  },
+  {
+    "id": "B_M_8f4e8785d1f641fa",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4Ti5O12_227",
+      "TiPO4_14",
+      "LiTiO2_227"
+    ]
+  },
+  {
+    "id": "B_M_90065270308d8949",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3PO4_62",
+      "LiTiP2O7_4"
+    ]
+  },
+  {
+    "id": "B_M_901692736acec0fe",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4P2O7_2",
+      "TiP2O7_205",
+      "LiOH-H2O_12"
+    ]
+  },
+  {
+    "id": "B_M_90193de2ef1a0a30",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2CO3_15",
+      "TiPO4_14",
+      "TiP_193"
+    ]
+  },
+  {
+    "id": "B_M_90377221992cfa3e",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiPO4_14",
+      "Ti2P2O9_2",
+      "Li3PO4_31"
+    ]
+  },
+  {
+    "id": "B_M_9058acee4a585aef",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP_193",
+      "Ti(PO3)3_9",
+      "Ti3PO2_164"
+    ]
+  },
+  {
+    "id": "B_M_9093302889013fc4",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP2_62",
+      "Ti2P2O11_2"
+    ]
+  },
+  {
+    "id": "B_M_90a8b2b2529fe4f4",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiPO4_14",
+      "P2O5_161"
+    ]
+  },
+  {
+    "id": "B_M_90eea841379aa613",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiO2_227",
+      "NH4H2PO4_122"
+    ]
+  },
+  {
+    "id": "B_M_90fd3bf2d1fc2da5",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiO2_136",
+      "LiP_14",
+      "TiPO4_11"
+    ]
+  },
+  {
+    "id": "B_M_911cad6034d60717",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti2P2O11_2",
+      "P2O5_43",
+      "LiOH-H2O_12"
+    ]
+  },
+  {
+    "id": "B_M_91ab990c6cc54545",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_227",
+      "LiTiP2O7_4"
+    ]
+  },
+  {
+    "id": "B_M_9255b48c73652a95",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP2_62",
+      "P2O5_161"
+    ]
+  },
+  {
+    "id": "B_M_92f9323f5046500e",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP2O9_14",
+      "TiPO4_31"
+    ]
+  },
+  {
+    "id": "B_M_933608168e42eaa3",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4TiO4_63",
+      "Li3PO4_62"
+    ]
+  },
+  {
+    "id": "B_M_93769159dadd6374",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_12",
+      "Li4P4O17_15",
+      "NH4H2PO4_122"
+    ]
+  },
+  {
+    "id": "B_M_93e299668f50fe56",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiO2_141",
+      "Li4P2O7_2"
+    ]
+  },
+  {
+    "id": "B_M_93edb823c33f854b",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li8PO3_221",
+      "LiTi2O4_58",
+      "TiPO4_31"
+    ]
+  },
+  {
+    "id": "B_M_93f5e3f042e6598f",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiPO3_14",
+      "LiTiO2_141"
+    ]
+  },
+  {
+    "id": "B_M_9456ffd43946b042",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "P2O5_62",
+      "LiPO3_13",
+      "Li3PO4_31"
+    ]
+  },
+  {
+    "id": "B_M_94760a05ed0a45be",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiO2_141",
+      "LiPO3_14",
+      "TiPO4_11"
+    ]
+  },
+  {
+    "id": "B_M_951265178968879e",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3Ti4O8_3",
+      "LiTiPO5_62",
+      "Li4Ti5O12_227"
+    ]
+  },
+  {
+    "id": "B_M_951c48b06e15af8c",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4TiO4_63",
+      "LiPO3_14",
+      "LiPO3_13"
+    ]
+  },
+  {
+    "id": "B_M_95792f504dcc517d",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3Ti4O8_3",
+      "NH4H2PO4_122",
+      "LiTi2(PO4)3_167"
+    ]
+  },
+  {
+    "id": "B_M_9596b3e63c599e2c",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_31",
+      "LiTiPO5_2"
+    ]
+  },
+  {
+    "id": "B_M_95c4ed033744dab2",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2(PO4)3_167",
+      "LiOH_129"
+    ]
+  },
+  {
+    "id": "B_M_95daa706d912a39a",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti5(PO5)4_19",
+      "TiPO4_14",
+      "LiTi2O4_227"
+    ]
+  },
+  {
+    "id": "B_M_962b138d833c3532",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_11",
+      "LiTiO2_141"
+    ]
+  },
+  {
+    "id": "B_M_962d9f56e8af7b14",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "P2O5_43",
+      "TiP2_62",
+      "Li4P2O7_14"
+    ]
+  },
+  {
+    "id": "B_M_96577636316e37fa",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiPO3_13",
+      "Li4TiO4_63"
+    ]
+  },
+  {
+    "id": "B_M_969295cd7b7e7fb7",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2CO3_15",
+      "TiP_194"
+    ]
+  },
+  {
+    "id": "B_M_96c0e6e5d4c0a4cc",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "P2O5_62",
+      "Li4P2O7_2",
+      "Ti(PO5)2_4"
+    ]
+  },
+  {
+    "id": "B_M_96edc3eeb393ea7c",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "P2O5_43",
+      "TiO2_136"
+    ]
+  },
+  {
+    "id": "B_M_9721833e918a2103",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiPO5_62",
+      "TiO2_136"
+    ]
+  },
+  {
+    "id": "B_M_97218c33aa5be4a1",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3PO4_62",
+      "NH4H2PO4_122"
+    ]
+  },
+  {
+    "id": "B_M_972a7e8b30c247c1",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiO2_227",
+      "Li3Ti4O8_3",
+      "NH4H2PO4_122"
+    ]
+  },
+  {
+    "id": "B_M_974a5e41b2151c70",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4TiO4_63",
+      "TiPO4_14",
+      "Li2CO3_15"
+    ]
+  },
+  {
+    "id": "B_M_9792e7f1b9d6ffcb",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiO2_136",
+      "TiPO4_11",
+      "Li4P2O7_14"
+    ]
+  },
+  {
+    "id": "B_M_97d8d46f16d512be",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "P2O5_43",
+      "Li2O_166"
+    ]
+  },
+  {
+    "id": "B_M_97f67cb05b50b82f",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4Ti5O12_227",
+      "Ti2P2O9_2",
+      "LiTiPO5_62"
+    ]
+  },
+  {
+    "id": "B_M_99bb2840bbdadec0",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_31",
+      "TiP2O9_14",
+      "TiO2_141"
+    ]
+  },
+  {
+    "id": "B_M_99bca119c812dd03",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiOH-H2O_12",
+      "Li4P2O7_14"
+    ]
+  },
+  {
+    "id": "B_M_9a31aa0cace77ac0",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2Ti2(PO4)3_60",
+      "Li3Ti4O8_3",
+      "Li2O_225"
+    ]
+  },
+  {
+    "id": "B_M_9a595d95f64cd3c7",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiO2_136",
+      "Li3Ti4O8_3",
+      "LiTi2O4_11"
+    ]
+  },
+  {
+    "id": "B_M_9abe64d4f66223be",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP2O9_14",
+      "TiP_194"
+    ]
+  },
+  {
+    "id": "B_M_9ac790a62eb9b3db",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti3PO2_164",
+      "Li4TiO4_63"
+    ]
+  },
+  {
+    "id": "B_M_9ac99a44496839c9",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2CO3_15",
+      "Li2O_166"
+    ]
+  },
+  {
+    "id": "B_M_9b458c98483f3890",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2Ti3O7_11",
+      "Li8PO3_221"
+    ]
+  },
+  {
+    "id": "B_M_9b6416729759641c",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti3PO2_164",
+      "LiOH_129",
+      "TiP2O7_205"
+    ]
+  },
+  {
+    "id": "B_M_9d1c4e2ccd214f06",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP2O7_205",
+      "P2O5_62",
+      "LiTiPO5_2"
+    ]
+  },
+  {
+    "id": "B_M_9de95ceb7386ccd8",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiPO4_14",
+      "P2O5_161",
+      "Ti(PO3)3_9"
+    ]
+  },
+  {
+    "id": "B_M_9df8aec41cfcbb0d",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti(PO3)3_9",
+      "Li3PO4_62"
+    ]
+  },
+  {
+    "id": "B_M_9e6728350cbecef2",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti5(PO5)4_19",
+      "Li3Ti4O8_3"
+    ]
+  },
+  {
+    "id": "B_M_9f26efd0f6218b6a",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3Ti4O8_3",
+      "TiPO4_31"
+    ]
+  },
+  {
+    "id": "B_M_9f34a8c1a99f404e",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3PO4_62",
+      "TiO2_141"
+    ]
+  },
+  {
+    "id": "B_M_9f85ff76cfea0324",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4P2O7_2",
+      "LiTi2O4_11"
+    ]
+  },
+  {
+    "id": "B_M_a00db9e6eae865b4",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3PO4_31",
+      "LiTiO2_141"
+    ]
+  },
+  {
+    "id": "B_M_a05969fb94944413",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "P2O5_161",
+      "Li3PO4_31"
+    ]
+  },
+  {
+    "id": "B_M_a06f0b5c585ec397",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti5(PO5)4_19",
+      "TiPO4_14",
+      "TiP2O9_14"
+    ]
+  },
+  {
+    "id": "B_M_a0757eaef3116ede",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_12",
+      "Ti3PO2_164",
+      "LiTiP2O7_4"
+    ]
+  },
+  {
+    "id": "B_M_a0de37e7afd92688",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiPO5_2",
+      "P2O5_161"
+    ]
+  },
+  {
+    "id": "B_M_a0f7cd0a9259a5d9",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4TiO4_63",
+      "Ti5(PO5)4_19"
+    ]
+  },
+  {
+    "id": "B_M_a10b5b5d3073b9e9",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti2P2O11_2",
+      "Li2O_225"
+    ]
+  },
+  {
+    "id": "B_M_a17670a5c23444e3",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "P2O5_43",
+      "Li2Ti2(PO4)3_60",
+      "LiTi2(PO4)3_167"
+    ]
+  },
+  {
+    "id": "B_M_a1fae19b2b6c4040",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2Ti3O7_11",
+      "P2O5_161",
+      "TiP2O7_205"
+    ]
+  },
+  {
+    "id": "B_M_a2403bfef748f0d6",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP2O9_14",
+      "Li3Ti4O8_3",
+      "LiTi2O4_12"
+    ]
+  },
+  {
+    "id": "B_M_a2636a9b269f3ea1",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3Ti4O8_3",
+      "LiTiPO5_62"
+    ]
+  },
+  {
+    "id": "B_M_a2b3b10085c24359",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4P4O17_15",
+      "Li2Ti2(PO4)3_60"
+    ]
+  },
+  {
+    "id": "B_M_a30dfbef97219bda",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3PO4_31",
+      "Li4P4O17_15"
+    ]
+  },
+  {
+    "id": "B_M_a3466c327f033034",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4Ti5O12_227",
+      "TiP2_62",
+      "Ti(PO5)2_4"
+    ]
+  },
+  {
+    "id": "B_M_a39d88f259ea55d5",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiO2_136",
+      "Ti(PO3)3_9"
+    ]
+  },
+  {
+    "id": "B_M_a3dd46d531027975",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4P4O17_15",
+      "Li4Ti5O12_227"
+    ]
+  },
+  {
+    "id": "B_M_a455141c1bf49107",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti5(PO5)4_19",
+      "LiPO4_146",
+      "LiTi2(PO4)3_167"
+    ]
+  },
+  {
+    "id": "B_M_a4c6ddfbdc37abec",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3Ti4O8_3",
+      "LiTi2O4_12",
+      "Ti(PO5)2_4"
+    ]
+  },
+  {
+    "id": "B_M_a4d018445eab43e7",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti(PO3)3_9",
+      "TiPO4_14",
+      "Ti2P2O9_2"
+    ]
+  },
+  {
+    "id": "B_M_a4ffe976aee8b4d9",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_58",
+      "TiP_193"
+    ]
+  },
+  {
+    "id": "B_M_a5361b25cca40ed1",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4P4O17_15",
+      "TiP2O7_205",
+      "LiTi2O4_31"
+    ]
+  },
+  {
+    "id": "B_M_a665dce40bfcecde",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiPO3_13",
+      "TiP2O7_205"
+    ]
+  },
+  {
+    "id": "B_M_a6da5754f2b4fb43",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiPO3_13",
+      "LiTi2(PO4)3_167"
+    ]
+  },
+  {
+    "id": "B_M_a6e66341b7ff41dc",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2Ti2(PO4)3_60",
+      "Li4P2O7_2",
+      "LiPO3_14"
+    ]
+  },
+  {
+    "id": "B_M_a814d5df192a49bf",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiO2_141",
+      "Li4P2O7_14",
+      "LiTi2(PO4)3_167"
+    ]
+  },
+  {
+    "id": "B_M_a84433edd7d67200",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti5(PO5)4_19",
+      "TiPO4_14",
+      "LiPO3_14"
+    ]
+  },
+  {
+    "id": "B_M_a84ab1b82e1c6991",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiPO5_2",
+      "Li4TiO4_63",
+      "Ti3PO2_164"
+    ]
+  },
+  {
+    "id": "B_M_a84b6d24f47e0f67",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2(PO4)3_167",
+      "Ti3PO2_164"
+    ]
+  },
+  {
+    "id": "B_M_a87041216cd6e461",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiP2O7_4",
+      "LiP_14"
+    ]
+  },
+  {
+    "id": "B_M_a8ba63183eebe270",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_227",
+      "LiTiPO5_2",
+      "TiO2_141"
+    ]
+  },
+  {
+    "id": "B_M_a982e070714f7701",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4TiO4_63",
+      "TiO2_141"
+    ]
+  },
+  {
+    "id": "B_M_a988d082011d273e",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti4(PO5)3_43",
+      "Ti3PO2_164"
+    ]
+  },
+  {
+    "id": "B_M_a9b23815c1ea18fe",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP2O7_205",
+      "TiO2_136",
+      "TiP2_62"
+    ]
+  },
+  {
+    "id": "B_M_a9da6cd8ddeb6f84",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti4(PO5)3_43",
+      "TiP_193",
+      "Li4P2O7_2"
+    ]
+  },
+  {
+    "id": "B_M_a9e947500b64f734",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP_194",
+      "LiPO3_14",
+      "Li2Ti2(PO4)3_60"
+    ]
+  },
+  {
+    "id": "B_M_aa0cc10f6a1f2977",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiO2_227",
+      "TiO2_141",
+      "Li3PO4_62"
+    ]
+  },
+  {
+    "id": "B_M_aa20d7b950240407",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti5(PO5)4_19",
+      "Li4P2O7_14"
+    ]
+  },
+  {
+    "id": "B_M_aa2c97f423602c31",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_11",
+      "Ti(PO3)3_9"
+    ]
+  },
+  {
+    "id": "B_M_aa428934f5f2432b",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti2P2O11_2",
+      "Li4P2O7_2",
+      "TiP_193"
+    ]
+  },
+  {
+    "id": "B_M_aae19e2daf90f31f",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "P2O5_43",
+      "Li3PO4_31"
+    ]
+  },
+  {
+    "id": "B_M_abc3c9e4cff54783",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiPO5_2",
+      "Li2O_166",
+      "TiP2O9_14"
+    ]
+  },
+  {
+    "id": "B_M_abecf3799cf7fb26",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti2P2O11_2",
+      "Li2CO3_15"
+    ]
+  },
+  {
+    "id": "B_M_acfc48f6ba9f4d6c",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3Ti4O8_3",
+      "Li8PO3_221"
+    ]
+  },
+  {
+    "id": "B_M_ad3d99522ba283b3",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiPO3_13",
+      "LiTiPO5_2",
+      "Li2O_225"
+    ]
+  },
+  {
+    "id": "B_M_ae67bd3b8aacc4d9",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiP2O7_4",
+      "Li4P2O7_14",
+      "Ti5(PO5)4_19"
+    ]
+  },
+  {
+    "id": "B_M_aed611fe61d23b9c",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2Ti2(PO4)3_60",
+      "Ti5(PO5)4_19",
+      "LiTiO2_141"
+    ]
+  },
+  {
+    "id": "B_M_aefaa5314f179b5f",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiOH-H2O_12",
+      "Li3Ti4O8_3"
+    ]
+  },
+  {
+    "id": "B_M_af382dc7e3547ea1",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiPO3_13",
+      "Li4P4O17_15"
+    ]
+  },
+  {
+    "id": "B_M_af5105d9a9c4fbad",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2O_166",
+      "Li4P2O7_14"
+    ]
+  },
+  {
+    "id": "B_M_afaf77944d324a55",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiO2_141",
+      "Li3PO4_31",
+      "TiP_194"
+    ]
+  },
+  {
+    "id": "B_M_afd291feb84ddbd3",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3PO4_62",
+      "Li4P2O7_2"
+    ]
+  },
+  {
+    "id": "B_M_b0542cd4a7db7b87",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "NH4H2PO4_122",
+      "Li4P2O7_2"
+    ]
+  },
+  {
+    "id": "B_M_b055fc0576739cb9",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti4(PO5)3_43",
+      "Li2Ti3O7_11",
+      "Li3Ti4O8_3"
+    ]
+  },
+  {
+    "id": "B_M_b0712f4b1b9a8328",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3Ti4O8_3",
+      "TiO2_136"
+    ]
+  },
+  {
+    "id": "B_M_b0b4bf340f5f6db1",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiPO3_13",
+      "Li4Ti5O12_227",
+      "P2O5_62"
+    ]
+  },
+  {
+    "id": "B_M_b10cdf66293107d5",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li8PO3_221",
+      "Ti3PO2_164"
+    ]
+  },
+  {
+    "id": "B_M_b14c43b32524e298",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "NH4H2PO4_122",
+      "Li4TiO4_63"
+    ]
+  },
+  {
+    "id": "B_M_b1812aba28b0790e",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti3PO2_164",
+      "TiP2O9_14",
+      "Li3PO4_62"
+    ]
+  },
+  {
+    "id": "B_M_b1f61d7deeab93a1",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li8PO3_221",
+      "TiP2O9_14",
+      "NH4H2PO4_122"
+    ]
+  },
+  {
+    "id": "B_M_b2019052013223ef",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4P2O7_14",
+      "LiPO4_146"
+    ]
+  },
+  {
+    "id": "B_M_b201996aaa4d2809",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2CO3_15",
+      "LiTiO2_141"
+    ]
+  },
+  {
+    "id": "B_M_b218c4600e20688f",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3Ti4O8_3",
+      "LiP_14"
+    ]
+  },
+  {
+    "id": "B_M_b245bde2d85d9927",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2Ti2(PO4)3_60",
+      "P2O5_62"
+    ]
+  },
+  {
+    "id": "B_M_b26059eb47ab9690",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "P2O5_161",
+      "LiPO3_13",
+      "LiTi2(PO4)3_167"
+    ]
+  },
+  {
+    "id": "B_M_b260e81a4b8856ea",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2TiO3_15",
+      "NH4H2PO4_122"
+    ]
+  },
+  {
+    "id": "B_M_b34247b5067389c7",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiPO3_14",
+      "P2O5_62",
+      "LiTiO2_227"
+    ]
+  },
+  {
+    "id": "B_M_b3d7e81db4f55617",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiO2_227",
+      "TiPO4_31",
+      "LiTi2O4_11"
+    ]
+  },
+  {
+    "id": "B_M_b4008d74f2aff3dc",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "P2O5_62",
+      "LiTi2O4_31",
+      "TiP_193"
+    ]
+  },
+  {
+    "id": "B_M_b423b07fdc1c31f9",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "P2O5_62",
+      "LiTi2O4_31",
+      "Li2O_166"
+    ]
+  },
+  {
+    "id": "B_M_b48d0bea725053fb",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP2_62",
+      "Li4TiO4_63",
+      "NH4H2PO4_122"
+    ]
+  },
+  {
+    "id": "B_M_b4949b2aa13c7e7f",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_31",
+      "LiTiPO5_2",
+      "Li3Ti4O8_3"
+    ]
+  },
+  {
+    "id": "B_M_b4cd8c2a96474672",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_31",
+      "TiPO4_14"
+    ]
+  },
+  {
+    "id": "B_M_b4d451f2e36bb384",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_227",
+      "Li2O_166",
+      "Li4P2O7_14"
+    ]
+  },
+  {
+    "id": "B_M_b524d2d3d5185d70",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4TiO4_63",
+      "Li3Ti4O8_3"
+    ]
+  },
+  {
+    "id": "B_M_b56420d9292ea430",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2O_225",
+      "Li2Ti2(PO4)3_60"
+    ]
+  },
+  {
+    "id": "B_M_b58d94dafc7173d7",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiO2_227",
+      "Li4Ti5O12_227"
+    ]
+  },
+  {
+    "id": "B_M_b63814edeb441939",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiP2O7_4",
+      "LiTi2O4_12"
+    ]
+  },
+  {
+    "id": "B_M_b67bb78ccec640f6",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiO2_136",
+      "Li3PO4_31"
+    ]
+  },
+  {
+    "id": "B_M_b680daa487cf76ae",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP2O9_14",
+      "LiTiO2_227"
+    ]
+  },
+  {
+    "id": "B_M_b68efdc9169222f5",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4TiO4_63",
+      "Ti2P2O11_2"
+    ]
+  },
+  {
+    "id": "B_M_b727ffe1f9199e6c",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti2P2O9_2",
+      "LiTi2O4_11"
+    ]
+  },
+  {
+    "id": "B_M_b76072132b034255",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2(PO4)3_167",
+      "Li3PO4_62",
+      "TiPO4_31"
+    ]
+  },
+  {
+    "id": "B_M_b7c1f3b37e0d90f9",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3PO4_62",
+      "P2O5_62"
+    ]
+  },
+  {
+    "id": "B_M_b7c4d2af44b150e7",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiPO4_14",
+      "LiTi2(PO4)3_167",
+      "Li4TiO4_63"
+    ]
+  },
+  {
+    "id": "B_M_b80162144a501a38",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2Ti2(PO4)3_60",
+      "TiP2_62",
+      "LiOH-H2O_12"
+    ]
+  },
+  {
+    "id": "B_M_b827ec78714766da",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_58",
+      "LiTi2O4_31",
+      "LiOH_129"
+    ]
+  },
+  {
+    "id": "B_M_b84e680d9c8e3fb5",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP_194",
+      "LiTiPO5_62"
+    ]
+  },
+  {
+    "id": "B_M_b88295fae3b65e4b",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP2_62",
+      "P2O5_62"
+    ]
+  },
+  {
+    "id": "B_M_b89ec1b8623f1ce7",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li8PO3_221",
+      "LiTi2O4_58",
+      "LiOH_129"
+    ]
+  },
+  {
+    "id": "B_M_b9842243d1d4b89a",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiP_14",
+      "Li3PO4_31",
+      "LiTi2O4_31"
+    ]
+  },
+  {
+    "id": "B_M_ba4af266077f2a87",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti(PO3)3_9",
+      "TiP2_62"
+    ]
+  },
+  {
+    "id": "B_M_bb501e9108a1a074",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "P2O5_62",
+      "P2O5_43",
+      "TiP_194"
+    ]
+  },
+  {
+    "id": "B_M_bc7038db0b4024a3",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP_193",
+      "LiP_14"
+    ]
+  },
+  {
+    "id": "B_M_bc9527f22ebed624",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "P2O5_161",
+      "LiPO4_146"
+    ]
+  },
+  {
+    "id": "B_M_bd751c85a924193a",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti5(PO5)4_19",
+      "Li4P2O7_14",
+      "Li4Ti5O12_227"
+    ]
+  },
+  {
+    "id": "B_M_bdc75ab7db2a85c9",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2CO3_15",
+      "LiTiP2O7_4"
+    ]
+  },
+  {
+    "id": "B_M_bdfcc48e1081180b",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4P2O7_2",
+      "LiTiPO5_2"
+    ]
+  },
+  {
+    "id": "B_M_bf2de963ebe1f080",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "P2O5_161",
+      "Li2O_166"
+    ]
+  },
+  {
+    "id": "B_M_bf71f64df4a83a4a",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti5(PO5)4_19",
+      "Li2O_166"
+    ]
+  },
+  {
+    "id": "B_M_bf985cfeb693c3a2",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti2P2O11_2",
+      "Ti3PO2_164",
+      "Li3Ti4O8_3"
+    ]
+  },
+  {
+    "id": "B_M_bfd72a524f3cb399",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti(PO3)3_9",
+      "Li4P4O17_15"
+    ]
+  },
+  {
+    "id": "B_M_bfe273ab50d02cf7",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2TiO3_15",
+      "LiPO4_146",
+      "P2O5_62"
+    ]
+  },
+  {
+    "id": "B_M_bfeb142e501a59b2",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3Ti4O8_3",
+      "Li4Ti5O12_227",
+      "Ti3PO2_164"
+    ]
+  },
+  {
+    "id": "B_M_bff53b9476a65e75",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiO2_141",
+      "TiP2O9_14"
+    ]
+  },
+  {
+    "id": "B_M_bff98aec382e0955",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiO2_136",
+      "P2O5_161",
+      "LiTiO2_141"
+    ]
+  },
+  {
+    "id": "B_M_c09c654ee71c59d6",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti2P2O9_2",
+      "TiP_193"
+    ]
+  },
+  {
+    "id": "B_M_c0e76536f1670025",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti4(PO5)3_43",
+      "TiPO4_14",
+      "TiP_193"
+    ]
+  },
+  {
+    "id": "B_M_c0e81312d7594082",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti2P2O11_2",
+      "TiP2O7_205",
+      "LiPO3_14"
+    ]
+  },
+  {
+    "id": "B_M_c1bd71d9e8f6ec95",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiOH_129",
+      "Li3Ti4O8_3"
+    ]
+  },
+  {
+    "id": "B_M_c1cf2b45f8d475ab",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiO2_136",
+      "LiPO3_14",
+      "LiTiP2O7_4"
+    ]
+  },
+  {
+    "id": "B_M_c1f009af5094da18",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiPO3_14",
+      "LiTi2O4_12"
+    ]
+  },
+  {
+    "id": "B_M_c23c1c2c1e220059",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4Ti5O12_227",
+      "TiO2_141",
+      "LiTi2(PO4)3_167"
+    ]
+  },
+  {
+    "id": "B_M_c31ce1e1225c9d21",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3Ti4O8_3",
+      "LiTi2O4_31",
+      "TiPO4_14"
+    ]
+  },
+  {
+    "id": "B_M_c335b3ced905ec88",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_227",
+      "Ti2P2O9_2",
+      "LiTi2O4_58"
+    ]
+  },
+  {
+    "id": "B_M_c3c962caff123a8a",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "P2O5_62",
+      "Li2Ti2(PO4)3_60"
+    ]
+  },
+  {
+    "id": "B_M_c408c7af71c2ec35",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP2O9_14",
+      "Li4P2O7_14",
+      "Li2O_225"
+    ]
+  },
+  {
+    "id": "B_M_c42cc364ed3b85fd",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "P2O5_43",
+      "LiPO3_13"
+    ]
+  },
+  {
+    "id": "B_M_c4dc71864b172deb",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3PO4_62",
+      "LiTi2O4_11"
+    ]
+  },
+  {
+    "id": "B_M_c5708563e677d634",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4Ti5O12_227",
+      "TiP2O7_205",
+      "TiO2_136"
+    ]
+  },
+  {
+    "id": "B_M_c5801fd539c636f5",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP2O7_205",
+      "LiTi2O4_31"
+    ]
+  },
+  {
+    "id": "B_M_c62034d8aa3cdcc1",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "P2O5_62",
+      "LiTiPO5_62",
+      "Li4TiO4_63"
+    ]
+  },
+  {
+    "id": "B_M_c67bfd944e8f1129",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiO2_141",
+      "LiTi2O4_227"
+    ]
+  },
+  {
+    "id": "B_M_c6ab138cf91897ea",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4P2O7_2",
+      "LiTiP2O7_4",
+      "Ti2P2O11_2"
+    ]
+  },
+  {
+    "id": "B_M_c7166dede4078aee",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti4(PO5)3_43",
+      "TiO2_136"
+    ]
+  },
+  {
+    "id": "B_M_c75206f36b5b5bc9",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2TiO3_15",
+      "Ti3PO2_164",
+      "Li2Ti3O7_11"
+    ]
+  },
+  {
+    "id": "B_M_c7937f0adb05a328",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiPO3_14",
+      "LiPO3_13"
+    ]
+  },
+  {
+    "id": "B_M_c798282eaf5c9f52",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiOH_129",
+      "TiP2O7_205",
+      "TiO2_136"
+    ]
+  },
+  {
+    "id": "B_M_c7a190a886a1e5db",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti5(PO5)4_19",
+      "Ti3PO2_164"
+    ]
+  },
+  {
+    "id": "B_M_c7cc4f5bfeb7c692",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiOH_129",
+      "LiTi2O4_11",
+      "TiPO4_31"
+    ]
+  },
+  {
+    "id": "B_M_c805562e87f44ba7",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_58",
+      "P2O5_161",
+      "Ti4(PO5)3_43"
+    ]
+  },
+  {
+    "id": "B_M_c80cb8ccb3abb49e",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiPO3_14",
+      "Ti5(PO5)4_19"
+    ]
+  },
+  {
+    "id": "B_M_c83014fc794f904d",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2O_166",
+      "Li2O_225",
+      "TiPO4_31"
+    ]
+  },
+  {
+    "id": "B_M_c853d5551f3de9f4",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti(PO5)2_4",
+      "Li3PO4_62",
+      "Ti5(PO5)4_19"
+    ]
+  },
+  {
+    "id": "B_M_c868f5a6bc549973",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_58",
+      "Li4Ti5O12_227"
+    ]
+  },
+  {
+    "id": "B_M_c8bb110f4cd2010a",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "NH4H2PO4_122",
+      "P2O5_62",
+      "P2O5_161"
+    ]
+  },
+  {
+    "id": "B_M_c9159046e5e2234c",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiP2O7_4",
+      "Li2O_166",
+      "LiTi2O4_12"
+    ]
+  },
+  {
+    "id": "B_M_c9746ecd9d22c4e2",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2Ti3O7_11",
+      "Li4TiO4_63"
+    ]
+  },
+  {
+    "id": "B_M_ca7c97f2759a9b03",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiOH_129",
+      "Ti4(PO5)3_43",
+      "Ti2P2O11_2"
+    ]
+  },
+  {
+    "id": "B_M_ca7e945eba361581",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3PO4_62",
+      "P2O5_161",
+      "NH4H2PO4_122"
+    ]
+  },
+  {
+    "id": "B_M_caaebe0e9ed62a04",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4P2O7_14",
+      "Ti2P2O9_2",
+      "LiTi2O4_12"
+    ]
+  },
+  {
+    "id": "B_M_cba7e7ab3778c1dd",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti2P2O11_2",
+      "Li4Ti5O12_227"
+    ]
+  },
+  {
+    "id": "B_M_ccac70bdf29df3e3",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4P4O17_15",
+      "Ti3PO2_164"
+    ]
+  },
+  {
+    "id": "B_M_ccff29815e558e63",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2O_166",
+      "TiP2_62",
+      "Li4P4O17_15"
+    ]
+  },
+  {
+    "id": "B_M_cd2a09d24c0786de",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiPO5_2",
+      "LiTiO2_141",
+      "Ti4(PO5)3_43"
+    ]
+  },
+  {
+    "id": "B_M_cd8a7d7261d3b2b3",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3PO4_31",
+      "LiPO3_13"
+    ]
+  },
+  {
+    "id": "B_M_cdc5ad3b5e055251",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP_193",
+      "Li3Ti4O8_3",
+      "LiTi2O4_58"
+    ]
+  },
+  {
+    "id": "B_M_cdf6ea58b3eeec6d",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_11",
+      "Ti5(PO5)4_19",
+      "LiP_14"
+    ]
+  },
+  {
+    "id": "B_M_ce3915c443b7b296",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li8PO3_221",
+      "LiPO4_146",
+      "TiO2_141"
+    ]
+  },
+  {
+    "id": "B_M_ce4fc007e2ae0df9",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti5(PO5)4_19",
+      "P2O5_43",
+      "TiO2_136"
+    ]
+  },
+  {
+    "id": "B_M_cea6bfe55a4ef8fb",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2O_225",
+      "Ti5(PO5)4_19"
+    ]
+  },
+  {
+    "id": "B_M_ced3b2084e92083f",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_12",
+      "Ti3PO2_164"
+    ]
+  },
+  {
+    "id": "B_M_cf049c1420b2fe4e",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiPO4_14",
+      "Li8PO3_221",
+      "Ti5(PO5)4_19"
+    ]
+  },
+  {
+    "id": "B_M_cf30d21915a5ec46",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiOH-H2O_12",
+      "LiP_14",
+      "Ti2P2O11_2"
+    ]
+  },
+  {
+    "id": "B_M_cf354447d3b1285a",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4P2O7_2",
+      "LiTiP2O7_4",
+      "Ti2P2O9_2"
+    ]
+  },
+  {
+    "id": "B_M_cfa73d15e81d65a1",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3PO4_31",
+      "LiPO4_146",
+      "LiOH_129"
+    ]
+  },
+  {
+    "id": "B_M_d00e3ddcd9421817",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2Ti3O7_11",
+      "TiP2_62"
+    ]
+  },
+  {
+    "id": "B_M_d075118973263d72",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "P2O5_62",
+      "Ti5(PO5)4_19"
+    ]
+  },
+  {
+    "id": "B_M_d08ee846c0690e98",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiO2_136",
+      "TiP2O7_205",
+      "Li4P2O7_2"
+    ]
+  },
+  {
+    "id": "B_M_d0bb12ac76fb0958",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li8PO3_221",
+      "TiO2_136",
+      "Ti3PO2_164"
+    ]
+  },
+  {
+    "id": "B_M_d10f53d9d55d14d0",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiPO3_14",
+      "LiTi2(PO4)3_167",
+      "TiO2_136"
+    ]
+  },
+  {
+    "id": "B_M_d1289807a37693dc",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3PO4_31",
+      "LiOH-H2O_12"
+    ]
+  },
+  {
+    "id": "B_M_d1b95b9c87aef5a6",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2CO3_15",
+      "LiTi2O4_58"
+    ]
+  },
+  {
+    "id": "B_M_d2e8061e9ece6b4e",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti2P2O11_2",
+      "Ti5(PO5)4_19",
+      "LiTi2O4_12"
+    ]
+  },
+  {
+    "id": "B_M_d32d1361131b3bb3",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_11",
+      "TiP_193",
+      "TiPO4_14"
+    ]
+  },
+  {
+    "id": "B_M_d42f3f4625e1010c",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4TiO4_63",
+      "TiPO4_14",
+      "LiTiO2_227"
+    ]
+  },
+  {
+    "id": "B_M_d45bf026b6241738",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP2O9_14",
+      "Li3PO4_31",
+      "Ti(PO3)3_9"
+    ]
+  },
+  {
+    "id": "B_M_d479d47aadca81d4",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2O_225",
+      "LiPO3_13",
+      "LiP_14"
+    ]
+  },
+  {
+    "id": "B_M_d489d123222a9779",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "P2O5_43",
+      "TiP2_62"
+    ]
+  },
+  {
+    "id": "B_M_d56169d8339fb6e7",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiO2_136",
+      "LiPO3_14",
+      "LiOH_129"
+    ]
+  },
+  {
+    "id": "B_M_d58a54cbd9e3dfeb",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2TiO3_15",
+      "P2O5_62"
+    ]
+  },
+  {
+    "id": "B_M_d5ccdcb5b72fbad0",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_58",
+      "Li3PO4_31"
+    ]
+  },
+  {
+    "id": "B_M_d63993087442d7ec",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4TiO4_63",
+      "Li2Ti3O7_11"
+    ]
+  },
+  {
+    "id": "B_M_d64dd84221a08152",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_58",
+      "Li4P4O17_15",
+      "TiPO4_31"
+    ]
+  },
+  {
+    "id": "B_M_d654330b836939d1",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4P2O7_2",
+      "Li4Ti5O12_227",
+      "Ti(PO3)3_9"
+    ]
+  },
+  {
+    "id": "B_M_d7404adf7139ab2f",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti(PO5)2_4",
+      "P2O5_62",
+      "Li3PO4_62"
+    ]
+  },
+  {
+    "id": "B_M_d74d5a7926f76c2e",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4TiO4_63",
+      "LiTiO2_227"
+    ]
+  },
+  {
+    "id": "B_M_d84c1ce97f2efd57",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4P2O7_14",
+      "LiP_14",
+      "LiTiPO5_62"
+    ]
+  },
+  {
+    "id": "B_M_d85bbf464315c42f",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiP_14",
+      "NH4H2PO4_122"
+    ]
+  },
+  {
+    "id": "B_M_d938e3b4f5314186",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiPO4_11",
+      "LiTi2O4_12"
+    ]
+  },
+  {
+    "id": "B_M_d9a3d413c024688b",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti(PO3)3_9",
+      "Li4TiO4_63"
+    ]
+  },
+  {
+    "id": "B_M_d9b08b55a6506c82",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiPO4_14",
+      "Li2Ti3O7_11",
+      "TiO2_136"
+    ]
+  },
+  {
+    "id": "B_M_d9b3f1bdd6741736",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiPO4_146",
+      "Ti(PO5)2_4",
+      "LiTiP2O7_4"
+    ]
+  },
+  {
+    "id": "B_M_da1c45fe658f60dd",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_227",
+      "TiP_193"
+    ]
+  },
+  {
+    "id": "B_M_da32b168d53ecf9c",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiPO5_2",
+      "Ti5(PO5)4_19"
+    ]
+  },
+  {
+    "id": "B_M_db848d5e52c8223e",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiOH_129",
+      "TiPO4_31",
+      "Li4P4O17_15"
+    ]
+  },
+  {
+    "id": "B_M_dbb1e881a37e5247",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiOH_129",
+      "LiOH-H2O_12",
+      "Ti2P2O9_2"
+    ]
+  },
+  {
+    "id": "B_M_dbd8769c29b8cbcf",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "P2O5_62",
+      "TiPO4_31"
+    ]
+  },
+  {
+    "id": "B_M_dc1ba229f200bddb",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti(PO5)2_4",
+      "LiP_14"
+    ]
+  },
+  {
+    "id": "B_M_dd1a24cd5ca141a8",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiPO3_13",
+      "Ti(PO3)3_9"
+    ]
+  },
+  {
+    "id": "B_M_dd90c5ae55b4a80f",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiO2_136",
+      "Li2TiO3_15"
+    ]
+  },
+  {
+    "id": "B_M_decddd54f604a4a3",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_227",
+      "Li3PO4_62",
+      "LiOH_129"
+    ]
+  },
+  {
+    "id": "B_M_df1b34bc9b84aac4",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiPO5_62",
+      "Li4Ti5O12_227"
+    ]
+  },
+  {
+    "id": "B_M_df40022f5f1755f0",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_12",
+      "TiPO4_11",
+      "Li4P2O7_2"
+    ]
+  },
+  {
+    "id": "B_M_df4a2b0739b1d174",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiO2_136",
+      "Li2O_225"
+    ]
+  },
+  {
+    "id": "B_M_dff8fd3e8a91ad39",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4P4O17_15",
+      "Li4P2O7_2"
+    ]
+  },
+  {
+    "id": "B_M_e0f2f1c32d12f8bf",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti(PO5)2_4",
+      "Li4TiO4_63"
+    ]
+  },
+  {
+    "id": "B_M_e0fb22e3e1c14991",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "P2O5_161",
+      "TiP2_62"
+    ]
+  },
+  {
+    "id": "B_M_e176c7deb7889b15",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4Ti5O12_227",
+      "Li2Ti3O7_11",
+      "TiO2_136"
+    ]
+  },
+  {
+    "id": "B_M_e17e9c99425aebe7",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti(PO5)2_4",
+      "LiOH-H2O_12"
+    ]
+  },
+  {
+    "id": "B_M_e1bf3c2be2f4e6f4",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li8PO3_221",
+      "LiTiO2_227"
+    ]
+  },
+  {
+    "id": "B_M_e20c29667cbf9872",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiPO4_14",
+      "TiP2_62",
+      "TiP2O9_14"
+    ]
+  },
+  {
+    "id": "B_M_e2c70e9fc7ca832b",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP_194",
+      "TiO2_136"
+    ]
+  },
+  {
+    "id": "B_M_e2f1c15962845821",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiPO3_13",
+      "Li2Ti3O7_11"
+    ]
+  },
+  {
+    "id": "B_M_e3571f65bb90d040",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2O_225",
+      "Li4P2O7_14",
+      "Li2O_166"
+    ]
+  },
+  {
+    "id": "B_M_e367032b795d89f0",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti(PO3)3_9",
+      "Li3PO4_31"
+    ]
+  },
+  {
+    "id": "B_M_e464d24888f47330",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiPO5_62",
+      "LiOH_129"
+    ]
+  },
+  {
+    "id": "B_M_e50bf21360198a6d",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3PO4_31",
+      "LiTiO2_227",
+      "TiO2_136"
+    ]
+  },
+  {
+    "id": "B_M_e51cb2d0929289f6",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP_193",
+      "TiPO4_31",
+      "Li2O_225"
+    ]
+  },
+  {
+    "id": "B_M_e5a9161b12ffe89c",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti(PO5)2_4",
+      "Li2Ti2(PO4)3_60"
+    ]
+  },
+  {
+    "id": "B_M_e6051235f1e777b0",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_11",
+      "LiTiO2_141",
+      "TiO2_141"
+    ]
+  },
+  {
+    "id": "B_M_e6b8f57d0f97de27",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti4(PO5)3_43",
+      "LiTi2O4_227"
+    ]
+  },
+  {
+    "id": "B_M_e6d9222ea1773ea9",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP2O9_14",
+      "TiP_193",
+      "LiTi2O4_12"
+    ]
+  },
+  {
+    "id": "B_M_e7c0bf7925f4b27b",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti2P2O11_2",
+      "Ti3PO2_164"
+    ]
+  },
+  {
+    "id": "B_M_e844e20d58ca7bee",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti4(PO5)3_43",
+      "Li2Ti3O7_11",
+      "TiP2_62"
+    ]
+  },
+  {
+    "id": "B_M_e881daec861e3647",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti2P2O9_2",
+      "LiTiO2_141",
+      "LiPO3_13"
+    ]
+  },
+  {
+    "id": "B_M_e89cf995850b3eba",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2Ti3O7_11",
+      "LiTiO2_141",
+      "Ti3PO2_164"
+    ]
+  },
+  {
+    "id": "B_M_e9961086eadf1421",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "P2O5_43",
+      "Ti4(PO5)3_43",
+      "Li3PO4_31"
+    ]
+  },
+  {
+    "id": "B_M_e9a034ce6aa9512d",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3PO4_31",
+      "Li2CO3_15"
+    ]
+  },
+  {
+    "id": "B_M_ea1ff3dd66c2117e",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "NH4H2PO4_122",
+      "LiTi2O4_12",
+      "Ti4(PO5)3_43"
+    ]
+  },
+  {
+    "id": "B_M_ea9f6c6863a637da",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiO2_227",
+      "LiTi2(PO4)3_167",
+      "Ti3PO2_164"
+    ]
+  },
+  {
+    "id": "B_M_eb260b250f58f280",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_11",
+      "LiOH_129"
+    ]
+  },
+  {
+    "id": "B_M_eb60d3b35d1c0665",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2O_166",
+      "P2O5_62",
+      "LiTiPO5_2"
+    ]
+  },
+  {
+    "id": "B_M_eb60e639d2498c1e",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiOH_129",
+      "P2O5_43",
+      "LiTiPO5_2"
+    ]
+  },
+  {
+    "id": "B_M_eb6ad82f2919920b",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiPO4_146",
+      "TiO2_141"
+    ]
+  },
+  {
+    "id": "B_M_ebc265d8fa65a545",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2(PO4)3_167",
+      "LiTi2O4_31"
+    ]
+  },
+  {
+    "id": "B_M_ebe0d83758a94781",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti5(PO5)4_19",
+      "P2O5_43",
+      "Li2TiO3_15"
+    ]
+  },
+  {
+    "id": "B_M_ec33fb4a21cb0643",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiO2_136",
+      "TiP2O9_14",
+      "LiTiO2_227"
+    ]
+  },
+  {
+    "id": "B_M_ed5b5e7bf09ff7db",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti(PO5)2_4",
+      "Li4P4O17_15"
+    ]
+  },
+  {
+    "id": "B_M_ed5f4fc801415c44",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4Ti5O12_227",
+      "Ti(PO5)2_4"
+    ]
+  },
+  {
+    "id": "B_M_ed9891a43f8fe89e",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiPO4_31",
+      "Ti4(PO5)3_43",
+      "LiTiPO5_2"
+    ]
+  },
+  {
+    "id": "B_M_edadcf3aa77bd54b",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP2_62",
+      "LiP_14"
+    ]
+  },
+  {
+    "id": "B_M_edb77e29f948f1cf",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiO2_141",
+      "Li4P2O7_14",
+      "TiP_194"
+    ]
+  },
+  {
+    "id": "B_M_edcf92b90e4aef78",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti3PO2_164",
+      "LiPO3_13",
+      "TiO2_136"
+    ]
+  },
+  {
+    "id": "B_M_ee271583e5f6045d",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4TiO4_63",
+      "P2O5_43",
+      "Ti(PO5)2_4"
+    ]
+  },
+  {
+    "id": "B_M_ee6397e42f657186",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4TiO4_63",
+      "TiO2_136",
+      "Ti(PO3)3_9"
+    ]
+  },
+  {
+    "id": "B_M_ee998e3a938254cb",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li8PO3_221",
+      "Li2O_166",
+      "LiTiPO5_62"
+    ]
+  },
+  {
+    "id": "B_M_eed21b1b4aa412ae",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiPO4_146",
+      "TiO2_136",
+      "TiP2_62"
+    ]
+  },
+  {
+    "id": "B_M_efc0a1f9fe6a6c31",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2O_225",
+      "LiTiPO5_62"
+    ]
+  },
+  {
+    "id": "B_M_f006f4c919e6084c",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4TiO4_63",
+      "LiTi2(PO4)3_167"
+    ]
+  },
+  {
+    "id": "B_M_f05ef2d13780e9ff",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_11",
+      "Li3PO4_31",
+      "LiPO4_146"
+    ]
+  },
+  {
+    "id": "B_M_f0cc377b755848e6",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiO2_227",
+      "TiO2_136"
+    ]
+  },
+  {
+    "id": "B_M_f0e871c9c8b22483",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "P2O5_161",
+      "LiTi2O4_12"
+    ]
+  },
+  {
+    "id": "B_M_f0ecfc5b2e986d40",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3PO4_31",
+      "Li4P2O7_14"
+    ]
+  },
+  {
+    "id": "B_M_f11133b63c85cfc5",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "NH4H2PO4_122",
+      "LiTiPO5_62"
+    ]
+  },
+  {
+    "id": "B_M_f157d7814259d29d",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2O_166",
+      "Li2Ti2(PO4)3_60",
+      "Li4TiO4_63"
+    ]
+  },
+  {
+    "id": "B_M_f21726e61a249ac7",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "NH4H2PO4_122",
+      "TiP2O9_14",
+      "TiPO4_11"
+    ]
+  },
+  {
+    "id": "B_M_f2229ed0e9bea9c1",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti2P2O9_2",
+      "LiTi2O4_227",
+      "LiTiPO5_62"
+    ]
+  },
+  {
+    "id": "B_M_f254d89fb8ab9a33",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiOH-H2O_12",
+      "Li4P2O7_2",
+      "Li4Ti5O12_227"
+    ]
+  },
+  {
+    "id": "B_M_f26b7b5858c4600a",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4P2O7_14",
+      "Li8PO3_221",
+      "LiTi2(PO4)3_167"
+    ]
+  },
+  {
+    "id": "B_M_f2eaf892701bad14",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3PO4_31",
+      "TiPO4_31"
+    ]
+  },
+  {
+    "id": "B_M_f32e342554ba783f",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2O_166",
+      "Li3PO4_31",
+      "Ti4(PO5)3_43"
+    ]
+  },
+  {
+    "id": "B_M_f36215d34c76cee3",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2(PO4)3_167",
+      "Ti4(PO5)3_43",
+      "Li3PO4_31"
+    ]
+  },
+  {
+    "id": "B_M_f3c718d00b4440a9",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_11",
+      "LiPO3_14",
+      "LiTiO2_141"
+    ]
+  },
+  {
+    "id": "B_M_f3eba0603a0397f6",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2O_166",
+      "Li8PO3_221"
+    ]
+  },
+  {
+    "id": "B_M_f41fa013ace6366f",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_31",
+      "LiOH_129",
+      "Ti2P2O11_2"
+    ]
+  },
+  {
+    "id": "B_M_f44d3b12ad794f8f",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4P2O7_14",
+      "Li4P4O17_15"
+    ]
+  },
+  {
+    "id": "B_M_f55648c3517a3b8d",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4Ti5O12_227",
+      "Ti(PO3)3_9",
+      "Li2Ti3O7_11"
+    ]
+  },
+  {
+    "id": "B_M_f5b153791f5d3d17",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiOH_129",
+      "P2O5_161",
+      "Li3Ti4O8_3"
+    ]
+  },
+  {
+    "id": "B_M_f603ae1678ded4d7",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3PO4_62",
+      "LiTiO2_141"
+    ]
+  },
+  {
+    "id": "B_M_f63b63cae7db8417",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP_193",
+      "Li8PO3_221"
+    ]
+  },
+  {
+    "id": "B_M_f6f523a3f74a48fa",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_227",
+      "Li2Ti3O7_11",
+      "LiTiO2_227"
+    ]
+  },
+  {
+    "id": "B_M_f72412261109477c",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP2O7_205",
+      "P2O5_161",
+      "Li8PO3_221"
+    ]
+  },
+  {
+    "id": "B_M_f78d2518a6d927d1",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "P2O5_43",
+      "LiPO3_13",
+      "Li3PO4_62"
+    ]
+  },
+  {
+    "id": "B_M_f7c92e1e5eb3587e",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiPO4_146",
+      "Li3PO4_62",
+      "LiTiO2_227"
+    ]
+  },
+  {
+    "id": "B_M_f7f2e90a33f86d09",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4Ti5O12_227",
+      "Li3Ti4O8_3"
+    ]
+  },
+  {
+    "id": "B_M_f83804e7339595fd",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP2O9_14",
+      "Li3PO4_62"
+    ]
+  },
+  {
+    "id": "B_M_f8c0af87eb3805de",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_31",
+      "Li4Ti5O12_227",
+      "LiTiO2_141"
+    ]
+  },
+  {
+    "id": "B_M_f8c6aefd65013fe4",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiPO4_31",
+      "Li2Ti2(PO4)3_60"
+    ]
+  },
+  {
+    "id": "B_M_f8d628df0ce16e7f",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiO2_227",
+      "LiPO4_146"
+    ]
+  },
+  {
+    "id": "B_M_f95e0ecc6000d754",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiPO5_2",
+      "LiTi2(PO4)3_167"
+    ]
+  },
+  {
+    "id": "B_M_f99ad3260905ca6e",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiO2_136",
+      "Ti4(PO5)3_43"
+    ]
+  },
+  {
+    "id": "B_M_f9bb18f2e399cd81",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiPO5_2",
+      "LiTi2O4_31"
+    ]
+  },
+  {
+    "id": "B_M_fb3bc4745b803dc4",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_31",
+      "LiP_14"
+    ]
+  },
+  {
+    "id": "B_M_fb513f0938b95c1f",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti(PO5)2_4",
+      "P2O5_43",
+      "Li2Ti3O7_11"
+    ]
+  },
+  {
+    "id": "B_M_fb57368e0f441e1e",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti5(PO5)4_19",
+      "LiTiO2_141"
+    ]
+  },
+  {
+    "id": "B_M_fb94e0be9f001e80",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti3PO2_164",
+      "Li2CO3_15"
+    ]
+  },
+  {
+    "id": "B_M_fbd57deefc147053",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2CO3_15",
+      "Li3Ti4O8_3"
+    ]
+  },
+  {
+    "id": "B_M_fbff4903c9aa37ac",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP2O9_14",
+      "LiTi2O4_31"
+    ]
+  },
+  {
+    "id": "B_M_fc3e185eb8c093a7",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiPO4_11",
+      "Li3PO4_62"
+    ]
+  },
+  {
+    "id": "B_M_fca60b234405efe5",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiO2_141",
+      "Li2O_166"
+    ]
+  },
+  {
+    "id": "B_M_fca9c26d8e5f09d8",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiOH_129",
+      "Li4Ti5O12_227"
+    ]
+  },
+  {
+    "id": "B_M_fcbb1b6971d8f037",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2(PO4)3_167",
+      "TiO2_136",
+      "Li4P2O7_14"
+    ]
+  },
+  {
+    "id": "B_M_fd05e42f3e6003ce",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiP2O7_4",
+      "TiPO4_11",
+      "LiPO3_13"
+    ]
+  },
+  {
+    "id": "B_M_fd197518768d3d2a",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4Ti5O12_227",
+      "LiP_14"
+    ]
+  },
+  {
+    "id": "B_M_fd37b92faa5d4b52",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4P2O7_2",
+      "Ti5(PO5)4_19"
+    ]
+  },
+  {
+    "id": "B_M_fd3c5b0266e37aaa",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4P2O7_14",
+      "Li2O_225"
+    ]
+  },
+  {
+    "id": "B_M_fd3f37ec8d206242",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTi2O4_31",
+      "Ti2P2O9_2"
+    ]
+  },
+  {
+    "id": "B_M_fd70525a327fa206",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiPO4_11",
+      "TiP_194"
+    ]
+  },
+  {
+    "id": "B_M_fe37124fd2f8d830",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti(PO5)2_4",
+      "Ti3PO2_164",
+      "Li3PO4_31"
+    ]
+  },
+  {
+    "id": "B_M_fe5993e6168b04ab",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiO2_227",
+      "LiTi2O4_227"
+    ]
+  },
+  {
+    "id": "B_M_fe81137e62d8a874",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP_194",
+      "Ti(PO5)2_4"
+    ]
+  },
+  {
+    "id": "B_M_ff1426ac70ba7f8d",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "LiTiPO5_62",
+      "TiPO4_31",
+      "LiTi2O4_11"
+    ]
+  },
+  {
+    "id": "B_M_ff2779f3f0e29042",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li4P2O7_14",
+      "Ti3PO2_164",
+      "LiTiPO5_62"
+    ]
+  },
+  {
+    "id": "B_M_ff4cdaad8548968e",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiP_193",
+      "LiTi2O4_12",
+      "TiO2_136"
+    ]
+  },
+  {
+    "id": "B_M_ff67051d183af32e",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Ti2P2O11_2",
+      "TiP2_62"
+    ]
+  },
+  {
+    "id": "B_M_ffdb96025738d444",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3PO4_62",
+      "P2O5_43"
+    ]
+  }
+]

@@ -1,0 +1,179 @@
+{
+  "seed": 261025,
+  "chemistry": "Li-Ti-P-O",
+  "windows": {
+    "r1_5": [
+      1.0,
+      5.0
+    ],
+    "r5_40": [
+      5.0,
+      40.0
+    ],
+    "r1_40": [
+      1.0,
+      40.0
+    ],
+    "r40_120": [
+      40.0,
+      120.00001
+    ]
+  },
+  "selected_window": "r5_40",
+  "criterion": "mean validation accuracy weighting clean/noise/background equally",
+  "conditions": [
+    {
+      "condition": "baseline",
+      "artifact": "clean",
+      "description": "Released simulated spectrum; no additional perturbation."
+    },
+    {
+      "condition": "noise_0.01_trial0",
+      "artifact": "noise",
+      "description": "Independent additive Gaussian noise, standard deviation 0.01 relative to preprocessed peak intensity; draw 0."
+    },
+    {
+      "condition": "noise_0.01_trial1",
+      "artifact": "noise",
+      "description": "Independent additive Gaussian noise, standard deviation 0.01 relative to preprocessed peak intensity; draw 1."
+    },
+    {
+      "condition": "noise_0.01_trial2",
+      "artifact": "noise",
+      "description": "Independent additive Gaussian noise, standard deviation 0.01 relative to preprocessed peak intensity; draw 2."
+    },
+    {
+      "condition": "noise_0.04_trial0",
+      "artifact": "noise",
+      "description": "Independent additive Gaussian noise, standard deviation 0.04 relative to preprocessed peak intensity; draw 0."
+    },
+    {
+      "condition": "noise_0.04_trial1",
+      "artifact": "noise",
+      "description": "Independent additive Gaussian noise, standard deviation 0.04 relative to preprocessed peak intensity; draw 1."
+    },
+    {
+      "condition": "noise_0.04_trial2",
+      "artifact": "noise",
+      "description": "Independent additive Gaussian noise, standard deviation 0.04 relative to preprocessed peak intensity; draw 2."
+    },
+    {
+      "condition": "background_0.05",
+      "artifact": "background",
+      "description": "Additive broad Gaussian background, peak 0.05 relative to preprocessed peak intensity, center35 degrees and width12 degrees."
+    },
+    {
+      "condition": "background_0.25",
+      "artifact": "background",
+      "description": "Additive broad Gaussian background, peak 0.25 relative to preprocessed peak intensity, center35 degrees and width12 degrees."
+    }
+  ],
+  "regularization_and_window_search": {
+    "XRD": {
+      "alpha": 0.1,
+      "clean_validation_accuracy": 0.9540229885057471,
+      "condition_accuracy": {
+        "baseline": 0.9540229885057471,
+        "noise_0.01_trial0": 0.9540229885057471,
+        "noise_0.01_trial1": 0.9540229885057471,
+        "noise_0.01_trial2": 0.9540229885057471,
+        "noise_0.04_trial0": 0.9540229885057471,
+        "noise_0.04_trial1": 0.9540229885057471,
+        "noise_0.04_trial2": 0.9540229885057471,
+        "background_0.05": 0.9540229885057471,
+        "background_0.25": 0.8505747126436781
+      },
+      "artifact_balanced_accuracy": 0.9367816091954023,
+      "artifact_family_accuracy": {
+        "clean": 0.9540229885057471,
+        "noise": 0.9540229885057471,
+        "background": 0.9022988505747126
+      }
+    },
+    "r1_5": {
+      "alpha": 0.01,
+      "clean_validation_accuracy": 0.6781609195402298,
+      "condition_accuracy": {
+        "baseline": 0.6781609195402298,
+        "noise_0.01_trial0": 0.6896551724137931,
+        "noise_0.01_trial1": 0.6781609195402298,
+        "noise_0.01_trial2": 0.6896551724137931,
+        "noise_0.04_trial0": 0.6551724137931034,
+        "noise_0.04_trial1": 0.5517241379310345,
+        "noise_0.04_trial2": 0.7011494252873564,
+        "background_0.05": 0.21839080459770116,
+        "background_0.25": 0.04597701149425287
+      },
+      "artifact_balanced_accuracy": 0.4904214559386973,
+      "artifact_family_accuracy": {
+        "clean": 0.6781609195402298,
+        "noise": 0.6609195402298851,
+        "background": 0.13218390804597702
+      }
+    },
+    "r5_40": {
+      "alpha": 0.01,
+      "clean_validation_accuracy": 0.9770114942528736,
+      "condition_accuracy": {
+        "baseline": 0.9770114942528736,
+        "noise_0.01_trial0": 0.9655172413793104,
+        "noise_0.01_trial1": 0.9770114942528736,
+        "noise_0.01_trial2": 0.9770114942528736,
+        "noise_0.04_trial0": 0.9655172413793104,
+        "noise_0.04_trial1": 0.9770114942528736,
+        "noise_0.04_trial2": 0.9540229885057471,
+        "background_0.05": 0.9770114942528736,
+        "background_0.25": 0.9770114942528736
+      },
+      "artifact_balanced_accuracy": 0.9744572158365262,
+      "artifact_family_accuracy": {
+        "clean": 0.9770114942528736,
+        "noise": 0.9693486590038313,
+        "background": 0.9770114942528736
+      }
+    },
+    "r1_40": {
+      "alpha": 0.01,
+      "clean_validation_accuracy": 0.9885057471264368,
+      "condition_accuracy": {
+        "baseline": 0.9885057471264368,
+        "noise_0.01_trial0": 0.9885057471264368,
+        "noise_0.01_trial1": 0.9885057471264368,
+        "noise_0.01_trial2": 0.9885057471264368,
+        "noise_0.04_trial0": 0.9770114942528736,
+        "noise_0.04_trial1": 0.9770114942528736,
+        "noise_0.04_trial2": 0.9655172413793104,
+        "background_0.05": 0.9655172413793104,
+        "background_0.25": 0.45977011494252873
+      },
+      "artifact_balanced_accuracy": 0.8939974457215837,
+      "artifact_family_accuracy": {
+        "clean": 0.9885057471264368,
+        "noise": 0.9808429118773946,
+        "background": 0.7126436781609196
+      }
+    },
+    "r40_120": {
+      "alpha": 1.0,
+      "clean_validation_accuracy": 0.8735632183908046,
+      "condition_accuracy": {
+        "baseline": 0.8735632183908046,
+        "noise_0.01_trial0": 0.8620689655172413,
+        "noise_0.01_trial1": 0.896551724137931,
+        "noise_0.01_trial2": 0.896551724137931,
+        "noise_0.04_trial0": 0.8620689655172413,
+        "noise_0.04_trial1": 0.8620689655172413,
+        "noise_0.04_trial2": 0.8620689655172413,
+        "background_0.05": 0.8735632183908046,
+        "background_0.25": 0.8735632183908046
+      },
+      "artifact_balanced_accuracy": 0.8735632183908045,
+      "artifact_family_accuracy": {
+        "clean": 0.8735632183908046,
+        "noise": 0.8735632183908044,
+        "background": 0.8735632183908046
+      }
+    }
+  },
+  "artifact_unit": "relative to maximum intensity after subtracting tenth-percentile baseline and peak scaling"
+}

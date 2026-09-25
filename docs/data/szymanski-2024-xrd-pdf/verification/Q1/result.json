@@ -1,73 +1,269 @@
 {
   "question": "Q1",
-  "summaries": [
+  "metrics": [
     {
+      "method": "RBF-SVM",
+      "representation": "Combined",
+      "condition": "baseline",
+      "fold": "0",
       "chemistry": "Li-La-Zr-O",
-      "group": "single",
-      "model": "Fused",
-      "n": 168,
-      "micro_f1": 0.9464285714285714,
-      "exact_match": 0.9464285714285714
+      "group": "all",
+      "metric": "exact_match",
+      "value": 0.9910714285714286,
+      "n": 112
     },
     {
+      "method": "RBF-SVM",
+      "representation": "Combined",
+      "condition": "baseline",
+      "fold": "0",
       "chemistry": "Li-La-Zr-O",
-      "group": "single",
-      "model": "PDF",
-      "n": 168,
-      "micro_f1": 0.9345238095238095,
-      "exact_match": 0.9345238095238095
+      "group": "all",
+      "metric": "micro_f1",
+      "value": 0.9910714285714286,
+      "n": 112
     },
     {
+      "method": "RBF-SVM",
+      "representation": "Combined",
+      "condition": "baseline",
+      "fold": "0",
+      "chemistry": "Li-Ti-P-O",
+      "group": "all",
+      "metric": "exact_match",
+      "value": 0.9724137931034482,
+      "n": 145
+    },
+    {
+      "method": "RBF-SVM",
+      "representation": "Combined",
+      "condition": "baseline",
+      "fold": "0",
+      "chemistry": "Li-Ti-P-O",
+      "group": "all",
+      "metric": "micro_f1",
+      "value": 0.9724137931034482,
+      "n": 145
+    },
+    {
+      "method": "RBF-SVM",
+      "representation": "PDF",
+      "condition": "baseline",
+      "fold": "0",
       "chemistry": "Li-La-Zr-O",
-      "group": "single",
-      "model": "XRD",
-      "n": 168,
-      "micro_f1": 0.9107142857142857,
-      "exact_match": 0.9107142857142857
+      "group": "all",
+      "metric": "exact_match",
+      "value": 0.9642857142857143,
+      "n": 112
     },
     {
-      "chemistry": "Li-Ti-P-O",
-      "group": "single",
-      "model": "Fused",
-      "n": 181,
-      "micro_f1": 0.9558011049723757,
-      "exact_match": 0.9558011049723757
-    },
-    {
-      "chemistry": "Li-Ti-P-O",
-      "group": "single",
-      "model": "PDF",
-      "n": 181,
-      "micro_f1": 0.9502762430939227,
-      "exact_match": 0.9502762430939227
-    },
-    {
-      "chemistry": "Li-Ti-P-O",
-      "group": "single",
-      "model": "XRD",
-      "n": 181,
-      "micro_f1": 0.9226519337016574,
-      "exact_match": 0.9226519337016574
-    }
-  ],
-  "complementarity": [
-    {
+      "method": "RBF-SVM",
+      "representation": "PDF",
+      "condition": "baseline",
+      "fold": "0",
       "chemistry": "Li-La-Zr-O",
-      "group": "single",
-      "n": 168,
-      "xrd_only_correct": 2,
-      "pdf_only_correct": 6,
-      "both_correct": 151,
-      "neither_correct": 9
+      "group": "all",
+      "metric": "micro_f1",
+      "value": 0.9642857142857143,
+      "n": 112
     },
     {
+      "method": "RBF-SVM",
+      "representation": "PDF",
+      "condition": "baseline",
+      "fold": "0",
       "chemistry": "Li-Ti-P-O",
-      "group": "single",
-      "n": 181,
-      "xrd_only_correct": 4,
-      "pdf_only_correct": 9,
-      "both_correct": 163,
-      "neither_correct": 5
+      "group": "all",
+      "metric": "exact_match",
+      "value": 0.9724137931034482,
+      "n": 145
+    },
+    {
+      "method": "RBF-SVM",
+      "representation": "PDF",
+      "condition": "baseline",
+      "fold": "0",
+      "chemistry": "Li-Ti-P-O",
+      "group": "all",
+      "metric": "micro_f1",
+      "value": 0.9724137931034482,
+      "n": 145
+    },
+    {
+      "method": "RBF-SVM",
+      "representation": "XRD",
+      "condition": "baseline",
+      "fold": "0",
+      "chemistry": "Li-La-Zr-O",
+      "group": "all",
+      "metric": "exact_match",
+      "value": 0.9821428571428571,
+      "n": 112
+    },
+    {
+      "method": "RBF-SVM",
+      "representation": "XRD",
+      "condition": "baseline",
+      "fold": "0",
+      "chemistry": "Li-La-Zr-O",
+      "group": "all",
+      "metric": "micro_f1",
+      "value": 0.9821428571428571,
+      "n": 112
+    },
+    {
+      "method": "RBF-SVM",
+      "representation": "XRD",
+      "condition": "baseline",
+      "fold": "0",
+      "chemistry": "Li-Ti-P-O",
+      "group": "all",
+      "metric": "exact_match",
+      "value": 0.9310344827586207,
+      "n": 145
+    },
+    {
+      "method": "RBF-SVM",
+      "representation": "XRD",
+      "condition": "baseline",
+      "fold": "0",
+      "chemistry": "Li-Ti-P-O",
+      "group": "all",
+      "metric": "micro_f1",
+      "value": 0.9310344827586207,
+      "n": 145
+    },
+    {
+      "method": "Ridge",
+      "representation": "Combined",
+      "condition": "baseline",
+      "fold": "0",
+      "chemistry": "Li-La-Zr-O",
+      "group": "all",
+      "metric": "exact_match",
+      "value": 0.9732142857142857,
+      "n": 112
+    },
+    {
+      "method": "Ridge",
+      "representation": "Combined",
+      "condition": "baseline",
+      "fold": "0",
+      "chemistry": "Li-La-Zr-O",
+      "group": "all",
+      "metric": "micro_f1",
+      "value": 0.9732142857142857,
+      "n": 112
+    },
+    {
+      "method": "Ridge",
+      "representation": "Combined",
+      "condition": "baseline",
+      "fold": "0",
+      "chemistry": "Li-Ti-P-O",
+      "group": "all",
+      "metric": "exact_match",
+      "value": 0.9586206896551724,
+      "n": 145
+    },
+    {
+      "method": "Ridge",
+      "representation": "Combined",
+      "condition": "baseline",
+      "fold": "0",
+      "chemistry": "Li-Ti-P-O",
+      "group": "all",
+      "metric": "micro_f1",
+      "value": 0.9586206896551724,
+      "n": 145
+    },
+    {
+      "method": "Ridge",
+      "representation": "PDF",
+      "condition": "baseline",
+      "fold": "0",
+      "chemistry": "Li-La-Zr-O",
+      "group": "all",
+      "metric": "exact_match",
+      "value": 0.9732142857142857,
+      "n": 112
+    },
+    {
+      "method": "Ridge",
+      "representation": "PDF",
+      "condition": "baseline",
+      "fold": "0",
+      "chemistry": "Li-La-Zr-O",
+      "group": "all",
+      "metric": "micro_f1",
+      "value": 0.9732142857142857,
+      "n": 112
+    },
+    {
+      "method": "Ridge",
+      "representation": "PDF",
+      "condition": "baseline",
+      "fold": "0",
+      "chemistry": "Li-Ti-P-O",
+      "group": "all",
+      "metric": "exact_match",
+      "value": 0.9586206896551724,
+      "n": 145
+    },
+    {
+      "method": "Ridge",
+      "representation": "PDF",
+      "condition": "baseline",
+      "fold": "0",
+      "chemistry": "Li-Ti-P-O",
+      "group": "all",
+      "metric": "micro_f1",
+      "value": 0.9586206896551724,
+      "n": 145
+    },
+    {
+      "method": "Ridge",
+      "representation": "XRD",
+      "condition": "baseline",
+      "fold": "0",
+      "chemistry": "Li-La-Zr-O",
+      "group": "all",
+      "metric": "exact_match",
+      "value": 0.9553571428571429,
+      "n": 112
+    },
+    {
+      "method": "Ridge",
+      "representation": "XRD",
+      "condition": "baseline",
+      "fold": "0",
+      "chemistry": "Li-La-Zr-O",
+      "group": "all",
+      "metric": "micro_f1",
+      "value": 0.9553571428571429,
+      "n": 112
+    },
+    {
+      "method": "Ridge",
+      "representation": "XRD",
+      "condition": "baseline",
+      "fold": "0",
+      "chemistry": "Li-Ti-P-O",
+      "group": "all",
+      "metric": "exact_match",
+      "value": 0.9448275862068966,
+      "n": 145
+    },
+    {
+      "method": "Ridge",
+      "representation": "XRD",
+      "condition": "baseline",
+      "fold": "0",
+      "chemistry": "Li-Ti-P-O",
+      "group": "all",
+      "metric": "micro_f1",
+      "value": 0.9448275862068966,
+      "n": 145
     }
   ]
 }

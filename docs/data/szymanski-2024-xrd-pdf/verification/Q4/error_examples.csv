@@ -1,0 +1,19 @@
+id,chemistry,representation,truth,predicted,false_inclusions,false_exclusions
+A_E_017c5016a5c515d3,Li-La-Zr-O,XRD,"[""Li2CO3"", ""ZrO2""]","[""La2Zr2O7"", ""Li2CO3"", ""LiLaO2"", ""ZrO2""]","[""La2Zr2O7"", ""LiLaO2""]",[]
+A_E_0446075898ec3ea2,Li-La-Zr-O,XRD,"[""La(OH)3"", ""LiOH""]","[""La(OH)3"", ""Li7La3Zr2O12"", ""LiOH""]","[""Li7La3Zr2O12""]",[]
+A_E_045b726991194435,Li-La-Zr-O,XRD,"[""La(OH)3"", ""ZrO2""]","[""La(OH)3""]",[],"[""ZrO2""]"
+A_E_017c5016a5c515d3,Li-La-Zr-O,PDF,"[""Li2CO3"", ""ZrO2""]","[""ZrO2""]",[],"[""Li2CO3""]"
+A_E_0446075898ec3ea2,Li-La-Zr-O,PDF,"[""La(OH)3"", ""LiOH""]","[""La(OH)3"", ""LiOH"", ""LiOH-H2O""]","[""LiOH-H2O""]",[]
+A_E_045b726991194435,Li-La-Zr-O,PDF,"[""La(OH)3"", ""ZrO2""]","[""La(OH)3""]",[],"[""ZrO2""]"
+A_E_017c5016a5c515d3,Li-La-Zr-O,Combined,"[""Li2CO3"", ""ZrO2""]","[""ZrO2""]",[],"[""Li2CO3""]"
+A_E_0446075898ec3ea2,Li-La-Zr-O,Combined,"[""La(OH)3"", ""LiOH""]","[""La(OH)3"", ""LiOH"", ""LiOH-H2O""]","[""LiOH-H2O""]",[]
+A_E_045b726991194435,Li-La-Zr-O,Combined,"[""La(OH)3"", ""ZrO2""]","[""La(OH)3""]",[],"[""ZrO2""]"
+B_E_008a9cff7f7f32ec,Li-Ti-P-O,XRD,"[""Li2TiO3"", ""TiO2""]","[""TiO2"", ""TiP2O9""]","[""TiP2O9""]","[""Li2TiO3""]"
+B_E_01048c8d8af1d0d7,Li-Ti-P-O,XRD,"[""Li2CO3"", ""Li2TiO3""]","[""Li2CO3"", ""Li8PO3"", ""Ti2P2O9""]","[""Li8PO3"", ""Ti2P2O9""]","[""Li2TiO3""]"
+B_E_010d59211e3a8ab3,Li-Ti-P-O,XRD,"[""Li2TiO3"", ""TiO2""]","[""Li2TiO3"", ""Ti2P2O11"", ""TiP2O9""]","[""Ti2P2O11"", ""TiP2O9""]","[""TiO2""]"
+B_E_008a9cff7f7f32ec,Li-Ti-P-O,PDF,"[""Li2TiO3"", ""TiO2""]","[""Li2Ti3O7"", ""TiO2"", ""TiP2O9""]","[""Li2Ti3O7"", ""TiP2O9""]","[""Li2TiO3""]"
+B_E_01048c8d8af1d0d7,Li-Ti-P-O,PDF,"[""Li2CO3"", ""Li2TiO3""]","[""Li2CO3"", ""LiOH""]","[""LiOH""]","[""Li2TiO3""]"
+B_E_035e7d2cf0e1e9f2,Li-Ti-P-O,PDF,"[""Li3PO4"", ""TiO2""]","[""Li3PO4"", ""TiPO4""]","[""TiPO4""]","[""TiO2""]"
+B_E_008a9cff7f7f32ec,Li-Ti-P-O,Combined,"[""Li2TiO3"", ""TiO2""]","[""Li2Ti3O7"", ""TiO2"", ""TiP2O9""]","[""Li2Ti3O7"", ""TiP2O9""]","[""Li2TiO3""]"
+B_E_01048c8d8af1d0d7,Li-Ti-P-O,Combined,"[""Li2CO3"", ""Li2TiO3""]","[""Li2CO3""]",[],"[""Li2TiO3""]"
+B_E_010d59211e3a8ab3,Li-Ti-P-O,Combined,"[""Li2TiO3"", ""TiO2""]","[""Li2TiO3"", ""TiO2"", ""TiP2O9""]","[""TiP2O9""]",[]

@@ -1,9 +1,0 @@
-# Input field definitions
-
-Numeric spectra are the earliest released measurements/simulations, not detector frames. Files are lossless float64 projections of the public numeric text files. Simulation NPZ files contain a shared `theta` array in degrees and a one-dimensional intensity array under each anonymous sample ID. Experimental NPZ files contain a native two-column `(two_theta_degrees, intensity)` array per ID. Load with `numpy.load(..., allow_pickle=False)`.
-
-Each matching JSON file is an ordered metadata array. `phases` contains formula plus space-group suffix for simulated data, and formula only for experiments. `replicate` is the native simulation index; `split` defines training/testing for singles. Experimental `major`, `minor`, and `minor_weight_percent` describe prepared mixtures. These are evaluation labels: do not use target labels as prediction features. `kind` gives known phase cardinality. Arrays retain negative simulated noise values. Experimental intensities are arbitrary counts; simulated intensities are relative units.
-
-The numerical protocol freezes representation and baseline models for a paired scientific comparison. It supplies neither fitted parameters nor expected outcomes. Each question stands alone. Its protocol section, common settings, and explicitly referenced section definitions apply; no result from another question is needed. The output schema defines files for evaluator comparison. The original phase-bearing filenames, source hashes, historical context and worked answers remain evaluator-side.
-
-Source: Nathan Szymanski (2023), Integrated analysis of XRD patterns and PDFs, figshare version 1, DOI 10.6084/m9.figshare.24043410.v1, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Packaging renames files and separates labels; no numerical filtering or processing is performed. The native scan grids differ; inspect rather than assume their endpoints.

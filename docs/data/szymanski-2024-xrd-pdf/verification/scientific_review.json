@@ -1,0 +1,189 @@
+{
+  "reviewer_role": "Independent verification and scientific-review subagent; candidate workflow authored by a separate subagent.",
+  "scope": "Human-style rubric assessment of this worked candidate only. These scores do not impose its choices or numerical outcomes on other submissions.",
+  "candidate_code_sha256": "2c81e2aa1cea139eb7b4e2fcd04910e55dd26eb8d9b9366cef4beee128f1e6eb",
+  "evidence_reviewed": [
+    "Candidate code and all four reports/metrics/predictions/partitions",
+    "Diagnostic figures, including visual inspection of Q1/Q3/Q4",
+    "Independent raw source/label audit covering all 2930 spectra",
+    "Independent isolated execution in workflow_execution_review.json",
+    "Independent Q3 source-to-perturbation/transform/distortion probes in independent_candidate_evidence_review.json"
+  ],
+  "validity_gate": "No disqualifying issue found; output checks alone could not establish this.",
+  "questions": [
+    {
+      "question": "Q1",
+      "score": 89,
+      "dimensions": [
+        [
+          "Research design and independence",
+          22,
+          25,
+          "Disjoint phase-stratified repeat partitions, separate validation tuning, matched evaluation sources, and two learner families. A single partition and shared augmented structures limit broader reliability claims."
+        ],
+        [
+          "Physical and numerical validity",
+          17,
+          20,
+          "The stated uncorrected sine transform and unit conventions are implemented correctly. Common support/preprocessing choices are reproducible, but sensitivity to truncation and preprocessing is not experimentally evaluated."
+        ],
+        [
+          "Quantitative evidence and comparisons",
+          22,
+          25,
+          "Independently rescored predictions, paired errors, phase-block bootstrap contrasts, and per-class diagnostics support the comparison. Sampling uncertainty over retraining and alternate partitions is absent."
+        ],
+        [
+          "Interpretation and limitations",
+          18,
+          20,
+          "The report identifies learner-dependent ranking in Li-La-Zr-O, PDF-favored results in Li-Ti-P-O, and fusion collapsing to a constituent. It avoids claiming universal superiority. Physical causes of class-specific errors remain shallow."
+        ],
+        [
+          "Reproducible execution",
+          10,
+          10,
+          "Independent isolated rerun matched all non-timing artifacts; code, selected settings, partitions, and diagnostics are saved."
+        ]
+      ],
+      "findings": [
+        "Ridge and RBF-SVM are two admissible methods with different predictions; both pass the method-neutral checks and support scoped scientific interpretation.",
+        "In Li-La-Zr-O the XRD/PDF ranking reverses between the two learners; a fixed prediction target would incorrectly erase this substantive result."
+      ],
+      "validity_gate": "No disqualifying leakage, fabrication, or unexecuted claim found in reviewed code and execution evidence."
+    },
+    {
+      "question": "Q2",
+      "score": 82,
+      "dimensions": [
+        [
+          "Research design and independence",
+          22,
+          25,
+          "Unknown constituent count is inferred using thresholds calibrated on generated validation mixtures from disjoint single-phase repeats. All released mixtures are evaluated without using their target labels for fitting. Synthetic calibration remains a limited approximation."
+        ],
+        [
+          "Physical and numerical validity",
+          16,
+          20,
+          "The full phase library and documented nonnegative template construction are used in both representations. The approximation neglects possible nonlinear preprocessing/mixture effects, and transfer sensitivity of support thresholds is only partly explored."
+        ],
+        [
+          "Quantitative evidence and comparisons",
+          18,
+          25,
+          "Exact recovery, micro-F1, count accuracy, false inclusions/exclusions, composition-block uncertainty, and count strata are available. Error exemplars are reported but their spectral causes and paired representation disagreements are not investigated deeply."
+        ],
+        [
+          "Interpretation and limitations",
+          16,
+          20,
+          "The report distinguishes constituent recovery from exact decomposition and correctly treats count-group differences as descriptive. Limited mechanistic investigation leaves the mixture-complexity explanation incomplete."
+        ],
+        [
+          "Reproducible execution",
+          10,
+          10,
+          "Independent isolated rerun matched artifacts; candidate vocabulary, calibration search, support decisions, and source partitions are retained."
+        ]
+      ],
+      "findings": [
+        "The method returns variable-size phase sets; no true-cardinality top-K selection appears in inference.",
+        "Best observed exact recovery is only about 42% and 49% across the two chemistries; honest partial recovery is valid evidence, not an automatic benchmark failure."
+      ],
+      "validity_gate": "No disqualifying leakage, fabrication, or unexecuted claim found in reviewed code and execution evidence."
+    },
+    {
+      "question": "Q3",
+      "score": 88,
+      "dimensions": [
+        [
+          "Research design and independence",
+          23,
+          25,
+          "All 53 supplied phases are included. Clean/noise/background comparisons share held-out source records; validation alone selects the interval and each derivative stays with its original source partition. One split and narrow artifact families restrict generality."
+        ],
+        [
+          "Physical and numerical validity",
+          18,
+          20,
+          "Independent source reconstruction, added-noise/background regeneration, direct trapezoidal transforms, and distortion/energy recomputation agree with the saved evidence. The Gaussian artifact choices are controlled examples rather than comprehensive measurement models."
+        ],
+        [
+          "Quantitative evidence and comparisons",
+          21,
+          25,
+          "Actual held-out classification, four windows, two severities, repeated noise, and phase-block paired intervals address discrimination as well as distortion. The study does not map a broad severity/background family landscape or training variability."
+        ],
+        [
+          "Interpretation and limitations",
+          16,
+          20,
+          "The selected interval preserves XRD-level clean accuracy and improves background robustness on this panel. The report acknowledges loss relative to the full PDF interval and avoids universal range claims, but only partly explains the source of phase-specific failures."
+        ],
+        [
+          "Reproducible execution",
+          10,
+          10,
+          "Independent isolated rerun and separate raw-to-evidence numerical probes reproduce the worked experiment and validation selection."
+        ]
+      ],
+      "findings": [
+        "The validation-selected 5\u201340 \u00c5 window improves accuracy relative to XRD under the chosen smooth backgrounds, with a paired phase-block interval excluding zero in this panel.",
+        "Neither lower distortion alone nor the transform plot is accepted as evidence of preserved classification: actual held-out predictions are supplied."
+      ],
+      "validity_gate": "No disqualifying leakage, fabrication, or unexecuted claim found in reviewed code and execution evidence."
+    },
+    {
+      "question": "Q4",
+      "score": 80,
+      "dimensions": [
+        [
+          "Research design and independence",
+          22,
+          25,
+          "All experimental specimens are evaluated, thresholds are calibrated solely with simulated validation mixtures, and the complete simulation-derived formula library is eligible. Transfer controls remain limited."
+        ],
+        [
+          "Physical and numerical validity",
+          15,
+          20,
+          "Polymorph-to-formula aggregation and native measured-grid handling are explicit, with no four-formula shortlist. Instrument/domain mismatch is acknowledged but not systematically diagnosed or modeled."
+        ],
+        [
+          "Quantitative evidence and comparisons",
+          17,
+          25,
+          "Source-derived abundance strata, minor recall, exact recovery, micro-F1, false positives, error examples, and phase-pair block uncertainty are available. Only six unordered formula-pair blocks support uncertainty, and aggregate curves provide limited phase-specific interpretation."
+        ],
+        [
+          "Interpretation and limitations",
+          16,
+          20,
+          "The report does not claim a universal detection limit or treat fit coefficients as mass fractions. It reports low recovery and no improvement of the selected combination over PDF alone. Small-panel and boundary-bootstrap limitations constrain detection claims."
+        ],
+        [
+          "Reproducible execution",
+          10,
+          10,
+          "Independent isolated rerun matched all artifacts, with library membership, calibration search, experimental predictions, and evaluation metadata recorded."
+        ]
+      ],
+      "findings": [
+        "Full-library inference exposes false inclusions and missing secondary phases that a supplied shortlist would conceal.",
+        "Low experimental accuracy is an informative transfer failure; it does not invalidate an honestly executed, appropriately limited research answer."
+      ],
+      "validity_gate": "No disqualifying leakage, fabrication, or unexecuted claim found in reviewed code and execution evidence."
+    }
+  ],
+  "automatic_scope_demonstration": {
+    "different_valid_methods": "Q1 Ridge and RBF-SVM produce distinct predictions and are both evaluated on source truth, with no reference-prediction matching.",
+    "synthetic_method_and_split_controls": "Alternative consistent prediction tables, renamed methods, and changed disjoint splits pass integrity checks. They are verifier test fixtures, not claimed scientific experiments.",
+    "scientifically_unsupported_integrity_control": "A synthetic Q3 archive with finite PDF values multiplied by seven passes the presence/finite-array integrity checks. The physical claim must fail source/transform review. This demonstrates why the rubric and execution/evidence audit are mandatory, not optional."
+  },
+  "remaining_limitations": [
+    "Review scores involve scientific judgment and should be calibrated across reviewers.",
+    "Reading target metadata is permitted for scoring; a trusted benchmark execution should still preserve and inspect data-access traces.",
+    "No candidate performance value is a pass threshold; uncertainty, physical validity, and support for conclusions remain separate from numerical integrity."
+  ]
+}

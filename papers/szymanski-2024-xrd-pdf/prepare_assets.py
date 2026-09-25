@@ -1,44 +1,52 @@
 #!/usr/bin/env python3
-"""Lossless packaging of the numeric release; never execute upstream code."""
-import argparse,hashlib,json,re,zipfile
+"""Lossless raw-value packaging. No model, split, or analysis settings are inputs."""
+import argparse
+import hashlib
+import json
+import re
 from pathlib import Path
 import numpy as np
 ROOT=Path(__file__).resolve().parents[2]
 BASE=ROOT/'docs/data/szymanski-2024-xrd-pdf'
-def sha(p): return hashlib.sha256(p.read_bytes()).hexdigest()
-def write(p,v): p.write_text(json.dumps(v,indent=2)+'\n')
+CHEMS=['Li-La-Zr-O','Li-Ti-P-O']
+def sha(path):return hashlib.sha256(path.read_bytes()).hexdigest()
+def write(path,value):path.write_text(json.dumps(value,indent=2)+'\n')
 def main():
- p=argparse.ArgumentParser();p.add_argument('--release',type=Path,required=True);p.add_argument('--archive',type=Path,required=True);a=p.parse_args()
- manifests={};source=[];inventory={}
- for chemistry in ['Li-La-Zr-O','Li-Ti-P-O']:
-  for kind in ['1-Phase','2-Phase','3-Phase','Experiments']:
-   directory=a.release/('Experiments' if kind=='Experiments' else 'Simulations')/chemistry
-   files=sorted(directory.glob('*/*.xy') if kind=='Experiments' else (directory/kind).iterdir())
-   files=[f for f in files if f.is_file() and not f.name.startswith('.')]
-   stem=chemistry+'_'+kind; arrays={};rows=[]
-   for i,f in enumerate(files):
-    sid=stem.replace('Li-La-Zr-O','A').replace('Li-Ti-P-O','B')+'_'+str(i).zfill(4)
-    xy=np.loadtxt(f);assert xy.ndim==2 and xy.shape[1]==2 and np.isfinite(xy).all() and (np.diff(xy[:,0])>0).all()
+ parser=argparse.ArgumentParser();parser.add_argument('--release',type=Path,required=True);parser.add_argument('--archive',type=Path,required=True);args=parser.parse_args()
+ source=[];inventory={};expected=set()
+ for chemistry in CHEMS:
+  for kind in ['1-Phase','Mixtures','Experiments']:
+   if kind=='Experiments':files=list((args.release/'Experiments'/chemistry).glob('*/*.xy'))
+   elif kind=='Mixtures':files=[f for n in [2,3] for f in (args.release/'Simulations'/chemistry/f'{n}-Phase').iterdir() if f.is_file() and not f.name.startswith('.')]
+   else:files=[f for f in (args.release/'Simulations'/chemistry/kind).iterdir() if f.is_file() and not f.name.startswith('.')]
+   pairs=[]
+   for file in files:
+    relative=file.relative_to(args.release).as_posix()
+    opaque=hashlib.sha256(relative.encode()).hexdigest()[:16]
+    sid=('A' if chemistry==CHEMS[0] else 'B')+'_'+{'1-Phase':'S','Mixtures':'M','Experiments':'E'}[kind]+'_'+opaque
+    pairs.append((sid,file,relative))
+   arrays={};rows=[]
+   for sid,file,relative in sorted(pairs):
+    xy=np.loadtxt(file);assert xy.ndim==2 and xy.shape[1]==2 and np.isfinite(xy).all() and np.all(np.diff(xy[:,0])>0)
     arrays[sid]=xy
-    row={'id':sid,'chemistry':chemistry,'kind':kind}
+    row={'id':sid,'chemistry':chemistry}
     if kind=='1-Phase':
-     phase,rep=f.name.rsplit('_',1);row.update(phases=[phase],replicate=int(rep))
-    elif kind=='Experiments':
-     m=re.fullmatch(r'(\d+)-(.+)_(\d+)-(.+)_\d+-80_10-min\.xy',f.name);assert m,f
-     row.update(phases=[m[2],m[4]],major=m[2],minor=m[4],minor_weight_percent=int(m[3]))
-    else:row['phases']=f.name.split('+')
-    rows.append(row);source.append(dict(row,source_path=str(f.relative_to(a.release)),sha256=sha(f)))
-   if kind=='1-Phase':
-    for phase in sorted({r['phases'][0] for r in rows}):
-     group=sorted([r for r in rows if r['phases'][0]==phase],key=lambda r:r['replicate']);cut=max(1,int(.7*len(group)))
-     for i,r in enumerate(group):r['split']='train' if i<cut else 'test'
+     phase,rep=file.name.rsplit('_',1);row.update(phases=[phase],replicate=int(rep))
+    elif kind=='Mixtures':row['phases']=file.name.split('+')
+    else:
+     match=re.fullmatch(r'(\d+)-(.+)_(\d+)-(.+)_\d+-80_10-min\.xy',file.name);assert match
+     row.update(phases=[match[2],match[4]],major=match[2],minor=match[4],minor_weight_percent=int(match[3]))
+    rows.append(row);source.append(dict(row,kind=Path(relative).parts[2] if kind!='Experiments' else 'Experiments',source_path=relative,sha256=sha(file)))
+   stem=chemistry+'_'+kind
    if kind!='Experiments':
-    axis=next(iter(arrays.values()))[:,0]
-    assert all(np.array_equal(v[:,0],axis) for v in arrays.values())
-    arrays={'theta':axis,**{key:value[:,1] for key,value in arrays.items()}}
-   np.savez_compressed(BASE/'inputs'/f'{stem}.npz',**arrays)
-   write(BASE/'inputs'/f'{stem}.json',rows);manifests[stem]=rows;inventory[stem]={'patterns':len(rows),'classes':len({p for r in rows for p in r['phases']})}
+    theta=next(iter(arrays.values()))[:,0];assert all(np.array_equal(v[:,0],theta) for v in arrays.values())
+    arrays={'theta':theta,**{key:arr[:,1] for key,arr in arrays.items()}}
+   np.savez_compressed(BASE/'inputs'/f'{stem}.npz',**arrays);write(BASE/'inputs'/f'{stem}.json',rows)
+   expected.update([stem+'.npz',stem+'.json'])
+   inventory[stem]={'patterns':len(rows),'phase_labels':len({p for row in rows for p in row['phases']})}
+ for file in (BASE/'inputs').iterdir():
+  if file.is_file() and file.name not in expected:file.unlink()
  write(BASE/'verification/source_labels.json',source)
- write(BASE/'provenance.json',{'paper_doi':'10.1038/s41524-024-01230-9','data_doi':'10.6084/m9.figshare.24043410.v1','download_url':'https://ndownloader.figshare.com/files/42159903','archive_sha256':sha(a.archive),'archive_md5':hashlib.md5(a.archive.read_bytes()).hexdigest(),'archive_bytes':a.archive.stat().st_size,'license':'CC BY 4.0','attribution':'Nathan Szymanski (2023), Integrated analysis of XRD patterns and PDFs, figshare, version 1.','code_commit':'bf32082521e45c0fcf5cf9ae9bd1321e76bf9012','input_transformation':'Each numeric text file parsed into float64 arrays without resampling, normalization, cropping, or fitting. Anonymous stable IDs replace answer-bearing filenames; labels are separate metadata for scientific evaluation. All native numeric values are preserved at float64 precision.','inventory':inventory,'input_files':{f.name:sha(f) for f in sorted((BASE/'inputs').glob('*')) if f.suffix in ['.npz','.json']},'availability_limitations':['2690 simulated patterns rather than 8000 reported; 28 LLZO and 53 LTPO single-phase classes rather than article 28 and45.','No separate LiTiO2 occupancy sweep, categorized artifact dataset, training splits, CAM arrays, or historical predictions in Figshare v1.','Raw here means earliest released numeric spectra; no detector frames. Simulations contain augmentations already.']})
+ write(BASE/'provenance.json',{'version':'open-research-v2','paper_doi':'10.1038/s41524-024-01230-9','data_doi':'10.6084/m9.figshare.24043410.v1','download_url':'https://ndownloader.figshare.com/files/42159903','archive_sha256':sha(args.archive),'archive_md5':hashlib.md5(args.archive.read_bytes()).hexdigest(),'archive_bytes':args.archive.stat().st_size,'license':'CC BY 4.0','attribution':'Nathan Szymanski (2023), Integrated analysis of XRD patterns and PDFs, figshare version 1.','code_commit':'bf32082521e45c0fcf5cf9ae9bd1321e76bf9012','input_transformation':'Parse every original numeric file as float64 without resampling, normalization, filtering or fitting. Opaque IDs hash the source path; two/three-phase spectra are pooled and sorted by opaque ID. Label tables retain raw labels for scientific evaluation, with no predefined split or analysis settings. Shared native simulation axes are stored once.','inventory':inventory,'input_files':{f.name:sha(f) for f in sorted((BASE/'inputs').iterdir()) if f.is_file()},'availability_limitations':['The archive contains 2690 simulations and240 experiments, not the complete reported historical test sets.','No historical CNN predictions, original splits, occupancy sweep or categorized artifact dataset are available in this archive.','Raw denotes earliest released numeric spectra, not detector frames.','Target labels remain available for scientific scoring. Published/ exported files do not enforce blinded evaluation: reviewers must inspect submitted code and execution traces for target leakage.']})
  print(json.dumps(inventory,indent=2))
 if __name__=='__main__':main()

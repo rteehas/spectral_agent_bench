@@ -1,84 +1,208 @@
 #!/usr/bin/env python3
-"""Register this paper, preserving all other benchmark entries."""
+"""Build open research questions; analysis recipes remain evaluator-side only."""
 import json
 from pathlib import Path
-ROOT=Path(__file__).resolve().parents[2];PAPER=Path(__file__).resolve().parent;BASE=ROOT/'docs/data/szymanski-2024-xrd-pdf';URL='data/szymanski-2024-xrd-pdf'
-def write(p,v):p.write_text(json.dumps(v,indent=2,ensure_ascii=False)+'\n')
-def link(name,path,description):return dict(name=name,url=f'{URL}/{path}',description=description)
-protocol={
- 'purpose':'A fixed, inexpensive baseline experiment on released spectra. These settings define comparable controlled experiments; they are not an optimized phase-identification system.',
- 'common':{'angle_grid':{'min_deg':10.02,'max_deg':79.98,'points':2001,'interpolation':'linear on native two-theta; no extrapolation'},'intensity':'Subtract each resampled spectrum\'s 10th percentile and divide by its resulting positive maximum; retain negative values. No rolling-ball correction, clipping, or smoothing.','virtual_pdf':'Q = 4*pi*sin(two_theta*pi/360)/1.5406 (angstrom^-1). G(r)=(2/pi)*integral Q*I(Q)*sin(Q*r)dQ, trapezoid on the nonuniform Q grid. This is an uncorrected virtual PDF, not a quantitative pair density.','r_grid':{'min_angstrom':1,'max_angstrom':40,'points':1000},'model_features':'Normalize each XRD or virtual-PDF vector to unit L2 norm independently before classification or fitting.'},
- 'Q1':{'split':'Within each phase identity, sort native replicate index ascending; first floor(0.7*n) are training, remainder testing. Metadata records this deterministic split.','estimator':'Separate RidgeClassifier(alpha=1, solver=cholesky) models for XRD and PDF; default intercept, no class balancing. Apply softmax across each decision vector to obtain relative scores; average the two score vectors for Fused. These scores are not calibrated probabilities.','inference':'Highest score, alphabetical phase-ID tie-break. Test labels are used only after predictions.','report':'Micro-F1 (equal to accuracy for one label), exact match, paired error-complementarity counts, and chemistry-specific results.'},
- 'Q2':{'reference_library':'For each phase identity, average individually preprocessed training spectra using the Q1 split; compute its PDF after averaging. No mixture spectra or labels enter template construction.','fit':'For each representation, use unit-L2 templates and targets. Minimize ||D*c-y||^2 + 1e-10*||c||^2 subject to c>=0. Divide coefficients by their sum. Fused scores are the arithmetic mean of the two normalized coefficient vectors.','inference':'The supplied 2-Phase or 3-Phase group provides the true cardinality K. Select top K scores, ties by alphabetical ID. Coefficients are spectral scales, not mass fractions.','report':'Micro-F1, exact phase-set accuracy and paired error complementarity separately by chemistry and phase count. No mixtures are used for training/tuning.'},
- 'Q3':{'baselines':'All released Li2TiO3_15 single-phase records; use individually preprocessed XRD as baselines (already augmented in the release).','added_noise':'Independent Gaussian values at each of 2001 angle points, standard deviation 0.01 and 0.03 of the preprocessed peak height. Five trials per baseline. numpy.random.default_rng seed=202409+100*i+trial where i is zero-based position in the full Li-Ti-P-O_1-Phase.json array. Same draw rescaled across the two amplitudes.','added_background':'A*exp(-0.5*((two_theta-35)/12)^2), A=0.05 and0.20. One deterministic trial per amplitude.','transform':'Add perturbations to preprocessed baseline without further subtraction or renormalization, then apply common transform over r=linspace(1,120,1191).','windows':{'1-5':'1 <= r < 5','5-40':'5 <= r < 40','1-40':'1 <= r < 40','40-120':'40 <= r <=120'},'metrics':'Per baseline/trial/window: ||delta_XRD||/||baseline_XRD||; ||delta_G_window||/||G_window||; sum(G_window^2)/sum(G_1to120^2); sum(delta_G_window^2)/sum(delta_G_1to120^2). Use sampled sums. Report arithmetic means by artifact/amplitude/window and full per-trial results. Energy retention is not proof of classification information retention.'},
- 'Q4':{'library':'Use the Q1 training subset and Q2 template fitting. Candidate formulas: Li-La-Zr-O: La(OH)3, Li2CO3, LiOH, ZrO2. Li-Ti-P-O: Li2CO3, Li2TiO3, Li3PO4, TiO2. Include every available polymorph within these known reagent lists.','inference':'Fit individual phase-ID templates; normalize nonnegative coefficients across phase IDs, then sum scores over polymorphs of each formula. Average XRD/PDF formula scores for Fused. Select top two formulas. Neither the known phase identities nor abundance labels of a target may enter fitting.','report':'Micro-F1, exact pair accuracy, secondary-phase recall and paired error-complementarity counts by chemistry and known secondary wt%. Do not equate fitted intensity coefficients with weight fractions or infer a universal limit of detection.'},
- 'evaluation_boundary':'Labels and split metadata are scientific evaluation data. They must not be supplied to feature construction or prediction for a target. Keep inference traces and evaluate afterward. An output-only grader cannot prove this separation.'}
-write(BASE/'inputs/protocol.json',protocol)
-write(BASE/'inputs/output_schema.json',{'all':['result.json','diagnostics.png','conclusion.md','probe.npz'], 'classification':{'questions':['Q1','Q2','Q4'],'predictions.csv':'Exactly one row for every evaluated id and each model XRD,PDF,Fused. Columns id,chemistry,model,predicted (JSON list),scores (JSON object from label to finite score). All candidate labels must occur in scores.','split_trace.json':'Complete single-phase reference train/test partition per chemistry. For Q2/Q4, test IDs here are unused reference holdouts; evaluated mixture IDs are in predictions.csv.','result.json':{'question':'Q1, Q2, or Q4','summaries':'Records chemistry,group,model,n,micro_f1,exact_match. Q4 also minor_recall. group=single for Q1, 2-Phase or3-Phase for Q2, secondary wt% string for Q4.','complementarity':'Records chemistry,group,n,xrd_only_correct,pdf_only_correct,both_correct,neither_correct; correctness means exact label set.'}},'Q3':{'metrics.csv':'id,artifact,amplitude,trial,window,xrd_relative_l2,pdf_relative_l2,signal_energy_fraction,artifact_energy_fraction','curves.npz':'r vector; baseline curves named {id}_base; perturbed curves {id}_{artifact}_{amplitude}_{trial}. Amplitude uses Python float string (.01→0.01).','result.json':'question=Q3; source_patterns; summaries with artifact,amplitude,window,n and means of the four metrics.'},'probe.npz':'One-dimensional theta,r,xrd,pdf arrays plus string probe_id, with unnormalized G computed from preprocessed peak-normalized XRD. First evaluated record for classification; first Li2TiO3 baseline for Q3.','conclusion':'State the evidence-backed answer, numerical effect sizes and scope limits; figures should show the asked comparisons.'})
-(BASE/'inputs/README.md').write_text('''# Input field definitions
+ROOT = Path(__file__).resolve().parents[2]
+HERE = Path(__file__).resolve().parent
+BASE = ROOT / 'docs/data/szymanski-2024-xrd-pdf'
+URL = 'data/szymanski-2024-xrd-pdf'
+CHEMS = ['Li-La-Zr-O', 'Li-Ti-P-O']
 
-Numeric spectra are the earliest released measurements/simulations, not detector frames. Files are lossless float64 projections of the public numeric text files. Simulation NPZ files contain a shared `theta` array in degrees and a one-dimensional intensity array under each anonymous sample ID. Experimental NPZ files contain a native two-column `(two_theta_degrees, intensity)` array per ID. Load with `numpy.load(..., allow_pickle=False)`.
+def write(path, value):
+    path.write_text(json.dumps(value, indent=2, ensure_ascii=False) + '\n')
 
-Each matching JSON file is an ordered metadata array. `phases` contains formula plus space-group suffix for simulated data, and formula only for experiments. `replicate` is the native simulation index; `split` defines training/testing for singles. Experimental `major`, `minor`, and `minor_weight_percent` describe prepared mixtures. These are evaluation labels: do not use target labels as prediction features. `kind` gives known phase cardinality. Arrays retain negative simulated noise values. Experimental intensities are arbitrary counts; simulated intensities are relative units.
+def asset(name, relative, description):
+    return {'name': name, 'url': f'{URL}/{relative}', 'description': description}
 
-The numerical protocol freezes representation and baseline models for a paired scientific comparison. It supplies neither fitted parameters nor expected outcomes. Each question stands alone. Its protocol section, common settings, and explicitly referenced section definitions apply; no result from another question is needed. The output schema defines files for evaluator comparison. The original phase-bearing filenames, source hashes, historical context and worked answers remain evaluator-side.
+PHYSICS = ('The radiation wavelength is 1.5406 Å. Here a virtual PDF is the uncorrected representation '
+           'G(r)=(2/π)∫Q I(Q) sin(Qr)dQ, with Q=4π sin(θ)/λ and θ half the recorded angle; '
+           'it is not a quantitatively normalized total-scattering PDF.')
+SIM_FORMAT = ('Simulation NPZ files contain a shared two-theta axis `theta` in degrees and one native intensity array per record ID. '
+              'The matching JSON tables give `id`, `chemistry`, and `phases`; single-phase records also have a native `replicate` index. '
+              'Simulated phase IDs combine formula and space-group number. Repeated spectra are augmented realizations of those phases.')
+OUTPUT = ('Return report.md with your scientific answer, methodological justification, uncertainty and limitations; '
+          'diagnostic figures; and runnable analysis code. For numerical checking, supply predictions.csv with columns '
+          'id,method,representation,condition,fold,predicted, where predicted is a JSON list of phase IDs '
+          'and representation is XRD, PDF or Combined. Supply splits.csv with id,fold,role '
+          '(train,validation,test; each fold records disjoint source-record partitions). '
+          'Use consistent method/fold identifiers across comparisons. Supply metrics.csv with '
+          'chemistry,group,method,representation,condition,fold,metric,value,n; n is the number of evaluated records. ')
+QUESTIONS = [
+    {
+        'q': 'Q1',
+        'title': 'Does diffraction representation offer a reproducible advantage for phase identification?',
+        'background': SIM_FORMAT + ' ' + PHYSICS,
+        'instruction': ('Determine whether XRD or virtual PDFs give more reliable phase identification in each chemistry, '
+                        'and whether combining their information improves it. Establish how strongly your conclusion depends '
+                        'on reasonable analysis choices and whether the two representations fail on the same cases. '
+                        'Use genuinely held-out spectra; target labels and record IDs must not enter prediction as features. '
+                        'Choose and justify the analysis and evaluation design. ' + OUTPUT +
+                        'For Q1 use condition=baseline and group=all; report exact_match. '
+                        'Include XRD, PDF and Combined predictions on the same held-out records within each fold.'),
+        'kinds': ['1-Phase'],
+        'chems': CHEMS,
+        'source': ('Representation comparison and complementary errors in the single-phase part of Fig. 2. '
+                   'The benchmark asks the solver to design the validation and assess sensitivity to analysis choices; '
+                   'no historical CNN score or particular learner is a target.'),
+        'solution': ('One candidate creates its own train/validation/test partitions, constructs both representations, '
+                     'compares two learner families and selects combination settings using validation data. '
+                     'It records held-out predictions, paired comparisons and uncertainty before drawing a scoped conclusion. '
+                     'These are worked-example choices, not solver requirements.'),
+    },
+    {
+        'q': 'Q2',
+        'title': 'How reliably can diffraction data determine both the identities and number of phases in a mixture?',
+        'background': SIM_FORMAT + ' Mixture spectra are pooled under opaque IDs. Their phase-label tables are for evaluation only; '
+                      'constituent identities and counts are unavailable to the inference procedure. ' + PHYSICS,
+        'instruction': ('Recover constituent identities and their number from the mixture spectra using the available single-phase data. '
+                        'Compare XRD and virtual-PDF evidence, investigate disagreement and failure cases, and determine what '
+                        'the results support about mixture complexity. Choose and justify any training, calibration and model-selection '
+                        'procedures without using the released mixture labels until final evaluation; do not use the true phase count '
+                        'to select predictions. Evaluate every released mixture. ' + OUTPUT +
+                        'For Q2 use condition=baseline and group equal to the true phase count at scoring time; '
+                        'report exact_match, micro_f1 and phase_count_accuracy. Each fold places all released mixtures in test '
+                        'and uses only single-phase source records for training or validation. Include XRD and PDF predictions; '
+                        'Combined predictions are optional.'),
+        'kinds': ['1-Phase', 'Mixtures'],
+        'chems': CHEMS,
+        'source': ('Multiphase phase identification in Fig. 2 and iterative identification in Methods. '
+                   'The v2 question removes the earlier supplied-cardinality shortcut. '
+                   'The released mixture cohorts differ in component identities and amounts as well as count; '
+                   'a causal explanation requires evidence beyond aggregate score differences.'),
+        'solution': ('One candidate builds a reference library from a solver-chosen subset of single-phase spectra and fits '
+                     'nonnegative contributions in each representation. It chooses support thresholds using newly generated '
+                     'validation mixtures without reading released target labels, then infers variable-size phase sets for '
+                     'all released mixtures. Other calibrated identification strategies are admissible.'),
+    },
+    {
+        'q': 'Q3',
+        'title': 'Which real-space interval preserves phase identification under noise and smooth background?',
+        'background': SIM_FORMAT + ' These inputs cover the Li-Ti-P-O chemistry. Their existing simulation artifacts remain '
+                      'part of the starting spectra. ' + PHYSICS,
+        'instruction': ('Determine whether a real-space interval can make phase identification more robust to added measurement '
+                        'noise and smooth background without sacrificing discrimination among phases. Design a controlled '
+                        'investigation across the supplied phase library, establish whether the interval choice generalizes '
+                        'beyond the cases used to select it, and quantify the robustness–discrimination tradeoff relative to XRD. '
+                        'Choose and justify perturbations, severities, intervals and validation; changes in signal energy alone '
+                        'do not establish phase-identification performance. ' + OUTPUT +
+                        'For Q3 use group=all and report exact_match for clean and perturbed held-out spectra. '
+                        'Use method to distinguish interval/model choices and condition to distinguish perturbations and trials; '
+                        'provide conditions.csv with condition,artifact,description, where artifact is clean,noise or background. '
+                        'Save the generated numerical perturbation evidence in evidence.npz and document its arrays in the report '
+                        'so the experiment can be reconstructed. Include XRD and PDF predictions. Record IDs always refer to '
+                        'the original spectrum, so every derivative of a test record stays out of training and selection.'),
+        'kinds': ['1-Phase'],
+        'chems': ['Li-Ti-P-O'],
+        'source': ('Artifact localization and distance-range selection in Fig. 5 and Methods/Discussion. '
+                   'The separated historical artifact dataset is unavailable. The solver generates a controlled experiment '
+                   'from released raw baselines and must test predictive discrimination, extending the earlier energy-only task.'),
+        'solution': ('One candidate chooses several real-space intervals and realistic added-noise/background levels, '
+                     'trains phase classifiers on clean training data, and selects an interval using perturbed validation data. '
+                     'It evaluates clean and perturbed held-out records, retains paired numerical evidence and compares '
+                     'classification performance with signal distortion. Its intervals and perturbations are illustrative.'),
+    },
+    {
+        'q': 'Q4',
+        'title': 'Does virtual-PDF evidence improve detection of secondary phases in measured mixtures?',
+        'background': SIM_FORMAT + ' Experimental NPZ entries are native two-column arrays (two-theta in degrees, intensity). '
+                      'Their JSON labels give major and minor formulas and minor_weight_percent from sample preparation, '
+                      'for scoring only. Experimental identities are evaluated at formula level, which does not distinguish polymorphs. '
+                      'The candidate phases are the full supplied simulation library for that chemistry. ' + PHYSICS,
+        'instruction': ('Identify the phases in the measured patterns using the simulation library and determine whether '
+                        'integrating virtual-PDF evidence helps detect secondary phases as their abundance falls. '
+                        'Assess missed and spurious phases, differences between chemistries and the strength of any '
+                        'abundance-dependent conclusion. Choose and justify the transfer and validation strategy without '
+                        'using experimental identities or abundances for fitting, tuning or candidate restriction. '
+                        'Evaluate every experimental spectrum. ' + OUTPUT.replace('JSON list of phase IDs', 'JSON list of formulas') +
+                        'For Q4 predicted contains formulas, condition=baseline, and group is the secondary weight percentage '
+                        'as a string at scoring time; report exact_match, micro_f1 and minor_recall. Each fold places all '
+                        'experimental records in test and uses only simulated single-phase records for training or validation. '
+                        'Include XRD, PDF and Combined predictions.'),
+        'kinds': ['1-Phase', 'Experiments'],
+        'chems': CHEMS,
+        'source': ('Transfer to measured specimens and secondary-phase abundance in Fig. 6. '
+                   'The v2 question removes the four-formula shortlist. Formula-level preparation labels are independent '
+                   'scoring anchors, but are not independent measurements of sample purity or a universal detection limit.'),
+        'solution': ('One candidate calibrates full-library phase-support thresholds using simulated validation mixtures, '
+                     'then evaluates raw experimental spectra after documented preprocessing. It combines polymorph evidence '
+                     'at formula level and compares standalone/integrated inference using preparation labels only after '
+                     'predictions are saved. Abundance-specific recall, false positives and uncertainty support the conclusion.'),
+    },
+]
 
-Source: Nathan Szymanski (2023), Integrated analysis of XRD patterns and PDFs, figshare version 1, DOI 10.6084/m9.figshare.24043410.v1, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Packaging renames files and separates labels; no numerical filtering or processing is performed. The native scan grids differ; inspect rather than assume their endpoints.
-''')
-questions=[
- ('Q1','Which representation gives more reliable phase identification on held-out simulated patterns?',
-  'The supplied powder diffraction simulations cover two chemical spaces and contain repeated augmented patterns of known crystalline phases. Each phase identity includes a formula and a space-group identifier. A virtual PDF is an alternative representation obtained by a sine transform of the diffraction intensities.',
-  'Compare phase identification from XRD and virtual-PDF representations using the paired training/test protocol. Determine whether averaging their scores improves identification and whether their errors occur on the same samples. Report chemistry-specific held-out performance, paired error counts, diagnostic plots and a concise interpretation of what this split establishes.',
-  ['1-Phase'],'Fresh supervised models; separate representations and paired errors.',
-  'Single-phase identification and complementary representation errors; related to Results: Influence of the number of phases present and Fig.2. Ridge models and the fixed split are benchmark choices, not historical CNN reconstructions.'),
- ('Q2','How does increasing phase count affect recovery of constituent identities from XRD and virtual-PDF template fits?',
-  'The inputs include single-phase reference simulations and simulated mixtures containing either two or three crystalline phases. The number of constituents is supplied, while their identities must be inferred from the spectra. Spectral contribution coefficients need not equal mass fractions.',
-  'Build references from the prescribed single-phase training subset and compare nonnegative template recovery in XRD and virtual-PDF space as the number of phases increases. Evaluate both individual representations and averaged scores, including exact phase-set recovery, micro-F1 and complementary errors. Explain what the results support about overlapping phases and what supplying the phase count leaves untested.',
-  ['1-Phase','2-Phase','3-Phase'],'Reference construction and constrained spectral decomposition.',
-  'Multiphase recovery from Fig.2 and the discussion of overlapping PDF features. Nonnegative mean-template fitting with supplied cardinality is a controlled baseline and does not reproduce iterative CNN/subtraction.'),
- ('Q3','How do additive noise and smooth background alter virtual PDFs across distance windows?',
-  'The supplied single-phase simulations include several realizations of Li2TiO3. Their existing artifacts remain part of the baseline. Controlled added perturbations can reveal how representation and distance-window choices change sensitivity.',
-  'Using the specified repeated noise and smooth-background perturbations, determine how distortion varies across distance windows and how much baseline signal each window retains. Produce per-trial measurements, aggregated comparisons and diagnostic plots, then recommend a window for these perturbations with a quantified tradeoff. Distinguish retained signal energy from evidence of retained phase-identification accuracy.',
-  ['1-Phase'],'Paired perturbation experiment and window-selection tradeoff.',
-  'Artifact localization and r-window design related to Fig.5 and the Methods/Discussion. These perturbations are generated during solving from raw released baselines; they are not the missing categorized historical artifact dataset.'),
- ('Q4','How well do simulation-derived references recover secondary phases in measured binary mixtures as abundance decreases?',
-  'The measured powder diffraction patterns are binary mixtures in two chemical spaces. Each chemistry has four candidate reagent formulas, potentially represented by several simulated polymorphs. Preparation labels identify the secondary formula and its known weight percentage for evaluation.',
-  'Use simulation-derived references to identify both formulas in every measured mixture without using its preparation labels during fitting. Compare XRD, virtual-PDF and averaged-score predictions across secondary-phase abundance. Report formula-level micro-F1, exact-pair accuracy and secondary-phase recall by chemistry and abundance, and explain whether a consistent detection trend is supported. State the limits of interpreting template coefficients and drawing detection-limit conclusions.',
-  ['1-Phase','Experiments'],'Transfer from simulations to experiments and minority detection.',
-  'Experimental validation and secondary-abundance dependence related to Fig.6. Known four-formula libraries and nonnegative fits differ from the paper CNNs. Formula-level scoring cannot resolve polymorph correctness.')]
-scenarios=[]
-for q,title,bg,instruction,kinds,analysis,source in questions:
- inputs=[]
- for chem in (['Li-Ti-P-O'] if q=='Q3' else ['Li-La-Zr-O','Li-Ti-P-O']):
-  for kind in kinds:
-   stem=chem+'_'+kind
-   inputs += [link(stem+'.npz','inputs/'+stem+'.npz','Native-angle numeric spectra with anonymous record IDs; no resampling or derived features.'),link(stem+'.json','inputs/'+stem+'.json','Record identities, raw labels and evaluation metadata; target labels excluded during inference.')]
- for f,desc in [('protocol.json','Fixed paired comparison design and numerical conventions, with no fitted outputs.'),('output_schema.json','Required numerical outputs and trace format.'),('README.md','Input array definitions, units and label semantics.')]:inputs.append(link(f,'inputs/'+f,desc))
- base_reason=f'''1. Use Python/NumPy to read only the linked raw numeric NPZ arrays and metadata. Interpolate onto the shared angular interval, subtract the declared intensity percentile and scale by peak height. The source audit verifies every packaged array against the release.\n\n2. Use NumPy to compute the uncorrected sine-transform representation with nonuniform-Q trapezoidal quadrature. The independent verifier recomputes a raw-linked transform probe without importing the candidate.\n\n'''
- op={'Q1':'Fit separate scikit-learn RidgeClassifier models on unit-length XRD and virtual-PDF features from training IDs. Predict withheld repeats, convert decision vectors to relative scores and average across representations. Use Python set/count operations to calculate phase accuracy and paired exact-correctness categories.', 'Q2':'Average only training spectra by phase identity. Use SciPy nonnegative least squares (with the declared tiny L2 penalty) to fit unit-normalized templates to mixture spectra in each representation. Normalize coefficients and average scores. Select the supplied number of constituents, then compute identity-recovery metrics separately for two- and three-phase mixtures.', 'Q3':'Select all 11 released Li2TiO3_15 realizations. Use NumPy PCG64 draws for five repeated noise perturbations at each of two amplitudes and construct two smooth Gaussian backgrounds. Transform baseline and perturbed traces through r=120 Å. Compute per-window relative distortions and sampled signal/artifact energy fractions, then aggregate over trials and baselines.', 'Q4':'Restrict single-phase references to the four candidate formulas per chemistry, retaining their polymorphs. Use the same nonnegative template fit as the simulation benchmark; sum coefficient scores by formula, average representations and select two formulas. Only afterward use preparation labels to evaluate secondary recall, exact pair recovery and micro-F1 at each abundance.'}[q]
- resultfile=BASE/'verification'/q/'result.json'
- finding='Reference execution is recorded in the linked evaluator files.'
- if resultfile.exists():
-  result=json.loads(resultfile.read_text())
-  if q in ['Q1','Q2']:
-   finding='Executed results: '+'; '.join(f"{s['chemistry']} {s['group']} {s['model']} F1 {s['micro_f1']:.4f}, exact {s['exact_match']:.4f}" for s in result['summaries'])+'.'
-  elif q=='Q3':
-   ss=[s for s in result['summaries'] if s['window']=='5-40' and s['amplitude'] in [.03,.2]];finding='Executed 5–40 Å tradeoff: '+'; '.join(f"{s['artifact']}, amplitude {s['amplitude']}: mean PDF distortion {s['pdf_relative_l2']:.5f}, retained baseline energy {s['signal_energy_fraction']:.4f}" for s in ss)+'.'
-  else:
-   ss=[s for s in result['summaries'] if s['group'] in ['2','20']];finding='Endpoint results: '+'; '.join(f"{s['chemistry']} {s['group']} wt% {s['model']} secondary recall {s['minor_recall']:.3f}" for s in ss)+'.'
- reasoning=base_reason+'3. '+op+'\n\n4. Use Matplotlib to save diagnostics.png and write an evidence-backed conclusion alongside the numerical outputs. '+finding+'\n\n5. Evaluator only: run the independently implemented verifier against the original-filename label map, numerical reference and raw-linked transform check. Apply deliberately corrupted-output controls and inspect the scientific conclusion and plots. The separate execution agent reruns every question from packaged inputs in a clean output directory.\n\nSource relationship: '+source
- evidence=[link('result.json',f'verification/{q}/result.json','Executed modern baseline targets; not historical model scores.'),link('source_labels.json','verification/source_labels.json','Evaluator-only original-filename/source-hash mapping anchoring labels.'),link('provenance.json','provenance.json','Archive checksum, inventory, raw-value packaging and availability limits.')]
- for f in ['workflow_execution_review.json','verification_audit.json','question_quality_review.json','input_projection_audit.json']:
-  if (BASE/'verification'/f).exists():evidence.append(link(f,'verification/'+f,'Independent review/execution evidence.'))
- for f in (['metrics.csv','curves.npz'] if q=='Q3' else ['predictions.csv']):evidence.append(link(f,f'verification/{q}/'+f,'Held-back numerical reference output for this fixed protocol.'))
- scenarios.append(dict(id='SZYMANSKI24-'+q,kind='Subquestion',executionStatus='validated',title=title,inputs=inputs,prompt=dict(background=bg,instruction=instruction+' Use protocol.json and output_schema.json for the controlled comparison and output contract.'),groundTruthReasoning=reasoning,verification={'description':'Recompute metrics against original source labels (or independently regenerated perturbations for Q3), validate row coverage, train/test separation, normalized scores, fusion and raw-linked sine transform. Compare with the executed deterministic baseline reference. Require an evidence-backed scientific conclusion and diagnostic plots. Passing numerical checks alone cannot establish absence of label leakage; use an isolated input bundle and retain execution traces.','data':evidence,'figures':[{'image':f'{URL}/verification/{q}/diagnostics.png','label':q+' executed baseline diagnostics','caption':'Benchmark-generated comparison, not a paper figure. '+source}], 'methods':[link('candidate.py','workflows/candidate.py','Executed worked solution using only the raw input bundle.'),link('conclusion.md',f'verification/{q}/conclusion.md','Executed evidence-backed scientific interpretation and scope limits.'),link('verify.py','workflows/verify.py','Independent numerical checker; evaluator-side only.'),link(q+'.json','workflows/'+q+'.json','Tool calls, command, outputs and source relationship.')], 'thresholds':{'origin':'Benchmark-defined numerical reproducibility tolerances','generatedBy':'Independent verification agent; reviewed against deterministic double-precision outputs.','provenance':'These are software agreement tolerances, not measurement error bars or paper-reported thresholds. Original filename labels are exact anchors; model targets are newly computed controlled baselines.','notes':[{'title':'Numerics','description':'Exact sample/label coverage and counts; per-score and metric agreement follows verify.py (relative 1e-6 and absolute 1e-7 for model scores; absolute 1e-10 for classification metrics; Q3 metric agreement within 1e-9; transforms within relative/absolute 1e-9). Scientific interpretation and equivalent-method answers require evaluator review.'}]}}))
- workflow={'question':q,'runtime':'Use the Python interpreter from the pinned environment created in the entry README; run from the spectral_agent_bench root.', 'tools':['Python 3.12','NumPy','SciPy','scikit-learn' if q!='Q3' else 'NumPy random.Generator','Matplotlib'],'analysis':analysis,'command':f'OPENBLAS_NUM_THREADS=1 MPLCONFIGDIR=/tmp/szymanski-mpl /tmp/xrd-bench-env/bin/python docs/{URL}/workflows/candidate.py {q} --inputs docs/{URL}/inputs --output /tmp/szymanski-answer/{q}','verification_command':f'/tmp/xrd-bench-env/bin/python docs/{URL}/workflows/verify.py --question {q} --output /tmp/szymanski-answer/{q}','source_relationship':source,'steps':[base_reason,op,'Write predictions/metrics, result.json, probe.npz, diagnostics.png and conclusion.md.','Evaluator independently checks outputs against source labels, transform calculation and executed references.'],'input_boundary':'Candidate has no need to read paper, released models, original answer-bearing paths, reference outputs or other question outputs.'}
- write(BASE/'workflows'/f'{q}.json',workflow)
-paper=dict(id='szymanski-2024-xrd-pdf',title='Integrated analysis of X-ray diffraction patterns and pair distribution functions for machine-learned phase identification',authors='Nathan J. Szymanski, Sean Fu, Ellen Persson and Gerbrand Ceder (2024)',doi='10.1038/s41524-024-01230-9',category='Powder XRD and virtual pair distribution functions',facility='Simulated powder diffraction / laboratory Cu Kα XRD',pdf='https://www.nature.com/articles/s41524-024-01230-9.pdf',dataUrl='https://doi.org/10.6084/m9.figshare.24043410.v1',codeUrl='https://github.com/njszym/XRD-AutoAnalyzer/tree/bf32082521e45c0fcf5cf9ae9bd1321e76bf9012',scenarios=scenarios)
-write(PAPER/'paper.json',paper)
-p=ROOT/'docs/data/benchmark.json';dataset=json.loads(p.read_text());dataset['papers']=[x for x in dataset['papers'] if x['id']!=paper['id']]+[paper];dataset['datasetId']='spectral-agent-v1-20260925-szymanski';write(p,dataset)
+def main():
+    scenarios = []
+    for spec in QUESTIONS:
+        q = spec['q']
+        inputs = []
+        for chem in spec['chems']:
+            for kind in spec['kinds']:
+                stem = f'{chem}_{kind}'
+                inputs.extend([
+                    asset(stem+'.npz', 'inputs/'+stem+'.npz', 'Native-angle numeric spectra keyed by opaque record ID; no derived features.'),
+                    asset(stem+'.json', 'inputs/'+stem+'.json', 'Raw phase/preparation labels and record metadata; no assigned split or analysis settings.'),
+                ])
+        evidence = [
+            asset('source_labels.json', 'verification/source_labels.json', 'Evaluator-only original source paths and raw labels for independent scoring.'),
+            asset('provenance.json', 'provenance.json', 'Source archive identity, raw-value projection and availability limits.'),
+        ]
+        for name in ['verification_audit.json', 'workflow_execution_review.json', 'question_quality_review.json',
+                     'scientific_review.json', 'independent_candidate_evidence_review.json', 'packaging_checks.json']:
+            if (BASE/'verification'/name).exists():
+                evidence.append(asset(name, 'verification/'+name, 'Independent audit/review evidence for this open research revision.'))
+        methods = [asset('candidate.py', 'workflows/candidate.py', 'One executed worked solution; model and numerical choices are not mandatory.'),
+                   asset('verify.py', 'workflows/verify.py', 'Method-neutral submission-integrity checks and independent metric recomputation.'),
+                   asset(q+'.json', 'workflows/'+q+'.json', 'Worked-example tool calls and source relationship.')]
+        rubric = BASE/'verification/scientific_review_rubric.md'
+        if rubric.exists():
+            methods.append(asset(rubric.name, 'verification/'+rubric.name, 'Scientific validity and evidence rubric, separate from numerical integrity.'))
+        for name in ['report.md', 'metrics.csv', 'design.json']:
+            if (BASE/'verification'/q/name).exists():
+                methods.append(asset('worked_'+name, f'verification/{q}/{name}', 'Illustrative worked-example output; not an exact answer key.'))
+        figures = []
+        if (BASE/'verification'/q/'diagnostics.png').exists():
+            figures.append({'image':f'{URL}/verification/{q}/diagnostics.png','label':q+' worked-example diagnostics',
+                            'caption':'An executed illustrative analysis. Alternative valid methods can produce different results. '+spec['source']})
+        worked = ('1. Inspect the supplied native spectra and raw metadata using Python/NumPy; identify data support, class coverage '
+                  'and appropriate evaluation units. Choose the analysis without reading evaluator references.\n\n'
+                  '2. '+spec['solution']+'\n\n'
+                  '3. Execute the candidate with NumPy, SciPy, scikit-learn and Matplotlib. Save prediction-level evidence, '
+                  'source-record partitions, reported metrics, plots and a scientific report. The linked report records '
+                  'the actual findings and limitations of this worked example.\n\n'
+                  '4. Evaluator only: independently recover truth from the original release filenames, recompute metrics '
+                  'from predictions, and check source partitions and artifact evidence. Do not compare a solver’s predictions '
+                  'with the candidate’s exact outputs. Apply the scientific rubric to validity of design, physical handling, '
+                  'uncertainty, reproducibility and the support for conclusions; a numerical integrity pass is not a research-quality pass.\n\n'
+                  'Source relationship: '+spec['source'])
+        scenarios.append({'id':'SZYMANSKI24-'+q,'kind':'Subquestion','executionStatus':'worked-example-executed' if figures else 'revision-in-progress',
+                          'title':spec['title'],'inputs':inputs,'prompt':{'background':spec['background'],'instruction':spec['instruction']},
+                          'groundTruthReasoning':worked,
+                          'verification':{'description':'Ground truth is the released phase/preparation metadata. The checker recomputes metrics '
+                                          'and checks numerical/evaluation integrity without requiring a particular model, split, normalization, '
+                                          'score fusion, perturbation, interval or outcome. Scientific success requires the separate evidence rubric '
+                                          'and review of runnable code, figures and conclusions. The worked solution is illustrative, not a prediction target.',
+                                          'data':evidence,'methods':methods,'figures':figures,
+                                          'thresholds':{'origin':'Benchmark evaluator: arithmetic checks and scientific rubric','generatedBy':'Independent verification review',
+                                                        'provenance':'Numerical tolerances concern arithmetic consistency only. No historical or candidate performance number is a pass threshold.',
+                                                        'notes':[{'title':'Scientific judgment','description':'Method choice and negative findings are allowed. '
+                                                                  'Checks cannot prove absence of target-label leakage from outputs alone; inspect code and execution evidence. '
+                                                                  'Alternative outcomes require evidence, not agreement with the worked example.'}]}}})
+        workflow = {'question':q,'role':'Evaluator-only illustrative workflow; none of these choices is a solver requirement.',
+                    'runtime':'Python 3.12 with the entry requirements; run from spectral_agent_bench root.',
+                    'tools':['Python','NumPy','SciPy','scikit-learn','Matplotlib'],
+                    'command':f'OPENBLAS_NUM_THREADS=1 MPLCONFIGDIR=/tmp/xrd-mpl /tmp/xrd-bench-env/bin/python docs/{URL}/workflows/candidate.py {q} --inputs docs/{URL}/inputs --output /tmp/xrd-answer/{q}',
+                    'verification_command':f'/tmp/xrd-bench-env/bin/python docs/{URL}/workflows/verify.py --question {q} --output /tmp/xrd-answer/{q}',
+                    'worked_approach':spec['solution'],'source_relationship':spec['source'],
+                    'verification':'Independent metrics plus submission-integrity checks; scientific rubric required. No exact-reference matching.'}
+        write(BASE/'workflows'/f'{q}.json',workflow)
+    paper = {'id':'szymanski-2024-xrd-pdf','title':'Integrated analysis of X-ray diffraction patterns and pair distribution functions for machine-learned phase identification',
+             'authors':'Nathan J. Szymanski, Sean Fu, Ellen Persson and Gerbrand Ceder (2024)','doi':'10.1038/s41524-024-01230-9',
+             'category':'Powder XRD and virtual pair distribution functions','facility':'Simulated powder diffraction / laboratory Cu Kα XRD',
+             'pdf':'https://www.nature.com/articles/s41524-024-01230-9.pdf','dataUrl':'https://doi.org/10.6084/m9.figshare.24043410.v1',
+             'codeUrl':'https://github.com/njszym/XRD-AutoAnalyzer/tree/bf32082521e45c0fcf5cf9ae9bd1321e76bf9012','scenarios':scenarios}
+    write(HERE/'paper.json',paper)
+    path=ROOT/'docs/data/benchmark.json';dataset=json.loads(path.read_text())
+    dataset['papers']=[p for p in dataset['papers'] if p['id']!=paper['id']]+[paper]
+    dataset['datasetId']='spectral-agent-v1-20260925-szymanski-research-v2';write(path,dataset)
 
-# Refresh package hashes after writing protocol/schema; source members are unchanged.
-p=BASE/'provenance.json'
-if p.exists():
- provenance=json.loads(p.read_text());provenance['input_files']={f.name:__import__('hashlib').sha256(f.read_bytes()).hexdigest() for f in sorted((BASE/'inputs').iterdir()) if f.is_file()};write(p,provenance)
+if __name__=='__main__':main()

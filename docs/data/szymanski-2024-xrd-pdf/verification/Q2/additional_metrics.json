@@ -1,0 +1,56 @@
+[
+  {
+    "chemistry": "Li-La-Zr-O",
+    "representation": "XRD",
+    "exact_match": 0.4,
+    "micro_f1": 0.793934470620092,
+    "phase_count_accuracy": 0.5325,
+    "mean_predicted_count": 2.11625,
+    "false_positives": 227
+  },
+  {
+    "chemistry": "Li-La-Zr-O",
+    "representation": "PDF",
+    "exact_match": 0.41625,
+    "micro_f1": 0.8006672226855713,
+    "phase_count_accuracy": 0.49875,
+    "mean_predicted_count": 1.99625,
+    "false_positives": 157
+  },
+  {
+    "chemistry": "Li-La-Zr-O",
+    "representation": "Combined",
+    "exact_match": 0.41875,
+    "micro_f1": 0.8062187673514714,
+    "phase_count_accuracy": 0.51,
+    "mean_predicted_count": 2.0025,
+    "false_positives": 150
+  },
+  {
+    "chemistry": "Li-Ti-P-O",
+    "representation": "XRD",
+    "exact_match": 0.43125,
+    "micro_f1": 0.8163265306122449,
+    "phase_count_accuracy": 0.5125,
+    "mean_predicted_count": 2.0325,
+    "false_positives": 146
+  },
+  {
+    "chemistry": "Li-Ti-P-O",
+    "representation": "PDF",
+    "exact_match": 0.48625,
+    "micro_f1": 0.8387949260042283,
+    "phase_count_accuracy": 0.58875,
+    "mean_predicted_count": 2.23,
+    "false_positives": 197
+  },
+  {
+    "chemistry": "Li-Ti-P-O",
+    "representation": "Combined",
+    "exact_match": 0.48625,
+    "micro_f1": 0.8387949260042283,
+    "phase_count_accuracy": 0.58875,
+    "mean_predicted_count": 2.23,
+    "false_positives": 197
+  }
+]

@@ -1,1244 +1,7 @@
 [
   {
-    "id": "B_Experiments_0000",
+    "id": "B_E_008a9cff7f7f32ec",
     "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li2CO3",
-      "Li2TiO3"
-    ],
-    "major": "Li2CO3",
-    "minor": "Li2TiO3",
-    "minor_weight_percent": 20
-  },
-  {
-    "id": "B_Experiments_0001",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li2CO3",
-      "Li2TiO3"
-    ],
-    "major": "Li2CO3",
-    "minor": "Li2TiO3",
-    "minor_weight_percent": 18
-  },
-  {
-    "id": "B_Experiments_0002",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li2CO3",
-      "Li2TiO3"
-    ],
-    "major": "Li2CO3",
-    "minor": "Li2TiO3",
-    "minor_weight_percent": 16
-  },
-  {
-    "id": "B_Experiments_0003",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li2CO3",
-      "Li2TiO3"
-    ],
-    "major": "Li2CO3",
-    "minor": "Li2TiO3",
-    "minor_weight_percent": 14
-  },
-  {
-    "id": "B_Experiments_0004",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li2CO3",
-      "Li2TiO3"
-    ],
-    "major": "Li2CO3",
-    "minor": "Li2TiO3",
-    "minor_weight_percent": 12
-  },
-  {
-    "id": "B_Experiments_0005",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li2CO3",
-      "Li2TiO3"
-    ],
-    "major": "Li2CO3",
-    "minor": "Li2TiO3",
-    "minor_weight_percent": 10
-  },
-  {
-    "id": "B_Experiments_0006",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li2CO3",
-      "Li2TiO3"
-    ],
-    "major": "Li2CO3",
-    "minor": "Li2TiO3",
-    "minor_weight_percent": 8
-  },
-  {
-    "id": "B_Experiments_0007",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li2CO3",
-      "Li2TiO3"
-    ],
-    "major": "Li2CO3",
-    "minor": "Li2TiO3",
-    "minor_weight_percent": 6
-  },
-  {
-    "id": "B_Experiments_0008",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li2CO3",
-      "Li2TiO3"
-    ],
-    "major": "Li2CO3",
-    "minor": "Li2TiO3",
-    "minor_weight_percent": 4
-  },
-  {
-    "id": "B_Experiments_0009",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li2CO3",
-      "Li2TiO3"
-    ],
-    "major": "Li2CO3",
-    "minor": "Li2TiO3",
-    "minor_weight_percent": 2
-  },
-  {
-    "id": "B_Experiments_0010",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li2CO3",
-      "Li3PO4"
-    ],
-    "major": "Li2CO3",
-    "minor": "Li3PO4",
-    "minor_weight_percent": 20
-  },
-  {
-    "id": "B_Experiments_0011",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li2CO3",
-      "Li3PO4"
-    ],
-    "major": "Li2CO3",
-    "minor": "Li3PO4",
-    "minor_weight_percent": 18
-  },
-  {
-    "id": "B_Experiments_0012",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li2CO3",
-      "Li3PO4"
-    ],
-    "major": "Li2CO3",
-    "minor": "Li3PO4",
-    "minor_weight_percent": 16
-  },
-  {
-    "id": "B_Experiments_0013",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li2CO3",
-      "Li3PO4"
-    ],
-    "major": "Li2CO3",
-    "minor": "Li3PO4",
-    "minor_weight_percent": 14
-  },
-  {
-    "id": "B_Experiments_0014",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li2CO3",
-      "Li3PO4"
-    ],
-    "major": "Li2CO3",
-    "minor": "Li3PO4",
-    "minor_weight_percent": 12
-  },
-  {
-    "id": "B_Experiments_0015",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li2CO3",
-      "Li3PO4"
-    ],
-    "major": "Li2CO3",
-    "minor": "Li3PO4",
-    "minor_weight_percent": 10
-  },
-  {
-    "id": "B_Experiments_0016",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li2CO3",
-      "Li3PO4"
-    ],
-    "major": "Li2CO3",
-    "minor": "Li3PO4",
-    "minor_weight_percent": 8
-  },
-  {
-    "id": "B_Experiments_0017",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li2CO3",
-      "Li3PO4"
-    ],
-    "major": "Li2CO3",
-    "minor": "Li3PO4",
-    "minor_weight_percent": 6
-  },
-  {
-    "id": "B_Experiments_0018",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li2CO3",
-      "Li3PO4"
-    ],
-    "major": "Li2CO3",
-    "minor": "Li3PO4",
-    "minor_weight_percent": 4
-  },
-  {
-    "id": "B_Experiments_0019",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li2CO3",
-      "Li3PO4"
-    ],
-    "major": "Li2CO3",
-    "minor": "Li3PO4",
-    "minor_weight_percent": 2
-  },
-  {
-    "id": "B_Experiments_0020",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li2CO3",
-      "TiO2"
-    ],
-    "major": "Li2CO3",
-    "minor": "TiO2",
-    "minor_weight_percent": 20
-  },
-  {
-    "id": "B_Experiments_0021",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li2CO3",
-      "TiO2"
-    ],
-    "major": "Li2CO3",
-    "minor": "TiO2",
-    "minor_weight_percent": 18
-  },
-  {
-    "id": "B_Experiments_0022",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li2CO3",
-      "TiO2"
-    ],
-    "major": "Li2CO3",
-    "minor": "TiO2",
-    "minor_weight_percent": 16
-  },
-  {
-    "id": "B_Experiments_0023",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li2CO3",
-      "TiO2"
-    ],
-    "major": "Li2CO3",
-    "minor": "TiO2",
-    "minor_weight_percent": 14
-  },
-  {
-    "id": "B_Experiments_0024",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li2CO3",
-      "TiO2"
-    ],
-    "major": "Li2CO3",
-    "minor": "TiO2",
-    "minor_weight_percent": 12
-  },
-  {
-    "id": "B_Experiments_0025",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li2CO3",
-      "TiO2"
-    ],
-    "major": "Li2CO3",
-    "minor": "TiO2",
-    "minor_weight_percent": 10
-  },
-  {
-    "id": "B_Experiments_0026",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li2CO3",
-      "TiO2"
-    ],
-    "major": "Li2CO3",
-    "minor": "TiO2",
-    "minor_weight_percent": 8
-  },
-  {
-    "id": "B_Experiments_0027",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li2CO3",
-      "TiO2"
-    ],
-    "major": "Li2CO3",
-    "minor": "TiO2",
-    "minor_weight_percent": 6
-  },
-  {
-    "id": "B_Experiments_0028",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li2CO3",
-      "TiO2"
-    ],
-    "major": "Li2CO3",
-    "minor": "TiO2",
-    "minor_weight_percent": 4
-  },
-  {
-    "id": "B_Experiments_0029",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li2CO3",
-      "TiO2"
-    ],
-    "major": "Li2CO3",
-    "minor": "TiO2",
-    "minor_weight_percent": 2
-  },
-  {
-    "id": "B_Experiments_0030",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li2TiO3",
-      "Li2CO3"
-    ],
-    "major": "Li2TiO3",
-    "minor": "Li2CO3",
-    "minor_weight_percent": 20
-  },
-  {
-    "id": "B_Experiments_0031",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li2TiO3",
-      "Li2CO3"
-    ],
-    "major": "Li2TiO3",
-    "minor": "Li2CO3",
-    "minor_weight_percent": 18
-  },
-  {
-    "id": "B_Experiments_0032",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li2TiO3",
-      "Li2CO3"
-    ],
-    "major": "Li2TiO3",
-    "minor": "Li2CO3",
-    "minor_weight_percent": 16
-  },
-  {
-    "id": "B_Experiments_0033",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li2TiO3",
-      "Li2CO3"
-    ],
-    "major": "Li2TiO3",
-    "minor": "Li2CO3",
-    "minor_weight_percent": 14
-  },
-  {
-    "id": "B_Experiments_0034",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li2TiO3",
-      "Li2CO3"
-    ],
-    "major": "Li2TiO3",
-    "minor": "Li2CO3",
-    "minor_weight_percent": 12
-  },
-  {
-    "id": "B_Experiments_0035",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li2TiO3",
-      "Li2CO3"
-    ],
-    "major": "Li2TiO3",
-    "minor": "Li2CO3",
-    "minor_weight_percent": 10
-  },
-  {
-    "id": "B_Experiments_0036",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li2TiO3",
-      "Li2CO3"
-    ],
-    "major": "Li2TiO3",
-    "minor": "Li2CO3",
-    "minor_weight_percent": 8
-  },
-  {
-    "id": "B_Experiments_0037",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li2TiO3",
-      "Li2CO3"
-    ],
-    "major": "Li2TiO3",
-    "minor": "Li2CO3",
-    "minor_weight_percent": 6
-  },
-  {
-    "id": "B_Experiments_0038",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li2TiO3",
-      "Li2CO3"
-    ],
-    "major": "Li2TiO3",
-    "minor": "Li2CO3",
-    "minor_weight_percent": 4
-  },
-  {
-    "id": "B_Experiments_0039",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li2TiO3",
-      "Li2CO3"
-    ],
-    "major": "Li2TiO3",
-    "minor": "Li2CO3",
-    "minor_weight_percent": 2
-  },
-  {
-    "id": "B_Experiments_0040",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li2TiO3",
-      "Li3PO4"
-    ],
-    "major": "Li2TiO3",
-    "minor": "Li3PO4",
-    "minor_weight_percent": 20
-  },
-  {
-    "id": "B_Experiments_0041",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li2TiO3",
-      "Li3PO4"
-    ],
-    "major": "Li2TiO3",
-    "minor": "Li3PO4",
-    "minor_weight_percent": 18
-  },
-  {
-    "id": "B_Experiments_0042",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li2TiO3",
-      "Li3PO4"
-    ],
-    "major": "Li2TiO3",
-    "minor": "Li3PO4",
-    "minor_weight_percent": 16
-  },
-  {
-    "id": "B_Experiments_0043",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li2TiO3",
-      "Li3PO4"
-    ],
-    "major": "Li2TiO3",
-    "minor": "Li3PO4",
-    "minor_weight_percent": 14
-  },
-  {
-    "id": "B_Experiments_0044",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li2TiO3",
-      "Li3PO4"
-    ],
-    "major": "Li2TiO3",
-    "minor": "Li3PO4",
-    "minor_weight_percent": 12
-  },
-  {
-    "id": "B_Experiments_0045",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li2TiO3",
-      "Li3PO4"
-    ],
-    "major": "Li2TiO3",
-    "minor": "Li3PO4",
-    "minor_weight_percent": 10
-  },
-  {
-    "id": "B_Experiments_0046",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li2TiO3",
-      "Li3PO4"
-    ],
-    "major": "Li2TiO3",
-    "minor": "Li3PO4",
-    "minor_weight_percent": 8
-  },
-  {
-    "id": "B_Experiments_0047",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li2TiO3",
-      "Li3PO4"
-    ],
-    "major": "Li2TiO3",
-    "minor": "Li3PO4",
-    "minor_weight_percent": 6
-  },
-  {
-    "id": "B_Experiments_0048",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li2TiO3",
-      "Li3PO4"
-    ],
-    "major": "Li2TiO3",
-    "minor": "Li3PO4",
-    "minor_weight_percent": 4
-  },
-  {
-    "id": "B_Experiments_0049",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li2TiO3",
-      "Li3PO4"
-    ],
-    "major": "Li2TiO3",
-    "minor": "Li3PO4",
-    "minor_weight_percent": 2
-  },
-  {
-    "id": "B_Experiments_0050",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li2TiO3",
-      "TiO2"
-    ],
-    "major": "Li2TiO3",
-    "minor": "TiO2",
-    "minor_weight_percent": 20
-  },
-  {
-    "id": "B_Experiments_0051",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li2TiO3",
-      "TiO2"
-    ],
-    "major": "Li2TiO3",
-    "minor": "TiO2",
-    "minor_weight_percent": 18
-  },
-  {
-    "id": "B_Experiments_0052",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li2TiO3",
-      "TiO2"
-    ],
-    "major": "Li2TiO3",
-    "minor": "TiO2",
-    "minor_weight_percent": 16
-  },
-  {
-    "id": "B_Experiments_0053",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li2TiO3",
-      "TiO2"
-    ],
-    "major": "Li2TiO3",
-    "minor": "TiO2",
-    "minor_weight_percent": 14
-  },
-  {
-    "id": "B_Experiments_0054",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li2TiO3",
-      "TiO2"
-    ],
-    "major": "Li2TiO3",
-    "minor": "TiO2",
-    "minor_weight_percent": 12
-  },
-  {
-    "id": "B_Experiments_0055",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li2TiO3",
-      "TiO2"
-    ],
-    "major": "Li2TiO3",
-    "minor": "TiO2",
-    "minor_weight_percent": 10
-  },
-  {
-    "id": "B_Experiments_0056",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li2TiO3",
-      "TiO2"
-    ],
-    "major": "Li2TiO3",
-    "minor": "TiO2",
-    "minor_weight_percent": 8
-  },
-  {
-    "id": "B_Experiments_0057",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li2TiO3",
-      "TiO2"
-    ],
-    "major": "Li2TiO3",
-    "minor": "TiO2",
-    "minor_weight_percent": 6
-  },
-  {
-    "id": "B_Experiments_0058",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li2TiO3",
-      "TiO2"
-    ],
-    "major": "Li2TiO3",
-    "minor": "TiO2",
-    "minor_weight_percent": 4
-  },
-  {
-    "id": "B_Experiments_0059",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li2TiO3",
-      "TiO2"
-    ],
-    "major": "Li2TiO3",
-    "minor": "TiO2",
-    "minor_weight_percent": 2
-  },
-  {
-    "id": "B_Experiments_0060",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li3PO4",
-      "Li2CO3"
-    ],
-    "major": "Li3PO4",
-    "minor": "Li2CO3",
-    "minor_weight_percent": 20
-  },
-  {
-    "id": "B_Experiments_0061",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li3PO4",
-      "Li2CO3"
-    ],
-    "major": "Li3PO4",
-    "minor": "Li2CO3",
-    "minor_weight_percent": 18
-  },
-  {
-    "id": "B_Experiments_0062",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li3PO4",
-      "Li2CO3"
-    ],
-    "major": "Li3PO4",
-    "minor": "Li2CO3",
-    "minor_weight_percent": 16
-  },
-  {
-    "id": "B_Experiments_0063",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li3PO4",
-      "Li2CO3"
-    ],
-    "major": "Li3PO4",
-    "minor": "Li2CO3",
-    "minor_weight_percent": 14
-  },
-  {
-    "id": "B_Experiments_0064",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li3PO4",
-      "Li2CO3"
-    ],
-    "major": "Li3PO4",
-    "minor": "Li2CO3",
-    "minor_weight_percent": 12
-  },
-  {
-    "id": "B_Experiments_0065",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li3PO4",
-      "Li2CO3"
-    ],
-    "major": "Li3PO4",
-    "minor": "Li2CO3",
-    "minor_weight_percent": 10
-  },
-  {
-    "id": "B_Experiments_0066",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li3PO4",
-      "Li2CO3"
-    ],
-    "major": "Li3PO4",
-    "minor": "Li2CO3",
-    "minor_weight_percent": 8
-  },
-  {
-    "id": "B_Experiments_0067",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li3PO4",
-      "Li2CO3"
-    ],
-    "major": "Li3PO4",
-    "minor": "Li2CO3",
-    "minor_weight_percent": 6
-  },
-  {
-    "id": "B_Experiments_0068",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li3PO4",
-      "Li2CO3"
-    ],
-    "major": "Li3PO4",
-    "minor": "Li2CO3",
-    "minor_weight_percent": 4
-  },
-  {
-    "id": "B_Experiments_0069",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li3PO4",
-      "Li2CO3"
-    ],
-    "major": "Li3PO4",
-    "minor": "Li2CO3",
-    "minor_weight_percent": 2
-  },
-  {
-    "id": "B_Experiments_0070",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li3PO4",
-      "Li2TiO3"
-    ],
-    "major": "Li3PO4",
-    "minor": "Li2TiO3",
-    "minor_weight_percent": 20
-  },
-  {
-    "id": "B_Experiments_0071",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li3PO4",
-      "Li2TiO3"
-    ],
-    "major": "Li3PO4",
-    "minor": "Li2TiO3",
-    "minor_weight_percent": 18
-  },
-  {
-    "id": "B_Experiments_0072",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li3PO4",
-      "Li2TiO3"
-    ],
-    "major": "Li3PO4",
-    "minor": "Li2TiO3",
-    "minor_weight_percent": 16
-  },
-  {
-    "id": "B_Experiments_0073",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li3PO4",
-      "Li2TiO3"
-    ],
-    "major": "Li3PO4",
-    "minor": "Li2TiO3",
-    "minor_weight_percent": 14
-  },
-  {
-    "id": "B_Experiments_0074",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li3PO4",
-      "Li2TiO3"
-    ],
-    "major": "Li3PO4",
-    "minor": "Li2TiO3",
-    "minor_weight_percent": 12
-  },
-  {
-    "id": "B_Experiments_0075",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li3PO4",
-      "Li2TiO3"
-    ],
-    "major": "Li3PO4",
-    "minor": "Li2TiO3",
-    "minor_weight_percent": 10
-  },
-  {
-    "id": "B_Experiments_0076",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li3PO4",
-      "Li2TiO3"
-    ],
-    "major": "Li3PO4",
-    "minor": "Li2TiO3",
-    "minor_weight_percent": 8
-  },
-  {
-    "id": "B_Experiments_0077",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li3PO4",
-      "Li2TiO3"
-    ],
-    "major": "Li3PO4",
-    "minor": "Li2TiO3",
-    "minor_weight_percent": 6
-  },
-  {
-    "id": "B_Experiments_0078",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li3PO4",
-      "Li2TiO3"
-    ],
-    "major": "Li3PO4",
-    "minor": "Li2TiO3",
-    "minor_weight_percent": 4
-  },
-  {
-    "id": "B_Experiments_0079",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li3PO4",
-      "Li2TiO3"
-    ],
-    "major": "Li3PO4",
-    "minor": "Li2TiO3",
-    "minor_weight_percent": 2
-  },
-  {
-    "id": "B_Experiments_0080",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li3PO4",
-      "TiO2"
-    ],
-    "major": "Li3PO4",
-    "minor": "TiO2",
-    "minor_weight_percent": 20
-  },
-  {
-    "id": "B_Experiments_0081",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li3PO4",
-      "TiO2"
-    ],
-    "major": "Li3PO4",
-    "minor": "TiO2",
-    "minor_weight_percent": 18
-  },
-  {
-    "id": "B_Experiments_0082",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li3PO4",
-      "TiO2"
-    ],
-    "major": "Li3PO4",
-    "minor": "TiO2",
-    "minor_weight_percent": 16
-  },
-  {
-    "id": "B_Experiments_0083",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li3PO4",
-      "TiO2"
-    ],
-    "major": "Li3PO4",
-    "minor": "TiO2",
-    "minor_weight_percent": 14
-  },
-  {
-    "id": "B_Experiments_0084",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li3PO4",
-      "TiO2"
-    ],
-    "major": "Li3PO4",
-    "minor": "TiO2",
-    "minor_weight_percent": 12
-  },
-  {
-    "id": "B_Experiments_0085",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li3PO4",
-      "TiO2"
-    ],
-    "major": "Li3PO4",
-    "minor": "TiO2",
-    "minor_weight_percent": 10
-  },
-  {
-    "id": "B_Experiments_0086",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li3PO4",
-      "TiO2"
-    ],
-    "major": "Li3PO4",
-    "minor": "TiO2",
-    "minor_weight_percent": 8
-  },
-  {
-    "id": "B_Experiments_0087",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li3PO4",
-      "TiO2"
-    ],
-    "major": "Li3PO4",
-    "minor": "TiO2",
-    "minor_weight_percent": 6
-  },
-  {
-    "id": "B_Experiments_0088",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li3PO4",
-      "TiO2"
-    ],
-    "major": "Li3PO4",
-    "minor": "TiO2",
-    "minor_weight_percent": 4
-  },
-  {
-    "id": "B_Experiments_0089",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "Li3PO4",
-      "TiO2"
-    ],
-    "major": "Li3PO4",
-    "minor": "TiO2",
-    "minor_weight_percent": 2
-  },
-  {
-    "id": "B_Experiments_0090",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "TiO2",
-      "Li2CO3"
-    ],
-    "major": "TiO2",
-    "minor": "Li2CO3",
-    "minor_weight_percent": 20
-  },
-  {
-    "id": "B_Experiments_0091",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "TiO2",
-      "Li2CO3"
-    ],
-    "major": "TiO2",
-    "minor": "Li2CO3",
-    "minor_weight_percent": 18
-  },
-  {
-    "id": "B_Experiments_0092",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "TiO2",
-      "Li2CO3"
-    ],
-    "major": "TiO2",
-    "minor": "Li2CO3",
-    "minor_weight_percent": 16
-  },
-  {
-    "id": "B_Experiments_0093",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "TiO2",
-      "Li2CO3"
-    ],
-    "major": "TiO2",
-    "minor": "Li2CO3",
-    "minor_weight_percent": 14
-  },
-  {
-    "id": "B_Experiments_0094",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "TiO2",
-      "Li2CO3"
-    ],
-    "major": "TiO2",
-    "minor": "Li2CO3",
-    "minor_weight_percent": 12
-  },
-  {
-    "id": "B_Experiments_0095",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "TiO2",
-      "Li2CO3"
-    ],
-    "major": "TiO2",
-    "minor": "Li2CO3",
-    "minor_weight_percent": 10
-  },
-  {
-    "id": "B_Experiments_0096",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "TiO2",
-      "Li2CO3"
-    ],
-    "major": "TiO2",
-    "minor": "Li2CO3",
-    "minor_weight_percent": 8
-  },
-  {
-    "id": "B_Experiments_0097",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "TiO2",
-      "Li2CO3"
-    ],
-    "major": "TiO2",
-    "minor": "Li2CO3",
-    "minor_weight_percent": 6
-  },
-  {
-    "id": "B_Experiments_0098",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "TiO2",
-      "Li2CO3"
-    ],
-    "major": "TiO2",
-    "minor": "Li2CO3",
-    "minor_weight_percent": 4
-  },
-  {
-    "id": "B_Experiments_0099",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "TiO2",
-      "Li2CO3"
-    ],
-    "major": "TiO2",
-    "minor": "Li2CO3",
-    "minor_weight_percent": 2
-  },
-  {
-    "id": "B_Experiments_0100",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "TiO2",
-      "Li2TiO3"
-    ],
-    "major": "TiO2",
-    "minor": "Li2TiO3",
-    "minor_weight_percent": 20
-  },
-  {
-    "id": "B_Experiments_0101",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "TiO2",
-      "Li2TiO3"
-    ],
-    "major": "TiO2",
-    "minor": "Li2TiO3",
-    "minor_weight_percent": 18
-  },
-  {
-    "id": "B_Experiments_0102",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "TiO2",
-      "Li2TiO3"
-    ],
-    "major": "TiO2",
-    "minor": "Li2TiO3",
-    "minor_weight_percent": 16
-  },
-  {
-    "id": "B_Experiments_0103",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
     "phases": [
       "TiO2",
       "Li2TiO3"
@@ -1248,45 +11,63 @@
     "minor_weight_percent": 14
   },
   {
-    "id": "B_Experiments_0104",
+    "id": "B_E_01048c8d8af1d0d7",
     "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
     "phases": [
-      "TiO2",
+      "Li2CO3",
       "Li2TiO3"
     ],
-    "major": "TiO2",
+    "major": "Li2CO3",
     "minor": "Li2TiO3",
     "minor_weight_percent": 12
   },
   {
-    "id": "B_Experiments_0105",
+    "id": "B_E_010d59211e3a8ab3",
     "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
     "phases": [
-      "TiO2",
-      "Li2TiO3"
+      "Li2TiO3",
+      "TiO2"
     ],
-    "major": "TiO2",
-    "minor": "Li2TiO3",
-    "minor_weight_percent": 10
+    "major": "Li2TiO3",
+    "minor": "TiO2",
+    "minor_weight_percent": 14
   },
   {
-    "id": "B_Experiments_0106",
+    "id": "B_E_035e7d2cf0e1e9f2",
     "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
     "phases": [
-      "TiO2",
-      "Li2TiO3"
+      "Li3PO4",
+      "TiO2"
     ],
-    "major": "TiO2",
-    "minor": "Li2TiO3",
-    "minor_weight_percent": 8
+    "major": "Li3PO4",
+    "minor": "TiO2",
+    "minor_weight_percent": 4
   },
   {
-    "id": "B_Experiments_0107",
+    "id": "B_E_03e86ed038bdf21f",
     "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
+    "phases": [
+      "Li2TiO3",
+      "Li3PO4"
+    ],
+    "major": "Li2TiO3",
+    "minor": "Li3PO4",
+    "minor_weight_percent": 2
+  },
+  {
+    "id": "B_E_0513593b6a674014",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3PO4",
+      "Li2CO3"
+    ],
+    "major": "Li3PO4",
+    "minor": "Li2CO3",
+    "minor_weight_percent": 2
+  },
+  {
+    "id": "B_E_0563eb782e5630a3",
+    "chemistry": "Li-Ti-P-O",
     "phases": [
       "TiO2",
       "Li2TiO3"
@@ -1296,9 +77,118 @@
     "minor_weight_percent": 6
   },
   {
-    "id": "B_Experiments_0108",
+    "id": "B_E_067e868e5981142f",
     "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
+    "phases": [
+      "Li3PO4",
+      "Li2CO3"
+    ],
+    "major": "Li3PO4",
+    "minor": "Li2CO3",
+    "minor_weight_percent": 6
+  },
+  {
+    "id": "B_E_06fa4688fdbd53ea",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiO2",
+      "Li2TiO3"
+    ],
+    "major": "TiO2",
+    "minor": "Li2TiO3",
+    "minor_weight_percent": 12
+  },
+  {
+    "id": "B_E_07681a09883c9464",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiO2",
+      "Li2CO3"
+    ],
+    "major": "TiO2",
+    "minor": "Li2CO3",
+    "minor_weight_percent": 2
+  },
+  {
+    "id": "B_E_0a49ea80fca29e1f",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2TiO3",
+      "Li2CO3"
+    ],
+    "major": "Li2TiO3",
+    "minor": "Li2CO3",
+    "minor_weight_percent": 4
+  },
+  {
+    "id": "B_E_0ba34c62f8c58fa6",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3PO4",
+      "TiO2"
+    ],
+    "major": "Li3PO4",
+    "minor": "TiO2",
+    "minor_weight_percent": 6
+  },
+  {
+    "id": "B_E_0f0b77d6fb648d55",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2CO3",
+      "Li2TiO3"
+    ],
+    "major": "Li2CO3",
+    "minor": "Li2TiO3",
+    "minor_weight_percent": 10
+  },
+  {
+    "id": "B_E_0f31000673bc14e9",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3PO4",
+      "TiO2"
+    ],
+    "major": "Li3PO4",
+    "minor": "TiO2",
+    "minor_weight_percent": 18
+  },
+  {
+    "id": "B_E_1102442b992c96e9",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiO2",
+      "Li2CO3"
+    ],
+    "major": "TiO2",
+    "minor": "Li2CO3",
+    "minor_weight_percent": 16
+  },
+  {
+    "id": "B_E_1268d48d5149a287",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiO2",
+      "Li2TiO3"
+    ],
+    "major": "TiO2",
+    "minor": "Li2TiO3",
+    "minor_weight_percent": 10
+  },
+  {
+    "id": "B_E_161fdace43d7b29d",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiO2",
+      "Li2TiO3"
+    ],
+    "major": "TiO2",
+    "minor": "Li2TiO3",
+    "minor_weight_percent": 20
+  },
+  {
+    "id": "B_E_19ff0779bbfd864f",
+    "chemistry": "Li-Ti-P-O",
     "phases": [
       "TiO2",
       "Li2TiO3"
@@ -1308,9 +198,41 @@
     "minor_weight_percent": 4
   },
   {
-    "id": "B_Experiments_0109",
+    "id": "B_E_1c9c77b85b27520f",
     "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
+    "phases": [
+      "Li3PO4",
+      "TiO2"
+    ],
+    "major": "Li3PO4",
+    "minor": "TiO2",
+    "minor_weight_percent": 12
+  },
+  {
+    "id": "B_E_1cf22b53597e4002",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiO2",
+      "Li2CO3"
+    ],
+    "major": "TiO2",
+    "minor": "Li2CO3",
+    "minor_weight_percent": 12
+  },
+  {
+    "id": "B_E_1d031406b5d59ef5",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2CO3",
+      "Li3PO4"
+    ],
+    "major": "Li2CO3",
+    "minor": "Li3PO4",
+    "minor_weight_percent": 12
+  },
+  {
+    "id": "B_E_1eaf85c3b3d18d75",
+    "chemistry": "Li-Ti-P-O",
     "phases": [
       "TiO2",
       "Li2TiO3"
@@ -1320,33 +242,63 @@
     "minor_weight_percent": 2
   },
   {
-    "id": "B_Experiments_0110",
+    "id": "B_E_20725fe83b8cc6c8",
     "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
     "phases": [
-      "TiO2",
-      "Li3PO4"
+      "Li2TiO3",
+      "Li2CO3"
     ],
-    "major": "TiO2",
-    "minor": "Li3PO4",
-    "minor_weight_percent": 20
+    "major": "Li2TiO3",
+    "minor": "Li2CO3",
+    "minor_weight_percent": 8
   },
   {
-    "id": "B_Experiments_0111",
+    "id": "B_E_230de0e4aedc5d18",
     "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
     "phases": [
-      "TiO2",
-      "Li3PO4"
+      "Li3PO4",
+      "Li2TiO3"
     ],
-    "major": "TiO2",
-    "minor": "Li3PO4",
-    "minor_weight_percent": 18
+    "major": "Li3PO4",
+    "minor": "Li2TiO3",
+    "minor_weight_percent": 2
   },
   {
-    "id": "B_Experiments_0112",
+    "id": "B_E_24935065faaad9de",
     "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
+    "phases": [
+      "TiO2",
+      "Li2CO3"
+    ],
+    "major": "TiO2",
+    "minor": "Li2CO3",
+    "minor_weight_percent": 8
+  },
+  {
+    "id": "B_E_25f9cd4ea49b7290",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiO2",
+      "Li2CO3"
+    ],
+    "major": "TiO2",
+    "minor": "Li2CO3",
+    "minor_weight_percent": 6
+  },
+  {
+    "id": "B_E_2964625f98f9959d",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3PO4",
+      "TiO2"
+    ],
+    "major": "Li3PO4",
+    "minor": "TiO2",
+    "minor_weight_percent": 14
+  },
+  {
+    "id": "B_E_2ac6633a866a61be",
+    "chemistry": "Li-Ti-P-O",
     "phases": [
       "TiO2",
       "Li3PO4"
@@ -1356,69 +308,107 @@
     "minor_weight_percent": 16
   },
   {
-    "id": "B_Experiments_0113",
+    "id": "B_E_2bc8741b5c79429f",
     "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
     "phases": [
-      "TiO2",
+      "Li2TiO3",
+      "TiO2"
+    ],
+    "major": "Li2TiO3",
+    "minor": "TiO2",
+    "minor_weight_percent": 18
+  },
+  {
+    "id": "B_E_2c9e166c8fa8d2a7",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2CO3",
+      "TiO2"
+    ],
+    "major": "Li2CO3",
+    "minor": "TiO2",
+    "minor_weight_percent": 16
+  },
+  {
+    "id": "B_E_2fa88c25d9eb9e74",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2TiO3",
+      "TiO2"
+    ],
+    "major": "Li2TiO3",
+    "minor": "TiO2",
+    "minor_weight_percent": 16
+  },
+  {
+    "id": "B_E_306a051da24f59c9",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2CO3",
       "Li3PO4"
     ],
-    "major": "TiO2",
+    "major": "Li2CO3",
     "minor": "Li3PO4",
+    "minor_weight_percent": 18
+  },
+  {
+    "id": "B_E_342dadec75a3b7d2",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiO2",
+      "Li2CO3"
+    ],
+    "major": "TiO2",
+    "minor": "Li2CO3",
     "minor_weight_percent": 14
   },
   {
-    "id": "B_Experiments_0114",
+    "id": "B_E_347cc92e5d49b6c0",
     "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
     "phases": [
       "TiO2",
-      "Li3PO4"
+      "Li2CO3"
     ],
     "major": "TiO2",
-    "minor": "Li3PO4",
-    "minor_weight_percent": 12
-  },
-  {
-    "id": "B_Experiments_0115",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "TiO2",
-      "Li3PO4"
-    ],
-    "major": "TiO2",
-    "minor": "Li3PO4",
+    "minor": "Li2CO3",
     "minor_weight_percent": 10
   },
   {
-    "id": "B_Experiments_0116",
+    "id": "B_E_3745ecb7ccc34fe5",
     "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
     "phases": [
-      "TiO2",
+      "Li2TiO3",
       "Li3PO4"
     ],
-    "major": "TiO2",
-    "minor": "Li3PO4",
-    "minor_weight_percent": 8
-  },
-  {
-    "id": "B_Experiments_0117",
-    "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
-    "phases": [
-      "TiO2",
-      "Li3PO4"
-    ],
-    "major": "TiO2",
+    "major": "Li2TiO3",
     "minor": "Li3PO4",
     "minor_weight_percent": 6
   },
   {
-    "id": "B_Experiments_0118",
+    "id": "B_E_37bac7005acf8d65",
     "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
+    "phases": [
+      "Li2TiO3",
+      "Li3PO4"
+    ],
+    "major": "Li2TiO3",
+    "minor": "Li3PO4",
+    "minor_weight_percent": 14
+  },
+  {
+    "id": "B_E_397bfcb1cbd5d171",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2CO3",
+      "Li2TiO3"
+    ],
+    "major": "Li2CO3",
+    "minor": "Li2TiO3",
+    "minor_weight_percent": 18
+  },
+  {
+    "id": "B_E_3aae1fd68e235025",
+    "chemistry": "Li-Ti-P-O",
     "phases": [
       "TiO2",
       "Li3PO4"
@@ -1428,9 +418,404 @@
     "minor_weight_percent": 4
   },
   {
-    "id": "B_Experiments_0119",
+    "id": "B_E_3aba425d76290bd9",
     "chemistry": "Li-Ti-P-O",
-    "kind": "Experiments",
+    "phases": [
+      "Li2TiO3",
+      "TiO2"
+    ],
+    "major": "Li2TiO3",
+    "minor": "TiO2",
+    "minor_weight_percent": 4
+  },
+  {
+    "id": "B_E_3e56dea48c1e1330",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2CO3",
+      "TiO2"
+    ],
+    "major": "Li2CO3",
+    "minor": "TiO2",
+    "minor_weight_percent": 18
+  },
+  {
+    "id": "B_E_43db4674b38e905c",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2TiO3",
+      "TiO2"
+    ],
+    "major": "Li2TiO3",
+    "minor": "TiO2",
+    "minor_weight_percent": 8
+  },
+  {
+    "id": "B_E_445624af69840702",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2TiO3",
+      "Li2CO3"
+    ],
+    "major": "Li2TiO3",
+    "minor": "Li2CO3",
+    "minor_weight_percent": 20
+  },
+  {
+    "id": "B_E_44e5042d89360b20",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiO2",
+      "Li2CO3"
+    ],
+    "major": "TiO2",
+    "minor": "Li2CO3",
+    "minor_weight_percent": 20
+  },
+  {
+    "id": "B_E_498a845177d32674",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2CO3",
+      "TiO2"
+    ],
+    "major": "Li2CO3",
+    "minor": "TiO2",
+    "minor_weight_percent": 20
+  },
+  {
+    "id": "B_E_4b4bbec12a2c9ffe",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2CO3",
+      "Li2TiO3"
+    ],
+    "major": "Li2CO3",
+    "minor": "Li2TiO3",
+    "minor_weight_percent": 14
+  },
+  {
+    "id": "B_E_4c10238a5ccc5d07",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2CO3",
+      "Li3PO4"
+    ],
+    "major": "Li2CO3",
+    "minor": "Li3PO4",
+    "minor_weight_percent": 4
+  },
+  {
+    "id": "B_E_4d684fa0e31b2c23",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2TiO3",
+      "Li3PO4"
+    ],
+    "major": "Li2TiO3",
+    "minor": "Li3PO4",
+    "minor_weight_percent": 4
+  },
+  {
+    "id": "B_E_4f4de481b7af1745",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiO2",
+      "Li3PO4"
+    ],
+    "major": "TiO2",
+    "minor": "Li3PO4",
+    "minor_weight_percent": 14
+  },
+  {
+    "id": "B_E_530f19054d404d61",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2CO3",
+      "TiO2"
+    ],
+    "major": "Li2CO3",
+    "minor": "TiO2",
+    "minor_weight_percent": 8
+  },
+  {
+    "id": "B_E_5561df6904e467f2",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3PO4",
+      "Li2CO3"
+    ],
+    "major": "Li3PO4",
+    "minor": "Li2CO3",
+    "minor_weight_percent": 20
+  },
+  {
+    "id": "B_E_56a43daed331c264",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiO2",
+      "Li2TiO3"
+    ],
+    "major": "TiO2",
+    "minor": "Li2TiO3",
+    "minor_weight_percent": 18
+  },
+  {
+    "id": "B_E_5771be7ea89479f2",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3PO4",
+      "Li2CO3"
+    ],
+    "major": "Li3PO4",
+    "minor": "Li2CO3",
+    "minor_weight_percent": 16
+  },
+  {
+    "id": "B_E_5a9c6ab256840791",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3PO4",
+      "Li2CO3"
+    ],
+    "major": "Li3PO4",
+    "minor": "Li2CO3",
+    "minor_weight_percent": 18
+  },
+  {
+    "id": "B_E_5c6bc787ea456ffe",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2TiO3",
+      "Li2CO3"
+    ],
+    "major": "Li2TiO3",
+    "minor": "Li2CO3",
+    "minor_weight_percent": 16
+  },
+  {
+    "id": "B_E_5cceb2476819c55f",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3PO4",
+      "Li2TiO3"
+    ],
+    "major": "Li3PO4",
+    "minor": "Li2TiO3",
+    "minor_weight_percent": 8
+  },
+  {
+    "id": "B_E_5fd369b8ac58ad53",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3PO4",
+      "TiO2"
+    ],
+    "major": "Li3PO4",
+    "minor": "TiO2",
+    "minor_weight_percent": 8
+  },
+  {
+    "id": "B_E_62008f785c7bc97e",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3PO4",
+      "Li2TiO3"
+    ],
+    "major": "Li3PO4",
+    "minor": "Li2TiO3",
+    "minor_weight_percent": 20
+  },
+  {
+    "id": "B_E_63dbcd54462ae03a",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3PO4",
+      "Li2TiO3"
+    ],
+    "major": "Li3PO4",
+    "minor": "Li2TiO3",
+    "minor_weight_percent": 16
+  },
+  {
+    "id": "B_E_64a08b4a2cebab3d",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2TiO3",
+      "Li3PO4"
+    ],
+    "major": "Li2TiO3",
+    "minor": "Li3PO4",
+    "minor_weight_percent": 10
+  },
+  {
+    "id": "B_E_64c29eeb90350427",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3PO4",
+      "Li2TiO3"
+    ],
+    "major": "Li3PO4",
+    "minor": "Li2TiO3",
+    "minor_weight_percent": 4
+  },
+  {
+    "id": "B_E_664154c9e0aee103",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2TiO3",
+      "Li3PO4"
+    ],
+    "major": "Li2TiO3",
+    "minor": "Li3PO4",
+    "minor_weight_percent": 12
+  },
+  {
+    "id": "B_E_6a036fd3ee064611",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2CO3",
+      "TiO2"
+    ],
+    "major": "Li2CO3",
+    "minor": "TiO2",
+    "minor_weight_percent": 4
+  },
+  {
+    "id": "B_E_6a6d2bcab118856b",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2TiO3",
+      "TiO2"
+    ],
+    "major": "Li2TiO3",
+    "minor": "TiO2",
+    "minor_weight_percent": 20
+  },
+  {
+    "id": "B_E_6cd353b7586b46f3",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2TiO3",
+      "TiO2"
+    ],
+    "major": "Li2TiO3",
+    "minor": "TiO2",
+    "minor_weight_percent": 2
+  },
+  {
+    "id": "B_E_6e2cdbe8dc8e2dd6",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2TiO3",
+      "TiO2"
+    ],
+    "major": "Li2TiO3",
+    "minor": "TiO2",
+    "minor_weight_percent": 10
+  },
+  {
+    "id": "B_E_6fe68dfea9188262",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2CO3",
+      "Li3PO4"
+    ],
+    "major": "Li2CO3",
+    "minor": "Li3PO4",
+    "minor_weight_percent": 10
+  },
+  {
+    "id": "B_E_73383126bfe08688",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiO2",
+      "Li3PO4"
+    ],
+    "major": "TiO2",
+    "minor": "Li3PO4",
+    "minor_weight_percent": 10
+  },
+  {
+    "id": "B_E_739ef826f62fc77b",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2TiO3",
+      "Li2CO3"
+    ],
+    "major": "Li2TiO3",
+    "minor": "Li2CO3",
+    "minor_weight_percent": 2
+  },
+  {
+    "id": "B_E_74a08ba6c615742f",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiO2",
+      "Li3PO4"
+    ],
+    "major": "TiO2",
+    "minor": "Li3PO4",
+    "minor_weight_percent": 8
+  },
+  {
+    "id": "B_E_76bf633abf30a4ca",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2TiO3",
+      "Li3PO4"
+    ],
+    "major": "Li2TiO3",
+    "minor": "Li3PO4",
+    "minor_weight_percent": 20
+  },
+  {
+    "id": "B_E_7801b0992df22f25",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2TiO3",
+      "Li2CO3"
+    ],
+    "major": "Li2TiO3",
+    "minor": "Li2CO3",
+    "minor_weight_percent": 6
+  },
+  {
+    "id": "B_E_7a90799076ad7614",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3PO4",
+      "Li2CO3"
+    ],
+    "major": "Li3PO4",
+    "minor": "Li2CO3",
+    "minor_weight_percent": 12
+  },
+  {
+    "id": "B_E_7e0614cc87fb66bb",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2CO3",
+      "Li2TiO3"
+    ],
+    "major": "Li2CO3",
+    "minor": "Li2TiO3",
+    "minor_weight_percent": 2
+  },
+  {
+    "id": "B_E_8f1a7fcef798d3e6",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3PO4",
+      "TiO2"
+    ],
+    "major": "Li3PO4",
+    "minor": "TiO2",
+    "minor_weight_percent": 10
+  },
+  {
+    "id": "B_E_906eb6ba674cafcf",
+    "chemistry": "Li-Ti-P-O",
     "phases": [
       "TiO2",
       "Li3PO4"
@@ -1438,5 +823,500 @@
     "major": "TiO2",
     "minor": "Li3PO4",
     "minor_weight_percent": 2
+  },
+  {
+    "id": "B_E_9382a8199c56795f",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2TiO3",
+      "Li3PO4"
+    ],
+    "major": "Li2TiO3",
+    "minor": "Li3PO4",
+    "minor_weight_percent": 8
+  },
+  {
+    "id": "B_E_946d9349c583faad",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiO2",
+      "Li3PO4"
+    ],
+    "major": "TiO2",
+    "minor": "Li3PO4",
+    "minor_weight_percent": 18
+  },
+  {
+    "id": "B_E_959d7e1437ef9746",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2CO3",
+      "Li3PO4"
+    ],
+    "major": "Li2CO3",
+    "minor": "Li3PO4",
+    "minor_weight_percent": 14
+  },
+  {
+    "id": "B_E_98c90cf3077f2a5c",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2CO3",
+      "TiO2"
+    ],
+    "major": "Li2CO3",
+    "minor": "TiO2",
+    "minor_weight_percent": 2
+  },
+  {
+    "id": "B_E_9a3ff9fd9ef27231",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2CO3",
+      "Li2TiO3"
+    ],
+    "major": "Li2CO3",
+    "minor": "Li2TiO3",
+    "minor_weight_percent": 8
+  },
+  {
+    "id": "B_E_9f70f5f9e80ef67a",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3PO4",
+      "Li2TiO3"
+    ],
+    "major": "Li3PO4",
+    "minor": "Li2TiO3",
+    "minor_weight_percent": 14
+  },
+  {
+    "id": "B_E_9fae49ad8b457c99",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3PO4",
+      "Li2TiO3"
+    ],
+    "major": "Li3PO4",
+    "minor": "Li2TiO3",
+    "minor_weight_percent": 6
+  },
+  {
+    "id": "B_E_a351b737dfc31627",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiO2",
+      "Li2TiO3"
+    ],
+    "major": "TiO2",
+    "minor": "Li2TiO3",
+    "minor_weight_percent": 16
+  },
+  {
+    "id": "B_E_a41602cdf50963ef",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiO2",
+      "Li2CO3"
+    ],
+    "major": "TiO2",
+    "minor": "Li2CO3",
+    "minor_weight_percent": 18
+  },
+  {
+    "id": "B_E_a8685224c0128efe",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2TiO3",
+      "Li2CO3"
+    ],
+    "major": "Li2TiO3",
+    "minor": "Li2CO3",
+    "minor_weight_percent": 14
+  },
+  {
+    "id": "B_E_a93c1659d708b61c",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2CO3",
+      "Li3PO4"
+    ],
+    "major": "Li2CO3",
+    "minor": "Li3PO4",
+    "minor_weight_percent": 2
+  },
+  {
+    "id": "B_E_afe1560d1940335f",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2CO3",
+      "Li2TiO3"
+    ],
+    "major": "Li2CO3",
+    "minor": "Li2TiO3",
+    "minor_weight_percent": 6
+  },
+  {
+    "id": "B_E_b10e805d064fbebf",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3PO4",
+      "Li2CO3"
+    ],
+    "major": "Li3PO4",
+    "minor": "Li2CO3",
+    "minor_weight_percent": 8
+  },
+  {
+    "id": "B_E_b404abf884eed094",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2CO3",
+      "Li3PO4"
+    ],
+    "major": "Li2CO3",
+    "minor": "Li3PO4",
+    "minor_weight_percent": 6
+  },
+  {
+    "id": "B_E_b6c2af1d0ae3b7be",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3PO4",
+      "TiO2"
+    ],
+    "major": "Li3PO4",
+    "minor": "TiO2",
+    "minor_weight_percent": 20
+  },
+  {
+    "id": "B_E_b6e8f5b95c721fd2",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2CO3",
+      "TiO2"
+    ],
+    "major": "Li2CO3",
+    "minor": "TiO2",
+    "minor_weight_percent": 6
+  },
+  {
+    "id": "B_E_b810c5b2ad5914e7",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3PO4",
+      "Li2CO3"
+    ],
+    "major": "Li3PO4",
+    "minor": "Li2CO3",
+    "minor_weight_percent": 14
+  },
+  {
+    "id": "B_E_b97a43b8241e3f74",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2TiO3",
+      "TiO2"
+    ],
+    "major": "Li2TiO3",
+    "minor": "TiO2",
+    "minor_weight_percent": 12
+  },
+  {
+    "id": "B_E_bb3686ac2495de39",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2CO3",
+      "Li3PO4"
+    ],
+    "major": "Li2CO3",
+    "minor": "Li3PO4",
+    "minor_weight_percent": 16
+  },
+  {
+    "id": "B_E_bb697342e30fc747",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2CO3",
+      "TiO2"
+    ],
+    "major": "Li2CO3",
+    "minor": "TiO2",
+    "minor_weight_percent": 10
+  },
+  {
+    "id": "B_E_bbad9c226174f618",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2CO3",
+      "Li3PO4"
+    ],
+    "major": "Li2CO3",
+    "minor": "Li3PO4",
+    "minor_weight_percent": 8
+  },
+  {
+    "id": "B_E_bbfd6f1076585b3e",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2CO3",
+      "Li2TiO3"
+    ],
+    "major": "Li2CO3",
+    "minor": "Li2TiO3",
+    "minor_weight_percent": 20
+  },
+  {
+    "id": "B_E_bfbd0fea699eb4ec",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiO2",
+      "Li2CO3"
+    ],
+    "major": "TiO2",
+    "minor": "Li2CO3",
+    "minor_weight_percent": 4
+  },
+  {
+    "id": "B_E_c1bd9305e6e28b1d",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiO2",
+      "Li3PO4"
+    ],
+    "major": "TiO2",
+    "minor": "Li3PO4",
+    "minor_weight_percent": 6
+  },
+  {
+    "id": "B_E_c371f4f10adc70d8",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3PO4",
+      "TiO2"
+    ],
+    "major": "Li3PO4",
+    "minor": "TiO2",
+    "minor_weight_percent": 2
+  },
+  {
+    "id": "B_E_d11286b447faf5ca",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2CO3",
+      "TiO2"
+    ],
+    "major": "Li2CO3",
+    "minor": "TiO2",
+    "minor_weight_percent": 12
+  },
+  {
+    "id": "B_E_d4a5ca7df8faf7b4",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2TiO3",
+      "Li3PO4"
+    ],
+    "major": "Li2TiO3",
+    "minor": "Li3PO4",
+    "minor_weight_percent": 16
+  },
+  {
+    "id": "B_E_d5cdc9b1040c3a0d",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2CO3",
+      "Li2TiO3"
+    ],
+    "major": "Li2CO3",
+    "minor": "Li2TiO3",
+    "minor_weight_percent": 4
+  },
+  {
+    "id": "B_E_d6cd2dda1996f761",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3PO4",
+      "Li2TiO3"
+    ],
+    "major": "Li3PO4",
+    "minor": "Li2TiO3",
+    "minor_weight_percent": 10
+  },
+  {
+    "id": "B_E_d71e02f4af3e93f4",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3PO4",
+      "Li2TiO3"
+    ],
+    "major": "Li3PO4",
+    "minor": "Li2TiO3",
+    "minor_weight_percent": 18
+  },
+  {
+    "id": "B_E_d8045f144231e512",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2CO3",
+      "Li2TiO3"
+    ],
+    "major": "Li2CO3",
+    "minor": "Li2TiO3",
+    "minor_weight_percent": 16
+  },
+  {
+    "id": "B_E_d93b385f27e888bb",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2TiO3",
+      "Li2CO3"
+    ],
+    "major": "Li2TiO3",
+    "minor": "Li2CO3",
+    "minor_weight_percent": 18
+  },
+  {
+    "id": "B_E_db18be57dd4b72e5",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3PO4",
+      "Li2CO3"
+    ],
+    "major": "Li3PO4",
+    "minor": "Li2CO3",
+    "minor_weight_percent": 4
+  },
+  {
+    "id": "B_E_dde15de15f14ff82",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiO2",
+      "Li2TiO3"
+    ],
+    "major": "TiO2",
+    "minor": "Li2TiO3",
+    "minor_weight_percent": 8
+  },
+  {
+    "id": "B_E_e07b8e502a519cd1",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiO2",
+      "Li3PO4"
+    ],
+    "major": "TiO2",
+    "minor": "Li3PO4",
+    "minor_weight_percent": 12
+  },
+  {
+    "id": "B_E_e1068d63298b197f",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3PO4",
+      "Li2TiO3"
+    ],
+    "major": "Li3PO4",
+    "minor": "Li2TiO3",
+    "minor_weight_percent": 12
+  },
+  {
+    "id": "B_E_e1f62236b477678f",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2TiO3",
+      "Li3PO4"
+    ],
+    "major": "Li2TiO3",
+    "minor": "Li3PO4",
+    "minor_weight_percent": 18
+  },
+  {
+    "id": "B_E_e2d14ef95e66a151",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2CO3",
+      "Li3PO4"
+    ],
+    "major": "Li2CO3",
+    "minor": "Li3PO4",
+    "minor_weight_percent": 20
+  },
+  {
+    "id": "B_E_e4faa4e6bc524e10",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3PO4",
+      "TiO2"
+    ],
+    "major": "Li3PO4",
+    "minor": "TiO2",
+    "minor_weight_percent": 16
+  },
+  {
+    "id": "B_E_e7861882e68c8c74",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2TiO3",
+      "Li2CO3"
+    ],
+    "major": "Li2TiO3",
+    "minor": "Li2CO3",
+    "minor_weight_percent": 12
+  },
+  {
+    "id": "B_E_ef3a5ab50f05d7b7",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li3PO4",
+      "Li2CO3"
+    ],
+    "major": "Li3PO4",
+    "minor": "Li2CO3",
+    "minor_weight_percent": 10
+  },
+  {
+    "id": "B_E_f3545248b492d041",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2TiO3",
+      "Li2CO3"
+    ],
+    "major": "Li2TiO3",
+    "minor": "Li2CO3",
+    "minor_weight_percent": 10
+  },
+  {
+    "id": "B_E_fad88a3096984837",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "TiO2",
+      "Li3PO4"
+    ],
+    "major": "TiO2",
+    "minor": "Li3PO4",
+    "minor_weight_percent": 20
+  },
+  {
+    "id": "B_E_fc2ff896967b23b6",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2TiO3",
+      "TiO2"
+    ],
+    "major": "Li2TiO3",
+    "minor": "TiO2",
+    "minor_weight_percent": 6
+  },
+  {
+    "id": "B_E_ff6dd5b295d0eb17",
+    "chemistry": "Li-Ti-P-O",
+    "phases": [
+      "Li2CO3",
+      "TiO2"
+    ],
+    "major": "Li2CO3",
+    "minor": "TiO2",
+    "minor_weight_percent": 14
   }
 ]

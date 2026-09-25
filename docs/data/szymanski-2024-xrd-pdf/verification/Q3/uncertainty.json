@@ -1,0 +1,32 @@
+[
+  {
+    "artifact": "clean",
+    "contrast": "r5_40_minus_XRD",
+    "estimate": 0.0,
+    "blocks": 53,
+    "ci95": [
+      -0.027401983939537078,
+      0.0273972602739726
+    ]
+  },
+  {
+    "artifact": "noise",
+    "contrast": "r5_40_minus_XRD",
+    "estimate": -0.0011494252873563218,
+    "blocks": 53,
+    "ci95": [
+      -0.02632903567643942,
+      0.02365267052767051
+    ]
+  },
+  {
+    "artifact": "background",
+    "contrast": "r5_40_minus_XRD",
+    "estimate": 0.041379310344827586,
+    "blocks": 53,
+    "ci95": [
+      0.007142857142857143,
+      0.08098591549295775
+    ]
+  }
+]

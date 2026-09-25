@@ -1,0 +1,55 @@
+{
+  "passed": true,
+  "scope": "Independent numerical audit of the documented worked candidate only; not a universal solver constraint.",
+  "candidate_module_imported": false,
+  "source_patterns_reconstructed": 12,
+  "baseline_and_perturbed_transforms_checked": 108,
+  "transform_maximum_absolute_error": 3.0318629551384646e-15,
+  "perturbation_checks": [
+    {
+      "condition": "noise_0.01_trial0",
+      "source_patterns_checked": 12,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "condition": "noise_0.01_trial1",
+      "source_patterns_checked": 12,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "condition": "noise_0.01_trial2",
+      "source_patterns_checked": 12,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "condition": "noise_0.04_trial0",
+      "source_patterns_checked": 12,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "condition": "noise_0.04_trial1",
+      "source_patterns_checked": 12,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "condition": "noise_0.04_trial2",
+      "source_patterns_checked": 12,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "condition": "background_0.05",
+      "source_patterns_checked": 12,
+      "maximum_absolute_error": 1.1102230246251565e-16
+    },
+    {
+      "condition": "background_0.25",
+      "source_patterns_checked": 12,
+      "maximum_absolute_error": 2.220446049250313e-16
+    }
+  ],
+  "independently_recomputed_distortion_rows": 480,
+  "validation_selection_arithmetic_checked": true,
+  "limitations": "These source/transform/perturbation probes do not refit classifiers or establish absence of label leakage by themselves.",
+  "candidate_specific_corrupted_transform_rejected": true,
+  "candidate_code_sha256": "2c81e2aa1cea139eb7b4e2fcd04910e55dd26eb8d9b9366cef4beee128f1e6eb"
+}

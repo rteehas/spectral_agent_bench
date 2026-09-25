@@ -1,22 +1,17 @@
 {
   "question": "Q3",
-  "runtime": "Use the Python interpreter from the pinned environment created in the entry README; run from the spectral_agent_bench root.",
+  "role": "Evaluator-only illustrative workflow; none of these choices is a solver requirement.",
+  "runtime": "Python 3.12 with the entry requirements; run from spectral_agent_bench root.",
   "tools": [
-    "Python 3.12",
+    "Python",
     "NumPy",
     "SciPy",
-    "NumPy random.Generator",
+    "scikit-learn",
     "Matplotlib"
   ],
-  "analysis": "Paired perturbation experiment and window-selection tradeoff.",
-  "command": "OPENBLAS_NUM_THREADS=1 MPLCONFIGDIR=/tmp/szymanski-mpl /tmp/xrd-bench-env/bin/python docs/data/szymanski-2024-xrd-pdf/workflows/candidate.py Q3 --inputs docs/data/szymanski-2024-xrd-pdf/inputs --output /tmp/szymanski-answer/Q3",
-  "verification_command": "/tmp/xrd-bench-env/bin/python docs/data/szymanski-2024-xrd-pdf/workflows/verify.py --question Q3 --output /tmp/szymanski-answer/Q3",
-  "source_relationship": "Artifact localization and r-window design related to Fig.5 and the Methods/Discussion. These perturbations are generated during solving from raw released baselines; they are not the missing categorized historical artifact dataset.",
-  "steps": [
-    "1. Use Python/NumPy to read only the linked raw numeric NPZ arrays and metadata. Interpolate onto the shared angular interval, subtract the declared intensity percentile and scale by peak height. The source audit verifies every packaged array against the release.\n\n2. Use NumPy to compute the uncorrected sine-transform representation with nonuniform-Q trapezoidal quadrature. The independent verifier recomputes a raw-linked transform probe without importing the candidate.\n\n",
-    "Select all 11 released Li2TiO3_15 realizations. Use NumPy PCG64 draws for five repeated noise perturbations at each of two amplitudes and construct two smooth Gaussian backgrounds. Transform baseline and perturbed traces through r=120 Å. Compute per-window relative distortions and sampled signal/artifact energy fractions, then aggregate over trials and baselines.",
-    "Write predictions/metrics, result.json, probe.npz, diagnostics.png and conclusion.md.",
-    "Evaluator independently checks outputs against source labels, transform calculation and executed references."
-  ],
-  "input_boundary": "Candidate has no need to read paper, released models, original answer-bearing paths, reference outputs or other question outputs."
+  "command": "OPENBLAS_NUM_THREADS=1 MPLCONFIGDIR=/tmp/xrd-mpl /tmp/xrd-bench-env/bin/python docs/data/szymanski-2024-xrd-pdf/workflows/candidate.py Q3 --inputs docs/data/szymanski-2024-xrd-pdf/inputs --output /tmp/xrd-answer/Q3",
+  "verification_command": "/tmp/xrd-bench-env/bin/python docs/data/szymanski-2024-xrd-pdf/workflows/verify.py --question Q3 --output /tmp/xrd-answer/Q3",
+  "worked_approach": "One candidate chooses several real-space intervals and realistic added-noise/background levels, trains phase classifiers on clean training data, and selects an interval using perturbed validation data. It evaluates clean and perturbed held-out records, retains paired numerical evidence and compares classification performance with signal distortion. Its intervals and perturbations are illustrative.",
+  "source_relationship": "Artifact localization and distance-range selection in Fig. 5 and Methods/Discussion. The separated historical artifact dataset is unavailable. The solver generates a controlled experiment from released raw baselines and must test predictive discrimination, extending the earlier energy-only task.",
+  "verification": "Independent metrics plus submission-integrity checks; scientific rubric required. No exact-reference matching."
 }

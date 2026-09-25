@@ -1,0 +1,10 @@
+condition,artifact,description
+baseline,clean,Released simulated spectrum; no additional perturbation.
+noise_0.01_trial0,noise,"Independent additive Gaussian noise, standard deviation 0.01 relative to preprocessed peak intensity; draw 0."
+noise_0.01_trial1,noise,"Independent additive Gaussian noise, standard deviation 0.01 relative to preprocessed peak intensity; draw 1."
+noise_0.01_trial2,noise,"Independent additive Gaussian noise, standard deviation 0.01 relative to preprocessed peak intensity; draw 2."
+noise_0.04_trial0,noise,"Independent additive Gaussian noise, standard deviation 0.04 relative to preprocessed peak intensity; draw 0."
+noise_0.04_trial1,noise,"Independent additive Gaussian noise, standard deviation 0.04 relative to preprocessed peak intensity; draw 1."
+noise_0.04_trial2,noise,"Independent additive Gaussian noise, standard deviation 0.04 relative to preprocessed peak intensity; draw 2."
+background_0.05,background,"Additive broad Gaussian background, peak 0.05 relative to preprocessed peak intensity, center35 degrees and width12 degrees."
+background_0.25,background,"Additive broad Gaussian background, peak 0.25 relative to preprocessed peak intensity, center35 degrees and width12 degrees."
