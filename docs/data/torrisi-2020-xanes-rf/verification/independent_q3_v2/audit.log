@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "n_runs": 128,
+  "n_comparisons": 64,
+  "n_predictions": 43576,
+  "n_partition_rows": 654512,
+  "checks": [
+    "one partition role for every source record per run",
+    "one finite prediction per test record and no others",
+    "metrics exactly recomputed from released Bader labels",
+    "paired conditions have identical inclusion and train/validation/test/excluded assignments",
+    "material identifiers disjoint across train, validation and test",
+    "no missing Bader values enter fitting or scoring",
+    "only full/white_line and target bader declared"
+  ]
+}
+
+Primary (equal-material MAE and error reduction, e):
+              wl     full    delta  min_delta  max_delta  min_ci_low
+element                                                             
+Co       0.15258  0.08320  0.06938    0.05777    0.08124     0.03653
+Cr       0.14228  0.07155  0.07074    0.05923    0.08048     0.04130
+Cu       0.16219  0.08826  0.07393    0.05059    0.10407     0.02265
+Fe       0.20192  0.10441  0.09751    0.09174    0.10588     0.07091
+Mn       0.15083  0.06526  0.08557    0.07619    0.09849     0.06216
+Ni       0.10266  0.06782  0.03485    0.02526    0.04393     0.01527
+Ti       0.13299  0.09174  0.04126    0.03369    0.05080     0.01173
+V        0.15906  0.07821  0.08085    0.07132    0.08985     0.05683
+
+First-split multiplicity intervals:
+element  seed  n_materials   delta  bonferroni_99_375_low  bonferroni_99_375_high  n_bootstrap
+     Ti  1729          141 0.03481                0.00402                 0.06974        20000
+      V  1729          261 0.08966                0.06854                 0.11183        20000
+     Cr  1729          126 0.06986                0.03903                 0.10422        20000
+     Mn  1729          255 0.09849                0.07619                 0.12306        20000
+     Fe  1729          255 0.09425                0.06121                 0.13267        20000
+     Co  1729          167 0.06675                0.03482                 0.10553        20000
+     Ni  1729          152 0.03957                0.01746                 0.06890        20000
+     Cu  1729          155 0.10407                0.06505                 0.14625        20000

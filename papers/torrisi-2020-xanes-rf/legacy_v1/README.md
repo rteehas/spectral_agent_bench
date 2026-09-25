@@ -1,0 +1,1 @@
+Historical v1 implementation and execution helpers, preserved for provenance only. Relative paths reflect the original layout; these are not active commands for the revised research tasks. Use the active candidate.py, verify.py and audit_flexible_verification.py instead.

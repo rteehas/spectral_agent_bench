@@ -1,0 +1,363 @@
+{
+  "status": "scientific_pass_for_qualified_Q3_claim",
+  "reviewer": "Independent flexible-verifier subagent",
+  "source": "Separate input-only solver attempt, followed by independent full source execution and scientific review.",
+  "information_boundary": {
+    "solver_declared_task_specific_access": "Only exported Q3 prompt and eight input files, plus installed numerical libraries.",
+    "os_enforced_isolation": false
+  },
+  "numerical_integrity": {
+    "runs": 128,
+    "comparisons": 64,
+    "status": "scientific_review_required"
+  },
+  "full_rerun": {
+    "commands": [
+      "python code/analyze.py --inputs INPUT_DIRECTORY --output CLEAN_DIRECTORY --workers 2",
+      "python code/audit_and_summarize.py --inputs INPUT_DIRECTORY --output CLEAN_DIRECTORY",
+      "python code/write_report.py --output CLEAN_DIRECTORY"
+    ],
+    "tables": [
+      {
+        "file": "comparisons.csv",
+        "rows": 64,
+        "agreement": "all values, numeric atol1e-12"
+      },
+      {
+        "file": "coverage.csv",
+        "rows": 8,
+        "agreement": "all values, numeric atol1e-12"
+      },
+      {
+        "file": "family_sensitivity.csv",
+        "rows": 192,
+        "agreement": "all values, numeric atol1e-12"
+      },
+      {
+        "file": "first_split_multiplicity.csv",
+        "rows": 8,
+        "agreement": "all values, numeric atol1e-12"
+      },
+      {
+        "file": "metrics.csv",
+        "rows": 256,
+        "agreement": "all values, numeric atol1e-12"
+      },
+      {
+        "file": "model_selection.csv",
+        "rows": 768,
+        "agreement": "all values, numeric atol1e-12"
+      },
+      {
+        "file": "partitions.csv",
+        "rows": 654512,
+        "agreement": "all values, numeric atol1e-12"
+      },
+      {
+        "file": "predictions.csv",
+        "rows": 43576,
+        "agreement": "all values, numeric atol1e-12"
+      },
+      {
+        "file": "primary_summary.csv",
+        "rows": 8,
+        "agreement": "all values, numeric atol1e-12"
+      },
+      {
+        "file": "spectrum_overlap.csv",
+        "rows": 16,
+        "agreement": "all values, numeric atol1e-12"
+      }
+    ],
+    "diagnostic_tables": 64,
+    "identical_figures": [
+      "coverage.png",
+      "heldout_predictions.png",
+      "material_effect_uncertainty.png",
+      "sensitivity.png"
+    ],
+    "identical_report": true
+  },
+  "independent_raw_pair_reconstruction": [
+    {
+      "comparison_id": "Co_primary_1729",
+      "raw_reconstruction_max_error": 1.1102230246251565e-16
+    },
+    {
+      "comparison_id": "Co_primary_2718",
+      "raw_reconstruction_max_error": 8.326672684688674e-17
+    },
+    {
+      "comparison_id": "Co_primary_31415",
+      "raw_reconstruction_max_error": 6.938893903907228e-17
+    },
+    {
+      "comparison_id": "Co_primary_57721",
+      "raw_reconstruction_max_error": 8.326672684688674e-17
+    },
+    {
+      "comparison_id": "Co_primary_81173",
+      "raw_reconstruction_max_error": 5.551115123125783e-17
+    },
+    {
+      "comparison_id": "Co_spectrum_all_1729",
+      "raw_reconstruction_max_error": 5.551115123125783e-17
+    },
+    {
+      "comparison_id": "Co_spectrum_identified_1729",
+      "raw_reconstruction_max_error": 8.326672684688674e-17
+    },
+    {
+      "comparison_id": "Co_unit_peak_normalized_1729",
+      "raw_reconstruction_max_error": 8.326672684688674e-17
+    },
+    {
+      "comparison_id": "Cr_primary_1729",
+      "raw_reconstruction_max_error": 8.326672684688674e-17
+    },
+    {
+      "comparison_id": "Cr_primary_2718",
+      "raw_reconstruction_max_error": 9.020562075079397e-17
+    },
+    {
+      "comparison_id": "Cr_primary_31415",
+      "raw_reconstruction_max_error": 1.3877787807814457e-16
+    },
+    {
+      "comparison_id": "Cr_primary_57721",
+      "raw_reconstruction_max_error": 9.71445146547012e-17
+    },
+    {
+      "comparison_id": "Cr_primary_81173",
+      "raw_reconstruction_max_error": 8.326672684688674e-17
+    },
+    {
+      "comparison_id": "Cr_spectrum_all_1729",
+      "raw_reconstruction_max_error": 9.020562075079397e-17
+    },
+    {
+      "comparison_id": "Cr_spectrum_identified_1729",
+      "raw_reconstruction_max_error": 5.551115123125783e-17
+    },
+    {
+      "comparison_id": "Cr_unit_peak_normalized_1729",
+      "raw_reconstruction_max_error": 9.71445146547012e-17
+    },
+    {
+      "comparison_id": "Cu_primary_1729",
+      "raw_reconstruction_max_error": 6.938893903907228e-17
+    },
+    {
+      "comparison_id": "Cu_primary_2718",
+      "raw_reconstruction_max_error": 1.1102230246251565e-16
+    },
+    {
+      "comparison_id": "Cu_primary_31415",
+      "raw_reconstruction_max_error": 6.245004513516506e-17
+    },
+    {
+      "comparison_id": "Cu_primary_57721",
+      "raw_reconstruction_max_error": 6.938893903907228e-17
+    },
+    {
+      "comparison_id": "Cu_primary_81173",
+      "raw_reconstruction_max_error": 5.551115123125783e-17
+    },
+    {
+      "comparison_id": "Cu_spectrum_all_1729",
+      "raw_reconstruction_max_error": 9.71445146547012e-17
+    },
+    {
+      "comparison_id": "Cu_spectrum_identified_1729",
+      "raw_reconstruction_max_error": 5.551115123125783e-17
+    },
+    {
+      "comparison_id": "Cu_unit_peak_normalized_1729",
+      "raw_reconstruction_max_error": 6.938893903907228e-17
+    },
+    {
+      "comparison_id": "Fe_primary_1729",
+      "raw_reconstruction_max_error": 8.326672684688674e-17
+    },
+    {
+      "comparison_id": "Fe_primary_2718",
+      "raw_reconstruction_max_error": 2.7755575615628914e-17
+    },
+    {
+      "comparison_id": "Fe_primary_31415",
+      "raw_reconstruction_max_error": 8.326672684688674e-17
+    },
+    {
+      "comparison_id": "Fe_primary_57721",
+      "raw_reconstruction_max_error": 1.1102230246251565e-16
+    },
+    {
+      "comparison_id": "Fe_primary_81173",
+      "raw_reconstruction_max_error": 6.938893903907228e-17
+    },
+    {
+      "comparison_id": "Fe_spectrum_all_1729",
+      "raw_reconstruction_max_error": 6.938893903907228e-17
+    },
+    {
+      "comparison_id": "Fe_spectrum_identified_1729",
+      "raw_reconstruction_max_error": 8.326672684688674e-17
+    },
+    {
+      "comparison_id": "Fe_unit_peak_normalized_1729",
+      "raw_reconstruction_max_error": 6.938893903907228e-17
+    },
+    {
+      "comparison_id": "Mn_primary_1729",
+      "raw_reconstruction_max_error": 6.938893903907228e-17
+    },
+    {
+      "comparison_id": "Mn_primary_2718",
+      "raw_reconstruction_max_error": 9.71445146547012e-17
+    },
+    {
+      "comparison_id": "Mn_primary_31415",
+      "raw_reconstruction_max_error": 9.020562075079397e-17
+    },
+    {
+      "comparison_id": "Mn_primary_57721",
+      "raw_reconstruction_max_error": 5.551115123125783e-17
+    },
+    {
+      "comparison_id": "Mn_primary_81173",
+      "raw_reconstruction_max_error": 6.938893903907228e-17
+    },
+    {
+      "comparison_id": "Mn_spectrum_all_1729",
+      "raw_reconstruction_max_error": 8.326672684688674e-17
+    },
+    {
+      "comparison_id": "Mn_spectrum_identified_1729",
+      "raw_reconstruction_max_error": 8.326672684688674e-17
+    },
+    {
+      "comparison_id": "Mn_unit_peak_normalized_1729",
+      "raw_reconstruction_max_error": 6.938893903907228e-17
+    },
+    {
+      "comparison_id": "Ni_primary_1729",
+      "raw_reconstruction_max_error": 9.71445146547012e-17
+    },
+    {
+      "comparison_id": "Ni_primary_2718",
+      "raw_reconstruction_max_error": 8.326672684688674e-17
+    },
+    {
+      "comparison_id": "Ni_primary_31415",
+      "raw_reconstruction_max_error": 9.020562075079397e-17
+    },
+    {
+      "comparison_id": "Ni_primary_57721",
+      "raw_reconstruction_max_error": 1.1102230246251565e-16
+    },
+    {
+      "comparison_id": "Ni_primary_81173",
+      "raw_reconstruction_max_error": 6.938893903907228e-17
+    },
+    {
+      "comparison_id": "Ni_spectrum_all_1729",
+      "raw_reconstruction_max_error": 5.551115123125783e-17
+    },
+    {
+      "comparison_id": "Ni_spectrum_identified_1729",
+      "raw_reconstruction_max_error": 8.500145032286355e-17
+    },
+    {
+      "comparison_id": "Ni_unit_peak_normalized_1729",
+      "raw_reconstruction_max_error": 7.632783294297951e-17
+    },
+    {
+      "comparison_id": "Ti_primary_1729",
+      "raw_reconstruction_max_error": 9.71445146547012e-17
+    },
+    {
+      "comparison_id": "Ti_primary_2718",
+      "raw_reconstruction_max_error": 5.551115123125783e-17
+    },
+    {
+      "comparison_id": "Ti_primary_31415",
+      "raw_reconstruction_max_error": 6.938893903907228e-17
+    },
+    {
+      "comparison_id": "Ti_primary_57721",
+      "raw_reconstruction_max_error": 9.71445146547012e-17
+    },
+    {
+      "comparison_id": "Ti_primary_81173",
+      "raw_reconstruction_max_error": 6.938893903907228e-17
+    },
+    {
+      "comparison_id": "Ti_spectrum_all_1729",
+      "raw_reconstruction_max_error": 6.938893903907228e-17
+    },
+    {
+      "comparison_id": "Ti_spectrum_identified_1729",
+      "raw_reconstruction_max_error": 8.326672684688674e-17
+    },
+    {
+      "comparison_id": "Ti_unit_peak_normalized_1729",
+      "raw_reconstruction_max_error": 8.673617379884035e-17
+    },
+    {
+      "comparison_id": "V_primary_1729",
+      "raw_reconstruction_max_error": 6.938893903907228e-17
+    },
+    {
+      "comparison_id": "V_primary_2718",
+      "raw_reconstruction_max_error": 5.551115123125783e-17
+    },
+    {
+      "comparison_id": "V_primary_31415",
+      "raw_reconstruction_max_error": 9.020562075079397e-17
+    },
+    {
+      "comparison_id": "V_primary_57721",
+      "raw_reconstruction_max_error": 9.020562075079397e-17
+    },
+    {
+      "comparison_id": "V_primary_81173",
+      "raw_reconstruction_max_error": 5.551115123125783e-17
+    },
+    {
+      "comparison_id": "V_spectrum_all_1729",
+      "raw_reconstruction_max_error": 2.7755575615628914e-17
+    },
+    {
+      "comparison_id": "V_spectrum_identified_1729",
+      "raw_reconstruction_max_error": 6.938893903907228e-17
+    },
+    {
+      "comparison_id": "V_unit_peak_normalized_1729",
+      "raw_reconstruction_max_error": 9.71445146547012e-17
+    }
+  ],
+  "scientific_criteria": {
+    "source_execution": "satisfied: all128 fits/runs, all64 paired comparisons, diagnostic tables, uncertainty tables, figures and report regenerated; all scalar/cell outputs agree within1e-12.",
+    "feature_lineage_and_no_test_tuning": "satisfied: white-line predictor contains argmax photon energy only; full predictor contains100 raw absorption values plus deterministic white-line energy. All scalers and models fit training rows; six-candidate selection uses validation only; no test refit or test-driven candidate selection.",
+    "material_and_source_scope": "satisfied: raw metadata IDs remain partition-disjoint; unidentified rows excluded from primary runs. Report explicitly restricts claims to identified labeled scrape population, addresses source confounding, aliases and near-duplicates, and confines optional random-row results to spectrum claims.",
+    "fair_scientific_comparison": "satisfied: both conditions receive same candidate families and validation budget; matched test rows; nonlinear white-line models avoid a linear-only straw baseline. Material-weighted primary loss is distinguished from required spectrum-weighted metrics.",
+    "uncertainty_and_negative_evidence": "satisfied: five overlapping material resplits, per-split material bootstrap, fixed-first-split multiplicity sensitivity, model-family and normalization sensitivity. Report distinguishes conditional model-fixed intervals from training/population uncertainty and honestly reports unsupported Ni ridge gains.",
+    "supporting_artifacts_and_conclusion": "satisfied:64 paired comparisons independently rebuilt from raw labels and material identities, including interval endpoints; full source rerun reproduces family/multiplicity/coverage summaries. Inspected uncertainty figure matches tabulated direction and units. Conclusion is predictive incremental information, not causal charge inversion, formal oxidation states, or experimental generalization."
+  },
+  "limitations": [
+    "Model-search space is finite; differences are not information-theoretic lower bounds.",
+    "No structures are available to exclude related materials or aliases.",
+    "A public reference repository is not an access-control boundary; isolation of future solver runs remains necessary.",
+    "White-line position means the operational sampled-maximum energy used by this submission. Five identified Bader-labeled input records have endpoint maxima; no experimentally curated white-line definition or sensitivity to spectral-quality screening is established."
+  ],
+  "hashes": {
+    "report": "c3b0a96d00b60a51a19e7cc4a80686e37fe90e229576e3b01d34a161b0d907d4",
+    "design": "b60c43739fe2f2d36ee65ef70a8b5c937883eec9a391ee225c64158b4502cfb0",
+    "source": {
+      "code/analyze.py": "4cb9e7b03be76cd09e88c7f73661d976ef0303b1976bf14d24b8dfea8c6b433c",
+      "code/audit_and_summarize.py": "fa8044624a4c01f6b81236fc812e71be280297ec02c96a13a58f4a395af03efe",
+      "code/requirements.txt": "2ff929808b32059ff4b55a767fe382355bf970cc1af7e42dfad31e4e4f7bf528",
+      "code/write_report.py": "e0c07c49184ebc2ea28c38c910d87713d01fc211633822568e08e6e5f0ab7ac8"
+    }
+  }
+}

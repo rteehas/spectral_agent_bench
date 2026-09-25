@@ -1,86 +1,137 @@
 {
+  "status": "executed_all_five_examples",
+  "example_only": true,
+  "commands": [
+    "OPENBLAS_NUM_THREADS=1 MPLCONFIGDIR=/tmp/xanes-mpl /tmp/torrisi-env/bin/python docs/data/torrisi-2020-xanes-rf/workflows/candidate.py ALL --inputs docs/data/torrisi-2020-xanes-rf/inputs --output docs/data/torrisi-2020-xanes-rf/verification",
+    "OPENBLAS_NUM_THREADS=1 MPLCONFIGDIR=/tmp/xanes-mpl /tmp/torrisi-env/bin/python docs/data/torrisi-2020-xanes-rf/workflows/candidate.py ALL --inputs docs/data/torrisi-2020-xanes-rf/inputs --output docs/data/torrisi-2020-xanes-rf/verification --summarize-only"
+  ],
+  "execution_note": "An early run was interrupted for performance/baseline improvements; the logged ALL run completed afresh. Later reporting-only edits regenerated prose/figures. Independent execution review checks that numeric functions match the fitted source and validates reruns. No historical v1 predictions are used.",
+  "final_source_sha256": "169cc61515679e47efd1354247e4fa083ecd413e5236745acfe5f8bb9910ad2b",
+  "log_sha256": "c1cfd8d2d9bc8af88b3ac097e6f1c387c8fcd84b39e79a40cd170894d9366fd6",
   "questions": [
     {
       "question": "Q1",
-      "status": "passed",
-      "model_configurations": 16,
-      "fresh_execution": true,
-      "final_summary_and_diagnostic_outputs": true
+      "runs": 64,
+      "elapsed_seconds": 53.135828495025635,
+      "versions": {
+        "numpy": "2.5.3",
+        "sklearn": "1.9.1"
+      },
+      "artifact_sha256": {
+        "class_counts.csv": "ea45fa4bc5a0be106fef8e68f3c4ce7c0834777c917626502cbe8e46d5e4b875",
+        "code/candidate.py": "169cc61515679e47efd1354247e4fa083ecd413e5236745acfe5f8bb9910ad2b",
+        "comparisons.csv": "52faeac63d574178928be5d9bfddd78c146aa804bbf1764264708d2b3114a8bc",
+        "confusion.csv": "76d8f569d484e3d5b242cbbb97f4e3f6f72b1b6ee8f981553c3b724bb8d2716a",
+        "design.json": "fd8b51c891992c300482c77047af244e17173575c9958d827f8b268531704cc3",
+        "diagnostics.png": "71f4db7027e8d2b2829e926e321d54978972100ddf4712f8aca82b6658580424",
+        "evidence.json": "3ab45a2bdb92ee3846aa4713893ae566d598745393d00c9575661fcdaf9f6739",
+        "feature_definitions.json": "f4da6f2a0852dd1e34364f266db4b9a70eabbd8b1ebbdd4ac20ce9c5ee25f16f",
+        "localization.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+        "metrics.csv": "67c66c797150e8c4b894519d03f667554e137e3027ed9459dc0d633491e94d6e",
+        "paired_effects.png": "590b22c370303c0779f531d172a144d6254ae602a4ea2d5b66444ddc955ca21a",
+        "partitions.csv": "10addf06c6dc6012e23299dc8790f9cb2c5b5870075f54c5a7d84f4f27a4f46b",
+        "predictions.csv": "a254160f5d5fad92ab7d347fc6a8bce64b10789122ce93b420ca3c8c1b9d8c12",
+        "report.md": "a3d11f6ec50be7decfaebbe5d1b7bb1afcc29d7f86cd201c7a003a399468824d"
+      }
     },
     {
       "question": "Q2",
-      "status": "passed",
-      "model_configurations": 8,
-      "fresh_execution": true,
-      "final_summary_and_diagnostic_outputs": true
+      "runs": 16,
+      "elapsed_seconds": 22.769678592681885,
+      "versions": {
+        "numpy": "2.5.3",
+        "sklearn": "1.9.1"
+      },
+      "artifact_sha256": {
+        "code/candidate.py": "169cc61515679e47efd1354247e4fa083ecd413e5236745acfe5f8bb9910ad2b",
+        "design.json": "3195ab472b7beb18f7c5ca8629ec1d2ae50760432a009796fc794d8e985dda0e",
+        "diagnostics.png": "e07baf1001f2b1e23a6bf4c0141afa6c5f21eaf2034541a893d04537939cd021",
+        "evidence.json": "382f79b8510c29a4fbb0ecf1ce7a1e4e7ec79382927191c45cf5102c6e28421a",
+        "feature_definitions.json": "e41cd1a19e7686e71b549fc34ec6ece5ba2e6edd1441cf6a054d9a5ee9c7aefe",
+        "localization.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+        "metrics.csv": "310fc5e7402dc2a3f4475cda7b9c06d922f0ad7d04e19700239616bd8aee3552",
+        "partitions.csv": "dca1775af3d7d1fdeebb269faeabf64511c77adfa915bfaa5f3dc837ea74c414",
+        "predictions.csv": "dde2dd95717534ec0b5ab5d4a92e066f92c5786e85d5268eafc1b28f2f99f11b",
+        "regime_errors.png": "b25b72dfe37788cdb38de19bfb3ff0b79e9895477fee43eef080743cb675d44d",
+        "regimes.csv": "2ebf35a0b9a7ac514fbb02cc5bff57de71ab2dbc9db22884cfb659000005ae63",
+        "report.md": "997369c4da06b8384f994e6a1b3518fec4cbd0ec0780e655cd5a8d4e9d2a6216"
+      }
     },
     {
       "question": "Q3",
-      "status": "passed",
-      "model_configurations": 16,
-      "fresh_execution": true,
-      "final_summary_and_diagnostic_outputs": true
+      "runs": 32,
+      "elapsed_seconds": 20.062389373779297,
+      "versions": {
+        "numpy": "2.5.3",
+        "sklearn": "1.9.1"
+      },
+      "artifact_sha256": {
+        "code/candidate.py": "169cc61515679e47efd1354247e4fa083ecd413e5236745acfe5f8bb9910ad2b",
+        "comparisons.csv": "754a4043223904bbda1d7fdf197b89291c1642a73fb5061c6ebf3ce4f94787cc",
+        "design.json": "c82b4c2ff110cbeca9265f63b510a7208051d0a39d1517150f5de21ca1242cb3",
+        "diagnostics.png": "7be9dd23c345ec1aecd3d55b146f257a96f710ff74cffca92f0218ff85c869c9",
+        "evidence.json": "fdfdcf300f09765c458fc46ddcb9e118fda5296401f09d306ffc065fabbb97b2",
+        "feature_definitions.json": "a0665f50d75e1a0bcc6acb0132cab1f6db8549276fe238c821b338d33847c33d",
+        "localization.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+        "metrics.csv": "2478260139dc69b0a1f840e4447b95966f98df656655a6610ffa4fde2b239594",
+        "paired_effects.png": "f40579891ee8b2a7b38d6ad41f52c450014804a5ba1148bd7a57b6258d5a987e",
+        "partitions.csv": "6e07ca9eb1c0a4fd00fdc31d063976e212fd2f30379826c591a56fae18fea48f",
+        "predictions.csv": "38c10ae389bd577280977e15fab03a564c7a4ae5d90f9b848005d74f2cc587b5",
+        "report.md": "ab7b8e8419915c1b3513951a114a583eaac4aeb03234fab964178710be4cc464"
+      }
     },
     {
       "question": "Q4",
-      "status": "passed",
-      "model_configurations": 48,
-      "fresh_execution": true,
-      "final_summary_and_diagnostic_outputs": true
+      "runs": 96,
+      "elapsed_seconds": 139.91201949119568,
+      "versions": {
+        "numpy": "2.5.3",
+        "sklearn": "1.9.1"
+      },
+      "artifact_sha256": {
+        "class_counts.csv": "6e32228193b8d809b29d57e1e42a52dcecae9bd7ec578e2d1036363990099024",
+        "code/candidate.py": "169cc61515679e47efd1354247e4fa083ecd413e5236745acfe5f8bb9910ad2b",
+        "comparisons.csv": "304e33b17fe0af22992b6560321e7d03e56a1c66f4eee55f3c74d149be3c21de",
+        "confusion.csv": "ef68c9d246d25fc21f5c2e0283759463c73e495ed74fdb4f310d496b0cd3ecb5",
+        "design.json": "0dc26afb9ca2a4b74daa4014cf07ed90c54ba1497faa5d3713db6afa5ed4ded0",
+        "diagnostics.png": "f0458455d895b9765d9c8140af8f81f2e43829fefd1deae17b78c9f6fb6ea7cb",
+        "evidence.json": "4428df7a62357be6e9557fcf0cdc05f54a8995b2f141e57a9e5801b13083c1df",
+        "feature_definitions.json": "6e5158631238a6f7a3c1fca20d2fad17599911dab1d7c49d482aa3cc40183124",
+        "localization.json": "0a53bced23422ed7b820b1e8a6dbf1cde4a6d2739c94a2c8f35f2c4853a2a780",
+        "localization.png": "2486d960a6e3a633282cc7b25dc05a5a93a9aaa34dea4b40d622649600b67a58",
+        "metrics.csv": "25f77c55fae6a5a92b982ee1987ab5544263122cb66b2acf47d46b57b3418d71",
+        "paired_effects.png": "165d6576936d2b3e8268aeecbf3d9a3799d88d93e5ae949b01f3cda9d19f5f6a",
+        "partitions.csv": "c2723cb7cfd03b1f7ac2eb9ed2ef6bf62e0a4708a2f9e9fdb8f8fc093b0138c7",
+        "predictions.csv": "543892584358eef47b10e040ba90c9f993d99e2e5e96bed5db48694eec624b06",
+        "report.md": "b405f6d436a03bfb2e2809fe8bb6aedb0291d6112e5a03c082a9ed915679e84a",
+        "shape_families.csv": "d47a898b4c0d5e5d009e968f13d55d44b9d32457422e4f3fd7b2dede269ecb42"
+      }
     },
     {
       "question": "Q5",
-      "status": "passed",
-      "model_configurations": 64,
-      "fresh_execution": true,
-      "final_summary_and_diagnostic_outputs": true
+      "runs": 128,
+      "elapsed_seconds": 159.97225642204285,
+      "versions": {
+        "numpy": "2.5.3",
+        "sklearn": "1.9.1"
+      },
+      "artifact_sha256": {
+        "class_counts.csv": "11c6005633f0953cb36a8165fdde61501177e6694b489bd7363fbceea637d5a8",
+        "code/candidate.py": "169cc61515679e47efd1354247e4fa083ecd413e5236745acfe5f8bb9910ad2b",
+        "comparisons.csv": "509cc19b2889322239dcaca3e910d661689ac5982f36e4b5f26800af2b725057",
+        "confusion.csv": "1d2b508b6d01462cb8c0553aa91b4f8bab56dd678bcc81cee52eda9b855f9208",
+        "design.json": "d29cac9d0468472f29a5baa515a39f0f3ac4942cd0569ee492a9460099b55846",
+        "diagnostics.png": "0957c162781d223e93836fb8bc9073118d3c9ea9d6c4d7f7f8d36077f14de875",
+        "evidence.json": "da4b8eb7db83b416d38366c6b0b8569de93abca0bb6361ecde5411aff7c7f3a9",
+        "feature_definitions.json": "621ffe6d32028bd6dd5d72d76cd2def191380d2582a05924ed62aa476415a887",
+        "localization.json": "f6e14dcc4defed4185546ae6a2db4d76c443c43aad08945fb4216b5978aa8b09",
+        "localization.png": "d3dd56c88d7fc63452695db8fdb92676958795fdf94137e78bf9369486a5ed5c",
+        "metrics.csv": "31fa18267cd68c190fb00be6f1a8e3c56f37c5782a498c7463760b318d450905",
+        "paired_effects.png": "5a0fc40e0e4538f230e18df93dcaf734c8b06d37b6565d3d047d6505f33bd0c3",
+        "partitions.csv": "5543928564de2e6da89e9a05664d6b1704416cceb2dcc5a9ac39a57c778f73ba",
+        "predictions.csv": "8f5cbd61e05336722843f274123b98995033b0743075745495b4373283aa55eb",
+        "report.md": "21d407d4d61099bdfde3362d375de73557f363289c935a68f9c849b5047cc78f"
+      }
     }
-  ],
-  "all_numeric_checks_passed": true,
-  "complete_all_exit_code": 0,
-  "numeric_run_wall_seconds": 478.1065511830384,
-  "model_budget": {
-    "distinct_configurations": 96,
-    "seeds": [
-      42,
-      43,
-      44
-    ],
-    "trees_per_forest": 100
-  },
-  "input_boundary": "Training used only the eight lossless spectral-record projections. Scientific summaries read only generated outputs. No answer keys or released model arrays were inputs to candidate training.",
-  "environment": {
-    "python": "3.12.14",
-    "numpy": "2.5.3",
-    "scipy": "1.18.1",
-    "scikit_learn": "1.9.1",
-    "matplotlib": "3.11.2"
-  },
-  "final_standalone_check": {
-    "question": "Q2",
-    "exit_code": 0,
-    "elapsed_seconds": 36.438746612053365,
-    "automatic_summary_outputs": true
-  },
-  "execution_scope_note": "ALL completed using launch-hash numerical implementation. The author subsequently added automatic summary invocation and improved presentation; final summarize.py was executed explicitly for all five completed outputs. A fresh standalone Q2 invocation then exercised final candidate.py including automatic summary integration.",
-  "evidence": {
-    "complete_run_log_sha256": "6662dfc9b27ca644b06d03a4a70681c7c8c95c32d424e1ab34092b3acb2b96da",
-    "scientific_verification": "verification_audit.json",
-    "input_projection_check": "input_projection_audit.json",
-    "detailed_replay_review": "workflow_execution_review.json",
-    "complete_run_log": "execution_logs/independent_all.log"
-  },
-  "scope": "All five offline worked examples executed across all eight elements; every final diagnostic plot inspected. Numerical verifier, independent archival-array refits, and scientific-prose review are recorded separately.",
-  "independent_author_replay_comparison": {
-    "status": "passed",
-    "questions": [
-      "Q1",
-      "Q2",
-      "Q3",
-      "Q4",
-      "Q5"
-    ],
-    "absolute_and_relative_tolerance": 1e-12,
-    "report": "workflow_execution_review.json"
-  }
+  ]
 }

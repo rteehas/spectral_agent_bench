@@ -1,0 +1,3379 @@
+{
+  "coverage": [
+    {
+      "element": "Ti",
+      "target": "coord",
+      "source_records": 4930,
+      "valid_target_records": 4761,
+      "identified_valid_records": 2526,
+      "identified_materials": 1065,
+      "origins": {
+        "feff": {
+          "records": 2381,
+          "identified": 0
+        },
+        "scrape": {
+          "records": 2549,
+          "identified": 2549
+        }
+      },
+      "identified_target_mean": 5.313143309580364,
+      "unidentified_target_mean": 5.4143176733780765
+    },
+    {
+      "element": "Ti",
+      "target": "md",
+      "source_records": 4930,
+      "valid_target_records": 4930,
+      "identified_valid_records": 2549,
+      "identified_materials": 1077,
+      "origins": {
+        "feff": {
+          "records": 2381,
+          "identified": 0
+        },
+        "scrape": {
+          "records": 2549,
+          "identified": 2549
+        }
+      },
+      "identified_target_mean": 2.0129546824683326,
+      "unidentified_target_mean": 2.0286888860716683
+    },
+    {
+      "element": "Ti",
+      "target": "bader",
+      "source_records": 4930,
+      "valid_target_records": 3267,
+      "identified_valid_records": 1354,
+      "identified_materials": 705,
+      "origins": {
+        "feff": {
+          "records": 2381,
+          "identified": 0
+        },
+        "scrape": {
+          "records": 2549,
+          "identified": 2549
+        }
+      },
+      "identified_target_mean": 2.2772776658117992,
+      "unidentified_target_mean": 2.2862086259330785
+    },
+    {
+      "element": "V",
+      "target": "coord",
+      "source_records": 7120,
+      "valid_target_records": 7014,
+      "identified_valid_records": 4357,
+      "identified_materials": 2016,
+      "origins": {
+        "feff": {
+          "records": 2750,
+          "identified": 0
+        },
+        "scrape": {
+          "records": 4370,
+          "identified": 4370
+        }
+      },
+      "identified_target_mean": 4.980032132201056,
+      "unidentified_target_mean": 5.187429431689876
+    },
+    {
+      "element": "V",
+      "target": "md",
+      "source_records": 7120,
+      "valid_target_records": 7120,
+      "identified_valid_records": 4370,
+      "identified_materials": 2022,
+      "origins": {
+        "feff": {
+          "records": 2750,
+          "identified": 0
+        },
+        "scrape": {
+          "records": 4370,
+          "identified": 4370
+        }
+      },
+      "identified_target_mean": 1.964094543109332,
+      "unidentified_target_mean": 1.9925135419924962
+    },
+    {
+      "element": "V",
+      "target": "bader",
+      "source_records": 7120,
+      "valid_target_records": 4001,
+      "identified_valid_records": 2228,
+      "identified_materials": 1305,
+      "origins": {
+        "feff": {
+          "records": 2750,
+          "identified": 0
+        },
+        "scrape": {
+          "records": 4370,
+          "identified": 4370
+        }
+      },
+      "identified_target_mean": 2.143590898081518,
+      "unidentified_target_mean": 2.1395299388879936
+    },
+    {
+      "element": "Cr",
+      "target": "coord",
+      "source_records": 2542,
+      "valid_target_records": 2471,
+      "identified_valid_records": 1185,
+      "identified_materials": 812,
+      "origins": {
+        "feff": {
+          "records": 1350,
+          "identified": 0
+        },
+        "scrape": {
+          "records": 1192,
+          "identified": 1192
+        }
+      },
+      "identified_target_mean": 5.276793248945148,
+      "unidentified_target_mean": 5.344479004665629
+    },
+    {
+      "element": "Cr",
+      "target": "md",
+      "source_records": 2542,
+      "valid_target_records": 2542,
+      "identified_valid_records": 1192,
+      "identified_materials": 819,
+      "origins": {
+        "feff": {
+          "records": 1350,
+          "identified": 0
+        },
+        "scrape": {
+          "records": 1192,
+          "identified": 1192
+        }
+      },
+      "identified_target_mean": 1.9563557383605648,
+      "unidentified_target_mean": 1.98881071387977
+    },
+    {
+      "element": "Cr",
+      "target": "bader",
+      "source_records": 2542,
+      "valid_target_records": 1921,
+      "identified_valid_records": 844,
+      "identified_materials": 626,
+      "origins": {
+        "feff": {
+          "records": 1350,
+          "identified": 0
+        },
+        "scrape": {
+          "records": 1192,
+          "identified": 1192
+        }
+      },
+      "identified_target_mean": 1.8949983672458275,
+      "unidentified_target_mean": 1.8826655426586978
+    },
+    {
+      "element": "Mn",
+      "target": "coord",
+      "source_records": 8504,
+      "valid_target_records": 8347,
+      "identified_valid_records": 4630,
+      "identified_materials": 2093,
+      "origins": {
+        "feff": {
+          "records": 3839,
+          "identified": 0
+        },
+        "scrape": {
+          "records": 4665,
+          "identified": 4665
+        }
+      },
+      "identified_target_mean": 5.344060475161987,
+      "unidentified_target_mean": 5.494215765402206
+    },
+    {
+      "element": "Mn",
+      "target": "md",
+      "source_records": 8504,
+      "valid_target_records": 8504,
+      "identified_valid_records": 4665,
+      "identified_materials": 2113,
+      "origins": {
+        "feff": {
+          "records": 3839,
+          "identified": 0
+        },
+        "scrape": {
+          "records": 4665,
+          "identified": 4665
+        }
+      },
+      "identified_target_mean": 2.0837766683633894,
+      "unidentified_target_mean": 2.0615266552979055
+    },
+    {
+      "element": "Mn",
+      "target": "bader",
+      "source_records": 8504,
+      "valid_target_records": 4226,
+      "identified_valid_records": 1955,
+      "identified_materials": 1271,
+      "origins": {
+        "feff": {
+          "records": 3839,
+          "identified": 0
+        },
+        "scrape": {
+          "records": 4665,
+          "identified": 4665
+        }
+      },
+      "identified_target_mean": 1.702823835960165,
+      "unidentified_target_mean": 1.7633818964449695
+    },
+    {
+      "element": "Fe",
+      "target": "coord",
+      "source_records": 7362,
+      "valid_target_records": 7258,
+      "identified_valid_records": 4147,
+      "identified_materials": 1943,
+      "origins": {
+        "feff": {
+          "records": 3179,
+          "identified": 0
+        },
+        "scrape": {
+          "records": 4183,
+          "identified": 4183
+        }
+      },
+      "identified_target_mean": 5.1835061490233905,
+      "unidentified_target_mean": 5.230151076824172
+    },
+    {
+      "element": "Fe",
+      "target": "md",
+      "source_records": 7362,
+      "valid_target_records": 7362,
+      "identified_valid_records": 4183,
+      "identified_materials": 1965,
+      "origins": {
+        "feff": {
+          "records": 3179,
+          "identified": 0
+        },
+        "scrape": {
+          "records": 4183,
+          "identified": 4183
+        }
+      },
+      "identified_target_mean": 2.0503986915328483,
+      "unidentified_target_mean": 2.0370842397065148
+    },
+    {
+      "element": "Fe",
+      "target": "bader",
+      "source_records": 7362,
+      "valid_target_records": 4188,
+      "identified_valid_records": 2059,
+      "identified_materials": 1271,
+      "origins": {
+        "feff": {
+          "records": 3179,
+          "identified": 0
+        },
+        "scrape": {
+          "records": 4183,
+          "identified": 4183
+        }
+      },
+      "identified_target_mean": 1.6909187946346684,
+      "unidentified_target_mean": 1.717287527475665
+    },
+    {
+      "element": "Co",
+      "target": "coord",
+      "source_records": 3533,
+      "valid_target_records": 3508,
+      "identified_valid_records": 2368,
+      "identified_materials": 1249,
+      "origins": {
+        "feff": {
+          "records": 1154,
+          "identified": 0
+        },
+        "scrape": {
+          "records": 2379,
+          "identified": 2379
+        }
+      },
+      "identified_target_mean": 5.349662162162162,
+      "unidentified_target_mean": 5.436842105263158
+    },
+    {
+      "element": "Co",
+      "target": "md",
+      "source_records": 3533,
+      "valid_target_records": 3533,
+      "identified_valid_records": 2379,
+      "identified_materials": 1257,
+      "origins": {
+        "feff": {
+          "records": 1154,
+          "identified": 0
+        },
+        "scrape": {
+          "records": 2379,
+          "identified": 2379
+        }
+      },
+      "identified_target_mean": 2.0016334495183603,
+      "unidentified_target_mean": 1.996876458164113
+    },
+    {
+      "element": "Co",
+      "target": "bader",
+      "source_records": 3533,
+      "valid_target_records": 2106,
+      "identified_valid_records": 1310,
+      "identified_materials": 835,
+      "origins": {
+        "feff": {
+          "records": 1154,
+          "identified": 0
+        },
+        "scrape": {
+          "records": 2379,
+          "identified": 2379
+        }
+      },
+      "identified_target_mean": 1.4319064048775896,
+      "unidentified_target_mean": 1.4789478309356803
+    },
+    {
+      "element": "Ni",
+      "target": "coord",
+      "source_records": 3420,
+      "valid_target_records": 3373,
+      "identified_valid_records": 2073,
+      "identified_materials": 1070,
+      "origins": {
+        "feff": {
+          "records": 1333,
+          "identified": 0
+        },
+        "scrape": {
+          "records": 2087,
+          "identified": 2087
+        }
+      },
+      "identified_target_mean": 5.619874577906415,
+      "unidentified_target_mean": 5.535384615384616
+    },
+    {
+      "element": "Ni",
+      "target": "md",
+      "source_records": 3420,
+      "valid_target_records": 3420,
+      "identified_valid_records": 2087,
+      "identified_materials": 1081,
+      "origins": {
+        "feff": {
+          "records": 1333,
+          "identified": 0
+        },
+        "scrape": {
+          "records": 2087,
+          "identified": 2087
+        }
+      },
+      "identified_target_mean": 2.0287665647316624,
+      "unidentified_target_mean": 2.0269206966010627
+    },
+    {
+      "element": "Ni",
+      "target": "bader",
+      "source_records": 3420,
+      "valid_target_records": 2226,
+      "identified_valid_records": 1179,
+      "identified_materials": 757,
+      "origins": {
+        "feff": {
+          "records": 1333,
+          "identified": 0
+        },
+        "scrape": {
+          "records": 2087,
+          "identified": 2087
+        }
+      },
+      "identified_target_mean": 1.3080186749890403,
+      "unidentified_target_mean": 1.279839958960598
+    },
+    {
+      "element": "Cu",
+      "target": "coord",
+      "source_records": 3496,
+      "valid_target_records": 3378,
+      "identified_valid_records": 1999,
+      "identified_materials": 1163,
+      "origins": {
+        "feff": {
+          "records": 1461,
+          "identified": 0
+        },
+        "scrape": {
+          "records": 2035,
+          "identified": 2035
+        }
+      },
+      "identified_target_mean": 5.0280140070035015,
+      "unidentified_target_mean": 5.092820884699058
+    },
+    {
+      "element": "Cu",
+      "target": "md",
+      "source_records": 3496,
+      "valid_target_records": 3496,
+      "identified_valid_records": 2035,
+      "identified_materials": 1194,
+      "origins": {
+        "feff": {
+          "records": 1461,
+          "identified": 0
+        },
+        "scrape": {
+          "records": 2035,
+          "identified": 2035
+        }
+      },
+      "identified_target_mean": 2.0630941749861025,
+      "unidentified_target_mean": 2.072290398624283
+    },
+    {
+      "element": "Cu",
+      "target": "bader",
+      "source_records": 3496,
+      "valid_target_records": 2198,
+      "identified_valid_records": 1087,
+      "identified_materials": 771,
+      "origins": {
+        "feff": {
+          "records": 1461,
+          "identified": 0
+        },
+        "scrape": {
+          "records": 2035,
+          "identified": 2035
+        }
+      },
+      "identified_target_mean": 1.0338129957944537,
+      "unidentified_target_mean": 1.0381762313579086
+    }
+  ],
+  "baselines": [
+    {
+      "run_id": "Ti_coord_identified_material_r0_s113_pointwise",
+      "training_constant": 5.0,
+      "metrics": {
+        "accuracy": 0.5397849462365591,
+        "macro_f1": 0.23370577281191807,
+        "f1_4": 0.0,
+        "f1_5": 0.7011173184357542,
+        "f1_6": 0.0
+      }
+    },
+    {
+      "run_id": "Ti_coord_identified_material_r0_s113_multiscale",
+      "training_constant": 5.0,
+      "metrics": {
+        "accuracy": 0.5397849462365591,
+        "macro_f1": 0.23370577281191807,
+        "f1_4": 0.0,
+        "f1_5": 0.7011173184357542,
+        "f1_6": 0.0
+      }
+    },
+    {
+      "run_id": "Ti_coord_identified_material_r1_s113_pointwise",
+      "training_constant": 5.0,
+      "metrics": {
+        "accuracy": 0.5144124168514412,
+        "macro_f1": 0.22645192776964373,
+        "f1_4": 0.0,
+        "f1_5": 0.6793557833089312,
+        "f1_6": 0.0
+      }
+    },
+    {
+      "run_id": "Ti_coord_identified_material_r1_s113_multiscale",
+      "training_constant": 5.0,
+      "metrics": {
+        "accuracy": 0.5144124168514412,
+        "macro_f1": 0.22645192776964373,
+        "f1_4": 0.0,
+        "f1_5": 0.6793557833089312,
+        "f1_6": 0.0
+      }
+    },
+    {
+      "run_id": "Ti_md_identified_material_r0_s113_pointwise",
+      "training_constant": 2.0012612266025975,
+      "metrics": {
+        "mae": 0.04790989819343086,
+        "r2": -0.012697095518718893
+      }
+    },
+    {
+      "run_id": "Ti_md_identified_material_r0_s113_multiscale",
+      "training_constant": 2.0012612266025975,
+      "metrics": {
+        "mae": 0.04790989819343086,
+        "r2": -0.012697095518718893
+      }
+    },
+    {
+      "run_id": "Ti_md_identified_material_r1_s113_pointwise",
+      "training_constant": 1.999893508140141,
+      "metrics": {
+        "mae": 0.04678277411564256,
+        "r2": -0.03485004530079694
+      }
+    },
+    {
+      "run_id": "Ti_md_identified_material_r1_s113_multiscale",
+      "training_constant": 1.999893508140141,
+      "metrics": {
+        "mae": 0.04678277411564256,
+        "r2": -0.03485004530079694
+      }
+    },
+    {
+      "run_id": "Ti_bader_identified_material_r0_s113_pointwise",
+      "training_constant": 2.272875727272727,
+      "metrics": {
+        "mae": 0.10330989293558915,
+        "r2": -0.010087632313425132
+      }
+    },
+    {
+      "run_id": "Ti_bader_identified_material_r0_s113_multiscale",
+      "training_constant": 2.272875727272727,
+      "metrics": {
+        "mae": 0.10330989293558915,
+        "r2": -0.010087632313425132
+      }
+    },
+    {
+      "run_id": "Ti_bader_identified_material_r1_s113_pointwise",
+      "training_constant": 2.2698161818181823,
+      "metrics": {
+        "mae": 0.09859534204842792,
+        "r2": -0.011255912841032778
+      }
+    },
+    {
+      "run_id": "Ti_bader_identified_material_r1_s113_multiscale",
+      "training_constant": 2.2698161818181823,
+      "metrics": {
+        "mae": 0.09859534204842792,
+        "r2": -0.011255912841032778
+      }
+    },
+    {
+      "run_id": "V_coord_identified_material_r0_s113_pointwise",
+      "training_constant": 4.0,
+      "metrics": {
+        "accuracy": 0.2983606557377049,
+        "macro_f1": 0.1531986531986532,
+        "f1_4": 0.4595959595959596,
+        "f1_5": 0.0,
+        "f1_6": 0.0
+      }
+    },
+    {
+      "run_id": "V_coord_identified_material_r0_s113_multiscale",
+      "training_constant": 4.0,
+      "metrics": {
+        "accuracy": 0.2983606557377049,
+        "macro_f1": 0.1531986531986532,
+        "f1_4": 0.4595959595959596,
+        "f1_5": 0.0,
+        "f1_6": 0.0
+      }
+    },
+    {
+      "run_id": "V_coord_identified_material_r1_s113_pointwise",
+      "training_constant": 5.0,
+      "metrics": {
+        "accuracy": 0.33643771827706637,
+        "macro_f1": 0.16782810685249708,
+        "f1_4": 0.0,
+        "f1_5": 0.5034843205574913,
+        "f1_6": 0.0
+      }
+    },
+    {
+      "run_id": "V_coord_identified_material_r1_s113_multiscale",
+      "training_constant": 5.0,
+      "metrics": {
+        "accuracy": 0.33643771827706637,
+        "macro_f1": 0.16782810685249708,
+        "f1_4": 0.0,
+        "f1_5": 0.5034843205574913,
+        "f1_6": 0.0
+      }
+    },
+    {
+      "run_id": "V_md_identified_material_r0_s113_pointwise",
+      "training_constant": 1.9740007220417908,
+      "metrics": {
+        "mae": 0.08648814279216484,
+        "r2": -0.00821160961539702
+      }
+    },
+    {
+      "run_id": "V_md_identified_material_r0_s113_multiscale",
+      "training_constant": 1.9740007220417908,
+      "metrics": {
+        "mae": 0.08648814279216484,
+        "r2": -0.00821160961539702
+      }
+    },
+    {
+      "run_id": "V_md_identified_material_r1_s113_pointwise",
+      "training_constant": 1.976331492443048,
+      "metrics": {
+        "mae": 0.09052964202929312,
+        "r2": -0.012716632304295983
+      }
+    },
+    {
+      "run_id": "V_md_identified_material_r1_s113_multiscale",
+      "training_constant": 1.976331492443048,
+      "metrics": {
+        "mae": 0.09052964202929312,
+        "r2": -0.012716632304295983
+      }
+    },
+    {
+      "run_id": "V_bader_identified_material_r0_s113_pointwise",
+      "training_constant": 2.2046615,
+      "metrics": {
+        "mae": 0.17080470073938037,
+        "r2": -0.05560554537857976
+      }
+    },
+    {
+      "run_id": "V_bader_identified_material_r0_s113_multiscale",
+      "training_constant": 2.2046615,
+      "metrics": {
+        "mae": 0.17080470073938037,
+        "r2": -0.05560554537857976
+      }
+    },
+    {
+      "run_id": "V_bader_identified_material_r1_s113_pointwise",
+      "training_constant": 2.2086566249999997,
+      "metrics": {
+        "mae": 0.17448314373400292,
+        "r2": -0.024923615956989442
+      }
+    },
+    {
+      "run_id": "V_bader_identified_material_r1_s113_multiscale",
+      "training_constant": 2.2086566249999997,
+      "metrics": {
+        "mae": 0.17448314373400292,
+        "r2": -0.024923615956989442
+      }
+    },
+    {
+      "run_id": "Cr_coord_identified_material_r0_s113_pointwise",
+      "training_constant": 6.0,
+      "metrics": {
+        "accuracy": 0.44398340248962653,
+        "macro_f1": 0.20498084291187738,
+        "f1_4": 0.0,
+        "f1_5": 0.0,
+        "f1_6": 0.6149425287356322
+      }
+    },
+    {
+      "run_id": "Cr_coord_identified_material_r0_s113_multiscale",
+      "training_constant": 6.0,
+      "metrics": {
+        "accuracy": 0.44398340248962653,
+        "macro_f1": 0.20498084291187738,
+        "f1_4": 0.0,
+        "f1_5": 0.0,
+        "f1_6": 0.6149425287356322
+      }
+    },
+    {
+      "run_id": "Cr_coord_identified_material_r1_s113_pointwise",
+      "training_constant": 6.0,
+      "metrics": {
+        "accuracy": 0.5301724137931034,
+        "macro_f1": 0.23098591549295774,
+        "f1_4": 0.0,
+        "f1_5": 0.0,
+        "f1_6": 0.6929577464788732
+      }
+    },
+    {
+      "run_id": "Cr_coord_identified_material_r1_s113_multiscale",
+      "training_constant": 6.0,
+      "metrics": {
+        "accuracy": 0.5301724137931034,
+        "macro_f1": 0.23098591549295774,
+        "f1_4": 0.0,
+        "f1_5": 0.0,
+        "f1_6": 0.6929577464788732
+      }
+    },
+    {
+      "run_id": "Cr_md_identified_material_r0_s113_pointwise",
+      "training_constant": 2.003463531553188,
+      "metrics": {
+        "mae": 0.11175986989876993,
+        "r2": -0.08979181660159208
+      }
+    },
+    {
+      "run_id": "Cr_md_identified_material_r0_s113_multiscale",
+      "training_constant": 2.003463531553188,
+      "metrics": {
+        "mae": 0.11175986989876993,
+        "r2": -0.08979181660159208
+      }
+    },
+    {
+      "run_id": "Cr_md_identified_material_r1_s113_pointwise",
+      "training_constant": 2.004720260295106,
+      "metrics": {
+        "mae": 0.1102190959804305,
+        "r2": -0.09114802646954723
+      }
+    },
+    {
+      "run_id": "Cr_md_identified_material_r1_s113_multiscale",
+      "training_constant": 2.004720260295106,
+      "metrics": {
+        "mae": 0.1102190959804305,
+        "r2": -0.09114802646954723
+      }
+    },
+    {
+      "run_id": "Cr_bader_identified_material_r0_s113_pointwise",
+      "training_constant": 1.914365,
+      "metrics": {
+        "mae": 0.17879309710341734,
+        "r2": -0.005434479588968699
+      }
+    },
+    {
+      "run_id": "Cr_bader_identified_material_r0_s113_multiscale",
+      "training_constant": 1.914365,
+      "metrics": {
+        "mae": 0.17879309710341734,
+        "r2": -0.005434479588968699
+      }
+    },
+    {
+      "run_id": "Cr_bader_identified_material_r1_s113_pointwise",
+      "training_constant": 1.904791,
+      "metrics": {
+        "mae": 0.14822789807757603,
+        "r2": -0.00019854683172826348
+      }
+    },
+    {
+      "run_id": "Cr_bader_identified_material_r1_s113_multiscale",
+      "training_constant": 1.904791,
+      "metrics": {
+        "mae": 0.14822789807757603,
+        "r2": -0.00019854683172826348
+      }
+    },
+    {
+      "run_id": "Mn_coord_identified_material_r0_s113_pointwise",
+      "training_constant": 5.0,
+      "metrics": {
+        "accuracy": 0.5857787810383747,
+        "macro_f1": 0.24626334519572954,
+        "f1_4": 0.0,
+        "f1_5": 0.7387900355871886,
+        "f1_6": 0.0
+      }
+    },
+    {
+      "run_id": "Mn_coord_identified_material_r0_s113_multiscale",
+      "training_constant": 5.0,
+      "metrics": {
+        "accuracy": 0.5857787810383747,
+        "macro_f1": 0.24626334519572954,
+        "f1_4": 0.0,
+        "f1_5": 0.7387900355871886,
+        "f1_6": 0.0
+      }
+    },
+    {
+      "run_id": "Mn_coord_identified_material_r1_s113_pointwise",
+      "training_constant": 5.0,
+      "metrics": {
+        "accuracy": 0.5560298826040555,
+        "macro_f1": 0.23822588020118884,
+        "f1_4": 0.0,
+        "f1_5": 0.7146776406035665,
+        "f1_6": 0.0
+      }
+    },
+    {
+      "run_id": "Mn_coord_identified_material_r1_s113_multiscale",
+      "training_constant": 5.0,
+      "metrics": {
+        "accuracy": 0.5560298826040555,
+        "macro_f1": 0.23822588020118884,
+        "f1_4": 0.0,
+        "f1_5": 0.7146776406035665,
+        "f1_6": 0.0
+      }
+    },
+    {
+      "run_id": "Mn_md_identified_material_r0_s113_pointwise",
+      "training_constant": 2.0772710869369972,
+      "metrics": {
+        "mae": 0.09166090740255396,
+        "r2": -0.004482636090310299
+      }
+    },
+    {
+      "run_id": "Mn_md_identified_material_r0_s113_multiscale",
+      "training_constant": 2.0772710869369972,
+      "metrics": {
+        "mae": 0.09166090740255396,
+        "r2": -0.004482636090310299
+      }
+    },
+    {
+      "run_id": "Mn_md_identified_material_r1_s113_pointwise",
+      "training_constant": 2.077853942516257,
+      "metrics": {
+        "mae": 0.08604771807580935,
+        "r2": -0.001036030617267869
+      }
+    },
+    {
+      "run_id": "Mn_md_identified_material_r1_s113_multiscale",
+      "training_constant": 2.077853942516257,
+      "metrics": {
+        "mae": 0.08604771807580935,
+        "r2": -0.001036030617267869
+      }
+    },
+    {
+      "run_id": "Mn_bader_identified_material_r0_s113_pointwise",
+      "training_constant": 1.7297166666666666,
+      "metrics": {
+        "mae": 0.19019517423781346,
+        "r2": -0.02890262028583135
+      }
+    },
+    {
+      "run_id": "Mn_bader_identified_material_r0_s113_multiscale",
+      "training_constant": 1.7297166666666666,
+      "metrics": {
+        "mae": 0.19019517423781346,
+        "r2": -0.02890262028583135
+      }
+    },
+    {
+      "run_id": "Mn_bader_identified_material_r1_s113_pointwise",
+      "training_constant": 1.7211485,
+      "metrics": {
+        "mae": 0.19131981028453834,
+        "r2": -0.030449834277320953
+      }
+    },
+    {
+      "run_id": "Mn_bader_identified_material_r1_s113_multiscale",
+      "training_constant": 1.7211485,
+      "metrics": {
+        "mae": 0.19131981028453834,
+        "r2": -0.030449834277320953
+      }
+    },
+    {
+      "run_id": "Fe_coord_identified_material_r0_s113_pointwise",
+      "training_constant": 5.0,
+      "metrics": {
+        "accuracy": 0.5298507462686567,
+        "macro_f1": 0.2308943089430894,
+        "f1_4": 0.0,
+        "f1_5": 0.6926829268292682,
+        "f1_6": 0.0
+      }
+    },
+    {
+      "run_id": "Fe_coord_identified_material_r0_s113_multiscale",
+      "training_constant": 5.0,
+      "metrics": {
+        "accuracy": 0.5298507462686567,
+        "macro_f1": 0.2308943089430894,
+        "f1_4": 0.0,
+        "f1_5": 0.6926829268292682,
+        "f1_6": 0.0
+      }
+    },
+    {
+      "run_id": "Fe_coord_identified_material_r1_s113_pointwise",
+      "training_constant": 5.0,
+      "metrics": {
+        "accuracy": 0.5467455621301776,
+        "macro_f1": 0.23565416985462892,
+        "f1_4": 0.0,
+        "f1_5": 0.7069625095638867,
+        "f1_6": 0.0
+      }
+    },
+    {
+      "run_id": "Fe_coord_identified_material_r1_s113_multiscale",
+      "training_constant": 5.0,
+      "metrics": {
+        "accuracy": 0.5467455621301776,
+        "macro_f1": 0.23565416985462892,
+        "f1_4": 0.0,
+        "f1_5": 0.7069625095638867,
+        "f1_6": 0.0
+      }
+    },
+    {
+      "run_id": "Fe_md_identified_material_r0_s113_pointwise",
+      "training_constant": 2.043547348949928,
+      "metrics": {
+        "mae": 0.06603935792795827,
+        "r2": -0.016454468897964425
+      }
+    },
+    {
+      "run_id": "Fe_md_identified_material_r0_s113_multiscale",
+      "training_constant": 2.043547348949928,
+      "metrics": {
+        "mae": 0.06603935792795827,
+        "r2": -0.016454468897964425
+      }
+    },
+    {
+      "run_id": "Fe_md_identified_material_r1_s113_pointwise",
+      "training_constant": 2.0445440251621774,
+      "metrics": {
+        "mae": 0.07018359100335897,
+        "r2": -0.0016948458192687088
+      }
+    },
+    {
+      "run_id": "Fe_md_identified_material_r1_s113_multiscale",
+      "training_constant": 2.0445440251621774,
+      "metrics": {
+        "mae": 0.07018359100335897,
+        "r2": -0.0016948458192687088
+      }
+    },
+    {
+      "run_id": "Fe_bader_identified_material_r0_s113_pointwise",
+      "training_constant": 1.739505833333333,
+      "metrics": {
+        "mae": 0.21687938701321247,
+        "r2": -0.02254324818364073
+      }
+    },
+    {
+      "run_id": "Fe_bader_identified_material_r0_s113_multiscale",
+      "training_constant": 1.739505833333333,
+      "metrics": {
+        "mae": 0.21687938701321247,
+        "r2": -0.02254324818364073
+      }
+    },
+    {
+      "run_id": "Fe_bader_identified_material_r1_s113_pointwise",
+      "training_constant": 1.7503279166666668,
+      "metrics": {
+        "mae": 0.19488065803285687,
+        "r2": -0.029737753618870322
+      }
+    },
+    {
+      "run_id": "Fe_bader_identified_material_r1_s113_multiscale",
+      "training_constant": 1.7503279166666668,
+      "metrics": {
+        "mae": 0.19488065803285687,
+        "r2": -0.029737753618870322
+      }
+    },
+    {
+      "run_id": "Co_coord_identified_material_r0_s113_pointwise",
+      "training_constant": 6.0,
+      "metrics": {
+        "accuracy": 0.5523385300668151,
+        "macro_f1": 0.23720707795313248,
+        "f1_4": 0.0,
+        "f1_5": 0.0,
+        "f1_6": 0.7116212338593975
+      }
+    },
+    {
+      "run_id": "Co_coord_identified_material_r0_s113_multiscale",
+      "training_constant": 6.0,
+      "metrics": {
+        "accuracy": 0.5523385300668151,
+        "macro_f1": 0.23720707795313248,
+        "f1_4": 0.0,
+        "f1_5": 0.0,
+        "f1_6": 0.7116212338593975
+      }
+    },
+    {
+      "run_id": "Co_coord_identified_material_r1_s113_pointwise",
+      "training_constant": 6.0,
+      "metrics": {
+        "accuracy": 0.5257731958762887,
+        "macro_f1": 0.22972972972972971,
+        "f1_4": 0.0,
+        "f1_5": 0.0,
+        "f1_6": 0.6891891891891891
+      }
+    },
+    {
+      "run_id": "Co_coord_identified_material_r1_s113_multiscale",
+      "training_constant": 6.0,
+      "metrics": {
+        "accuracy": 0.5257731958762887,
+        "macro_f1": 0.22972972972972971,
+        "f1_4": 0.0,
+        "f1_5": 0.0,
+        "f1_6": 0.6891891891891891
+      }
+    },
+    {
+      "run_id": "Co_md_identified_material_r0_s113_pointwise",
+      "training_constant": 1.9898397811207054,
+      "metrics": {
+        "mae": 0.09179773106942163,
+        "r2": -0.007011767361780219
+      }
+    },
+    {
+      "run_id": "Co_md_identified_material_r0_s113_multiscale",
+      "training_constant": 1.9898397811207054,
+      "metrics": {
+        "mae": 0.09179773106942163,
+        "r2": -0.007011767361780219
+      }
+    },
+    {
+      "run_id": "Co_md_identified_material_r1_s113_pointwise",
+      "training_constant": 1.9903171489564335,
+      "metrics": {
+        "mae": 0.08906391065157696,
+        "r2": -0.014772421949595271
+      }
+    },
+    {
+      "run_id": "Co_md_identified_material_r1_s113_multiscale",
+      "training_constant": 1.9903171489564335,
+      "metrics": {
+        "mae": 0.08906391065157696,
+        "r2": -0.014772421949595271
+      }
+    },
+    {
+      "run_id": "Co_bader_identified_material_r0_s113_pointwise",
+      "training_constant": 1.4559084285714283,
+      "metrics": {
+        "mae": 0.15488970410656014,
+        "r2": -0.010272570626444155
+      }
+    },
+    {
+      "run_id": "Co_bader_identified_material_r0_s113_multiscale",
+      "training_constant": 1.4559084285714283,
+      "metrics": {
+        "mae": 0.15488970410656014,
+        "r2": -0.010272570626444155
+      }
+    },
+    {
+      "run_id": "Co_bader_identified_material_r1_s113_pointwise",
+      "training_constant": 1.4506275,
+      "metrics": {
+        "mae": 0.1544209025591436,
+        "r2": -0.004054860219579126
+      }
+    },
+    {
+      "run_id": "Co_bader_identified_material_r1_s113_multiscale",
+      "training_constant": 1.4506275,
+      "metrics": {
+        "mae": 0.1544209025591436,
+        "r2": -0.004054860219579126
+      }
+    },
+    {
+      "run_id": "Ni_coord_identified_material_r0_s113_pointwise",
+      "training_constant": 6.0,
+      "metrics": {
+        "accuracy": 0.6435643564356436,
+        "macro_f1": 0.2610441767068273,
+        "f1_4": 0.0,
+        "f1_5": 0.0,
+        "f1_6": 0.7831325301204819
+      }
+    },
+    {
+      "run_id": "Ni_coord_identified_material_r0_s113_multiscale",
+      "training_constant": 6.0,
+      "metrics": {
+        "accuracy": 0.6435643564356436,
+        "macro_f1": 0.2610441767068273,
+        "f1_4": 0.0,
+        "f1_5": 0.0,
+        "f1_6": 0.7831325301204819
+      }
+    },
+    {
+      "run_id": "Ni_coord_identified_material_r1_s113_pointwise",
+      "training_constant": 6.0,
+      "metrics": {
+        "accuracy": 0.6213151927437641,
+        "macro_f1": 0.25547785547785545,
+        "f1_4": 0.0,
+        "f1_5": 0.0,
+        "f1_6": 0.7664335664335664
+      }
+    },
+    {
+      "run_id": "Ni_coord_identified_material_r1_s113_multiscale",
+      "training_constant": 6.0,
+      "metrics": {
+        "accuracy": 0.6213151927437641,
+        "macro_f1": 0.25547785547785545,
+        "f1_4": 0.0,
+        "f1_5": 0.0,
+        "f1_6": 0.7664335664335664
+      }
+    },
+    {
+      "run_id": "Ni_md_identified_material_r0_s113_pointwise",
+      "training_constant": 2.040108997897944,
+      "metrics": {
+        "mae": 0.06777803236443775,
+        "r2": -0.019504886359816398
+      }
+    },
+    {
+      "run_id": "Ni_md_identified_material_r0_s113_multiscale",
+      "training_constant": 2.040108997897944,
+      "metrics": {
+        "mae": 0.06777803236443775,
+        "r2": -0.019504886359816398
+      }
+    },
+    {
+      "run_id": "Ni_md_identified_material_r1_s113_pointwise",
+      "training_constant": 2.0433379929229307,
+      "metrics": {
+        "mae": 0.06954733361080047,
+        "r2": -0.05816250819495372
+      }
+    },
+    {
+      "run_id": "Ni_md_identified_material_r1_s113_multiscale",
+      "training_constant": 2.0433379929229307,
+      "metrics": {
+        "mae": 0.06954733361080047,
+        "r2": -0.05816250819495372
+      }
+    },
+    {
+      "run_id": "Ni_bader_identified_material_r0_s113_pointwise",
+      "training_constant": 1.335689,
+      "metrics": {
+        "mae": 0.0937642275555883,
+        "r2": -0.042283098026558275
+      }
+    },
+    {
+      "run_id": "Ni_bader_identified_material_r0_s113_multiscale",
+      "training_constant": 1.335689,
+      "metrics": {
+        "mae": 0.0937642275555883,
+        "r2": -0.042283098026558275
+      }
+    },
+    {
+      "run_id": "Ni_bader_identified_material_r1_s113_pointwise",
+      "training_constant": 1.3325259999999997,
+      "metrics": {
+        "mae": 0.09226061253813415,
+        "r2": -0.0765762234039078
+      }
+    },
+    {
+      "run_id": "Ni_bader_identified_material_r1_s113_multiscale",
+      "training_constant": 1.3325259999999997,
+      "metrics": {
+        "mae": 0.09226061253813415,
+        "r2": -0.0765762234039078
+      }
+    },
+    {
+      "run_id": "Cu_coord_identified_material_r0_s113_pointwise",
+      "training_constant": 5.0,
+      "metrics": {
+        "accuracy": 0.7475247524752475,
+        "macro_f1": 0.28517469310670446,
+        "f1_4": 0.0,
+        "f1_5": 0.8555240793201133,
+        "f1_6": 0.0
+      }
+    },
+    {
+      "run_id": "Cu_coord_identified_material_r0_s113_multiscale",
+      "training_constant": 5.0,
+      "metrics": {
+        "accuracy": 0.7475247524752475,
+        "macro_f1": 0.28517469310670446,
+        "f1_4": 0.0,
+        "f1_5": 0.8555240793201133,
+        "f1_6": 0.0
+      }
+    },
+    {
+      "run_id": "Cu_coord_identified_material_r1_s113_pointwise",
+      "training_constant": 5.0,
+      "metrics": {
+        "accuracy": 0.6592592592592592,
+        "macro_f1": 0.2648809523809524,
+        "f1_4": 0.0,
+        "f1_5": 0.7946428571428571,
+        "f1_6": 0.0
+      }
+    },
+    {
+      "run_id": "Cu_coord_identified_material_r1_s113_multiscale",
+      "training_constant": 5.0,
+      "metrics": {
+        "accuracy": 0.6592592592592592,
+        "macro_f1": 0.2648809523809524,
+        "f1_4": 0.0,
+        "f1_5": 0.7946428571428571,
+        "f1_6": 0.0
+      }
+    },
+    {
+      "run_id": "Cu_md_identified_material_r0_s113_pointwise",
+      "training_constant": 2.051060589944271,
+      "metrics": {
+        "mae": 0.11528098902852854,
+        "r2": -0.012767823510507537
+      }
+    },
+    {
+      "run_id": "Cu_md_identified_material_r0_s113_multiscale",
+      "training_constant": 2.051060589944271,
+      "metrics": {
+        "mae": 0.11528098902852854,
+        "r2": -0.012767823510507537
+      }
+    },
+    {
+      "run_id": "Cu_md_identified_material_r1_s113_pointwise",
+      "training_constant": 2.0432780571967566,
+      "metrics": {
+        "mae": 0.11183924524791622,
+        "r2": -0.04497971521097832
+      }
+    },
+    {
+      "run_id": "Cu_md_identified_material_r1_s113_multiscale",
+      "training_constant": 2.0432780571967566,
+      "metrics": {
+        "mae": 0.11183924524791622,
+        "r2": -0.04497971521097832
+      }
+    },
+    {
+      "run_id": "Cu_bader_identified_material_r0_s113_pointwise",
+      "training_constant": 1.092597416666667,
+      "metrics": {
+        "mae": 0.15949208898533954,
+        "r2": -0.026064482512573095
+      }
+    },
+    {
+      "run_id": "Cu_bader_identified_material_r0_s113_multiscale",
+      "training_constant": 1.092597416666667,
+      "metrics": {
+        "mae": 0.15949208898533954,
+        "r2": -0.026064482512573095
+      }
+    },
+    {
+      "run_id": "Cu_bader_identified_material_r1_s113_pointwise",
+      "training_constant": 1.0955084999999996,
+      "metrics": {
+        "mae": 0.16132927887426904,
+        "r2": -0.06383280984786333
+      }
+    },
+    {
+      "run_id": "Cu_bader_identified_material_r1_s113_multiscale",
+      "training_constant": 1.0955084999999996,
+      "metrics": {
+        "mae": 0.16132927887426904,
+        "r2": -0.06383280984786333
+      }
+    }
+  ],
+  "comparisons": [
+    {
+      "comparison_id": "Ti_coord_identified_material_r0_s113",
+      "element": "Ti",
+      "target": "coord",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "first": "pointwise",
+      "second": "multiscale",
+      "metric": "macro_f1_gain",
+      "gain": -0.020909612405005107,
+      "low": -0.04766183008676568,
+      "high": 0.0027846832678724313,
+      "bootstrap_units": 213
+    },
+    {
+      "comparison_id": "Ti_coord_identified_material_r1_s113",
+      "element": "Ti",
+      "target": "coord",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "first": "pointwise",
+      "second": "multiscale",
+      "metric": "macro_f1_gain",
+      "gain": -0.006506834516251669,
+      "low": -0.04367085500374936,
+      "high": 0.027280920257991528,
+      "bootstrap_units": 213
+    },
+    {
+      "comparison_id": "Ti_md_identified_material_r0_s113",
+      "element": "Ti",
+      "target": "md",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "first": "pointwise",
+      "second": "multiscale",
+      "metric": "mae_reduction",
+      "gain": -0.001750550604986023,
+      "low": -0.002977485102558761,
+      "high": -0.00043192660049549525,
+      "bootstrap_units": 216
+    },
+    {
+      "comparison_id": "Ti_md_identified_material_r1_s113",
+      "element": "Ti",
+      "target": "md",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "first": "pointwise",
+      "second": "multiscale",
+      "metric": "mae_reduction",
+      "gain": 2.878542481887965e-05,
+      "low": -0.0009995863728411033,
+      "high": 0.001252106924776762,
+      "bootstrap_units": 216
+    },
+    {
+      "comparison_id": "Ti_bader_identified_material_r0_s113",
+      "element": "Ti",
+      "target": "bader",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "first": "pointwise",
+      "second": "multiscale",
+      "metric": "mae_reduction",
+      "gain": 7.312098047473903e-05,
+      "low": -0.006812754736735201,
+      "high": 0.006419158970216202,
+      "bootstrap_units": 141
+    },
+    {
+      "comparison_id": "Ti_bader_identified_material_r1_s113",
+      "element": "Ti",
+      "target": "bader",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "first": "pointwise",
+      "second": "multiscale",
+      "metric": "mae_reduction",
+      "gain": 0.002942296538712197,
+      "low": -0.001184876881062206,
+      "high": 0.0062542925527170655,
+      "bootstrap_units": 141
+    },
+    {
+      "comparison_id": "V_coord_identified_material_r0_s113",
+      "element": "V",
+      "target": "coord",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "first": "pointwise",
+      "second": "multiscale",
+      "metric": "macro_f1_gain",
+      "gain": 0.002240768615071498,
+      "low": -0.011883274347532849,
+      "high": 0.015352928663881958,
+      "bootstrap_units": 404
+    },
+    {
+      "comparison_id": "V_coord_identified_material_r1_s113",
+      "element": "V",
+      "target": "coord",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "first": "pointwise",
+      "second": "multiscale",
+      "metric": "macro_f1_gain",
+      "gain": -0.012921825432468892,
+      "low": -0.029949948530048554,
+      "high": 0.001486708961472634,
+      "bootstrap_units": 404
+    },
+    {
+      "comparison_id": "V_md_identified_material_r0_s113",
+      "element": "V",
+      "target": "md",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "first": "pointwise",
+      "second": "multiscale",
+      "metric": "mae_reduction",
+      "gain": -0.00022382226497931652,
+      "low": -0.0009312245334411812,
+      "high": 0.000451098292461775,
+      "bootstrap_units": 405
+    },
+    {
+      "comparison_id": "V_md_identified_material_r1_s113",
+      "element": "V",
+      "target": "md",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "first": "pointwise",
+      "second": "multiscale",
+      "metric": "mae_reduction",
+      "gain": -0.00045664542132512614,
+      "low": -0.0011320194201253388,
+      "high": 6.342887397858302e-05,
+      "bootstrap_units": 405
+    },
+    {
+      "comparison_id": "V_bader_identified_material_r0_s113",
+      "element": "V",
+      "target": "bader",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "first": "pointwise",
+      "second": "multiscale",
+      "metric": "mae_reduction",
+      "gain": -0.0008514916183035431,
+      "low": -0.0030228592551268885,
+      "high": 0.00176686346472082,
+      "bootstrap_units": 261
+    },
+    {
+      "comparison_id": "V_bader_identified_material_r1_s113",
+      "element": "V",
+      "target": "bader",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "first": "pointwise",
+      "second": "multiscale",
+      "metric": "mae_reduction",
+      "gain": -0.0009953029944121117,
+      "low": -0.003779228281781942,
+      "high": 0.0016637216383554388,
+      "bootstrap_units": 261
+    },
+    {
+      "comparison_id": "Cr_coord_identified_material_r0_s113",
+      "element": "Cr",
+      "target": "coord",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "first": "pointwise",
+      "second": "multiscale",
+      "metric": "macro_f1_gain",
+      "gain": -0.02208548708960878,
+      "low": -0.04899405563744966,
+      "high": 0.005030983582934949,
+      "bootstrap_units": 163
+    },
+    {
+      "comparison_id": "Cr_coord_identified_material_r1_s113",
+      "element": "Cr",
+      "target": "coord",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "first": "pointwise",
+      "second": "multiscale",
+      "metric": "macro_f1_gain",
+      "gain": -0.008430613774993545,
+      "low": -0.03161826539833777,
+      "high": 0.012393871008714811,
+      "bootstrap_units": 163
+    },
+    {
+      "comparison_id": "Cr_md_identified_material_r0_s113",
+      "element": "Cr",
+      "target": "md",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "first": "pointwise",
+      "second": "multiscale",
+      "metric": "mae_reduction",
+      "gain": 0.0011205965112483195,
+      "low": -0.0006065708535553794,
+      "high": 0.002723705252507517,
+      "bootstrap_units": 164
+    },
+    {
+      "comparison_id": "Cr_md_identified_material_r1_s113",
+      "element": "Cr",
+      "target": "md",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "first": "pointwise",
+      "second": "multiscale",
+      "metric": "mae_reduction",
+      "gain": -4.278759629582421e-05,
+      "low": -0.0020071699595461865,
+      "high": 0.001864243126715999,
+      "bootstrap_units": 164
+    },
+    {
+      "comparison_id": "Cr_bader_identified_material_r0_s113",
+      "element": "Cr",
+      "target": "bader",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "first": "pointwise",
+      "second": "multiscale",
+      "metric": "mae_reduction",
+      "gain": 0.00013233016012376836,
+      "low": -0.0041471947766425574,
+      "high": 0.004836102173227625,
+      "bootstrap_units": 126
+    },
+    {
+      "comparison_id": "Cr_bader_identified_material_r1_s113",
+      "element": "Cr",
+      "target": "bader",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "first": "pointwise",
+      "second": "multiscale",
+      "metric": "mae_reduction",
+      "gain": -0.0029265593485820057,
+      "low": -0.009146832182039114,
+      "high": 0.002667871800359718,
+      "bootstrap_units": 126
+    },
+    {
+      "comparison_id": "Mn_coord_identified_material_r0_s113",
+      "element": "Mn",
+      "target": "coord",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "first": "pointwise",
+      "second": "multiscale",
+      "metric": "macro_f1_gain",
+      "gain": 0.0018749253770655727,
+      "low": -0.037778230669303046,
+      "high": 0.04222347300924446,
+      "bootstrap_units": 419
+    },
+    {
+      "comparison_id": "Mn_coord_identified_material_r1_s113",
+      "element": "Mn",
+      "target": "coord",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "first": "pointwise",
+      "second": "multiscale",
+      "metric": "macro_f1_gain",
+      "gain": 0.00998780593561388,
+      "low": -0.0093267134313122,
+      "high": 0.03775856584629413,
+      "bootstrap_units": 419
+    },
+    {
+      "comparison_id": "Mn_md_identified_material_r0_s113",
+      "element": "Mn",
+      "target": "md",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "first": "pointwise",
+      "second": "multiscale",
+      "metric": "mae_reduction",
+      "gain": -8.395691831757437e-05,
+      "low": -0.0008859678296639241,
+      "high": 0.0007240775345574793,
+      "bootstrap_units": 423
+    },
+    {
+      "comparison_id": "Mn_md_identified_material_r1_s113",
+      "element": "Mn",
+      "target": "md",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "first": "pointwise",
+      "second": "multiscale",
+      "metric": "mae_reduction",
+      "gain": 0.0004537340336432834,
+      "low": -0.0005004993950535866,
+      "high": 0.001205129945783714,
+      "bootstrap_units": 423
+    },
+    {
+      "comparison_id": "Mn_bader_identified_material_r0_s113",
+      "element": "Mn",
+      "target": "bader",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "first": "pointwise",
+      "second": "multiscale",
+      "metric": "mae_reduction",
+      "gain": -0.00023000567657821547,
+      "low": -0.0035265026877038795,
+      "high": 0.002830410444722562,
+      "bootstrap_units": 255
+    },
+    {
+      "comparison_id": "Mn_bader_identified_material_r1_s113",
+      "element": "Mn",
+      "target": "bader",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "first": "pointwise",
+      "second": "multiscale",
+      "metric": "mae_reduction",
+      "gain": -0.0037930379659083524,
+      "low": -0.006931135197180193,
+      "high": -0.00010641910797553475,
+      "bootstrap_units": 255
+    },
+    {
+      "comparison_id": "Fe_coord_identified_material_r0_s113",
+      "element": "Fe",
+      "target": "coord",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "first": "pointwise",
+      "second": "multiscale",
+      "metric": "macro_f1_gain",
+      "gain": 0.006399884716379756,
+      "low": -0.009630427428207914,
+      "high": 0.026156773617170566,
+      "bootstrap_units": 389
+    },
+    {
+      "comparison_id": "Fe_coord_identified_material_r1_s113",
+      "element": "Fe",
+      "target": "coord",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "first": "pointwise",
+      "second": "multiscale",
+      "metric": "macro_f1_gain",
+      "gain": -0.01573993112603267,
+      "low": -0.035785639980293424,
+      "high": 0.003783808574229919,
+      "bootstrap_units": 389
+    },
+    {
+      "comparison_id": "Fe_md_identified_material_r0_s113",
+      "element": "Fe",
+      "target": "md",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "first": "pointwise",
+      "second": "multiscale",
+      "metric": "mae_reduction",
+      "gain": -0.0011805938618556187,
+      "low": -0.0019504173955441325,
+      "high": -0.00047989902684623785,
+      "bootstrap_units": 393
+    },
+    {
+      "comparison_id": "Fe_md_identified_material_r1_s113",
+      "element": "Fe",
+      "target": "md",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "first": "pointwise",
+      "second": "multiscale",
+      "metric": "mae_reduction",
+      "gain": 3.457366111385071e-05,
+      "low": -0.0013643288532581646,
+      "high": 0.001615685365636328,
+      "bootstrap_units": 393
+    },
+    {
+      "comparison_id": "Fe_bader_identified_material_r0_s113",
+      "element": "Fe",
+      "target": "bader",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "first": "pointwise",
+      "second": "multiscale",
+      "metric": "mae_reduction",
+      "gain": 0.0006558973893613096,
+      "low": -0.004064249004633156,
+      "high": 0.003969505736659929,
+      "bootstrap_units": 255
+    },
+    {
+      "comparison_id": "Fe_bader_identified_material_r1_s113",
+      "element": "Fe",
+      "target": "bader",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "first": "pointwise",
+      "second": "multiscale",
+      "metric": "mae_reduction",
+      "gain": 0.000956946404672282,
+      "low": -0.0036166585727996623,
+      "high": 0.005684538407253206,
+      "bootstrap_units": 255
+    },
+    {
+      "comparison_id": "Co_coord_identified_material_r0_s113",
+      "element": "Co",
+      "target": "coord",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "first": "pointwise",
+      "second": "multiscale",
+      "metric": "macro_f1_gain",
+      "gain": 0.012840663891583004,
+      "low": -0.014477245914616368,
+      "high": 0.04415389119723344,
+      "bootstrap_units": 250
+    },
+    {
+      "comparison_id": "Co_coord_identified_material_r1_s113",
+      "element": "Co",
+      "target": "coord",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "first": "pointwise",
+      "second": "multiscale",
+      "metric": "macro_f1_gain",
+      "gain": -0.03083575559042273,
+      "low": -0.06019125496454326,
+      "high": 0.0007507763313270588,
+      "bootstrap_units": 250
+    },
+    {
+      "comparison_id": "Co_md_identified_material_r0_s113",
+      "element": "Co",
+      "target": "md",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "first": "pointwise",
+      "second": "multiscale",
+      "metric": "mae_reduction",
+      "gain": 5.510957951953069e-05,
+      "low": -0.0009033426353876496,
+      "high": 0.0008958117959863074,
+      "bootstrap_units": 252
+    },
+    {
+      "comparison_id": "Co_md_identified_material_r1_s113",
+      "element": "Co",
+      "target": "md",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "first": "pointwise",
+      "second": "multiscale",
+      "metric": "mae_reduction",
+      "gain": 2.9596212651313014e-05,
+      "low": -0.0010746024081586276,
+      "high": 0.0010311331685020433,
+      "bootstrap_units": 252
+    },
+    {
+      "comparison_id": "Co_bader_identified_material_r0_s113",
+      "element": "Co",
+      "target": "bader",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "first": "pointwise",
+      "second": "multiscale",
+      "metric": "mae_reduction",
+      "gain": -0.0006875611417433147,
+      "low": -0.004870423570539702,
+      "high": 0.0031521298443450965,
+      "bootstrap_units": 167
+    },
+    {
+      "comparison_id": "Co_bader_identified_material_r1_s113",
+      "element": "Co",
+      "target": "bader",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "first": "pointwise",
+      "second": "multiscale",
+      "metric": "mae_reduction",
+      "gain": -0.0018325935313922154,
+      "low": -0.00676411258568453,
+      "high": 0.002645583696245195,
+      "bootstrap_units": 167
+    },
+    {
+      "comparison_id": "Ni_coord_identified_material_r0_s113",
+      "element": "Ni",
+      "target": "coord",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "first": "pointwise",
+      "second": "multiscale",
+      "metric": "macro_f1_gain",
+      "gain": 0.009376629480939092,
+      "low": -0.030156432092025696,
+      "high": 0.04654235647232003,
+      "bootstrap_units": 214
+    },
+    {
+      "comparison_id": "Ni_coord_identified_material_r1_s113",
+      "element": "Ni",
+      "target": "coord",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "first": "pointwise",
+      "second": "multiscale",
+      "metric": "macro_f1_gain",
+      "gain": 0.02380329263181713,
+      "low": -0.0069568880505469655,
+      "high": 0.06910203848131691,
+      "bootstrap_units": 214
+    },
+    {
+      "comparison_id": "Ni_md_identified_material_r0_s113",
+      "element": "Ni",
+      "target": "md",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "first": "pointwise",
+      "second": "multiscale",
+      "metric": "mae_reduction",
+      "gain": -0.00010904761205140015,
+      "low": -0.0011942620258345792,
+      "high": 0.0008872337661289708,
+      "bootstrap_units": 217
+    },
+    {
+      "comparison_id": "Ni_md_identified_material_r1_s113",
+      "element": "Ni",
+      "target": "md",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "first": "pointwise",
+      "second": "multiscale",
+      "metric": "mae_reduction",
+      "gain": -0.0009467451891219912,
+      "low": -0.0019683730202355414,
+      "high": -0.00016638803838896573,
+      "bootstrap_units": 217
+    },
+    {
+      "comparison_id": "Ni_bader_identified_material_r0_s113",
+      "element": "Ni",
+      "target": "bader",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "first": "pointwise",
+      "second": "multiscale",
+      "metric": "mae_reduction",
+      "gain": -0.0003694083261244485,
+      "low": -0.0037093784779191467,
+      "high": 0.0028039659263086147,
+      "bootstrap_units": 152
+    },
+    {
+      "comparison_id": "Ni_bader_identified_material_r1_s113",
+      "element": "Ni",
+      "target": "bader",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "first": "pointwise",
+      "second": "multiscale",
+      "metric": "mae_reduction",
+      "gain": -0.002170155413475691,
+      "low": -0.006640814372213898,
+      "high": 0.0019391216712564717,
+      "bootstrap_units": 152
+    },
+    {
+      "comparison_id": "Cu_coord_identified_material_r0_s113",
+      "element": "Cu",
+      "target": "coord",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "first": "pointwise",
+      "second": "multiscale",
+      "metric": "macro_f1_gain",
+      "gain": 0.011287608410075367,
+      "low": -0.022858809730464565,
+      "high": 0.053296728800816144,
+      "bootstrap_units": 233
+    },
+    {
+      "comparison_id": "Cu_coord_identified_material_r1_s113",
+      "element": "Cu",
+      "target": "coord",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "first": "pointwise",
+      "second": "multiscale",
+      "metric": "macro_f1_gain",
+      "gain": 0.015254337288688857,
+      "low": -0.020658933035955347,
+      "high": 0.045063024711232025,
+      "bootstrap_units": 233
+    },
+    {
+      "comparison_id": "Cu_md_identified_material_r0_s113",
+      "element": "Cu",
+      "target": "md",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "first": "pointwise",
+      "second": "multiscale",
+      "metric": "mae_reduction",
+      "gain": 0.00050045736094112,
+      "low": -0.001585317857235626,
+      "high": 0.0024497877273008477,
+      "bootstrap_units": 239
+    },
+    {
+      "comparison_id": "Cu_md_identified_material_r1_s113",
+      "element": "Cu",
+      "target": "md",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "first": "pointwise",
+      "second": "multiscale",
+      "metric": "mae_reduction",
+      "gain": -0.0024779207754263358,
+      "low": -0.005388838786351302,
+      "high": 0.0001930536528166503,
+      "bootstrap_units": 239
+    },
+    {
+      "comparison_id": "Cu_bader_identified_material_r0_s113",
+      "element": "Cu",
+      "target": "bader",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "first": "pointwise",
+      "second": "multiscale",
+      "metric": "mae_reduction",
+      "gain": 0.00019708780915868307,
+      "low": -0.00496766950615183,
+      "high": 0.005240755013518184,
+      "bootstrap_units": 155
+    },
+    {
+      "comparison_id": "Cu_bader_identified_material_r1_s113",
+      "element": "Cu",
+      "target": "bader",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "first": "pointwise",
+      "second": "multiscale",
+      "metric": "mae_reduction",
+      "gain": -0.004514434268516387,
+      "low": -0.01124377750491789,
+      "high": 0.002633126943566538,
+      "bootstrap_units": 155
+    }
+  ],
+  "regimes": [],
+  "localization_stability": [
+    {
+      "first_run": "Ti_coord_identified_material_r0_s113_pointwise",
+      "second_run": "Ti_coord_identified_material_r0_s113_multiscale",
+      "same_condition": false,
+      "same_partition": true,
+      "same_fit_seed": true,
+      "spearman": 0.7999999999999999,
+      "top_region_same": false
+    },
+    {
+      "first_run": "Ti_coord_identified_material_r0_s113_pointwise",
+      "second_run": "Ti_coord_identified_material_r1_s113_pointwise",
+      "same_condition": true,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.7,
+      "top_region_same": false
+    },
+    {
+      "first_run": "Ti_coord_identified_material_r0_s113_pointwise",
+      "second_run": "Ti_coord_identified_material_r1_s113_multiscale",
+      "same_condition": false,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.7999999999999999,
+      "top_region_same": false
+    },
+    {
+      "first_run": "Ti_coord_identified_material_r0_s113_multiscale",
+      "second_run": "Ti_coord_identified_material_r1_s113_pointwise",
+      "same_condition": false,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.7999999999999999,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Ti_coord_identified_material_r0_s113_multiscale",
+      "second_run": "Ti_coord_identified_material_r1_s113_multiscale",
+      "same_condition": true,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.9999999999999999,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Ti_coord_identified_material_r1_s113_pointwise",
+      "second_run": "Ti_coord_identified_material_r1_s113_multiscale",
+      "same_condition": false,
+      "same_partition": true,
+      "same_fit_seed": true,
+      "spearman": 0.7999999999999999,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Ti_md_identified_material_r0_s113_pointwise",
+      "second_run": "Ti_md_identified_material_r0_s113_multiscale",
+      "same_condition": false,
+      "same_partition": true,
+      "same_fit_seed": true,
+      "spearman": 0.6,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Ti_md_identified_material_r0_s113_pointwise",
+      "second_run": "Ti_md_identified_material_r1_s113_pointwise",
+      "same_condition": true,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.9999999999999999,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Ti_md_identified_material_r0_s113_pointwise",
+      "second_run": "Ti_md_identified_material_r1_s113_multiscale",
+      "same_condition": false,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.7,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Ti_md_identified_material_r0_s113_multiscale",
+      "second_run": "Ti_md_identified_material_r1_s113_pointwise",
+      "same_condition": false,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.6,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Ti_md_identified_material_r0_s113_multiscale",
+      "second_run": "Ti_md_identified_material_r1_s113_multiscale",
+      "same_condition": true,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.8999999999999998,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Ti_md_identified_material_r1_s113_pointwise",
+      "second_run": "Ti_md_identified_material_r1_s113_multiscale",
+      "same_condition": false,
+      "same_partition": true,
+      "same_fit_seed": true,
+      "spearman": 0.7,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Ti_bader_identified_material_r0_s113_pointwise",
+      "second_run": "Ti_bader_identified_material_r0_s113_multiscale",
+      "same_condition": false,
+      "same_partition": true,
+      "same_fit_seed": true,
+      "spearman": 0.7,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Ti_bader_identified_material_r0_s113_pointwise",
+      "second_run": "Ti_bader_identified_material_r1_s113_pointwise",
+      "same_condition": true,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.7,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Ti_bader_identified_material_r0_s113_pointwise",
+      "second_run": "Ti_bader_identified_material_r1_s113_multiscale",
+      "same_condition": false,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.6,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Ti_bader_identified_material_r0_s113_multiscale",
+      "second_run": "Ti_bader_identified_material_r1_s113_pointwise",
+      "same_condition": false,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.7,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Ti_bader_identified_material_r0_s113_multiscale",
+      "second_run": "Ti_bader_identified_material_r1_s113_multiscale",
+      "same_condition": true,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.8999999999999998,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Ti_bader_identified_material_r1_s113_pointwise",
+      "second_run": "Ti_bader_identified_material_r1_s113_multiscale",
+      "same_condition": false,
+      "same_partition": true,
+      "same_fit_seed": true,
+      "spearman": 0.8999999999999998,
+      "top_region_same": true
+    },
+    {
+      "first_run": "V_coord_identified_material_r0_s113_pointwise",
+      "second_run": "V_coord_identified_material_r0_s113_multiscale",
+      "same_condition": false,
+      "same_partition": true,
+      "same_fit_seed": true,
+      "spearman": 0.7,
+      "top_region_same": false
+    },
+    {
+      "first_run": "V_coord_identified_material_r0_s113_pointwise",
+      "second_run": "V_coord_identified_material_r1_s113_pointwise",
+      "same_condition": true,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.8999999999999998,
+      "top_region_same": false
+    },
+    {
+      "first_run": "V_coord_identified_material_r0_s113_pointwise",
+      "second_run": "V_coord_identified_material_r1_s113_multiscale",
+      "same_condition": false,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.8999999999999998,
+      "top_region_same": true
+    },
+    {
+      "first_run": "V_coord_identified_material_r0_s113_multiscale",
+      "second_run": "V_coord_identified_material_r1_s113_pointwise",
+      "same_condition": false,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.6,
+      "top_region_same": false
+    },
+    {
+      "first_run": "V_coord_identified_material_r0_s113_multiscale",
+      "second_run": "V_coord_identified_material_r1_s113_multiscale",
+      "same_condition": true,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.8999999999999998,
+      "top_region_same": false
+    },
+    {
+      "first_run": "V_coord_identified_material_r1_s113_pointwise",
+      "second_run": "V_coord_identified_material_r1_s113_multiscale",
+      "same_condition": false,
+      "same_partition": true,
+      "same_fit_seed": true,
+      "spearman": 0.7,
+      "top_region_same": false
+    },
+    {
+      "first_run": "V_md_identified_material_r0_s113_pointwise",
+      "second_run": "V_md_identified_material_r0_s113_multiscale",
+      "same_condition": false,
+      "same_partition": true,
+      "same_fit_seed": true,
+      "spearman": 0.7999999999999999,
+      "top_region_same": true
+    },
+    {
+      "first_run": "V_md_identified_material_r0_s113_pointwise",
+      "second_run": "V_md_identified_material_r1_s113_pointwise",
+      "same_condition": true,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.9999999999999999,
+      "top_region_same": true
+    },
+    {
+      "first_run": "V_md_identified_material_r0_s113_pointwise",
+      "second_run": "V_md_identified_material_r1_s113_multiscale",
+      "same_condition": false,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.7999999999999999,
+      "top_region_same": true
+    },
+    {
+      "first_run": "V_md_identified_material_r0_s113_multiscale",
+      "second_run": "V_md_identified_material_r1_s113_pointwise",
+      "same_condition": false,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.7999999999999999,
+      "top_region_same": true
+    },
+    {
+      "first_run": "V_md_identified_material_r0_s113_multiscale",
+      "second_run": "V_md_identified_material_r1_s113_multiscale",
+      "same_condition": true,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.9999999999999999,
+      "top_region_same": true
+    },
+    {
+      "first_run": "V_md_identified_material_r1_s113_pointwise",
+      "second_run": "V_md_identified_material_r1_s113_multiscale",
+      "same_condition": false,
+      "same_partition": true,
+      "same_fit_seed": true,
+      "spearman": 0.7999999999999999,
+      "top_region_same": true
+    },
+    {
+      "first_run": "V_bader_identified_material_r0_s113_pointwise",
+      "second_run": "V_bader_identified_material_r0_s113_multiscale",
+      "same_condition": false,
+      "same_partition": true,
+      "same_fit_seed": true,
+      "spearman": 0.7,
+      "top_region_same": true
+    },
+    {
+      "first_run": "V_bader_identified_material_r0_s113_pointwise",
+      "second_run": "V_bader_identified_material_r1_s113_pointwise",
+      "same_condition": true,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.9999999999999999,
+      "top_region_same": true
+    },
+    {
+      "first_run": "V_bader_identified_material_r0_s113_pointwise",
+      "second_run": "V_bader_identified_material_r1_s113_multiscale",
+      "same_condition": false,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.7,
+      "top_region_same": true
+    },
+    {
+      "first_run": "V_bader_identified_material_r0_s113_multiscale",
+      "second_run": "V_bader_identified_material_r1_s113_pointwise",
+      "same_condition": false,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.7,
+      "top_region_same": true
+    },
+    {
+      "first_run": "V_bader_identified_material_r0_s113_multiscale",
+      "second_run": "V_bader_identified_material_r1_s113_multiscale",
+      "same_condition": true,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.9999999999999999,
+      "top_region_same": true
+    },
+    {
+      "first_run": "V_bader_identified_material_r1_s113_pointwise",
+      "second_run": "V_bader_identified_material_r1_s113_multiscale",
+      "same_condition": false,
+      "same_partition": true,
+      "same_fit_seed": true,
+      "spearman": 0.7,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Cr_coord_identified_material_r0_s113_pointwise",
+      "second_run": "Cr_coord_identified_material_r0_s113_multiscale",
+      "same_condition": false,
+      "same_partition": true,
+      "same_fit_seed": true,
+      "spearman": 0.3,
+      "top_region_same": false
+    },
+    {
+      "first_run": "Cr_coord_identified_material_r0_s113_pointwise",
+      "second_run": "Cr_coord_identified_material_r1_s113_pointwise",
+      "same_condition": true,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.8999999999999998,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Cr_coord_identified_material_r0_s113_pointwise",
+      "second_run": "Cr_coord_identified_material_r1_s113_multiscale",
+      "same_condition": false,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.6,
+      "top_region_same": false
+    },
+    {
+      "first_run": "Cr_coord_identified_material_r0_s113_multiscale",
+      "second_run": "Cr_coord_identified_material_r1_s113_pointwise",
+      "same_condition": false,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.09999999999999999,
+      "top_region_same": false
+    },
+    {
+      "first_run": "Cr_coord_identified_material_r0_s113_multiscale",
+      "second_run": "Cr_coord_identified_material_r1_s113_multiscale",
+      "same_condition": true,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.8999999999999998,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Cr_coord_identified_material_r1_s113_pointwise",
+      "second_run": "Cr_coord_identified_material_r1_s113_multiscale",
+      "same_condition": false,
+      "same_partition": true,
+      "same_fit_seed": true,
+      "spearman": 0.49999999999999994,
+      "top_region_same": false
+    },
+    {
+      "first_run": "Cr_md_identified_material_r0_s113_pointwise",
+      "second_run": "Cr_md_identified_material_r0_s113_multiscale",
+      "same_condition": false,
+      "same_partition": true,
+      "same_fit_seed": true,
+      "spearman": 0.7999999999999999,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Cr_md_identified_material_r0_s113_pointwise",
+      "second_run": "Cr_md_identified_material_r1_s113_pointwise",
+      "same_condition": true,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.8999999999999998,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Cr_md_identified_material_r0_s113_pointwise",
+      "second_run": "Cr_md_identified_material_r1_s113_multiscale",
+      "same_condition": false,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.7999999999999999,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Cr_md_identified_material_r0_s113_multiscale",
+      "second_run": "Cr_md_identified_material_r1_s113_pointwise",
+      "same_condition": false,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.8999999999999998,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Cr_md_identified_material_r0_s113_multiscale",
+      "second_run": "Cr_md_identified_material_r1_s113_multiscale",
+      "same_condition": true,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.9999999999999999,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Cr_md_identified_material_r1_s113_pointwise",
+      "second_run": "Cr_md_identified_material_r1_s113_multiscale",
+      "same_condition": false,
+      "same_partition": true,
+      "same_fit_seed": true,
+      "spearman": 0.8999999999999998,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Cr_bader_identified_material_r0_s113_pointwise",
+      "second_run": "Cr_bader_identified_material_r0_s113_multiscale",
+      "same_condition": false,
+      "same_partition": true,
+      "same_fit_seed": true,
+      "spearman": 0.09999999999999999,
+      "top_region_same": false
+    },
+    {
+      "first_run": "Cr_bader_identified_material_r0_s113_pointwise",
+      "second_run": "Cr_bader_identified_material_r1_s113_pointwise",
+      "same_condition": true,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.8999999999999998,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Cr_bader_identified_material_r0_s113_pointwise",
+      "second_run": "Cr_bader_identified_material_r1_s113_multiscale",
+      "same_condition": false,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": -0.09999999999999999,
+      "top_region_same": false
+    },
+    {
+      "first_run": "Cr_bader_identified_material_r0_s113_multiscale",
+      "second_run": "Cr_bader_identified_material_r1_s113_pointwise",
+      "same_condition": false,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": -0.3,
+      "top_region_same": false
+    },
+    {
+      "first_run": "Cr_bader_identified_material_r0_s113_multiscale",
+      "second_run": "Cr_bader_identified_material_r1_s113_multiscale",
+      "same_condition": true,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.19999999999999998,
+      "top_region_same": false
+    },
+    {
+      "first_run": "Cr_bader_identified_material_r1_s113_pointwise",
+      "second_run": "Cr_bader_identified_material_r1_s113_multiscale",
+      "same_condition": false,
+      "same_partition": true,
+      "same_fit_seed": true,
+      "spearman": -0.3,
+      "top_region_same": false
+    },
+    {
+      "first_run": "Mn_coord_identified_material_r0_s113_pointwise",
+      "second_run": "Mn_coord_identified_material_r0_s113_multiscale",
+      "same_condition": false,
+      "same_partition": true,
+      "same_fit_seed": true,
+      "spearman": 0.09999999999999999,
+      "top_region_same": false
+    },
+    {
+      "first_run": "Mn_coord_identified_material_r0_s113_pointwise",
+      "second_run": "Mn_coord_identified_material_r1_s113_pointwise",
+      "same_condition": true,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.7,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Mn_coord_identified_material_r0_s113_pointwise",
+      "second_run": "Mn_coord_identified_material_r1_s113_multiscale",
+      "same_condition": false,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.3,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Mn_coord_identified_material_r0_s113_multiscale",
+      "second_run": "Mn_coord_identified_material_r1_s113_pointwise",
+      "same_condition": false,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": -0.09999999999999999,
+      "top_region_same": false
+    },
+    {
+      "first_run": "Mn_coord_identified_material_r0_s113_multiscale",
+      "second_run": "Mn_coord_identified_material_r1_s113_multiscale",
+      "same_condition": true,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.6,
+      "top_region_same": false
+    },
+    {
+      "first_run": "Mn_coord_identified_material_r1_s113_pointwise",
+      "second_run": "Mn_coord_identified_material_r1_s113_multiscale",
+      "same_condition": false,
+      "same_partition": true,
+      "same_fit_seed": true,
+      "spearman": 0.3,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Mn_md_identified_material_r0_s113_pointwise",
+      "second_run": "Mn_md_identified_material_r0_s113_multiscale",
+      "same_condition": false,
+      "same_partition": true,
+      "same_fit_seed": true,
+      "spearman": 0.3,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Mn_md_identified_material_r0_s113_pointwise",
+      "second_run": "Mn_md_identified_material_r1_s113_pointwise",
+      "same_condition": true,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.9999999999999999,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Mn_md_identified_material_r0_s113_pointwise",
+      "second_run": "Mn_md_identified_material_r1_s113_multiscale",
+      "same_condition": false,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.49999999999999994,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Mn_md_identified_material_r0_s113_multiscale",
+      "second_run": "Mn_md_identified_material_r1_s113_pointwise",
+      "same_condition": false,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.3,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Mn_md_identified_material_r0_s113_multiscale",
+      "second_run": "Mn_md_identified_material_r1_s113_multiscale",
+      "same_condition": true,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.8999999999999998,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Mn_md_identified_material_r1_s113_pointwise",
+      "second_run": "Mn_md_identified_material_r1_s113_multiscale",
+      "same_condition": false,
+      "same_partition": true,
+      "same_fit_seed": true,
+      "spearman": 0.49999999999999994,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Mn_bader_identified_material_r0_s113_pointwise",
+      "second_run": "Mn_bader_identified_material_r0_s113_multiscale",
+      "same_condition": false,
+      "same_partition": true,
+      "same_fit_seed": true,
+      "spearman": 0.19999999999999998,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Mn_bader_identified_material_r0_s113_pointwise",
+      "second_run": "Mn_bader_identified_material_r1_s113_pointwise",
+      "same_condition": true,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.7,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Mn_bader_identified_material_r0_s113_pointwise",
+      "second_run": "Mn_bader_identified_material_r1_s113_multiscale",
+      "same_condition": false,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.19999999999999998,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Mn_bader_identified_material_r0_s113_multiscale",
+      "second_run": "Mn_bader_identified_material_r1_s113_pointwise",
+      "same_condition": false,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.3,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Mn_bader_identified_material_r0_s113_multiscale",
+      "second_run": "Mn_bader_identified_material_r1_s113_multiscale",
+      "same_condition": true,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.9999999999999999,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Mn_bader_identified_material_r1_s113_pointwise",
+      "second_run": "Mn_bader_identified_material_r1_s113_multiscale",
+      "same_condition": false,
+      "same_partition": true,
+      "same_fit_seed": true,
+      "spearman": 0.3,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Fe_coord_identified_material_r0_s113_pointwise",
+      "second_run": "Fe_coord_identified_material_r0_s113_multiscale",
+      "same_condition": false,
+      "same_partition": true,
+      "same_fit_seed": true,
+      "spearman": -0.3,
+      "top_region_same": false
+    },
+    {
+      "first_run": "Fe_coord_identified_material_r0_s113_pointwise",
+      "second_run": "Fe_coord_identified_material_r1_s113_pointwise",
+      "same_condition": true,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.9999999999999999,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Fe_coord_identified_material_r0_s113_pointwise",
+      "second_run": "Fe_coord_identified_material_r1_s113_multiscale",
+      "same_condition": false,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.19999999999999998,
+      "top_region_same": false
+    },
+    {
+      "first_run": "Fe_coord_identified_material_r0_s113_multiscale",
+      "second_run": "Fe_coord_identified_material_r1_s113_pointwise",
+      "same_condition": false,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": -0.3,
+      "top_region_same": false
+    },
+    {
+      "first_run": "Fe_coord_identified_material_r0_s113_multiscale",
+      "second_run": "Fe_coord_identified_material_r1_s113_multiscale",
+      "same_condition": true,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.7999999999999999,
+      "top_region_same": false
+    },
+    {
+      "first_run": "Fe_coord_identified_material_r1_s113_pointwise",
+      "second_run": "Fe_coord_identified_material_r1_s113_multiscale",
+      "same_condition": false,
+      "same_partition": true,
+      "same_fit_seed": true,
+      "spearman": 0.19999999999999998,
+      "top_region_same": false
+    },
+    {
+      "first_run": "Fe_md_identified_material_r0_s113_pointwise",
+      "second_run": "Fe_md_identified_material_r0_s113_multiscale",
+      "same_condition": false,
+      "same_partition": true,
+      "same_fit_seed": true,
+      "spearman": 0.09999999999999999,
+      "top_region_same": false
+    },
+    {
+      "first_run": "Fe_md_identified_material_r0_s113_pointwise",
+      "second_run": "Fe_md_identified_material_r1_s113_pointwise",
+      "same_condition": true,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.9999999999999999,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Fe_md_identified_material_r0_s113_pointwise",
+      "second_run": "Fe_md_identified_material_r1_s113_multiscale",
+      "same_condition": false,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.19999999999999998,
+      "top_region_same": false
+    },
+    {
+      "first_run": "Fe_md_identified_material_r0_s113_multiscale",
+      "second_run": "Fe_md_identified_material_r1_s113_pointwise",
+      "same_condition": false,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.09999999999999999,
+      "top_region_same": false
+    },
+    {
+      "first_run": "Fe_md_identified_material_r0_s113_multiscale",
+      "second_run": "Fe_md_identified_material_r1_s113_multiscale",
+      "same_condition": true,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.8999999999999998,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Fe_md_identified_material_r1_s113_pointwise",
+      "second_run": "Fe_md_identified_material_r1_s113_multiscale",
+      "same_condition": false,
+      "same_partition": true,
+      "same_fit_seed": true,
+      "spearman": 0.19999999999999998,
+      "top_region_same": false
+    },
+    {
+      "first_run": "Fe_bader_identified_material_r0_s113_pointwise",
+      "second_run": "Fe_bader_identified_material_r0_s113_multiscale",
+      "same_condition": false,
+      "same_partition": true,
+      "same_fit_seed": true,
+      "spearman": 0.7,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Fe_bader_identified_material_r0_s113_pointwise",
+      "second_run": "Fe_bader_identified_material_r1_s113_pointwise",
+      "same_condition": true,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.9999999999999999,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Fe_bader_identified_material_r0_s113_pointwise",
+      "second_run": "Fe_bader_identified_material_r1_s113_multiscale",
+      "same_condition": false,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.7999999999999999,
+      "top_region_same": false
+    },
+    {
+      "first_run": "Fe_bader_identified_material_r0_s113_multiscale",
+      "second_run": "Fe_bader_identified_material_r1_s113_pointwise",
+      "same_condition": false,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.7,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Fe_bader_identified_material_r0_s113_multiscale",
+      "second_run": "Fe_bader_identified_material_r1_s113_multiscale",
+      "same_condition": true,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.7999999999999999,
+      "top_region_same": false
+    },
+    {
+      "first_run": "Fe_bader_identified_material_r1_s113_pointwise",
+      "second_run": "Fe_bader_identified_material_r1_s113_multiscale",
+      "same_condition": false,
+      "same_partition": true,
+      "same_fit_seed": true,
+      "spearman": 0.7999999999999999,
+      "top_region_same": false
+    },
+    {
+      "first_run": "Co_coord_identified_material_r0_s113_pointwise",
+      "second_run": "Co_coord_identified_material_r0_s113_multiscale",
+      "same_condition": false,
+      "same_partition": true,
+      "same_fit_seed": true,
+      "spearman": 0.6,
+      "top_region_same": false
+    },
+    {
+      "first_run": "Co_coord_identified_material_r0_s113_pointwise",
+      "second_run": "Co_coord_identified_material_r1_s113_pointwise",
+      "same_condition": true,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.3,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Co_coord_identified_material_r0_s113_pointwise",
+      "second_run": "Co_coord_identified_material_r1_s113_multiscale",
+      "same_condition": false,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.3,
+      "top_region_same": false
+    },
+    {
+      "first_run": "Co_coord_identified_material_r0_s113_multiscale",
+      "second_run": "Co_coord_identified_material_r1_s113_pointwise",
+      "same_condition": false,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": -0.09999999999999999,
+      "top_region_same": false
+    },
+    {
+      "first_run": "Co_coord_identified_material_r0_s113_multiscale",
+      "second_run": "Co_coord_identified_material_r1_s113_multiscale",
+      "same_condition": true,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.8999999999999998,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Co_coord_identified_material_r1_s113_pointwise",
+      "second_run": "Co_coord_identified_material_r1_s113_multiscale",
+      "same_condition": false,
+      "same_partition": true,
+      "same_fit_seed": true,
+      "spearman": -0.49999999999999994,
+      "top_region_same": false
+    },
+    {
+      "first_run": "Co_md_identified_material_r0_s113_pointwise",
+      "second_run": "Co_md_identified_material_r0_s113_multiscale",
+      "same_condition": false,
+      "same_partition": true,
+      "same_fit_seed": true,
+      "spearman": 0.3,
+      "top_region_same": false
+    },
+    {
+      "first_run": "Co_md_identified_material_r0_s113_pointwise",
+      "second_run": "Co_md_identified_material_r1_s113_pointwise",
+      "same_condition": true,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.8999999999999998,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Co_md_identified_material_r0_s113_pointwise",
+      "second_run": "Co_md_identified_material_r1_s113_multiscale",
+      "same_condition": false,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.3,
+      "top_region_same": false
+    },
+    {
+      "first_run": "Co_md_identified_material_r0_s113_multiscale",
+      "second_run": "Co_md_identified_material_r1_s113_pointwise",
+      "same_condition": false,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": -0.09999999999999999,
+      "top_region_same": false
+    },
+    {
+      "first_run": "Co_md_identified_material_r0_s113_multiscale",
+      "second_run": "Co_md_identified_material_r1_s113_multiscale",
+      "same_condition": true,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.9999999999999999,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Co_md_identified_material_r1_s113_pointwise",
+      "second_run": "Co_md_identified_material_r1_s113_multiscale",
+      "same_condition": false,
+      "same_partition": true,
+      "same_fit_seed": true,
+      "spearman": -0.09999999999999999,
+      "top_region_same": false
+    },
+    {
+      "first_run": "Co_bader_identified_material_r0_s113_pointwise",
+      "second_run": "Co_bader_identified_material_r0_s113_multiscale",
+      "same_condition": false,
+      "same_partition": true,
+      "same_fit_seed": true,
+      "spearman": 0.7999999999999999,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Co_bader_identified_material_r0_s113_pointwise",
+      "second_run": "Co_bader_identified_material_r1_s113_pointwise",
+      "same_condition": true,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.7,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Co_bader_identified_material_r0_s113_pointwise",
+      "second_run": "Co_bader_identified_material_r1_s113_multiscale",
+      "same_condition": false,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.49999999999999994,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Co_bader_identified_material_r0_s113_multiscale",
+      "second_run": "Co_bader_identified_material_r1_s113_pointwise",
+      "same_condition": false,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.7,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Co_bader_identified_material_r0_s113_multiscale",
+      "second_run": "Co_bader_identified_material_r1_s113_multiscale",
+      "same_condition": true,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.8999999999999998,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Co_bader_identified_material_r1_s113_pointwise",
+      "second_run": "Co_bader_identified_material_r1_s113_multiscale",
+      "same_condition": false,
+      "same_partition": true,
+      "same_fit_seed": true,
+      "spearman": 0.6,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Ni_coord_identified_material_r0_s113_pointwise",
+      "second_run": "Ni_coord_identified_material_r0_s113_multiscale",
+      "same_condition": false,
+      "same_partition": true,
+      "same_fit_seed": true,
+      "spearman": 0.9999999999999999,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Ni_coord_identified_material_r0_s113_pointwise",
+      "second_run": "Ni_coord_identified_material_r1_s113_pointwise",
+      "same_condition": true,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.8999999999999998,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Ni_coord_identified_material_r0_s113_pointwise",
+      "second_run": "Ni_coord_identified_material_r1_s113_multiscale",
+      "same_condition": false,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.8999999999999998,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Ni_coord_identified_material_r0_s113_multiscale",
+      "second_run": "Ni_coord_identified_material_r1_s113_pointwise",
+      "same_condition": false,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.8999999999999998,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Ni_coord_identified_material_r0_s113_multiscale",
+      "second_run": "Ni_coord_identified_material_r1_s113_multiscale",
+      "same_condition": true,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.8999999999999998,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Ni_coord_identified_material_r1_s113_pointwise",
+      "second_run": "Ni_coord_identified_material_r1_s113_multiscale",
+      "same_condition": false,
+      "same_partition": true,
+      "same_fit_seed": true,
+      "spearman": 0.7999999999999999,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Ni_md_identified_material_r0_s113_pointwise",
+      "second_run": "Ni_md_identified_material_r0_s113_multiscale",
+      "same_condition": false,
+      "same_partition": true,
+      "same_fit_seed": true,
+      "spearman": 0.19999999999999998,
+      "top_region_same": false
+    },
+    {
+      "first_run": "Ni_md_identified_material_r0_s113_pointwise",
+      "second_run": "Ni_md_identified_material_r1_s113_pointwise",
+      "same_condition": true,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.7,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Ni_md_identified_material_r0_s113_pointwise",
+      "second_run": "Ni_md_identified_material_r1_s113_multiscale",
+      "same_condition": false,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.7,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Ni_md_identified_material_r0_s113_multiscale",
+      "second_run": "Ni_md_identified_material_r1_s113_pointwise",
+      "same_condition": false,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": -0.49999999999999994,
+      "top_region_same": false
+    },
+    {
+      "first_run": "Ni_md_identified_material_r0_s113_multiscale",
+      "second_run": "Ni_md_identified_material_r1_s113_multiscale",
+      "same_condition": true,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.7,
+      "top_region_same": false
+    },
+    {
+      "first_run": "Ni_md_identified_material_r1_s113_pointwise",
+      "second_run": "Ni_md_identified_material_r1_s113_multiscale",
+      "same_condition": false,
+      "same_partition": true,
+      "same_fit_seed": true,
+      "spearman": 0.19999999999999998,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Ni_bader_identified_material_r0_s113_pointwise",
+      "second_run": "Ni_bader_identified_material_r0_s113_multiscale",
+      "same_condition": false,
+      "same_partition": true,
+      "same_fit_seed": true,
+      "spearman": 0.7,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Ni_bader_identified_material_r0_s113_pointwise",
+      "second_run": "Ni_bader_identified_material_r1_s113_pointwise",
+      "same_condition": true,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.6,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Ni_bader_identified_material_r0_s113_pointwise",
+      "second_run": "Ni_bader_identified_material_r1_s113_multiscale",
+      "same_condition": false,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.39999999999999997,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Ni_bader_identified_material_r0_s113_multiscale",
+      "second_run": "Ni_bader_identified_material_r1_s113_pointwise",
+      "same_condition": false,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.09999999999999999,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Ni_bader_identified_material_r0_s113_multiscale",
+      "second_run": "Ni_bader_identified_material_r1_s113_multiscale",
+      "same_condition": true,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.8999999999999998,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Ni_bader_identified_material_r1_s113_pointwise",
+      "second_run": "Ni_bader_identified_material_r1_s113_multiscale",
+      "same_condition": false,
+      "same_partition": true,
+      "same_fit_seed": true,
+      "spearman": 0.0,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Cu_coord_identified_material_r0_s113_pointwise",
+      "second_run": "Cu_coord_identified_material_r0_s113_multiscale",
+      "same_condition": false,
+      "same_partition": true,
+      "same_fit_seed": true,
+      "spearman": 0.7,
+      "top_region_same": false
+    },
+    {
+      "first_run": "Cu_coord_identified_material_r0_s113_pointwise",
+      "second_run": "Cu_coord_identified_material_r1_s113_pointwise",
+      "same_condition": true,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.7,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Cu_coord_identified_material_r0_s113_pointwise",
+      "second_run": "Cu_coord_identified_material_r1_s113_multiscale",
+      "same_condition": false,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.39999999999999997,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Cu_coord_identified_material_r0_s113_multiscale",
+      "second_run": "Cu_coord_identified_material_r1_s113_pointwise",
+      "same_condition": false,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.19999999999999998,
+      "top_region_same": false
+    },
+    {
+      "first_run": "Cu_coord_identified_material_r0_s113_multiscale",
+      "second_run": "Cu_coord_identified_material_r1_s113_multiscale",
+      "same_condition": true,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.6,
+      "top_region_same": false
+    },
+    {
+      "first_run": "Cu_coord_identified_material_r1_s113_pointwise",
+      "second_run": "Cu_coord_identified_material_r1_s113_multiscale",
+      "same_condition": false,
+      "same_partition": true,
+      "same_fit_seed": true,
+      "spearman": 0.09999999999999999,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Cu_md_identified_material_r0_s113_pointwise",
+      "second_run": "Cu_md_identified_material_r0_s113_multiscale",
+      "same_condition": false,
+      "same_partition": true,
+      "same_fit_seed": true,
+      "spearman": 0.8999999999999998,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Cu_md_identified_material_r0_s113_pointwise",
+      "second_run": "Cu_md_identified_material_r1_s113_pointwise",
+      "same_condition": true,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.9999999999999999,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Cu_md_identified_material_r0_s113_pointwise",
+      "second_run": "Cu_md_identified_material_r1_s113_multiscale",
+      "same_condition": false,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.8999999999999998,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Cu_md_identified_material_r0_s113_multiscale",
+      "second_run": "Cu_md_identified_material_r1_s113_pointwise",
+      "same_condition": false,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.8999999999999998,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Cu_md_identified_material_r0_s113_multiscale",
+      "second_run": "Cu_md_identified_material_r1_s113_multiscale",
+      "same_condition": true,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.9999999999999999,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Cu_md_identified_material_r1_s113_pointwise",
+      "second_run": "Cu_md_identified_material_r1_s113_multiscale",
+      "same_condition": false,
+      "same_partition": true,
+      "same_fit_seed": true,
+      "spearman": 0.8999999999999998,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Cu_bader_identified_material_r0_s113_pointwise",
+      "second_run": "Cu_bader_identified_material_r0_s113_multiscale",
+      "same_condition": false,
+      "same_partition": true,
+      "same_fit_seed": true,
+      "spearman": 0.7,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Cu_bader_identified_material_r0_s113_pointwise",
+      "second_run": "Cu_bader_identified_material_r1_s113_pointwise",
+      "same_condition": true,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.6,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Cu_bader_identified_material_r0_s113_pointwise",
+      "second_run": "Cu_bader_identified_material_r1_s113_multiscale",
+      "same_condition": false,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.49999999999999994,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Cu_bader_identified_material_r0_s113_multiscale",
+      "second_run": "Cu_bader_identified_material_r1_s113_pointwise",
+      "same_condition": false,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.8999999999999998,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Cu_bader_identified_material_r0_s113_multiscale",
+      "second_run": "Cu_bader_identified_material_r1_s113_multiscale",
+      "same_condition": true,
+      "same_partition": false,
+      "same_fit_seed": true,
+      "spearman": 0.8999999999999998,
+      "top_region_same": true
+    },
+    {
+      "first_run": "Cu_bader_identified_material_r1_s113_pointwise",
+      "second_run": "Cu_bader_identified_material_r1_s113_multiscale",
+      "same_condition": false,
+      "same_partition": true,
+      "same_fit_seed": true,
+      "spearman": 0.7,
+      "top_region_same": true
+    }
+  ],
+  "elapsed_seconds": 139.91201949119568,
+  "limitations": [
+    "Available material IDs occur only in the scrape origin; identified-material results do not establish generalization to the unidentified feff origin.",
+    "Identifier disjointness cannot exclude cross-database aliases or structural near-duplicates without structures.",
+    "Conditional test-group bootstrap omits uncertainty over training samples; two resplits and (Q5) two fitting seeds only assess limited sensitivity.",
+    "All finite spectra retained: unusual maxima are not automatically treated as bad data; results depend on this choice.",
+    "Permutation perturbations can break spectral correlations. Regions overlap in physical support for multiscale features; degree and energy effects indicate predictive reliance, not causal spectroscopy."
+  ]
+}

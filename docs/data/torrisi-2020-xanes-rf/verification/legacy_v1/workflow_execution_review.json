@@ -1,0 +1,353 @@
+{
+  "reviewer": "workflow_execution subagent",
+  "status": "pass",
+  "scope": "Complete independent execution of every worked example from the input bundle, followed by task-specific summaries and comparison with a separate author execution.",
+  "limitations": "Independent execution validates completeness and repeatability. It does not itself establish scientific truth; the separate verification audit checks released evidence and adversarial mutations.",
+  "method": "No candidate function imports in this audit. JSON and CSV files compared recursively with absolute/relative numeric tolerance 1e-12; artifact presence and signatures checked.",
+  "execution_metadata": {
+    "reviewer": "workflow_execution subagent",
+    "recorded_utc": "2026-09-25T07:08:42.329858+00:00",
+    "candidate_initial_sha256": "096c1db9a3a05f1eaea3314c42b690ea9dd73e4f0f093620204978ea52c9f9aa",
+    "candidate_path": "/scratch/rst306/spectrasleuth_work/spectral_agent_bench/docs/data/torrisi-2020-xanes-rf/workflows/candidate.py",
+    "command": "MPLCONFIGDIR=/tmp/torrisi-replay-mpl OPENBLAS_NUM_THREADS=1 /tmp/torrisi-env/bin/python candidate.py ALL --inputs /scratch/rst306/spectrasleuth_work/spectral_agent_bench/docs/data/torrisi-2020-xanes-rf/inputs --output /tmp/torrisi-independent-100 --jobs 4",
+    "input_access": "Training reads only the eight input gzip JSONL files. Final summarizer reads generated outputs from its own output directory. No released model arrays, answer keys, verifier references or earlier question answers were read during candidate training.",
+    "output_initial_state": "The output directory did not exist before this invocation.",
+    "log_path": "/tmp/torrisi-independent-100.log",
+    "prior_aborted_run": {
+      "reviewer": "workflow_execution subagent",
+      "candidate_initial_sha256": "76bfab4b76112a6e1140926c3af28aa1a829516d07322670758607009e44d47e",
+      "candidate_path": "/scratch/rst306/spectrasleuth_work/spectral_agent_bench/docs/data/torrisi-2020-xanes-rf/workflows/candidate.py",
+      "command": "MPLCONFIGDIR=/tmp/torrisi-replay-mpl OPENBLAS_NUM_THREADS=1 /tmp/torrisi-env/bin/python candidate.py ALL --inputs /scratch/rst306/spectrasleuth_work/spectral_agent_bench/docs/data/torrisi-2020-xanes-rf/inputs --output /tmp/torrisi-independent-execution --jobs 4",
+      "input_access": "Candidate prepare() reads only {element}.jsonl.gz from inputs. Candidate does not import another local workflow or read ground-truth/reference data.",
+      "output_initial_state": "The output directory did not exist before this invocation; created empty.",
+      "log_path": "/tmp/torrisi-independent-execution.log",
+      "status": "aborted",
+      "reason": "Author changed portable benchmark protocol from 300 to 100 trees per forest; initial run was interrupted before any completed question.",
+      "exit_code": 130,
+      "completed_questions": [],
+      "recorded_utc": "2026-09-25T07:06:56.251489+00:00"
+    },
+    "environment": {
+      "python": "3.12.14",
+      "numpy": "2.5.3",
+      "scipy": "1.18.1",
+      "scikit_learn": "1.9.1",
+      "matplotlib": "3.11.2"
+    },
+    "summary_commands": [
+      "python summarize.py /tmp/torrisi-independent-100/Q1",
+      "python summarize.py /tmp/torrisi-independent-100/Q2",
+      "python summarize.py /tmp/torrisi-independent-100/Q3",
+      "python summarize.py /tmp/torrisi-independent-100/Q4",
+      "python summarize.py /tmp/torrisi-independent-100/Q5"
+    ],
+    "visual_inspection": {
+      "Q1": "Confusion panels for all eight elements render, with true/predicted class axes and mean counts readable.",
+      "Q2": "Eight parity panels render in angstrom with diagonal reference; dense central distances and tail departures visible.",
+      "Q3": "Eight charge-parity panels render with diagonal reference and charge axes; no blank panels.",
+      "Q4": "All24 element/target panels render readable coefficient labels and localized intervals; peak is treated as a global descriptor.",
+      "Q5": "All16 element/target panels render overlaid supplied and max-normalization pointwise importance curves with legends and energy axes."
+    },
+    "exit_code": 0,
+    "completed_questions": [
+      "Q1",
+      "Q2",
+      "Q3",
+      "Q4",
+      "Q5"
+    ],
+    "completed_utc": "2026-09-25T07:18:36.543780+00:00",
+    "final_workflow_note": "ALL completed using launch-hash numerical implementation. The author subsequently added automatic summary invocation and improved presentation; final summarize.py was executed explicitly for all five completed outputs. A fresh standalone Q2 invocation then exercised final candidate.py including automatic summary integration.",
+    "standalone_command": "MPLCONFIGDIR=/tmp/torrisi-replay-mpl OPENBLAS_NUM_THREADS=1 /tmp/torrisi-env/bin/python candidate.py Q2 --inputs /scratch/rst306/spectrasleuth_work/spectral_agent_bench/docs/data/torrisi-2020-xanes-rf/inputs --output /tmp/torrisi-standalone-Q2 --jobs 4",
+    "standalone_exit_code": 0,
+    "standalone_output_initial_state": "Directory absent before invocation.",
+    "final_workflow_sha256": {
+      "candidate.py": "096c1db9a3a05f1eaea3314c42b690ea9dd73e4f0f093620204978ea52c9f9aa",
+      "summarize.py": "88fe3ea5edd5daeaf7f644973b6e0f01c4955a7024030877b724c7b47c4f3dfa",
+      "verify.py": "0e0f82582c77f8a58bd0f29d2012b00e7902c92b6cfaa2d06eb075ea0ac02396"
+    },
+    "readme_review": {
+      "status": "passed",
+      "candidate_commands": "ALL and standalone Q2 executed as documented with equivalent absolute paths and the pinned environment.",
+      "dependencies": "pip check reports no broken requirements.",
+      "note": "Initial source-anchor regeneration command omission was reported and repaired. Final README now documents prepare_assets.py, audit_verification.py --release, build_entry.py, and independent-model audit commands."
+    }
+  },
+  "independent_execution": {
+    "question": "ALL",
+    "elapsed_seconds": 478.1065511830384,
+    "inputs": "/scratch/rst306/spectrasleuth_work/spectral_agent_bench/docs/data/torrisi-2020-xanes-rf/inputs",
+    "outputs": "/tmp/torrisi-independent-100",
+    "questions": [
+      "Q1",
+      "Q2",
+      "Q3",
+      "Q4",
+      "Q5"
+    ]
+  },
+  "reference_execution": {
+    "status": "complete",
+    "questions": [
+      "Q1",
+      "Q2",
+      "Q3",
+      "Q4",
+      "Q5"
+    ],
+    "reference_assembly": [
+      {
+        "command": "candidate.py ALL",
+        "exit_code": 143,
+        "status": "interrupted",
+        "completed_questions": [
+          "Q1",
+          "Q2",
+          "Q3",
+          "Q4"
+        ],
+        "note": "SIGTERM during Q5. No Python exception; signal source not established."
+      },
+      {
+        "command": "candidate.py Q5",
+        "exit_code": 143,
+        "status": "interrupted",
+        "note": "SIGTERM after Co conditions; no completed Q5 artifact claimed."
+      },
+      {
+        "command": "resume_reference_q5.py",
+        "exit_code": 0,
+        "status": "complete",
+        "details": {
+          "question": "Q5",
+          "elapsed_seconds": 130.99823189608287,
+          "method": "Reused 32 identical completed Q4 FEFF model conditions; trained or resumed 32 maximum-normalized conditions from raw inputs.",
+          "reused_q4_conditions": 32,
+          "fresh_conditions": 32,
+          "resumed_checkpoint_conditions": 0,
+          "q4": "/tmp/torrisi-reference-100/Q4",
+          "inputs": "/scratch/rst306/spectrasleuth_work/spectral_agent_bench/docs/data/torrisi-2020-xanes-rf/inputs",
+          "output": "/tmp/torrisi-reference-100/Q5"
+        }
+      }
+    ],
+    "note": "Q5 reuses 32 identical FEFF model conditions from completed Q4 as the ALL in-memory cache would, and freshly fits 32 maximum-normalized conditions with per-condition checkpoints. All five outputs independently compared with the completed separate-agent ALL run."
+  },
+  "final_standalone_check": {
+    "question": "Q2",
+    "status": "pass",
+    "check": "Final standalone command reproduces ALL numerical results and automatically creates the same scientific conclusion and diagnostic plot.",
+    "execution": {
+      "question": "Q2",
+      "elapsed_seconds": 36.438746612053365,
+      "inputs": "/scratch/rst306/spectrasleuth_work/spectral_agent_bench/docs/data/torrisi-2020-xanes-rf/inputs",
+      "outputs": "/tmp/torrisi-standalone-Q2",
+      "questions": [
+        "Q2"
+      ]
+    },
+    "artifacts_sha256": {
+      "conclusion.md": "5b9191972fc5de6b9fcdf3f0546b90aa024054e429178c3d210e8aa0d1787716",
+      "diagnostics.png": "e1f18e8f954c3ad61d59482fd6f5ab9ea686b49ada79d6be8e9670b21cdd5b48",
+      "execution.json": "6c0759f8b57978371d0d67a39418d06bf48cfb62681449ce1362b74db20ab7ed",
+      "feature_metadata.json": "1062d0d12ce8a49e01ae81dd2381fc5dfcaf28d15378ba7658f9f94f1f4a5f35",
+      "importances.csv": "8626e122ace9df7926ade1ab3b1d4ba396e792d09c1387c3255420d59bd37902",
+      "plot.png": "710547c018a8e5ba4d33fa20757f4bc71cf68583d45d2ab751e7ec0332fbb4b7",
+      "predictions.csv": "b83680dd74e776d46f59ee93615c37b51a151f1ddadd1e1ca33d1c9d72f3ed0d",
+      "result.json": "8fe897ae0c8ccaac180fd44f0f2b61f5703df0dd375d34c52184770080e09193",
+      "splits.json": "3940bfa2c105e05850e95e399be49a2c3aa7963f58f17d25390eff4bfbd3b8f7"
+    }
+  },
+  "workflow_hashes_at_audit": {
+    "candidate.py": "096c1db9a3a05f1eaea3314c42b690ea9dd73e4f0f093620204978ea52c9f9aa",
+    "summarize.py": "88fe3ea5edd5daeaf7f644973b6e0f01c4955a7024030877b724c7b47c4f3dfa",
+    "verify.py": "0e0f82582c77f8a58bd0f29d2012b00e7902c92b6cfaa2d06eb075ea0ac02396"
+  },
+  "questions": {
+    "Q1": {
+      "model_configurations": 16,
+      "checks": {
+        "result.json": "numerically identical within 1e-12",
+        "splits.json": "numerically identical within 1e-12",
+        "feature_metadata.json": "numerically identical within 1e-12",
+        "comparisons.csv": {
+          "rows": 8,
+          "max_absolute_numeric_difference": 0.0
+        },
+        "confusion.csv": {
+          "rows": 72,
+          "max_absolute_numeric_difference": 0.0
+        },
+        "importances.csv": {
+          "rows": 4800,
+          "max_absolute_numeric_difference": 0.0
+        },
+        "predictions.csv": {
+          "rows": 23166,
+          "max_absolute_numeric_difference": 0.0
+        },
+        "plot.png": "present, valid PNG signature",
+        "diagnostics.png": "present, valid PNG signature"
+      },
+      "artifacts_sha256": {
+        "comparisons.csv": "027d582e8cdfe8e5a54c84beab463e52b0e08ee80f3d0ea944dea22022547cac",
+        "conclusion.md": "e7991b9ef618d8d82a48aa68987b1dce0ab9874c0888235fb4e7ff517395b21c",
+        "confusion.csv": "d3507870537c3a3c0d2c5d335eb35254e58c83e0c71338d0fff2994431f54fe2",
+        "diagnostics.png": "cc5be97edf5b9d9ada2db7fee7949f424d5e0d89e7fec3e13c9975ba44d9b2a7",
+        "feature_metadata.json": "1062d0d12ce8a49e01ae81dd2381fc5dfcaf28d15378ba7658f9f94f1f4a5f35",
+        "importances.csv": "2790f55596364b7b366e3a7610d6e444f92c6ed822466a6b6277e8d39e5a8725",
+        "plot.png": "dc21c135772451b560a48091a4743d9f74c13b968b727921ab41f244d0b737c7",
+        "predictions.csv": "6021be5e25cbefd46652f7b80e2c6e68a06fb12fd04af3122ca7ce3a381cb595",
+        "result.json": "9134282bb3c3ef5705a03f5d7f77351c4511d5492cdf139e311325570e11f7df",
+        "splits.json": "7b1748d26b2176ab0843da26cb9e6de34fda194541a4aaf81ffd45c32ddd5e6e"
+      }
+    },
+    "Q2": {
+      "model_configurations": 8,
+      "checks": {
+        "result.json": "numerically identical within 1e-12",
+        "splits.json": "numerically identical within 1e-12",
+        "feature_metadata.json": "numerically identical within 1e-12",
+        "importances.csv": {
+          "rows": 2400,
+          "max_absolute_numeric_difference": 0.0
+        },
+        "predictions.csv": {
+          "rows": 11583,
+          "max_absolute_numeric_difference": 1.7763568394002505e-15
+        },
+        "plot.png": "present, valid PNG signature",
+        "diagnostics.png": "present, valid PNG signature"
+      },
+      "artifacts_sha256": {
+        "conclusion.md": "5b9191972fc5de6b9fcdf3f0546b90aa024054e429178c3d210e8aa0d1787716",
+        "diagnostics.png": "e1f18e8f954c3ad61d59482fd6f5ab9ea686b49ada79d6be8e9670b21cdd5b48",
+        "feature_metadata.json": "1062d0d12ce8a49e01ae81dd2381fc5dfcaf28d15378ba7658f9f94f1f4a5f35",
+        "importances.csv": "8626e122ace9df7926ade1ab3b1d4ba396e792d09c1387c3255420d59bd37902",
+        "plot.png": "710547c018a8e5ba4d33fa20757f4bc71cf68583d45d2ab751e7ec0332fbb4b7",
+        "predictions.csv": "55ff1a0b59320f5bd50f04c275636e09d945f9afce39811c83217fca5a1cee80",
+        "result.json": "c066fbd0cffc2d1ac8dd377bd1d6849cd2d2031cb397f57d288a9e6216e77f46",
+        "splits.json": "3940bfa2c105e05850e95e399be49a2c3aa7963f58f17d25390eff4bfbd3b8f7"
+      }
+    },
+    "Q3": {
+      "model_configurations": 16,
+      "checks": {
+        "result.json": "numerically identical within 1e-12",
+        "splits.json": "numerically identical within 1e-12",
+        "feature_metadata.json": "numerically identical within 1e-12",
+        "comparisons.csv": {
+          "rows": 8,
+          "max_absolute_numeric_difference": 2.220446049250313e-16
+        },
+        "importances.csv": {
+          "rows": 2424,
+          "max_absolute_numeric_difference": 0.0
+        },
+        "predictions.csv": {
+          "rows": 13992,
+          "max_absolute_numeric_difference": 1.3322676295501878e-15
+        },
+        "plot.png": "present, valid PNG signature",
+        "diagnostics.png": "present, valid PNG signature"
+      },
+      "artifacts_sha256": {
+        "comparisons.csv": "af210a10515397114d43790110c5a612cbfedeee372db03368397147ead596ae",
+        "conclusion.md": "be8a91b145ae453463d49f8dead8f626c2ee2e2db0263a1150dc8a94055e4b5b",
+        "diagnostics.png": "0e60d0394335f14e44e3f3f442dce146ae255c5cfb2a6365e6659eec2e4dff87",
+        "feature_metadata.json": "dba67f9ad9c398b5b7e0b3f656582230ad5623fb71a2d535a04fa90d317694d6",
+        "importances.csv": "059ad17430b3ea3dc0236e727689d0d621465388622584b3dc2fe4b7779f16c6",
+        "plot.png": "56bd4e08f53b6e3e02b896d37397e93895e377d662b34b28e811c34a4a8bd3d0",
+        "predictions.csv": "21f12883464b860d571f6d573c2ede2c9f532365ebbd4690e1064fc751c953b6",
+        "result.json": "46162daeb5c9d28387837ed043655f55561f4ec6771a705e403588047b7add83",
+        "splits.json": "916a417268bf9cc9215cdf7f7f2f8be615f4005abcab1a4499e83cce35dfb547"
+      }
+    },
+    "Q4": {
+      "model_configurations": 48,
+      "checks": {
+        "result.json": "numerically identical within 1e-12",
+        "splits.json": "numerically identical within 1e-12",
+        "feature_metadata.json": "numerically identical within 1e-12",
+        "coefficient_families.csv": {
+          "rows": 24,
+          "max_absolute_numeric_difference": 0.0
+        },
+        "comparisons.csv": {
+          "rows": 24,
+          "max_absolute_numeric_difference": 3.3306690738754696e-16
+        },
+        "importances.csv": {
+          "rows": 18504,
+          "max_absolute_numeric_difference": 0.0
+        },
+        "predictions.csv": {
+          "rows": 60324,
+          "max_absolute_numeric_difference": 1.7763568394002505e-15
+        },
+        "ranked_features.csv": {
+          "rows": 288,
+          "max_absolute_numeric_difference": 0.0
+        },
+        "plot.png": "present, valid PNG signature",
+        "diagnostics.png": "present, valid PNG signature"
+      },
+      "artifacts_sha256": {
+        "coefficient_families.csv": "1a774e8d39bfcc87e819d52336fb7bf63b12b1ddb71de21be8837210fa650aa7",
+        "comparisons.csv": "7aae8dddf79cb3a60c9fe9e31c359a6f9d58537bf24fc83cb99596eb3f50501e",
+        "conclusion.md": "715e276f609620944344cb86ee595a1d2b80869450aea15cdbad06eb64991a45",
+        "diagnostics.png": "8705fed11814b0b5decc609e4971440893103cf3519c9880e6aee1718befe883",
+        "feature_metadata.json": "c6e03caa7075e7c2b2e940da050f615a5e50b12f0be8c97633b60160b3850cdb",
+        "importances.csv": "c7fc8d6679040feddf7904e94a924c4da0651f3b46cd3dac1abc8f6d458788f6",
+        "plot.png": "9940528605c6b18d0cd5ebe1f2f78bb668414cbcf5746e55878be9b43fc04a0f",
+        "predictions.csv": "3cf8ce88f214c84deada27d8f728987bc414aad9c92054ed5a50e375f3407849",
+        "ranked_features.csv": "da05c77619fbf8a85da3d62f1d939d11bfa9effab2d53f79555b300e2d495e2a",
+        "result.json": "5842bd00cee2b7b67154bf41f49dcaf0abb2c109073d4105212fdc2e84dadc79",
+        "splits.json": "a604ae096a0aa066eecc0418d4917faa3ade29f66bd0bdee466d52803891d10d"
+      }
+    },
+    "Q5": {
+      "model_configurations": 64,
+      "checks": {
+        "result.json": "numerically identical within 1e-12",
+        "splits.json": "numerically identical within 1e-12",
+        "feature_metadata.json": "numerically identical within 1e-12",
+        "coefficient_families.csv": {
+          "rows": 32,
+          "max_absolute_numeric_difference": 0.0
+        },
+        "comparisons.csv": {
+          "rows": 32,
+          "max_absolute_numeric_difference": 2.220446049250313e-16
+        },
+        "importances.csv": {
+          "rows": 24672,
+          "max_absolute_numeric_difference": 0.0
+        },
+        "predictions.csv": {
+          "rows": 92664,
+          "max_absolute_numeric_difference": 1.7763568394002505e-15
+        },
+        "ranked_features.csv": {
+          "rows": 384,
+          "max_absolute_numeric_difference": 0.0
+        },
+        "plot.png": "present, valid PNG signature",
+        "diagnostics.png": "present, valid PNG signature"
+      },
+      "artifacts_sha256": {
+        "coefficient_families.csv": "bfff0a44ebbe4d340b8e8b4df8ed38a3e0caee17d2eca72493883a9b4e0170c0",
+        "comparisons.csv": "f5f838b57af1ae66d02a3870206801d90b2eab697c2d07a3c479fdd70728d51e",
+        "conclusion.md": "3b3c79e9091c7f85a368792a55ed8f80284b69f52af44d4b41e2ba786550f900",
+        "diagnostics.png": "60285c8fe49430f731d5bf3c58807119a77ac99737b4cedeb58903b6b2dfd011",
+        "feature_metadata.json": "c6e03caa7075e7c2b2e940da050f615a5e50b12f0be8c97633b60160b3850cdb",
+        "importances.csv": "9dabe443cd774d83ccfa91151bfb2628213cc6a0e9ffc48c55f3353e9fcb3e58",
+        "plot.png": "0ff409c2aa8a09926e9d5bd1d172ee93fbb2b6602a46d92d0ca9acfb5f28356e",
+        "predictions.csv": "f35bf07c9471e83eab80742b03498845c6fa595c574307299fa801bb296bd61a",
+        "ranked_features.csv": "0a81faa5d919c479fe39b7c2a7c1da4785d6cb2979d603df4e14c2b9cbd0749f",
+        "result.json": "4763cc9248e4d3dfa84ed4e8c726e1ac82303aea70f69e7a7b68d6409da04696",
+        "splits.json": "1eeab43734f691a952e8d4900f864f22954c611d7694ada71bdf55693408035c"
+      }
+    }
+  }
+}

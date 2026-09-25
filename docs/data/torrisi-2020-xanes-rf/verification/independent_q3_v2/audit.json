@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "n_runs": 128,
+  "n_comparisons": 64,
+  "n_predictions": 43576,
+  "n_partition_rows": 654512,
+  "checks": [
+    "one partition role for every source record per run",
+    "one finite prediction per test record and no others",
+    "metrics exactly recomputed from released Bader labels",
+    "paired conditions have identical inclusion and train/validation/test/excluded assignments",
+    "material identifiers disjoint across train, validation and test",
+    "no missing Bader values enter fitting or scoring",
+    "only full/white_line and target bader declared"
+  ]
+}

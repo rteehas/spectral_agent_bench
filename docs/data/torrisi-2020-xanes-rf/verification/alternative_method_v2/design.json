@@ -1,0 +1,82 @@
+{
+  "question": "Q2",
+  "runs": [
+    {
+      "run_id": "Ti_alternative",
+      "element": "Ti",
+      "target": "md",
+      "condition": "model",
+      "comparison_id": "Ti_holdout",
+      "generalization": "identified_material"
+    },
+    {
+      "run_id": "V_alternative",
+      "element": "V",
+      "target": "md",
+      "condition": "model",
+      "comparison_id": "V_holdout",
+      "generalization": "identified_material"
+    },
+    {
+      "run_id": "Cr_alternative",
+      "element": "Cr",
+      "target": "md",
+      "condition": "model",
+      "comparison_id": "Cr_holdout",
+      "generalization": "identified_material"
+    },
+    {
+      "run_id": "Mn_alternative",
+      "element": "Mn",
+      "target": "md",
+      "condition": "model",
+      "comparison_id": "Mn_holdout",
+      "generalization": "identified_material"
+    },
+    {
+      "run_id": "Fe_alternative",
+      "element": "Fe",
+      "target": "md",
+      "condition": "model",
+      "comparison_id": "Fe_holdout",
+      "generalization": "identified_material"
+    },
+    {
+      "run_id": "Co_alternative",
+      "element": "Co",
+      "target": "md",
+      "condition": "model",
+      "comparison_id": "Co_holdout",
+      "generalization": "identified_material"
+    },
+    {
+      "run_id": "Ni_alternative",
+      "element": "Ni",
+      "target": "md",
+      "condition": "model",
+      "comparison_id": "Ni_holdout",
+      "generalization": "identified_material"
+    },
+    {
+      "run_id": "Cu_alternative",
+      "element": "Cu",
+      "target": "md",
+      "condition": "model",
+      "comparison_id": "Cu_holdout",
+      "generalization": "identified_material"
+    }
+  ],
+  "method": "ExtraTreesRegressor",
+  "parameters": {
+    "n_estimators": 23,
+    "max_depth": 14,
+    "min_samples_leaf": 3,
+    "max_features": 0.6,
+    "random_state": 703
+  },
+  "eligibility": "Known material ID, coordination in 4/5/6, finite distance/spectrum, positive spectral maximum.",
+  "features": "Every third raw absorption sample concatenated with every third adjacent absorption difference; no learned transform.",
+  "split": "GroupShuffleSplit by metadata.id, 27% groups test with seed 701; 18% remaining groups validation with seed 702.",
+  "tails": "Training-distance 10th and 90th percentiles, separately by element.",
+  "reproduce_command": "python code/alternative.py --inputs INPUT_DIRECTORY --output NEW_OUTPUT_DIRECTORY"
+}

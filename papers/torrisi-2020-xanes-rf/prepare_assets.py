@@ -74,23 +74,7 @@ def main():
         })
         print(f"Prepared {element}: {count} rows, {output_path.stat().st_size} bytes", flush=True)
 
-    (inputs / "README.md").write_text(
-        "# Input schema\n\n"
-        "Each `<element>.jsonl.gz` is a gzip-compressed JSON Lines file. Each line "
-        "describes one absorbing-site XANES spectrum for the named element. "
-        "Rows retain their original order.\n\n"
-        "- `source_row`: zero-based row number in the source element file.\n"
-        "- `E`: photon-energy samples in eV.\n"
-        "- `mu`: absorption values at the corresponding energy samples.\n"
-        "- `coordination`: released absorbing-site coordination-number label.\n"
-        "- `avg_nn_dists`: mean nearest-neighbor distance in angstrom.\n"
-        "- `nn_min-max`: largest minus smallest nearest-neighbor distance in angstrom.\n"
-        "- `bader`: released Bader-charge label in electron-charge units, or null when unavailable.\n"
-        "- `metadata`: released spectrum origin and material identifier, where available.\n\n"
-        "These are the earliest spectral records supplied in the open release: "
-        "they have already been interpolated onto energy grids and supplied with "
-        "structural labels. They are not native FEFF output or detector-raw measurements.\n"
-    )
+    # Field definitions belong in each standalone prompt, not a recipe input.
     provenance = {
         "paper_doi": "10.1038/s41524-020-00376-6",
         "data_landing_url": "https://data.matr.io/4/",

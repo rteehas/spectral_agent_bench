@@ -1,0 +1,3773 @@
+{
+  "question": "Q3",
+  "numerical_integrity_pass": true,
+  "scientific_pass": null,
+  "status": "scientific_review_required",
+  "run_count": 128,
+  "comparison_count": 64,
+  "source_input_sha256": {
+    "Ti": "ce5e4255439233ff903dc6be0e8a3b1acc9327e72523a66403d2a640fc2f9792",
+    "V": "755c3407c7b47ed9f96becfdb21cf14cc64213e9c4fedec2d493a7fdf0bf1b5b",
+    "Cr": "3b4af75470896db924e60c95d99efbde1152fbc6c848772a07d25abb76eb5684",
+    "Mn": "38f99877c8ece423bb23676463bc4ba767ac6d2bc057edcecf766263c6363dd7",
+    "Fe": "1791e54a4a9d56009d83b5405179c12aa84aa5e1fc6a401af3dfdc1ae7e4b12e",
+    "Co": "f9b3b80ca0a6e44a03dcd9443a90332f7eb42af5a967a8f51923541fb32f6155",
+    "Ni": "a9eb1ad9fde915f8f3387b553395707625d8be8180a4faa2dbb4debf979d2f04",
+    "Cu": "a5c8457b95cc5557616c5c5db3e38fe5cd9d29b8026859b3d3509e35ffea95e0"
+  },
+  "artifacts": {
+    "report_sha256": "c3b0a96d00b60a51a19e7cc4a80686e37fe90e229576e3b01d34a161b0d907d4",
+    "code_files": {
+      "code/analyze.py": "4cb9e7b03be76cd09e88c7f73661d976ef0303b1976bf14d24b8dfea8c6b433c",
+      "code/audit_and_summarize.py": "fa8044624a4c01f6b81236fc812e71be280297ec02c96a13a58f4a395af03efe",
+      "code/requirements.txt": "2ff929808b32059ff4b55a767fe382355bf970cc1af7e42dfad31e4e4f7bf528",
+      "code/write_report.py": "e0c07c49184ebc2ea28c38c910d87713d01fc211633822568e08e6e5f0ab7ac8"
+    },
+    "figures": [
+      "figures/material_effect_uncertainty.png",
+      "figures/heldout_predictions.png",
+      "figures/sensitivity.png",
+      "figures/coverage.png"
+    ]
+  },
+  "checks": [
+    {
+      "run_id": "Ti_primary_1729_white_line",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 264,
+        "train": 834,
+        "test": 256,
+        "excluded": 3576
+      },
+      "distinct_material_ids": {
+        "train": 423,
+        "validation": 141,
+        "test": 141
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1354
+      },
+      "metrics_recomputed": {
+        "mae": 0.09753238638112882,
+        "r2": 0.1307271733041404
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Ti_primary_1729_full",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 264,
+        "train": 834,
+        "test": 256,
+        "excluded": 3576
+      },
+      "distinct_material_ids": {
+        "train": 423,
+        "validation": 141,
+        "test": 141
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1354
+      },
+      "metrics_recomputed": {
+        "mae": 0.07270637866399876,
+        "r2": 0.5306895845859463
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Ti_primary_2718_white_line",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 279,
+        "train": 825,
+        "test": 250,
+        "excluded": 3576
+      },
+      "distinct_material_ids": {
+        "train": 423,
+        "validation": 141,
+        "test": 141
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1354
+      },
+      "metrics_recomputed": {
+        "mae": 0.12189848887660312,
+        "r2": 0.12203796602447503
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Ti_primary_2718_full",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 279,
+        "train": 825,
+        "test": 250,
+        "excluded": 3576
+      },
+      "distinct_material_ids": {
+        "train": 423,
+        "validation": 141,
+        "test": 141
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1354
+      },
+      "metrics_recomputed": {
+        "mae": 0.07873631561023003,
+        "r2": 0.5222397035620283
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Ti_primary_31415_white_line",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 266,
+        "train": 810,
+        "test": 278,
+        "excluded": 3576
+      },
+      "distinct_material_ids": {
+        "train": 423,
+        "validation": 141,
+        "test": 141
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1354
+      },
+      "metrics_recomputed": {
+        "mae": 0.09602950807599084,
+        "r2": 0.021932727909728555
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Ti_primary_31415_full",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 266,
+        "train": 810,
+        "test": 278,
+        "excluded": 3576
+      },
+      "distinct_material_ids": {
+        "train": 423,
+        "validation": 141,
+        "test": 141
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1354
+      },
+      "metrics_recomputed": {
+        "mae": 0.07154959817865982,
+        "r2": 0.516764903634847
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Ti_primary_57721_white_line",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 237,
+        "train": 853,
+        "test": 264,
+        "excluded": 3576
+      },
+      "distinct_material_ids": {
+        "train": 423,
+        "validation": 141,
+        "test": 141
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1354
+      },
+      "metrics_recomputed": {
+        "mae": 0.10024498457767687,
+        "r2": 0.0028967003693307625
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Ti_primary_57721_full",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 237,
+        "train": 853,
+        "test": 264,
+        "excluded": 3576
+      },
+      "distinct_material_ids": {
+        "train": 423,
+        "validation": 141,
+        "test": 141
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1354
+      },
+      "metrics_recomputed": {
+        "mae": 0.07115952899686806,
+        "r2": 0.6595643712319957
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Ti_primary_81173_white_line",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 233,
+        "train": 819,
+        "test": 302,
+        "excluded": 3576
+      },
+      "distinct_material_ids": {
+        "train": 423,
+        "validation": 141,
+        "test": 141
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1354
+      },
+      "metrics_recomputed": {
+        "mae": 0.08586882273399181,
+        "r2": 0.06420002875709896
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Ti_primary_81173_full",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 233,
+        "train": 819,
+        "test": 302,
+        "excluded": 3576
+      },
+      "distinct_material_ids": {
+        "train": 423,
+        "validation": 141,
+        "test": 141
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1354
+      },
+      "metrics_recomputed": {
+        "mae": 0.0656309374042699,
+        "r2": 0.5420771287414878
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Ti_unit_peak_normalized_1729_white_line",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 264,
+        "train": 834,
+        "test": 256,
+        "excluded": 3576
+      },
+      "distinct_material_ids": {
+        "train": 423,
+        "validation": 141,
+        "test": 141
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1354
+      },
+      "metrics_recomputed": {
+        "mae": 0.09753238638112882,
+        "r2": 0.1307271733041404
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Ti_unit_peak_normalized_1729_full",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 264,
+        "train": 834,
+        "test": 256,
+        "excluded": 3576
+      },
+      "distinct_material_ids": {
+        "train": 423,
+        "validation": 141,
+        "test": 141
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1354
+      },
+      "metrics_recomputed": {
+        "mae": 0.07187103752256599,
+        "r2": 0.5682912267912394
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Ti_spectrum_identified_1729_white_line",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 271,
+        "train": 812,
+        "test": 271,
+        "excluded": 3576
+      },
+      "distinct_material_ids": {
+        "train": 504,
+        "validation": 228,
+        "test": 222
+      },
+      "material_id_overlap": {
+        "train_test": 121,
+        "train_validation": 113,
+        "validation_test": 55
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1354
+      },
+      "metrics_recomputed": {
+        "mae": 0.08770151134237537,
+        "r2": 0.12882988103389958
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Ti_spectrum_identified_1729_full",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 271,
+        "train": 812,
+        "test": 271,
+        "excluded": 3576
+      },
+      "distinct_material_ids": {
+        "train": 504,
+        "validation": 228,
+        "test": 222
+      },
+      "material_id_overlap": {
+        "train_test": 121,
+        "train_validation": 113,
+        "validation_test": 55
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1354
+      },
+      "metrics_recomputed": {
+        "mae": 0.05361968764349275,
+        "r2": 0.6528550704132661
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Ti_spectrum_all_1729_white_line",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 654,
+        "train": 1959,
+        "test": 654,
+        "excluded": 1663
+      },
+      "distinct_material_ids": {
+        "train": 513,
+        "validation": 224,
+        "test": 206
+      },
+      "material_id_overlap": {
+        "train_test": 111,
+        "train_validation": 111,
+        "validation_test": 57
+      },
+      "active_rows_without_material_id": 1913,
+      "active_source_counts": {
+        "feff": 1913,
+        "scrape": 1354
+      },
+      "metrics_recomputed": {
+        "mae": 0.09349419828406963,
+        "r2": 0.2084894858261599
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Ti_spectrum_all_1729_full",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 654,
+        "train": 1959,
+        "test": 654,
+        "excluded": 1663
+      },
+      "distinct_material_ids": {
+        "train": 513,
+        "validation": 224,
+        "test": 206
+      },
+      "material_id_overlap": {
+        "train_test": 111,
+        "train_validation": 111,
+        "validation_test": 57
+      },
+      "active_rows_without_material_id": 1913,
+      "active_source_counts": {
+        "feff": 1913,
+        "scrape": 1354
+      },
+      "metrics_recomputed": {
+        "mae": 0.06463250414258638,
+        "r2": 0.6161892620512451
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "V_primary_1729_white_line",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 469,
+        "train": 1328,
+        "test": 431,
+        "excluded": 4892
+      },
+      "distinct_material_ids": {
+        "train": 783,
+        "validation": 261,
+        "test": 261
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 2228
+      },
+      "metrics_recomputed": {
+        "mae": 0.16241602496687516,
+        "r2": 0.25588113150485803
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "V_primary_1729_full",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 469,
+        "train": 1328,
+        "test": 431,
+        "excluded": 4892
+      },
+      "distinct_material_ids": {
+        "train": 783,
+        "validation": 261,
+        "test": 261
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 2228
+      },
+      "metrics_recomputed": {
+        "mae": 0.06788566321843482,
+        "r2": 0.8381791275293429
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "V_primary_2718_white_line",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 443,
+        "train": 1323,
+        "test": 462,
+        "excluded": 4892
+      },
+      "distinct_material_ids": {
+        "train": 783,
+        "validation": 261,
+        "test": 261
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 2228
+      },
+      "metrics_recomputed": {
+        "mae": 0.1583873791625502,
+        "r2": 0.3111662065856051
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "V_primary_2718_full",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 443,
+        "train": 1323,
+        "test": 462,
+        "excluded": 4892
+      },
+      "distinct_material_ids": {
+        "train": 783,
+        "validation": 261,
+        "test": 261
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 2228
+      },
+      "metrics_recomputed": {
+        "mae": 0.06811472276477681,
+        "r2": 0.8478802863114316
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "V_primary_31415_white_line",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 429,
+        "train": 1316,
+        "test": 483,
+        "excluded": 4892
+      },
+      "distinct_material_ids": {
+        "train": 783,
+        "validation": 261,
+        "test": 261
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 2228
+      },
+      "metrics_recomputed": {
+        "mae": 0.14905572187486843,
+        "r2": 0.3126649132271758
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "V_primary_31415_full",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 429,
+        "train": 1316,
+        "test": 483,
+        "excluded": 4892
+      },
+      "distinct_material_ids": {
+        "train": 783,
+        "validation": 261,
+        "test": 261
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 2228
+      },
+      "metrics_recomputed": {
+        "mae": 0.0690537466621319,
+        "r2": 0.8417412653339529
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "V_primary_57721_white_line",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 455,
+        "train": 1330,
+        "test": 443,
+        "excluded": 4892
+      },
+      "distinct_material_ids": {
+        "train": 783,
+        "validation": 261,
+        "test": 261
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 2228
+      },
+      "metrics_recomputed": {
+        "mae": 0.13726691437812946,
+        "r2": 0.3564580008052507
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "V_primary_57721_full",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 455,
+        "train": 1330,
+        "test": 443,
+        "excluded": 4892
+      },
+      "distinct_material_ids": {
+        "train": 783,
+        "validation": 261,
+        "test": 261
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 2228
+      },
+      "metrics_recomputed": {
+        "mae": 0.07371443782449576,
+        "r2": 0.8147050860384365
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "V_primary_81173_white_line",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 440,
+        "train": 1327,
+        "test": 461,
+        "excluded": 4892
+      },
+      "distinct_material_ids": {
+        "train": 783,
+        "validation": 261,
+        "test": 261
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 2228
+      },
+      "metrics_recomputed": {
+        "mae": 0.14987501641171327,
+        "r2": 0.27478634652071565
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "V_primary_81173_full",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 440,
+        "train": 1327,
+        "test": 461,
+        "excluded": 4892
+      },
+      "distinct_material_ids": {
+        "train": 783,
+        "validation": 261,
+        "test": 261
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 2228
+      },
+      "metrics_recomputed": {
+        "mae": 0.07279561445529603,
+        "r2": 0.8232672015001313
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "V_unit_peak_normalized_1729_white_line",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 469,
+        "train": 1328,
+        "test": 431,
+        "excluded": 4892
+      },
+      "distinct_material_ids": {
+        "train": 783,
+        "validation": 261,
+        "test": 261
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 2228
+      },
+      "metrics_recomputed": {
+        "mae": 0.16241602496687516,
+        "r2": 0.25588113150485803
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "V_unit_peak_normalized_1729_full",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 469,
+        "train": 1328,
+        "test": 431,
+        "excluded": 4892
+      },
+      "distinct_material_ids": {
+        "train": 783,
+        "validation": 261,
+        "test": 261
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 2228
+      },
+      "metrics_recomputed": {
+        "mae": 0.07159208229656436,
+        "r2": 0.8233995083168926
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "V_spectrum_identified_1729_white_line",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 446,
+        "train": 1336,
+        "test": 446,
+        "excluded": 4892
+      },
+      "distinct_material_ids": {
+        "train": 913,
+        "validation": 392,
+        "test": 376
+      },
+      "material_id_overlap": {
+        "train_test": 170,
+        "train_validation": 184,
+        "validation_test": 81
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 2228
+      },
+      "metrics_recomputed": {
+        "mae": 0.14918433825198382,
+        "r2": 0.3801367349320176
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "V_spectrum_identified_1729_full",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 446,
+        "train": 1336,
+        "test": 446,
+        "excluded": 4892
+      },
+      "distinct_material_ids": {
+        "train": 913,
+        "validation": 392,
+        "test": 376
+      },
+      "material_id_overlap": {
+        "train_test": 170,
+        "train_validation": 184,
+        "validation_test": 81
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 2228
+      },
+      "metrics_recomputed": {
+        "mae": 0.06945614307504636,
+        "r2": 0.8333359882382407
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "V_spectrum_all_1729_white_line",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 801,
+        "train": 2399,
+        "test": 801,
+        "excluded": 3119
+      },
+      "distinct_material_ids": {
+        "train": 907,
+        "validation": 385,
+        "test": 399
+      },
+      "material_id_overlap": {
+        "train_test": 178,
+        "train_validation": 176,
+        "validation_test": 95
+      },
+      "active_rows_without_material_id": 1773,
+      "active_source_counts": {
+        "scrape": 2228,
+        "feff": 1773
+      },
+      "metrics_recomputed": {
+        "mae": 0.16153891370731713,
+        "r2": 0.2830944315843169
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "V_spectrum_all_1729_full",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 801,
+        "train": 2399,
+        "test": 801,
+        "excluded": 3119
+      },
+      "distinct_material_ids": {
+        "train": 907,
+        "validation": 385,
+        "test": 399
+      },
+      "material_id_overlap": {
+        "train_test": 178,
+        "train_validation": 176,
+        "validation_test": 95
+      },
+      "active_rows_without_material_id": 1773,
+      "active_source_counts": {
+        "scrape": 2228,
+        "feff": 1773
+      },
+      "metrics_recomputed": {
+        "mae": 0.0738597010956049,
+        "r2": 0.8283719945766788
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Cr_primary_1729_white_line",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 168,
+        "train": 502,
+        "test": 174,
+        "excluded": 1698
+      },
+      "distinct_material_ids": {
+        "train": 374,
+        "validation": 126,
+        "test": 126
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 844
+      },
+      "metrics_recomputed": {
+        "mae": 0.12981398400372912,
+        "r2": 0.21977028739209348
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Cr_primary_1729_full",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 168,
+        "train": 502,
+        "test": 174,
+        "excluded": 1698
+      },
+      "distinct_material_ids": {
+        "train": 374,
+        "validation": 126,
+        "test": 126
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 844
+      },
+      "metrics_recomputed": {
+        "mae": 0.06420967281195017,
+        "r2": 0.7621239065880769
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Cr_primary_2718_white_line",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 153,
+        "train": 524,
+        "test": 167,
+        "excluded": 1698
+      },
+      "distinct_material_ids": {
+        "train": 374,
+        "validation": 126,
+        "test": 126
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 844
+      },
+      "metrics_recomputed": {
+        "mae": 0.12579904246045348,
+        "r2": 0.21168833966503786
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Cr_primary_2718_full",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 153,
+        "train": 524,
+        "test": 167,
+        "excluded": 1698
+      },
+      "distinct_material_ids": {
+        "train": 374,
+        "validation": 126,
+        "test": 126
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 844
+      },
+      "metrics_recomputed": {
+        "mae": 0.07080852619977747,
+        "r2": 0.6836582115103229
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Cr_primary_31415_white_line",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 175,
+        "train": 495,
+        "test": 174,
+        "excluded": 1698
+      },
+      "distinct_material_ids": {
+        "train": 374,
+        "validation": 126,
+        "test": 126
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 844
+      },
+      "metrics_recomputed": {
+        "mae": 0.13876802798556437,
+        "r2": 0.21050926508588585
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Cr_primary_31415_full",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 175,
+        "train": 495,
+        "test": 174,
+        "excluded": 1698
+      },
+      "distinct_material_ids": {
+        "train": 374,
+        "validation": 126,
+        "test": 126
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 844
+      },
+      "metrics_recomputed": {
+        "mae": 0.07490478606065586,
+        "r2": 0.6347666238622643
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Cr_primary_57721_white_line",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 176,
+        "train": 508,
+        "test": 160,
+        "excluded": 1698
+      },
+      "distinct_material_ids": {
+        "train": 374,
+        "validation": 126,
+        "test": 126
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 844
+      },
+      "metrics_recomputed": {
+        "mae": 0.1487393961114188,
+        "r2": 0.22948056588027732
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Cr_primary_57721_full",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 176,
+        "train": 508,
+        "test": 160,
+        "excluded": 1698
+      },
+      "distinct_material_ids": {
+        "train": 374,
+        "validation": 126,
+        "test": 126
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 844
+      },
+      "metrics_recomputed": {
+        "mae": 0.07399438256171147,
+        "r2": 0.7540454777407896
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Cr_primary_81173_white_line",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 173,
+        "train": 507,
+        "test": 164,
+        "excluded": 1698
+      },
+      "distinct_material_ids": {
+        "train": 374,
+        "validation": 126,
+        "test": 126
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 844
+      },
+      "metrics_recomputed": {
+        "mae": 0.13664051262056706,
+        "r2": 0.14308477514956686
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Cr_primary_81173_full",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 173,
+        "train": 507,
+        "test": 164,
+        "excluded": 1698
+      },
+      "distinct_material_ids": {
+        "train": 374,
+        "validation": 126,
+        "test": 126
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 844
+      },
+      "metrics_recomputed": {
+        "mae": 0.06304493573363976,
+        "r2": 0.7435408862554107
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Cr_unit_peak_normalized_1729_white_line",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 168,
+        "train": 502,
+        "test": 174,
+        "excluded": 1698
+      },
+      "distinct_material_ids": {
+        "train": 374,
+        "validation": 126,
+        "test": 126
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 844
+      },
+      "metrics_recomputed": {
+        "mae": 0.12981398400372912,
+        "r2": 0.21977028739209348
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Cr_unit_peak_normalized_1729_full",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 168,
+        "train": 502,
+        "test": 174,
+        "excluded": 1698
+      },
+      "distinct_material_ids": {
+        "train": 374,
+        "validation": 126,
+        "test": 126
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 844
+      },
+      "metrics_recomputed": {
+        "mae": 0.07301598488462326,
+        "r2": 0.7497584966221764
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Cr_spectrum_identified_1729_white_line",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 169,
+        "train": 506,
+        "test": 169,
+        "excluded": 1698
+      },
+      "distinct_material_ids": {
+        "train": 419,
+        "validation": 159,
+        "test": 157
+      },
+      "material_id_overlap": {
+        "train_test": 46,
+        "train_validation": 47,
+        "validation_test": 23
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 844
+      },
+      "metrics_recomputed": {
+        "mae": 0.12342004044916684,
+        "r2": 0.19483166675268726
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Cr_spectrum_identified_1729_full",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 169,
+        "train": 506,
+        "test": 169,
+        "excluded": 1698
+      },
+      "distinct_material_ids": {
+        "train": 419,
+        "validation": 159,
+        "test": 157
+      },
+      "material_id_overlap": {
+        "train_test": 46,
+        "train_validation": 47,
+        "validation_test": 23
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 844
+      },
+      "metrics_recomputed": {
+        "mae": 0.05664179960024639,
+        "r2": 0.8136723887015962
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Cr_spectrum_all_1729_white_line",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 385,
+        "train": 1151,
+        "test": 385,
+        "excluded": 621
+      },
+      "distinct_material_ids": {
+        "train": 407,
+        "validation": 165,
+        "test": 160
+      },
+      "material_id_overlap": {
+        "train_test": 51,
+        "train_validation": 41,
+        "validation_test": 20
+      },
+      "active_rows_without_material_id": 1077,
+      "active_source_counts": {
+        "feff": 1077,
+        "scrape": 844
+      },
+      "metrics_recomputed": {
+        "mae": 0.14654010348521904,
+        "r2": 0.3771801590872339
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Cr_spectrum_all_1729_full",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 385,
+        "train": 1151,
+        "test": 385,
+        "excluded": 621
+      },
+      "distinct_material_ids": {
+        "train": 407,
+        "validation": 165,
+        "test": 160
+      },
+      "material_id_overlap": {
+        "train_test": 51,
+        "train_validation": 41,
+        "validation_test": 20
+      },
+      "active_rows_without_material_id": 1077,
+      "active_source_counts": {
+        "feff": 1077,
+        "scrape": 844
+      },
+      "metrics_recomputed": {
+        "mae": 0.07235072380720757,
+        "r2": 0.8094015397743617
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Mn_primary_1729_white_line",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 363,
+        "train": 1194,
+        "test": 398,
+        "excluded": 6549
+      },
+      "distinct_material_ids": {
+        "train": 761,
+        "validation": 255,
+        "test": 255
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1955
+      },
+      "metrics_recomputed": {
+        "mae": 0.14997740977534627,
+        "r2": 0.047980624950111794
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Mn_primary_1729_full",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 363,
+        "train": 1194,
+        "test": 398,
+        "excluded": 6549
+      },
+      "distinct_material_ids": {
+        "train": 761,
+        "validation": 255,
+        "test": 255
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1955
+      },
+      "metrics_recomputed": {
+        "mae": 0.05908415924133175,
+        "r2": 0.828051877304533
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Mn_primary_2718_white_line",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 410,
+        "train": 1152,
+        "test": 393,
+        "excluded": 6549
+      },
+      "distinct_material_ids": {
+        "train": 761,
+        "validation": 255,
+        "test": 255
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1955
+      },
+      "metrics_recomputed": {
+        "mae": 0.136217165000201,
+        "r2": 0.0704432969287827
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Mn_primary_2718_full",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 410,
+        "train": 1152,
+        "test": 393,
+        "excluded": 6549
+      },
+      "distinct_material_ids": {
+        "train": 761,
+        "validation": 255,
+        "test": 255
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1955
+      },
+      "metrics_recomputed": {
+        "mae": 0.054866689293309026,
+        "r2": 0.8336341793579278
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Mn_primary_31415_white_line",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 382,
+        "train": 1169,
+        "test": 404,
+        "excluded": 6549
+      },
+      "distinct_material_ids": {
+        "train": 761,
+        "validation": 255,
+        "test": 255
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1955
+      },
+      "metrics_recomputed": {
+        "mae": 0.14324463466954754,
+        "r2": 0.18591576123119247
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Mn_primary_31415_full",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 382,
+        "train": 1169,
+        "test": 404,
+        "excluded": 6549
+      },
+      "distinct_material_ids": {
+        "train": 761,
+        "validation": 255,
+        "test": 255
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1955
+      },
+      "metrics_recomputed": {
+        "mae": 0.070547099886277,
+        "r2": 0.7449377556721624
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Mn_primary_57721_white_line",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 393,
+        "train": 1170,
+        "test": 392,
+        "excluded": 6549
+      },
+      "distinct_material_ids": {
+        "train": 761,
+        "validation": 255,
+        "test": 255
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1955
+      },
+      "metrics_recomputed": {
+        "mae": 0.15746753466043026,
+        "r2": 0.08744779852017259
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Mn_primary_57721_full",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 393,
+        "train": 1170,
+        "test": 392,
+        "excluded": 6549
+      },
+      "distinct_material_ids": {
+        "train": 761,
+        "validation": 255,
+        "test": 255
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1955
+      },
+      "metrics_recomputed": {
+        "mae": 0.06703977186668902,
+        "r2": 0.7593035147188499
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Mn_primary_81173_white_line",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 413,
+        "train": 1176,
+        "test": 366,
+        "excluded": 6549
+      },
+      "distinct_material_ids": {
+        "train": 761,
+        "validation": 255,
+        "test": 255
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1955
+      },
+      "metrics_recomputed": {
+        "mae": 0.1316821624838123,
+        "r2": 0.20094514339339198
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Mn_primary_81173_full",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 413,
+        "train": 1176,
+        "test": 366,
+        "excluded": 6549
+      },
+      "distinct_material_ids": {
+        "train": 761,
+        "validation": 255,
+        "test": 255
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1955
+      },
+      "metrics_recomputed": {
+        "mae": 0.058006201146289925,
+        "r2": 0.7942846788278904
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Mn_unit_peak_normalized_1729_white_line",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 363,
+        "train": 1194,
+        "test": 398,
+        "excluded": 6549
+      },
+      "distinct_material_ids": {
+        "train": 761,
+        "validation": 255,
+        "test": 255
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1955
+      },
+      "metrics_recomputed": {
+        "mae": 0.14997740977534627,
+        "r2": 0.047980624950111794
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Mn_unit_peak_normalized_1729_full",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 363,
+        "train": 1194,
+        "test": 398,
+        "excluded": 6549
+      },
+      "distinct_material_ids": {
+        "train": 761,
+        "validation": 255,
+        "test": 255
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1955
+      },
+      "metrics_recomputed": {
+        "mae": 0.06610747608400466,
+        "r2": 0.8139656158271833
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Mn_spectrum_identified_1729_white_line",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 391,
+        "train": 1173,
+        "test": 391,
+        "excluded": 6549
+      },
+      "distinct_material_ids": {
+        "train": 879,
+        "validation": 342,
+        "test": 351
+      },
+      "material_id_overlap": {
+        "train_test": 135,
+        "train_validation": 142,
+        "validation_test": 53
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1955
+      },
+      "metrics_recomputed": {
+        "mae": 0.15524583202216866,
+        "r2": 0.10222982682340775
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Mn_spectrum_identified_1729_full",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 391,
+        "train": 1173,
+        "test": 391,
+        "excluded": 6549
+      },
+      "distinct_material_ids": {
+        "train": 879,
+        "validation": 342,
+        "test": 351
+      },
+      "material_id_overlap": {
+        "train_test": 135,
+        "train_validation": 142,
+        "validation_test": 53
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1955
+      },
+      "metrics_recomputed": {
+        "mae": 0.06226419626009693,
+        "r2": 0.8220128077184221
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Mn_spectrum_all_1729_white_line",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 846,
+        "train": 2534,
+        "test": 846,
+        "excluded": 4278
+      },
+      "distinct_material_ids": {
+        "train": 880,
+        "validation": 352,
+        "test": 349
+      },
+      "material_id_overlap": {
+        "train_test": 147,
+        "train_validation": 134,
+        "validation_test": 61
+      },
+      "active_rows_without_material_id": 2271,
+      "active_source_counts": {
+        "feff": 2271,
+        "scrape": 1955
+      },
+      "metrics_recomputed": {
+        "mae": 0.13954054439438968,
+        "r2": 0.2143833253174261
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Mn_spectrum_all_1729_full",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 846,
+        "train": 2534,
+        "test": 846,
+        "excluded": 4278
+      },
+      "distinct_material_ids": {
+        "train": 880,
+        "validation": 352,
+        "test": 349
+      },
+      "material_id_overlap": {
+        "train_test": 147,
+        "train_validation": 134,
+        "validation_test": 61
+      },
+      "active_rows_without_material_id": 2271,
+      "active_source_counts": {
+        "feff": 2271,
+        "scrape": 1955
+      },
+      "metrics_recomputed": {
+        "mae": 0.05744893724408254,
+        "r2": 0.8409689588680291
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Fe_primary_1729_white_line",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 421,
+        "train": 1227,
+        "test": 411,
+        "excluded": 5303
+      },
+      "distinct_material_ids": {
+        "train": 761,
+        "validation": 255,
+        "test": 255
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 2059
+      },
+      "metrics_recomputed": {
+        "mae": 0.2099534839595458,
+        "r2": -0.040755009022543476
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Fe_primary_1729_full",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 421,
+        "train": 1227,
+        "test": 411,
+        "excluded": 5303
+      },
+      "distinct_material_ids": {
+        "train": 761,
+        "validation": 255,
+        "test": 255
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 2059
+      },
+      "metrics_recomputed": {
+        "mae": 0.10058870418321822,
+        "r2": 0.8302989904992918
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Fe_primary_2718_white_line",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 415,
+        "train": 1200,
+        "test": 444,
+        "excluded": 5303
+      },
+      "distinct_material_ids": {
+        "train": 761,
+        "validation": 255,
+        "test": 255
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 2059
+      },
+      "metrics_recomputed": {
+        "mae": 0.19220079271902019,
+        "r2": -0.006297407036384817
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Fe_primary_2718_full",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 415,
+        "train": 1200,
+        "test": 444,
+        "excluded": 5303
+      },
+      "distinct_material_ids": {
+        "train": 761,
+        "validation": 255,
+        "test": 255
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 2059
+      },
+      "metrics_recomputed": {
+        "mae": 0.1007591744111032,
+        "r2": 0.7698424481212011
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Fe_primary_31415_white_line",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 401,
+        "train": 1231,
+        "test": 427,
+        "excluded": 5303
+      },
+      "distinct_material_ids": {
+        "train": 761,
+        "validation": 255,
+        "test": 255
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 2059
+      },
+      "metrics_recomputed": {
+        "mae": 0.21122269977982777,
+        "r2": 0.02196019597620591
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Fe_primary_31415_full",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 401,
+        "train": 1231,
+        "test": 427,
+        "excluded": 5303
+      },
+      "distinct_material_ids": {
+        "train": 761,
+        "validation": 255,
+        "test": 255
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 2059
+      },
+      "metrics_recomputed": {
+        "mae": 0.10398149755822055,
+        "r2": 0.7518707502089934
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Fe_primary_57721_white_line",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 408,
+        "train": 1241,
+        "test": 410,
+        "excluded": 5303
+      },
+      "distinct_material_ids": {
+        "train": 761,
+        "validation": 255,
+        "test": 255
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 2059
+      },
+      "metrics_recomputed": {
+        "mae": 0.18672694418395983,
+        "r2": -0.0011363756682478687
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Fe_primary_57721_full",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 408,
+        "train": 1241,
+        "test": 410,
+        "excluded": 5303
+      },
+      "distinct_material_ids": {
+        "train": 761,
+        "validation": 255,
+        "test": 255
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 2059
+      },
+      "metrics_recomputed": {
+        "mae": 0.10113237115344724,
+        "r2": 0.7427809526213016
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Fe_primary_81173_white_line",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 376,
+        "train": 1269,
+        "test": 414,
+        "excluded": 5303
+      },
+      "distinct_material_ids": {
+        "train": 761,
+        "validation": 255,
+        "test": 255
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 2059
+      },
+      "metrics_recomputed": {
+        "mae": 0.2071391319940791,
+        "r2": 0.07222621916367422
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Fe_primary_81173_full",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 376,
+        "train": 1269,
+        "test": 414,
+        "excluded": 5303
+      },
+      "distinct_material_ids": {
+        "train": 761,
+        "validation": 255,
+        "test": 255
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 2059
+      },
+      "metrics_recomputed": {
+        "mae": 0.11030101480409765,
+        "r2": 0.7317523041446485
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Fe_unit_peak_normalized_1729_white_line",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 421,
+        "train": 1227,
+        "test": 411,
+        "excluded": 5303
+      },
+      "distinct_material_ids": {
+        "train": 761,
+        "validation": 255,
+        "test": 255
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 2059
+      },
+      "metrics_recomputed": {
+        "mae": 0.2099534839595458,
+        "r2": -0.040755009022543476
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Fe_unit_peak_normalized_1729_full",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 421,
+        "train": 1227,
+        "test": 411,
+        "excluded": 5303
+      },
+      "distinct_material_ids": {
+        "train": 761,
+        "validation": 255,
+        "test": 255
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 2059
+      },
+      "metrics_recomputed": {
+        "mae": 0.10778753946602279,
+        "r2": 0.7837749678357158
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Fe_spectrum_identified_1729_white_line",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 412,
+        "train": 1235,
+        "test": 412,
+        "excluded": 5303
+      },
+      "distinct_material_ids": {
+        "train": 879,
+        "validation": 358,
+        "test": 358
+      },
+      "material_id_overlap": {
+        "train_test": 143,
+        "train_validation": 152,
+        "validation_test": 73
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 2059
+      },
+      "metrics_recomputed": {
+        "mae": 0.19249508145045227,
+        "r2": 0.021312324885166767
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Fe_spectrum_identified_1729_full",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 412,
+        "train": 1235,
+        "test": 412,
+        "excluded": 5303
+      },
+      "distinct_material_ids": {
+        "train": 879,
+        "validation": 358,
+        "test": 358
+      },
+      "material_id_overlap": {
+        "train_test": 143,
+        "train_validation": 152,
+        "validation_test": 73
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 2059
+      },
+      "metrics_recomputed": {
+        "mae": 0.09929153482776387,
+        "r2": 0.7690332135099334
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Fe_spectrum_all_1729_white_line",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 838,
+        "train": 2512,
+        "test": 838,
+        "excluded": 3174
+      },
+      "distinct_material_ids": {
+        "train": 897,
+        "validation": 341,
+        "test": 362
+      },
+      "material_id_overlap": {
+        "train_test": 156,
+        "train_validation": 140,
+        "validation_test": 73
+      },
+      "active_rows_without_material_id": 2129,
+      "active_source_counts": {
+        "feff": 2129,
+        "scrape": 2059
+      },
+      "metrics_recomputed": {
+        "mae": 0.1762113403508699,
+        "r2": -0.00650751304377839
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Fe_spectrum_all_1729_full",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 838,
+        "train": 2512,
+        "test": 838,
+        "excluded": 3174
+      },
+      "distinct_material_ids": {
+        "train": 897,
+        "validation": 341,
+        "test": 362
+      },
+      "material_id_overlap": {
+        "train_test": 156,
+        "train_validation": 140,
+        "validation_test": 73
+      },
+      "active_rows_without_material_id": 2129,
+      "active_source_counts": {
+        "feff": 2129,
+        "scrape": 2059
+      },
+      "metrics_recomputed": {
+        "mae": 0.0983935704414282,
+        "r2": 0.702198047419722
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Co_primary_1729_white_line",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 255,
+        "train": 777,
+        "test": 278,
+        "excluded": 2223
+      },
+      "distinct_material_ids": {
+        "train": 501,
+        "validation": 167,
+        "test": 167
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1310
+      },
+      "metrics_recomputed": {
+        "mae": 0.1522049604939081,
+        "r2": 0.018146592614084023
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Co_primary_1729_full",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 255,
+        "train": 777,
+        "test": 278,
+        "excluded": 2223
+      },
+      "distinct_material_ids": {
+        "train": 501,
+        "validation": 167,
+        "test": 167
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1310
+      },
+      "metrics_recomputed": {
+        "mae": 0.07640248965476278,
+        "r2": 0.7798123255043468
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Co_primary_2718_white_line",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 244,
+        "train": 816,
+        "test": 250,
+        "excluded": 2223
+      },
+      "distinct_material_ids": {
+        "train": 501,
+        "validation": 167,
+        "test": 167
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1310
+      },
+      "metrics_recomputed": {
+        "mae": 0.17327688330320534,
+        "r2": -0.00594633165793379
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Co_primary_2718_full",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 244,
+        "train": 816,
+        "test": 250,
+        "excluded": 2223
+      },
+      "distinct_material_ids": {
+        "train": 501,
+        "validation": 167,
+        "test": 167
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1310
+      },
+      "metrics_recomputed": {
+        "mae": 0.07624853240820428,
+        "r2": 0.7882670437883422
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Co_primary_31415_white_line",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 250,
+        "train": 808,
+        "test": 252,
+        "excluded": 2223
+      },
+      "distinct_material_ids": {
+        "train": 501,
+        "validation": 167,
+        "test": 167
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1310
+      },
+      "metrics_recomputed": {
+        "mae": 0.16819370736503064,
+        "r2": -0.07079306514469752
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Co_primary_31415_full",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 250,
+        "train": 808,
+        "test": 252,
+        "excluded": 2223
+      },
+      "distinct_material_ids": {
+        "train": 501,
+        "validation": 167,
+        "test": 167
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1310
+      },
+      "metrics_recomputed": {
+        "mae": 0.08586161384220604,
+        "r2": 0.7688087430209396
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Co_primary_57721_white_line",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 263,
+        "train": 761,
+        "test": 286,
+        "excluded": 2223
+      },
+      "distinct_material_ids": {
+        "train": 501,
+        "validation": 167,
+        "test": 167
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1310
+      },
+      "metrics_recomputed": {
+        "mae": 0.14468493659329704,
+        "r2": -0.029850981050824288
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Co_primary_57721_full",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 263,
+        "train": 761,
+        "test": 286,
+        "excluded": 2223
+      },
+      "distinct_material_ids": {
+        "train": 501,
+        "validation": 167,
+        "test": 167
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1310
+      },
+      "metrics_recomputed": {
+        "mae": 0.06470713557318601,
+        "r2": 0.8054999384785477
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Co_primary_81173_white_line",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 252,
+        "train": 789,
+        "test": 269,
+        "excluded": 2223
+      },
+      "distinct_material_ids": {
+        "train": 501,
+        "validation": 167,
+        "test": 167
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1310
+      },
+      "metrics_recomputed": {
+        "mae": 0.12261635613332464,
+        "r2": 0.012208981556904419
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Co_primary_81173_full",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 252,
+        "train": 789,
+        "test": 269,
+        "excluded": 2223
+      },
+      "distinct_material_ids": {
+        "train": 501,
+        "validation": 167,
+        "test": 167
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1310
+      },
+      "metrics_recomputed": {
+        "mae": 0.06871129085951865,
+        "r2": 0.7071009893776172
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Co_unit_peak_normalized_1729_white_line",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 255,
+        "train": 777,
+        "test": 278,
+        "excluded": 2223
+      },
+      "distinct_material_ids": {
+        "train": 501,
+        "validation": 167,
+        "test": 167
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1310
+      },
+      "metrics_recomputed": {
+        "mae": 0.1522049604939081,
+        "r2": 0.018146592614084023
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Co_unit_peak_normalized_1729_full",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 255,
+        "train": 777,
+        "test": 278,
+        "excluded": 2223
+      },
+      "distinct_material_ids": {
+        "train": 501,
+        "validation": 167,
+        "test": 167
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1310
+      },
+      "metrics_recomputed": {
+        "mae": 0.0757432428707084,
+        "r2": 0.7889995759875259
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Co_spectrum_identified_1729_white_line",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 262,
+        "train": 786,
+        "test": 262,
+        "excluded": 2223
+      },
+      "distinct_material_ids": {
+        "train": 568,
+        "validation": 237,
+        "test": 233
+      },
+      "material_id_overlap": {
+        "train_test": 94,
+        "train_validation": 91,
+        "validation_test": 40
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1310
+      },
+      "metrics_recomputed": {
+        "mae": 0.15478811911646828,
+        "r2": 3.059873704935878e-05
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Co_spectrum_identified_1729_full",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 262,
+        "train": 786,
+        "test": 262,
+        "excluded": 2223
+      },
+      "distinct_material_ids": {
+        "train": 568,
+        "validation": 237,
+        "test": 233
+      },
+      "material_id_overlap": {
+        "train_test": 94,
+        "train_validation": 91,
+        "validation_test": 40
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1310
+      },
+      "metrics_recomputed": {
+        "mae": 0.06880013637774414,
+        "r2": 0.8284910979550322
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Co_spectrum_all_1729_white_line",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 422,
+        "train": 1262,
+        "test": 422,
+        "excluded": 1427
+      },
+      "distinct_material_ids": {
+        "train": 577,
+        "validation": 234,
+        "test": 227
+      },
+      "material_id_overlap": {
+        "train_test": 85,
+        "train_validation": 98,
+        "validation_test": 39
+      },
+      "active_rows_without_material_id": 796,
+      "active_source_counts": {
+        "scrape": 1310,
+        "feff": 796
+      },
+      "metrics_recomputed": {
+        "mae": 0.15575367504027005,
+        "r2": -0.036215148030367184
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Co_spectrum_all_1729_full",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 422,
+        "train": 1262,
+        "test": 422,
+        "excluded": 1427
+      },
+      "distinct_material_ids": {
+        "train": 577,
+        "validation": 234,
+        "test": 227
+      },
+      "material_id_overlap": {
+        "train_test": 85,
+        "train_validation": 98,
+        "validation_test": 39
+      },
+      "active_rows_without_material_id": 796,
+      "active_source_counts": {
+        "scrape": 1310,
+        "feff": 796
+      },
+      "metrics_recomputed": {
+        "mae": 0.07109951341572124,
+        "r2": 0.8013384410025853
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Ni_primary_1729_white_line",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 240,
+        "train": 704,
+        "test": 235,
+        "excluded": 2241
+      },
+      "distinct_material_ids": {
+        "train": 453,
+        "validation": 152,
+        "test": 152
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1179
+      },
+      "metrics_recomputed": {
+        "mae": 0.10141607077550065,
+        "r2": 0.023521290045164456
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Ni_primary_1729_full",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 240,
+        "train": 704,
+        "test": 235,
+        "excluded": 2241
+      },
+      "distinct_material_ids": {
+        "train": 453,
+        "validation": 152,
+        "test": 152
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1179
+      },
+      "metrics_recomputed": {
+        "mae": 0.06475723132219509,
+        "r2": 0.6523170102476051
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Ni_primary_2718_white_line",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 241,
+        "train": 716,
+        "test": 222,
+        "excluded": 2241
+      },
+      "distinct_material_ids": {
+        "train": 453,
+        "validation": 152,
+        "test": 152
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1179
+      },
+      "metrics_recomputed": {
+        "mae": 0.08033013346027243,
+        "r2": 0.021277041339943903
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Ni_primary_2718_full",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 241,
+        "train": 716,
+        "test": 222,
+        "excluded": 2241
+      },
+      "distinct_material_ids": {
+        "train": 453,
+        "validation": 152,
+        "test": 152
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1179
+      },
+      "metrics_recomputed": {
+        "mae": 0.05317886795429512,
+        "r2": 0.5037215347214874
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Ni_primary_31415_white_line",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 251,
+        "train": 674,
+        "test": 254,
+        "excluded": 2241
+      },
+      "distinct_material_ids": {
+        "train": 453,
+        "validation": 152,
+        "test": 152
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1179
+      },
+      "metrics_recomputed": {
+        "mae": 0.08268642053624509,
+        "r2": -0.0291840689349272
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Ni_primary_31415_full",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 251,
+        "train": 674,
+        "test": 254,
+        "excluded": 2241
+      },
+      "distinct_material_ids": {
+        "train": 453,
+        "validation": 152,
+        "test": 152
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1179
+      },
+      "metrics_recomputed": {
+        "mae": 0.05318241843765624,
+        "r2": 0.6206707082074994
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Ni_primary_57721_white_line",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 234,
+        "train": 730,
+        "test": 215,
+        "excluded": 2241
+      },
+      "distinct_material_ids": {
+        "train": 453,
+        "validation": 152,
+        "test": 152
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1179
+      },
+      "metrics_recomputed": {
+        "mae": 0.08953775355737541,
+        "r2": 0.061961071896068476
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Ni_primary_57721_full",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 234,
+        "train": 730,
+        "test": 215,
+        "excluded": 2241
+      },
+      "distinct_material_ids": {
+        "train": 453,
+        "validation": 152,
+        "test": 152
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1179
+      },
+      "metrics_recomputed": {
+        "mae": 0.06016037946167489,
+        "r2": 0.6387773362595326
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Ni_primary_81173_white_line",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 236,
+        "train": 693,
+        "test": 250,
+        "excluded": 2241
+      },
+      "distinct_material_ids": {
+        "train": 453,
+        "validation": 152,
+        "test": 152
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1179
+      },
+      "metrics_recomputed": {
+        "mae": 0.10140029106553436,
+        "r2": -0.05250757563969133
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Ni_primary_81173_full",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 236,
+        "train": 693,
+        "test": 250,
+        "excluded": 2241
+      },
+      "distinct_material_ids": {
+        "train": 453,
+        "validation": 152,
+        "test": 152
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1179
+      },
+      "metrics_recomputed": {
+        "mae": 0.06428612639724027,
+        "r2": 0.6419986643284574
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Ni_unit_peak_normalized_1729_white_line",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 240,
+        "train": 704,
+        "test": 235,
+        "excluded": 2241
+      },
+      "distinct_material_ids": {
+        "train": 453,
+        "validation": 152,
+        "test": 152
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1179
+      },
+      "metrics_recomputed": {
+        "mae": 0.10141607077550065,
+        "r2": 0.023521290045164456
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Ni_unit_peak_normalized_1729_full",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 240,
+        "train": 704,
+        "test": 235,
+        "excluded": 2241
+      },
+      "distinct_material_ids": {
+        "train": 453,
+        "validation": 152,
+        "test": 152
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1179
+      },
+      "metrics_recomputed": {
+        "mae": 0.07121461437630812,
+        "r2": 0.5096794091972392
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Ni_spectrum_identified_1729_white_line",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 236,
+        "train": 707,
+        "test": 236,
+        "excluded": 2241
+      },
+      "distinct_material_ids": {
+        "train": 520,
+        "validation": 215,
+        "test": 209
+      },
+      "material_id_overlap": {
+        "train_test": 94,
+        "train_validation": 75,
+        "validation_test": 41
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1179
+      },
+      "metrics_recomputed": {
+        "mae": 0.07869040956109455,
+        "r2": 0.12827143939312513
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Ni_spectrum_identified_1729_full",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 236,
+        "train": 707,
+        "test": 236,
+        "excluded": 2241
+      },
+      "distinct_material_ids": {
+        "train": 520,
+        "validation": 215,
+        "test": 209
+      },
+      "material_id_overlap": {
+        "train_test": 94,
+        "train_validation": 75,
+        "validation_test": 41
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1179
+      },
+      "metrics_recomputed": {
+        "mae": 0.05554364463598321,
+        "r2": 0.6017002480216842
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Ni_spectrum_all_1729_white_line",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 446,
+        "train": 1334,
+        "test": 446,
+        "excluded": 1194
+      },
+      "distinct_material_ids": {
+        "train": 531,
+        "validation": 221,
+        "test": 190
+      },
+      "material_id_overlap": {
+        "train_test": 83,
+        "train_validation": 92,
+        "validation_test": 32
+      },
+      "active_rows_without_material_id": 1047,
+      "active_source_counts": {
+        "scrape": 1179,
+        "feff": 1047
+      },
+      "metrics_recomputed": {
+        "mae": 0.08956774761036741,
+        "r2": 0.04966159127199199
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Ni_spectrum_all_1729_full",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 446,
+        "train": 1334,
+        "test": 446,
+        "excluded": 1194
+      },
+      "distinct_material_ids": {
+        "train": 531,
+        "validation": 221,
+        "test": 190
+      },
+      "material_id_overlap": {
+        "train_test": 83,
+        "train_validation": 92,
+        "validation_test": 32
+      },
+      "active_rows_without_material_id": 1047,
+      "active_source_counts": {
+        "scrape": 1179,
+        "feff": 1047
+      },
+      "metrics_recomputed": {
+        "mae": 0.05800631143280631,
+        "r2": 0.635432562048509
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Cu_primary_1729_white_line",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 211,
+        "train": 648,
+        "test": 228,
+        "excluded": 2409
+      },
+      "distinct_material_ids": {
+        "train": 461,
+        "validation": 155,
+        "test": 155
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1087
+      },
+      "metrics_recomputed": {
+        "mae": 0.1960942686034652,
+        "r2": -0.04694562736135799
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Cu_primary_1729_full",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 211,
+        "train": 648,
+        "test": 228,
+        "excluded": 2409
+      },
+      "distinct_material_ids": {
+        "train": 461,
+        "validation": 155,
+        "test": 155
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1087
+      },
+      "metrics_recomputed": {
+        "mae": 0.0843613870983422,
+        "r2": 0.8185248224991539
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Cu_primary_2718_white_line",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 205,
+        "train": 660,
+        "test": 222,
+        "excluded": 2409
+      },
+      "distinct_material_ids": {
+        "train": 461,
+        "validation": 155,
+        "test": 155
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1087
+      },
+      "metrics_recomputed": {
+        "mae": 0.14618437171671295,
+        "r2": -0.10665224972546294
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Cu_primary_2718_full",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 205,
+        "train": 660,
+        "test": 222,
+        "excluded": 2409
+      },
+      "distinct_material_ids": {
+        "train": 461,
+        "validation": 155,
+        "test": 155
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1087
+      },
+      "metrics_recomputed": {
+        "mae": 0.07568767657879802,
+        "r2": 0.6830425570145733
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Cu_primary_31415_white_line",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 241,
+        "train": 640,
+        "test": 206,
+        "excluded": 2409
+      },
+      "distinct_material_ids": {
+        "train": 461,
+        "validation": 155,
+        "test": 155
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1087
+      },
+      "metrics_recomputed": {
+        "mae": 0.13915336168234507,
+        "r2": 0.021891464372502556
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Cu_primary_31415_full",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 241,
+        "train": 640,
+        "test": 206,
+        "excluded": 2409
+      },
+      "distinct_material_ids": {
+        "train": 461,
+        "validation": 155,
+        "test": 155
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1087
+      },
+      "metrics_recomputed": {
+        "mae": 0.07731924869637073,
+        "r2": 0.6675275092582023
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Cu_primary_57721_white_line",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 222,
+        "train": 647,
+        "test": 218,
+        "excluded": 2409
+      },
+      "distinct_material_ids": {
+        "train": 461,
+        "validation": 155,
+        "test": 155
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1087
+      },
+      "metrics_recomputed": {
+        "mae": 0.13820460333340695,
+        "r2": 0.07826298834003931
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Cu_primary_57721_full",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 222,
+        "train": 647,
+        "test": 218,
+        "excluded": 2409
+      },
+      "distinct_material_ids": {
+        "train": 461,
+        "validation": 155,
+        "test": 155
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1087
+      },
+      "metrics_recomputed": {
+        "mae": 0.08719648859264097,
+        "r2": 0.6426049481005908
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Cu_primary_81173_white_line",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 209,
+        "train": 651,
+        "test": 227,
+        "excluded": 2409
+      },
+      "distinct_material_ids": {
+        "train": 461,
+        "validation": 155,
+        "test": 155
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1087
+      },
+      "metrics_recomputed": {
+        "mae": 0.14764579645043385,
+        "r2": -0.021105562340317352
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Cu_primary_81173_full",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 209,
+        "train": 651,
+        "test": 227,
+        "excluded": 2409
+      },
+      "distinct_material_ids": {
+        "train": 461,
+        "validation": 155,
+        "test": 155
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1087
+      },
+      "metrics_recomputed": {
+        "mae": 0.08029145650132205,
+        "r2": 0.611258341719525
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Cu_unit_peak_normalized_1729_white_line",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 211,
+        "train": 648,
+        "test": 228,
+        "excluded": 2409
+      },
+      "distinct_material_ids": {
+        "train": 461,
+        "validation": 155,
+        "test": 155
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1087
+      },
+      "metrics_recomputed": {
+        "mae": 0.1960942686034652,
+        "r2": -0.04694562736135799
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Cu_unit_peak_normalized_1729_full",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 211,
+        "train": 648,
+        "test": 228,
+        "excluded": 2409
+      },
+      "distinct_material_ids": {
+        "train": 461,
+        "validation": 155,
+        "test": 155
+      },
+      "material_id_overlap": {
+        "train_test": 0,
+        "train_validation": 0,
+        "validation_test": 0
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1087
+      },
+      "metrics_recomputed": {
+        "mae": 0.10490021456431935,
+        "r2": 0.6328336236770384
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Cu_spectrum_identified_1729_white_line",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 218,
+        "train": 651,
+        "test": 218,
+        "excluded": 2409
+      },
+      "distinct_material_ids": {
+        "train": 508,
+        "validation": 202,
+        "test": 196
+      },
+      "material_id_overlap": {
+        "train_test": 64,
+        "train_validation": 60,
+        "validation_test": 27
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1087
+      },
+      "metrics_recomputed": {
+        "mae": 0.15091693775561535,
+        "r2": 0.03399353263804916
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Cu_spectrum_identified_1729_full",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 218,
+        "train": 651,
+        "test": 218,
+        "excluded": 2409
+      },
+      "distinct_material_ids": {
+        "train": 508,
+        "validation": 202,
+        "test": 196
+      },
+      "material_id_overlap": {
+        "train_test": 64,
+        "train_validation": 60,
+        "validation_test": 27
+      },
+      "active_rows_without_material_id": 0,
+      "active_source_counts": {
+        "scrape": 1087
+      },
+      "metrics_recomputed": {
+        "mae": 0.07753176468269703,
+        "r2": 0.7887385814945618
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Cu_spectrum_all_1729_white_line",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 440,
+        "train": 1318,
+        "test": 440,
+        "excluded": 1298
+      },
+      "distinct_material_ids": {
+        "train": 535,
+        "validation": 192,
+        "test": 182
+      },
+      "material_id_overlap": {
+        "train_test": 62,
+        "train_validation": 62,
+        "validation_test": 27
+      },
+      "active_rows_without_material_id": 1111,
+      "active_source_counts": {
+        "feff": 1111,
+        "scrape": 1087
+      },
+      "metrics_recomputed": {
+        "mae": 0.15330285335964006,
+        "r2": 0.06007389387547135
+      },
+      "additional_metrics_requiring_review": []
+    },
+    {
+      "run_id": "Cu_spectrum_all_1729_full",
+      "source_labels": "read directly from supplied element records",
+      "partitions": {
+        "validation": 440,
+        "train": 1318,
+        "test": 440,
+        "excluded": 1298
+      },
+      "distinct_material_ids": {
+        "train": 535,
+        "validation": 192,
+        "test": 182
+      },
+      "material_id_overlap": {
+        "train_test": 62,
+        "train_validation": 62,
+        "validation_test": 27
+      },
+      "active_rows_without_material_id": 1111,
+      "active_source_counts": {
+        "feff": 1111,
+        "scrape": 1087
+      },
+      "metrics_recomputed": {
+        "mae": 0.07190091933484247,
+        "r2": 0.7949170396460197
+      },
+      "additional_metrics_requiring_review": []
+    }
+  ],
+  "required_independent_review": [
+    "Rerun submitted code from the supplied raw records in a clean environment. Compare the regenerated partitions, predictions, metrics, and supporting tables to the submission; recording a command alone is insufficient.",
+    "Inspect feature construction and fitting: target labels, label-derived metadata, held-out labels, and material identities must not enter spectral predictors. Every fitted transformation, feature selection, class adjustment, tuning decision, and model selection must use training/validation data only.",
+    "Check filtering and split design, material-identifier coverage, source composition, duplicate/related spectra, and uncertainty. Known IDs occur only for one released origin; identified-material results cannot establish generalization to every source or to unidentified materials. Disjoint declared row IDs do not prove absence of other leakage. Small tail cohorts or missing coordination classes must not be presented as strong evidence of reliability.",
+    "Check that comparison conditions actually implement their declared interventions, keep the scientific comparison fair, and receive defensible tuning effort. Equal partition files alone cannot establish this.",
+    "Require substantive spectral modeling and justified baselines, adequate held-out evidence, uncertainty, reproducible figures, and conclusions supported by the results. Negative results are valid when their design and evidence are sound; no fixed accuracy threshold or agreement with an archived model is required.",
+    "Reconstruct the white-line estimator from energy and absorption; ensure the white-line condition uses only that energy and the full condition uses spectral information, with no target-derived peak selection.",
+    "Verify the paired charge-prediction comparison, baselines, uncertainty, and evidence about deviations from a simple white-line relationship. Interpret the numerical released Bader label without inventing an unsupported oxidation-state mapping."
+  ],
+  "interpretation": "Passing this check establishes declared row/label/partition consistency and core score arithmetic only. It cannot prove the fitted code used those partitions, prevent fabricated predictions, validate optional diagnostic tables, or judge scientific conclusions. Final acceptance requires an independent code rerun and all scientific rubric items; archived results are illustrative, never numeric pass thresholds."
+}

@@ -1,0 +1,735 @@
+{
+  "question": "Q1",
+  "models": [
+    {
+      "id": "Ti_coord_pointwise_feff_natural",
+      "element": "Ti",
+      "target": "coord",
+      "representation": "pointwise",
+      "normalization": "feff",
+      "balanced": false,
+      "train_count": 3814,
+      "fit_count": 3814,
+      "valid_count": 424,
+      "test_count": 471,
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "metrics_mean": {
+        "accuracy": 0.8747346072186838,
+        "macro_f1": 0.8588376312992484,
+        "f1_4": 0.8173669467787116,
+        "f1_5": 0.8766425737334398,
+        "f1_6": 0.8825033733855941
+      },
+      "metrics_std": {
+        "accuracy": 0.004586511463841372,
+        "macro_f1": 0.005829899372330164,
+        "f1_4": 0.012451602672769103,
+        "f1_5": 0.004828154288741389,
+        "f1_6": 0.004276594650358278
+      },
+      "baseline": {
+        "train_mode": 5.0,
+        "accuracy": 0.5138004246284501,
+        "train_class_counts": {
+          "4": 267,
+          "5": 1838,
+          "6": 1709
+        }
+      },
+      "tail_thresholds": {}
+    },
+    {
+      "id": "Ti_coord_pointwise_feff_balanced",
+      "element": "Ti",
+      "target": "coord",
+      "representation": "pointwise",
+      "normalization": "feff",
+      "balanced": true,
+      "train_count": 3814,
+      "fit_count": 5514,
+      "valid_count": 424,
+      "test_count": 471,
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "metrics_mean": {
+        "accuracy": 0.8733191790516631,
+        "macro_f1": 0.8577542846081637,
+        "f1_4": 0.8159512937595129,
+        "f1_5": 0.8736782728783914,
+        "f1_6": 0.8836332871865866
+      },
+      "metrics_std": {
+        "accuracy": 0.002001717710365315,
+        "macro_f1": 0.003667229032033419,
+        "f1_4": 0.015153825691182041,
+        "f1_5": 0.001880881871855727,
+        "f1_6": 0.004377314260452547
+      },
+      "baseline": {
+        "train_mode": 5.0,
+        "accuracy": 0.5138004246284501,
+        "train_class_counts": {
+          "4": 267,
+          "5": 1838,
+          "6": 1709
+        }
+      },
+      "tail_thresholds": {}
+    },
+    {
+      "id": "V_coord_pointwise_feff_natural",
+      "element": "V",
+      "target": "coord",
+      "representation": "pointwise",
+      "normalization": "feff",
+      "balanced": false,
+      "train_count": 5557,
+      "fit_count": 5557,
+      "valid_count": 618,
+      "test_count": 687,
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "metrics_mean": {
+        "accuracy": 0.8791848617176129,
+        "macro_f1": 0.8818369649993595,
+        "f1_4": 0.9630757590862425,
+        "f1_5": 0.8112242466185878,
+        "f1_6": 0.8712108892932481
+      },
+      "metrics_std": {
+        "accuracy": 0.0011884957509864884,
+        "macro_f1": 0.0010549563200053917,
+        "f1_4": 0.0021602836605500047,
+        "f1_5": 0.0008993647242721009,
+        "f1_6": 0.00039832054146078796
+      },
+      "baseline": {
+        "train_mode": 6.0,
+        "accuracy": 0.38282387190684136,
+        "train_class_counts": {
+          "4": 1575,
+          "5": 1961,
+          "6": 2021
+        }
+      },
+      "tail_thresholds": {}
+    },
+    {
+      "id": "V_coord_pointwise_feff_balanced",
+      "element": "V",
+      "target": "coord",
+      "representation": "pointwise",
+      "normalization": "feff",
+      "balanced": true,
+      "train_count": 5557,
+      "fit_count": 6063,
+      "valid_count": 618,
+      "test_count": 687,
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "metrics_mean": {
+        "accuracy": 0.8791848617176128,
+        "macro_f1": 0.8815989464056582,
+        "f1_4": 0.9607237679912833,
+        "f1_5": 0.8112320652679889,
+        "f1_6": 0.8728410059577022
+      },
+      "metrics_std": {
+        "accuracy": 0.006617264287717539,
+        "macro_f1": 0.006461622848588483,
+        "f1_4": 0.0019250355538936188,
+        "f1_5": 0.01009297475136951,
+        "f1_6": 0.007475598128155575
+      },
+      "baseline": {
+        "train_mode": 6.0,
+        "accuracy": 0.38282387190684136,
+        "train_class_counts": {
+          "4": 1575,
+          "5": 1961,
+          "6": 2021
+        }
+      },
+      "tail_thresholds": {}
+    },
+    {
+      "id": "Cr_coord_pointwise_feff_natural",
+      "element": "Cr",
+      "target": "coord",
+      "representation": "pointwise",
+      "normalization": "feff",
+      "balanced": false,
+      "train_count": 1896,
+      "fit_count": 1896,
+      "valid_count": 211,
+      "test_count": 235,
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "metrics_mean": {
+        "accuracy": 0.8539007092198582,
+        "macro_f1": 0.8247742224452178,
+        "f1_4": 0.9229902142945622,
+        "f1_5": 0.648477906209865,
+        "f1_6": 0.9028545468312258
+      },
+      "metrics_std": {
+        "accuracy": 0.010614630884465098,
+        "macro_f1": 0.012744427862256678,
+        "f1_4": 0.00966404291806964,
+        "f1_5": 0.025292566656061215,
+        "f1_6": 0.007149050692806
+      },
+      "baseline": {
+        "train_mode": 6.0,
+        "accuracy": 0.5914893617021276,
+        "train_class_counts": {
+          "4": 346,
+          "5": 479,
+          "6": 1071
+        }
+      },
+      "tail_thresholds": {}
+    },
+    {
+      "id": "Cr_coord_pointwise_feff_balanced",
+      "element": "Cr",
+      "target": "coord",
+      "representation": "pointwise",
+      "normalization": "feff",
+      "balanced": true,
+      "train_count": 1896,
+      "fit_count": 3213,
+      "valid_count": 211,
+      "test_count": 235,
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "metrics_mean": {
+        "accuracy": 0.8652482269503547,
+        "macro_f1": 0.8411524630819361,
+        "f1_4": 0.9386005921770298,
+        "f1_5": 0.6779358207929637,
+        "f1_6": 0.9069209762758149
+      },
+      "metrics_std": {
+        "accuracy": 0.002005976684217159,
+        "macro_f1": 0.0022692588514321246,
+        "f1_4": 0.005399444020280636,
+        "f1_5": 0.006316490177575157,
+        "f1_6": 0.002930713640553701
+      },
+      "baseline": {
+        "train_mode": 6.0,
+        "accuracy": 0.5914893617021276,
+        "train_class_counts": {
+          "4": 346,
+          "5": 479,
+          "6": 1071
+        }
+      },
+      "tail_thresholds": {}
+    },
+    {
+      "id": "Mn_coord_pointwise_feff_natural",
+      "element": "Mn",
+      "target": "coord",
+      "representation": "pointwise",
+      "normalization": "feff",
+      "balanced": false,
+      "train_count": 6326,
+      "fit_count": 6326,
+      "valid_count": 703,
+      "test_count": 781,
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "metrics_mean": {
+        "accuracy": 0.7942808365343575,
+        "macro_f1": 0.6892543150029505,
+        "f1_4": 0.4563265306122449,
+        "f1_5": 0.7986494824767797,
+        "f1_6": 0.8127869319198272
+      },
+      "metrics_std": {
+        "accuracy": 0.004225136549983628,
+        "macro_f1": 0.008221259549707547,
+        "f1_4": 0.01713637713614561,
+        "f1_5": 0.004295768946702199,
+        "f1_6": 0.0035997686907004666
+      },
+      "baseline": {
+        "train_mode": 5.0,
+        "accuracy": 0.49551856594110116,
+        "train_class_counts": {
+          "4": 241,
+          "5": 3151,
+          "6": 2934
+        }
+      },
+      "tail_thresholds": {}
+    },
+    {
+      "id": "Mn_coord_pointwise_feff_balanced",
+      "element": "Mn",
+      "target": "coord",
+      "representation": "pointwise",
+      "normalization": "feff",
+      "balanced": true,
+      "train_count": 6326,
+      "fit_count": 9453,
+      "valid_count": 703,
+      "test_count": 781,
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "metrics_mean": {
+        "accuracy": 0.8066581306017926,
+        "macro_f1": 0.7406174087142623,
+        "f1_4": 0.5918964076858814,
+        "f1_5": 0.8099093554728877,
+        "f1_6": 0.8200464629840182
+      },
+      "metrics_std": {
+        "accuracy": 0.005432318421407499,
+        "macro_f1": 0.00905758952769391,
+        "f1_4": 0.02156173560009104,
+        "f1_5": 0.005123817305673183,
+        "f1_6": 0.005571863299411478
+      },
+      "baseline": {
+        "train_mode": 5.0,
+        "accuracy": 0.49551856594110116,
+        "train_class_counts": {
+          "4": 241,
+          "5": 3151,
+          "6": 2934
+        }
+      },
+      "tail_thresholds": {}
+    },
+    {
+      "id": "Fe_coord_pointwise_feff_natural",
+      "element": "Fe",
+      "target": "coord",
+      "representation": "pointwise",
+      "normalization": "feff",
+      "balanced": false,
+      "train_count": 5404,
+      "fit_count": 5404,
+      "valid_count": 601,
+      "test_count": 668,
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "metrics_mean": {
+        "accuracy": 0.842814371257485,
+        "macro_f1": 0.842286673744487,
+        "f1_4": 0.8366805828352138,
+        "f1_5": 0.8334276577177185,
+        "f1_6": 0.8567517806805284
+      },
+      "metrics_std": {
+        "accuracy": 0.0032339025441156643,
+        "macro_f1": 0.0036868207892396697,
+        "f1_4": 0.005343129599567977,
+        "f1_5": 0.0027315771250771004,
+        "f1_6": 0.0034589495177170123
+      },
+      "baseline": {
+        "train_mode": 5.0,
+        "accuracy": 0.4625748502994012,
+        "train_class_counts": {
+          "4": 844,
+          "5": 2519,
+          "6": 2041
+        }
+      },
+      "tail_thresholds": {}
+    },
+    {
+      "id": "Fe_coord_pointwise_feff_balanced",
+      "element": "Fe",
+      "target": "coord",
+      "representation": "pointwise",
+      "normalization": "feff",
+      "balanced": true,
+      "train_count": 5404,
+      "fit_count": 7557,
+      "valid_count": 601,
+      "test_count": 668,
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "metrics_mean": {
+        "accuracy": 0.8398203592814371,
+        "macro_f1": 0.8395906316248132,
+        "f1_4": 0.8347150466578558,
+        "f1_5": 0.8284028115044332,
+        "f1_6": 0.8556540367121507
+      },
+      "metrics_std": {
+        "accuracy": 0.007434962288299097,
+        "macro_f1": 0.007732741023817885,
+        "f1_4": 0.008918763797457837,
+        "f1_5": 0.0074675751395208425,
+        "f1_6": 0.006992993581599052
+      },
+      "baseline": {
+        "train_mode": 5.0,
+        "accuracy": 0.4625748502994012,
+        "train_class_counts": {
+          "4": 844,
+          "5": 2519,
+          "6": 2041
+        }
+      },
+      "tail_thresholds": {}
+    },
+    {
+      "id": "Co_coord_pointwise_feff_natural",
+      "element": "Co",
+      "target": "coord",
+      "representation": "pointwise",
+      "normalization": "feff",
+      "balanced": false,
+      "train_count": 2782,
+      "fit_count": 2782,
+      "valid_count": 310,
+      "test_count": 344,
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "metrics_mean": {
+        "accuracy": 0.8178294573643411,
+        "macro_f1": 0.797133219965083,
+        "f1_4": 0.813896376160527,
+        "f1_5": 0.6907607016859322,
+        "f1_6": 0.8867425820487895
+      },
+      "metrics_std": {
+        "accuracy": 0.008335586499072328,
+        "macro_f1": 0.008163100166082257,
+        "f1_4": 0.0036424787770016516,
+        "f1_5": 0.014755333505915577,
+        "f1_6": 0.006447562041407032
+      },
+      "baseline": {
+        "train_mode": 6.0,
+        "accuracy": 0.5261627906976745,
+        "train_class_counts": {
+          "4": 430,
+          "5": 848,
+          "6": 1504
+        }
+      },
+      "tail_thresholds": {}
+    },
+    {
+      "id": "Co_coord_pointwise_feff_balanced",
+      "element": "Co",
+      "target": "coord",
+      "representation": "pointwise",
+      "normalization": "feff",
+      "balanced": true,
+      "train_count": 2782,
+      "fit_count": 4512,
+      "valid_count": 310,
+      "test_count": 344,
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "metrics_mean": {
+        "accuracy": 0.811046511627907,
+        "macro_f1": 0.7908528159196169,
+        "f1_4": 0.8073394495412844,
+        "f1_5": 0.682860412069337,
+        "f1_6": 0.8823585861482289
+      },
+      "metrics_std": {
+        "accuracy": 0.002373536572464324,
+        "macro_f1": 0.00277285611566394,
+        "f1_4": 0.0,
+        "f1_5": 0.0068173551126613965,
+        "f1_6": 0.0017291330569323606
+      },
+      "baseline": {
+        "train_mode": 6.0,
+        "accuracy": 0.5261627906976745,
+        "train_class_counts": {
+          "4": 430,
+          "5": 848,
+          "6": 1504
+        }
+      },
+      "tail_thresholds": {}
+    },
+    {
+      "id": "Ni_coord_pointwise_feff_natural",
+      "element": "Ni",
+      "target": "coord",
+      "representation": "pointwise",
+      "normalization": "feff",
+      "balanced": false,
+      "train_count": 2721,
+      "fit_count": 2721,
+      "valid_count": 303,
+      "test_count": 337,
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "metrics_mean": {
+        "accuracy": 0.8803165182987142,
+        "macro_f1": 0.8363020134700704,
+        "f1_4": 0.8217171717171717,
+        "f1_5": 0.7603255028404728,
+        "f1_6": 0.9268633658525668
+      },
+      "metrics_std": {
+        "accuracy": 0.0074018939402056,
+        "macro_f1": 0.01914256956688763,
+        "f1_4": 0.05125205145443382,
+        "f1_5": 0.01587371889013903,
+        "f1_6": 0.004973921429605094
+      },
+      "baseline": {
+        "train_mode": 6.0,
+        "accuracy": 0.6706231454005934,
+        "train_class_counts": {
+          "4": 172,
+          "5": 779,
+          "6": 1770
+        }
+      },
+      "tail_thresholds": {}
+    },
+    {
+      "id": "Ni_coord_pointwise_feff_balanced",
+      "element": "Ni",
+      "target": "coord",
+      "representation": "pointwise",
+      "normalization": "feff",
+      "balanced": true,
+      "train_count": 2721,
+      "fit_count": 5310,
+      "valid_count": 303,
+      "test_count": 337,
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "metrics_mean": {
+        "accuracy": 0.8902077151335311,
+        "macro_f1": 0.8540095812084828,
+        "f1_4": 0.8401663695781343,
+        "f1_5": 0.790052531737925,
+        "f1_6": 0.9318098423093893
+      },
+      "metrics_std": {
+        "accuracy": 0.00873566851268825,
+        "macro_f1": 0.01157590253505355,
+        "f1_4": 0.01176410568818977,
+        "f1_5": 0.018074963030733356,
+        "f1_6": 0.0052690398353739615
+      },
+      "baseline": {
+        "train_mode": 6.0,
+        "accuracy": 0.6706231454005934,
+        "train_class_counts": {
+          "4": 172,
+          "5": 779,
+          "6": 1770
+        }
+      },
+      "tail_thresholds": {}
+    },
+    {
+      "id": "Cu_coord_pointwise_feff_natural",
+      "element": "Cu",
+      "target": "coord",
+      "representation": "pointwise",
+      "normalization": "feff",
+      "balanced": false,
+      "train_count": 2734,
+      "fit_count": 2734,
+      "valid_count": 304,
+      "test_count": 338,
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "metrics_mean": {
+        "accuracy": 0.8333333333333334,
+        "macro_f1": 0.7394470983615221,
+        "f1_4": 0.5122222222222222,
+        "f1_5": 0.8858944934683061,
+        "f1_6": 0.820224579394038
+      },
+      "metrics_std": {
+        "accuracy": 0.0050286188496970015,
+        "macro_f1": 0.01176089977637875,
+        "f1_4": 0.028846122190549287,
+        "f1_5": 0.003210604631821075,
+        "f1_6": 0.006557729049401462
+      },
+      "baseline": {
+        "train_mode": 5.0,
+        "accuracy": 0.6775147928994083,
+        "train_class_counts": {
+          "4": 373,
+          "5": 1834,
+          "6": 527
+        }
+      },
+      "tail_thresholds": {}
+    },
+    {
+      "id": "Cu_coord_pointwise_feff_balanced",
+      "element": "Cu",
+      "target": "coord",
+      "representation": "pointwise",
+      "normalization": "feff",
+      "balanced": true,
+      "train_count": 2734,
+      "fit_count": 5502,
+      "valid_count": 304,
+      "test_count": 338,
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "metrics_mean": {
+        "accuracy": 0.8530571992110453,
+        "macro_f1": 0.7846507987686984,
+        "f1_4": 0.6319563970166381,
+        "f1_5": 0.8974598800492881,
+        "f1_6": 0.824536119240169
+      },
+      "metrics_std": {
+        "accuracy": 0.0036899974228540044,
+        "macro_f1": 0.006201392670314231,
+        "f1_4": 0.007707991303812064,
+        "f1_5": 0.002286485170543194,
+        "f1_6": 0.008922444600855686
+      },
+      "baseline": {
+        "train_mode": 5.0,
+        "accuracy": 0.6775147928994083,
+        "train_class_counts": {
+          "4": 373,
+          "5": 1834,
+          "6": 527
+        }
+      },
+      "tail_thresholds": {}
+    }
+  ],
+  "preprocessing": {
+    "Ti": {
+      "raw": 4930,
+      "ineligible": 57,
+      "unphysical": 26,
+      "polynomial_rejected": 54,
+      "retained": 4793
+    },
+    "V": {
+      "raw": 7120,
+      "ineligible": 30,
+      "unphysical": 12,
+      "polynomial_rejected": 149,
+      "retained": 6929
+    },
+    "Cr": {
+      "raw": 2542,
+      "ineligible": 8,
+      "unphysical": 18,
+      "polynomial_rejected": 121,
+      "retained": 2395
+    },
+    "Mn": {
+      "raw": 8504,
+      "ineligible": 42,
+      "unphysical": 504,
+      "polynomial_rejected": 41,
+      "retained": 7917
+    },
+    "Fe": {
+      "raw": 7362,
+      "ineligible": 25,
+      "unphysical": 523,
+      "polynomial_rejected": 70,
+      "retained": 6744
+    },
+    "Co": {
+      "raw": 3533,
+      "ineligible": 7,
+      "unphysical": 66,
+      "polynomial_rejected": 7,
+      "retained": 3453
+    },
+    "Ni": {
+      "raw": 3420,
+      "ineligible": 11,
+      "unphysical": 12,
+      "polynomial_rejected": 1,
+      "retained": 3396
+    },
+    "Cu": {
+      "raw": 3496,
+      "ineligible": 21,
+      "unphysical": 31,
+      "polynomial_rejected": 0,
+      "retained": 3444
+    }
+  },
+  "protocol": {
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "n_estimators": 100,
+    "max_depth": 35,
+    "split_seed": 42,
+    "split": "sequential 10% test then 10% validation of remainder"
+  },
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.5.3",
+    "sklearn": "1.9.1"
+  }
+}

@@ -1,0 +1,1309 @@
+{
+  "candidate_run_root": "/tmp/torrisi-independent-100",
+  "numerical_reference_root": "/tmp/torrisi-independent-100",
+  "source_identity": "Executed workflow outputs; independently anchored to raw/released arrays and separate archival-array model fits.",
+  "positive_controls": [
+    {
+      "question": "Q1",
+      "correct_candidate_passes": true,
+      "checked_models": 16
+    },
+    {
+      "question": "Q2",
+      "correct_candidate_passes": true,
+      "checked_models": 8
+    },
+    {
+      "question": "Q3",
+      "correct_candidate_passes": true,
+      "checked_models": 16
+    },
+    {
+      "question": "Q4",
+      "correct_candidate_passes": true,
+      "checked_models": 48
+    },
+    {
+      "question": "Q5",
+      "correct_candidate_passes": true,
+      "checked_models": 64
+    }
+  ],
+  "benign_positive_control": {
+    "question": "Q5",
+    "control": "permute_prediction_and_importance_CSV_rows",
+    "accepted": true,
+    "purpose": "The verifier accepts equivalent outputs independently of table row order."
+  },
+  "negative_controls": [
+    {
+      "question": "Q2",
+      "control": "inconsistent_summary",
+      "rejected": true,
+      "reason": "Ti_md_pointwise_feff_natural.metrics_mean.mae: numerical mismatch"
+    },
+    {
+      "question": "Q2",
+      "control": "falsified_truth",
+      "rejected": true,
+      "reason": "\nNot equal to tolerance rtol=0, atol=1e-12\nTi_md_pointwise_feff_natural: truth labels differ\nMismatched elements: 1 / 471 (0.212%)\nMismatch at index:\n [0]: 2.1414939462515457 (ACTUAL), 2.0414939462515456 (DESIRED)\nMax absolute difference among violations: 0.1\nMax relative difference among violations"
+    },
+    {
+      "question": "Q2",
+      "control": "missing_test_prediction",
+      "rejected": true,
+      "reason": "Ti_md_pointwise_feff_natural: test row coverage differs"
+    },
+    {
+      "question": "Q2",
+      "control": "nonfinite_importance",
+      "rejected": true,
+      "reason": "importances: nonfinite values"
+    },
+    {
+      "question": "Q2",
+      "control": "train_test_contamination",
+      "rejected": true,
+      "reason": "Ti_md_pointwise_feff_natural.splits.train[0]: numerical mismatch"
+    },
+    {
+      "question": "Q4",
+      "control": "wrong_polynomial_feature_map",
+      "rejected": true,
+      "reason": "Ti_coord_poly_feff_balanced.feature_metadata[0].degree: numerical mismatch"
+    },
+    {
+      "question": "Q2",
+      "control": "self_consistent_but_wrong_predictions",
+      "rejected": true,
+      "reason": "Ti_md_pointwise_feff_natural: prediction RMSE from reference is too large"
+    },
+    {
+      "question": "Q1",
+      "control": "wrong_experiment_condition",
+      "rejected": true,
+      "reason": "Missing, extra, or duplicate experiment conditions"
+    },
+    {
+      "question": "Q1",
+      "control": "fabricated_confusion_table",
+      "rejected": true,
+      "reason": "\nNot equal to tolerance rtol=0, atol=1e-08\nconfusion.csv.mean_count\nMismatched elements: 1 / 72 (1.39%)\nMismatch at index:\n [54]: 40.33333333333329 (ACTUAL), 30.333333333333332 (DESIRED)\nMax absolute difference among violations: 10.\nMax relative difference among violations: 0.32967033\n ACTUAL: array"
+    },
+    {
+      "question": "Q5",
+      "control": "fabricated_rank_stability",
+      "rejected": true,
+      "reason": "\nNot equal to tolerance rtol=0, atol=1e-08\ncomparisons.csv.importance_spearman\nMismatched elements: 1 / 32 (3.12%)\nMismatch at index:\n [24]: -0.99 (ACTUAL), 0.42153015301530145 (DESIRED)\nMax absolute difference among violations: 1.41153015\nMax relative difference among violations: 3.34858644\n ACTUAL"
+    }
+  ],
+  "independent_model_refits": [
+    {
+      "question": "Q1",
+      "model_id": "Ti_coord_pointwise_feff_balanced",
+      "seed": 42,
+      "source": "authors released model_data arrays",
+      "candidate_code_imported": false,
+      "predictions": 471,
+      "source_files": {
+        "Ti_coord_train_x.npy": "8e51c99e4c8ae14581dd7af6060edbe921896d9968dd59b7c4f2d9f96dee5b5b",
+        "Ti_coord_train_y.npy": "5c43ad768802d43e93b9a19e9e8e38da99ba34bc557c3f38f24d8d27c8021197",
+        "Ti_coord_test_x.npy": "dc624eb4095d4abda1d49b7f211218204433419e232e5d829c49792d0586bbe0"
+      },
+      "n_estimators": 100,
+      "evidence": "independent_refits/Ti_coord_pointwise_feff_balanced.json",
+      "maximum_absolute_prediction_difference": 0.0
+    },
+    {
+      "question": "Q2",
+      "model_id": "Ti_md_pointwise_feff_natural",
+      "seed": 42,
+      "source": "authors released model_data arrays",
+      "candidate_code_imported": false,
+      "predictions": 471,
+      "source_files": {
+        "Ti_md_train_x.npy": "b8bb57aef21ca10025356b68be24e272f2805e4cba528a3d08153e72b458c50f",
+        "Ti_md_train_y.npy": "c47f049dc4896e406eede9dadfb08e6faf012b07b9f3ad3aa455b24da7756d5a",
+        "Ti_md_test_x.npy": "dc624eb4095d4abda1d49b7f211218204433419e232e5d829c49792d0586bbe0"
+      },
+      "n_estimators": 100,
+      "evidence": "independent_refits/Ti_md_pointwise_feff_natural.json",
+      "maximum_absolute_prediction_difference": 1.5543122344752192e-15
+    },
+    {
+      "question": "Q3",
+      "model_id": "Fe_bader_pointwise_feff_natural",
+      "seed": 42,
+      "source": "authors released model_data arrays",
+      "candidate_code_imported": false,
+      "predictions": 391,
+      "source_files": {
+        "Fe_bader_train_x.npy": "91c734cd7f560e22db4abe5f5acbba30c2fa62aa250845571df8f0bad0080fc2",
+        "Fe_bader_train_y.npy": "9e31b50352b7da7a04a00c140cc8f7855a3ef8276c44469b9a351a0169c12e4c",
+        "Fe_bader_test_x.npy": "d38625febb4e6e2663827ed9e9a4b83ecf8737e48ca8b1aa5bbb78b0a1277d8c"
+      },
+      "n_estimators": 100,
+      "evidence": "independent_refits/Fe_bader_pointwise_feff_natural.json",
+      "maximum_absolute_prediction_difference": 1.3322676295501878e-15
+    },
+    {
+      "question": "Q4",
+      "model_id": "Ti_md_poly_feff_natural",
+      "seed": 42,
+      "source": "authors released model_data arrays",
+      "candidate_code_imported": false,
+      "predictions": 471,
+      "source_files": {
+        "Ti_feffnorm_polynomial_md_train_x.npy": "a34e29f032ecab9448f6d386ebf8eda41d49de0bd2b4a00c1698d18d174f3ba7",
+        "Ti_feffnorm_polynomial_md_train_y.npy": "c47f049dc4896e406eede9dadfb08e6faf012b07b9f3ad3aa455b24da7756d5a",
+        "Ti_feffnorm_polynomial_md_test_x.npy": "9136b0b96843cb541ebdca084448877b3c164b33fc4e1044ca3679e48f5ca919"
+      },
+      "n_estimators": 100,
+      "evidence": "independent_refits/Ti_md_poly_feff_natural.json",
+      "maximum_absolute_prediction_difference": 1.3322676295501878e-15
+    },
+    {
+      "question": "Q5",
+      "model_id": "Ni_md_poly_max_natural",
+      "seed": 42,
+      "source": "authors released model_data arrays",
+      "candidate_code_imported": false,
+      "predictions": 337,
+      "source_files": {
+        "Ni_maxnorm_polynomial_md_train_x.npy": "aa53f734e880264f44671bb8763d14dd6d463cf961d0326f0f666dfbdf498daa",
+        "Ni_maxnorm_polynomial_md_train_y.npy": "fc8aeafe198d8ff018c14a495be477a7325802754b6ec2060032b6ef6799d783",
+        "Ni_maxnorm_polynomial_md_test_x.npy": "a0771720a6fe53ced3714e0f5a1b5da4ff690f22c7057f6ff55d13c7b320a6d3"
+      },
+      "n_estimators": 100,
+      "evidence": "independent_refits/Ni_md_poly_max_natural.json",
+      "maximum_absolute_prediction_difference": 1.1102230246251565e-15
+    }
+  ],
+  "published_score_comparison": {
+    "role": "Contextual, not a pass/fail oracle: different forest size, seeds and sklearn version; polynomial coordination intentionally balances classes and is excluded.",
+    "comparisons": [
+      {
+        "model_id": "Ti_coord_pointwise_feff_balanced",
+        "metric": "accuracy",
+        "published": 0.8754000000000001,
+        "modern": 0.8733191790516631,
+        "modern_minus_published": -0.0020808209483369478
+      },
+      {
+        "model_id": "Ti_coord_pointwise_feff_balanced",
+        "metric": "f1_4",
+        "published": 0.8153,
+        "modern": 0.8159512937595129,
+        "modern_minus_published": 0.0006512937595128943
+      },
+      {
+        "model_id": "Ti_coord_pointwise_feff_balanced",
+        "metric": "f1_5",
+        "published": 0.8758,
+        "modern": 0.8736782728783914,
+        "modern_minus_published": -0.0021217271216086298
+      },
+      {
+        "model_id": "Ti_coord_pointwise_feff_balanced",
+        "metric": "f1_6",
+        "published": 0.8859999999999999,
+        "modern": 0.8836332871865866,
+        "modern_minus_published": -0.0023667128134132742
+      },
+      {
+        "model_id": "V_coord_pointwise_feff_balanced",
+        "metric": "accuracy",
+        "published": 0.8847,
+        "modern": 0.8791848617176128,
+        "modern_minus_published": -0.005515138282387255
+      },
+      {
+        "model_id": "V_coord_pointwise_feff_balanced",
+        "metric": "f1_4",
+        "published": 0.9642000000000001,
+        "modern": 0.9607237679912833,
+        "modern_minus_published": -0.0034762320087167176
+      },
+      {
+        "model_id": "V_coord_pointwise_feff_balanced",
+        "metric": "f1_5",
+        "published": 0.8207,
+        "modern": 0.8112320652679889,
+        "modern_minus_published": -0.00946793473201113
+      },
+      {
+        "model_id": "V_coord_pointwise_feff_balanced",
+        "metric": "f1_6",
+        "published": 0.8769,
+        "modern": 0.8728410059577022,
+        "modern_minus_published": -0.004058994042297814
+      },
+      {
+        "model_id": "Cr_coord_pointwise_feff_balanced",
+        "metric": "accuracy",
+        "published": 0.866,
+        "modern": 0.8652482269503547,
+        "modern_minus_published": -0.0007517730496452435
+      },
+      {
+        "model_id": "Cr_coord_pointwise_feff_balanced",
+        "metric": "f1_4",
+        "published": 0.9428,
+        "modern": 0.9386005921770298,
+        "modern_minus_published": -0.004199407822970125
+      },
+      {
+        "model_id": "Cr_coord_pointwise_feff_balanced",
+        "metric": "f1_5",
+        "published": 0.6809000000000001,
+        "modern": 0.6779358207929637,
+        "modern_minus_published": -0.0029641792070363993
+      },
+      {
+        "model_id": "Cr_coord_pointwise_feff_balanced",
+        "metric": "f1_6",
+        "published": 0.9059,
+        "modern": 0.9069209762758149,
+        "modern_minus_published": 0.0010209762758148777
+      },
+      {
+        "model_id": "Mn_coord_pointwise_feff_balanced",
+        "metric": "accuracy",
+        "published": 0.8012,
+        "modern": 0.8066581306017926,
+        "modern_minus_published": 0.005458130601792566
+      },
+      {
+        "model_id": "Mn_coord_pointwise_feff_balanced",
+        "metric": "f1_4",
+        "published": 0.6143,
+        "modern": 0.5918964076858814,
+        "modern_minus_published": -0.022403592314118592
+      },
+      {
+        "model_id": "Mn_coord_pointwise_feff_balanced",
+        "metric": "f1_5",
+        "published": 0.8037000000000001,
+        "modern": 0.8099093554728877,
+        "modern_minus_published": 0.00620935547288759
+      },
+      {
+        "model_id": "Mn_coord_pointwise_feff_balanced",
+        "metric": "f1_6",
+        "published": 0.813,
+        "modern": 0.8200464629840182,
+        "modern_minus_published": 0.007046462984018231
+      },
+      {
+        "model_id": "Fe_coord_pointwise_feff_balanced",
+        "metric": "accuracy",
+        "published": 0.8423999999999999,
+        "modern": 0.8398203592814371,
+        "modern_minus_published": -0.00257964071856287
+      },
+      {
+        "model_id": "Fe_coord_pointwise_feff_balanced",
+        "metric": "f1_4",
+        "published": 0.8275,
+        "modern": 0.8347150466578558,
+        "modern_minus_published": 0.007215046657855773
+      },
+      {
+        "model_id": "Fe_coord_pointwise_feff_balanced",
+        "metric": "f1_5",
+        "published": 0.8321,
+        "modern": 0.8284028115044332,
+        "modern_minus_published": -0.003697188495566772
+      },
+      {
+        "model_id": "Fe_coord_pointwise_feff_balanced",
+        "metric": "f1_6",
+        "published": 0.8608,
+        "modern": 0.8556540367121507,
+        "modern_minus_published": -0.005145963287849331
+      },
+      {
+        "model_id": "Co_coord_pointwise_feff_balanced",
+        "metric": "accuracy",
+        "published": 0.8145,
+        "modern": 0.811046511627907,
+        "modern_minus_published": -0.0034534883720930276
+      },
+      {
+        "model_id": "Co_coord_pointwise_feff_balanced",
+        "metric": "f1_4",
+        "published": 0.8081,
+        "modern": 0.8073394495412844,
+        "modern_minus_published": -0.000760550458715592
+      },
+      {
+        "model_id": "Co_coord_pointwise_feff_balanced",
+        "metric": "f1_5",
+        "published": 0.687,
+        "modern": 0.682860412069337,
+        "modern_minus_published": -0.004139587930663047
+      },
+      {
+        "model_id": "Co_coord_pointwise_feff_balanced",
+        "metric": "f1_6",
+        "published": 0.8856,
+        "modern": 0.8823585861482289,
+        "modern_minus_published": -0.0032414138517711244
+      },
+      {
+        "model_id": "Ni_coord_pointwise_feff_balanced",
+        "metric": "accuracy",
+        "published": 0.8902,
+        "modern": 0.8902077151335311,
+        "modern_minus_published": 7.715133531149831e-06
+      },
+      {
+        "model_id": "Ni_coord_pointwise_feff_balanced",
+        "metric": "f1_4",
+        "published": 0.831,
+        "modern": 0.8401663695781343,
+        "modern_minus_published": 0.009166369578134326
+      },
+      {
+        "model_id": "Ni_coord_pointwise_feff_balanced",
+        "metric": "f1_5",
+        "published": 0.7906,
+        "modern": 0.790052531737925,
+        "modern_minus_published": -0.0005474682620749682
+      },
+      {
+        "model_id": "Ni_coord_pointwise_feff_balanced",
+        "metric": "f1_6",
+        "published": 0.9325,
+        "modern": 0.9318098423093893,
+        "modern_minus_published": -0.0006901576906106488
+      },
+      {
+        "model_id": "Cu_coord_pointwise_feff_balanced",
+        "metric": "accuracy",
+        "published": 0.8506,
+        "modern": 0.8530571992110453,
+        "modern_minus_published": 0.002457199211045258
+      },
+      {
+        "model_id": "Cu_coord_pointwise_feff_balanced",
+        "metric": "f1_4",
+        "published": 0.6311,
+        "modern": 0.6319563970166381,
+        "modern_minus_published": 0.0008563970166380885
+      },
+      {
+        "model_id": "Cu_coord_pointwise_feff_balanced",
+        "metric": "f1_5",
+        "published": 0.8956000000000001,
+        "modern": 0.8974598800492881,
+        "modern_minus_published": 0.001859880049288054
+      },
+      {
+        "model_id": "Cu_coord_pointwise_feff_balanced",
+        "metric": "f1_6",
+        "published": 0.8190000000000001,
+        "modern": 0.824536119240169,
+        "modern_minus_published": 0.005536119240168946
+      },
+      {
+        "model_id": "Ti_md_pointwise_feff_natural",
+        "metric": "r2",
+        "published": 0.8644,
+        "modern": 0.8568084479382477,
+        "modern_minus_published": -0.007591552061752216
+      },
+      {
+        "model_id": "Ti_md_pointwise_feff_natural",
+        "metric": "mae",
+        "published": 0.013,
+        "modern": 0.013267055832853173,
+        "modern_minus_published": 0.000267055832853174
+      },
+      {
+        "model_id": "V_md_pointwise_feff_natural",
+        "metric": "r2",
+        "published": 0.9295,
+        "modern": 0.9290074604658609,
+        "modern_minus_published": -0.0004925395341390804
+      },
+      {
+        "model_id": "V_md_pointwise_feff_natural",
+        "metric": "mae",
+        "published": 0.015,
+        "modern": 0.014781448672921554,
+        "modern_minus_published": -0.00021855132707844505
+      },
+      {
+        "model_id": "Cr_md_pointwise_feff_natural",
+        "metric": "r2",
+        "published": 0.8384,
+        "modern": 0.8382474589330741,
+        "modern_minus_published": -0.0001525410669259708
+      },
+      {
+        "model_id": "Cr_md_pointwise_feff_natural",
+        "metric": "mae",
+        "published": 0.02,
+        "modern": 0.01964352744018232,
+        "modern_minus_published": -0.00035647255981768183
+      },
+      {
+        "model_id": "Mn_md_pointwise_feff_natural",
+        "metric": "r2",
+        "published": 0.9179999999999999,
+        "modern": 0.9193399163305292,
+        "modern_minus_published": 0.0013399163305293227
+      },
+      {
+        "model_id": "Mn_md_pointwise_feff_natural",
+        "metric": "mae",
+        "published": 0.017,
+        "modern": 0.016713816834667116,
+        "modern_minus_published": -0.00028618316533288515
+      },
+      {
+        "model_id": "Fe_md_pointwise_feff_natural",
+        "metric": "r2",
+        "published": 0.8919,
+        "modern": 0.8931831286753052,
+        "modern_minus_published": 0.001283128675305223
+      },
+      {
+        "model_id": "Fe_md_pointwise_feff_natural",
+        "metric": "mae",
+        "published": 0.015,
+        "modern": 0.015093542638334116,
+        "modern_minus_published": 9.354263833411675e-05
+      },
+      {
+        "model_id": "Co_md_pointwise_feff_natural",
+        "metric": "r2",
+        "published": 0.9114,
+        "modern": 0.9112086350070943,
+        "modern_minus_published": -0.00019136499290572928
+      },
+      {
+        "model_id": "Co_md_pointwise_feff_natural",
+        "metric": "mae",
+        "published": 0.016,
+        "modern": 0.01640994547741417,
+        "modern_minus_published": 0.00040994547741416906
+      },
+      {
+        "model_id": "Ni_md_pointwise_feff_natural",
+        "metric": "r2",
+        "published": 0.8955,
+        "modern": 0.8911480595685034,
+        "modern_minus_published": -0.004351940431496559
+      },
+      {
+        "model_id": "Ni_md_pointwise_feff_natural",
+        "metric": "mae",
+        "published": 0.014,
+        "modern": 0.014419038200731574,
+        "modern_minus_published": 0.0004190382007315738
+      },
+      {
+        "model_id": "Cu_md_pointwise_feff_natural",
+        "metric": "r2",
+        "published": 0.7066,
+        "modern": 0.697937980169654,
+        "modern_minus_published": -0.00866201983034598
+      },
+      {
+        "model_id": "Cu_md_pointwise_feff_natural",
+        "metric": "mae",
+        "published": 0.046,
+        "modern": 0.04696885092664447,
+        "modern_minus_published": 0.0009688509266444698
+      },
+      {
+        "model_id": "Ti_bader_pointwise_feff_natural",
+        "metric": "r2",
+        "published": 0.58,
+        "modern": 0.5711854457802161,
+        "modern_minus_published": -0.008814554219783832
+      },
+      {
+        "model_id": "Ti_bader_pointwise_feff_natural",
+        "metric": "mae",
+        "published": 0.07,
+        "modern": 0.07112919018989518,
+        "modern_minus_published": 0.0011291901898951712
+      },
+      {
+        "model_id": "V_bader_pointwise_feff_natural",
+        "metric": "r2",
+        "published": 0.8345999999999999,
+        "modern": 0.8298866191121167,
+        "modern_minus_published": -0.004713380887883201
+      },
+      {
+        "model_id": "V_bader_pointwise_feff_natural",
+        "metric": "mae",
+        "published": 0.08,
+        "modern": 0.07752239194256495,
+        "modern_minus_published": -0.002477608057435049
+      },
+      {
+        "model_id": "Cr_bader_pointwise_feff_natural",
+        "metric": "r2",
+        "published": 0.8514,
+        "modern": 0.8466148846833793,
+        "modern_minus_published": -0.004785115316620736
+      },
+      {
+        "model_id": "Cr_bader_pointwise_feff_natural",
+        "metric": "mae",
+        "published": 0.06,
+        "modern": 0.06479986002679126,
+        "modern_minus_published": 0.004799860026791267
+      },
+      {
+        "model_id": "Mn_bader_pointwise_feff_natural",
+        "metric": "r2",
+        "published": 0.7848999999999999,
+        "modern": 0.7848056287002798,
+        "modern_minus_published": -9.43712997201196e-05
+      },
+      {
+        "model_id": "Mn_bader_pointwise_feff_natural",
+        "metric": "mae",
+        "published": 0.06,
+        "modern": 0.062200598035378085,
+        "modern_minus_published": 0.0022005980353780874
+      },
+      {
+        "model_id": "Fe_bader_pointwise_feff_natural",
+        "metric": "r2",
+        "published": 0.7928000000000001,
+        "modern": 0.7904101663755281,
+        "modern_minus_published": -0.002389833624471982
+      },
+      {
+        "model_id": "Fe_bader_pointwise_feff_natural",
+        "metric": "mae",
+        "published": 0.09,
+        "modern": 0.0919694647455762,
+        "modern_minus_published": 0.001969464745576202
+      },
+      {
+        "model_id": "Co_bader_pointwise_feff_natural",
+        "metric": "r2",
+        "published": 0.8195999999999999,
+        "modern": 0.8196181198386941,
+        "modern_minus_published": 1.8119838694263812e-05
+      },
+      {
+        "model_id": "Co_bader_pointwise_feff_natural",
+        "metric": "mae",
+        "published": 0.07,
+        "modern": 0.06581363356431044,
+        "modern_minus_published": -0.004186366435689565
+      },
+      {
+        "model_id": "Ni_bader_pointwise_feff_natural",
+        "metric": "r2",
+        "published": 0.621,
+        "modern": 0.6055329442660655,
+        "modern_minus_published": -0.015467055733934476
+      },
+      {
+        "model_id": "Ni_bader_pointwise_feff_natural",
+        "metric": "mae",
+        "published": 0.06,
+        "modern": 0.06063104875738886,
+        "modern_minus_published": 0.0006310487573888621
+      },
+      {
+        "model_id": "Cu_bader_pointwise_feff_natural",
+        "metric": "r2",
+        "published": 0.6855,
+        "modern": 0.6817786381000834,
+        "modern_minus_published": -0.0037213618999165643
+      },
+      {
+        "model_id": "Cu_bader_pointwise_feff_natural",
+        "metric": "mae",
+        "published": 0.08,
+        "modern": 0.08479694031827266,
+        "modern_minus_published": 0.004796940318272658
+      },
+      {
+        "model_id": "Ti_md_poly_feff_natural",
+        "metric": "r2",
+        "published": 0.8502,
+        "modern": 0.8428649401246417,
+        "modern_minus_published": -0.0073350598753582075
+      },
+      {
+        "model_id": "Ti_md_poly_feff_natural",
+        "metric": "mae",
+        "published": 0.014,
+        "modern": 0.014057284107157486,
+        "modern_minus_published": 5.728410715748547e-05
+      },
+      {
+        "model_id": "Ti_bader_poly_feff_natural",
+        "metric": "r2",
+        "published": 0.5574,
+        "modern": 0.5506447369824997,
+        "modern_minus_published": -0.00675526301750029
+      },
+      {
+        "model_id": "Ti_bader_poly_feff_natural",
+        "metric": "mae",
+        "published": 0.071,
+        "modern": 0.07203565625711773,
+        "modern_minus_published": 0.0010356562571177397
+      },
+      {
+        "model_id": "V_md_poly_feff_natural",
+        "metric": "r2",
+        "published": 0.9339,
+        "modern": 0.9334019670528731,
+        "modern_minus_published": -0.000498032947126803
+      },
+      {
+        "model_id": "V_md_poly_feff_natural",
+        "metric": "mae",
+        "published": 0.015,
+        "modern": 0.014843926493487467,
+        "modern_minus_published": -0.00015607350651253293
+      },
+      {
+        "model_id": "V_bader_poly_feff_natural",
+        "metric": "r2",
+        "published": 0.8321999999999999,
+        "modern": 0.8304410044135336,
+        "modern_minus_published": -0.0017589955864663054
+      },
+      {
+        "model_id": "V_bader_poly_feff_natural",
+        "metric": "mae",
+        "published": 0.077,
+        "modern": 0.07702425751202581,
+        "modern_minus_published": 2.425751202581039e-05
+      },
+      {
+        "model_id": "Cr_md_poly_feff_natural",
+        "metric": "r2",
+        "published": 0.8475,
+        "modern": 0.8440243812895281,
+        "modern_minus_published": -0.0034756187104719727
+      },
+      {
+        "model_id": "Cr_md_poly_feff_natural",
+        "metric": "mae",
+        "published": 0.019,
+        "modern": 0.019558454965607933,
+        "modern_minus_published": 0.0005584549656079338
+      },
+      {
+        "model_id": "Cr_bader_poly_feff_natural",
+        "metric": "r2",
+        "published": 0.8484,
+        "modern": 0.8487298001712072,
+        "modern_minus_published": 0.0003298001712072063
+      },
+      {
+        "model_id": "Cr_bader_poly_feff_natural",
+        "metric": "mae",
+        "published": 0.064,
+        "modern": 0.06374962805218554,
+        "modern_minus_published": -0.00025037194781446503
+      },
+      {
+        "model_id": "Mn_md_poly_feff_natural",
+        "metric": "r2",
+        "published": 0.9127,
+        "modern": 0.9122470842586475,
+        "modern_minus_published": -0.0004529157413524221
+      },
+      {
+        "model_id": "Mn_md_poly_feff_natural",
+        "metric": "mae",
+        "published": 0.017,
+        "modern": 0.017337737096363517,
+        "modern_minus_published": 0.00033773709636351554
+      },
+      {
+        "model_id": "Mn_bader_poly_feff_natural",
+        "metric": "r2",
+        "published": 0.7943000000000001,
+        "modern": 0.7889908630374904,
+        "modern_minus_published": -0.005309136962509675
+      },
+      {
+        "model_id": "Mn_bader_poly_feff_natural",
+        "metric": "mae",
+        "published": 0.061,
+        "modern": 0.06104536368637714,
+        "modern_minus_published": 4.5363686377142276e-05
+      },
+      {
+        "model_id": "Fe_md_poly_feff_natural",
+        "metric": "r2",
+        "published": 0.8892,
+        "modern": 0.8869139983908001,
+        "modern_minus_published": -0.0022860016091998947
+      },
+      {
+        "model_id": "Fe_md_poly_feff_natural",
+        "metric": "mae",
+        "published": 0.016,
+        "modern": 0.015738985088066062,
+        "modern_minus_published": -0.00026101491193393847
+      },
+      {
+        "model_id": "Fe_bader_poly_feff_natural",
+        "metric": "r2",
+        "published": 0.8034,
+        "modern": 0.8010599561406563,
+        "modern_minus_published": -0.002340043859343721
+      },
+      {
+        "model_id": "Fe_bader_poly_feff_natural",
+        "metric": "mae",
+        "published": 0.092,
+        "modern": 0.09214494476988973,
+        "modern_minus_published": 0.00014494476988972937
+      },
+      {
+        "model_id": "Co_md_poly_feff_natural",
+        "metric": "r2",
+        "published": 0.9037999999999999,
+        "modern": 0.9019570279241256,
+        "modern_minus_published": -0.0018429720758743606
+      },
+      {
+        "model_id": "Co_md_poly_feff_natural",
+        "metric": "mae",
+        "published": 0.017,
+        "modern": 0.017145030789413346,
+        "modern_minus_published": 0.00014503078941334457
+      },
+      {
+        "model_id": "Co_bader_poly_feff_natural",
+        "metric": "r2",
+        "published": 0.7990999999999999,
+        "modern": 0.7966539413357117,
+        "modern_minus_published": -0.0024460586642882642
+      },
+      {
+        "model_id": "Co_bader_poly_feff_natural",
+        "metric": "mae",
+        "published": 0.068,
+        "modern": 0.06836862141630301,
+        "modern_minus_published": 0.0003686214163030055
+      },
+      {
+        "model_id": "Ni_md_poly_feff_natural",
+        "metric": "r2",
+        "published": 0.8858,
+        "modern": 0.8833378252266281,
+        "modern_minus_published": -0.0024621747733719612
+      },
+      {
+        "model_id": "Ni_md_poly_feff_natural",
+        "metric": "mae",
+        "published": 0.015,
+        "modern": 0.014806990972896486,
+        "modern_minus_published": -0.00019300902710351307
+      },
+      {
+        "model_id": "Ni_bader_poly_feff_natural",
+        "metric": "r2",
+        "published": 0.48560000000000003,
+        "modern": 0.48186757101129235,
+        "modern_minus_published": -0.003732428988707681
+      },
+      {
+        "model_id": "Ni_bader_poly_feff_natural",
+        "metric": "mae",
+        "published": 0.066,
+        "modern": 0.0657673841440179,
+        "modern_minus_published": -0.00023261585598209622
+      },
+      {
+        "model_id": "Cu_md_poly_feff_natural",
+        "metric": "r2",
+        "published": 0.6870999999999999,
+        "modern": 0.6771720401312565,
+        "modern_minus_published": -0.009927959868743397
+      },
+      {
+        "model_id": "Cu_md_poly_feff_natural",
+        "metric": "mae",
+        "published": 0.048,
+        "modern": 0.04847263111658051,
+        "modern_minus_published": 0.00047263111658051027
+      },
+      {
+        "model_id": "Cu_bader_poly_feff_natural",
+        "metric": "r2",
+        "published": 0.6578,
+        "modern": 0.6636561948940624,
+        "modern_minus_published": 0.005856194894062305
+      },
+      {
+        "model_id": "Cu_bader_poly_feff_natural",
+        "metric": "mae",
+        "published": 0.085,
+        "modern": 0.08427066934063866,
+        "modern_minus_published": -0.0007293306593613436
+      },
+      {
+        "model_id": "Ti_coord_pointwise_max_balanced",
+        "metric": "accuracy",
+        "published": 0.8427,
+        "modern": 0.8400566171266809,
+        "modern_minus_published": -0.002643382873319111
+      },
+      {
+        "model_id": "Ti_coord_pointwise_max_balanced",
+        "metric": "f1_4",
+        "published": 0.7424,
+        "modern": 0.7465753424657534,
+        "modern_minus_published": 0.004175342465753462
+      },
+      {
+        "model_id": "Ti_coord_pointwise_max_balanced",
+        "metric": "f1_5",
+        "published": 0.8406999999999999,
+        "modern": 0.836920068104476,
+        "modern_minus_published": -0.003779931895523947
+      },
+      {
+        "model_id": "Ti_coord_pointwise_max_balanced",
+        "metric": "f1_6",
+        "published": 0.8633,
+        "modern": 0.8609217862949206,
+        "modern_minus_published": -0.0023782137050794017
+      },
+      {
+        "model_id": "Ti_md_pointwise_max_natural",
+        "metric": "r2",
+        "published": 0.8267,
+        "modern": 0.8247400598908325,
+        "modern_minus_published": -0.001959940109167446
+      },
+      {
+        "model_id": "Ti_md_pointwise_max_natural",
+        "metric": "mae",
+        "published": 0.015,
+        "modern": 0.015555377721800101,
+        "modern_minus_published": 0.0005553777218001016
+      },
+      {
+        "model_id": "Ti_md_poly_max_natural",
+        "metric": "r2",
+        "published": 0.8316,
+        "modern": 0.8239646994922957,
+        "modern_minus_published": -0.0076353005077043345
+      },
+      {
+        "model_id": "Ti_md_poly_max_natural",
+        "metric": "mae",
+        "published": 0.015,
+        "modern": 0.015286775931889889,
+        "modern_minus_published": 0.00028677593188988944
+      },
+      {
+        "model_id": "V_coord_pointwise_max_balanced",
+        "metric": "accuracy",
+        "published": 0.8579000000000001,
+        "modern": 0.8602620087336245,
+        "modern_minus_published": 0.0023620087336243545
+      },
+      {
+        "model_id": "V_coord_pointwise_max_balanced",
+        "metric": "f1_4",
+        "published": 0.9567,
+        "modern": 0.9549622923162722,
+        "modern_minus_published": -0.0017377076837278294
+      },
+      {
+        "model_id": "V_coord_pointwise_max_balanced",
+        "metric": "f1_5",
+        "published": 0.7811,
+        "modern": 0.7846851642820214,
+        "modern_minus_published": 0.0035851642820213803
+      },
+      {
+        "model_id": "V_coord_pointwise_max_balanced",
+        "metric": "f1_6",
+        "published": 0.8464,
+        "modern": 0.8507603007504109,
+        "modern_minus_published": 0.004360300750410828
+      },
+      {
+        "model_id": "V_md_pointwise_max_natural",
+        "metric": "r2",
+        "published": 0.9248000000000001,
+        "modern": 0.9239075745293422,
+        "modern_minus_published": -0.0008924254706578205
+      },
+      {
+        "model_id": "V_md_pointwise_max_natural",
+        "metric": "mae",
+        "published": 0.017,
+        "modern": 0.01743852228999984,
+        "modern_minus_published": 0.00043852228999984033
+      },
+      {
+        "model_id": "V_md_poly_max_natural",
+        "metric": "r2",
+        "published": 0.9323999999999999,
+        "modern": 0.9318252783420252,
+        "modern_minus_published": -0.000574721657974675
+      },
+      {
+        "model_id": "V_md_poly_max_natural",
+        "metric": "mae",
+        "published": 0.017,
+        "modern": 0.01683459035707295,
+        "modern_minus_published": -0.00016540964292705018
+      },
+      {
+        "model_id": "Cr_coord_pointwise_max_balanced",
+        "metric": "accuracy",
+        "published": 0.8345,
+        "modern": 0.8354609929078013,
+        "modern_minus_published": 0.0009609929078012724
+      },
+      {
+        "model_id": "Cr_coord_pointwise_max_balanced",
+        "metric": "f1_4",
+        "published": 0.9059,
+        "modern": 0.9090619525402134,
+        "modern_minus_published": 0.003161952540213342
+      },
+      {
+        "model_id": "Cr_coord_pointwise_max_balanced",
+        "metric": "f1_5",
+        "published": 0.636,
+        "modern": 0.6388023170433222,
+        "modern_minus_published": 0.0028023170433222333
+      },
+      {
+        "model_id": "Cr_coord_pointwise_max_balanced",
+        "metric": "f1_6",
+        "published": 0.8859999999999999,
+        "modern": 0.8848474590397789,
+        "modern_minus_published": -0.0011525409602209935
+      },
+      {
+        "model_id": "Cr_md_pointwise_max_natural",
+        "metric": "r2",
+        "published": 0.8425,
+        "modern": 0.8384338653388882,
+        "modern_minus_published": -0.004066134661111831
+      },
+      {
+        "model_id": "Cr_md_pointwise_max_natural",
+        "metric": "mae",
+        "published": 0.023,
+        "modern": 0.023287761748611607,
+        "modern_minus_published": 0.0002877617486116077
+      },
+      {
+        "model_id": "Cr_md_poly_max_natural",
+        "metric": "r2",
+        "published": 0.8558,
+        "modern": 0.8601816962463059,
+        "modern_minus_published": 0.004381696246305911
+      },
+      {
+        "model_id": "Cr_md_poly_max_natural",
+        "metric": "mae",
+        "published": 0.022,
+        "modern": 0.02200810440935558,
+        "modern_minus_published": 8.104409355582515e-06
+      },
+      {
+        "model_id": "Mn_coord_pointwise_max_balanced",
+        "metric": "accuracy",
+        "published": 0.7857999999999999,
+        "modern": 0.7870251813913786,
+        "modern_minus_published": 0.0012251813913786158
+      },
+      {
+        "model_id": "Mn_coord_pointwise_max_balanced",
+        "metric": "f1_4",
+        "published": 0.5162,
+        "modern": 0.5398428731762065,
+        "modern_minus_published": 0.023642873176206503
+      },
+      {
+        "model_id": "Mn_coord_pointwise_max_balanced",
+        "metric": "f1_5",
+        "published": 0.7915000000000001,
+        "modern": 0.7928619594198542,
+        "modern_minus_published": 0.001361959419854064
+      },
+      {
+        "model_id": "Mn_coord_pointwise_max_balanced",
+        "metric": "f1_6",
+        "published": 0.7998000000000001,
+        "modern": 0.7994328912352991,
+        "modern_minus_published": -0.0003671087647009186
+      },
+      {
+        "model_id": "Mn_md_pointwise_max_natural",
+        "metric": "r2",
+        "published": 0.9014,
+        "modern": 0.8977568479024453,
+        "modern_minus_published": -0.003643152097554725
+      },
+      {
+        "model_id": "Mn_md_pointwise_max_natural",
+        "metric": "mae",
+        "published": 0.019,
+        "modern": 0.019660501104051997,
+        "modern_minus_published": 0.000660501104051997
+      },
+      {
+        "model_id": "Mn_md_poly_max_natural",
+        "metric": "r2",
+        "published": 0.8941,
+        "modern": 0.8931552786910562,
+        "modern_minus_published": -0.0009447213089438522
+      },
+      {
+        "model_id": "Mn_md_poly_max_natural",
+        "metric": "mae",
+        "published": 0.021,
+        "modern": 0.020762728918988015,
+        "modern_minus_published": -0.00023727108101198602
+      },
+      {
+        "model_id": "Fe_coord_pointwise_max_balanced",
+        "metric": "accuracy",
+        "published": 0.7968999999999999,
+        "modern": 0.7939121756487025,
+        "modern_minus_published": -0.002987824351297408
+      },
+      {
+        "model_id": "Fe_coord_pointwise_max_balanced",
+        "metric": "f1_4",
+        "published": 0.7926000000000001,
+        "modern": 0.7934057136321676,
+        "modern_minus_published": 0.0008057136321675262
+      },
+      {
+        "model_id": "Fe_coord_pointwise_max_balanced",
+        "metric": "f1_5",
+        "published": 0.7861,
+        "modern": 0.7832593766234663,
+        "modern_minus_published": -0.0028406233765336797
+      },
+      {
+        "model_id": "Fe_coord_pointwise_max_balanced",
+        "metric": "f1_6",
+        "published": 0.8114,
+        "modern": 0.8070221165235649,
+        "modern_minus_published": -0.004377883476435085
+      },
+      {
+        "model_id": "Fe_md_pointwise_max_natural",
+        "metric": "r2",
+        "published": 0.8856999999999999,
+        "modern": 0.8854468504568485,
+        "modern_minus_published": -0.0002531495431514763
+      },
+      {
+        "model_id": "Fe_md_pointwise_max_natural",
+        "metric": "mae",
+        "published": 0.017,
+        "modern": 0.017389833156737103,
+        "modern_minus_published": 0.0003898331567371016
+      },
+      {
+        "model_id": "Fe_md_poly_max_natural",
+        "metric": "r2",
+        "published": 0.8621,
+        "modern": 0.8593942020575396,
+        "modern_minus_published": -0.0027057979424603973
+      },
+      {
+        "model_id": "Fe_md_poly_max_natural",
+        "metric": "mae",
+        "published": 0.019,
+        "modern": 0.019149135913475484,
+        "modern_minus_published": 0.00014913591347548438
+      },
+      {
+        "model_id": "Co_coord_pointwise_max_balanced",
+        "metric": "accuracy",
+        "published": 0.8238,
+        "modern": 0.8217054263565892,
+        "modern_minus_published": -0.002094573643410813
+      },
+      {
+        "model_id": "Co_coord_pointwise_max_balanced",
+        "metric": "f1_4",
+        "published": 0.8371999999999999,
+        "modern": 0.8248656179690662,
+        "modern_minus_published": -0.012334382030933733
+      },
+      {
+        "model_id": "Co_coord_pointwise_max_balanced",
+        "metric": "f1_5",
+        "published": 0.7067,
+        "modern": 0.7031092017480404,
+        "modern_minus_published": -0.003590798251959626
+      },
+      {
+        "model_id": "Co_coord_pointwise_max_balanced",
+        "metric": "f1_6",
+        "published": 0.8853,
+        "modern": 0.8870822041553749,
+        "modern_minus_published": 0.001782204155374889
+      },
+      {
+        "model_id": "Co_md_pointwise_max_natural",
+        "metric": "r2",
+        "published": 0.875,
+        "modern": 0.8708844721277472,
+        "modern_minus_published": -0.004115527872252778
+      },
+      {
+        "model_id": "Co_md_pointwise_max_natural",
+        "metric": "mae",
+        "published": 0.02,
+        "modern": 0.020250177501808214,
+        "modern_minus_published": 0.00025017750180821377
+      },
+      {
+        "model_id": "Co_md_poly_max_natural",
+        "metric": "r2",
+        "published": 0.8656999999999999,
+        "modern": 0.8649963790770935,
+        "modern_minus_published": -0.0007036209229064339
+      },
+      {
+        "model_id": "Co_md_poly_max_natural",
+        "metric": "mae",
+        "published": 0.021,
+        "modern": 0.02130703994932484,
+        "modern_minus_published": 0.0003070399493248395
+      },
+      {
+        "model_id": "Ni_coord_pointwise_max_balanced",
+        "metric": "accuracy",
+        "published": 0.8736,
+        "modern": 0.8783382789317508,
+        "modern_minus_published": 0.004738278931750717
+      },
+      {
+        "model_id": "Ni_coord_pointwise_max_balanced",
+        "metric": "f1_4",
+        "published": 0.7565999999999999,
+        "modern": 0.757422969187675,
+        "modern_minus_published": 0.0008229691876751044
+      },
+      {
+        "model_id": "Ni_coord_pointwise_max_balanced",
+        "metric": "f1_5",
+        "published": 0.7692,
+        "modern": 0.775146524545996,
+        "modern_minus_published": 0.005946524545995979
+      },
+      {
+        "model_id": "Ni_coord_pointwise_max_balanced",
+        "metric": "f1_6",
+        "published": 0.9243000000000001,
+        "modern": 0.9285668684082841,
+        "modern_minus_published": 0.004266868408283941
+      },
+      {
+        "model_id": "Ni_md_pointwise_max_natural",
+        "metric": "r2",
+        "published": 0.8636,
+        "modern": 0.8640135598279249,
+        "modern_minus_published": 0.0004135598279249031
+      },
+      {
+        "model_id": "Ni_md_pointwise_max_natural",
+        "metric": "mae",
+        "published": 0.017,
+        "modern": 0.017338623968162825,
+        "modern_minus_published": 0.0003386239681628239
+      },
+      {
+        "model_id": "Ni_md_poly_max_natural",
+        "metric": "r2",
+        "published": 0.8368000000000001,
+        "modern": 0.8374499607438812,
+        "modern_minus_published": 0.0006499607438811283
+      },
+      {
+        "model_id": "Ni_md_poly_max_natural",
+        "metric": "mae",
+        "published": 0.019,
+        "modern": 0.018682182984333186,
+        "modern_minus_published": -0.0003178170156668131
+      },
+      {
+        "model_id": "Cu_coord_pointwise_max_balanced",
+        "metric": "accuracy",
+        "published": 0.8405,
+        "modern": 0.8382642998027613,
+        "modern_minus_published": -0.0022357001972387325
+      },
+      {
+        "model_id": "Cu_coord_pointwise_max_balanced",
+        "metric": "f1_4",
+        "published": 0.6042000000000001,
+        "modern": 0.6048515478895226,
+        "modern_minus_published": 0.0006515478895224858
+      },
+      {
+        "model_id": "Cu_coord_pointwise_max_balanced",
+        "metric": "f1_5",
+        "published": 0.8895000000000001,
+        "modern": 0.8879799853825828,
+        "modern_minus_published": -0.0015200146174172424
+      },
+      {
+        "model_id": "Cu_coord_pointwise_max_balanced",
+        "metric": "f1_6",
+        "published": 0.7951,
+        "modern": 0.7863736010153456,
+        "modern_minus_published": -0.008726398984654438
+      },
+      {
+        "model_id": "Cu_md_pointwise_max_natural",
+        "metric": "r2",
+        "published": 0.6724,
+        "modern": 0.6659984922276481,
+        "modern_minus_published": -0.006401507772351933
+      },
+      {
+        "model_id": "Cu_md_pointwise_max_natural",
+        "metric": "mae",
+        "published": 0.05,
+        "modern": 0.0500933256494687,
+        "modern_minus_published": 9.332564946869931e-05
+      },
+      {
+        "model_id": "Cu_md_poly_max_natural",
+        "metric": "r2",
+        "published": 0.648,
+        "modern": 0.6444067646023888,
+        "modern_minus_published": -0.0035932353976112497
+      },
+      {
+        "model_id": "Cu_md_poly_max_natural",
+        "metric": "mae",
+        "published": 0.052,
+        "modern": 0.052406468460472255,
+        "modern_minus_published": 0.00040646846047225765
+      }
+    ],
+    "maximum_absolute_score_difference": 0.023642873176206503
+  },
+  "scope": "Numerical artifact consistency, raw/released-data anchors, independent model refits, and rejection controls. No OS-level solver isolation or automated scientific-prose grading claimed."
+}

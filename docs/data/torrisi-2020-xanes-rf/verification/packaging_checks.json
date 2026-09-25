@@ -4,8 +4,9 @@
   "input_records": 40907,
   "input_hashes_match": true,
   "paper_matches_active_dataset": true,
-  "all_scenarios_have_only_input_assets": true,
+  "all_scenarios_have_only_raw_input_assets": true,
   "solver_prompts_have_no_paper_references": true,
-  "input_file_count_per_question": 11,
-  "note": "Exported solver bundles omit all workflows, published output arrays, ground truth and paper metadata."
+  "input_file_count_per_question": 8,
+  "protocol_and_schema_files_absent": true,
+  "note": "Exported solver bundles contain prompt.md and eight raw projections only. Evaluator website/repository access must be denied during an attempt."
 }

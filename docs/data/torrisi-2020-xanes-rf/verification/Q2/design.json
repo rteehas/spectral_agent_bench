@@ -1,0 +1,379 @@
+{
+  "question": "Q2",
+  "runs": [
+    {
+      "run_id": "Ti_md_identified_material_r0_s113_model",
+      "element": "Ti",
+      "target": "md",
+      "condition": "model",
+      "comparison_id": "Ti_md_identified_material_r0_s113",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.014262618187606435
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.014907575936210563
+        }
+      ]
+    },
+    {
+      "run_id": "Ti_md_identified_material_r1_s113_model",
+      "element": "Ti",
+      "target": "md",
+      "condition": "model",
+      "comparison_id": "Ti_md_identified_material_r1_s113",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.020033398136382278
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.021164189641604637
+        }
+      ]
+    },
+    {
+      "run_id": "V_md_identified_material_r0_s113_model",
+      "element": "V",
+      "target": "md",
+      "condition": "model",
+      "comparison_id": "V_md_identified_material_r0_s113",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.01609928259522655
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.01723352078266693
+        }
+      ]
+    },
+    {
+      "run_id": "V_md_identified_material_r1_s113_model",
+      "element": "V",
+      "target": "md",
+      "condition": "model",
+      "comparison_id": "V_md_identified_material_r1_s113",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.01441442825698584
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.015246433401666416
+        }
+      ]
+    },
+    {
+      "run_id": "Cr_md_identified_material_r0_s113_model",
+      "element": "Cr",
+      "target": "md",
+      "condition": "model",
+      "comparison_id": "Cr_md_identified_material_r0_s113",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.022535759886626774
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.02351090761529744
+        }
+      ]
+    },
+    {
+      "run_id": "Cr_md_identified_material_r1_s113_model",
+      "element": "Cr",
+      "target": "md",
+      "condition": "model",
+      "comparison_id": "Cr_md_identified_material_r1_s113",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.020782644365636913
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.02169503750689958
+        }
+      ]
+    },
+    {
+      "run_id": "Mn_md_identified_material_r0_s113_model",
+      "element": "Mn",
+      "target": "md",
+      "condition": "model",
+      "comparison_id": "Mn_md_identified_material_r0_s113",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.015129536355611869
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.015624179574456616
+        }
+      ]
+    },
+    {
+      "run_id": "Mn_md_identified_material_r1_s113_model",
+      "element": "Mn",
+      "target": "md",
+      "condition": "model",
+      "comparison_id": "Mn_md_identified_material_r1_s113",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.016883517009138236
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.017441190245470813
+        }
+      ]
+    },
+    {
+      "run_id": "Fe_md_identified_material_r0_s113_model",
+      "element": "Fe",
+      "target": "md",
+      "condition": "model",
+      "comparison_id": "Fe_md_identified_material_r0_s113",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.019573350146834492
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.02119143132397985
+        }
+      ]
+    },
+    {
+      "run_id": "Fe_md_identified_material_r1_s113_model",
+      "element": "Fe",
+      "target": "md",
+      "condition": "model",
+      "comparison_id": "Fe_md_identified_material_r1_s113",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.019486231803593726
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.02137268508908038
+        }
+      ]
+    },
+    {
+      "run_id": "Co_md_identified_material_r0_s113_model",
+      "element": "Co",
+      "target": "md",
+      "condition": "model",
+      "comparison_id": "Co_md_identified_material_r0_s113",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.021123103125270503
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.021152951702747298
+        }
+      ]
+    },
+    {
+      "run_id": "Co_md_identified_material_r1_s113_model",
+      "element": "Co",
+      "target": "md",
+      "condition": "model",
+      "comparison_id": "Co_md_identified_material_r1_s113",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.0216730812169755
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.0223056822225059
+        }
+      ]
+    },
+    {
+      "run_id": "Ni_md_identified_material_r0_s113_model",
+      "element": "Ni",
+      "target": "md",
+      "condition": "model",
+      "comparison_id": "Ni_md_identified_material_r0_s113",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 5,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.013886585140899575
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.013871224771773242
+        }
+      ]
+    },
+    {
+      "run_id": "Ni_md_identified_material_r1_s113_model",
+      "element": "Ni",
+      "target": "md",
+      "condition": "model",
+      "comparison_id": "Ni_md_identified_material_r1_s113",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.016666296574858526
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.016809993758749454
+        }
+      ]
+    },
+    {
+      "run_id": "Cu_md_identified_material_r0_s113_model",
+      "element": "Cu",
+      "target": "md",
+      "condition": "model",
+      "comparison_id": "Cu_md_identified_material_r0_s113",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.0611746984001531
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.06442566416091147
+        }
+      ]
+    },
+    {
+      "run_id": "Cu_md_identified_material_r1_s113_model",
+      "element": "Cu",
+      "target": "md",
+      "condition": "model",
+      "comparison_id": "Cu_md_identified_material_r1_s113",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.0684646438984102
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.07010722050555655
+        }
+      ]
+    }
+  ],
+  "example_only": true,
+  "learner": "ExtraTrees; 80 trees; max_features .8; min_samples_leaf in {1,5} selected separately on validation loss; no refit using validation rows.",
+  "eligibility": "Finite 100-point E/mu; valid target; positive maximum. Coordination restricted to4/5/6, distance positive. Main analysis uses available material IDs only. No outcome-dependent spectrum-quality screening.",
+  "partitions": "Two repetitions, seeds17/83, roughly60/20/20 train/validation/test by material group. Q1 adds record holdouts on the identical identified cohort to assess evaluation sensitivity.",
+  "uncertainty": "250 paired bootstrap resamples of test material IDs, conditional on fitted models. Spectrum runs instead resample rows. Repeated heldout cohorts overlap, so they are sensitivity analyses, not independent replications.",
+  "representation": "Pointwise released absorption, except white_line=argmax energy; multiscale=quadratic coefficients on nonoverlapping10/20/50point intervals with local coordinate[-1,1]; unit_peak=divide spectrum by its maximum.",
+  "localization": "Joint test-set permutation of features whose energy-interval midpoint lies in one of5equal-width energy bands;3permutations per band. Multiscale coefficients also permuted jointly by degree. Holdout use is diagnostic, never used to tune models; comparisons across correlated representations are qualitative.",
+  "fitting_variability": "Q5 seeds113/211 are crossed with the2material partitions; all other tasks use113.",
+  "source_hashes": {
+    "Co.jsonl.gz": "f9b3b80ca0a6e44a03dcd9443a90332f7eb42af5a967a8f51923541fb32f6155",
+    "Cr.jsonl.gz": "3b4af75470896db924e60c95d99efbde1152fbc6c848772a07d25abb76eb5684",
+    "Cu.jsonl.gz": "a5c8457b95cc5557616c5c5db3e38fe5cd9d29b8026859b3d3509e35ffea95e0",
+    "Fe.jsonl.gz": "1791e54a4a9d56009d83b5405179c12aa84aa5e1fc6a401af3dfdc1ae7e4b12e",
+    "Mn.jsonl.gz": "38f99877c8ece423bb23676463bc4ba767ac6d2bc057edcecf766263c6363dd7",
+    "Ni.jsonl.gz": "a9eb1ad9fde915f8f3387b553395707625d8be8180a4faa2dbb4debf979d2f04",
+    "Ti.jsonl.gz": "ce5e4255439233ff903dc6be0e8a3b1acc9327e72523a66403d2a640fc2f9792",
+    "V.jsonl.gz": "755c3407c7b47ed9f96becfdb21cf14cc64213e9c4fedec2d493a7fdf0bf1b5b"
+  },
+  "versions": {
+    "numpy": "2.5.3",
+    "sklearn": "1.9.1"
+  }
+}

@@ -1,0 +1,7218 @@
+{
+  "Ti_pointwise": [
+    {
+      "index": 0,
+      "label": "mu_0",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 0,
+      "energy_lo": 4969.0,
+      "energy_hi": 4969.0
+    },
+    {
+      "index": 1,
+      "label": "mu_1",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 1,
+      "energy_lo": 4969.525494949495,
+      "energy_hi": 4969.525494949495
+    },
+    {
+      "index": 2,
+      "label": "mu_2",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 2,
+      "energy_lo": 4970.05098989899,
+      "energy_hi": 4970.05098989899
+    },
+    {
+      "index": 3,
+      "label": "mu_3",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 3,
+      "energy_lo": 4970.576484848485,
+      "energy_hi": 4970.576484848485
+    },
+    {
+      "index": 4,
+      "label": "mu_4",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 4,
+      "energy_lo": 4971.10197979798,
+      "energy_hi": 4971.10197979798
+    },
+    {
+      "index": 5,
+      "label": "mu_5",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 5,
+      "energy_lo": 4971.6274747474745,
+      "energy_hi": 4971.6274747474745
+    },
+    {
+      "index": 6,
+      "label": "mu_6",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 6,
+      "energy_lo": 4972.15296969697,
+      "energy_hi": 4972.15296969697
+    },
+    {
+      "index": 7,
+      "label": "mu_7",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 7,
+      "energy_lo": 4972.678464646465,
+      "energy_hi": 4972.678464646465
+    },
+    {
+      "index": 8,
+      "label": "mu_8",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 8,
+      "energy_lo": 4973.2039595959595,
+      "energy_hi": 4973.2039595959595
+    },
+    {
+      "index": 9,
+      "label": "mu_9",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 9,
+      "energy_lo": 4973.729454545454,
+      "energy_hi": 4973.729454545454
+    },
+    {
+      "index": 10,
+      "label": "mu_10",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 10,
+      "energy_lo": 4974.25494949495,
+      "energy_hi": 4974.25494949495
+    },
+    {
+      "index": 11,
+      "label": "mu_11",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 11,
+      "energy_lo": 4974.780444444445,
+      "energy_hi": 4974.780444444445
+    },
+    {
+      "index": 12,
+      "label": "mu_12",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 12,
+      "energy_lo": 4975.305939393939,
+      "energy_hi": 4975.305939393939
+    },
+    {
+      "index": 13,
+      "label": "mu_13",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 13,
+      "energy_lo": 4975.831434343434,
+      "energy_hi": 4975.831434343434
+    },
+    {
+      "index": 14,
+      "label": "mu_14",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 14,
+      "energy_lo": 4976.35692929293,
+      "energy_hi": 4976.35692929293
+    },
+    {
+      "index": 15,
+      "label": "mu_15",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 15,
+      "energy_lo": 4976.882424242424,
+      "energy_hi": 4976.882424242424
+    },
+    {
+      "index": 16,
+      "label": "mu_16",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 16,
+      "energy_lo": 4977.407919191919,
+      "energy_hi": 4977.407919191919
+    },
+    {
+      "index": 17,
+      "label": "mu_17",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 17,
+      "energy_lo": 4977.933414141414,
+      "energy_hi": 4977.933414141414
+    },
+    {
+      "index": 18,
+      "label": "mu_18",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 18,
+      "energy_lo": 4978.458909090909,
+      "energy_hi": 4978.458909090909
+    },
+    {
+      "index": 19,
+      "label": "mu_19",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 19,
+      "energy_lo": 4978.984404040404,
+      "energy_hi": 4978.984404040404
+    },
+    {
+      "index": 20,
+      "label": "mu_20",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 20,
+      "energy_lo": 4979.509898989899,
+      "energy_hi": 4979.509898989899
+    },
+    {
+      "index": 21,
+      "label": "mu_21",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 21,
+      "energy_lo": 4980.035393939394,
+      "energy_hi": 4980.035393939394
+    },
+    {
+      "index": 22,
+      "label": "mu_22",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 22,
+      "energy_lo": 4980.560888888889,
+      "energy_hi": 4980.560888888889
+    },
+    {
+      "index": 23,
+      "label": "mu_23",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 23,
+      "energy_lo": 4981.086383838384,
+      "energy_hi": 4981.086383838384
+    },
+    {
+      "index": 24,
+      "label": "mu_24",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 24,
+      "energy_lo": 4981.611878787879,
+      "energy_hi": 4981.611878787879
+    },
+    {
+      "index": 25,
+      "label": "mu_25",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 25,
+      "energy_lo": 4982.137373737374,
+      "energy_hi": 4982.137373737374
+    },
+    {
+      "index": 26,
+      "label": "mu_26",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 26,
+      "energy_lo": 4982.662868686869,
+      "energy_hi": 4982.662868686869
+    },
+    {
+      "index": 27,
+      "label": "mu_27",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 27,
+      "energy_lo": 4983.188363636364,
+      "energy_hi": 4983.188363636364
+    },
+    {
+      "index": 28,
+      "label": "mu_28",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 28,
+      "energy_lo": 4983.713858585858,
+      "energy_hi": 4983.713858585858
+    },
+    {
+      "index": 29,
+      "label": "mu_29",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 29,
+      "energy_lo": 4984.239353535354,
+      "energy_hi": 4984.239353535354
+    },
+    {
+      "index": 30,
+      "label": "mu_30",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 30,
+      "energy_lo": 4984.764848484849,
+      "energy_hi": 4984.764848484849
+    },
+    {
+      "index": 31,
+      "label": "mu_31",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 31,
+      "energy_lo": 4985.290343434343,
+      "energy_hi": 4985.290343434343
+    },
+    {
+      "index": 32,
+      "label": "mu_32",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 32,
+      "energy_lo": 4985.815838383838,
+      "energy_hi": 4985.815838383838
+    },
+    {
+      "index": 33,
+      "label": "mu_33",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 33,
+      "energy_lo": 4986.341333333334,
+      "energy_hi": 4986.341333333334
+    },
+    {
+      "index": 34,
+      "label": "mu_34",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 34,
+      "energy_lo": 4986.8668282828285,
+      "energy_hi": 4986.8668282828285
+    },
+    {
+      "index": 35,
+      "label": "mu_35",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 35,
+      "energy_lo": 4987.392323232323,
+      "energy_hi": 4987.392323232323
+    },
+    {
+      "index": 36,
+      "label": "mu_36",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 36,
+      "energy_lo": 4987.917818181818,
+      "energy_hi": 4987.917818181818
+    },
+    {
+      "index": 37,
+      "label": "mu_37",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 37,
+      "energy_lo": 4988.4433131313135,
+      "energy_hi": 4988.4433131313135
+    },
+    {
+      "index": 38,
+      "label": "mu_38",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 38,
+      "energy_lo": 4988.968808080808,
+      "energy_hi": 4988.968808080808
+    },
+    {
+      "index": 39,
+      "label": "mu_39",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 39,
+      "energy_lo": 4989.494303030303,
+      "energy_hi": 4989.494303030303
+    },
+    {
+      "index": 40,
+      "label": "mu_40",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 40,
+      "energy_lo": 4990.019797979799,
+      "energy_hi": 4990.019797979799
+    },
+    {
+      "index": 41,
+      "label": "mu_41",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 41,
+      "energy_lo": 4990.545292929293,
+      "energy_hi": 4990.545292929293
+    },
+    {
+      "index": 42,
+      "label": "mu_42",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 42,
+      "energy_lo": 4991.070787878788,
+      "energy_hi": 4991.070787878788
+    },
+    {
+      "index": 43,
+      "label": "mu_43",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 43,
+      "energy_lo": 4991.596282828283,
+      "energy_hi": 4991.596282828283
+    },
+    {
+      "index": 44,
+      "label": "mu_44",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 44,
+      "energy_lo": 4992.121777777778,
+      "energy_hi": 4992.121777777778
+    },
+    {
+      "index": 45,
+      "label": "mu_45",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 45,
+      "energy_lo": 4992.647272727273,
+      "energy_hi": 4992.647272727273
+    },
+    {
+      "index": 46,
+      "label": "mu_46",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 46,
+      "energy_lo": 4993.172767676768,
+      "energy_hi": 4993.172767676768
+    },
+    {
+      "index": 47,
+      "label": "mu_47",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 47,
+      "energy_lo": 4993.6982626262625,
+      "energy_hi": 4993.6982626262625
+    },
+    {
+      "index": 48,
+      "label": "mu_48",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 48,
+      "energy_lo": 4994.223757575758,
+      "energy_hi": 4994.223757575758
+    },
+    {
+      "index": 49,
+      "label": "mu_49",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 49,
+      "energy_lo": 4994.749252525253,
+      "energy_hi": 4994.749252525253
+    },
+    {
+      "index": 50,
+      "label": "mu_50",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 50,
+      "energy_lo": 4995.2747474747475,
+      "energy_hi": 4995.2747474747475
+    },
+    {
+      "index": 51,
+      "label": "mu_51",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 51,
+      "energy_lo": 4995.800242424242,
+      "energy_hi": 4995.800242424242
+    },
+    {
+      "index": 52,
+      "label": "mu_52",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 52,
+      "energy_lo": 4996.325737373738,
+      "energy_hi": 4996.325737373738
+    },
+    {
+      "index": 53,
+      "label": "mu_53",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 53,
+      "energy_lo": 4996.851232323233,
+      "energy_hi": 4996.851232323233
+    },
+    {
+      "index": 54,
+      "label": "mu_54",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 54,
+      "energy_lo": 4997.376727272727,
+      "energy_hi": 4997.376727272727
+    },
+    {
+      "index": 55,
+      "label": "mu_55",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 55,
+      "energy_lo": 4997.902222222222,
+      "energy_hi": 4997.902222222222
+    },
+    {
+      "index": 56,
+      "label": "mu_56",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 56,
+      "energy_lo": 4998.427717171718,
+      "energy_hi": 4998.427717171718
+    },
+    {
+      "index": 57,
+      "label": "mu_57",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 57,
+      "energy_lo": 4998.953212121212,
+      "energy_hi": 4998.953212121212
+    },
+    {
+      "index": 58,
+      "label": "mu_58",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 58,
+      "energy_lo": 4999.478707070707,
+      "energy_hi": 4999.478707070707
+    },
+    {
+      "index": 59,
+      "label": "mu_59",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 59,
+      "energy_lo": 5000.004202020202,
+      "energy_hi": 5000.004202020202
+    },
+    {
+      "index": 60,
+      "label": "mu_60",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 60,
+      "energy_lo": 5000.529696969697,
+      "energy_hi": 5000.529696969697
+    },
+    {
+      "index": 61,
+      "label": "mu_61",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 61,
+      "energy_lo": 5001.055191919192,
+      "energy_hi": 5001.055191919192
+    },
+    {
+      "index": 62,
+      "label": "mu_62",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 62,
+      "energy_lo": 5001.580686868687,
+      "energy_hi": 5001.580686868687
+    },
+    {
+      "index": 63,
+      "label": "mu_63",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 63,
+      "energy_lo": 5002.106181818182,
+      "energy_hi": 5002.106181818182
+    },
+    {
+      "index": 64,
+      "label": "mu_64",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 64,
+      "energy_lo": 5002.631676767677,
+      "energy_hi": 5002.631676767677
+    },
+    {
+      "index": 65,
+      "label": "mu_65",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 65,
+      "energy_lo": 5003.157171717172,
+      "energy_hi": 5003.157171717172
+    },
+    {
+      "index": 66,
+      "label": "mu_66",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 66,
+      "energy_lo": 5003.682666666667,
+      "energy_hi": 5003.682666666667
+    },
+    {
+      "index": 67,
+      "label": "mu_67",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 67,
+      "energy_lo": 5004.208161616162,
+      "energy_hi": 5004.208161616162
+    },
+    {
+      "index": 68,
+      "label": "mu_68",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 68,
+      "energy_lo": 5004.733656565657,
+      "energy_hi": 5004.733656565657
+    },
+    {
+      "index": 69,
+      "label": "mu_69",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 69,
+      "energy_lo": 5005.259151515152,
+      "energy_hi": 5005.259151515152
+    },
+    {
+      "index": 70,
+      "label": "mu_70",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 70,
+      "energy_lo": 5005.784646464646,
+      "energy_hi": 5005.784646464646
+    },
+    {
+      "index": 71,
+      "label": "mu_71",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 71,
+      "energy_lo": 5006.310141414142,
+      "energy_hi": 5006.310141414142
+    },
+    {
+      "index": 72,
+      "label": "mu_72",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 72,
+      "energy_lo": 5006.835636363637,
+      "energy_hi": 5006.835636363637
+    },
+    {
+      "index": 73,
+      "label": "mu_73",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 73,
+      "energy_lo": 5007.361131313131,
+      "energy_hi": 5007.361131313131
+    },
+    {
+      "index": 74,
+      "label": "mu_74",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 74,
+      "energy_lo": 5007.886626262626,
+      "energy_hi": 5007.886626262626
+    },
+    {
+      "index": 75,
+      "label": "mu_75",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 75,
+      "energy_lo": 5008.412121212122,
+      "energy_hi": 5008.412121212122
+    },
+    {
+      "index": 76,
+      "label": "mu_76",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 76,
+      "energy_lo": 5008.9376161616165,
+      "energy_hi": 5008.9376161616165
+    },
+    {
+      "index": 77,
+      "label": "mu_77",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 77,
+      "energy_lo": 5009.463111111111,
+      "energy_hi": 5009.463111111111
+    },
+    {
+      "index": 78,
+      "label": "mu_78",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 78,
+      "energy_lo": 5009.988606060606,
+      "energy_hi": 5009.988606060606
+    },
+    {
+      "index": 79,
+      "label": "mu_79",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 79,
+      "energy_lo": 5010.5141010101015,
+      "energy_hi": 5010.5141010101015
+    },
+    {
+      "index": 80,
+      "label": "mu_80",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 80,
+      "energy_lo": 5011.039595959596,
+      "energy_hi": 5011.039595959596
+    },
+    {
+      "index": 81,
+      "label": "mu_81",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 81,
+      "energy_lo": 5011.565090909091,
+      "energy_hi": 5011.565090909091
+    },
+    {
+      "index": 82,
+      "label": "mu_82",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 82,
+      "energy_lo": 5012.090585858587,
+      "energy_hi": 5012.090585858587
+    },
+    {
+      "index": 83,
+      "label": "mu_83",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 83,
+      "energy_lo": 5012.616080808081,
+      "energy_hi": 5012.616080808081
+    },
+    {
+      "index": 84,
+      "label": "mu_84",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 84,
+      "energy_lo": 5013.141575757576,
+      "energy_hi": 5013.141575757576
+    },
+    {
+      "index": 85,
+      "label": "mu_85",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 85,
+      "energy_lo": 5013.667070707071,
+      "energy_hi": 5013.667070707071
+    },
+    {
+      "index": 86,
+      "label": "mu_86",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 86,
+      "energy_lo": 5014.192565656566,
+      "energy_hi": 5014.192565656566
+    },
+    {
+      "index": 87,
+      "label": "mu_87",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 87,
+      "energy_lo": 5014.718060606061,
+      "energy_hi": 5014.718060606061
+    },
+    {
+      "index": 88,
+      "label": "mu_88",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 88,
+      "energy_lo": 5015.243555555556,
+      "energy_hi": 5015.243555555556
+    },
+    {
+      "index": 89,
+      "label": "mu_89",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 89,
+      "energy_lo": 5015.7690505050505,
+      "energy_hi": 5015.7690505050505
+    },
+    {
+      "index": 90,
+      "label": "mu_90",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 90,
+      "energy_lo": 5016.294545454546,
+      "energy_hi": 5016.294545454546
+    },
+    {
+      "index": 91,
+      "label": "mu_91",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 91,
+      "energy_lo": 5016.820040404041,
+      "energy_hi": 5016.820040404041
+    },
+    {
+      "index": 92,
+      "label": "mu_92",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 92,
+      "energy_lo": 5017.3455353535355,
+      "energy_hi": 5017.3455353535355
+    },
+    {
+      "index": 93,
+      "label": "mu_93",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 93,
+      "energy_lo": 5017.87103030303,
+      "energy_hi": 5017.87103030303
+    },
+    {
+      "index": 94,
+      "label": "mu_94",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 94,
+      "energy_lo": 5018.396525252526,
+      "energy_hi": 5018.396525252526
+    },
+    {
+      "index": 95,
+      "label": "mu_95",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 95,
+      "energy_lo": 5018.922020202021,
+      "energy_hi": 5018.922020202021
+    },
+    {
+      "index": 96,
+      "label": "mu_96",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 96,
+      "energy_lo": 5019.447515151515,
+      "energy_hi": 5019.447515151515
+    },
+    {
+      "index": 97,
+      "label": "mu_97",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 97,
+      "energy_lo": 5019.97301010101,
+      "energy_hi": 5019.97301010101
+    },
+    {
+      "index": 98,
+      "label": "mu_98",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 98,
+      "energy_lo": 5020.498505050506,
+      "energy_hi": 5020.498505050506
+    },
+    {
+      "index": 99,
+      "label": "mu_99",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 99,
+      "energy_lo": 5021.024,
+      "energy_hi": 5021.024
+    }
+  ],
+  "V_pointwise": [
+    {
+      "index": 0,
+      "label": "mu_0",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 0,
+      "energy_lo": 5468.0,
+      "energy_hi": 5468.0
+    },
+    {
+      "index": 1,
+      "label": "mu_1",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 1,
+      "energy_lo": 5468.531626262627,
+      "energy_hi": 5468.531626262627
+    },
+    {
+      "index": 2,
+      "label": "mu_2",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 2,
+      "energy_lo": 5469.063252525252,
+      "energy_hi": 5469.063252525252
+    },
+    {
+      "index": 3,
+      "label": "mu_3",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 3,
+      "energy_lo": 5469.594878787879,
+      "energy_hi": 5469.594878787879
+    },
+    {
+      "index": 4,
+      "label": "mu_4",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 4,
+      "energy_lo": 5470.126505050505,
+      "energy_hi": 5470.126505050505
+    },
+    {
+      "index": 5,
+      "label": "mu_5",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 5,
+      "energy_lo": 5470.658131313131,
+      "energy_hi": 5470.658131313131
+    },
+    {
+      "index": 6,
+      "label": "mu_6",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 6,
+      "energy_lo": 5471.1897575757575,
+      "energy_hi": 5471.1897575757575
+    },
+    {
+      "index": 7,
+      "label": "mu_7",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 7,
+      "energy_lo": 5471.721383838384,
+      "energy_hi": 5471.721383838384
+    },
+    {
+      "index": 8,
+      "label": "mu_8",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 8,
+      "energy_lo": 5472.25301010101,
+      "energy_hi": 5472.25301010101
+    },
+    {
+      "index": 9,
+      "label": "mu_9",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 9,
+      "energy_lo": 5472.784636363636,
+      "energy_hi": 5472.784636363636
+    },
+    {
+      "index": 10,
+      "label": "mu_10",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 10,
+      "energy_lo": 5473.316262626263,
+      "energy_hi": 5473.316262626263
+    },
+    {
+      "index": 11,
+      "label": "mu_11",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 11,
+      "energy_lo": 5473.8478888888885,
+      "energy_hi": 5473.8478888888885
+    },
+    {
+      "index": 12,
+      "label": "mu_12",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 12,
+      "energy_lo": 5474.379515151515,
+      "energy_hi": 5474.379515151515
+    },
+    {
+      "index": 13,
+      "label": "mu_13",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 13,
+      "energy_lo": 5474.911141414142,
+      "energy_hi": 5474.911141414142
+    },
+    {
+      "index": 14,
+      "label": "mu_14",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 14,
+      "energy_lo": 5475.442767676767,
+      "energy_hi": 5475.442767676767
+    },
+    {
+      "index": 15,
+      "label": "mu_15",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 15,
+      "energy_lo": 5475.974393939394,
+      "energy_hi": 5475.974393939394
+    },
+    {
+      "index": 16,
+      "label": "mu_16",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 16,
+      "energy_lo": 5476.50602020202,
+      "energy_hi": 5476.50602020202
+    },
+    {
+      "index": 17,
+      "label": "mu_17",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 17,
+      "energy_lo": 5477.037646464647,
+      "energy_hi": 5477.037646464647
+    },
+    {
+      "index": 18,
+      "label": "mu_18",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 18,
+      "energy_lo": 5477.569272727273,
+      "energy_hi": 5477.569272727273
+    },
+    {
+      "index": 19,
+      "label": "mu_19",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 19,
+      "energy_lo": 5478.100898989899,
+      "energy_hi": 5478.100898989899
+    },
+    {
+      "index": 20,
+      "label": "mu_20",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 20,
+      "energy_lo": 5478.632525252526,
+      "energy_hi": 5478.632525252526
+    },
+    {
+      "index": 21,
+      "label": "mu_21",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 21,
+      "energy_lo": 5479.164151515151,
+      "energy_hi": 5479.164151515151
+    },
+    {
+      "index": 22,
+      "label": "mu_22",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 22,
+      "energy_lo": 5479.695777777778,
+      "energy_hi": 5479.695777777778
+    },
+    {
+      "index": 23,
+      "label": "mu_23",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 23,
+      "energy_lo": 5480.2274040404045,
+      "energy_hi": 5480.2274040404045
+    },
+    {
+      "index": 24,
+      "label": "mu_24",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 24,
+      "energy_lo": 5480.75903030303,
+      "energy_hi": 5480.75903030303
+    },
+    {
+      "index": 25,
+      "label": "mu_25",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 25,
+      "energy_lo": 5481.290656565657,
+      "energy_hi": 5481.290656565657
+    },
+    {
+      "index": 26,
+      "label": "mu_26",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 26,
+      "energy_lo": 5481.822282828283,
+      "energy_hi": 5481.822282828283
+    },
+    {
+      "index": 27,
+      "label": "mu_27",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 27,
+      "energy_lo": 5482.353909090909,
+      "energy_hi": 5482.353909090909
+    },
+    {
+      "index": 28,
+      "label": "mu_28",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 28,
+      "energy_lo": 5482.8855353535355,
+      "energy_hi": 5482.8855353535355
+    },
+    {
+      "index": 29,
+      "label": "mu_29",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 29,
+      "energy_lo": 5483.417161616162,
+      "energy_hi": 5483.417161616162
+    },
+    {
+      "index": 30,
+      "label": "mu_30",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 30,
+      "energy_lo": 5483.948787878788,
+      "energy_hi": 5483.948787878788
+    },
+    {
+      "index": 31,
+      "label": "mu_31",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 31,
+      "energy_lo": 5484.480414141414,
+      "energy_hi": 5484.480414141414
+    },
+    {
+      "index": 32,
+      "label": "mu_32",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 32,
+      "energy_lo": 5485.012040404041,
+      "energy_hi": 5485.012040404041
+    },
+    {
+      "index": 33,
+      "label": "mu_33",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 33,
+      "energy_lo": 5485.5436666666665,
+      "energy_hi": 5485.5436666666665
+    },
+    {
+      "index": 34,
+      "label": "mu_34",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 34,
+      "energy_lo": 5486.075292929293,
+      "energy_hi": 5486.075292929293
+    },
+    {
+      "index": 35,
+      "label": "mu_35",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 35,
+      "energy_lo": 5486.60691919192,
+      "energy_hi": 5486.60691919192
+    },
+    {
+      "index": 36,
+      "label": "mu_36",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 36,
+      "energy_lo": 5487.138545454545,
+      "energy_hi": 5487.138545454545
+    },
+    {
+      "index": 37,
+      "label": "mu_37",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 37,
+      "energy_lo": 5487.670171717172,
+      "energy_hi": 5487.670171717172
+    },
+    {
+      "index": 38,
+      "label": "mu_38",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 38,
+      "energy_lo": 5488.201797979798,
+      "energy_hi": 5488.201797979798
+    },
+    {
+      "index": 39,
+      "label": "mu_39",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 39,
+      "energy_lo": 5488.733424242424,
+      "energy_hi": 5488.733424242424
+    },
+    {
+      "index": 40,
+      "label": "mu_40",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 40,
+      "energy_lo": 5489.265050505051,
+      "energy_hi": 5489.265050505051
+    },
+    {
+      "index": 41,
+      "label": "mu_41",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 41,
+      "energy_lo": 5489.796676767677,
+      "energy_hi": 5489.796676767677
+    },
+    {
+      "index": 42,
+      "label": "mu_42",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 42,
+      "energy_lo": 5490.328303030303,
+      "energy_hi": 5490.328303030303
+    },
+    {
+      "index": 43,
+      "label": "mu_43",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 43,
+      "energy_lo": 5490.859929292929,
+      "energy_hi": 5490.859929292929
+    },
+    {
+      "index": 44,
+      "label": "mu_44",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 44,
+      "energy_lo": 5491.391555555556,
+      "energy_hi": 5491.391555555556
+    },
+    {
+      "index": 45,
+      "label": "mu_45",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 45,
+      "energy_lo": 5491.923181818182,
+      "energy_hi": 5491.923181818182
+    },
+    {
+      "index": 46,
+      "label": "mu_46",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 46,
+      "energy_lo": 5492.454808080808,
+      "energy_hi": 5492.454808080808
+    },
+    {
+      "index": 47,
+      "label": "mu_47",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 47,
+      "energy_lo": 5492.986434343435,
+      "energy_hi": 5492.986434343435
+    },
+    {
+      "index": 48,
+      "label": "mu_48",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 48,
+      "energy_lo": 5493.51806060606,
+      "energy_hi": 5493.51806060606
+    },
+    {
+      "index": 49,
+      "label": "mu_49",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 49,
+      "energy_lo": 5494.049686868687,
+      "energy_hi": 5494.049686868687
+    },
+    {
+      "index": 50,
+      "label": "mu_50",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 50,
+      "energy_lo": 5494.581313131313,
+      "energy_hi": 5494.581313131313
+    },
+    {
+      "index": 51,
+      "label": "mu_51",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 51,
+      "energy_lo": 5495.11293939394,
+      "energy_hi": 5495.11293939394
+    },
+    {
+      "index": 52,
+      "label": "mu_52",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 52,
+      "energy_lo": 5495.644565656566,
+      "energy_hi": 5495.644565656566
+    },
+    {
+      "index": 53,
+      "label": "mu_53",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 53,
+      "energy_lo": 5496.176191919192,
+      "energy_hi": 5496.176191919192
+    },
+    {
+      "index": 54,
+      "label": "mu_54",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 54,
+      "energy_lo": 5496.707818181819,
+      "energy_hi": 5496.707818181819
+    },
+    {
+      "index": 55,
+      "label": "mu_55",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 55,
+      "energy_lo": 5497.239444444444,
+      "energy_hi": 5497.239444444444
+    },
+    {
+      "index": 56,
+      "label": "mu_56",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 56,
+      "energy_lo": 5497.771070707071,
+      "energy_hi": 5497.771070707071
+    },
+    {
+      "index": 57,
+      "label": "mu_57",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 57,
+      "energy_lo": 5498.3026969696975,
+      "energy_hi": 5498.3026969696975
+    },
+    {
+      "index": 58,
+      "label": "mu_58",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 58,
+      "energy_lo": 5498.834323232323,
+      "energy_hi": 5498.834323232323
+    },
+    {
+      "index": 59,
+      "label": "mu_59",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 59,
+      "energy_lo": 5499.36594949495,
+      "energy_hi": 5499.36594949495
+    },
+    {
+      "index": 60,
+      "label": "mu_60",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 60,
+      "energy_lo": 5499.897575757576,
+      "energy_hi": 5499.897575757576
+    },
+    {
+      "index": 61,
+      "label": "mu_61",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 61,
+      "energy_lo": 5500.429202020202,
+      "energy_hi": 5500.429202020202
+    },
+    {
+      "index": 62,
+      "label": "mu_62",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 62,
+      "energy_lo": 5500.9608282828285,
+      "energy_hi": 5500.9608282828285
+    },
+    {
+      "index": 63,
+      "label": "mu_63",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 63,
+      "energy_lo": 5501.492454545455,
+      "energy_hi": 5501.492454545455
+    },
+    {
+      "index": 64,
+      "label": "mu_64",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 64,
+      "energy_lo": 5502.024080808081,
+      "energy_hi": 5502.024080808081
+    },
+    {
+      "index": 65,
+      "label": "mu_65",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 65,
+      "energy_lo": 5502.555707070707,
+      "energy_hi": 5502.555707070707
+    },
+    {
+      "index": 66,
+      "label": "mu_66",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 66,
+      "energy_lo": 5503.087333333334,
+      "energy_hi": 5503.087333333334
+    },
+    {
+      "index": 67,
+      "label": "mu_67",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 67,
+      "energy_lo": 5503.6189595959595,
+      "energy_hi": 5503.6189595959595
+    },
+    {
+      "index": 68,
+      "label": "mu_68",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 68,
+      "energy_lo": 5504.150585858586,
+      "energy_hi": 5504.150585858586
+    },
+    {
+      "index": 69,
+      "label": "mu_69",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 69,
+      "energy_lo": 5504.682212121213,
+      "energy_hi": 5504.682212121213
+    },
+    {
+      "index": 70,
+      "label": "mu_70",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 70,
+      "energy_lo": 5505.213838383838,
+      "energy_hi": 5505.213838383838
+    },
+    {
+      "index": 71,
+      "label": "mu_71",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 71,
+      "energy_lo": 5505.745464646465,
+      "energy_hi": 5505.745464646465
+    },
+    {
+      "index": 72,
+      "label": "mu_72",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 72,
+      "energy_lo": 5506.277090909091,
+      "energy_hi": 5506.277090909091
+    },
+    {
+      "index": 73,
+      "label": "mu_73",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 73,
+      "energy_lo": 5506.808717171717,
+      "energy_hi": 5506.808717171717
+    },
+    {
+      "index": 74,
+      "label": "mu_74",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 74,
+      "energy_lo": 5507.340343434344,
+      "energy_hi": 5507.340343434344
+    },
+    {
+      "index": 75,
+      "label": "mu_75",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 75,
+      "energy_lo": 5507.87196969697,
+      "energy_hi": 5507.87196969697
+    },
+    {
+      "index": 76,
+      "label": "mu_76",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 76,
+      "energy_lo": 5508.403595959596,
+      "energy_hi": 5508.403595959596
+    },
+    {
+      "index": 77,
+      "label": "mu_77",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 77,
+      "energy_lo": 5508.935222222222,
+      "energy_hi": 5508.935222222222
+    },
+    {
+      "index": 78,
+      "label": "mu_78",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 78,
+      "energy_lo": 5509.466848484849,
+      "energy_hi": 5509.466848484849
+    },
+    {
+      "index": 79,
+      "label": "mu_79",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 79,
+      "energy_lo": 5509.998474747475,
+      "energy_hi": 5509.998474747475
+    },
+    {
+      "index": 80,
+      "label": "mu_80",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 80,
+      "energy_lo": 5510.530101010101,
+      "energy_hi": 5510.530101010101
+    },
+    {
+      "index": 81,
+      "label": "mu_81",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 81,
+      "energy_lo": 5511.061727272728,
+      "energy_hi": 5511.061727272728
+    },
+    {
+      "index": 82,
+      "label": "mu_82",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 82,
+      "energy_lo": 5511.593353535353,
+      "energy_hi": 5511.593353535353
+    },
+    {
+      "index": 83,
+      "label": "mu_83",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 83,
+      "energy_lo": 5512.12497979798,
+      "energy_hi": 5512.12497979798
+    },
+    {
+      "index": 84,
+      "label": "mu_84",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 84,
+      "energy_lo": 5512.6566060606065,
+      "energy_hi": 5512.6566060606065
+    },
+    {
+      "index": 85,
+      "label": "mu_85",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 85,
+      "energy_lo": 5513.188232323233,
+      "energy_hi": 5513.188232323233
+    },
+    {
+      "index": 86,
+      "label": "mu_86",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 86,
+      "energy_lo": 5513.719858585859,
+      "energy_hi": 5513.719858585859
+    },
+    {
+      "index": 87,
+      "label": "mu_87",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 87,
+      "energy_lo": 5514.251484848485,
+      "energy_hi": 5514.251484848485
+    },
+    {
+      "index": 88,
+      "label": "mu_88",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 88,
+      "energy_lo": 5514.783111111112,
+      "energy_hi": 5514.783111111112
+    },
+    {
+      "index": 89,
+      "label": "mu_89",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 89,
+      "energy_lo": 5515.314737373737,
+      "energy_hi": 5515.314737373737
+    },
+    {
+      "index": 90,
+      "label": "mu_90",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 90,
+      "energy_lo": 5515.846363636364,
+      "energy_hi": 5515.846363636364
+    },
+    {
+      "index": 91,
+      "label": "mu_91",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 91,
+      "energy_lo": 5516.377989898991,
+      "energy_hi": 5516.377989898991
+    },
+    {
+      "index": 92,
+      "label": "mu_92",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 92,
+      "energy_lo": 5516.909616161616,
+      "energy_hi": 5516.909616161616
+    },
+    {
+      "index": 93,
+      "label": "mu_93",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 93,
+      "energy_lo": 5517.441242424243,
+      "energy_hi": 5517.441242424243
+    },
+    {
+      "index": 94,
+      "label": "mu_94",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 94,
+      "energy_lo": 5517.972868686869,
+      "energy_hi": 5517.972868686869
+    },
+    {
+      "index": 95,
+      "label": "mu_95",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 95,
+      "energy_lo": 5518.504494949495,
+      "energy_hi": 5518.504494949495
+    },
+    {
+      "index": 96,
+      "label": "mu_96",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 96,
+      "energy_lo": 5519.0361212121215,
+      "energy_hi": 5519.0361212121215
+    },
+    {
+      "index": 97,
+      "label": "mu_97",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 97,
+      "energy_lo": 5519.567747474748,
+      "energy_hi": 5519.567747474748
+    },
+    {
+      "index": 98,
+      "label": "mu_98",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 98,
+      "energy_lo": 5520.099373737374,
+      "energy_hi": 5520.099373737374
+    },
+    {
+      "index": 99,
+      "label": "mu_99",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 99,
+      "energy_lo": 5520.631,
+      "energy_hi": 5520.631
+    }
+  ],
+  "Cr_pointwise": [
+    {
+      "index": 0,
+      "label": "mu_0",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 0,
+      "energy_lo": 5993.1,
+      "energy_hi": 5993.1
+    },
+    {
+      "index": 1,
+      "label": "mu_1",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 1,
+      "energy_lo": 5993.631171717172,
+      "energy_hi": 5993.631171717172
+    },
+    {
+      "index": 2,
+      "label": "mu_2",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 2,
+      "energy_lo": 5994.162343434344,
+      "energy_hi": 5994.162343434344
+    },
+    {
+      "index": 3,
+      "label": "mu_3",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 3,
+      "energy_lo": 5994.693515151515,
+      "energy_hi": 5994.693515151515
+    },
+    {
+      "index": 4,
+      "label": "mu_4",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 4,
+      "energy_lo": 5995.224686868687,
+      "energy_hi": 5995.224686868687
+    },
+    {
+      "index": 5,
+      "label": "mu_5",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 5,
+      "energy_lo": 5995.755858585859,
+      "energy_hi": 5995.755858585859
+    },
+    {
+      "index": 6,
+      "label": "mu_6",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 6,
+      "energy_lo": 5996.28703030303,
+      "energy_hi": 5996.28703030303
+    },
+    {
+      "index": 7,
+      "label": "mu_7",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 7,
+      "energy_lo": 5996.818202020202,
+      "energy_hi": 5996.818202020202
+    },
+    {
+      "index": 8,
+      "label": "mu_8",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 8,
+      "energy_lo": 5997.349373737374,
+      "energy_hi": 5997.349373737374
+    },
+    {
+      "index": 9,
+      "label": "mu_9",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 9,
+      "energy_lo": 5997.880545454545,
+      "energy_hi": 5997.880545454545
+    },
+    {
+      "index": 10,
+      "label": "mu_10",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 10,
+      "energy_lo": 5998.411717171717,
+      "energy_hi": 5998.411717171717
+    },
+    {
+      "index": 11,
+      "label": "mu_11",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 11,
+      "energy_lo": 5998.942888888889,
+      "energy_hi": 5998.942888888889
+    },
+    {
+      "index": 12,
+      "label": "mu_12",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 12,
+      "energy_lo": 5999.47406060606,
+      "energy_hi": 5999.47406060606
+    },
+    {
+      "index": 13,
+      "label": "mu_13",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 13,
+      "energy_lo": 6000.005232323233,
+      "energy_hi": 6000.005232323233
+    },
+    {
+      "index": 14,
+      "label": "mu_14",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 14,
+      "energy_lo": 6000.536404040405,
+      "energy_hi": 6000.536404040405
+    },
+    {
+      "index": 15,
+      "label": "mu_15",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 15,
+      "energy_lo": 6001.067575757576,
+      "energy_hi": 6001.067575757576
+    },
+    {
+      "index": 16,
+      "label": "mu_16",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 16,
+      "energy_lo": 6001.598747474748,
+      "energy_hi": 6001.598747474748
+    },
+    {
+      "index": 17,
+      "label": "mu_17",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 17,
+      "energy_lo": 6002.12991919192,
+      "energy_hi": 6002.12991919192
+    },
+    {
+      "index": 18,
+      "label": "mu_18",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 18,
+      "energy_lo": 6002.661090909091,
+      "energy_hi": 6002.661090909091
+    },
+    {
+      "index": 19,
+      "label": "mu_19",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 19,
+      "energy_lo": 6003.192262626263,
+      "energy_hi": 6003.192262626263
+    },
+    {
+      "index": 20,
+      "label": "mu_20",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 20,
+      "energy_lo": 6003.723434343435,
+      "energy_hi": 6003.723434343435
+    },
+    {
+      "index": 21,
+      "label": "mu_21",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 21,
+      "energy_lo": 6004.254606060606,
+      "energy_hi": 6004.254606060606
+    },
+    {
+      "index": 22,
+      "label": "mu_22",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 22,
+      "energy_lo": 6004.785777777778,
+      "energy_hi": 6004.785777777778
+    },
+    {
+      "index": 23,
+      "label": "mu_23",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 23,
+      "energy_lo": 6005.31694949495,
+      "energy_hi": 6005.31694949495
+    },
+    {
+      "index": 24,
+      "label": "mu_24",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 24,
+      "energy_lo": 6005.848121212121,
+      "energy_hi": 6005.848121212121
+    },
+    {
+      "index": 25,
+      "label": "mu_25",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 25,
+      "energy_lo": 6006.379292929293,
+      "energy_hi": 6006.379292929293
+    },
+    {
+      "index": 26,
+      "label": "mu_26",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 26,
+      "energy_lo": 6006.910464646465,
+      "energy_hi": 6006.910464646465
+    },
+    {
+      "index": 27,
+      "label": "mu_27",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 27,
+      "energy_lo": 6007.4416363636365,
+      "energy_hi": 6007.4416363636365
+    },
+    {
+      "index": 28,
+      "label": "mu_28",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 28,
+      "energy_lo": 6007.972808080808,
+      "energy_hi": 6007.972808080808
+    },
+    {
+      "index": 29,
+      "label": "mu_29",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 29,
+      "energy_lo": 6008.50397979798,
+      "energy_hi": 6008.50397979798
+    },
+    {
+      "index": 30,
+      "label": "mu_30",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 30,
+      "energy_lo": 6009.0351515151515,
+      "energy_hi": 6009.0351515151515
+    },
+    {
+      "index": 31,
+      "label": "mu_31",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 31,
+      "energy_lo": 6009.566323232323,
+      "energy_hi": 6009.566323232323
+    },
+    {
+      "index": 32,
+      "label": "mu_32",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 32,
+      "energy_lo": 6010.097494949495,
+      "energy_hi": 6010.097494949495
+    },
+    {
+      "index": 33,
+      "label": "mu_33",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 33,
+      "energy_lo": 6010.6286666666665,
+      "energy_hi": 6010.6286666666665
+    },
+    {
+      "index": 34,
+      "label": "mu_34",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 34,
+      "energy_lo": 6011.159838383838,
+      "energy_hi": 6011.159838383838
+    },
+    {
+      "index": 35,
+      "label": "mu_35",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 35,
+      "energy_lo": 6011.69101010101,
+      "energy_hi": 6011.69101010101
+    },
+    {
+      "index": 36,
+      "label": "mu_36",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 36,
+      "energy_lo": 6012.2221818181815,
+      "energy_hi": 6012.2221818181815
+    },
+    {
+      "index": 37,
+      "label": "mu_37",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 37,
+      "energy_lo": 6012.753353535353,
+      "energy_hi": 6012.753353535353
+    },
+    {
+      "index": 38,
+      "label": "mu_38",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 38,
+      "energy_lo": 6013.284525252526,
+      "energy_hi": 6013.284525252526
+    },
+    {
+      "index": 39,
+      "label": "mu_39",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 39,
+      "energy_lo": 6013.8156969696975,
+      "energy_hi": 6013.8156969696975
+    },
+    {
+      "index": 40,
+      "label": "mu_40",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 40,
+      "energy_lo": 6014.346868686869,
+      "energy_hi": 6014.346868686869
+    },
+    {
+      "index": 41,
+      "label": "mu_41",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 41,
+      "energy_lo": 6014.878040404041,
+      "energy_hi": 6014.878040404041
+    },
+    {
+      "index": 42,
+      "label": "mu_42",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 42,
+      "energy_lo": 6015.4092121212125,
+      "energy_hi": 6015.4092121212125
+    },
+    {
+      "index": 43,
+      "label": "mu_43",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 43,
+      "energy_lo": 6015.940383838384,
+      "energy_hi": 6015.940383838384
+    },
+    {
+      "index": 44,
+      "label": "mu_44",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 44,
+      "energy_lo": 6016.471555555556,
+      "energy_hi": 6016.471555555556
+    },
+    {
+      "index": 45,
+      "label": "mu_45",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 45,
+      "energy_lo": 6017.0027272727275,
+      "energy_hi": 6017.0027272727275
+    },
+    {
+      "index": 46,
+      "label": "mu_46",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 46,
+      "energy_lo": 6017.533898989899,
+      "energy_hi": 6017.533898989899
+    },
+    {
+      "index": 47,
+      "label": "mu_47",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 47,
+      "energy_lo": 6018.065070707071,
+      "energy_hi": 6018.065070707071
+    },
+    {
+      "index": 48,
+      "label": "mu_48",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 48,
+      "energy_lo": 6018.5962424242425,
+      "energy_hi": 6018.5962424242425
+    },
+    {
+      "index": 49,
+      "label": "mu_49",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 49,
+      "energy_lo": 6019.127414141414,
+      "energy_hi": 6019.127414141414
+    },
+    {
+      "index": 50,
+      "label": "mu_50",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 50,
+      "energy_lo": 6019.658585858586,
+      "energy_hi": 6019.658585858586
+    },
+    {
+      "index": 51,
+      "label": "mu_51",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 51,
+      "energy_lo": 6020.1897575757575,
+      "energy_hi": 6020.1897575757575
+    },
+    {
+      "index": 52,
+      "label": "mu_52",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 52,
+      "energy_lo": 6020.720929292929,
+      "energy_hi": 6020.720929292929
+    },
+    {
+      "index": 53,
+      "label": "mu_53",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 53,
+      "energy_lo": 6021.252101010101,
+      "energy_hi": 6021.252101010101
+    },
+    {
+      "index": 54,
+      "label": "mu_54",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 54,
+      "energy_lo": 6021.783272727273,
+      "energy_hi": 6021.783272727273
+    },
+    {
+      "index": 55,
+      "label": "mu_55",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 55,
+      "energy_lo": 6022.314444444444,
+      "energy_hi": 6022.314444444444
+    },
+    {
+      "index": 56,
+      "label": "mu_56",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 56,
+      "energy_lo": 6022.845616161616,
+      "energy_hi": 6022.845616161616
+    },
+    {
+      "index": 57,
+      "label": "mu_57",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 57,
+      "energy_lo": 6023.376787878788,
+      "energy_hi": 6023.376787878788
+    },
+    {
+      "index": 58,
+      "label": "mu_58",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 58,
+      "energy_lo": 6023.907959595959,
+      "energy_hi": 6023.907959595959
+    },
+    {
+      "index": 59,
+      "label": "mu_59",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 59,
+      "energy_lo": 6024.439131313131,
+      "energy_hi": 6024.439131313131
+    },
+    {
+      "index": 60,
+      "label": "mu_60",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 60,
+      "energy_lo": 6024.970303030303,
+      "energy_hi": 6024.970303030303
+    },
+    {
+      "index": 61,
+      "label": "mu_61",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 61,
+      "energy_lo": 6025.501474747474,
+      "energy_hi": 6025.501474747474
+    },
+    {
+      "index": 62,
+      "label": "mu_62",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 62,
+      "energy_lo": 6026.032646464647,
+      "energy_hi": 6026.032646464647
+    },
+    {
+      "index": 63,
+      "label": "mu_63",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 63,
+      "energy_lo": 6026.5638181818185,
+      "energy_hi": 6026.5638181818185
+    },
+    {
+      "index": 64,
+      "label": "mu_64",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 64,
+      "energy_lo": 6027.09498989899,
+      "energy_hi": 6027.09498989899
+    },
+    {
+      "index": 65,
+      "label": "mu_65",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 65,
+      "energy_lo": 6027.626161616162,
+      "energy_hi": 6027.626161616162
+    },
+    {
+      "index": 66,
+      "label": "mu_66",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 66,
+      "energy_lo": 6028.157333333334,
+      "energy_hi": 6028.157333333334
+    },
+    {
+      "index": 67,
+      "label": "mu_67",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 67,
+      "energy_lo": 6028.688505050505,
+      "energy_hi": 6028.688505050505
+    },
+    {
+      "index": 68,
+      "label": "mu_68",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 68,
+      "energy_lo": 6029.219676767677,
+      "energy_hi": 6029.219676767677
+    },
+    {
+      "index": 69,
+      "label": "mu_69",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 69,
+      "energy_lo": 6029.750848484849,
+      "energy_hi": 6029.750848484849
+    },
+    {
+      "index": 70,
+      "label": "mu_70",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 70,
+      "energy_lo": 6030.28202020202,
+      "energy_hi": 6030.28202020202
+    },
+    {
+      "index": 71,
+      "label": "mu_71",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 71,
+      "energy_lo": 6030.813191919192,
+      "energy_hi": 6030.813191919192
+    },
+    {
+      "index": 72,
+      "label": "mu_72",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 72,
+      "energy_lo": 6031.344363636364,
+      "energy_hi": 6031.344363636364
+    },
+    {
+      "index": 73,
+      "label": "mu_73",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 73,
+      "energy_lo": 6031.875535353535,
+      "energy_hi": 6031.875535353535
+    },
+    {
+      "index": 74,
+      "label": "mu_74",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 74,
+      "energy_lo": 6032.406707070707,
+      "energy_hi": 6032.406707070707
+    },
+    {
+      "index": 75,
+      "label": "mu_75",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 75,
+      "energy_lo": 6032.937878787879,
+      "energy_hi": 6032.937878787879
+    },
+    {
+      "index": 76,
+      "label": "mu_76",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 76,
+      "energy_lo": 6033.46905050505,
+      "energy_hi": 6033.46905050505
+    },
+    {
+      "index": 77,
+      "label": "mu_77",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 77,
+      "energy_lo": 6034.000222222222,
+      "energy_hi": 6034.000222222222
+    },
+    {
+      "index": 78,
+      "label": "mu_78",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 78,
+      "energy_lo": 6034.531393939394,
+      "energy_hi": 6034.531393939394
+    },
+    {
+      "index": 79,
+      "label": "mu_79",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 79,
+      "energy_lo": 6035.062565656565,
+      "energy_hi": 6035.062565656565
+    },
+    {
+      "index": 80,
+      "label": "mu_80",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 80,
+      "energy_lo": 6035.593737373737,
+      "energy_hi": 6035.593737373737
+    },
+    {
+      "index": 81,
+      "label": "mu_81",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 81,
+      "energy_lo": 6036.124909090909,
+      "energy_hi": 6036.124909090909
+    },
+    {
+      "index": 82,
+      "label": "mu_82",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 82,
+      "energy_lo": 6036.65608080808,
+      "energy_hi": 6036.65608080808
+    },
+    {
+      "index": 83,
+      "label": "mu_83",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 83,
+      "energy_lo": 6037.187252525252,
+      "energy_hi": 6037.187252525252
+    },
+    {
+      "index": 84,
+      "label": "mu_84",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 84,
+      "energy_lo": 6037.718424242424,
+      "energy_hi": 6037.718424242424
+    },
+    {
+      "index": 85,
+      "label": "mu_85",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 85,
+      "energy_lo": 6038.249595959595,
+      "energy_hi": 6038.249595959595
+    },
+    {
+      "index": 86,
+      "label": "mu_86",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 86,
+      "energy_lo": 6038.780767676767,
+      "energy_hi": 6038.780767676767
+    },
+    {
+      "index": 87,
+      "label": "mu_87",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 87,
+      "energy_lo": 6039.31193939394,
+      "energy_hi": 6039.31193939394
+    },
+    {
+      "index": 88,
+      "label": "mu_88",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 88,
+      "energy_lo": 6039.843111111111,
+      "energy_hi": 6039.843111111111
+    },
+    {
+      "index": 89,
+      "label": "mu_89",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 89,
+      "energy_lo": 6040.374282828283,
+      "energy_hi": 6040.374282828283
+    },
+    {
+      "index": 90,
+      "label": "mu_90",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 90,
+      "energy_lo": 6040.905454545455,
+      "energy_hi": 6040.905454545455
+    },
+    {
+      "index": 91,
+      "label": "mu_91",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 91,
+      "energy_lo": 6041.436626262626,
+      "energy_hi": 6041.436626262626
+    },
+    {
+      "index": 92,
+      "label": "mu_92",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 92,
+      "energy_lo": 6041.967797979798,
+      "energy_hi": 6041.967797979798
+    },
+    {
+      "index": 93,
+      "label": "mu_93",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 93,
+      "energy_lo": 6042.49896969697,
+      "energy_hi": 6042.49896969697
+    },
+    {
+      "index": 94,
+      "label": "mu_94",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 94,
+      "energy_lo": 6043.030141414141,
+      "energy_hi": 6043.030141414141
+    },
+    {
+      "index": 95,
+      "label": "mu_95",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 95,
+      "energy_lo": 6043.561313131313,
+      "energy_hi": 6043.561313131313
+    },
+    {
+      "index": 96,
+      "label": "mu_96",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 96,
+      "energy_lo": 6044.092484848485,
+      "energy_hi": 6044.092484848485
+    },
+    {
+      "index": 97,
+      "label": "mu_97",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 97,
+      "energy_lo": 6044.623656565656,
+      "energy_hi": 6044.623656565656
+    },
+    {
+      "index": 98,
+      "label": "mu_98",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 98,
+      "energy_lo": 6045.154828282828,
+      "energy_hi": 6045.154828282828
+    },
+    {
+      "index": 99,
+      "label": "mu_99",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 99,
+      "energy_lo": 6045.686,
+      "energy_hi": 6045.686
+    }
+  ],
+  "Mn_pointwise": [
+    {
+      "index": 0,
+      "label": "mu_0",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 0,
+      "energy_lo": 6541.7,
+      "energy_hi": 6541.7
+    },
+    {
+      "index": 1,
+      "label": "mu_1",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 1,
+      "energy_lo": 6542.232494949495,
+      "energy_hi": 6542.232494949495
+    },
+    {
+      "index": 2,
+      "label": "mu_2",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 2,
+      "energy_lo": 6542.764989898989,
+      "energy_hi": 6542.764989898989
+    },
+    {
+      "index": 3,
+      "label": "mu_3",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 3,
+      "energy_lo": 6543.297484848485,
+      "energy_hi": 6543.297484848485
+    },
+    {
+      "index": 4,
+      "label": "mu_4",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 4,
+      "energy_lo": 6543.82997979798,
+      "energy_hi": 6543.82997979798
+    },
+    {
+      "index": 5,
+      "label": "mu_5",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 5,
+      "energy_lo": 6544.362474747474,
+      "energy_hi": 6544.362474747474
+    },
+    {
+      "index": 6,
+      "label": "mu_6",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 6,
+      "energy_lo": 6544.894969696969,
+      "energy_hi": 6544.894969696969
+    },
+    {
+      "index": 7,
+      "label": "mu_7",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 7,
+      "energy_lo": 6545.427464646465,
+      "energy_hi": 6545.427464646465
+    },
+    {
+      "index": 8,
+      "label": "mu_8",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 8,
+      "energy_lo": 6545.95995959596,
+      "energy_hi": 6545.95995959596
+    },
+    {
+      "index": 9,
+      "label": "mu_9",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 9,
+      "energy_lo": 6546.492454545454,
+      "energy_hi": 6546.492454545454
+    },
+    {
+      "index": 10,
+      "label": "mu_10",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 10,
+      "energy_lo": 6547.024949494949,
+      "energy_hi": 6547.024949494949
+    },
+    {
+      "index": 11,
+      "label": "mu_11",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 11,
+      "energy_lo": 6547.557444444445,
+      "energy_hi": 6547.557444444445
+    },
+    {
+      "index": 12,
+      "label": "mu_12",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 12,
+      "energy_lo": 6548.089939393939,
+      "energy_hi": 6548.089939393939
+    },
+    {
+      "index": 13,
+      "label": "mu_13",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 13,
+      "energy_lo": 6548.622434343434,
+      "energy_hi": 6548.622434343434
+    },
+    {
+      "index": 14,
+      "label": "mu_14",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 14,
+      "energy_lo": 6549.154929292929,
+      "energy_hi": 6549.154929292929
+    },
+    {
+      "index": 15,
+      "label": "mu_15",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 15,
+      "energy_lo": 6549.687424242424,
+      "energy_hi": 6549.687424242424
+    },
+    {
+      "index": 16,
+      "label": "mu_16",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 16,
+      "energy_lo": 6550.219919191919,
+      "energy_hi": 6550.219919191919
+    },
+    {
+      "index": 17,
+      "label": "mu_17",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 17,
+      "energy_lo": 6550.752414141414,
+      "energy_hi": 6550.752414141414
+    },
+    {
+      "index": 18,
+      "label": "mu_18",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 18,
+      "energy_lo": 6551.284909090909,
+      "energy_hi": 6551.284909090909
+    },
+    {
+      "index": 19,
+      "label": "mu_19",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 19,
+      "energy_lo": 6551.817404040404,
+      "energy_hi": 6551.817404040404
+    },
+    {
+      "index": 20,
+      "label": "mu_20",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 20,
+      "energy_lo": 6552.349898989899,
+      "energy_hi": 6552.349898989899
+    },
+    {
+      "index": 21,
+      "label": "mu_21",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 21,
+      "energy_lo": 6552.882393939394,
+      "energy_hi": 6552.882393939394
+    },
+    {
+      "index": 22,
+      "label": "mu_22",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 22,
+      "energy_lo": 6553.4148888888885,
+      "energy_hi": 6553.4148888888885
+    },
+    {
+      "index": 23,
+      "label": "mu_23",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 23,
+      "energy_lo": 6553.947383838384,
+      "energy_hi": 6553.947383838384
+    },
+    {
+      "index": 24,
+      "label": "mu_24",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 24,
+      "energy_lo": 6554.479878787879,
+      "energy_hi": 6554.479878787879
+    },
+    {
+      "index": 25,
+      "label": "mu_25",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 25,
+      "energy_lo": 6555.012373737373,
+      "energy_hi": 6555.012373737373
+    },
+    {
+      "index": 26,
+      "label": "mu_26",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 26,
+      "energy_lo": 6555.5448686868685,
+      "energy_hi": 6555.5448686868685
+    },
+    {
+      "index": 27,
+      "label": "mu_27",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 27,
+      "energy_lo": 6556.077363636364,
+      "energy_hi": 6556.077363636364
+    },
+    {
+      "index": 28,
+      "label": "mu_28",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 28,
+      "energy_lo": 6556.609858585859,
+      "energy_hi": 6556.609858585859
+    },
+    {
+      "index": 29,
+      "label": "mu_29",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 29,
+      "energy_lo": 6557.142353535353,
+      "energy_hi": 6557.142353535353
+    },
+    {
+      "index": 30,
+      "label": "mu_30",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 30,
+      "energy_lo": 6557.674848484849,
+      "energy_hi": 6557.674848484849
+    },
+    {
+      "index": 31,
+      "label": "mu_31",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 31,
+      "energy_lo": 6558.207343434344,
+      "energy_hi": 6558.207343434344
+    },
+    {
+      "index": 32,
+      "label": "mu_32",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 32,
+      "energy_lo": 6558.739838383838,
+      "energy_hi": 6558.739838383838
+    },
+    {
+      "index": 33,
+      "label": "mu_33",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 33,
+      "energy_lo": 6559.272333333333,
+      "energy_hi": 6559.272333333333
+    },
+    {
+      "index": 34,
+      "label": "mu_34",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 34,
+      "energy_lo": 6559.804828282829,
+      "energy_hi": 6559.804828282829
+    },
+    {
+      "index": 35,
+      "label": "mu_35",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 35,
+      "energy_lo": 6560.337323232323,
+      "energy_hi": 6560.337323232323
+    },
+    {
+      "index": 36,
+      "label": "mu_36",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 36,
+      "energy_lo": 6560.869818181818,
+      "energy_hi": 6560.869818181818
+    },
+    {
+      "index": 37,
+      "label": "mu_37",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 37,
+      "energy_lo": 6561.402313131313,
+      "energy_hi": 6561.402313131313
+    },
+    {
+      "index": 38,
+      "label": "mu_38",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 38,
+      "energy_lo": 6561.934808080808,
+      "energy_hi": 6561.934808080808
+    },
+    {
+      "index": 39,
+      "label": "mu_39",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 39,
+      "energy_lo": 6562.467303030303,
+      "energy_hi": 6562.467303030303
+    },
+    {
+      "index": 40,
+      "label": "mu_40",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 40,
+      "energy_lo": 6562.999797979798,
+      "energy_hi": 6562.999797979798
+    },
+    {
+      "index": 41,
+      "label": "mu_41",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 41,
+      "energy_lo": 6563.532292929293,
+      "energy_hi": 6563.532292929293
+    },
+    {
+      "index": 42,
+      "label": "mu_42",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 42,
+      "energy_lo": 6564.064787878788,
+      "energy_hi": 6564.064787878788
+    },
+    {
+      "index": 43,
+      "label": "mu_43",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 43,
+      "energy_lo": 6564.597282828283,
+      "energy_hi": 6564.597282828283
+    },
+    {
+      "index": 44,
+      "label": "mu_44",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 44,
+      "energy_lo": 6565.129777777778,
+      "energy_hi": 6565.129777777778
+    },
+    {
+      "index": 45,
+      "label": "mu_45",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 45,
+      "energy_lo": 6565.6622727272725,
+      "energy_hi": 6565.6622727272725
+    },
+    {
+      "index": 46,
+      "label": "mu_46",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 46,
+      "energy_lo": 6566.194767676768,
+      "energy_hi": 6566.194767676768
+    },
+    {
+      "index": 47,
+      "label": "mu_47",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 47,
+      "energy_lo": 6566.727262626263,
+      "energy_hi": 6566.727262626263
+    },
+    {
+      "index": 48,
+      "label": "mu_48",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 48,
+      "energy_lo": 6567.259757575757,
+      "energy_hi": 6567.259757575757
+    },
+    {
+      "index": 49,
+      "label": "mu_49",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 49,
+      "energy_lo": 6567.7922525252525,
+      "energy_hi": 6567.7922525252525
+    },
+    {
+      "index": 50,
+      "label": "mu_50",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 50,
+      "energy_lo": 6568.324747474748,
+      "energy_hi": 6568.324747474748
+    },
+    {
+      "index": 51,
+      "label": "mu_51",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 51,
+      "energy_lo": 6568.857242424243,
+      "energy_hi": 6568.857242424243
+    },
+    {
+      "index": 52,
+      "label": "mu_52",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 52,
+      "energy_lo": 6569.389737373737,
+      "energy_hi": 6569.389737373737
+    },
+    {
+      "index": 53,
+      "label": "mu_53",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 53,
+      "energy_lo": 6569.9222323232325,
+      "energy_hi": 6569.9222323232325
+    },
+    {
+      "index": 54,
+      "label": "mu_54",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 54,
+      "energy_lo": 6570.454727272728,
+      "energy_hi": 6570.454727272728
+    },
+    {
+      "index": 55,
+      "label": "mu_55",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 55,
+      "energy_lo": 6570.987222222222,
+      "energy_hi": 6570.987222222222
+    },
+    {
+      "index": 56,
+      "label": "mu_56",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 56,
+      "energy_lo": 6571.519717171717,
+      "energy_hi": 6571.519717171717
+    },
+    {
+      "index": 57,
+      "label": "mu_57",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 57,
+      "energy_lo": 6572.0522121212125,
+      "energy_hi": 6572.0522121212125
+    },
+    {
+      "index": 58,
+      "label": "mu_58",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 58,
+      "energy_lo": 6572.584707070707,
+      "energy_hi": 6572.584707070707
+    },
+    {
+      "index": 59,
+      "label": "mu_59",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 59,
+      "energy_lo": 6573.117202020202,
+      "energy_hi": 6573.117202020202
+    },
+    {
+      "index": 60,
+      "label": "mu_60",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 60,
+      "energy_lo": 6573.649696969697,
+      "energy_hi": 6573.649696969697
+    },
+    {
+      "index": 61,
+      "label": "mu_61",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 61,
+      "energy_lo": 6574.1821919191925,
+      "energy_hi": 6574.1821919191925
+    },
+    {
+      "index": 62,
+      "label": "mu_62",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 62,
+      "energy_lo": 6574.714686868687,
+      "energy_hi": 6574.714686868687
+    },
+    {
+      "index": 63,
+      "label": "mu_63",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 63,
+      "energy_lo": 6575.247181818182,
+      "energy_hi": 6575.247181818182
+    },
+    {
+      "index": 64,
+      "label": "mu_64",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 64,
+      "energy_lo": 6575.779676767677,
+      "energy_hi": 6575.779676767677
+    },
+    {
+      "index": 65,
+      "label": "mu_65",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 65,
+      "energy_lo": 6576.312171717172,
+      "energy_hi": 6576.312171717172
+    },
+    {
+      "index": 66,
+      "label": "mu_66",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 66,
+      "energy_lo": 6576.844666666667,
+      "energy_hi": 6576.844666666667
+    },
+    {
+      "index": 67,
+      "label": "mu_67",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 67,
+      "energy_lo": 6577.377161616162,
+      "energy_hi": 6577.377161616162
+    },
+    {
+      "index": 68,
+      "label": "mu_68",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 68,
+      "energy_lo": 6577.909656565656,
+      "energy_hi": 6577.909656565656
+    },
+    {
+      "index": 69,
+      "label": "mu_69",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 69,
+      "energy_lo": 6578.442151515152,
+      "energy_hi": 6578.442151515152
+    },
+    {
+      "index": 70,
+      "label": "mu_70",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 70,
+      "energy_lo": 6578.974646464647,
+      "energy_hi": 6578.974646464647
+    },
+    {
+      "index": 71,
+      "label": "mu_71",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 71,
+      "energy_lo": 6579.507141414141,
+      "energy_hi": 6579.507141414141
+    },
+    {
+      "index": 72,
+      "label": "mu_72",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 72,
+      "energy_lo": 6580.039636363636,
+      "energy_hi": 6580.039636363636
+    },
+    {
+      "index": 73,
+      "label": "mu_73",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 73,
+      "energy_lo": 6580.572131313132,
+      "energy_hi": 6580.572131313132
+    },
+    {
+      "index": 74,
+      "label": "mu_74",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 74,
+      "energy_lo": 6581.104626262627,
+      "energy_hi": 6581.104626262627
+    },
+    {
+      "index": 75,
+      "label": "mu_75",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 75,
+      "energy_lo": 6581.637121212121,
+      "energy_hi": 6581.637121212121
+    },
+    {
+      "index": 76,
+      "label": "mu_76",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 76,
+      "energy_lo": 6582.169616161616,
+      "energy_hi": 6582.169616161616
+    },
+    {
+      "index": 77,
+      "label": "mu_77",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 77,
+      "energy_lo": 6582.702111111112,
+      "energy_hi": 6582.702111111112
+    },
+    {
+      "index": 78,
+      "label": "mu_78",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 78,
+      "energy_lo": 6583.234606060606,
+      "energy_hi": 6583.234606060606
+    },
+    {
+      "index": 79,
+      "label": "mu_79",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 79,
+      "energy_lo": 6583.767101010101,
+      "energy_hi": 6583.767101010101
+    },
+    {
+      "index": 80,
+      "label": "mu_80",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 80,
+      "energy_lo": 6584.299595959596,
+      "energy_hi": 6584.299595959596
+    },
+    {
+      "index": 81,
+      "label": "mu_81",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 81,
+      "energy_lo": 6584.832090909091,
+      "energy_hi": 6584.832090909091
+    },
+    {
+      "index": 82,
+      "label": "mu_82",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 82,
+      "energy_lo": 6585.364585858586,
+      "energy_hi": 6585.364585858586
+    },
+    {
+      "index": 83,
+      "label": "mu_83",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 83,
+      "energy_lo": 6585.897080808081,
+      "energy_hi": 6585.897080808081
+    },
+    {
+      "index": 84,
+      "label": "mu_84",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 84,
+      "energy_lo": 6586.4295757575765,
+      "energy_hi": 6586.4295757575765
+    },
+    {
+      "index": 85,
+      "label": "mu_85",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 85,
+      "energy_lo": 6586.962070707071,
+      "energy_hi": 6586.962070707071
+    },
+    {
+      "index": 86,
+      "label": "mu_86",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 86,
+      "energy_lo": 6587.494565656566,
+      "energy_hi": 6587.494565656566
+    },
+    {
+      "index": 87,
+      "label": "mu_87",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 87,
+      "energy_lo": 6588.027060606061,
+      "energy_hi": 6588.027060606061
+    },
+    {
+      "index": 88,
+      "label": "mu_88",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 88,
+      "energy_lo": 6588.559555555556,
+      "energy_hi": 6588.559555555556
+    },
+    {
+      "index": 89,
+      "label": "mu_89",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 89,
+      "energy_lo": 6589.092050505051,
+      "energy_hi": 6589.092050505051
+    },
+    {
+      "index": 90,
+      "label": "mu_90",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 90,
+      "energy_lo": 6589.624545454546,
+      "energy_hi": 6589.624545454546
+    },
+    {
+      "index": 91,
+      "label": "mu_91",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 91,
+      "energy_lo": 6590.15704040404,
+      "energy_hi": 6590.15704040404
+    },
+    {
+      "index": 92,
+      "label": "mu_92",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 92,
+      "energy_lo": 6590.689535353536,
+      "energy_hi": 6590.689535353536
+    },
+    {
+      "index": 93,
+      "label": "mu_93",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 93,
+      "energy_lo": 6591.222030303031,
+      "energy_hi": 6591.222030303031
+    },
+    {
+      "index": 94,
+      "label": "mu_94",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 94,
+      "energy_lo": 6591.754525252526,
+      "energy_hi": 6591.754525252526
+    },
+    {
+      "index": 95,
+      "label": "mu_95",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 95,
+      "energy_lo": 6592.28702020202,
+      "energy_hi": 6592.28702020202
+    },
+    {
+      "index": 96,
+      "label": "mu_96",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 96,
+      "energy_lo": 6592.819515151516,
+      "energy_hi": 6592.819515151516
+    },
+    {
+      "index": 97,
+      "label": "mu_97",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 97,
+      "energy_lo": 6593.352010101011,
+      "energy_hi": 6593.352010101011
+    },
+    {
+      "index": 98,
+      "label": "mu_98",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 98,
+      "energy_lo": 6593.884505050505,
+      "energy_hi": 6593.884505050505
+    },
+    {
+      "index": 99,
+      "label": "mu_99",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 99,
+      "energy_lo": 6594.417,
+      "energy_hi": 6594.417
+    }
+  ],
+  "Fe_pointwise": [
+    {
+      "index": 0,
+      "label": "mu_0",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 0,
+      "energy_lo": 7115.0,
+      "energy_hi": 7115.0
+    },
+    {
+      "index": 1,
+      "label": "mu_1",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 1,
+      "energy_lo": 7115.532969696969,
+      "energy_hi": 7115.532969696969
+    },
+    {
+      "index": 2,
+      "label": "mu_2",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 2,
+      "energy_lo": 7116.0659393939395,
+      "energy_hi": 7116.0659393939395
+    },
+    {
+      "index": 3,
+      "label": "mu_3",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 3,
+      "energy_lo": 7116.598909090909,
+      "energy_hi": 7116.598909090909
+    },
+    {
+      "index": 4,
+      "label": "mu_4",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 4,
+      "energy_lo": 7117.131878787879,
+      "energy_hi": 7117.131878787879
+    },
+    {
+      "index": 5,
+      "label": "mu_5",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 5,
+      "energy_lo": 7117.664848484848,
+      "energy_hi": 7117.664848484848
+    },
+    {
+      "index": 6,
+      "label": "mu_6",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 6,
+      "energy_lo": 7118.197818181819,
+      "energy_hi": 7118.197818181819
+    },
+    {
+      "index": 7,
+      "label": "mu_7",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 7,
+      "energy_lo": 7118.730787878788,
+      "energy_hi": 7118.730787878788
+    },
+    {
+      "index": 8,
+      "label": "mu_8",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 8,
+      "energy_lo": 7119.263757575757,
+      "energy_hi": 7119.263757575757
+    },
+    {
+      "index": 9,
+      "label": "mu_9",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 9,
+      "energy_lo": 7119.796727272727,
+      "energy_hi": 7119.796727272727
+    },
+    {
+      "index": 10,
+      "label": "mu_10",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 10,
+      "energy_lo": 7120.329696969697,
+      "energy_hi": 7120.329696969697
+    },
+    {
+      "index": 11,
+      "label": "mu_11",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 11,
+      "energy_lo": 7120.862666666667,
+      "energy_hi": 7120.862666666667
+    },
+    {
+      "index": 12,
+      "label": "mu_12",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 12,
+      "energy_lo": 7121.395636363636,
+      "energy_hi": 7121.395636363636
+    },
+    {
+      "index": 13,
+      "label": "mu_13",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 13,
+      "energy_lo": 7121.928606060606,
+      "energy_hi": 7121.928606060606
+    },
+    {
+      "index": 14,
+      "label": "mu_14",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 14,
+      "energy_lo": 7122.461575757576,
+      "energy_hi": 7122.461575757576
+    },
+    {
+      "index": 15,
+      "label": "mu_15",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 15,
+      "energy_lo": 7122.994545454546,
+      "energy_hi": 7122.994545454546
+    },
+    {
+      "index": 16,
+      "label": "mu_16",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 16,
+      "energy_lo": 7123.527515151515,
+      "energy_hi": 7123.527515151515
+    },
+    {
+      "index": 17,
+      "label": "mu_17",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 17,
+      "energy_lo": 7124.0604848484845,
+      "energy_hi": 7124.0604848484845
+    },
+    {
+      "index": 18,
+      "label": "mu_18",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 18,
+      "energy_lo": 7124.593454545455,
+      "energy_hi": 7124.593454545455
+    },
+    {
+      "index": 19,
+      "label": "mu_19",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 19,
+      "energy_lo": 7125.126424242424,
+      "energy_hi": 7125.126424242424
+    },
+    {
+      "index": 20,
+      "label": "mu_20",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 20,
+      "energy_lo": 7125.659393939394,
+      "energy_hi": 7125.659393939394
+    },
+    {
+      "index": 21,
+      "label": "mu_21",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 21,
+      "energy_lo": 7126.192363636364,
+      "energy_hi": 7126.192363636364
+    },
+    {
+      "index": 22,
+      "label": "mu_22",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 22,
+      "energy_lo": 7126.725333333334,
+      "energy_hi": 7126.725333333334
+    },
+    {
+      "index": 23,
+      "label": "mu_23",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 23,
+      "energy_lo": 7127.258303030303,
+      "energy_hi": 7127.258303030303
+    },
+    {
+      "index": 24,
+      "label": "mu_24",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 24,
+      "energy_lo": 7127.791272727272,
+      "energy_hi": 7127.791272727272
+    },
+    {
+      "index": 25,
+      "label": "mu_25",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 25,
+      "energy_lo": 7128.324242424243,
+      "energy_hi": 7128.324242424243
+    },
+    {
+      "index": 26,
+      "label": "mu_26",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 26,
+      "energy_lo": 7128.857212121212,
+      "energy_hi": 7128.857212121212
+    },
+    {
+      "index": 27,
+      "label": "mu_27",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 27,
+      "energy_lo": 7129.390181818182,
+      "energy_hi": 7129.390181818182
+    },
+    {
+      "index": 28,
+      "label": "mu_28",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 28,
+      "energy_lo": 7129.923151515151,
+      "energy_hi": 7129.923151515151
+    },
+    {
+      "index": 29,
+      "label": "mu_29",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 29,
+      "energy_lo": 7130.456121212122,
+      "energy_hi": 7130.456121212122
+    },
+    {
+      "index": 30,
+      "label": "mu_30",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 30,
+      "energy_lo": 7130.989090909091,
+      "energy_hi": 7130.989090909091
+    },
+    {
+      "index": 31,
+      "label": "mu_31",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 31,
+      "energy_lo": 7131.52206060606,
+      "energy_hi": 7131.52206060606
+    },
+    {
+      "index": 32,
+      "label": "mu_32",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 32,
+      "energy_lo": 7132.05503030303,
+      "energy_hi": 7132.05503030303
+    },
+    {
+      "index": 33,
+      "label": "mu_33",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 33,
+      "energy_lo": 7132.588,
+      "energy_hi": 7132.588
+    },
+    {
+      "index": 34,
+      "label": "mu_34",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 34,
+      "energy_lo": 7133.12096969697,
+      "energy_hi": 7133.12096969697
+    },
+    {
+      "index": 35,
+      "label": "mu_35",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 35,
+      "energy_lo": 7133.653939393939,
+      "energy_hi": 7133.653939393939
+    },
+    {
+      "index": 36,
+      "label": "mu_36",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 36,
+      "energy_lo": 7134.1869090909095,
+      "energy_hi": 7134.1869090909095
+    },
+    {
+      "index": 37,
+      "label": "mu_37",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 37,
+      "energy_lo": 7134.719878787879,
+      "energy_hi": 7134.719878787879
+    },
+    {
+      "index": 38,
+      "label": "mu_38",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 38,
+      "energy_lo": 7135.252848484849,
+      "energy_hi": 7135.252848484849
+    },
+    {
+      "index": 39,
+      "label": "mu_39",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 39,
+      "energy_lo": 7135.785818181818,
+      "energy_hi": 7135.785818181818
+    },
+    {
+      "index": 40,
+      "label": "mu_40",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 40,
+      "energy_lo": 7136.318787878788,
+      "energy_hi": 7136.318787878788
+    },
+    {
+      "index": 41,
+      "label": "mu_41",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 41,
+      "energy_lo": 7136.851757575758,
+      "energy_hi": 7136.851757575758
+    },
+    {
+      "index": 42,
+      "label": "mu_42",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 42,
+      "energy_lo": 7137.384727272727,
+      "energy_hi": 7137.384727272727
+    },
+    {
+      "index": 43,
+      "label": "mu_43",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 43,
+      "energy_lo": 7137.917696969697,
+      "energy_hi": 7137.917696969697
+    },
+    {
+      "index": 44,
+      "label": "mu_44",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 44,
+      "energy_lo": 7138.450666666667,
+      "energy_hi": 7138.450666666667
+    },
+    {
+      "index": 45,
+      "label": "mu_45",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 45,
+      "energy_lo": 7138.983636363637,
+      "energy_hi": 7138.983636363637
+    },
+    {
+      "index": 46,
+      "label": "mu_46",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 46,
+      "energy_lo": 7139.516606060606,
+      "energy_hi": 7139.516606060606
+    },
+    {
+      "index": 47,
+      "label": "mu_47",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 47,
+      "energy_lo": 7140.049575757575,
+      "energy_hi": 7140.049575757575
+    },
+    {
+      "index": 48,
+      "label": "mu_48",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 48,
+      "energy_lo": 7140.582545454546,
+      "energy_hi": 7140.582545454546
+    },
+    {
+      "index": 49,
+      "label": "mu_49",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 49,
+      "energy_lo": 7141.115515151515,
+      "energy_hi": 7141.115515151515
+    },
+    {
+      "index": 50,
+      "label": "mu_50",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 50,
+      "energy_lo": 7141.648484848485,
+      "energy_hi": 7141.648484848485
+    },
+    {
+      "index": 51,
+      "label": "mu_51",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 51,
+      "energy_lo": 7142.1814545454545,
+      "energy_hi": 7142.1814545454545
+    },
+    {
+      "index": 52,
+      "label": "mu_52",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 52,
+      "energy_lo": 7142.714424242425,
+      "energy_hi": 7142.714424242425
+    },
+    {
+      "index": 53,
+      "label": "mu_53",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 53,
+      "energy_lo": 7143.247393939394,
+      "energy_hi": 7143.247393939394
+    },
+    {
+      "index": 54,
+      "label": "mu_54",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 54,
+      "energy_lo": 7143.780363636363,
+      "energy_hi": 7143.780363636363
+    },
+    {
+      "index": 55,
+      "label": "mu_55",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 55,
+      "energy_lo": 7144.3133333333335,
+      "energy_hi": 7144.3133333333335
+    },
+    {
+      "index": 56,
+      "label": "mu_56",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 56,
+      "energy_lo": 7144.846303030303,
+      "energy_hi": 7144.846303030303
+    },
+    {
+      "index": 57,
+      "label": "mu_57",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 57,
+      "energy_lo": 7145.379272727273,
+      "energy_hi": 7145.379272727273
+    },
+    {
+      "index": 58,
+      "label": "mu_58",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 58,
+      "energy_lo": 7145.912242424242,
+      "energy_hi": 7145.912242424242
+    },
+    {
+      "index": 59,
+      "label": "mu_59",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 59,
+      "energy_lo": 7146.4452121212125,
+      "energy_hi": 7146.4452121212125
+    },
+    {
+      "index": 60,
+      "label": "mu_60",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 60,
+      "energy_lo": 7146.978181818182,
+      "energy_hi": 7146.978181818182
+    },
+    {
+      "index": 61,
+      "label": "mu_61",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 61,
+      "energy_lo": 7147.511151515151,
+      "energy_hi": 7147.511151515151
+    },
+    {
+      "index": 62,
+      "label": "mu_62",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 62,
+      "energy_lo": 7148.044121212121,
+      "energy_hi": 7148.044121212121
+    },
+    {
+      "index": 63,
+      "label": "mu_63",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 63,
+      "energy_lo": 7148.577090909091,
+      "energy_hi": 7148.577090909091
+    },
+    {
+      "index": 64,
+      "label": "mu_64",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 64,
+      "energy_lo": 7149.110060606061,
+      "energy_hi": 7149.110060606061
+    },
+    {
+      "index": 65,
+      "label": "mu_65",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 65,
+      "energy_lo": 7149.64303030303,
+      "energy_hi": 7149.64303030303
+    },
+    {
+      "index": 66,
+      "label": "mu_66",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 66,
+      "energy_lo": 7150.176,
+      "energy_hi": 7150.176
+    },
+    {
+      "index": 67,
+      "label": "mu_67",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 67,
+      "energy_lo": 7150.70896969697,
+      "energy_hi": 7150.70896969697
+    },
+    {
+      "index": 68,
+      "label": "mu_68",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 68,
+      "energy_lo": 7151.24193939394,
+      "energy_hi": 7151.24193939394
+    },
+    {
+      "index": 69,
+      "label": "mu_69",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 69,
+      "energy_lo": 7151.774909090909,
+      "energy_hi": 7151.774909090909
+    },
+    {
+      "index": 70,
+      "label": "mu_70",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 70,
+      "energy_lo": 7152.3078787878785,
+      "energy_hi": 7152.3078787878785
+    },
+    {
+      "index": 71,
+      "label": "mu_71",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 71,
+      "energy_lo": 7152.840848484849,
+      "energy_hi": 7152.840848484849
+    },
+    {
+      "index": 72,
+      "label": "mu_72",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 72,
+      "energy_lo": 7153.373818181818,
+      "energy_hi": 7153.373818181818
+    },
+    {
+      "index": 73,
+      "label": "mu_73",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 73,
+      "energy_lo": 7153.906787878788,
+      "energy_hi": 7153.906787878788
+    },
+    {
+      "index": 74,
+      "label": "mu_74",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 74,
+      "energy_lo": 7154.4397575757575,
+      "energy_hi": 7154.4397575757575
+    },
+    {
+      "index": 75,
+      "label": "mu_75",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 75,
+      "energy_lo": 7154.972727272728,
+      "energy_hi": 7154.972727272728
+    },
+    {
+      "index": 76,
+      "label": "mu_76",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 76,
+      "energy_lo": 7155.505696969697,
+      "energy_hi": 7155.505696969697
+    },
+    {
+      "index": 77,
+      "label": "mu_77",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 77,
+      "energy_lo": 7156.038666666666,
+      "energy_hi": 7156.038666666666
+    },
+    {
+      "index": 78,
+      "label": "mu_78",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 78,
+      "energy_lo": 7156.571636363637,
+      "energy_hi": 7156.571636363637
+    },
+    {
+      "index": 79,
+      "label": "mu_79",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 79,
+      "energy_lo": 7157.104606060606,
+      "energy_hi": 7157.104606060606
+    },
+    {
+      "index": 80,
+      "label": "mu_80",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 80,
+      "energy_lo": 7157.637575757576,
+      "energy_hi": 7157.637575757576
+    },
+    {
+      "index": 81,
+      "label": "mu_81",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 81,
+      "energy_lo": 7158.170545454545,
+      "energy_hi": 7158.170545454545
+    },
+    {
+      "index": 82,
+      "label": "mu_82",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 82,
+      "energy_lo": 7158.703515151516,
+      "energy_hi": 7158.703515151516
+    },
+    {
+      "index": 83,
+      "label": "mu_83",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 83,
+      "energy_lo": 7159.236484848485,
+      "energy_hi": 7159.236484848485
+    },
+    {
+      "index": 84,
+      "label": "mu_84",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 84,
+      "energy_lo": 7159.769454545454,
+      "energy_hi": 7159.769454545454
+    },
+    {
+      "index": 85,
+      "label": "mu_85",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 85,
+      "energy_lo": 7160.302424242424,
+      "energy_hi": 7160.302424242424
+    },
+    {
+      "index": 86,
+      "label": "mu_86",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 86,
+      "energy_lo": 7160.835393939394,
+      "energy_hi": 7160.835393939394
+    },
+    {
+      "index": 87,
+      "label": "mu_87",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 87,
+      "energy_lo": 7161.368363636364,
+      "energy_hi": 7161.368363636364
+    },
+    {
+      "index": 88,
+      "label": "mu_88",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 88,
+      "energy_lo": 7161.901333333333,
+      "energy_hi": 7161.901333333333
+    },
+    {
+      "index": 89,
+      "label": "mu_89",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 89,
+      "energy_lo": 7162.434303030303,
+      "energy_hi": 7162.434303030303
+    },
+    {
+      "index": 90,
+      "label": "mu_90",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 90,
+      "energy_lo": 7162.967272727273,
+      "energy_hi": 7162.967272727273
+    },
+    {
+      "index": 91,
+      "label": "mu_91",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 91,
+      "energy_lo": 7163.500242424243,
+      "energy_hi": 7163.500242424243
+    },
+    {
+      "index": 92,
+      "label": "mu_92",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 92,
+      "energy_lo": 7164.033212121212,
+      "energy_hi": 7164.033212121212
+    },
+    {
+      "index": 93,
+      "label": "mu_93",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 93,
+      "energy_lo": 7164.566181818182,
+      "energy_hi": 7164.566181818182
+    },
+    {
+      "index": 94,
+      "label": "mu_94",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 94,
+      "energy_lo": 7165.099151515152,
+      "energy_hi": 7165.099151515152
+    },
+    {
+      "index": 95,
+      "label": "mu_95",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 95,
+      "energy_lo": 7165.632121212121,
+      "energy_hi": 7165.632121212121
+    },
+    {
+      "index": 96,
+      "label": "mu_96",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 96,
+      "energy_lo": 7166.165090909091,
+      "energy_hi": 7166.165090909091
+    },
+    {
+      "index": 97,
+      "label": "mu_97",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 97,
+      "energy_lo": 7166.698060606061,
+      "energy_hi": 7166.698060606061
+    },
+    {
+      "index": 98,
+      "label": "mu_98",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 98,
+      "energy_lo": 7167.231030303031,
+      "energy_hi": 7167.231030303031
+    },
+    {
+      "index": 99,
+      "label": "mu_99",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 99,
+      "energy_lo": 7167.764,
+      "energy_hi": 7167.764
+    }
+  ],
+  "Co_pointwise": [
+    {
+      "index": 0,
+      "label": "mu_0",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 0,
+      "energy_lo": 7713.5,
+      "energy_hi": 7713.5
+    },
+    {
+      "index": 1,
+      "label": "mu_1",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 1,
+      "energy_lo": 7714.028585858586,
+      "energy_hi": 7714.028585858586
+    },
+    {
+      "index": 2,
+      "label": "mu_2",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 2,
+      "energy_lo": 7714.5571717171715,
+      "energy_hi": 7714.5571717171715
+    },
+    {
+      "index": 3,
+      "label": "mu_3",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 3,
+      "energy_lo": 7715.085757575757,
+      "energy_hi": 7715.085757575757
+    },
+    {
+      "index": 4,
+      "label": "mu_4",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 4,
+      "energy_lo": 7715.614343434343,
+      "energy_hi": 7715.614343434343
+    },
+    {
+      "index": 5,
+      "label": "mu_5",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 5,
+      "energy_lo": 7716.14292929293,
+      "energy_hi": 7716.14292929293
+    },
+    {
+      "index": 6,
+      "label": "mu_6",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 6,
+      "energy_lo": 7716.671515151515,
+      "energy_hi": 7716.671515151515
+    },
+    {
+      "index": 7,
+      "label": "mu_7",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 7,
+      "energy_lo": 7717.200101010101,
+      "energy_hi": 7717.200101010101
+    },
+    {
+      "index": 8,
+      "label": "mu_8",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 8,
+      "energy_lo": 7717.728686868687,
+      "energy_hi": 7717.728686868687
+    },
+    {
+      "index": 9,
+      "label": "mu_9",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 9,
+      "energy_lo": 7718.257272727273,
+      "energy_hi": 7718.257272727273
+    },
+    {
+      "index": 10,
+      "label": "mu_10",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 10,
+      "energy_lo": 7718.7858585858585,
+      "energy_hi": 7718.7858585858585
+    },
+    {
+      "index": 11,
+      "label": "mu_11",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 11,
+      "energy_lo": 7719.314444444444,
+      "energy_hi": 7719.314444444444
+    },
+    {
+      "index": 12,
+      "label": "mu_12",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 12,
+      "energy_lo": 7719.84303030303,
+      "energy_hi": 7719.84303030303
+    },
+    {
+      "index": 13,
+      "label": "mu_13",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 13,
+      "energy_lo": 7720.371616161616,
+      "energy_hi": 7720.371616161616
+    },
+    {
+      "index": 14,
+      "label": "mu_14",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 14,
+      "energy_lo": 7720.900202020202,
+      "energy_hi": 7720.900202020202
+    },
+    {
+      "index": 15,
+      "label": "mu_15",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 15,
+      "energy_lo": 7721.428787878788,
+      "energy_hi": 7721.428787878788
+    },
+    {
+      "index": 16,
+      "label": "mu_16",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 16,
+      "energy_lo": 7721.957373737374,
+      "energy_hi": 7721.957373737374
+    },
+    {
+      "index": 17,
+      "label": "mu_17",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 17,
+      "energy_lo": 7722.48595959596,
+      "energy_hi": 7722.48595959596
+    },
+    {
+      "index": 18,
+      "label": "mu_18",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 18,
+      "energy_lo": 7723.014545454545,
+      "energy_hi": 7723.014545454545
+    },
+    {
+      "index": 19,
+      "label": "mu_19",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 19,
+      "energy_lo": 7723.543131313131,
+      "energy_hi": 7723.543131313131
+    },
+    {
+      "index": 20,
+      "label": "mu_20",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 20,
+      "energy_lo": 7724.071717171717,
+      "energy_hi": 7724.071717171717
+    },
+    {
+      "index": 21,
+      "label": "mu_21",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 21,
+      "energy_lo": 7724.600303030303,
+      "energy_hi": 7724.600303030303
+    },
+    {
+      "index": 22,
+      "label": "mu_22",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 22,
+      "energy_lo": 7725.1288888888885,
+      "energy_hi": 7725.1288888888885
+    },
+    {
+      "index": 23,
+      "label": "mu_23",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 23,
+      "energy_lo": 7725.657474747475,
+      "energy_hi": 7725.657474747475
+    },
+    {
+      "index": 24,
+      "label": "mu_24",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 24,
+      "energy_lo": 7726.186060606061,
+      "energy_hi": 7726.186060606061
+    },
+    {
+      "index": 25,
+      "label": "mu_25",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 25,
+      "energy_lo": 7726.714646464647,
+      "energy_hi": 7726.714646464647
+    },
+    {
+      "index": 26,
+      "label": "mu_26",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 26,
+      "energy_lo": 7727.243232323232,
+      "energy_hi": 7727.243232323232
+    },
+    {
+      "index": 27,
+      "label": "mu_27",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 27,
+      "energy_lo": 7727.771818181818,
+      "energy_hi": 7727.771818181818
+    },
+    {
+      "index": 28,
+      "label": "mu_28",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 28,
+      "energy_lo": 7728.300404040404,
+      "energy_hi": 7728.300404040404
+    },
+    {
+      "index": 29,
+      "label": "mu_29",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 29,
+      "energy_lo": 7728.82898989899,
+      "energy_hi": 7728.82898989899
+    },
+    {
+      "index": 30,
+      "label": "mu_30",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 30,
+      "energy_lo": 7729.357575757575,
+      "energy_hi": 7729.357575757575
+    },
+    {
+      "index": 31,
+      "label": "mu_31",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 31,
+      "energy_lo": 7729.886161616161,
+      "energy_hi": 7729.886161616161
+    },
+    {
+      "index": 32,
+      "label": "mu_32",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 32,
+      "energy_lo": 7730.414747474748,
+      "energy_hi": 7730.414747474748
+    },
+    {
+      "index": 33,
+      "label": "mu_33",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 33,
+      "energy_lo": 7730.943333333334,
+      "energy_hi": 7730.943333333334
+    },
+    {
+      "index": 34,
+      "label": "mu_34",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 34,
+      "energy_lo": 7731.471919191919,
+      "energy_hi": 7731.471919191919
+    },
+    {
+      "index": 35,
+      "label": "mu_35",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 35,
+      "energy_lo": 7732.000505050505,
+      "energy_hi": 7732.000505050505
+    },
+    {
+      "index": 36,
+      "label": "mu_36",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 36,
+      "energy_lo": 7732.529090909091,
+      "energy_hi": 7732.529090909091
+    },
+    {
+      "index": 37,
+      "label": "mu_37",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 37,
+      "energy_lo": 7733.057676767677,
+      "energy_hi": 7733.057676767677
+    },
+    {
+      "index": 38,
+      "label": "mu_38",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 38,
+      "energy_lo": 7733.586262626262,
+      "energy_hi": 7733.586262626262
+    },
+    {
+      "index": 39,
+      "label": "mu_39",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 39,
+      "energy_lo": 7734.114848484848,
+      "energy_hi": 7734.114848484848
+    },
+    {
+      "index": 40,
+      "label": "mu_40",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 40,
+      "energy_lo": 7734.643434343434,
+      "energy_hi": 7734.643434343434
+    },
+    {
+      "index": 41,
+      "label": "mu_41",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 41,
+      "energy_lo": 7735.172020202021,
+      "energy_hi": 7735.172020202021
+    },
+    {
+      "index": 42,
+      "label": "mu_42",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 42,
+      "energy_lo": 7735.700606060606,
+      "energy_hi": 7735.700606060606
+    },
+    {
+      "index": 43,
+      "label": "mu_43",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 43,
+      "energy_lo": 7736.229191919192,
+      "energy_hi": 7736.229191919192
+    },
+    {
+      "index": 44,
+      "label": "mu_44",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 44,
+      "energy_lo": 7736.757777777778,
+      "energy_hi": 7736.757777777778
+    },
+    {
+      "index": 45,
+      "label": "mu_45",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 45,
+      "energy_lo": 7737.286363636364,
+      "energy_hi": 7737.286363636364
+    },
+    {
+      "index": 46,
+      "label": "mu_46",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 46,
+      "energy_lo": 7737.814949494949,
+      "energy_hi": 7737.814949494949
+    },
+    {
+      "index": 47,
+      "label": "mu_47",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 47,
+      "energy_lo": 7738.343535353535,
+      "energy_hi": 7738.343535353535
+    },
+    {
+      "index": 48,
+      "label": "mu_48",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 48,
+      "energy_lo": 7738.872121212121,
+      "energy_hi": 7738.872121212121
+    },
+    {
+      "index": 49,
+      "label": "mu_49",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 49,
+      "energy_lo": 7739.400707070707,
+      "energy_hi": 7739.400707070707
+    },
+    {
+      "index": 50,
+      "label": "mu_50",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 50,
+      "energy_lo": 7739.929292929293,
+      "energy_hi": 7739.929292929293
+    },
+    {
+      "index": 51,
+      "label": "mu_51",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 51,
+      "energy_lo": 7740.457878787879,
+      "energy_hi": 7740.457878787879
+    },
+    {
+      "index": 52,
+      "label": "mu_52",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 52,
+      "energy_lo": 7740.986464646465,
+      "energy_hi": 7740.986464646465
+    },
+    {
+      "index": 53,
+      "label": "mu_53",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 53,
+      "energy_lo": 7741.515050505051,
+      "energy_hi": 7741.515050505051
+    },
+    {
+      "index": 54,
+      "label": "mu_54",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 54,
+      "energy_lo": 7742.043636363636,
+      "energy_hi": 7742.043636363636
+    },
+    {
+      "index": 55,
+      "label": "mu_55",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 55,
+      "energy_lo": 7742.572222222222,
+      "energy_hi": 7742.572222222222
+    },
+    {
+      "index": 56,
+      "label": "mu_56",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 56,
+      "energy_lo": 7743.100808080808,
+      "energy_hi": 7743.100808080808
+    },
+    {
+      "index": 57,
+      "label": "mu_57",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 57,
+      "energy_lo": 7743.629393939394,
+      "energy_hi": 7743.629393939394
+    },
+    {
+      "index": 58,
+      "label": "mu_58",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 58,
+      "energy_lo": 7744.157979797979,
+      "energy_hi": 7744.157979797979
+    },
+    {
+      "index": 59,
+      "label": "mu_59",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 59,
+      "energy_lo": 7744.686565656566,
+      "energy_hi": 7744.686565656566
+    },
+    {
+      "index": 60,
+      "label": "mu_60",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 60,
+      "energy_lo": 7745.215151515152,
+      "energy_hi": 7745.215151515152
+    },
+    {
+      "index": 61,
+      "label": "mu_61",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 61,
+      "energy_lo": 7745.7437373737375,
+      "energy_hi": 7745.7437373737375
+    },
+    {
+      "index": 62,
+      "label": "mu_62",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 62,
+      "energy_lo": 7746.272323232323,
+      "energy_hi": 7746.272323232323
+    },
+    {
+      "index": 63,
+      "label": "mu_63",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 63,
+      "energy_lo": 7746.800909090909,
+      "energy_hi": 7746.800909090909
+    },
+    {
+      "index": 64,
+      "label": "mu_64",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 64,
+      "energy_lo": 7747.329494949495,
+      "energy_hi": 7747.329494949495
+    },
+    {
+      "index": 65,
+      "label": "mu_65",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 65,
+      "energy_lo": 7747.858080808081,
+      "energy_hi": 7747.858080808081
+    },
+    {
+      "index": 66,
+      "label": "mu_66",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 66,
+      "energy_lo": 7748.386666666666,
+      "energy_hi": 7748.386666666666
+    },
+    {
+      "index": 67,
+      "label": "mu_67",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 67,
+      "energy_lo": 7748.915252525252,
+      "energy_hi": 7748.915252525252
+    },
+    {
+      "index": 68,
+      "label": "mu_68",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 68,
+      "energy_lo": 7749.443838383839,
+      "energy_hi": 7749.443838383839
+    },
+    {
+      "index": 69,
+      "label": "mu_69",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 69,
+      "energy_lo": 7749.9724242424245,
+      "energy_hi": 7749.9724242424245
+    },
+    {
+      "index": 70,
+      "label": "mu_70",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 70,
+      "energy_lo": 7750.50101010101,
+      "energy_hi": 7750.50101010101
+    },
+    {
+      "index": 71,
+      "label": "mu_71",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 71,
+      "energy_lo": 7751.029595959596,
+      "energy_hi": 7751.029595959596
+    },
+    {
+      "index": 72,
+      "label": "mu_72",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 72,
+      "energy_lo": 7751.558181818182,
+      "energy_hi": 7751.558181818182
+    },
+    {
+      "index": 73,
+      "label": "mu_73",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 73,
+      "energy_lo": 7752.0867676767675,
+      "energy_hi": 7752.0867676767675
+    },
+    {
+      "index": 74,
+      "label": "mu_74",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 74,
+      "energy_lo": 7752.615353535353,
+      "energy_hi": 7752.615353535353
+    },
+    {
+      "index": 75,
+      "label": "mu_75",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 75,
+      "energy_lo": 7753.143939393939,
+      "energy_hi": 7753.143939393939
+    },
+    {
+      "index": 76,
+      "label": "mu_76",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 76,
+      "energy_lo": 7753.672525252525,
+      "energy_hi": 7753.672525252525
+    },
+    {
+      "index": 77,
+      "label": "mu_77",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 77,
+      "energy_lo": 7754.2011111111115,
+      "energy_hi": 7754.2011111111115
+    },
+    {
+      "index": 78,
+      "label": "mu_78",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 78,
+      "energy_lo": 7754.729696969697,
+      "energy_hi": 7754.729696969697
+    },
+    {
+      "index": 79,
+      "label": "mu_79",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 79,
+      "energy_lo": 7755.258282828283,
+      "energy_hi": 7755.258282828283
+    },
+    {
+      "index": 80,
+      "label": "mu_80",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 80,
+      "energy_lo": 7755.786868686869,
+      "energy_hi": 7755.786868686869
+    },
+    {
+      "index": 81,
+      "label": "mu_81",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 81,
+      "energy_lo": 7756.3154545454545,
+      "energy_hi": 7756.3154545454545
+    },
+    {
+      "index": 82,
+      "label": "mu_82",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 82,
+      "energy_lo": 7756.84404040404,
+      "energy_hi": 7756.84404040404
+    },
+    {
+      "index": 83,
+      "label": "mu_83",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 83,
+      "energy_lo": 7757.372626262626,
+      "energy_hi": 7757.372626262626
+    },
+    {
+      "index": 84,
+      "label": "mu_84",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 84,
+      "energy_lo": 7757.901212121212,
+      "energy_hi": 7757.901212121212
+    },
+    {
+      "index": 85,
+      "label": "mu_85",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 85,
+      "energy_lo": 7758.4297979797975,
+      "energy_hi": 7758.4297979797975
+    },
+    {
+      "index": 86,
+      "label": "mu_86",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 86,
+      "energy_lo": 7758.958383838384,
+      "energy_hi": 7758.958383838384
+    },
+    {
+      "index": 87,
+      "label": "mu_87",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 87,
+      "energy_lo": 7759.48696969697,
+      "energy_hi": 7759.48696969697
+    },
+    {
+      "index": 88,
+      "label": "mu_88",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 88,
+      "energy_lo": 7760.015555555556,
+      "energy_hi": 7760.015555555556
+    },
+    {
+      "index": 89,
+      "label": "mu_89",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 89,
+      "energy_lo": 7760.544141414141,
+      "energy_hi": 7760.544141414141
+    },
+    {
+      "index": 90,
+      "label": "mu_90",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 90,
+      "energy_lo": 7761.072727272727,
+      "energy_hi": 7761.072727272727
+    },
+    {
+      "index": 91,
+      "label": "mu_91",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 91,
+      "energy_lo": 7761.601313131313,
+      "energy_hi": 7761.601313131313
+    },
+    {
+      "index": 92,
+      "label": "mu_92",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 92,
+      "energy_lo": 7762.129898989899,
+      "energy_hi": 7762.129898989899
+    },
+    {
+      "index": 93,
+      "label": "mu_93",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 93,
+      "energy_lo": 7762.6584848484845,
+      "energy_hi": 7762.6584848484845
+    },
+    {
+      "index": 94,
+      "label": "mu_94",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 94,
+      "energy_lo": 7763.18707070707,
+      "energy_hi": 7763.18707070707
+    },
+    {
+      "index": 95,
+      "label": "mu_95",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 95,
+      "energy_lo": 7763.715656565657,
+      "energy_hi": 7763.715656565657
+    },
+    {
+      "index": 96,
+      "label": "mu_96",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 96,
+      "energy_lo": 7764.244242424243,
+      "energy_hi": 7764.244242424243
+    },
+    {
+      "index": 97,
+      "label": "mu_97",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 97,
+      "energy_lo": 7764.772828282828,
+      "energy_hi": 7764.772828282828
+    },
+    {
+      "index": 98,
+      "label": "mu_98",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 98,
+      "energy_lo": 7765.301414141414,
+      "energy_hi": 7765.301414141414
+    },
+    {
+      "index": 99,
+      "label": "mu_99",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 99,
+      "energy_lo": 7765.83,
+      "energy_hi": 7765.83
+    }
+  ],
+  "Ni_pointwise": [
+    {
+      "index": 0,
+      "label": "mu_0",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 0,
+      "energy_lo": 8336.5,
+      "energy_hi": 8336.5
+    },
+    {
+      "index": 1,
+      "label": "mu_1",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 1,
+      "energy_lo": 8337.027505050504,
+      "energy_hi": 8337.027505050504
+    },
+    {
+      "index": 2,
+      "label": "mu_2",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 2,
+      "energy_lo": 8337.55501010101,
+      "energy_hi": 8337.55501010101
+    },
+    {
+      "index": 3,
+      "label": "mu_3",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 3,
+      "energy_lo": 8338.082515151515,
+      "energy_hi": 8338.082515151515
+    },
+    {
+      "index": 4,
+      "label": "mu_4",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 4,
+      "energy_lo": 8338.61002020202,
+      "energy_hi": 8338.61002020202
+    },
+    {
+      "index": 5,
+      "label": "mu_5",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 5,
+      "energy_lo": 8339.137525252525,
+      "energy_hi": 8339.137525252525
+    },
+    {
+      "index": 6,
+      "label": "mu_6",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 6,
+      "energy_lo": 8339.665030303031,
+      "energy_hi": 8339.665030303031
+    },
+    {
+      "index": 7,
+      "label": "mu_7",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 7,
+      "energy_lo": 8340.192535353535,
+      "energy_hi": 8340.192535353535
+    },
+    {
+      "index": 8,
+      "label": "mu_8",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 8,
+      "energy_lo": 8340.72004040404,
+      "energy_hi": 8340.72004040404
+    },
+    {
+      "index": 9,
+      "label": "mu_9",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 9,
+      "energy_lo": 8341.247545454546,
+      "energy_hi": 8341.247545454546
+    },
+    {
+      "index": 10,
+      "label": "mu_10",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 10,
+      "energy_lo": 8341.77505050505,
+      "energy_hi": 8341.77505050505
+    },
+    {
+      "index": 11,
+      "label": "mu_11",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 11,
+      "energy_lo": 8342.302555555556,
+      "energy_hi": 8342.302555555556
+    },
+    {
+      "index": 12,
+      "label": "mu_12",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 12,
+      "energy_lo": 8342.83006060606,
+      "energy_hi": 8342.83006060606
+    },
+    {
+      "index": 13,
+      "label": "mu_13",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 13,
+      "energy_lo": 8343.357565656566,
+      "energy_hi": 8343.357565656566
+    },
+    {
+      "index": 14,
+      "label": "mu_14",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 14,
+      "energy_lo": 8343.88507070707,
+      "energy_hi": 8343.88507070707
+    },
+    {
+      "index": 15,
+      "label": "mu_15",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 15,
+      "energy_lo": 8344.412575757577,
+      "energy_hi": 8344.412575757577
+    },
+    {
+      "index": 16,
+      "label": "mu_16",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 16,
+      "energy_lo": 8344.94008080808,
+      "energy_hi": 8344.94008080808
+    },
+    {
+      "index": 17,
+      "label": "mu_17",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 17,
+      "energy_lo": 8345.467585858585,
+      "energy_hi": 8345.467585858585
+    },
+    {
+      "index": 18,
+      "label": "mu_18",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 18,
+      "energy_lo": 8345.995090909091,
+      "energy_hi": 8345.995090909091
+    },
+    {
+      "index": 19,
+      "label": "mu_19",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 19,
+      "energy_lo": 8346.522595959595,
+      "energy_hi": 8346.522595959595
+    },
+    {
+      "index": 20,
+      "label": "mu_20",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 20,
+      "energy_lo": 8347.050101010102,
+      "energy_hi": 8347.050101010102
+    },
+    {
+      "index": 21,
+      "label": "mu_21",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 21,
+      "energy_lo": 8347.577606060606,
+      "energy_hi": 8347.577606060606
+    },
+    {
+      "index": 22,
+      "label": "mu_22",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 22,
+      "energy_lo": 8348.105111111112,
+      "energy_hi": 8348.105111111112
+    },
+    {
+      "index": 23,
+      "label": "mu_23",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 23,
+      "energy_lo": 8348.632616161616,
+      "energy_hi": 8348.632616161616
+    },
+    {
+      "index": 24,
+      "label": "mu_24",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 24,
+      "energy_lo": 8349.16012121212,
+      "energy_hi": 8349.16012121212
+    },
+    {
+      "index": 25,
+      "label": "mu_25",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 25,
+      "energy_lo": 8349.687626262627,
+      "energy_hi": 8349.687626262627
+    },
+    {
+      "index": 26,
+      "label": "mu_26",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 26,
+      "energy_lo": 8350.21513131313,
+      "energy_hi": 8350.21513131313
+    },
+    {
+      "index": 27,
+      "label": "mu_27",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 27,
+      "energy_lo": 8350.742636363637,
+      "energy_hi": 8350.742636363637
+    },
+    {
+      "index": 28,
+      "label": "mu_28",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 28,
+      "energy_lo": 8351.270141414141,
+      "energy_hi": 8351.270141414141
+    },
+    {
+      "index": 29,
+      "label": "mu_29",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 29,
+      "energy_lo": 8351.797646464647,
+      "energy_hi": 8351.797646464647
+    },
+    {
+      "index": 30,
+      "label": "mu_30",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 30,
+      "energy_lo": 8352.325151515151,
+      "energy_hi": 8352.325151515151
+    },
+    {
+      "index": 31,
+      "label": "mu_31",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 31,
+      "energy_lo": 8352.852656565656,
+      "energy_hi": 8352.852656565656
+    },
+    {
+      "index": 32,
+      "label": "mu_32",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 32,
+      "energy_lo": 8353.380161616162,
+      "energy_hi": 8353.380161616162
+    },
+    {
+      "index": 33,
+      "label": "mu_33",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 33,
+      "energy_lo": 8353.907666666666,
+      "energy_hi": 8353.907666666666
+    },
+    {
+      "index": 34,
+      "label": "mu_34",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 34,
+      "energy_lo": 8354.435171717172,
+      "energy_hi": 8354.435171717172
+    },
+    {
+      "index": 35,
+      "label": "mu_35",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 35,
+      "energy_lo": 8354.962676767676,
+      "energy_hi": 8354.962676767676
+    },
+    {
+      "index": 36,
+      "label": "mu_36",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 36,
+      "energy_lo": 8355.490181818182,
+      "energy_hi": 8355.490181818182
+    },
+    {
+      "index": 37,
+      "label": "mu_37",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 37,
+      "energy_lo": 8356.017686868687,
+      "energy_hi": 8356.017686868687
+    },
+    {
+      "index": 38,
+      "label": "mu_38",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 38,
+      "energy_lo": 8356.545191919193,
+      "energy_hi": 8356.545191919193
+    },
+    {
+      "index": 39,
+      "label": "mu_39",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 39,
+      "energy_lo": 8357.072696969697,
+      "energy_hi": 8357.072696969697
+    },
+    {
+      "index": 40,
+      "label": "mu_40",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 40,
+      "energy_lo": 8357.600202020201,
+      "energy_hi": 8357.600202020201
+    },
+    {
+      "index": 41,
+      "label": "mu_41",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 41,
+      "energy_lo": 8358.127707070707,
+      "energy_hi": 8358.127707070707
+    },
+    {
+      "index": 42,
+      "label": "mu_42",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 42,
+      "energy_lo": 8358.655212121212,
+      "energy_hi": 8358.655212121212
+    },
+    {
+      "index": 43,
+      "label": "mu_43",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 43,
+      "energy_lo": 8359.182717171718,
+      "energy_hi": 8359.182717171718
+    },
+    {
+      "index": 44,
+      "label": "mu_44",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 44,
+      "energy_lo": 8359.710222222222,
+      "energy_hi": 8359.710222222222
+    },
+    {
+      "index": 45,
+      "label": "mu_45",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 45,
+      "energy_lo": 8360.237727272728,
+      "energy_hi": 8360.237727272728
+    },
+    {
+      "index": 46,
+      "label": "mu_46",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 46,
+      "energy_lo": 8360.765232323232,
+      "energy_hi": 8360.765232323232
+    },
+    {
+      "index": 47,
+      "label": "mu_47",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 47,
+      "energy_lo": 8361.292737373737,
+      "energy_hi": 8361.292737373737
+    },
+    {
+      "index": 48,
+      "label": "mu_48",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 48,
+      "energy_lo": 8361.820242424243,
+      "energy_hi": 8361.820242424243
+    },
+    {
+      "index": 49,
+      "label": "mu_49",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 49,
+      "energy_lo": 8362.347747474747,
+      "energy_hi": 8362.347747474747
+    },
+    {
+      "index": 50,
+      "label": "mu_50",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 50,
+      "energy_lo": 8362.875252525253,
+      "energy_hi": 8362.875252525253
+    },
+    {
+      "index": 51,
+      "label": "mu_51",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 51,
+      "energy_lo": 8363.402757575757,
+      "energy_hi": 8363.402757575757
+    },
+    {
+      "index": 52,
+      "label": "mu_52",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 52,
+      "energy_lo": 8363.930262626263,
+      "energy_hi": 8363.930262626263
+    },
+    {
+      "index": 53,
+      "label": "mu_53",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 53,
+      "energy_lo": 8364.457767676768,
+      "energy_hi": 8364.457767676768
+    },
+    {
+      "index": 54,
+      "label": "mu_54",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 54,
+      "energy_lo": 8364.985272727272,
+      "energy_hi": 8364.985272727272
+    },
+    {
+      "index": 55,
+      "label": "mu_55",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 55,
+      "energy_lo": 8365.512777777778,
+      "energy_hi": 8365.512777777778
+    },
+    {
+      "index": 56,
+      "label": "mu_56",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 56,
+      "energy_lo": 8366.040282828282,
+      "energy_hi": 8366.040282828282
+    },
+    {
+      "index": 57,
+      "label": "mu_57",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 57,
+      "energy_lo": 8366.567787878788,
+      "energy_hi": 8366.567787878788
+    },
+    {
+      "index": 58,
+      "label": "mu_58",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 58,
+      "energy_lo": 8367.095292929293,
+      "energy_hi": 8367.095292929293
+    },
+    {
+      "index": 59,
+      "label": "mu_59",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 59,
+      "energy_lo": 8367.622797979799,
+      "energy_hi": 8367.622797979799
+    },
+    {
+      "index": 60,
+      "label": "mu_60",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 60,
+      "energy_lo": 8368.150303030303,
+      "energy_hi": 8368.150303030303
+    },
+    {
+      "index": 61,
+      "label": "mu_61",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 61,
+      "energy_lo": 8368.677808080807,
+      "energy_hi": 8368.677808080807
+    },
+    {
+      "index": 62,
+      "label": "mu_62",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 62,
+      "energy_lo": 8369.205313131313,
+      "energy_hi": 8369.205313131313
+    },
+    {
+      "index": 63,
+      "label": "mu_63",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 63,
+      "energy_lo": 8369.732818181817,
+      "energy_hi": 8369.732818181817
+    },
+    {
+      "index": 64,
+      "label": "mu_64",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 64,
+      "energy_lo": 8370.260323232324,
+      "energy_hi": 8370.260323232324
+    },
+    {
+      "index": 65,
+      "label": "mu_65",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 65,
+      "energy_lo": 8370.787828282828,
+      "energy_hi": 8370.787828282828
+    },
+    {
+      "index": 66,
+      "label": "mu_66",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 66,
+      "energy_lo": 8371.315333333334,
+      "energy_hi": 8371.315333333334
+    },
+    {
+      "index": 67,
+      "label": "mu_67",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 67,
+      "energy_lo": 8371.842838383838,
+      "energy_hi": 8371.842838383838
+    },
+    {
+      "index": 68,
+      "label": "mu_68",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 68,
+      "energy_lo": 8372.370343434344,
+      "energy_hi": 8372.370343434344
+    },
+    {
+      "index": 69,
+      "label": "mu_69",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 69,
+      "energy_lo": 8372.897848484849,
+      "energy_hi": 8372.897848484849
+    },
+    {
+      "index": 70,
+      "label": "mu_70",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 70,
+      "energy_lo": 8373.425353535353,
+      "energy_hi": 8373.425353535353
+    },
+    {
+      "index": 71,
+      "label": "mu_71",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 71,
+      "energy_lo": 8373.952858585859,
+      "energy_hi": 8373.952858585859
+    },
+    {
+      "index": 72,
+      "label": "mu_72",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 72,
+      "energy_lo": 8374.480363636363,
+      "energy_hi": 8374.480363636363
+    },
+    {
+      "index": 73,
+      "label": "mu_73",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 73,
+      "energy_lo": 8375.00786868687,
+      "energy_hi": 8375.00786868687
+    },
+    {
+      "index": 74,
+      "label": "mu_74",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 74,
+      "energy_lo": 8375.535373737373,
+      "energy_hi": 8375.535373737373
+    },
+    {
+      "index": 75,
+      "label": "mu_75",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 75,
+      "energy_lo": 8376.06287878788,
+      "energy_hi": 8376.06287878788
+    },
+    {
+      "index": 76,
+      "label": "mu_76",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 76,
+      "energy_lo": 8376.590383838384,
+      "energy_hi": 8376.590383838384
+    },
+    {
+      "index": 77,
+      "label": "mu_77",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 77,
+      "energy_lo": 8377.117888888888,
+      "energy_hi": 8377.117888888888
+    },
+    {
+      "index": 78,
+      "label": "mu_78",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 78,
+      "energy_lo": 8377.645393939394,
+      "energy_hi": 8377.645393939394
+    },
+    {
+      "index": 79,
+      "label": "mu_79",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 79,
+      "energy_lo": 8378.172898989898,
+      "energy_hi": 8378.172898989898
+    },
+    {
+      "index": 80,
+      "label": "mu_80",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 80,
+      "energy_lo": 8378.700404040404,
+      "energy_hi": 8378.700404040404
+    },
+    {
+      "index": 81,
+      "label": "mu_81",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 81,
+      "energy_lo": 8379.227909090909,
+      "energy_hi": 8379.227909090909
+    },
+    {
+      "index": 82,
+      "label": "mu_82",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 82,
+      "energy_lo": 8379.755414141415,
+      "energy_hi": 8379.755414141415
+    },
+    {
+      "index": 83,
+      "label": "mu_83",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 83,
+      "energy_lo": 8380.282919191919,
+      "energy_hi": 8380.282919191919
+    },
+    {
+      "index": 84,
+      "label": "mu_84",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 84,
+      "energy_lo": 8380.810424242423,
+      "energy_hi": 8380.810424242423
+    },
+    {
+      "index": 85,
+      "label": "mu_85",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 85,
+      "energy_lo": 8381.33792929293,
+      "energy_hi": 8381.33792929293
+    },
+    {
+      "index": 86,
+      "label": "mu_86",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 86,
+      "energy_lo": 8381.865434343434,
+      "energy_hi": 8381.865434343434
+    },
+    {
+      "index": 87,
+      "label": "mu_87",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 87,
+      "energy_lo": 8382.39293939394,
+      "energy_hi": 8382.39293939394
+    },
+    {
+      "index": 88,
+      "label": "mu_88",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 88,
+      "energy_lo": 8382.920444444444,
+      "energy_hi": 8382.920444444444
+    },
+    {
+      "index": 89,
+      "label": "mu_89",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 89,
+      "energy_lo": 8383.44794949495,
+      "energy_hi": 8383.44794949495
+    },
+    {
+      "index": 90,
+      "label": "mu_90",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 90,
+      "energy_lo": 8383.975454545454,
+      "energy_hi": 8383.975454545454
+    },
+    {
+      "index": 91,
+      "label": "mu_91",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 91,
+      "energy_lo": 8384.50295959596,
+      "energy_hi": 8384.50295959596
+    },
+    {
+      "index": 92,
+      "label": "mu_92",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 92,
+      "energy_lo": 8385.030464646465,
+      "energy_hi": 8385.030464646465
+    },
+    {
+      "index": 93,
+      "label": "mu_93",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 93,
+      "energy_lo": 8385.557969696969,
+      "energy_hi": 8385.557969696969
+    },
+    {
+      "index": 94,
+      "label": "mu_94",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 94,
+      "energy_lo": 8386.085474747475,
+      "energy_hi": 8386.085474747475
+    },
+    {
+      "index": 95,
+      "label": "mu_95",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 95,
+      "energy_lo": 8386.61297979798,
+      "energy_hi": 8386.61297979798
+    },
+    {
+      "index": 96,
+      "label": "mu_96",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 96,
+      "energy_lo": 8387.140484848485,
+      "energy_hi": 8387.140484848485
+    },
+    {
+      "index": 97,
+      "label": "mu_97",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 97,
+      "energy_lo": 8387.66798989899,
+      "energy_hi": 8387.66798989899
+    },
+    {
+      "index": 98,
+      "label": "mu_98",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 98,
+      "energy_lo": 8388.195494949496,
+      "energy_hi": 8388.195494949496
+    },
+    {
+      "index": 99,
+      "label": "mu_99",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 99,
+      "energy_lo": 8388.723,
+      "energy_hi": 8388.723
+    }
+  ],
+  "Cu_pointwise": [
+    {
+      "index": 0,
+      "label": "mu_0",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 0,
+      "energy_lo": 8987.5,
+      "energy_hi": 8987.5
+    },
+    {
+      "index": 1,
+      "label": "mu_1",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 1,
+      "energy_lo": 8988.027393939394,
+      "energy_hi": 8988.027393939394
+    },
+    {
+      "index": 2,
+      "label": "mu_2",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 2,
+      "energy_lo": 8988.554787878787,
+      "energy_hi": 8988.554787878787
+    },
+    {
+      "index": 3,
+      "label": "mu_3",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 3,
+      "energy_lo": 8989.082181818181,
+      "energy_hi": 8989.082181818181
+    },
+    {
+      "index": 4,
+      "label": "mu_4",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 4,
+      "energy_lo": 8989.609575757575,
+      "energy_hi": 8989.609575757575
+    },
+    {
+      "index": 5,
+      "label": "mu_5",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 5,
+      "energy_lo": 8990.13696969697,
+      "energy_hi": 8990.13696969697
+    },
+    {
+      "index": 6,
+      "label": "mu_6",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 6,
+      "energy_lo": 8990.664363636364,
+      "energy_hi": 8990.664363636364
+    },
+    {
+      "index": 7,
+      "label": "mu_7",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 7,
+      "energy_lo": 8991.191757575758,
+      "energy_hi": 8991.191757575758
+    },
+    {
+      "index": 8,
+      "label": "mu_8",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 8,
+      "energy_lo": 8991.719151515152,
+      "energy_hi": 8991.719151515152
+    },
+    {
+      "index": 9,
+      "label": "mu_9",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 9,
+      "energy_lo": 8992.246545454545,
+      "energy_hi": 8992.246545454545
+    },
+    {
+      "index": 10,
+      "label": "mu_10",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 10,
+      "energy_lo": 8992.77393939394,
+      "energy_hi": 8992.77393939394
+    },
+    {
+      "index": 11,
+      "label": "mu_11",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 11,
+      "energy_lo": 8993.301333333333,
+      "energy_hi": 8993.301333333333
+    },
+    {
+      "index": 12,
+      "label": "mu_12",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 12,
+      "energy_lo": 8993.828727272727,
+      "energy_hi": 8993.828727272727
+    },
+    {
+      "index": 13,
+      "label": "mu_13",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 13,
+      "energy_lo": 8994.35612121212,
+      "energy_hi": 8994.35612121212
+    },
+    {
+      "index": 14,
+      "label": "mu_14",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 14,
+      "energy_lo": 8994.883515151516,
+      "energy_hi": 8994.883515151516
+    },
+    {
+      "index": 15,
+      "label": "mu_15",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 15,
+      "energy_lo": 8995.41090909091,
+      "energy_hi": 8995.41090909091
+    },
+    {
+      "index": 16,
+      "label": "mu_16",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 16,
+      "energy_lo": 8995.938303030303,
+      "energy_hi": 8995.938303030303
+    },
+    {
+      "index": 17,
+      "label": "mu_17",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 17,
+      "energy_lo": 8996.465696969697,
+      "energy_hi": 8996.465696969697
+    },
+    {
+      "index": 18,
+      "label": "mu_18",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 18,
+      "energy_lo": 8996.99309090909,
+      "energy_hi": 8996.99309090909
+    },
+    {
+      "index": 19,
+      "label": "mu_19",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 19,
+      "energy_lo": 8997.520484848485,
+      "energy_hi": 8997.520484848485
+    },
+    {
+      "index": 20,
+      "label": "mu_20",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 20,
+      "energy_lo": 8998.047878787878,
+      "energy_hi": 8998.047878787878
+    },
+    {
+      "index": 21,
+      "label": "mu_21",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 21,
+      "energy_lo": 8998.575272727272,
+      "energy_hi": 8998.575272727272
+    },
+    {
+      "index": 22,
+      "label": "mu_22",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 22,
+      "energy_lo": 8999.102666666666,
+      "energy_hi": 8999.102666666666
+    },
+    {
+      "index": 23,
+      "label": "mu_23",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 23,
+      "energy_lo": 8999.630060606061,
+      "energy_hi": 8999.630060606061
+    },
+    {
+      "index": 24,
+      "label": "mu_24",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 24,
+      "energy_lo": 9000.157454545455,
+      "energy_hi": 9000.157454545455
+    },
+    {
+      "index": 25,
+      "label": "mu_25",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 25,
+      "energy_lo": 9000.684848484849,
+      "energy_hi": 9000.684848484849
+    },
+    {
+      "index": 26,
+      "label": "mu_26",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 26,
+      "energy_lo": 9001.212242424243,
+      "energy_hi": 9001.212242424243
+    },
+    {
+      "index": 27,
+      "label": "mu_27",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 27,
+      "energy_lo": 9001.739636363636,
+      "energy_hi": 9001.739636363636
+    },
+    {
+      "index": 28,
+      "label": "mu_28",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 28,
+      "energy_lo": 9002.26703030303,
+      "energy_hi": 9002.26703030303
+    },
+    {
+      "index": 29,
+      "label": "mu_29",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 29,
+      "energy_lo": 9002.794424242424,
+      "energy_hi": 9002.794424242424
+    },
+    {
+      "index": 30,
+      "label": "mu_30",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 30,
+      "energy_lo": 9003.321818181817,
+      "energy_hi": 9003.321818181817
+    },
+    {
+      "index": 31,
+      "label": "mu_31",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 31,
+      "energy_lo": 9003.849212121211,
+      "energy_hi": 9003.849212121211
+    },
+    {
+      "index": 32,
+      "label": "mu_32",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 32,
+      "energy_lo": 9004.376606060607,
+      "energy_hi": 9004.376606060607
+    },
+    {
+      "index": 33,
+      "label": "mu_33",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 33,
+      "energy_lo": 9004.904,
+      "energy_hi": 9004.904
+    },
+    {
+      "index": 34,
+      "label": "mu_34",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 34,
+      "energy_lo": 9005.431393939394,
+      "energy_hi": 9005.431393939394
+    },
+    {
+      "index": 35,
+      "label": "mu_35",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 35,
+      "energy_lo": 9005.958787878788,
+      "energy_hi": 9005.958787878788
+    },
+    {
+      "index": 36,
+      "label": "mu_36",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 36,
+      "energy_lo": 9006.486181818182,
+      "energy_hi": 9006.486181818182
+    },
+    {
+      "index": 37,
+      "label": "mu_37",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 37,
+      "energy_lo": 9007.013575757575,
+      "energy_hi": 9007.013575757575
+    },
+    {
+      "index": 38,
+      "label": "mu_38",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 38,
+      "energy_lo": 9007.54096969697,
+      "energy_hi": 9007.54096969697
+    },
+    {
+      "index": 39,
+      "label": "mu_39",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 39,
+      "energy_lo": 9008.068363636363,
+      "energy_hi": 9008.068363636363
+    },
+    {
+      "index": 40,
+      "label": "mu_40",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 40,
+      "energy_lo": 9008.595757575757,
+      "energy_hi": 9008.595757575757
+    },
+    {
+      "index": 41,
+      "label": "mu_41",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 41,
+      "energy_lo": 9009.123151515152,
+      "energy_hi": 9009.123151515152
+    },
+    {
+      "index": 42,
+      "label": "mu_42",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 42,
+      "energy_lo": 9009.650545454546,
+      "energy_hi": 9009.650545454546
+    },
+    {
+      "index": 43,
+      "label": "mu_43",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 43,
+      "energy_lo": 9010.17793939394,
+      "energy_hi": 9010.17793939394
+    },
+    {
+      "index": 44,
+      "label": "mu_44",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 44,
+      "energy_lo": 9010.705333333333,
+      "energy_hi": 9010.705333333333
+    },
+    {
+      "index": 45,
+      "label": "mu_45",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 45,
+      "energy_lo": 9011.232727272727,
+      "energy_hi": 9011.232727272727
+    },
+    {
+      "index": 46,
+      "label": "mu_46",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 46,
+      "energy_lo": 9011.76012121212,
+      "energy_hi": 9011.76012121212
+    },
+    {
+      "index": 47,
+      "label": "mu_47",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 47,
+      "energy_lo": 9012.287515151515,
+      "energy_hi": 9012.287515151515
+    },
+    {
+      "index": 48,
+      "label": "mu_48",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 48,
+      "energy_lo": 9012.814909090908,
+      "energy_hi": 9012.814909090908
+    },
+    {
+      "index": 49,
+      "label": "mu_49",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 49,
+      "energy_lo": 9013.342303030302,
+      "energy_hi": 9013.342303030302
+    },
+    {
+      "index": 50,
+      "label": "mu_50",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 50,
+      "energy_lo": 9013.869696969698,
+      "energy_hi": 9013.869696969698
+    },
+    {
+      "index": 51,
+      "label": "mu_51",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 51,
+      "energy_lo": 9014.397090909091,
+      "energy_hi": 9014.397090909091
+    },
+    {
+      "index": 52,
+      "label": "mu_52",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 52,
+      "energy_lo": 9014.924484848485,
+      "energy_hi": 9014.924484848485
+    },
+    {
+      "index": 53,
+      "label": "mu_53",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 53,
+      "energy_lo": 9015.451878787879,
+      "energy_hi": 9015.451878787879
+    },
+    {
+      "index": 54,
+      "label": "mu_54",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 54,
+      "energy_lo": 9015.979272727272,
+      "energy_hi": 9015.979272727272
+    },
+    {
+      "index": 55,
+      "label": "mu_55",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 55,
+      "energy_lo": 9016.506666666666,
+      "energy_hi": 9016.506666666666
+    },
+    {
+      "index": 56,
+      "label": "mu_56",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 56,
+      "energy_lo": 9017.03406060606,
+      "energy_hi": 9017.03406060606
+    },
+    {
+      "index": 57,
+      "label": "mu_57",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 57,
+      "energy_lo": 9017.561454545454,
+      "energy_hi": 9017.561454545454
+    },
+    {
+      "index": 58,
+      "label": "mu_58",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 58,
+      "energy_lo": 9018.088848484847,
+      "energy_hi": 9018.088848484847
+    },
+    {
+      "index": 59,
+      "label": "mu_59",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 59,
+      "energy_lo": 9018.616242424243,
+      "energy_hi": 9018.616242424243
+    },
+    {
+      "index": 60,
+      "label": "mu_60",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 60,
+      "energy_lo": 9019.143636363637,
+      "energy_hi": 9019.143636363637
+    },
+    {
+      "index": 61,
+      "label": "mu_61",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 61,
+      "energy_lo": 9019.67103030303,
+      "energy_hi": 9019.67103030303
+    },
+    {
+      "index": 62,
+      "label": "mu_62",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 62,
+      "energy_lo": 9020.198424242424,
+      "energy_hi": 9020.198424242424
+    },
+    {
+      "index": 63,
+      "label": "mu_63",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 63,
+      "energy_lo": 9020.725818181818,
+      "energy_hi": 9020.725818181818
+    },
+    {
+      "index": 64,
+      "label": "mu_64",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 64,
+      "energy_lo": 9021.253212121212,
+      "energy_hi": 9021.253212121212
+    },
+    {
+      "index": 65,
+      "label": "mu_65",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 65,
+      "energy_lo": 9021.780606060605,
+      "energy_hi": 9021.780606060605
+    },
+    {
+      "index": 66,
+      "label": "mu_66",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 66,
+      "energy_lo": 9022.307999999999,
+      "energy_hi": 9022.307999999999
+    },
+    {
+      "index": 67,
+      "label": "mu_67",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 67,
+      "energy_lo": 9022.835393939393,
+      "energy_hi": 9022.835393939393
+    },
+    {
+      "index": 68,
+      "label": "mu_68",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 68,
+      "energy_lo": 9023.362787878788,
+      "energy_hi": 9023.362787878788
+    },
+    {
+      "index": 69,
+      "label": "mu_69",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 69,
+      "energy_lo": 9023.890181818182,
+      "energy_hi": 9023.890181818182
+    },
+    {
+      "index": 70,
+      "label": "mu_70",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 70,
+      "energy_lo": 9024.417575757576,
+      "energy_hi": 9024.417575757576
+    },
+    {
+      "index": 71,
+      "label": "mu_71",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 71,
+      "energy_lo": 9024.94496969697,
+      "energy_hi": 9024.94496969697
+    },
+    {
+      "index": 72,
+      "label": "mu_72",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 72,
+      "energy_lo": 9025.472363636363,
+      "energy_hi": 9025.472363636363
+    },
+    {
+      "index": 73,
+      "label": "mu_73",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 73,
+      "energy_lo": 9025.999757575757,
+      "energy_hi": 9025.999757575757
+    },
+    {
+      "index": 74,
+      "label": "mu_74",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 74,
+      "energy_lo": 9026.52715151515,
+      "energy_hi": 9026.52715151515
+    },
+    {
+      "index": 75,
+      "label": "mu_75",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 75,
+      "energy_lo": 9027.054545454544,
+      "energy_hi": 9027.054545454544
+    },
+    {
+      "index": 76,
+      "label": "mu_76",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 76,
+      "energy_lo": 9027.581939393938,
+      "energy_hi": 9027.581939393938
+    },
+    {
+      "index": 77,
+      "label": "mu_77",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 77,
+      "energy_lo": 9028.109333333334,
+      "energy_hi": 9028.109333333334
+    },
+    {
+      "index": 78,
+      "label": "mu_78",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 78,
+      "energy_lo": 9028.636727272728,
+      "energy_hi": 9028.636727272728
+    },
+    {
+      "index": 79,
+      "label": "mu_79",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 79,
+      "energy_lo": 9029.164121212121,
+      "energy_hi": 9029.164121212121
+    },
+    {
+      "index": 80,
+      "label": "mu_80",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 80,
+      "energy_lo": 9029.691515151515,
+      "energy_hi": 9029.691515151515
+    },
+    {
+      "index": 81,
+      "label": "mu_81",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 81,
+      "energy_lo": 9030.218909090909,
+      "energy_hi": 9030.218909090909
+    },
+    {
+      "index": 82,
+      "label": "mu_82",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 82,
+      "energy_lo": 9030.746303030302,
+      "energy_hi": 9030.746303030302
+    },
+    {
+      "index": 83,
+      "label": "mu_83",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 83,
+      "energy_lo": 9031.273696969696,
+      "energy_hi": 9031.273696969696
+    },
+    {
+      "index": 84,
+      "label": "mu_84",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 84,
+      "energy_lo": 9031.80109090909,
+      "energy_hi": 9031.80109090909
+    },
+    {
+      "index": 85,
+      "label": "mu_85",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 85,
+      "energy_lo": 9032.328484848484,
+      "energy_hi": 9032.328484848484
+    },
+    {
+      "index": 86,
+      "label": "mu_86",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 86,
+      "energy_lo": 9032.85587878788,
+      "energy_hi": 9032.85587878788
+    },
+    {
+      "index": 87,
+      "label": "mu_87",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 87,
+      "energy_lo": 9033.383272727273,
+      "energy_hi": 9033.383272727273
+    },
+    {
+      "index": 88,
+      "label": "mu_88",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 88,
+      "energy_lo": 9033.910666666667,
+      "energy_hi": 9033.910666666667
+    },
+    {
+      "index": 89,
+      "label": "mu_89",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 89,
+      "energy_lo": 9034.43806060606,
+      "energy_hi": 9034.43806060606
+    },
+    {
+      "index": 90,
+      "label": "mu_90",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 90,
+      "energy_lo": 9034.965454545454,
+      "energy_hi": 9034.965454545454
+    },
+    {
+      "index": 91,
+      "label": "mu_91",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 91,
+      "energy_lo": 9035.492848484848,
+      "energy_hi": 9035.492848484848
+    },
+    {
+      "index": 92,
+      "label": "mu_92",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 92,
+      "energy_lo": 9036.020242424242,
+      "energy_hi": 9036.020242424242
+    },
+    {
+      "index": 93,
+      "label": "mu_93",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 93,
+      "energy_lo": 9036.547636363635,
+      "energy_hi": 9036.547636363635
+    },
+    {
+      "index": 94,
+      "label": "mu_94",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 94,
+      "energy_lo": 9037.075030303029,
+      "energy_hi": 9037.075030303029
+    },
+    {
+      "index": 95,
+      "label": "mu_95",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 95,
+      "energy_lo": 9037.602424242425,
+      "energy_hi": 9037.602424242425
+    },
+    {
+      "index": 96,
+      "label": "mu_96",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 96,
+      "energy_lo": 9038.129818181818,
+      "energy_hi": 9038.129818181818
+    },
+    {
+      "index": 97,
+      "label": "mu_97",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 97,
+      "energy_lo": 9038.657212121212,
+      "energy_hi": 9038.657212121212
+    },
+    {
+      "index": 98,
+      "label": "mu_98",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 98,
+      "energy_lo": 9039.184606060606,
+      "energy_hi": 9039.184606060606
+    },
+    {
+      "index": 99,
+      "label": "mu_99",
+      "degree": -1,
+      "parts": 0,
+      "chunk": 99,
+      "energy_lo": 9039.712,
+      "energy_hi": 9039.712
+    }
+  ]
+}

@@ -1,0 +1,647 @@
+{
+  "Q3": {
+    "question": "Q3",
+    "paired_intervals_reconstructed": 16,
+    "selected_independent_raw_model_refits": [
+      {
+        "run_id": "Fe_bader_identified_material_r0_s113_full",
+        "features": 100,
+        "selected_leaf": 1,
+        "max_prediction_error": 1.1102230246251565e-15,
+        "max_localization_error": null,
+        "source_row_probe": 106,
+        "first_feature_values": [
+          0.03572946471552942,
+          0.042307289512344214,
+          0.053224277250179315,
+          0.07462588223727887,
+          0.11544978926838179
+        ]
+      },
+      {
+        "run_id": "Fe_bader_identified_material_r0_s113_white_line",
+        "features": 1,
+        "selected_leaf": 5,
+        "max_prediction_error": 4.440892098500626e-16,
+        "max_localization_error": null,
+        "source_row_probe": 106,
+        "first_feature_values": [
+          7130.456121212122
+        ]
+      }
+    ],
+    "stability_records_reconstructed": 0,
+    "code_sha256": "169cc61515679e47efd1354247e4fa083ecd413e5236745acfe5f8bb9910ad2b",
+    "report_sha256": "ab7b8e8419915c1b3513951a114a583eaac4aeb03234fab964178710be4cc464",
+    "pair_checks": [
+      {
+        "comparison_id": "Co_bader_identified_material_r0_s113",
+        "gain": -0.08190407260770625,
+        "low": -0.11478616408521447,
+        "high": -0.05250975589724109
+      },
+      {
+        "comparison_id": "Co_bader_identified_material_r1_s113",
+        "gain": -0.09394555536711138,
+        "low": -0.1239218108886144,
+        "high": -0.06504247560908685
+      },
+      {
+        "comparison_id": "Cr_bader_identified_material_r0_s113",
+        "gain": -0.08614040953762711,
+        "low": -0.10435754830673317,
+        "high": -0.06602390711433924
+      },
+      {
+        "comparison_id": "Cr_bader_identified_material_r1_s113",
+        "gain": -0.07769422975661334,
+        "low": -0.09795622575360555,
+        "high": -0.05778343033040059
+      },
+      {
+        "comparison_id": "Cu_bader_identified_material_r0_s113",
+        "gain": -0.07369717506068862,
+        "low": -0.09386794120668127,
+        "high": -0.0568296470070349
+      },
+      {
+        "comparison_id": "Cu_bader_identified_material_r1_s113",
+        "gain": -0.07872556653451147,
+        "low": -0.09913148404046786,
+        "high": -0.0590638325272481
+      },
+      {
+        "comparison_id": "Fe_bader_identified_material_r0_s113",
+        "gain": -0.12168869386669967,
+        "low": -0.15960473404170347,
+        "high": -0.09188011546084716
+      },
+      {
+        "comparison_id": "Fe_bader_identified_material_r1_s113",
+        "gain": -0.08994458968931326,
+        "low": -0.10997947636586254,
+        "high": -0.07161246052651436
+      },
+      {
+        "comparison_id": "Mn_bader_identified_material_r0_s113",
+        "gain": -0.09825463271852695,
+        "low": -0.1136737089137402,
+        "high": -0.0803139078557592
+      },
+      {
+        "comparison_id": "Mn_bader_identified_material_r1_s113",
+        "gain": -0.08631883964024638,
+        "low": -0.10269587673533566,
+        "high": -0.07077233562443677
+      },
+      {
+        "comparison_id": "Ni_bader_identified_material_r0_s113",
+        "gain": -0.025689130331022228,
+        "low": -0.034178073901313874,
+        "high": -0.018483685138937608
+      },
+      {
+        "comparison_id": "Ni_bader_identified_material_r1_s113",
+        "gain": -0.023919968020023663,
+        "low": -0.03862109230972467,
+        "high": -0.01141013695637036
+      },
+      {
+        "comparison_id": "Ti_bader_identified_material_r0_s113",
+        "gain": -0.033434898762746884,
+        "low": -0.05322237047965724,
+        "high": -0.013638298744242236
+      },
+      {
+        "comparison_id": "Ti_bader_identified_material_r1_s113",
+        "gain": -0.025913122395713986,
+        "low": -0.046189070917391016,
+        "high": -0.008352321171257431
+      },
+      {
+        "comparison_id": "V_bader_identified_material_r0_s113",
+        "gain": -0.06858435194325946,
+        "low": -0.09086316896505996,
+        "high": -0.05012579899605895
+      },
+      {
+        "comparison_id": "V_bader_identified_material_r1_s113",
+        "gain": -0.07470602801418498,
+        "low": -0.09082657572974265,
+        "high": -0.06119496801161862
+      }
+    ],
+    "scope": "Independent arithmetic, selected model/predictor/perturbation probes, plus separate human report/code assessment. These model settings describe this submission only.",
+    "code_sha256_at_numerical_probe": "96fbcaad9db07da2f821e49d8684595646cdc620ac9739f145c755c74d76707a",
+    "final_source_reconciliation": {
+      "computational_functions_identical_to_independently_executed_source": [
+        "score",
+        "loss",
+        "group_bootstrap",
+        "representation",
+        "split_rows",
+        "fit_model",
+        "localize",
+        "run"
+      ],
+      "changed_functions": "report/plot rendering and summarize-only CLI only; source inspected"
+    },
+    "scientific_verdict": "pass_for_declared_method_and_identified_population",
+    "scientific_review_by": "Independent flexible-verifier subagent after code, raw-data probes, report and figure review",
+    "common_criteria": {
+      "permissible_spectral_predictors_and_training": "satisfied: raw E/mu only for spectral features; grouped train/validation/test, training-only fit and validation-only leaf selection; selected independent refits reproduce predictions.",
+      "source_and_population_scope": "satisfied: missing-ID feff rows excluded from identified-material evaluation; reports identify scrape-origin selection and unresolved structural relatives/aliases.",
+      "comparison_and_uncertainty": "satisfied: matched rows and fitting opportunities, training-only constant baselines, two overlapping material splits, test-material conditional bootstrap; report avoids population-wide certainty and equivalence from nonsignificance.",
+      "artifact_reconstruction": "satisfied: all paired intervals independently reconstructed from source labels; report units and effect directions checked. Optional interpretation tables receive independent numerical and code review separately from the core gate."
+    },
+    "question_specific_review": {
+      "white_line_estimator": "satisfied as an operational sampled-maximum energy estimator, not a claim to an experimentally curated peak definition. Independent raw feature probe yields one E[argmax(mu)] predictor; full condition uses100 E-aligned intensities.",
+      "beyond_peak_information": "satisfied: all16 paired intervals support a full-spectrum improvement within the fitted procedure/cohort. Report includes weak white-line performance against training-median baselines and confines charge interpretation to supplied Bader labels.",
+      "limitations": "Two ExtraTrees leaf candidates do not cover all peak-only learners; report states model/cohort dependence. Five identified Bader-labeled records across the inputs have endpoint maxima, and unusual high peaks are retained; no physical peak-curation or experimental robustness is established."
+    }
+  },
+  "Q5": {
+    "question": "Q5",
+    "paired_intervals_reconstructed": 64,
+    "selected_independent_raw_model_refits": [
+      {
+        "run_id": "Ti_coord_identified_material_r0_s113_released",
+        "features": 100,
+        "selected_leaf": 5,
+        "max_prediction_error": 0.0,
+        "max_localization_error": 0.0,
+        "source_row_probe": 2,
+        "first_feature_values": [
+          0.03500916790418561,
+          0.057121150363672935,
+          0.11226275625647937,
+          0.1593120456010248,
+          0.17454659443901718
+        ]
+      },
+      {
+        "run_id": "Ti_coord_identified_material_r0_s113_unit_peak",
+        "features": 100,
+        "selected_leaf": 5,
+        "max_prediction_error": 0.0,
+        "max_localization_error": 0.0,
+        "source_row_probe": 2,
+        "first_feature_values": [
+          0.017407339013521983,
+          0.028401909806714944,
+          0.055819545957140095,
+          0.07921350185484287,
+          0.08678845927933182
+        ]
+      },
+      {
+        "run_id": "Ni_md_identified_material_r0_s113_released",
+        "features": 100,
+        "selected_leaf": 5,
+        "max_prediction_error": 8.881784197001252e-16,
+        "max_localization_error": 6.938893903907228e-18,
+        "source_row_probe": 18,
+        "first_feature_values": [
+          0.08962236755294183,
+          0.14156097605580467,
+          0.19518956866298462,
+          0.19959333323600265,
+          0.15927807653854056
+        ]
+      },
+      {
+        "run_id": "Ni_md_identified_material_r0_s113_unit_peak",
+        "features": 100,
+        "selected_leaf": 1,
+        "max_prediction_error": 8.881784197001252e-16,
+        "max_localization_error": 1.0408340855860843e-17,
+        "source_row_probe": 18,
+        "first_feature_values": [
+          0.06005956043205772,
+          0.09486571520465929,
+          0.13080439643481614,
+          0.13375553655444633,
+          0.10673865826761889
+        ]
+      }
+    ],
+    "stability_records_reconstructed": 448,
+    "code_sha256": "169cc61515679e47efd1354247e4fa083ecd413e5236745acfe5f8bb9910ad2b",
+    "report_sha256": "21d407d4d61099bdfde3362d375de73557f363289c935a68f9c849b5047cc78f",
+    "pair_checks": [
+      {
+        "comparison_id": "Co_coord_identified_material_r0_s113",
+        "gain": -0.029123047335931518,
+        "low": -0.07721848113309704,
+        "high": 0.025835070611659378
+      },
+      {
+        "comparison_id": "Co_coord_identified_material_r0_s211",
+        "gain": -0.028244386118401743,
+        "low": -0.06952175350840005,
+        "high": 0.01306579003677294
+      },
+      {
+        "comparison_id": "Co_coord_identified_material_r1_s113",
+        "gain": -0.037525591541900494,
+        "low": -0.07128236674326174,
+        "high": 0.0011333276749245806
+      },
+      {
+        "comparison_id": "Co_coord_identified_material_r1_s211",
+        "gain": -0.03104559535540763,
+        "low": -0.061493363262519335,
+        "high": -0.001934882262525304
+      },
+      {
+        "comparison_id": "Co_md_identified_material_r0_s113",
+        "gain": -0.003753842480421054,
+        "low": -0.005528576837746965,
+        "high": -0.0021918988465679575
+      },
+      {
+        "comparison_id": "Co_md_identified_material_r0_s211",
+        "gain": -0.003622329240114134,
+        "low": -0.0053931497620645355,
+        "high": -0.001450620538419761
+      },
+      {
+        "comparison_id": "Co_md_identified_material_r1_s113",
+        "gain": -0.002942906521082256,
+        "low": -0.00458939292076252,
+        "high": -0.0015135729683118748
+      },
+      {
+        "comparison_id": "Co_md_identified_material_r1_s211",
+        "gain": -0.0026667153129139344,
+        "low": -0.004835182089413241,
+        "high": -0.0007995030852777747
+      },
+      {
+        "comparison_id": "Cr_coord_identified_material_r0_s113",
+        "gain": -0.03660380216511949,
+        "low": -0.08234080129424533,
+        "high": 0.0037387126107697346
+      },
+      {
+        "comparison_id": "Cr_coord_identified_material_r0_s211",
+        "gain": -0.030491367329719687,
+        "low": -0.07226909114262364,
+        "high": 0.010928897259659759
+      },
+      {
+        "comparison_id": "Cr_coord_identified_material_r1_s113",
+        "gain": -0.03574058324704488,
+        "low": -0.07108500951246988,
+        "high": -0.0014390795937633558
+      },
+      {
+        "comparison_id": "Cr_coord_identified_material_r1_s211",
+        "gain": -0.006021741727553764,
+        "low": -0.043700208517545185,
+        "high": 0.036843172569115935
+      },
+      {
+        "comparison_id": "Cr_md_identified_material_r0_s113",
+        "gain": -0.0025139386052130362,
+        "low": -0.006693845612890895,
+        "high": 0.0019418184672406523
+      },
+      {
+        "comparison_id": "Cr_md_identified_material_r0_s211",
+        "gain": -0.0019870256592168303,
+        "low": -0.006020564220524793,
+        "high": 0.0024535974268523005
+      },
+      {
+        "comparison_id": "Cr_md_identified_material_r1_s113",
+        "gain": -0.0038438665138434344,
+        "low": -0.007645406019046126,
+        "high": -0.0009360817113087136
+      },
+      {
+        "comparison_id": "Cr_md_identified_material_r1_s211",
+        "gain": -0.0033139851167921855,
+        "low": -0.006521089227694976,
+        "high": -0.000476871029854569
+      },
+      {
+        "comparison_id": "Cu_coord_identified_material_r0_s113",
+        "gain": -0.010179695996492488,
+        "low": -0.060250042073585655,
+        "high": 0.0472173976020571
+      },
+      {
+        "comparison_id": "Cu_coord_identified_material_r0_s211",
+        "gain": -0.02089815567046105,
+        "low": -0.06939909255161222,
+        "high": 0.029555219293903968
+      },
+      {
+        "comparison_id": "Cu_coord_identified_material_r1_s113",
+        "gain": 0.009477805161736574,
+        "low": -0.054634638230942154,
+        "high": 0.06555902767305886
+      },
+      {
+        "comparison_id": "Cu_coord_identified_material_r1_s211",
+        "gain": 0.008855226535057992,
+        "low": -0.04744065472437893,
+        "high": 0.058755492539809044
+      },
+      {
+        "comparison_id": "Cu_md_identified_material_r0_s113",
+        "gain": -0.0025662729771097487,
+        "low": -0.006723156738531453,
+        "high": 0.0011285095200000545
+      },
+      {
+        "comparison_id": "Cu_md_identified_material_r0_s211",
+        "gain": -0.0010212618846635046,
+        "low": -0.005196828011775588,
+        "high": 0.0026531420922449077
+      },
+      {
+        "comparison_id": "Cu_md_identified_material_r1_s113",
+        "gain": -0.005837144440111755,
+        "low": -0.00887553438442308,
+        "high": -0.0029192020008344992
+      },
+      {
+        "comparison_id": "Cu_md_identified_material_r1_s211",
+        "gain": -0.0048610092626966556,
+        "low": -0.008546889908125833,
+        "high": -0.000801143585251476
+      },
+      {
+        "comparison_id": "Fe_coord_identified_material_r0_s113",
+        "gain": -0.015814273648680932,
+        "low": -0.04343940233131738,
+        "high": 0.013249180285308118
+      },
+      {
+        "comparison_id": "Fe_coord_identified_material_r0_s211",
+        "gain": -0.015552251477844004,
+        "low": -0.04527795005795762,
+        "high": 0.01709403755596783
+      },
+      {
+        "comparison_id": "Fe_coord_identified_material_r1_s113",
+        "gain": -0.013577136537270329,
+        "low": -0.04123413763087791,
+        "high": 0.01796162420568104
+      },
+      {
+        "comparison_id": "Fe_coord_identified_material_r1_s211",
+        "gain": -0.004245811965844282,
+        "low": -0.038182211159068266,
+        "high": 0.03632619796306054
+      },
+      {
+        "comparison_id": "Fe_md_identified_material_r0_s113",
+        "gain": -0.00517877416111787,
+        "low": -0.006676904488921052,
+        "high": -0.0035844754662551406
+      },
+      {
+        "comparison_id": "Fe_md_identified_material_r0_s211",
+        "gain": -0.0049815586369822695,
+        "low": -0.006619098167212959,
+        "high": -0.003303828153238422
+      },
+      {
+        "comparison_id": "Fe_md_identified_material_r1_s113",
+        "gain": -0.001973356210373648,
+        "low": -0.003317433257015235,
+        "high": -0.0007738413113790167
+      },
+      {
+        "comparison_id": "Fe_md_identified_material_r1_s211",
+        "gain": -0.0029317944511448243,
+        "low": -0.00435902681549712,
+        "high": -0.0017095276766937355
+      },
+      {
+        "comparison_id": "Mn_coord_identified_material_r0_s113",
+        "gain": 0.012300377231485915,
+        "low": -0.026372110345760237,
+        "high": 0.053803153111646365
+      },
+      {
+        "comparison_id": "Mn_coord_identified_material_r0_s211",
+        "gain": 0.01157414829364889,
+        "low": -0.02188965780838909,
+        "high": 0.051652908366999636
+      },
+      {
+        "comparison_id": "Mn_coord_identified_material_r1_s113",
+        "gain": 0.029336753193219156,
+        "low": -0.004058973538878013,
+        "high": 0.07886500501893252
+      },
+      {
+        "comparison_id": "Mn_coord_identified_material_r1_s211",
+        "gain": -0.004482406134606265,
+        "low": -0.049751256602825714,
+        "high": 0.051491031191002075
+      },
+      {
+        "comparison_id": "Mn_md_identified_material_r0_s113",
+        "gain": -0.0037860537530447005,
+        "low": -0.005277687581141899,
+        "high": -0.0020020841080877795
+      },
+      {
+        "comparison_id": "Mn_md_identified_material_r0_s211",
+        "gain": -0.0036595635605218176,
+        "low": -0.005115562226873985,
+        "high": -0.0020884040780627115
+      },
+      {
+        "comparison_id": "Mn_md_identified_material_r1_s113",
+        "gain": -0.0029814913274400084,
+        "low": -0.004035732109499291,
+        "high": -0.0015081097783902788
+      },
+      {
+        "comparison_id": "Mn_md_identified_material_r1_s211",
+        "gain": -0.0030662693554342237,
+        "low": -0.004210888539181364,
+        "high": -0.001673581237168732
+      },
+      {
+        "comparison_id": "Ni_coord_identified_material_r0_s113",
+        "gain": -0.01825302218921654,
+        "low": -0.0738518686637885,
+        "high": 0.04430912659523196
+      },
+      {
+        "comparison_id": "Ni_coord_identified_material_r0_s211",
+        "gain": 0.0036457440420090137,
+        "low": -0.04605901650651948,
+        "high": 0.06876351449218045
+      },
+      {
+        "comparison_id": "Ni_coord_identified_material_r1_s113",
+        "gain": -0.035398314143041176,
+        "low": -0.09120838922276574,
+        "high": 0.029585388012556137
+      },
+      {
+        "comparison_id": "Ni_coord_identified_material_r1_s211",
+        "gain": -0.03709210333128721,
+        "low": -0.0854381551342003,
+        "high": 0.019469201833038897
+      },
+      {
+        "comparison_id": "Ni_md_identified_material_r0_s113",
+        "gain": -0.003084324141602094,
+        "low": -0.004339004208236293,
+        "high": -0.0017651971215183813
+      },
+      {
+        "comparison_id": "Ni_md_identified_material_r0_s211",
+        "gain": -0.0042245002003195135,
+        "low": -0.005952977412444562,
+        "high": -0.0025804390061335055
+      },
+      {
+        "comparison_id": "Ni_md_identified_material_r1_s113",
+        "gain": -0.0030803490292809106,
+        "low": -0.004410840591747777,
+        "high": -0.0018392909725151018
+      },
+      {
+        "comparison_id": "Ni_md_identified_material_r1_s211",
+        "gain": -0.004962865719954589,
+        "low": -0.006637130802245369,
+        "high": -0.003562286185968909
+      },
+      {
+        "comparison_id": "Ti_coord_identified_material_r0_s113",
+        "gain": -0.0056697429908034724,
+        "low": -0.03792991357234124,
+        "high": 0.03009932006458572
+      },
+      {
+        "comparison_id": "Ti_coord_identified_material_r0_s211",
+        "gain": -0.05382080739718442,
+        "low": -0.0856099770655222,
+        "high": -0.021322820052493356
+      },
+      {
+        "comparison_id": "Ti_coord_identified_material_r1_s113",
+        "gain": -0.067578576612494,
+        "low": -0.13034454949037602,
+        "high": -0.007675521405615591
+      },
+      {
+        "comparison_id": "Ti_coord_identified_material_r1_s211",
+        "gain": -0.029862516835956865,
+        "low": -0.07398046851667948,
+        "high": 0.011787140572793668
+      },
+      {
+        "comparison_id": "Ti_md_identified_material_r0_s113",
+        "gain": -0.004055012902323303,
+        "low": -0.006212198393886209,
+        "high": -0.0019555398008428812
+      },
+      {
+        "comparison_id": "Ti_md_identified_material_r0_s211",
+        "gain": -0.001764015011912222,
+        "low": -0.0035685579512570627,
+        "high": -4.606062781004229e-05
+      },
+      {
+        "comparison_id": "Ti_md_identified_material_r1_s113",
+        "gain": -0.0023050551358416004,
+        "low": -0.004066412066790331,
+        "high": -0.0007187421990276113
+      },
+      {
+        "comparison_id": "Ti_md_identified_material_r1_s211",
+        "gain": -0.0021165183035706404,
+        "low": -0.0037684252655688436,
+        "high": -0.0005662679628156582
+      },
+      {
+        "comparison_id": "V_coord_identified_material_r0_s113",
+        "gain": -0.03689631081627154,
+        "low": -0.05944495195641629,
+        "high": -0.016955682505924205
+      },
+      {
+        "comparison_id": "V_coord_identified_material_r0_s211",
+        "gain": -0.03697258268813053,
+        "low": -0.05676800459912263,
+        "high": -0.0170246857817849
+      },
+      {
+        "comparison_id": "V_coord_identified_material_r1_s113",
+        "gain": -0.013950243387562011,
+        "low": -0.03483957089294779,
+        "high": 0.006867962748966557
+      },
+      {
+        "comparison_id": "V_coord_identified_material_r1_s211",
+        "gain": -0.008589250463238773,
+        "low": -0.029073896537433894,
+        "high": 0.01605982956860046
+      },
+      {
+        "comparison_id": "V_md_identified_material_r0_s113",
+        "gain": -0.002561190130274206,
+        "low": -0.0037891681146562267,
+        "high": -0.001583219084301786
+      },
+      {
+        "comparison_id": "V_md_identified_material_r0_s211",
+        "gain": -0.0027370628099657648,
+        "low": -0.003907304884547431,
+        "high": -0.00180674709717325
+      },
+      {
+        "comparison_id": "V_md_identified_material_r1_s113",
+        "gain": -0.002707856785190142,
+        "low": -0.0035045565448856312,
+        "high": -0.0017880373249083417
+      },
+      {
+        "comparison_id": "V_md_identified_material_r1_s211",
+        "gain": -0.0029931815598156827,
+        "low": -0.003909975767765667,
+        "high": -0.0020108931881746986
+      }
+    ],
+    "scope": "Independent arithmetic, selected model/predictor/perturbation probes, plus separate human report/code assessment. These model settings describe this submission only.",
+    "code_sha256_at_numerical_probe": "96fbcaad9db07da2f821e49d8684595646cdc620ac9739f145c755c74d76707a",
+    "final_source_reconciliation": {
+      "computational_functions_identical_to_independently_executed_source": [
+        "score",
+        "loss",
+        "group_bootstrap",
+        "representation",
+        "split_rows",
+        "fit_model",
+        "localize",
+        "run"
+      ],
+      "changed_functions": "report/plot rendering and summarize-only CLI only; source inspected"
+    },
+    "scientific_verdict": "pass_for_declared_method_and_identified_population",
+    "scientific_review_by": "Independent flexible-verifier subagent after code, raw-data probes, report and figure review",
+    "common_criteria": {
+      "permissible_spectral_predictors_and_training": "satisfied: raw E/mu only for spectral features; grouped train/validation/test, training-only fit and validation-only leaf selection; selected independent refits reproduce predictions.",
+      "source_and_population_scope": "satisfied: missing-ID feff rows excluded from identified-material evaluation; reports identify scrape-origin selection and unresolved structural relatives/aliases.",
+      "comparison_and_uncertainty": "satisfied: matched rows and fitting opportunities, training-only constant baselines, two overlapping material splits, test-material conditional bootstrap; report avoids population-wide certainty and equivalence from nonsignificance.",
+      "artifact_reconstruction": "satisfied: all paired intervals independently reconstructed from source labels; report units and effect directions checked. Optional interpretation tables receive independent numerical and code review separately from the core gate."
+    },
+    "question_specific_review": {
+      "normalization_and_fairness": "satisfied: raw probe independently divides mu by its per-record positive maximum; released/unit-peak conditions share rows, splits, fitting seeds and candidate budgets, with validation-selected leaf size transparently allowed to differ.",
+      "predictive_conclusion": "satisfied: mean distance MAE worsens for all8 elements and coordination macro-F1 decreases7/8; reported intervals honestly identify inconclusive coordination effects. Useful information survives because both conditions outperform simple constants.",
+      "interpretable_stability": "satisfied: all448 rank/top-region summaries recomputed; pointwise regions use the same physical E bins. Selected raw refits reproduce all five-band, three-repeat held-out perturbation summaries. Report contrasts normalization top-bin agreement29/64 with fitting-seed55/64 and material-split52/64 and limits this to sampled variability.",
+      "limitations": "Five broad energy bands and correlated-feature permutations identify model reliance, not uniquely causal spectral mechanisms; only two splits/two fit seeds and conditional test bootstrap are available. Separate colorbars and concrete energy mappings were inspected in the final localization figure."
+    }
+  }
+}

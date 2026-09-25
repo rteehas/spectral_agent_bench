@@ -1,0 +1,1 @@
+Historical fixed-recipe v1 outputs. These are not acceptance targets or completed worked solutions for the revised research tasks. Source archive/array audits elsewhere remain valid. Historical program code is retained under workflows/legacy_v1 for provenance only.

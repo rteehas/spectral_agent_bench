@@ -1,0 +1,152 @@
+{
+  "review_scope": "Independent source-code review, raw-data reconstruction of Q1/Q2 scientific evidence, and one independently reconstructed selected fit per task. This is not a rerun of every forest.",
+  "verdict": "pass_with_stated_limits",
+  "questions": [
+    {
+      "question": "Q1",
+      "verdict": "pass_with_stated_limits",
+      "runs_audited": 64,
+      "coverage_source_composition_and_eligibility_reconstructed": true,
+      "all_core_metrics_and_training_only_baselines_reconstructed": true,
+      "class_support_cells_reconstructed": 576,
+      "confusion_cells_reconstructed": 576,
+      "paired_bootstrap_intervals_reconstructed": 32,
+      "regime_rows_and_intervals_reconstructed": 0,
+      "report_facts": {
+        "positive_imbalance_gains": 6,
+        "material_comparisons": 16,
+        "intervals_entirely_positive": 2
+      },
+      "independent_model_refit": {
+        "run_id": "Ti_coord_identified_material_r0_s113_untreated",
+        "validation_trials_repeated": [
+          1,
+          5
+        ],
+        "chosen_leaf_matches": true,
+        "all_test_predictions_match": true,
+        "max_absolute_difference": 0.0
+      },
+      "artifact_sha256": {
+        "docs/data/torrisi-2020-xanes-rf/verification/Q1/class_counts.csv": "ea45fa4bc5a0be106fef8e68f3c4ce7c0834777c917626502cbe8e46d5e4b875",
+        "docs/data/torrisi-2020-xanes-rf/verification/Q1/code/candidate.py": "169cc61515679e47efd1354247e4fa083ecd413e5236745acfe5f8bb9910ad2b",
+        "docs/data/torrisi-2020-xanes-rf/verification/Q1/comparisons.csv": "52faeac63d574178928be5d9bfddd78c146aa804bbf1764264708d2b3114a8bc",
+        "docs/data/torrisi-2020-xanes-rf/verification/Q1/confusion.csv": "76d8f569d484e3d5b242cbbb97f4e3f6f72b1b6ee8f981553c3b724bb8d2716a",
+        "docs/data/torrisi-2020-xanes-rf/verification/Q1/design.json": "fd8b51c891992c300482c77047af244e17173575c9958d827f8b268531704cc3",
+        "docs/data/torrisi-2020-xanes-rf/verification/Q1/diagnostics.png": "71f4db7027e8d2b2829e926e321d54978972100ddf4712f8aca82b6658580424",
+        "docs/data/torrisi-2020-xanes-rf/verification/Q1/evidence.json": "3ab45a2bdb92ee3846aa4713893ae566d598745393d00c9575661fcdaf9f6739",
+        "docs/data/torrisi-2020-xanes-rf/verification/Q1/feature_definitions.json": "f4da6f2a0852dd1e34364f266db4b9a70eabbd8b1ebbdd4ac20ce9c5ee25f16f",
+        "docs/data/torrisi-2020-xanes-rf/verification/Q1/localization.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+        "docs/data/torrisi-2020-xanes-rf/verification/Q1/metrics.csv": "67c66c797150e8c4b894519d03f667554e137e3027ed9459dc0d633491e94d6e",
+        "docs/data/torrisi-2020-xanes-rf/verification/Q1/paired_effects.png": "590b22c370303c0779f531d172a144d6254ae602a4ea2d5b66444ddc955ca21a",
+        "docs/data/torrisi-2020-xanes-rf/verification/Q1/partitions.csv": "10addf06c6dc6012e23299dc8790f9cb2c5b5870075f54c5a7d84f4f27a4f46b",
+        "docs/data/torrisi-2020-xanes-rf/verification/Q1/predictions.csv": "a254160f5d5fad92ab7d347fc6a8bce64b10789122ce93b420ca3c8c1b9d8c12",
+        "docs/data/torrisi-2020-xanes-rf/verification/Q1/report.md": "a3d11f6ec50be7decfaebbe5d1b7bb1afcc29d7f86cd201c7a003a399468824d"
+      }
+    },
+    {
+      "question": "Q2",
+      "verdict": "pass_with_stated_limits",
+      "runs_audited": 16,
+      "coverage_source_composition_and_eligibility_reconstructed": true,
+      "all_core_metrics_and_training_only_baselines_reconstructed": true,
+      "class_support_cells_reconstructed": 0,
+      "confusion_cells_reconstructed": 0,
+      "paired_bootstrap_intervals_reconstructed": 0,
+      "regime_rows_and_intervals_reconstructed": 64,
+      "report_facts": {
+        "regression_regimes": 64
+      },
+      "independent_model_refit": {
+        "run_id": "Ti_md_identified_material_r0_s113_model",
+        "validation_trials_repeated": [
+          1,
+          5
+        ],
+        "chosen_leaf_matches": true,
+        "all_test_predictions_match": true,
+        "max_absolute_difference": 1.3322676295501878e-15
+      },
+      "artifact_sha256": {
+        "docs/data/torrisi-2020-xanes-rf/verification/Q2/code/candidate.py": "169cc61515679e47efd1354247e4fa083ecd413e5236745acfe5f8bb9910ad2b",
+        "docs/data/torrisi-2020-xanes-rf/verification/Q2/design.json": "3195ab472b7beb18f7c5ca8629ec1d2ae50760432a009796fc794d8e985dda0e",
+        "docs/data/torrisi-2020-xanes-rf/verification/Q2/diagnostics.png": "e07baf1001f2b1e23a6bf4c0141afa6c5f21eaf2034541a893d04537939cd021",
+        "docs/data/torrisi-2020-xanes-rf/verification/Q2/evidence.json": "382f79b8510c29a4fbb0ecf1ce7a1e4e7ec79382927191c45cf5102c6e28421a",
+        "docs/data/torrisi-2020-xanes-rf/verification/Q2/feature_definitions.json": "e41cd1a19e7686e71b549fc34ec6ece5ba2e6edd1441cf6a054d9a5ee9c7aefe",
+        "docs/data/torrisi-2020-xanes-rf/verification/Q2/localization.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+        "docs/data/torrisi-2020-xanes-rf/verification/Q2/metrics.csv": "310fc5e7402dc2a3f4475cda7b9c06d922f0ad7d04e19700239616bd8aee3552",
+        "docs/data/torrisi-2020-xanes-rf/verification/Q2/partitions.csv": "dca1775af3d7d1fdeebb269faeabf64511c77adfa915bfaa5f3dc837ea74c414",
+        "docs/data/torrisi-2020-xanes-rf/verification/Q2/predictions.csv": "dde2dd95717534ec0b5ab5d4a92e066f92c5786e85d5268eafc1b28f2f99f11b",
+        "docs/data/torrisi-2020-xanes-rf/verification/Q2/regime_errors.png": "b25b72dfe37788cdb38de19bfb3ff0b79e9895477fee43eef080743cb675d44d",
+        "docs/data/torrisi-2020-xanes-rf/verification/Q2/regimes.csv": "2ebf35a0b9a7ac514fbb02cc5bff57de71ab2dbc9db22884cfb659000005ae63",
+        "docs/data/torrisi-2020-xanes-rf/verification/Q2/report.md": "997369c4da06b8384f994e6a1b3518fec4cbd0ec0780e655cd5a8d4e9d2a6216"
+      }
+    }
+  ],
+  "reviewed_candidate_sha256": "169cc61515679e47efd1354247e4fa083ecd413e5236745acfe5f8bb9910ad2b",
+  "audit_source_sha256": "315085b65bbe123ad36dcac065b47337e6af4fa6b46d756ff8d5350c4ba0db61",
+  "scientific_findings": [
+    "Finite-spectrum and valid-target eligibility precedes fitting. IDs define material partitions; validation selects leaf size and test outcomes do not choose it.",
+    "Training-only prevalence/median baselines, class weighting and tail thresholds are correct. All audited freeform evidence is reconstructed from the released labels and submitted predictions.",
+    "Q1 record holdouts use the same identified cohort but can share materials with training; the report explicitly limits their interpretation.",
+    "Q2 signed residuals use prediction minus truth; train-defined short/long regimes are retrospective diagnostics, not deployment-time uncertainty estimates.",
+    "The reports disclose source-confounded provenance coverage, structural aliases, conditional bootstrap uncertainty and overlapping repeated holdouts."
+  ],
+  "limitations": [
+    "These methods are one illustrative design, not benchmark requirements or exact numerical targets.",
+    "Only one selected fit per task is independently reconstructed here; complete artifact verification relies also on source inspection and independent evidence reconstruction.",
+    "Two held-out partitions and conditional material bootstraps give limited sensitivity evidence. They cannot establish population-wide or experimental reliability.",
+    "Recorded material identifiers cannot resolve structural near-duplicates or unknown-ID feff records."
+  ],
+  "visual_review": {
+    "reviewer": "Independent question-quality/scientific-evidence subagent",
+    "verdict": "pass_after_label_revision",
+    "resolved_issue": "Q1 paired-effect title previously said treated versus untreated while referring to the second condition, making the gain sign ambiguous. The refreshed title explicitly says benefit of treated over untreated, positive favors treated.",
+    "observations": [
+      "Q1 paired-effect point estimates and intervals have clear axes and gain direction; their underlying numbers were independently reconstructed.",
+      "Q2 regime-error figure correctly labels MAE and prediction-minus-truth bias in angstrom; its positive short-tail and negative long-tail signs agree with reconstructed tables."
+    ],
+    "reviewed_figures_sha256": {
+      "docs/data/torrisi-2020-xanes-rf/verification/Q1/paired_effects.png": "590b22c370303c0779f531d172a144d6254ae602a4ea2d5b66444ddc955ca21a",
+      "docs/data/torrisi-2020-xanes-rf/verification/Q2/regime_errors.png": "b25b72dfe37788cdb38de19bfb3ff0b79e9895477fee43eef080743cb675d44d"
+    }
+  },
+  "source_refresh": {
+    "original_reviewed_candidate_sha256": "96fbcaad9db07da2f821e49d8684595646cdc620ac9739f145c755c74d76707a",
+    "current_candidate_sha256": "169cc61515679e47efd1354247e4fa083ecd413e5236745acfe5f8bb9910ad2b",
+    "changed_functions": [
+      "summarize"
+    ],
+    "numerical_function_asts_unchanged": true,
+    "unchanged_functions": [
+      "dump",
+      "write_csv",
+      "score",
+      "loss",
+      "group_bootstrap",
+      "representation",
+      "split_rows",
+      "fit_model",
+      "localize",
+      "run",
+      "plot_extra",
+      "refresh",
+      "main"
+    ],
+    "change_scope": "Only summarize() gains a Q5-specific lead paragraph. The diff was independently inspected; Q1/Q2 branch content and all numerical functions are unchanged.",
+    "q1_q2_non_code_artifacts_byte_identical_to_original_audit": true,
+    "updated_code_copies": [
+      {
+        "path": "docs/data/torrisi-2020-xanes-rf/verification/Q1/code/candidate.py",
+        "previous_sha256": "96fbcaad9db07da2f821e49d8684595646cdc620ac9739f145c755c74d76707a",
+        "current_sha256": "169cc61515679e47efd1354247e4fa083ecd413e5236745acfe5f8bb9910ad2b"
+      },
+      {
+        "path": "docs/data/torrisi-2020-xanes-rf/verification/Q2/code/candidate.py",
+        "previous_sha256": "96fbcaad9db07da2f821e49d8684595646cdc620ac9739f145c755c74d76707a",
+        "current_sha256": "169cc61515679e47efd1354247e4fa083ecd413e5236745acfe5f8bb9910ad2b"
+      }
+    ],
+    "validation_decision": "Retained the original 80-run scientific evidence audit and independent refits; source-only refresh does not warrant refitting unchanged numerical code."
+  }
+}

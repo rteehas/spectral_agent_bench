@@ -1,0 +1,36 @@
+{
+  "status": "execution_reproduced",
+  "question": "Q2",
+  "executor": "flexible_verifier subagent",
+  "clean_output": "/tmp/torrisi-q2-worked-review-v2",
+  "command": "python workflows/candidate.py Q2 --inputs inputs --output CLEAN_DIRECTORY --jobs 2",
+  "checks": [
+    {
+      "file": "predictions.csv",
+      "rows": 9543,
+      "agreement": "all entries; numeric atol1e-12"
+    },
+    {
+      "file": "partitions.csv",
+      "rows": 81814,
+      "agreement": "all entries; numeric atol1e-12"
+    },
+    {
+      "file": "metrics.csv",
+      "rows": 32,
+      "agreement": "all entries; numeric atol1e-12"
+    },
+    {
+      "file": "regimes.csv",
+      "rows": 64,
+      "agreement": "all entries; numeric atol1e-12"
+    }
+  ],
+  "code_sha256_at_fit": "af5ff4373d9375a370712e32febd10452342cad028a97cc3fc33f9a8cc5e2849",
+  "note": "Any later reporting-only source edits do not alter these reconstructed numerical outputs. Scientific Q1/Q2 adjudication is recorded separately.",
+  "final_report_sha256": "997369c4da06b8384f994e6a1b3518fec4cbd0ec0780e655cd5a8d4e9d2a6216",
+  "final_source_sha256": "169cc61515679e47efd1354247e4fa083ecd413e5236745acfe5f8bb9910ad2b",
+  "final_report_reproduced": true,
+  "final_render_command": "python workflows/candidate.py Q2 --inputs inputs --output CLEAN_DIRECTORY --summarize-only",
+  "fit_time_source_snapshot": "worked_q2_execution_code_v2.py"
+}

@@ -1,0 +1,674 @@
+{
+  "coverage": [
+    {
+      "element": "Ti",
+      "target": "bader",
+      "source_records": 4930,
+      "valid_target_records": 3267,
+      "identified_valid_records": 1354,
+      "identified_materials": 705,
+      "origins": {
+        "feff": {
+          "records": 2381,
+          "identified": 0
+        },
+        "scrape": {
+          "records": 2549,
+          "identified": 2549
+        }
+      },
+      "identified_target_mean": 2.2772776658117992,
+      "unidentified_target_mean": 2.2862086259330785
+    },
+    {
+      "element": "V",
+      "target": "bader",
+      "source_records": 7120,
+      "valid_target_records": 4001,
+      "identified_valid_records": 2228,
+      "identified_materials": 1305,
+      "origins": {
+        "feff": {
+          "records": 2750,
+          "identified": 0
+        },
+        "scrape": {
+          "records": 4370,
+          "identified": 4370
+        }
+      },
+      "identified_target_mean": 2.143590898081518,
+      "unidentified_target_mean": 2.1395299388879936
+    },
+    {
+      "element": "Cr",
+      "target": "bader",
+      "source_records": 2542,
+      "valid_target_records": 1921,
+      "identified_valid_records": 844,
+      "identified_materials": 626,
+      "origins": {
+        "feff": {
+          "records": 1350,
+          "identified": 0
+        },
+        "scrape": {
+          "records": 1192,
+          "identified": 1192
+        }
+      },
+      "identified_target_mean": 1.8949983672458275,
+      "unidentified_target_mean": 1.8826655426586978
+    },
+    {
+      "element": "Mn",
+      "target": "bader",
+      "source_records": 8504,
+      "valid_target_records": 4226,
+      "identified_valid_records": 1955,
+      "identified_materials": 1271,
+      "origins": {
+        "feff": {
+          "records": 3839,
+          "identified": 0
+        },
+        "scrape": {
+          "records": 4665,
+          "identified": 4665
+        }
+      },
+      "identified_target_mean": 1.702823835960165,
+      "unidentified_target_mean": 1.7633818964449695
+    },
+    {
+      "element": "Fe",
+      "target": "bader",
+      "source_records": 7362,
+      "valid_target_records": 4188,
+      "identified_valid_records": 2059,
+      "identified_materials": 1271,
+      "origins": {
+        "feff": {
+          "records": 3179,
+          "identified": 0
+        },
+        "scrape": {
+          "records": 4183,
+          "identified": 4183
+        }
+      },
+      "identified_target_mean": 1.6909187946346684,
+      "unidentified_target_mean": 1.717287527475665
+    },
+    {
+      "element": "Co",
+      "target": "bader",
+      "source_records": 3533,
+      "valid_target_records": 2106,
+      "identified_valid_records": 1310,
+      "identified_materials": 835,
+      "origins": {
+        "feff": {
+          "records": 1154,
+          "identified": 0
+        },
+        "scrape": {
+          "records": 2379,
+          "identified": 2379
+        }
+      },
+      "identified_target_mean": 1.4319064048775896,
+      "unidentified_target_mean": 1.4789478309356803
+    },
+    {
+      "element": "Ni",
+      "target": "bader",
+      "source_records": 3420,
+      "valid_target_records": 2226,
+      "identified_valid_records": 1179,
+      "identified_materials": 757,
+      "origins": {
+        "feff": {
+          "records": 1333,
+          "identified": 0
+        },
+        "scrape": {
+          "records": 2087,
+          "identified": 2087
+        }
+      },
+      "identified_target_mean": 1.3080186749890403,
+      "unidentified_target_mean": 1.279839958960598
+    },
+    {
+      "element": "Cu",
+      "target": "bader",
+      "source_records": 3496,
+      "valid_target_records": 2198,
+      "identified_valid_records": 1087,
+      "identified_materials": 771,
+      "origins": {
+        "feff": {
+          "records": 1461,
+          "identified": 0
+        },
+        "scrape": {
+          "records": 2035,
+          "identified": 2035
+        }
+      },
+      "identified_target_mean": 1.0338129957944537,
+      "unidentified_target_mean": 1.0381762313579086
+    }
+  ],
+  "baselines": [
+    {
+      "run_id": "Ti_bader_identified_material_r0_s113_full",
+      "training_constant": 2.272875727272727,
+      "metrics": {
+        "mae": 0.10330989293558915,
+        "r2": -0.010087632313425132
+      }
+    },
+    {
+      "run_id": "Ti_bader_identified_material_r0_s113_white_line",
+      "training_constant": 2.272875727272727,
+      "metrics": {
+        "mae": 0.10330989293558915,
+        "r2": -0.010087632313425132
+      }
+    },
+    {
+      "run_id": "Ti_bader_identified_material_r1_s113_full",
+      "training_constant": 2.2698161818181823,
+      "metrics": {
+        "mae": 0.09859534204842792,
+        "r2": -0.011255912841032778
+      }
+    },
+    {
+      "run_id": "Ti_bader_identified_material_r1_s113_white_line",
+      "training_constant": 2.2698161818181823,
+      "metrics": {
+        "mae": 0.09859534204842792,
+        "r2": -0.011255912841032778
+      }
+    },
+    {
+      "run_id": "V_bader_identified_material_r0_s113_full",
+      "training_constant": 2.2046615,
+      "metrics": {
+        "mae": 0.17080470073938037,
+        "r2": -0.05560554537857976
+      }
+    },
+    {
+      "run_id": "V_bader_identified_material_r0_s113_white_line",
+      "training_constant": 2.2046615,
+      "metrics": {
+        "mae": 0.17080470073938037,
+        "r2": -0.05560554537857976
+      }
+    },
+    {
+      "run_id": "V_bader_identified_material_r1_s113_full",
+      "training_constant": 2.2086566249999997,
+      "metrics": {
+        "mae": 0.17448314373400292,
+        "r2": -0.024923615956989442
+      }
+    },
+    {
+      "run_id": "V_bader_identified_material_r1_s113_white_line",
+      "training_constant": 2.2086566249999997,
+      "metrics": {
+        "mae": 0.17448314373400292,
+        "r2": -0.024923615956989442
+      }
+    },
+    {
+      "run_id": "Cr_bader_identified_material_r0_s113_full",
+      "training_constant": 1.914365,
+      "metrics": {
+        "mae": 0.17879309710341734,
+        "r2": -0.005434479588968699
+      }
+    },
+    {
+      "run_id": "Cr_bader_identified_material_r0_s113_white_line",
+      "training_constant": 1.914365,
+      "metrics": {
+        "mae": 0.17879309710341734,
+        "r2": -0.005434479588968699
+      }
+    },
+    {
+      "run_id": "Cr_bader_identified_material_r1_s113_full",
+      "training_constant": 1.904791,
+      "metrics": {
+        "mae": 0.14822789807757603,
+        "r2": -0.00019854683172826348
+      }
+    },
+    {
+      "run_id": "Cr_bader_identified_material_r1_s113_white_line",
+      "training_constant": 1.904791,
+      "metrics": {
+        "mae": 0.14822789807757603,
+        "r2": -0.00019854683172826348
+      }
+    },
+    {
+      "run_id": "Mn_bader_identified_material_r0_s113_full",
+      "training_constant": 1.7297166666666666,
+      "metrics": {
+        "mae": 0.19019517423781346,
+        "r2": -0.02890262028583135
+      }
+    },
+    {
+      "run_id": "Mn_bader_identified_material_r0_s113_white_line",
+      "training_constant": 1.7297166666666666,
+      "metrics": {
+        "mae": 0.19019517423781346,
+        "r2": -0.02890262028583135
+      }
+    },
+    {
+      "run_id": "Mn_bader_identified_material_r1_s113_full",
+      "training_constant": 1.7211485,
+      "metrics": {
+        "mae": 0.19131981028453834,
+        "r2": -0.030449834277320953
+      }
+    },
+    {
+      "run_id": "Mn_bader_identified_material_r1_s113_white_line",
+      "training_constant": 1.7211485,
+      "metrics": {
+        "mae": 0.19131981028453834,
+        "r2": -0.030449834277320953
+      }
+    },
+    {
+      "run_id": "Fe_bader_identified_material_r0_s113_full",
+      "training_constant": 1.739505833333333,
+      "metrics": {
+        "mae": 0.21687938701321247,
+        "r2": -0.02254324818364073
+      }
+    },
+    {
+      "run_id": "Fe_bader_identified_material_r0_s113_white_line",
+      "training_constant": 1.739505833333333,
+      "metrics": {
+        "mae": 0.21687938701321247,
+        "r2": -0.02254324818364073
+      }
+    },
+    {
+      "run_id": "Fe_bader_identified_material_r1_s113_full",
+      "training_constant": 1.7503279166666668,
+      "metrics": {
+        "mae": 0.19488065803285687,
+        "r2": -0.029737753618870322
+      }
+    },
+    {
+      "run_id": "Fe_bader_identified_material_r1_s113_white_line",
+      "training_constant": 1.7503279166666668,
+      "metrics": {
+        "mae": 0.19488065803285687,
+        "r2": -0.029737753618870322
+      }
+    },
+    {
+      "run_id": "Co_bader_identified_material_r0_s113_full",
+      "training_constant": 1.4559084285714283,
+      "metrics": {
+        "mae": 0.15488970410656014,
+        "r2": -0.010272570626444155
+      }
+    },
+    {
+      "run_id": "Co_bader_identified_material_r0_s113_white_line",
+      "training_constant": 1.4559084285714283,
+      "metrics": {
+        "mae": 0.15488970410656014,
+        "r2": -0.010272570626444155
+      }
+    },
+    {
+      "run_id": "Co_bader_identified_material_r1_s113_full",
+      "training_constant": 1.4506275,
+      "metrics": {
+        "mae": 0.1544209025591436,
+        "r2": -0.004054860219579126
+      }
+    },
+    {
+      "run_id": "Co_bader_identified_material_r1_s113_white_line",
+      "training_constant": 1.4506275,
+      "metrics": {
+        "mae": 0.1544209025591436,
+        "r2": -0.004054860219579126
+      }
+    },
+    {
+      "run_id": "Ni_bader_identified_material_r0_s113_full",
+      "training_constant": 1.335689,
+      "metrics": {
+        "mae": 0.0937642275555883,
+        "r2": -0.042283098026558275
+      }
+    },
+    {
+      "run_id": "Ni_bader_identified_material_r0_s113_white_line",
+      "training_constant": 1.335689,
+      "metrics": {
+        "mae": 0.0937642275555883,
+        "r2": -0.042283098026558275
+      }
+    },
+    {
+      "run_id": "Ni_bader_identified_material_r1_s113_full",
+      "training_constant": 1.3325259999999997,
+      "metrics": {
+        "mae": 0.09226061253813415,
+        "r2": -0.0765762234039078
+      }
+    },
+    {
+      "run_id": "Ni_bader_identified_material_r1_s113_white_line",
+      "training_constant": 1.3325259999999997,
+      "metrics": {
+        "mae": 0.09226061253813415,
+        "r2": -0.0765762234039078
+      }
+    },
+    {
+      "run_id": "Cu_bader_identified_material_r0_s113_full",
+      "training_constant": 1.092597416666667,
+      "metrics": {
+        "mae": 0.15949208898533954,
+        "r2": -0.026064482512573095
+      }
+    },
+    {
+      "run_id": "Cu_bader_identified_material_r0_s113_white_line",
+      "training_constant": 1.092597416666667,
+      "metrics": {
+        "mae": 0.15949208898533954,
+        "r2": -0.026064482512573095
+      }
+    },
+    {
+      "run_id": "Cu_bader_identified_material_r1_s113_full",
+      "training_constant": 1.0955084999999996,
+      "metrics": {
+        "mae": 0.16132927887426904,
+        "r2": -0.06383280984786333
+      }
+    },
+    {
+      "run_id": "Cu_bader_identified_material_r1_s113_white_line",
+      "training_constant": 1.0955084999999996,
+      "metrics": {
+        "mae": 0.16132927887426904,
+        "r2": -0.06383280984786333
+      }
+    }
+  ],
+  "comparisons": [
+    {
+      "comparison_id": "Ti_bader_identified_material_r0_s113",
+      "element": "Ti",
+      "target": "bader",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "first": "full",
+      "second": "white_line",
+      "metric": "mae_reduction",
+      "gain": -0.03343489876274687,
+      "low": -0.05322237047965722,
+      "high": -0.013638298744242213,
+      "bootstrap_units": 141
+    },
+    {
+      "comparison_id": "Ti_bader_identified_material_r1_s113",
+      "element": "Ti",
+      "target": "bader",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "first": "full",
+      "second": "white_line",
+      "metric": "mae_reduction",
+      "gain": -0.025913122395714014,
+      "low": -0.04618907091739103,
+      "high": -0.008352321171257459,
+      "bootstrap_units": 141
+    },
+    {
+      "comparison_id": "V_bader_identified_material_r0_s113",
+      "element": "V",
+      "target": "bader",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "first": "full",
+      "second": "white_line",
+      "metric": "mae_reduction",
+      "gain": -0.06858435194325946,
+      "low": -0.09086316896506,
+      "high": -0.05012579899605892,
+      "bootstrap_units": 261
+    },
+    {
+      "comparison_id": "V_bader_identified_material_r1_s113",
+      "element": "V",
+      "target": "bader",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "first": "full",
+      "second": "white_line",
+      "metric": "mae_reduction",
+      "gain": -0.07470602801418495,
+      "low": -0.09082657572974263,
+      "high": -0.06119496801161866,
+      "bootstrap_units": 261
+    },
+    {
+      "comparison_id": "Cr_bader_identified_material_r0_s113",
+      "element": "Cr",
+      "target": "bader",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "first": "full",
+      "second": "white_line",
+      "metric": "mae_reduction",
+      "gain": -0.08614040953762711,
+      "low": -0.10435754830673317,
+      "high": -0.06602390711433924,
+      "bootstrap_units": 126
+    },
+    {
+      "comparison_id": "Cr_bader_identified_material_r1_s113",
+      "element": "Cr",
+      "target": "bader",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "first": "full",
+      "second": "white_line",
+      "metric": "mae_reduction",
+      "gain": -0.07769422975661332,
+      "low": -0.09795622575360552,
+      "high": -0.057783430330400565,
+      "bootstrap_units": 126
+    },
+    {
+      "comparison_id": "Mn_bader_identified_material_r0_s113",
+      "element": "Mn",
+      "target": "bader",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "first": "full",
+      "second": "white_line",
+      "metric": "mae_reduction",
+      "gain": -0.09825463271852695,
+      "low": -0.1136737089137402,
+      "high": -0.0803139078557592,
+      "bootstrap_units": 255
+    },
+    {
+      "comparison_id": "Mn_bader_identified_material_r1_s113",
+      "element": "Mn",
+      "target": "bader",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "first": "full",
+      "second": "white_line",
+      "metric": "mae_reduction",
+      "gain": -0.08631883964024635,
+      "low": -0.10269587673533564,
+      "high": -0.07077233562443677,
+      "bootstrap_units": 255
+    },
+    {
+      "comparison_id": "Fe_bader_identified_material_r0_s113",
+      "element": "Fe",
+      "target": "bader",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "first": "full",
+      "second": "white_line",
+      "metric": "mae_reduction",
+      "gain": -0.12168869386669967,
+      "low": -0.15960473404170347,
+      "high": -0.0918801154608471,
+      "bootstrap_units": 255
+    },
+    {
+      "comparison_id": "Fe_bader_identified_material_r1_s113",
+      "element": "Fe",
+      "target": "bader",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "first": "full",
+      "second": "white_line",
+      "metric": "mae_reduction",
+      "gain": -0.08994458968931326,
+      "low": -0.10997947636586251,
+      "high": -0.07161246052651436,
+      "bootstrap_units": 255
+    },
+    {
+      "comparison_id": "Co_bader_identified_material_r0_s113",
+      "element": "Co",
+      "target": "bader",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "first": "full",
+      "second": "white_line",
+      "metric": "mae_reduction",
+      "gain": -0.08190407260770624,
+      "low": -0.11478616408521446,
+      "high": -0.05250975589724109,
+      "bootstrap_units": 167
+    },
+    {
+      "comparison_id": "Co_bader_identified_material_r1_s113",
+      "element": "Co",
+      "target": "bader",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "first": "full",
+      "second": "white_line",
+      "metric": "mae_reduction",
+      "gain": -0.09394555536711141,
+      "low": -0.12392181088861444,
+      "high": -0.06504247560908688,
+      "bootstrap_units": 167
+    },
+    {
+      "comparison_id": "Ni_bader_identified_material_r0_s113",
+      "element": "Ni",
+      "target": "bader",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "first": "full",
+      "second": "white_line",
+      "metric": "mae_reduction",
+      "gain": -0.025689130331022214,
+      "low": -0.034178073901313874,
+      "high": -0.018483685138937608,
+      "bootstrap_units": 152
+    },
+    {
+      "comparison_id": "Ni_bader_identified_material_r1_s113",
+      "element": "Ni",
+      "target": "bader",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "first": "full",
+      "second": "white_line",
+      "metric": "mae_reduction",
+      "gain": -0.02391996802002365,
+      "low": -0.03862109230972468,
+      "high": -0.011410136956370356,
+      "bootstrap_units": 152
+    },
+    {
+      "comparison_id": "Cu_bader_identified_material_r0_s113",
+      "element": "Cu",
+      "target": "bader",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "first": "full",
+      "second": "white_line",
+      "metric": "mae_reduction",
+      "gain": -0.07369717506068862,
+      "low": -0.09386794120668127,
+      "high": -0.0568296470070349,
+      "bootstrap_units": 155
+    },
+    {
+      "comparison_id": "Cu_bader_identified_material_r1_s113",
+      "element": "Cu",
+      "target": "bader",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "first": "full",
+      "second": "white_line",
+      "metric": "mae_reduction",
+      "gain": -0.07872556653451146,
+      "low": -0.09913148404046786,
+      "high": -0.05906383252724811,
+      "bootstrap_units": 155
+    }
+  ],
+  "regimes": [],
+  "localization_stability": [],
+  "elapsed_seconds": 20.062389373779297,
+  "limitations": [
+    "Available material IDs occur only in the scrape origin; identified-material results do not establish generalization to the unidentified feff origin.",
+    "Identifier disjointness cannot exclude cross-database aliases or structural near-duplicates without structures.",
+    "Conditional test-group bootstrap omits uncertainty over training samples; two resplits and (Q5) two fitting seeds only assess limited sensitivity.",
+    "All finite spectra retained: unusual maxima are not automatically treated as bad data; results depend on this choice.",
+    "Permutation perturbations can break spectral correlations. Regions overlap in physical support for multiscale features; degree and energy effects indicate predictive reliance, not causal spectroscopy."
+  ]
+}

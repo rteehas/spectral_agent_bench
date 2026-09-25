@@ -1,0 +1,2843 @@
+{
+  "question": "Q5",
+  "runs": [
+    {
+      "run_id": "Ti_coord_identified_material_r0_s113_released",
+      "element": "Ti",
+      "target": "coord",
+      "condition": "released",
+      "comparison_id": "Ti_coord_identified_material_r0_s113",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 5,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.16012955874431867
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.13629603629603626
+        }
+      ]
+    },
+    {
+      "run_id": "Ti_coord_identified_material_r0_s113_unit_peak",
+      "element": "Ti",
+      "target": "coord",
+      "condition": "unit_peak",
+      "comparison_id": "Ti_coord_identified_material_r0_s113",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 5,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.18517887821749957
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.1701049083529601
+        }
+      ]
+    },
+    {
+      "run_id": "Ti_coord_identified_material_r0_s211_released",
+      "element": "Ti",
+      "target": "coord",
+      "condition": "released",
+      "comparison_id": "Ti_coord_identified_material_r0_s211",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 211,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 5,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.17800875252869142
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.13468231657600427
+        }
+      ]
+    },
+    {
+      "run_id": "Ti_coord_identified_material_r0_s211_unit_peak",
+      "element": "Ti",
+      "target": "coord",
+      "condition": "unit_peak",
+      "comparison_id": "Ti_coord_identified_material_r0_s211",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 211,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 5,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.18333696560241186
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.17429824561403517
+        }
+      ]
+    },
+    {
+      "run_id": "Ti_coord_identified_material_r1_s113_released",
+      "element": "Ti",
+      "target": "coord",
+      "condition": "released",
+      "comparison_id": "Ti_coord_identified_material_r1_s113",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.16616622709136408
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.16905183212983077
+        }
+      ]
+    },
+    {
+      "run_id": "Ti_coord_identified_material_r1_s113_unit_peak",
+      "element": "Ti",
+      "target": "coord",
+      "condition": "unit_peak",
+      "comparison_id": "Ti_coord_identified_material_r1_s113",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 5,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.18700219372135418
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.18556565634857536
+        }
+      ]
+    },
+    {
+      "run_id": "Ti_coord_identified_material_r1_s211_released",
+      "element": "Ti",
+      "target": "coord",
+      "condition": "released",
+      "comparison_id": "Ti_coord_identified_material_r1_s211",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 211,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.15786849569804817
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.1619564967350703
+        }
+      ]
+    },
+    {
+      "run_id": "Ti_coord_identified_material_r1_s211_unit_peak",
+      "element": "Ti",
+      "target": "coord",
+      "condition": "unit_peak",
+      "comparison_id": "Ti_coord_identified_material_r1_s211",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 211,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 5,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.19062131397436366
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.1831179110471668
+        }
+      ]
+    },
+    {
+      "run_id": "Ti_md_identified_material_r0_s113_released",
+      "element": "Ti",
+      "target": "md",
+      "condition": "released",
+      "comparison_id": "Ti_md_identified_material_r0_s113",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.014262618187606428
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.014907575936210563
+        }
+      ]
+    },
+    {
+      "run_id": "Ti_md_identified_material_r0_s113_unit_peak",
+      "element": "Ti",
+      "target": "md",
+      "condition": "unit_peak",
+      "comparison_id": "Ti_md_identified_material_r0_s113",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 5,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.016640731562301198
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.016487599573780754
+        }
+      ]
+    },
+    {
+      "run_id": "Ti_md_identified_material_r0_s211_released",
+      "element": "Ti",
+      "target": "md",
+      "condition": "released",
+      "comparison_id": "Ti_md_identified_material_r0_s211",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 211,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.014074388724405012
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.01480405898524401
+        }
+      ]
+    },
+    {
+      "run_id": "Ti_md_identified_material_r0_s211_unit_peak",
+      "element": "Ti",
+      "target": "md",
+      "condition": "unit_peak",
+      "comparison_id": "Ti_md_identified_material_r0_s211",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 211,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.016115735359105456
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.016832211466316638
+        }
+      ]
+    },
+    {
+      "run_id": "Ti_md_identified_material_r1_s113_released",
+      "element": "Ti",
+      "target": "md",
+      "condition": "released",
+      "comparison_id": "Ti_md_identified_material_r1_s113",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.020033398136382278
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.02116418964160464
+        }
+      ]
+    },
+    {
+      "run_id": "Ti_md_identified_material_r1_s113_unit_peak",
+      "element": "Ti",
+      "target": "md",
+      "condition": "unit_peak",
+      "comparison_id": "Ti_md_identified_material_r1_s113",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.022723791975524262
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.024421952967419808
+        }
+      ]
+    },
+    {
+      "run_id": "Ti_md_identified_material_r1_s211_released",
+      "element": "Ti",
+      "target": "md",
+      "condition": "released",
+      "comparison_id": "Ti_md_identified_material_r1_s211",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 211,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.019939726263113827
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.020507138958602365
+        }
+      ]
+    },
+    {
+      "run_id": "Ti_md_identified_material_r1_s211_unit_peak",
+      "element": "Ti",
+      "target": "md",
+      "condition": "unit_peak",
+      "comparison_id": "Ti_md_identified_material_r1_s211",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 211,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.023044701408469852
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.02453216519974567
+        }
+      ]
+    },
+    {
+      "run_id": "V_coord_identified_material_r0_s113_released",
+      "element": "V",
+      "target": "coord",
+      "condition": "released",
+      "comparison_id": "V_coord_identified_material_r0_s113",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.1257764184252318
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.13325931981577366
+        }
+      ]
+    },
+    {
+      "run_id": "V_coord_identified_material_r0_s113_unit_peak",
+      "element": "V",
+      "target": "coord",
+      "condition": "unit_peak",
+      "comparison_id": "V_coord_identified_material_r0_s113",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.13055944055944047
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.13368484492582267
+        }
+      ]
+    },
+    {
+      "run_id": "V_coord_identified_material_r0_s211_released",
+      "element": "V",
+      "target": "coord",
+      "condition": "released",
+      "comparison_id": "V_coord_identified_material_r0_s211",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 211,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.11520556947422433
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.12530858951063595
+        }
+      ]
+    },
+    {
+      "run_id": "V_coord_identified_material_r0_s211_unit_peak",
+      "element": "V",
+      "target": "coord",
+      "condition": "unit_peak",
+      "comparison_id": "V_coord_identified_material_r0_s211",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 211,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 5,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.14301232252124285
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.14286785192261464
+        }
+      ]
+    },
+    {
+      "run_id": "V_coord_identified_material_r1_s113_released",
+      "element": "V",
+      "target": "coord",
+      "condition": "released",
+      "comparison_id": "V_coord_identified_material_r1_s113",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.14770201620767898
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.16943056195550055
+        }
+      ]
+    },
+    {
+      "run_id": "V_coord_identified_material_r1_s113_unit_peak",
+      "element": "V",
+      "target": "coord",
+      "condition": "unit_peak",
+      "comparison_id": "V_coord_identified_material_r1_s113",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.15718745001100487
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.17299512675167883
+        }
+      ]
+    },
+    {
+      "run_id": "V_coord_identified_material_r1_s211_released",
+      "element": "V",
+      "target": "coord",
+      "condition": "released",
+      "comparison_id": "V_coord_identified_material_r1_s211",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 211,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.13812796532393756
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.15820701827997363
+        }
+      ]
+    },
+    {
+      "run_id": "V_coord_identified_material_r1_s211_unit_peak",
+      "element": "V",
+      "target": "coord",
+      "condition": "unit_peak",
+      "comparison_id": "V_coord_identified_material_r1_s211",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 211,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.1596947246387982
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.17258140320751247
+        }
+      ]
+    },
+    {
+      "run_id": "V_md_identified_material_r0_s113_released",
+      "element": "V",
+      "target": "md",
+      "condition": "released",
+      "comparison_id": "V_md_identified_material_r0_s113",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.01609928259522655
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.017233520782666933
+        }
+      ]
+    },
+    {
+      "run_id": "V_md_identified_material_r0_s113_unit_peak",
+      "element": "V",
+      "target": "md",
+      "condition": "unit_peak",
+      "comparison_id": "V_md_identified_material_r0_s113",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.018180510575890846
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.01882396190642272
+        }
+      ]
+    },
+    {
+      "run_id": "V_md_identified_material_r0_s211_released",
+      "element": "V",
+      "target": "md",
+      "condition": "released",
+      "comparison_id": "V_md_identified_material_r0_s211",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 211,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.01604252847663891
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.017248289416074824
+        }
+      ]
+    },
+    {
+      "run_id": "V_md_identified_material_r0_s211_unit_peak",
+      "element": "V",
+      "target": "md",
+      "condition": "unit_peak",
+      "comparison_id": "V_md_identified_material_r0_s211",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 211,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.017921246925132576
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.019354475506348223
+        }
+      ]
+    },
+    {
+      "run_id": "V_md_identified_material_r1_s113_released",
+      "element": "V",
+      "target": "md",
+      "condition": "released",
+      "comparison_id": "V_md_identified_material_r1_s113",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.01441442825698584
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.01524643340166642
+        }
+      ]
+    },
+    {
+      "run_id": "V_md_identified_material_r1_s113_unit_peak",
+      "element": "V",
+      "target": "md",
+      "condition": "unit_peak",
+      "comparison_id": "V_md_identified_material_r1_s113",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.0173571962107535
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.017865850838573567
+        }
+      ]
+    },
+    {
+      "run_id": "V_md_identified_material_r1_s211_released",
+      "element": "V",
+      "target": "md",
+      "condition": "released",
+      "comparison_id": "V_md_identified_material_r1_s211",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 211,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.014417410210986996
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.015311825558533701
+        }
+      ]
+    },
+    {
+      "run_id": "V_md_identified_material_r1_s211_unit_peak",
+      "element": "V",
+      "target": "md",
+      "condition": "unit_peak",
+      "comparison_id": "V_md_identified_material_r1_s211",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 211,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.017315729676077578
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.01801423696903659
+        }
+      ]
+    },
+    {
+      "run_id": "Cr_coord_identified_material_r0_s113_released",
+      "element": "Cr",
+      "target": "coord",
+      "condition": "released",
+      "comparison_id": "Cr_coord_identified_material_r0_s113",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 5,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.15700837459502415
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.15128201879421388
+        }
+      ]
+    },
+    {
+      "run_id": "Cr_coord_identified_material_r0_s113_unit_peak",
+      "element": "Cr",
+      "target": "coord",
+      "condition": "unit_peak",
+      "comparison_id": "Cr_coord_identified_material_r0_s113",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 5,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.13050919982884046
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.12821680216802178
+        }
+      ]
+    },
+    {
+      "run_id": "Cr_coord_identified_material_r0_s211_released",
+      "element": "Cr",
+      "target": "coord",
+      "condition": "released",
+      "comparison_id": "Cr_coord_identified_material_r0_s211",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 211,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.13276653171390018
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.14687179487179491
+        }
+      ]
+    },
+    {
+      "run_id": "Cr_coord_identified_material_r0_s211_unit_peak",
+      "element": "Cr",
+      "target": "coord",
+      "condition": "unit_peak",
+      "comparison_id": "Cr_coord_identified_material_r0_s211",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 211,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.15045489740611695
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.15862451146240453
+        }
+      ]
+    },
+    {
+      "run_id": "Cr_coord_identified_material_r1_s113_released",
+      "element": "Cr",
+      "target": "coord",
+      "condition": "released",
+      "comparison_id": "Cr_coord_identified_material_r1_s113",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 5,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.20819264544107652
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.19838640512160788
+        }
+      ]
+    },
+    {
+      "run_id": "Cr_coord_identified_material_r1_s113_unit_peak",
+      "element": "Cr",
+      "target": "coord",
+      "condition": "unit_peak",
+      "comparison_id": "Cr_coord_identified_material_r1_s113",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 5,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.25944360457634785
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.2527322123252099
+        }
+      ]
+    },
+    {
+      "run_id": "Cr_coord_identified_material_r1_s211_released",
+      "element": "Cr",
+      "target": "coord",
+      "condition": "released",
+      "comparison_id": "Cr_coord_identified_material_r1_s211",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 211,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.18168455167085573
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.1966726374640394
+        }
+      ]
+    },
+    {
+      "run_id": "Cr_coord_identified_material_r1_s211_unit_peak",
+      "element": "Cr",
+      "target": "coord",
+      "condition": "unit_peak",
+      "comparison_id": "Cr_coord_identified_material_r1_s211",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 211,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.22917069448919802
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.2527322123252099
+        }
+      ]
+    },
+    {
+      "run_id": "Cr_md_identified_material_r0_s113_released",
+      "element": "Cr",
+      "target": "md",
+      "condition": "released",
+      "comparison_id": "Cr_md_identified_material_r0_s113",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.02253575988662676
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.02351090761529744
+        }
+      ]
+    },
+    {
+      "run_id": "Cr_md_identified_material_r0_s113_unit_peak",
+      "element": "Cr",
+      "target": "md",
+      "condition": "unit_peak",
+      "comparison_id": "Cr_md_identified_material_r0_s113",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.024499836915427006
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.025316073215810118
+        }
+      ]
+    },
+    {
+      "run_id": "Cr_md_identified_material_r0_s211_released",
+      "element": "Cr",
+      "target": "md",
+      "condition": "released",
+      "comparison_id": "Cr_md_identified_material_r0_s211",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 211,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.021826826165324387
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.023082160797894755
+        }
+      ]
+    },
+    {
+      "run_id": "Cr_md_identified_material_r0_s211_unit_peak",
+      "element": "Cr",
+      "target": "md",
+      "condition": "unit_peak",
+      "comparison_id": "Cr_md_identified_material_r0_s211",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 211,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.024946308374688798
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.02581042578005794
+        }
+      ]
+    },
+    {
+      "run_id": "Cr_md_identified_material_r1_s113_released",
+      "element": "Cr",
+      "target": "md",
+      "condition": "released",
+      "comparison_id": "Cr_md_identified_material_r1_s113",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.02078264436563692
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.02169503750689958
+        }
+      ]
+    },
+    {
+      "run_id": "Cr_md_identified_material_r1_s113_unit_peak",
+      "element": "Cr",
+      "target": "md",
+      "condition": "unit_peak",
+      "comparison_id": "Cr_md_identified_material_r1_s113",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 5,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.02671596572094403
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.02504589894019894
+        }
+      ]
+    },
+    {
+      "run_id": "Cr_md_identified_material_r1_s211_released",
+      "element": "Cr",
+      "target": "md",
+      "condition": "released",
+      "comparison_id": "Cr_md_identified_material_r1_s211",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 211,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.020571946136468428
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.021894523675980482
+        }
+      ]
+    },
+    {
+      "run_id": "Cr_md_identified_material_r1_s211_unit_peak",
+      "element": "Cr",
+      "target": "md",
+      "condition": "unit_peak",
+      "comparison_id": "Cr_md_identified_material_r1_s211",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 211,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 5,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.02647122922807387
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.025760992424007454
+        }
+      ]
+    },
+    {
+      "run_id": "Mn_coord_identified_material_r0_s113_released",
+      "element": "Mn",
+      "target": "coord",
+      "condition": "released",
+      "comparison_id": "Mn_coord_identified_material_r0_s113",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.26415477433576984
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.3055573074903323
+        }
+      ]
+    },
+    {
+      "run_id": "Mn_coord_identified_material_r0_s113_unit_peak",
+      "element": "Mn",
+      "target": "coord",
+      "condition": "unit_peak",
+      "comparison_id": "Mn_coord_identified_material_r0_s113",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.3002686665424653
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.3200909500934964
+        }
+      ]
+    },
+    {
+      "run_id": "Mn_coord_identified_material_r0_s211_released",
+      "element": "Mn",
+      "target": "coord",
+      "condition": "released",
+      "comparison_id": "Mn_coord_identified_material_r0_s211",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 211,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.2739161192687355
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.30430798080886634
+        }
+      ]
+    },
+    {
+      "run_id": "Mn_coord_identified_material_r0_s211_unit_peak",
+      "element": "Mn",
+      "target": "coord",
+      "condition": "unit_peak",
+      "comparison_id": "Mn_coord_identified_material_r0_s211",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 211,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.29399217399217414
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.32812463488143073
+        }
+      ]
+    },
+    {
+      "run_id": "Mn_coord_identified_material_r1_s113_released",
+      "element": "Mn",
+      "target": "coord",
+      "condition": "released",
+      "comparison_id": "Mn_coord_identified_material_r1_s113",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.2708406898191881
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.2997859972035769
+        }
+      ]
+    },
+    {
+      "run_id": "Mn_coord_identified_material_r1_s113_unit_peak",
+      "element": "Mn",
+      "target": "coord",
+      "condition": "unit_peak",
+      "comparison_id": "Mn_coord_identified_material_r1_s113",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.29825724312479274
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.353161230485455
+        }
+      ]
+    },
+    {
+      "run_id": "Mn_coord_identified_material_r1_s211_released",
+      "element": "Mn",
+      "target": "coord",
+      "condition": "released",
+      "comparison_id": "Mn_coord_identified_material_r1_s211",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 211,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.28282956845664575
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.3052810640373934
+        }
+      ]
+    },
+    {
+      "run_id": "Mn_coord_identified_material_r1_s211_unit_peak",
+      "element": "Mn",
+      "target": "coord",
+      "condition": "unit_peak",
+      "comparison_id": "Mn_coord_identified_material_r1_s211",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 211,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.28202099484335097
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.35723710586756774
+        }
+      ]
+    },
+    {
+      "run_id": "Mn_md_identified_material_r0_s113_released",
+      "element": "Mn",
+      "target": "md",
+      "condition": "released",
+      "comparison_id": "Mn_md_identified_material_r0_s113",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.015129536355611869
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.01562417957445662
+        }
+      ]
+    },
+    {
+      "run_id": "Mn_md_identified_material_r0_s113_unit_peak",
+      "element": "Mn",
+      "target": "md",
+      "condition": "unit_peak",
+      "comparison_id": "Mn_md_identified_material_r0_s113",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.01861091472728199
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.019382207931022695
+        }
+      ]
+    },
+    {
+      "run_id": "Mn_md_identified_material_r0_s211_released",
+      "element": "Mn",
+      "target": "md",
+      "condition": "released",
+      "comparison_id": "Mn_md_identified_material_r0_s211",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 211,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.014770170338275485
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.015620441400361139
+        }
+      ]
+    },
+    {
+      "run_id": "Mn_md_identified_material_r0_s211_unit_peak",
+      "element": "Mn",
+      "target": "md",
+      "condition": "unit_peak",
+      "comparison_id": "Mn_md_identified_material_r0_s211",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 211,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.018810466239265536
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.019370854920462345
+        }
+      ]
+    },
+    {
+      "run_id": "Mn_md_identified_material_r1_s113_released",
+      "element": "Mn",
+      "target": "md",
+      "condition": "released",
+      "comparison_id": "Mn_md_identified_material_r1_s113",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.016883517009138236
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.017441190245470813
+        }
+      ]
+    },
+    {
+      "run_id": "Mn_md_identified_material_r1_s113_unit_peak",
+      "element": "Mn",
+      "target": "md",
+      "condition": "unit_peak",
+      "comparison_id": "Mn_md_identified_material_r1_s113",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.020296712944613167
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.021387028826132273
+        }
+      ]
+    },
+    {
+      "run_id": "Mn_md_identified_material_r1_s211_released",
+      "element": "Mn",
+      "target": "md",
+      "condition": "released",
+      "comparison_id": "Mn_md_identified_material_r1_s211",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 211,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.017202302371748527
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.01753217064781076
+        }
+      ]
+    },
+    {
+      "run_id": "Mn_md_identified_material_r1_s211_unit_peak",
+      "element": "Mn",
+      "target": "md",
+      "condition": "unit_peak",
+      "comparison_id": "Mn_md_identified_material_r1_s211",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 211,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.02021810524490064
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.0211628203179408
+        }
+      ]
+    },
+    {
+      "run_id": "Fe_coord_identified_material_r0_s113_released",
+      "element": "Fe",
+      "target": "coord",
+      "condition": "released",
+      "comparison_id": "Fe_coord_identified_material_r0_s113",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.1854341461717398
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.19631194928599394
+        }
+      ]
+    },
+    {
+      "run_id": "Fe_coord_identified_material_r0_s113_unit_peak",
+      "element": "Fe",
+      "target": "coord",
+      "condition": "unit_peak",
+      "comparison_id": "Fe_coord_identified_material_r0_s113",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.2244318668266888
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.24276195809776357
+        }
+      ]
+    },
+    {
+      "run_id": "Fe_coord_identified_material_r0_s211_released",
+      "element": "Fe",
+      "target": "coord",
+      "condition": "released",
+      "comparison_id": "Fe_coord_identified_material_r0_s211",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 211,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.17653806156321306
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.1865062930581235
+        }
+      ]
+    },
+    {
+      "run_id": "Fe_coord_identified_material_r0_s211_unit_peak",
+      "element": "Fe",
+      "target": "coord",
+      "condition": "unit_peak",
+      "comparison_id": "Fe_coord_identified_material_r0_s211",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 211,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.21514060169522364
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.23055636816846803
+        }
+      ]
+    },
+    {
+      "run_id": "Fe_coord_identified_material_r1_s113_released",
+      "element": "Fe",
+      "target": "coord",
+      "condition": "released",
+      "comparison_id": "Fe_coord_identified_material_r1_s113",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.17420995327469635
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.1797471672434211
+        }
+      ]
+    },
+    {
+      "run_id": "Fe_coord_identified_material_r1_s113_unit_peak",
+      "element": "Fe",
+      "target": "coord",
+      "condition": "unit_peak",
+      "comparison_id": "Fe_coord_identified_material_r1_s113",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.2045277018955206
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.2163993363224731
+        }
+      ]
+    },
+    {
+      "run_id": "Fe_coord_identified_material_r1_s211_released",
+      "element": "Fe",
+      "target": "coord",
+      "condition": "released",
+      "comparison_id": "Fe_coord_identified_material_r1_s211",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 211,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 5,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.1786694004524887
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.1698259220736974
+        }
+      ]
+    },
+    {
+      "run_id": "Fe_coord_identified_material_r1_s211_unit_peak",
+      "element": "Fe",
+      "target": "coord",
+      "condition": "unit_peak",
+      "comparison_id": "Fe_coord_identified_material_r1_s211",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 211,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.206149200271737
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.21525609917605548
+        }
+      ]
+    },
+    {
+      "run_id": "Fe_md_identified_material_r0_s113_released",
+      "element": "Fe",
+      "target": "md",
+      "condition": "released",
+      "comparison_id": "Fe_md_identified_material_r0_s113",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.019573350146834492
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.021191431323979843
+        }
+      ]
+    },
+    {
+      "run_id": "Fe_md_identified_material_r0_s113_unit_peak",
+      "element": "Fe",
+      "target": "md",
+      "condition": "unit_peak",
+      "comparison_id": "Fe_md_identified_material_r0_s113",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.023925637107545694
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.026236470712430897
+        }
+      ]
+    },
+    {
+      "run_id": "Fe_md_identified_material_r0_s211_released",
+      "element": "Fe",
+      "target": "md",
+      "condition": "released",
+      "comparison_id": "Fe_md_identified_material_r0_s211",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 211,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.020017027101815174
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.021528714388943413
+        }
+      ]
+    },
+    {
+      "run_id": "Fe_md_identified_material_r0_s211_unit_peak",
+      "element": "Fe",
+      "target": "md",
+      "condition": "unit_peak",
+      "comparison_id": "Fe_md_identified_material_r0_s211",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 211,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.024588866080660885
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.026696636775766388
+        }
+      ]
+    },
+    {
+      "run_id": "Fe_md_identified_material_r1_s113_released",
+      "element": "Fe",
+      "target": "md",
+      "condition": "released",
+      "comparison_id": "Fe_md_identified_material_r1_s113",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.019486231803593726
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.021372685089080384
+        }
+      ]
+    },
+    {
+      "run_id": "Fe_md_identified_material_r1_s113_unit_peak",
+      "element": "Fe",
+      "target": "md",
+      "condition": "unit_peak",
+      "comparison_id": "Fe_md_identified_material_r1_s113",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.02304228008763068
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.02521062569792343
+        }
+      ]
+    },
+    {
+      "run_id": "Fe_md_identified_material_r1_s211_released",
+      "element": "Fe",
+      "target": "md",
+      "condition": "released",
+      "comparison_id": "Fe_md_identified_material_r1_s211",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 211,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.019485900492056396
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.021049770593286766
+        }
+      ]
+    },
+    {
+      "run_id": "Fe_md_identified_material_r1_s211_unit_peak",
+      "element": "Fe",
+      "target": "md",
+      "condition": "unit_peak",
+      "comparison_id": "Fe_md_identified_material_r1_s211",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 211,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.023374859363508773
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.02546436171754386
+        }
+      ]
+    },
+    {
+      "run_id": "Co_coord_identified_material_r0_s113_released",
+      "element": "Co",
+      "target": "coord",
+      "condition": "released",
+      "comparison_id": "Co_coord_identified_material_r0_s113",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 5,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.22906288426892385
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.2227365918558748
+        }
+      ]
+    },
+    {
+      "run_id": "Co_coord_identified_material_r0_s113_unit_peak",
+      "element": "Co",
+      "target": "coord",
+      "condition": "unit_peak",
+      "comparison_id": "Co_coord_identified_material_r0_s113",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 5,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.24001359612975914
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.23883163097021776
+        }
+      ]
+    },
+    {
+      "run_id": "Co_coord_identified_material_r0_s211_released",
+      "element": "Co",
+      "target": "coord",
+      "condition": "released",
+      "comparison_id": "Co_coord_identified_material_r0_s211",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 211,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.2169603291916764
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.22484424778311052
+        }
+      ]
+    },
+    {
+      "run_id": "Co_coord_identified_material_r0_s211_unit_peak",
+      "element": "Co",
+      "target": "coord",
+      "condition": "unit_peak",
+      "comparison_id": "Co_coord_identified_material_r0_s211",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 211,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 5,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.24288950955617616
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.22492536345825676
+        }
+      ]
+    },
+    {
+      "run_id": "Co_coord_identified_material_r1_s113_released",
+      "element": "Co",
+      "target": "coord",
+      "condition": "released",
+      "comparison_id": "Co_coord_identified_material_r1_s113",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.18268990681864905
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.18574431852332596
+        }
+      ]
+    },
+    {
+      "run_id": "Co_coord_identified_material_r1_s113_unit_peak",
+      "element": "Co",
+      "target": "coord",
+      "condition": "unit_peak",
+      "comparison_id": "Co_coord_identified_material_r1_s113",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.19196461098100437
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.20602937596068804
+        }
+      ]
+    },
+    {
+      "run_id": "Co_coord_identified_material_r1_s211_released",
+      "element": "Co",
+      "target": "coord",
+      "condition": "released",
+      "comparison_id": "Co_coord_identified_material_r1_s211",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 211,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.1780763666158367
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.19280815653572747
+        }
+      ]
+    },
+    {
+      "run_id": "Co_coord_identified_material_r1_s211_unit_peak",
+      "element": "Co",
+      "target": "coord",
+      "condition": "unit_peak",
+      "comparison_id": "Co_coord_identified_material_r1_s211",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 211,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.1803980249877366
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.21372398141812587
+        }
+      ]
+    },
+    {
+      "run_id": "Co_md_identified_material_r0_s113_released",
+      "element": "Co",
+      "target": "md",
+      "condition": "released",
+      "comparison_id": "Co_md_identified_material_r0_s113",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.021123103125270503
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.021152951702747298
+        }
+      ]
+    },
+    {
+      "run_id": "Co_md_identified_material_r0_s113_unit_peak",
+      "element": "Co",
+      "target": "md",
+      "condition": "unit_peak",
+      "comparison_id": "Co_md_identified_material_r0_s113",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.025615733305690513
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.026801175522038097
+        }
+      ]
+    },
+    {
+      "run_id": "Co_md_identified_material_r0_s211_released",
+      "element": "Co",
+      "target": "md",
+      "condition": "released",
+      "comparison_id": "Co_md_identified_material_r0_s211",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 211,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.020853884248271587
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.02127520262461197
+        }
+      ]
+    },
+    {
+      "run_id": "Co_md_identified_material_r0_s211_unit_peak",
+      "element": "Co",
+      "target": "md",
+      "condition": "unit_peak",
+      "comparison_id": "Co_md_identified_material_r0_s211",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 211,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.025644822494786213
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.0271045818244948
+        }
+      ]
+    },
+    {
+      "run_id": "Co_md_identified_material_r1_s113_released",
+      "element": "Co",
+      "target": "md",
+      "condition": "released",
+      "comparison_id": "Co_md_identified_material_r1_s113",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.021673081216975493
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.02230568222250589
+        }
+      ]
+    },
+    {
+      "run_id": "Co_md_identified_material_r1_s113_unit_peak",
+      "element": "Co",
+      "target": "md",
+      "condition": "unit_peak",
+      "comparison_id": "Co_md_identified_material_r1_s113",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.025326648312406733
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.025843485307295494
+        }
+      ]
+    },
+    {
+      "run_id": "Co_md_identified_material_r1_s211_released",
+      "element": "Co",
+      "target": "md",
+      "condition": "released",
+      "comparison_id": "Co_md_identified_material_r1_s211",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 211,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.021402457659079867
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.022449854387557828
+        }
+      ]
+    },
+    {
+      "run_id": "Co_md_identified_material_r1_s211_unit_peak",
+      "element": "Co",
+      "target": "md",
+      "condition": "unit_peak",
+      "comparison_id": "Co_md_identified_material_r1_s211",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 211,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.025217930345696523
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.02705454904734059
+        }
+      ]
+    },
+    {
+      "run_id": "Ni_coord_identified_material_r0_s113_released",
+      "element": "Ni",
+      "target": "coord",
+      "condition": "released",
+      "comparison_id": "Ni_coord_identified_material_r0_s113",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.28412675900975426
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.293887642807487
+        }
+      ]
+    },
+    {
+      "run_id": "Ni_coord_identified_material_r0_s113_unit_peak",
+      "element": "Ni",
+      "target": "coord",
+      "condition": "unit_peak",
+      "comparison_id": "Ni_coord_identified_material_r0_s113",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 5,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.36596221009157903
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.3517994618929646
+        }
+      ]
+    },
+    {
+      "run_id": "Ni_coord_identified_material_r0_s211_released",
+      "element": "Ni",
+      "target": "coord",
+      "condition": "released",
+      "comparison_id": "Ni_coord_identified_material_r0_s211",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 211,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 5,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.32969011186832964
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.3070482819312773
+        }
+      ]
+    },
+    {
+      "run_id": "Ni_coord_identified_material_r0_s211_unit_peak",
+      "element": "Ni",
+      "target": "coord",
+      "condition": "unit_peak",
+      "comparison_id": "Ni_coord_identified_material_r0_s211",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 211,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 5,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.3697766626397795
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.35345861867601003
+        }
+      ]
+    },
+    {
+      "run_id": "Ni_coord_identified_material_r1_s113_released",
+      "element": "Ni",
+      "target": "coord",
+      "condition": "released",
+      "comparison_id": "Ni_coord_identified_material_r1_s113",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.26572733676054705
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.32305955184938007
+        }
+      ]
+    },
+    {
+      "run_id": "Ni_coord_identified_material_r1_s113_unit_peak",
+      "element": "Ni",
+      "target": "coord",
+      "condition": "unit_peak",
+      "comparison_id": "Ni_coord_identified_material_r1_s113",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.22560114147363564
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.26627460205441855
+        }
+      ]
+    },
+    {
+      "run_id": "Ni_coord_identified_material_r1_s211_released",
+      "element": "Ni",
+      "target": "coord",
+      "condition": "released",
+      "comparison_id": "Ni_coord_identified_material_r1_s211",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 211,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.28782347725257484
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.3232270278141839
+        }
+      ]
+    },
+    {
+      "run_id": "Ni_coord_identified_material_r1_s211_unit_peak",
+      "element": "Ni",
+      "target": "coord",
+      "condition": "unit_peak",
+      "comparison_id": "Ni_coord_identified_material_r1_s211",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 211,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.23587659930155913
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.23670939354644027
+        }
+      ]
+    },
+    {
+      "run_id": "Ni_md_identified_material_r0_s113_released",
+      "element": "Ni",
+      "target": "md",
+      "condition": "released",
+      "comparison_id": "Ni_md_identified_material_r0_s113",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 5,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.013886585140899564
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.013871224771773265
+        }
+      ]
+    },
+    {
+      "run_id": "Ni_md_identified_material_r0_s113_unit_peak",
+      "element": "Ni",
+      "target": "md",
+      "condition": "unit_peak",
+      "comparison_id": "Ni_md_identified_material_r0_s113",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.016544769260524946
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.017454197231847806
+        }
+      ]
+    },
+    {
+      "run_id": "Ni_md_identified_material_r0_s211_released",
+      "element": "Ni",
+      "target": "md",
+      "condition": "released",
+      "comparison_id": "Ni_md_identified_material_r0_s211",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 211,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.013466693723627396
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.013642582165833236
+        }
+      ]
+    },
+    {
+      "run_id": "Ni_md_identified_material_r0_s211_unit_peak",
+      "element": "Ni",
+      "target": "md",
+      "condition": "unit_peak",
+      "comparison_id": "Ni_md_identified_material_r0_s211",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 211,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.016898854064876467
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.017387205427380096
+        }
+      ]
+    },
+    {
+      "run_id": "Ni_md_identified_material_r1_s113_released",
+      "element": "Ni",
+      "target": "md",
+      "condition": "released",
+      "comparison_id": "Ni_md_identified_material_r1_s113",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.01666629657485852
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.01680999375874946
+        }
+      ]
+    },
+    {
+      "run_id": "Ni_md_identified_material_r1_s113_unit_peak",
+      "element": "Ni",
+      "target": "md",
+      "condition": "unit_peak",
+      "comparison_id": "Ni_md_identified_material_r1_s113",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.01947699864521068
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.019943058980126518
+        }
+      ]
+    },
+    {
+      "run_id": "Ni_md_identified_material_r1_s211_released",
+      "element": "Ni",
+      "target": "md",
+      "condition": "released",
+      "comparison_id": "Ni_md_identified_material_r1_s211",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 211,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.01629291947475539
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.016664462549290514
+        }
+      ]
+    },
+    {
+      "run_id": "Ni_md_identified_material_r1_s211_unit_peak",
+      "element": "Ni",
+      "target": "md",
+      "condition": "unit_peak",
+      "comparison_id": "Ni_md_identified_material_r1_s211",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 211,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 5,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.020334428228498513
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.02031867521956006
+        }
+      ]
+    },
+    {
+      "run_id": "Cu_coord_identified_material_r0_s113_released",
+      "element": "Cu",
+      "target": "coord",
+      "condition": "released",
+      "comparison_id": "Cu_coord_identified_material_r0_s113",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 5,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.2873297229477134
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.27838806112275183
+        }
+      ]
+    },
+    {
+      "run_id": "Cu_coord_identified_material_r0_s113_unit_peak",
+      "element": "Cu",
+      "target": "coord",
+      "condition": "unit_peak",
+      "comparison_id": "Cu_coord_identified_material_r0_s113",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.28216822338976455
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.30803357453565006
+        }
+      ]
+    },
+    {
+      "run_id": "Cu_coord_identified_material_r0_s211_released",
+      "element": "Cu",
+      "target": "coord",
+      "condition": "released",
+      "comparison_id": "Cu_coord_identified_material_r0_s211",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 211,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.27997447777493045
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.31098959216981503
+        }
+      ]
+    },
+    {
+      "run_id": "Cu_coord_identified_material_r0_s211_unit_peak",
+      "element": "Cu",
+      "target": "coord",
+      "condition": "unit_peak",
+      "comparison_id": "Cu_coord_identified_material_r0_s211",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 211,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.2915436340989661
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.3103572071946985
+        }
+      ]
+    },
+    {
+      "run_id": "Cu_coord_identified_material_r1_s113_released",
+      "element": "Cu",
+      "target": "coord",
+      "condition": "released",
+      "comparison_id": "Cu_coord_identified_material_r1_s113",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.2618274057957066
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.30336922529505495
+        }
+      ]
+    },
+    {
+      "run_id": "Cu_coord_identified_material_r1_s113_unit_peak",
+      "element": "Cu",
+      "target": "coord",
+      "condition": "unit_peak",
+      "comparison_id": "Cu_coord_identified_material_r1_s113",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.2892756328114844
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.2994457630917373
+        }
+      ]
+    },
+    {
+      "run_id": "Cu_coord_identified_material_r1_s211_released",
+      "element": "Cu",
+      "target": "coord",
+      "condition": "released",
+      "comparison_id": "Cu_coord_identified_material_r1_s211",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 211,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.2876742160278747
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.30931410143930327
+        }
+      ]
+    },
+    {
+      "run_id": "Cu_coord_identified_material_r1_s211_unit_peak",
+      "element": "Cu",
+      "target": "coord",
+      "condition": "unit_peak",
+      "comparison_id": "Cu_coord_identified_material_r1_s211",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 211,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.27681614752831685
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.29327804400747404
+        }
+      ]
+    },
+    {
+      "run_id": "Cu_md_identified_material_r0_s113_released",
+      "element": "Cu",
+      "target": "md",
+      "condition": "released",
+      "comparison_id": "Cu_md_identified_material_r0_s113",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.0611746984001531
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.06442566416091146
+        }
+      ]
+    },
+    {
+      "run_id": "Cu_md_identified_material_r0_s113_unit_peak",
+      "element": "Cu",
+      "target": "md",
+      "condition": "unit_peak",
+      "comparison_id": "Cu_md_identified_material_r0_s113",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 113,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.06664901672617574
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.06881386648026054
+        }
+      ]
+    },
+    {
+      "run_id": "Cu_md_identified_material_r0_s211_released",
+      "element": "Cu",
+      "target": "md",
+      "condition": "released",
+      "comparison_id": "Cu_md_identified_material_r0_s211",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 211,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.0612429120225893
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.06561339848158759
+        }
+      ]
+    },
+    {
+      "run_id": "Cu_md_identified_material_r0_s211_unit_peak",
+      "element": "Cu",
+      "target": "md",
+      "condition": "unit_peak",
+      "comparison_id": "Cu_md_identified_material_r0_s211",
+      "generalization": "identified_material",
+      "repeat": 0,
+      "fit_seed": 211,
+      "split_seed": 17,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.0669669738134094
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.06954095568049898
+        }
+      ]
+    },
+    {
+      "run_id": "Cu_md_identified_material_r1_s113_released",
+      "element": "Cu",
+      "target": "md",
+      "condition": "released",
+      "comparison_id": "Cu_md_identified_material_r1_s113",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.0684646438984102
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.07010722050555655
+        }
+      ]
+    },
+    {
+      "run_id": "Cu_md_identified_material_r1_s113_unit_peak",
+      "element": "Cu",
+      "target": "md",
+      "condition": "unit_peak",
+      "comparison_id": "Cu_md_identified_material_r1_s113",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 113,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.06909361127736399
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.0730490660350836
+        }
+      ]
+    },
+    {
+      "run_id": "Cu_md_identified_material_r1_s211_released",
+      "element": "Cu",
+      "target": "md",
+      "condition": "released",
+      "comparison_id": "Cu_md_identified_material_r1_s211",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 211,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.06854730255490527
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.07014608907768315
+        }
+      ]
+    },
+    {
+      "run_id": "Cu_md_identified_material_r1_s211_unit_peak",
+      "element": "Cu",
+      "target": "md",
+      "condition": "unit_peak",
+      "comparison_id": "Cu_md_identified_material_r1_s211",
+      "generalization": "identified_material",
+      "repeat": 1,
+      "fit_seed": 211,
+      "split_seed": 83,
+      "selected_min_samples_leaf": 1,
+      "validation_trials": [
+        {
+          "min_samples_leaf": 1,
+          "validation_loss": 0.06880047976398847
+        },
+        {
+          "min_samples_leaf": 5,
+          "validation_loss": 0.07285181504539122
+        }
+      ]
+    }
+  ],
+  "example_only": true,
+  "learner": "ExtraTrees; 80 trees; max_features .8; min_samples_leaf in {1,5} selected separately on validation loss; no refit using validation rows.",
+  "eligibility": "Finite 100-point E/mu; valid target; positive maximum. Coordination restricted to4/5/6, distance positive. Main analysis uses available material IDs only. No outcome-dependent spectrum-quality screening.",
+  "partitions": "Two repetitions, seeds17/83, roughly60/20/20 train/validation/test by material group. Q1 adds record holdouts on the identical identified cohort to assess evaluation sensitivity.",
+  "uncertainty": "250 paired bootstrap resamples of test material IDs, conditional on fitted models. Spectrum runs instead resample rows. Repeated heldout cohorts overlap, so they are sensitivity analyses, not independent replications.",
+  "representation": "Pointwise released absorption, except white_line=argmax energy; multiscale=quadratic coefficients on nonoverlapping10/20/50point intervals with local coordinate[-1,1]; unit_peak=divide spectrum by its maximum.",
+  "localization": "Joint test-set permutation of features whose energy-interval midpoint lies in one of5equal-width energy bands;3permutations per band. Multiscale coefficients also permuted jointly by degree. Holdout use is diagnostic, never used to tune models; comparisons across correlated representations are qualitative.",
+  "fitting_variability": "Q5 seeds113/211 are crossed with the2material partitions; all other tasks use113.",
+  "source_hashes": {
+    "Co.jsonl.gz": "f9b3b80ca0a6e44a03dcd9443a90332f7eb42af5a967a8f51923541fb32f6155",
+    "Cr.jsonl.gz": "3b4af75470896db924e60c95d99efbde1152fbc6c848772a07d25abb76eb5684",
+    "Cu.jsonl.gz": "a5c8457b95cc5557616c5c5db3e38fe5cd9d29b8026859b3d3509e35ffea95e0",
+    "Fe.jsonl.gz": "1791e54a4a9d56009d83b5405179c12aa84aa5e1fc6a401af3dfdc1ae7e4b12e",
+    "Mn.jsonl.gz": "38f99877c8ece423bb23676463bc4ba767ac6d2bc057edcecf766263c6363dd7",
+    "Ni.jsonl.gz": "a9eb1ad9fde915f8f3387b553395707625d8be8180a4faa2dbb4debf979d2f04",
+    "Ti.jsonl.gz": "ce5e4255439233ff903dc6be0e8a3b1acc9327e72523a66403d2a640fc2f9792",
+    "V.jsonl.gz": "755c3407c7b47ed9f96becfdb21cf14cc64213e9c4fedec2d493a7fdf0bf1b5b"
+  },
+  "versions": {
+    "numpy": "2.5.3",
+    "sklearn": "1.9.1"
+  }
+}

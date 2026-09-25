@@ -1,0 +1,17 @@
+run_id,element,study,n_test,n_test_identified,n_test_id_in_train_or_validation,fraction_test_known_overlap
+Ti_spectrum_identified_1729_full,Ti,spectrum_identified,271,271,174,0.6420664206642066
+Ti_spectrum_all_1729_full,Ti,spectrum_all,654,248,161,0.6491935483870968
+V_spectrum_identified_1729_full,V,spectrum_identified,446,446,247,0.5538116591928252
+V_spectrum_all_1729_full,V,spectrum_all,801,457,254,0.5557986870897156
+Cr_spectrum_identified_1729_full,Cr,spectrum_identified,169,169,67,0.39644970414201186
+Cr_spectrum_all_1729_full,Cr,spectrum_all,385,173,69,0.3988439306358382
+Mn_spectrum_identified_1729_full,Mn,spectrum_identified,391,391,181,0.4629156010230179
+Mn_spectrum_all_1729_full,Mn,spectrum_all,846,382,198,0.518324607329843
+Fe_spectrum_identified_1729_full,Fe,spectrum_identified,412,412,210,0.5097087378640777
+Fe_spectrum_all_1729_full,Fe,spectrum_all,838,423,237,0.5602836879432624
+Co_spectrum_identified_1729_full,Co,spectrum_identified,262,262,133,0.5076335877862596
+Co_spectrum_all_1729_full,Co,spectrum_all,422,259,128,0.4942084942084942
+Ni_spectrum_identified_1729_full,Ni,spectrum_identified,236,236,131,0.5550847457627118
+Ni_spectrum_all_1729_full,Ni,spectrum_all,446,219,114,0.5205479452054794
+Cu_spectrum_identified_1729_full,Cu,spectrum_identified,218,218,88,0.4036697247706422
+Cu_spectrum_all_1729_full,Cu,spectrum_all,440,201,92,0.4577114427860697

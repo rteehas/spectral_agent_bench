@@ -1,0 +1,211 @@
+{
+  "version": 2,
+  "verifier": "workflows/verify.py",
+  "candidate_integrity_checks": [
+    {
+      "question": "Q1",
+      "numerical_integrity_pass": true,
+      "scientific_pass": null,
+      "status": "scientific_review_required",
+      "runs": 64
+    },
+    {
+      "question": "Q2",
+      "numerical_integrity_pass": true,
+      "scientific_pass": null,
+      "status": "scientific_review_required",
+      "runs": 16
+    },
+    {
+      "question": "Q3",
+      "numerical_integrity_pass": true,
+      "scientific_pass": null,
+      "status": "scientific_review_required",
+      "runs": 32
+    },
+    {
+      "question": "Q4",
+      "numerical_integrity_pass": true,
+      "scientific_pass": null,
+      "status": "scientific_review_required",
+      "runs": 96
+    },
+    {
+      "question": "Q5",
+      "numerical_integrity_pass": true,
+      "scientific_pass": null,
+      "status": "scientific_review_required",
+      "runs": 128
+    }
+  ],
+  "independent_alternate_method": {
+    "method": "ExtraTreesRegressor",
+    "parameters": {
+      "n_estimators": 23,
+      "max_depth": 14,
+      "min_samples_leaf": 3,
+      "max_features": 0.6,
+      "random_state": 703
+    },
+    "input_hashes": {
+      "Ti": "ce5e4255439233ff903dc6be0e8a3b1acc9327e72523a66403d2a640fc2f9792",
+      "V": "755c3407c7b47ed9f96becfdb21cf14cc64213e9c4fedec2d493a7fdf0bf1b5b",
+      "Cr": "3b4af75470896db924e60c95d99efbde1152fbc6c848772a07d25abb76eb5684",
+      "Mn": "38f99877c8ece423bb23676463bc4ba767ac6d2bc057edcecf766263c6363dd7",
+      "Fe": "1791e54a4a9d56009d83b5405179c12aa84aa5e1fc6a401af3dfdc1ae7e4b12e",
+      "Co": "f9b3b80ca0a6e44a03dcd9443a90332f7eb42af5a967a8f51923541fb32f6155",
+      "Ni": "a9eb1ad9fde915f8f3387b553395707625d8be8180a4faa2dbb4debf979d2f04",
+      "Cu": "a5c8457b95cc5557616c5c5db3e38fe5cd9d29b8026859b3d3509e35ffea95e0"
+    },
+    "run_metrics": [
+      {
+        "run_id": "Ti_alternative",
+        "mae": 0.01575558887964978,
+        "r2": 0.859802025767929
+      },
+      {
+        "run_id": "V_alternative",
+        "mae": 0.015761483482645264,
+        "r2": 0.9171944945948108
+      },
+      {
+        "run_id": "Cr_alternative",
+        "mae": 0.019195608310980626,
+        "r2": 0.942532726529301
+      },
+      {
+        "run_id": "Mn_alternative",
+        "mae": 0.019398662898571756,
+        "r2": 0.8911499191162834
+      },
+      {
+        "run_id": "Fe_alternative",
+        "mae": 0.016152692821876858,
+        "r2": 0.846698207255047
+      },
+      {
+        "run_id": "Co_alternative",
+        "mae": 0.020259642348284042,
+        "r2": 0.8754413397346142
+      },
+      {
+        "run_id": "Ni_alternative",
+        "mae": 0.015250470513329497,
+        "r2": 0.8574782438142381
+      },
+      {
+        "run_id": "Cu_alternative",
+        "mae": 0.06468474895383924,
+        "r2": 0.4625343792039358
+      }
+    ],
+    "numerical_integrity_pass": true,
+    "scientific_pass": null,
+    "role": "Independent alternate-method integrity acceptance, not a complete scientific-answer acceptance.",
+    "diagnostics": {
+      "independent_raw_tail_checks": 16,
+      "candidate_verifier_metrics_not_imported_for_tail_calculation": true
+    },
+    "independent_source_rerun_matches": true,
+    "source_review": {
+      "predictors": "Only raw absorption samples and adjacent differences; no structural label, material identity, or released derived descriptor is a feature.",
+      "fitting": "ExtraTrees fit receives x[train] and y[train]; validation unused; test predictions generated only after fit.",
+      "grouping": "Known metadata.id supplied to GroupShuffleSplit; unknown IDs excluded. All groups checked for overlap by the independent verifier.",
+      "limitation": "This concrete alternate demonstrates method flexibility; its single holdout is not a full uncertainty analysis."
+    },
+    "artifact_directory": "verification/alternative_method_v2",
+    "source_sha256": "4faf62fa15afe4e3628dcf2652fffa526dad9da68784825e3bbf465bba7f0616"
+  },
+  "benign_controls": [
+    {
+      "control": "CSV_row_permutation",
+      "accepted": true
+    }
+  ],
+  "rejected_controls": [
+    {
+      "control": "forged_core_metric",
+      "rejected": true,
+      "reason": "Ti_alternative: inconsistent mae"
+    },
+    {
+      "control": "missing_test_prediction",
+      "rejected": true,
+      "reason": "Ti_alternative: predictions do not cover exactly the declared test rows"
+    },
+    {
+      "control": "duplicate_test_prediction",
+      "rejected": true,
+      "reason": "predictions.csv: duplicate identities"
+    },
+    {
+      "control": "out_of_range_raw_row",
+      "rejected": true,
+      "reason": "Ti_alternative: predictions do not cover exactly the declared test rows"
+    },
+    {
+      "control": "unaccounted_raw_row",
+      "rejected": true,
+      "reason": "Ti_alternative: partitions must account for every supplied element row"
+    },
+    {
+      "control": "row_in_multiple_partitions",
+      "rejected": true,
+      "reason": "partitions.csv: duplicate identities"
+    },
+    {
+      "control": "nonfinite_prediction",
+      "rejected": true,
+      "reason": "Nonfinite prediction"
+    },
+    {
+      "control": "contradictory_optional_raw_truth",
+      "rejected": true,
+      "reason": "\nNot equal to tolerance rtol=0, atol=1e-12\nTi_alternative: truth labels differ from raw release\nMismatched elements: 682 / 682 (100%)\nFirst 5 mismatches are at indices:\n [0]: 0.12345 (ACTUAL), 2.099939753783617 (DESIRED)\n [1]: 0.12345 (ACTUAL), 1.9843709938227756 (DESIRED)\n [2]: 0.12345 (ACTUAL), 2."
+    },
+    {
+      "control": "missing_required_material_scope",
+      "rejected": true,
+      "reason": "Missing identified-material investigation/paired conditions for: [('Ti', 'md')]"
+    },
+    {
+      "control": "undeclared_run",
+      "rejected": true,
+      "reason": "predictions: missing or undeclared runs"
+    },
+    {
+      "control": "missing_reproducible_code",
+      "rejected": true,
+      "reason": "Missing reproducible source in code/"
+    },
+    {
+      "control": "known_material_identity_leakage",
+      "rejected": true,
+      "reason": "Ti_alternative: material identity leaks between declared partitions"
+    },
+    {
+      "control": "unpaired_condition_membership",
+      "rejected": true,
+      "reason": "Ti_coord_identified_material_r0_s113_treated: paired comparison changes row inclusion or partition assignments"
+    }
+  ],
+  "mandatory_review_controls": [
+    {
+      "control": "self_consistent_target_copy",
+      "numerical_integrity_pass": true,
+      "scientific_pass": null,
+      "final_review": "rejected_by_independent_source_rerun",
+      "maximum_prediction_discrepancy": 0.8149244615381961,
+      "lesson": "Arithmetic checks cannot detect fabricated predictions; source execution is a required separate gate."
+    },
+    {
+      "control": "fabricated_freeform_tail_table",
+      "numerical_integrity_pass": true,
+      "scientific_pass": null,
+      "final_review": "rejected_by_independent_raw_cohort_reconstruction",
+      "lesson": "Optional diagnostic tables need method-aware independent validation; the core gate does not silently treat them as verified."
+    }
+  ],
+  "full_scientific_acceptance_claimed": false,
+  "scope": "Audit of numerical gate flexibility, source provenance, material partitions, score arithmetic, and independent-rerun rejection of fabricated predictions. It does not automatically grade freeform scientific reports or optional supporting tables."
+}

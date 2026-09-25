@@ -1,0 +1,1138 @@
+{
+  "coverage": [
+    {
+      "element": "Ti",
+      "target": "md",
+      "source_records": 4930,
+      "valid_target_records": 4930,
+      "identified_valid_records": 2549,
+      "identified_materials": 1077,
+      "origins": {
+        "feff": {
+          "records": 2381,
+          "identified": 0
+        },
+        "scrape": {
+          "records": 2549,
+          "identified": 2549
+        }
+      },
+      "identified_target_mean": 2.0129546824683326,
+      "unidentified_target_mean": 2.0286888860716683
+    },
+    {
+      "element": "V",
+      "target": "md",
+      "source_records": 7120,
+      "valid_target_records": 7120,
+      "identified_valid_records": 4370,
+      "identified_materials": 2022,
+      "origins": {
+        "feff": {
+          "records": 2750,
+          "identified": 0
+        },
+        "scrape": {
+          "records": 4370,
+          "identified": 4370
+        }
+      },
+      "identified_target_mean": 1.964094543109332,
+      "unidentified_target_mean": 1.9925135419924962
+    },
+    {
+      "element": "Cr",
+      "target": "md",
+      "source_records": 2542,
+      "valid_target_records": 2542,
+      "identified_valid_records": 1192,
+      "identified_materials": 819,
+      "origins": {
+        "feff": {
+          "records": 1350,
+          "identified": 0
+        },
+        "scrape": {
+          "records": 1192,
+          "identified": 1192
+        }
+      },
+      "identified_target_mean": 1.9563557383605648,
+      "unidentified_target_mean": 1.98881071387977
+    },
+    {
+      "element": "Mn",
+      "target": "md",
+      "source_records": 8504,
+      "valid_target_records": 8504,
+      "identified_valid_records": 4665,
+      "identified_materials": 2113,
+      "origins": {
+        "feff": {
+          "records": 3839,
+          "identified": 0
+        },
+        "scrape": {
+          "records": 4665,
+          "identified": 4665
+        }
+      },
+      "identified_target_mean": 2.0837766683633894,
+      "unidentified_target_mean": 2.0615266552979055
+    },
+    {
+      "element": "Fe",
+      "target": "md",
+      "source_records": 7362,
+      "valid_target_records": 7362,
+      "identified_valid_records": 4183,
+      "identified_materials": 1965,
+      "origins": {
+        "feff": {
+          "records": 3179,
+          "identified": 0
+        },
+        "scrape": {
+          "records": 4183,
+          "identified": 4183
+        }
+      },
+      "identified_target_mean": 2.0503986915328483,
+      "unidentified_target_mean": 2.0370842397065148
+    },
+    {
+      "element": "Co",
+      "target": "md",
+      "source_records": 3533,
+      "valid_target_records": 3533,
+      "identified_valid_records": 2379,
+      "identified_materials": 1257,
+      "origins": {
+        "feff": {
+          "records": 1154,
+          "identified": 0
+        },
+        "scrape": {
+          "records": 2379,
+          "identified": 2379
+        }
+      },
+      "identified_target_mean": 2.0016334495183603,
+      "unidentified_target_mean": 1.996876458164113
+    },
+    {
+      "element": "Ni",
+      "target": "md",
+      "source_records": 3420,
+      "valid_target_records": 3420,
+      "identified_valid_records": 2087,
+      "identified_materials": 1081,
+      "origins": {
+        "feff": {
+          "records": 1333,
+          "identified": 0
+        },
+        "scrape": {
+          "records": 2087,
+          "identified": 2087
+        }
+      },
+      "identified_target_mean": 2.0287665647316624,
+      "unidentified_target_mean": 2.0269206966010627
+    },
+    {
+      "element": "Cu",
+      "target": "md",
+      "source_records": 3496,
+      "valid_target_records": 3496,
+      "identified_valid_records": 2035,
+      "identified_materials": 1194,
+      "origins": {
+        "feff": {
+          "records": 1461,
+          "identified": 0
+        },
+        "scrape": {
+          "records": 2035,
+          "identified": 2035
+        }
+      },
+      "identified_target_mean": 2.0630941749861025,
+      "unidentified_target_mean": 2.072290398624283
+    }
+  ],
+  "baselines": [
+    {
+      "run_id": "Ti_md_identified_material_r0_s113_model",
+      "training_constant": 2.0012612266025975,
+      "metrics": {
+        "mae": 0.04790989819343086,
+        "r2": -0.012697095518718893
+      }
+    },
+    {
+      "run_id": "Ti_md_identified_material_r1_s113_model",
+      "training_constant": 1.999893508140141,
+      "metrics": {
+        "mae": 0.04678277411564256,
+        "r2": -0.03485004530079694
+      }
+    },
+    {
+      "run_id": "V_md_identified_material_r0_s113_model",
+      "training_constant": 1.9740007220417908,
+      "metrics": {
+        "mae": 0.08648814279216484,
+        "r2": -0.00821160961539702
+      }
+    },
+    {
+      "run_id": "V_md_identified_material_r1_s113_model",
+      "training_constant": 1.976331492443048,
+      "metrics": {
+        "mae": 0.09052964202929312,
+        "r2": -0.012716632304295983
+      }
+    },
+    {
+      "run_id": "Cr_md_identified_material_r0_s113_model",
+      "training_constant": 2.003463531553188,
+      "metrics": {
+        "mae": 0.11175986989876993,
+        "r2": -0.08979181660159208
+      }
+    },
+    {
+      "run_id": "Cr_md_identified_material_r1_s113_model",
+      "training_constant": 2.004720260295106,
+      "metrics": {
+        "mae": 0.1102190959804305,
+        "r2": -0.09114802646954723
+      }
+    },
+    {
+      "run_id": "Mn_md_identified_material_r0_s113_model",
+      "training_constant": 2.0772710869369972,
+      "metrics": {
+        "mae": 0.09166090740255396,
+        "r2": -0.004482636090310299
+      }
+    },
+    {
+      "run_id": "Mn_md_identified_material_r1_s113_model",
+      "training_constant": 2.077853942516257,
+      "metrics": {
+        "mae": 0.08604771807580935,
+        "r2": -0.001036030617267869
+      }
+    },
+    {
+      "run_id": "Fe_md_identified_material_r0_s113_model",
+      "training_constant": 2.043547348949928,
+      "metrics": {
+        "mae": 0.06603935792795827,
+        "r2": -0.016454468897964425
+      }
+    },
+    {
+      "run_id": "Fe_md_identified_material_r1_s113_model",
+      "training_constant": 2.0445440251621774,
+      "metrics": {
+        "mae": 0.07018359100335897,
+        "r2": -0.0016948458192687088
+      }
+    },
+    {
+      "run_id": "Co_md_identified_material_r0_s113_model",
+      "training_constant": 1.9898397811207054,
+      "metrics": {
+        "mae": 0.09179773106942163,
+        "r2": -0.007011767361780219
+      }
+    },
+    {
+      "run_id": "Co_md_identified_material_r1_s113_model",
+      "training_constant": 1.9903171489564335,
+      "metrics": {
+        "mae": 0.08906391065157696,
+        "r2": -0.014772421949595271
+      }
+    },
+    {
+      "run_id": "Ni_md_identified_material_r0_s113_model",
+      "training_constant": 2.040108997897944,
+      "metrics": {
+        "mae": 0.06777803236443775,
+        "r2": -0.019504886359816398
+      }
+    },
+    {
+      "run_id": "Ni_md_identified_material_r1_s113_model",
+      "training_constant": 2.0433379929229307,
+      "metrics": {
+        "mae": 0.06954733361080047,
+        "r2": -0.05816250819495372
+      }
+    },
+    {
+      "run_id": "Cu_md_identified_material_r0_s113_model",
+      "training_constant": 2.051060589944271,
+      "metrics": {
+        "mae": 0.11528098902852854,
+        "r2": -0.012767823510507537
+      }
+    },
+    {
+      "run_id": "Cu_md_identified_material_r1_s113_model",
+      "training_constant": 2.0432780571967566,
+      "metrics": {
+        "mae": 0.11183924524791622,
+        "r2": -0.04497971521097832
+      }
+    }
+  ],
+  "comparisons": [],
+  "regimes": [
+    {
+      "run_id": "Ti_md_identified_material_r0_s113_model",
+      "regime": "all",
+      "records": 501,
+      "materials": 216,
+      "low_cutoff": 1.9523295712434847,
+      "high_cutoff": 2.08948827532723,
+      "mae": 0.01708997383056852,
+      "bias": -0.00033753802477393867,
+      "baseline_mae": 0.04790989819343086,
+      "baseline_gain_low": 0.025268081450944207,
+      "baseline_gain_high": 0.03697713955477924
+    },
+    {
+      "run_id": "Ti_md_identified_material_r0_s113_model",
+      "regime": "short",
+      "records": 43,
+      "materials": 29,
+      "low_cutoff": 1.9523295712434847,
+      "high_cutoff": 2.08948827532723,
+      "mae": 0.02178455638562013,
+      "bias": 0.020392049256754977,
+      "baseline_mae": 0.12483895151773997,
+      "baseline_gain_low": 0.07863669424279339,
+      "baseline_gain_high": 0.12175781936168242
+    },
+    {
+      "run_id": "Ti_md_identified_material_r0_s113_model",
+      "regime": "middle",
+      "records": 424,
+      "materials": 182,
+      "low_cutoff": 1.9523295712434847,
+      "high_cutoff": 2.08948827532723,
+      "mae": 0.009424322790145264,
+      "bias": 0.001576855506495238,
+      "baseline_mae": 0.025136029045795982,
+      "baseline_gain_low": 0.012760122537593068,
+      "baseline_gain_high": 0.018880716977010173
+    },
+    {
+      "run_id": "Ti_md_identified_material_r0_s113_model",
+      "regime": "long",
+      "records": 34,
+      "materials": 21,
+      "low_cutoff": 1.9523295712434847,
+      "high_cutoff": 2.08948827532723,
+      "mae": 0.10674788533857561,
+      "bias": -0.05042798244724083,
+      "baseline_mae": 0.23462081659495726,
+      "baseline_gain_low": 0.09683796151497182,
+      "baseline_gain_high": 0.16344770861525512
+    },
+    {
+      "run_id": "Ti_md_identified_material_r1_s113_model",
+      "regime": "all",
+      "records": 505,
+      "materials": 216,
+      "low_cutoff": 1.950648275694028,
+      "high_cutoff": 2.071845630934213,
+      "mae": 0.01504514221025967,
+      "bias": 0.0009709459376399844,
+      "baseline_mae": 0.04678277411564256,
+      "baseline_gain_low": 0.024083698359593578,
+      "baseline_gain_high": 0.04153446885382229
+    },
+    {
+      "run_id": "Ti_md_identified_material_r1_s113_model",
+      "regime": "short",
+      "records": 44,
+      "materials": 33,
+      "low_cutoff": 1.950648275694028,
+      "high_cutoff": 2.071845630934213,
+      "mae": 0.03151988803064731,
+      "bias": 0.029741583171025654,
+      "baseline_mae": 0.10527235658172368,
+      "baseline_gain_low": 0.053562286258769,
+      "baseline_gain_high": 0.09105606516248783
+    },
+    {
+      "run_id": "Ti_md_identified_material_r1_s113_model",
+      "regime": "middle",
+      "records": 406,
+      "materials": 176,
+      "low_cutoff": 1.950648275694028,
+      "high_cutoff": 2.071845630934213,
+      "mae": 0.008675391384334359,
+      "bias": 0.0007862021619435669,
+      "baseline_mae": 0.023018765796209963,
+      "baseline_gain_low": 0.011180025378196895,
+      "baseline_gain_high": 0.017906157342182635
+    },
+    {
+      "run_id": "Ti_md_identified_material_r1_s113_model",
+      "regime": "long",
+      "records": 55,
+      "materials": 30,
+      "low_cutoff": 1.950648275694028,
+      "high_cutoff": 2.071845630934213,
+      "mae": 0.0488856880144164,
+      "bias": -0.020681818886654997,
+      "baseline_mae": 0.1754126968280437,
+      "baseline_gain_low": 0.0838519676788028,
+      "baseline_gain_high": 0.17580196864985662
+    },
+    {
+      "run_id": "V_md_identified_material_r0_s113_model",
+      "regime": "all",
+      "records": 911,
+      "materials": 405,
+      "low_cutoff": 1.7533448135643352,
+      "high_cutoff": 2.0805569948814346,
+      "mae": 0.013323550145330241,
+      "bias": 0.0003281378067185604,
+      "baseline_mae": 0.08648814279216484,
+      "baseline_gain_low": 0.06346931397988899,
+      "baseline_gain_high": 0.0809333837845307
+    },
+    {
+      "run_id": "V_md_identified_material_r0_s113_model",
+      "regime": "short",
+      "records": 79,
+      "materials": 46,
+      "low_cutoff": 1.7533448135643352,
+      "high_cutoff": 2.0805569948814346,
+      "mae": 0.006707785249405282,
+      "bias": 0.005882580801164031,
+      "baseline_mae": 0.2261999585117083,
+      "baseline_gain_low": 0.217362935781312,
+      "baseline_gain_high": 0.22151081870697942
+    },
+    {
+      "run_id": "V_md_identified_material_r0_s113_model",
+      "regime": "middle",
+      "records": 748,
+      "materials": 349,
+      "low_cutoff": 1.7533448135643352,
+      "high_cutoff": 2.0805569948814346,
+      "mae": 0.012358782479953279,
+      "bias": 0.002095898985227437,
+      "baseline_mae": 0.06020222869999321,
+      "baseline_gain_low": 0.04194065901285377,
+      "baseline_gain_high": 0.05400383502744325
+    },
+    {
+      "run_id": "V_md_identified_material_r0_s113_model",
+      "regime": "long",
+      "records": 84,
+      "materials": 45,
+      "low_cutoff": 1.7533448135643352,
+      "high_cutoff": 2.0805569948814346,
+      "mae": 0.028136545865330702,
+      "bias": -0.020637175980017537,
+      "baseline_mae": 0.189162313019551,
+      "baseline_gain_low": 0.14282769074494417,
+      "baseline_gain_high": 0.17677911694326415
+    },
+    {
+      "run_id": "V_md_identified_material_r1_s113_model",
+      "regime": "all",
+      "records": 879,
+      "materials": 405,
+      "low_cutoff": 1.7535192462734033,
+      "high_cutoff": 2.0792795311072823,
+      "mae": 0.014783172552542592,
+      "bias": 0.00030080204339618825,
+      "baseline_mae": 0.09052964202929312,
+      "baseline_gain_low": 0.06530183766567377,
+      "baseline_gain_high": 0.08505931177816806
+    },
+    {
+      "run_id": "V_md_identified_material_r1_s113_model",
+      "regime": "short",
+      "records": 90,
+      "materials": 45,
+      "low_cutoff": 1.7535192462734033,
+      "high_cutoff": 2.0792795311072823,
+      "mae": 0.004923686049066281,
+      "bias": 0.0037223161219681637,
+      "baseline_mae": 0.22802459392074917,
+      "baseline_gain_low": 0.22183771472943226,
+      "baseline_gain_high": 0.22441454423916982
+    },
+    {
+      "run_id": "V_md_identified_material_r1_s113_model",
+      "regime": "middle",
+      "records": 705,
+      "materials": 344,
+      "low_cutoff": 1.7535192462734033,
+      "high_cutoff": 2.0792795311072823,
+      "mae": 0.013233933731574386,
+      "bias": 0.0030175745912948133,
+      "baseline_mae": 0.06006360314971292,
+      "baseline_gain_low": 0.04174792323170851,
+      "baseline_gain_high": 0.051572515624290924
+    },
+    {
+      "run_id": "V_md_identified_material_r1_s113_model",
+      "regime": "long",
+      "records": 84,
+      "materials": 49,
+      "low_cutoff": 1.7535192462734033,
+      "high_cutoff": 2.0792795311072823,
+      "mae": 0.03834944819653609,
+      "bias": -0.026166589782080106,
+      "baseline_mae": 0.198910734170638,
+      "baseline_gain_low": 0.13878701668042298,
+      "baseline_gain_high": 0.17647258207540012
+    },
+    {
+      "run_id": "Cr_md_identified_material_r0_s113_model",
+      "regime": "all",
+      "records": 245,
+      "materials": 164,
+      "low_cutoff": 1.6756935732720495,
+      "high_cutoff": 2.144759819708164,
+      "mae": 0.019029511249233397,
+      "bias": 0.000278262894283872,
+      "baseline_mae": 0.11175986989876993,
+      "baseline_gain_low": 0.06889849130789398,
+      "baseline_gain_high": 0.11601391593140788
+    },
+    {
+      "run_id": "Cr_md_identified_material_r0_s113_model",
+      "regime": "short",
+      "records": 24,
+      "materials": 14,
+      "low_cutoff": 1.6756935732720495,
+      "high_cutoff": 2.144759819708164,
+      "mae": 0.005672145163769672,
+      "bias": 0.005150714079921635,
+      "baseline_mae": 0.3325515373353489,
+      "baseline_gain_low": 0.3179902423269833,
+      "baseline_gain_high": 0.33099100780662133
+    },
+    {
+      "run_id": "Cr_md_identified_material_r0_s113_model",
+      "regime": "middle",
+      "records": 205,
+      "materials": 142,
+      "low_cutoff": 1.6756935732720495,
+      "high_cutoff": 2.144759819708164,
+      "mae": 0.015971056519677188,
+      "bias": 0.0031544836368659055,
+      "baseline_mae": 0.07567719041745741,
+      "baseline_gain_low": 0.03995071361714145,
+      "baseline_gain_high": 0.08223451025457994
+    },
+    {
+      "run_id": "Cr_md_identified_material_r0_s113_model",
+      "regime": "long",
+      "records": 16,
+      "materials": 16,
+      "low_cutoff": 1.6756935732720495,
+      "high_cutoff": 2.144759819708164,
+      "mae": 0.07825201159986794,
+      "bias": -0.04388199214850508,
+      "baseline_mae": 0.24288169959821818,
+      "baseline_gain_low": 0.14496222070991538,
+      "baseline_gain_high": 0.18766293392542063
+    },
+    {
+      "run_id": "Cr_md_identified_material_r1_s113_model",
+      "regime": "all",
+      "records": 246,
+      "materials": 164,
+      "low_cutoff": 1.675867722044782,
+      "high_cutoff": 2.1064683721337025,
+      "mae": 0.01773486383394781,
+      "bias": 0.0029132463878132116,
+      "baseline_mae": 0.1102190959804305,
+      "baseline_gain_low": 0.0729657085730278,
+      "baseline_gain_high": 0.11274588733546147
+    },
+    {
+      "run_id": "Cr_md_identified_material_r1_s113_model",
+      "regime": "short",
+      "records": 26,
+      "materials": 17,
+      "low_cutoff": 1.675867722044782,
+      "high_cutoff": 2.1064683721337025,
+      "mae": 0.0036850668433079724,
+      "bias": 0.0036009658086209382,
+      "baseline_mae": 0.3339765116530661,
+      "baseline_gain_low": 0.32752813142334014,
+      "baseline_gain_high": 0.3325266639078738
+    },
+    {
+      "run_id": "Cr_md_identified_material_r1_s113_model",
+      "regime": "middle",
+      "records": 196,
+      "materials": 132,
+      "low_cutoff": 1.675867722044782,
+      "high_cutoff": 2.1064683721337025,
+      "mae": 0.01427991964521808,
+      "bias": 0.006214343795538619,
+      "baseline_mae": 0.06986209532570468,
+      "baseline_gain_low": 0.04154010394648965,
+      "baseline_gain_high": 0.07408110902334553
+    },
+    {
+      "run_id": "Cr_md_identified_material_r1_s113_model",
+      "regime": "long",
+      "records": 24,
+      "materials": 22,
+      "low_cutoff": 1.675867722044782,
+      "high_cutoff": 2.1064683721337025,
+      "mae": 0.06117085478176706,
+      "bias": -0.024790745147819315,
+      "baseline_mae": 0.19739740101533623,
+      "baseline_gain_low": 0.10862657095446086,
+      "baseline_gain_high": 0.16395187166293873
+    },
+    {
+      "run_id": "Mn_md_identified_material_r0_s113_model",
+      "regime": "all",
+      "records": 910,
+      "materials": 423,
+      "low_cutoff": 1.9497346181744974,
+      "high_cutoff": 2.2220843536149992,
+      "mae": 0.020660061616282473,
+      "bias": -0.0008254503760029494,
+      "baseline_mae": 0.09166090740255396,
+      "baseline_gain_low": 0.06456468191865239,
+      "baseline_gain_high": 0.07720430662840574
+    },
+    {
+      "run_id": "Mn_md_identified_material_r0_s113_model",
+      "regime": "short",
+      "records": 81,
+      "materials": 68,
+      "low_cutoff": 1.9497346181744974,
+      "high_cutoff": 2.2220843536149992,
+      "mae": 0.033407869364534826,
+      "bias": 0.031943475908491926,
+      "baseline_mae": 0.18185113131954103,
+      "baseline_gain_low": 0.13020400322401013,
+      "baseline_gain_high": 0.1699521358275369
+    },
+    {
+      "run_id": "Mn_md_identified_material_r0_s113_model",
+      "regime": "middle",
+      "records": 715,
+      "materials": 339,
+      "low_cutoff": 1.9497346181744974,
+      "high_cutoff": 2.2220843536149992,
+      "mae": 0.014957383578454792,
+      "bias": 0.0020687874453535786,
+      "baseline_mae": 0.0632041265403768,
+      "baseline_gain_low": 0.04363727954875428,
+      "baseline_gain_high": 0.05313819035891474
+    },
+    {
+      "run_id": "Mn_md_identified_material_r0_s113_model",
+      "regime": "long",
+      "records": 114,
+      "materials": 74,
+      "low_cutoff": 1.9497346181744974,
+      "high_cutoff": 2.2220843536149992,
+      "mae": 0.047369205207846946,
+      "bias": -0.04226109135244158,
+      "baseline_mae": 0.2060573124830866,
+      "baseline_gain_low": 0.14987879281867436,
+      "baseline_gain_high": 0.16930893508810155
+    },
+    {
+      "run_id": "Mn_md_identified_material_r1_s113_model",
+      "regime": "all",
+      "records": 941,
+      "materials": 423,
+      "low_cutoff": 1.9512227553993895,
+      "high_cutoff": 2.2253812857417103,
+      "mae": 0.019172716382269184,
+      "bias": 0.0022062222031835163,
+      "baseline_mae": 0.08604771807580935,
+      "baseline_gain_low": 0.061883063535539615,
+      "baseline_gain_high": 0.0721041733623682
+    },
+    {
+      "run_id": "Mn_md_identified_material_r1_s113_model",
+      "regime": "short",
+      "records": 98,
+      "materials": 75,
+      "low_cutoff": 1.9512227553993895,
+      "high_cutoff": 2.2253812857417103,
+      "mae": 0.023672496869790238,
+      "bias": 0.021316993422303313,
+      "baseline_mae": 0.1563524312037984,
+      "baseline_gain_low": 0.11998067747956528,
+      "baseline_gain_high": 0.14577822876313698
+    },
+    {
+      "run_id": "Mn_md_identified_material_r1_s113_model",
+      "regime": "middle",
+      "records": 762,
+      "materials": 346,
+      "low_cutoff": 1.9512227553993895,
+      "high_cutoff": 2.2253812857417103,
+      "mae": 0.016519067452331112,
+      "bias": 0.0033507558369686536,
+      "baseline_mae": 0.06458872130434404,
+      "baseline_gain_low": 0.04425765859367849,
+      "baseline_gain_high": 0.05228633912092544
+    },
+    {
+      "run_id": "Mn_md_identified_material_r1_s113_model",
+      "regime": "long",
+      "records": 81,
+      "materials": 58,
+      "low_cutoff": 1.9512227553993895,
+      "high_cutoff": 2.2253812857417103,
+      "mae": 0.038692494120982114,
+      "bias": -0.03168254580197716,
+      "baseline_mae": 0.2028612199685704,
+      "baseline_gain_low": 0.15349743528982343,
+      "baseline_gain_high": 0.17714769290175827
+    },
+    {
+      "run_id": "Fe_md_identified_material_r0_s113_model",
+      "regime": "all",
+      "records": 856,
+      "materials": 393,
+      "low_cutoff": 1.9398600327066535,
+      "high_cutoff": 2.1543602715724233,
+      "mae": 0.016991141234687677,
+      "bias": -0.0003557008427053015,
+      "baseline_mae": 0.06603935792795827,
+      "baseline_gain_low": 0.04366583050024131,
+      "baseline_gain_high": 0.05359709104764651
+    },
+    {
+      "run_id": "Fe_md_identified_material_r0_s113_model",
+      "regime": "short",
+      "records": 78,
+      "materials": 60,
+      "low_cutoff": 1.9398600327066535,
+      "high_cutoff": 2.1543602715724233,
+      "mae": 0.014876342469085863,
+      "bias": 0.01240491474880881,
+      "baseline_mae": 0.1394358553045159,
+      "baseline_gain_low": 0.11461003092621144,
+      "baseline_gain_high": 0.13401285730136756
+    },
+    {
+      "run_id": "Fe_md_identified_material_r0_s113_model",
+      "regime": "middle",
+      "records": 684,
+      "materials": 318,
+      "low_cutoff": 1.9398600327066535,
+      "high_cutoff": 2.1543602715724233,
+      "mae": 0.014062349407543837,
+      "bias": 0.002472672667207,
+      "baseline_mae": 0.04399081380121009,
+      "baseline_gain_low": 0.024941710427236703,
+      "baseline_gain_high": 0.033861052239965786
+    },
+    {
+      "run_id": "Fe_md_identified_material_r0_s113_model",
+      "regime": "long",
+      "records": 94,
+      "materials": 63,
+      "low_cutoff": 1.9398600327066535,
+      "high_cutoff": 2.1543602715724233,
+      "mae": 0.0400576083994039,
+      "bias": -0.03152522740566397,
+      "baseline_mae": 0.16557422375055678,
+      "baseline_gain_low": 0.11038391673988102,
+      "baseline_gain_high": 0.1429294888172638
+    },
+    {
+      "run_id": "Fe_md_identified_material_r1_s113_model",
+      "regime": "all",
+      "records": 867,
+      "materials": 393,
+      "low_cutoff": 1.943147118200827,
+      "high_cutoff": 2.1553319536746445,
+      "mae": 0.019270461255476663,
+      "bias": 0.0040661114519396436,
+      "baseline_mae": 0.07018359100335897,
+      "baseline_gain_low": 0.04609675969544339,
+      "baseline_gain_high": 0.05589976379845235
+    },
+    {
+      "run_id": "Fe_md_identified_material_r1_s113_model",
+      "regime": "short",
+      "records": 96,
+      "materials": 66,
+      "low_cutoff": 1.943147118200827,
+      "high_cutoff": 2.1553319536746445,
+      "mae": 0.04329004976236533,
+      "bias": 0.04020008203707128,
+      "baseline_mae": 0.16171535301341863,
+      "baseline_gain_low": 0.10312004963463499,
+      "baseline_gain_high": 0.12995825065822697
+    },
+    {
+      "run_id": "Fe_md_identified_material_r1_s113_model",
+      "regime": "middle",
+      "records": 674,
+      "materials": 310,
+      "low_cutoff": 1.943147118200827,
+      "high_cutoff": 2.1553319536746445,
+      "mae": 0.012853013239772344,
+      "bias": 0.0032585984459239164,
+      "baseline_mae": 0.04194753814335123,
+      "baseline_gain_low": 0.025468628259546964,
+      "baseline_gain_high": 0.03301355531986089
+    },
+    {
+      "run_id": "Fe_md_identified_material_r1_s113_model",
+      "regime": "long",
+      "records": 97,
+      "materials": 69,
+      "low_cutoff": 1.943147118200827,
+      "high_cutoff": 2.1553319536746445,
+      "mae": 0.04008983719283133,
+      "bias": -0.02608437731216383,
+      "baseline_mae": 0.1757923587835598,
+      "baseline_gain_low": 0.12303881380519577,
+      "baseline_gain_high": 0.1522679118295678
+    },
+    {
+      "run_id": "Co_md_identified_material_r0_s113_model",
+      "regime": "all",
+      "records": 482,
+      "materials": 252,
+      "low_cutoff": 1.8810396923686896,
+      "high_cutoff": 2.1423580279952232,
+      "mae": 0.02060037732058247,
+      "bias": 0.00012648997043609113,
+      "baseline_mae": 0.09179773106942163,
+      "baseline_gain_low": 0.06381267435072886,
+      "baseline_gain_high": 0.07835022467484776
+    },
+    {
+      "run_id": "Co_md_identified_material_r0_s113_model",
+      "regime": "short",
+      "records": 56,
+      "materials": 33,
+      "low_cutoff": 1.8810396923686896,
+      "high_cutoff": 2.1423580279952232,
+      "mae": 0.03275944424125433,
+      "bias": 0.03208910437504392,
+      "baseline_mae": 0.1542530407791638,
+      "baseline_gain_low": 0.10388066189935402,
+      "baseline_gain_high": 0.1399503775846663
+    },
+    {
+      "run_id": "Co_md_identified_material_r0_s113_model",
+      "regime": "middle",
+      "records": 382,
+      "materials": 212,
+      "low_cutoff": 1.8810396923686896,
+      "high_cutoff": 2.1423580279952232,
+      "mae": 0.015334385622864466,
+      "bias": 0.0006873529626935976,
+      "baseline_mae": 0.06973667604503196,
+      "baseline_gain_low": 0.04680397004109481,
+      "baseline_gain_high": 0.061711178962657195
+    },
+    {
+      "run_id": "Co_md_identified_material_r0_s113_model",
+      "regime": "long",
+      "records": 44,
+      "materials": 34,
+      "low_cutoff": 1.8810396923686896,
+      "high_cutoff": 2.1423580279952232,
+      "mae": 0.05084358370627915,
+      "bias": -0.04542251161366404,
+      "baseline_mae": 0.2038392236960419,
+      "baseline_gain_low": 0.14318883680127897,
+      "baseline_gain_high": 0.16284083123409127
+    },
+    {
+      "run_id": "Co_md_identified_material_r1_s113_model",
+      "regime": "all",
+      "records": 501,
+      "materials": 252,
+      "low_cutoff": 1.8781691111349215,
+      "high_cutoff": 2.141958178084969,
+      "mae": 0.018836425026125134,
+      "bias": 0.0003235887796230862,
+      "baseline_mae": 0.08906391065157696,
+      "baseline_gain_low": 0.06264497741881947,
+      "baseline_gain_high": 0.07752588706110455
+    },
+    {
+      "run_id": "Co_md_identified_material_r1_s113_model",
+      "regime": "short",
+      "records": 37,
+      "materials": 24,
+      "low_cutoff": 1.8781691111349215,
+      "high_cutoff": 2.141958178084969,
+      "mae": 0.028953560433529483,
+      "bias": 0.027534947764733416,
+      "baseline_mae": 0.14015095074507358,
+      "baseline_gain_low": 0.09879453610055101,
+      "baseline_gain_high": 0.12266146913005298
+    },
+    {
+      "run_id": "Co_md_identified_material_r1_s113_model",
+      "regime": "middle",
+      "records": 413,
+      "materials": 211,
+      "low_cutoff": 1.8781691111349215,
+      "high_cutoff": 2.141958178084969,
+      "mae": 0.014240588225559094,
+      "bias": 0.0029346934005815145,
+      "baseline_mae": 0.07053456536108468,
+      "baseline_gain_low": 0.04996411876921848,
+      "baseline_gain_high": 0.062312691755973794
+    },
+    {
+      "run_id": "Co_md_identified_material_r1_s113_model",
+      "regime": "long",
+      "records": 51,
+      "materials": 39,
+      "low_cutoff": 1.8781691111349215,
+      "high_cutoff": 2.141958178084969,
+      "mae": 0.04871380911553323,
+      "bias": -0.04056281300282619,
+      "baseline_mae": 0.20205212872047768,
+      "baseline_gain_low": 0.14000174235376234,
+      "baseline_gain_high": 0.16928009291008433
+    },
+    {
+      "run_id": "Ni_md_identified_material_r0_s113_model",
+      "regime": "all",
+      "records": 420,
+      "materials": 217,
+      "low_cutoff": 1.9033785232753864,
+      "high_cutoff": 2.1179375611722318,
+      "mae": 0.01651675169954831,
+      "bias": -0.0019904619512913233,
+      "baseline_mae": 0.06777803236443775,
+      "baseline_gain_low": 0.04485986060463243,
+      "baseline_gain_high": 0.05849630530615985
+    },
+    {
+      "run_id": "Ni_md_identified_material_r0_s113_model",
+      "regime": "short",
+      "records": 44,
+      "materials": 30,
+      "low_cutoff": 1.9033785232753864,
+      "high_cutoff": 2.1179375611722318,
+      "mae": 0.023204960652864256,
+      "bias": 0.022123032059555747,
+      "baseline_mae": 0.17209708387157371,
+      "baseline_gain_low": 0.14170895054322516,
+      "baseline_gain_high": 0.15607229244225157
+    },
+    {
+      "run_id": "Ni_md_identified_material_r0_s113_model",
+      "regime": "middle",
+      "records": 336,
+      "materials": 179,
+      "low_cutoff": 1.9033785232753864,
+      "high_cutoff": 2.1179375611722318,
+      "mae": 0.010862870180677421,
+      "bias": 0.0010007304352855728,
+      "baseline_mae": 0.046559675282199675,
+      "baseline_gain_low": 0.03195265449140184,
+      "baseline_gain_high": 0.03935848951198937
+    },
+    {
+      "run_id": "Ni_md_identified_material_r0_s113_model",
+      "regime": "long",
+      "records": 40,
+      "materials": 31,
+      "low_cutoff": 1.9033785232753864,
+      "high_cutoff": 2.1179375611722318,
+      "mae": 0.056652326609416256,
+      "bias": -0.053641321410469026,
+      "baseline_mae": 0.13126127519738792,
+      "baseline_gain_low": 0.0574820123336797,
+      "baseline_gain_high": 0.08829614711477018
+    },
+    {
+      "run_id": "Ni_md_identified_material_r1_s113_model",
+      "regime": "all",
+      "records": 428,
+      "materials": 217,
+      "low_cutoff": 1.8973761538284213,
+      "high_cutoff": 2.115428368610076,
+      "mae": 0.016165805756512774,
+      "bias": -0.0007751387129754618,
+      "baseline_mae": 0.06954733361080047,
+      "baseline_gain_low": 0.0460423782359497,
+      "baseline_gain_high": 0.060644907736448775
+    },
+    {
+      "run_id": "Ni_md_identified_material_r1_s113_model",
+      "regime": "short",
+      "records": 49,
+      "materials": 31,
+      "low_cutoff": 1.8973761538284213,
+      "high_cutoff": 2.115428368610076,
+      "mae": 0.02309189483711638,
+      "bias": 0.020168698275477046,
+      "baseline_mae": 0.17472715193129043,
+      "baseline_gain_low": 0.13983686592266484,
+      "baseline_gain_high": 0.16193156566164807
+    },
+    {
+      "run_id": "Ni_md_identified_material_r1_s113_model",
+      "regime": "middle",
+      "records": 341,
+      "materials": 182,
+      "low_cutoff": 1.8973761538284213,
+      "high_cutoff": 2.115428368610076,
+      "mae": 0.011091060316223679,
+      "bias": 0.0019818076395373115,
+      "baseline_mae": 0.04887493122673437,
+      "baseline_gain_low": 0.0325572092604513,
+      "baseline_gain_high": 0.043121323523481414
+    },
+    {
+      "run_id": "Ni_md_identified_material_r1_s113_model",
+      "regime": "long",
+      "records": 38,
+      "materials": 31,
+      "low_cutoff": 1.8973761538284213,
+      "high_cutoff": 2.115428368610076,
+      "mae": 0.05277395918253919,
+      "bias": -0.052521631308792005,
+      "baseline_mae": 0.11942833664402489,
+      "baseline_gain_low": 0.0495732292447023,
+      "baseline_gain_high": 0.0822064602400611
+    },
+    {
+      "run_id": "Cu_md_identified_material_r0_s113_model",
+      "regime": "all",
+      "records": 422,
+      "materials": 239,
+      "low_cutoff": 1.8873035261756914,
+      "high_cutoff": 2.231244776709231,
+      "mae": 0.06375649299515548,
+      "bias": -0.0026985188973503924,
+      "baseline_mae": 0.11528098902852854,
+      "baseline_gain_low": 0.042458620484787934,
+      "baseline_gain_high": 0.058863130430392846
+    },
+    {
+      "run_id": "Cu_md_identified_material_r0_s113_model",
+      "regime": "short",
+      "records": 41,
+      "materials": 26,
+      "low_cutoff": 1.8873035261756914,
+      "high_cutoff": 2.231244776709231,
+      "mae": 0.08181569240822484,
+      "bias": 0.08181569240822484,
+      "baseline_mae": 0.20036136875040594,
+      "baseline_gain_low": 0.10799733349994682,
+      "baseline_gain_high": 0.1311693964604292
+    },
+    {
+      "run_id": "Cu_md_identified_material_r0_s113_model",
+      "regime": "middle",
+      "records": 334,
+      "materials": 197,
+      "low_cutoff": 1.8873035261756914,
+      "high_cutoff": 2.231244776709231,
+      "mae": 0.04588362627487042,
+      "bias": 0.009424371810561358,
+      "baseline_mae": 0.0797338204964062,
+      "baseline_gain_low": 0.027198970167786246,
+      "baseline_gain_high": 0.041864956780478434
+    },
+    {
+      "run_id": "Cu_md_identified_material_r0_s113_model",
+      "regime": "long",
+      "records": 47,
+      "materials": 39,
+      "low_cutoff": 1.8873035261756914,
+      "high_cutoff": 2.231244776709231,
+      "mae": 0.17501415913641852,
+      "bias": -0.16257358613077827,
+      "baseline_mae": 0.2936737277760156,
+      "baseline_gain_low": 0.08417967816445666,
+      "baseline_gain_high": 0.15675919471298763
+    },
+    {
+      "run_id": "Cu_md_identified_material_r1_s113_model",
+      "regime": "all",
+      "records": 429,
+      "materials": 239,
+      "low_cutoff": 1.8822577685874533,
+      "high_cutoff": 2.2256205469743553,
+      "mae": 0.06113233010958304,
+      "bias": -0.0062440906337480305,
+      "baseline_mae": 0.11183924524791622,
+      "baseline_gain_low": 0.041367290515423885,
+      "baseline_gain_high": 0.05957459307582195
+    },
+    {
+      "run_id": "Cu_md_identified_material_r1_s113_model",
+      "regime": "short",
+      "records": 26,
+      "materials": 21,
+      "low_cutoff": 1.8822577685874533,
+      "high_cutoff": 2.2256205469743553,
+      "mae": 0.11119487453973012,
+      "bias": 0.11119487453973012,
+      "baseline_mae": 0.21247386432167426,
+      "baseline_gain_low": 0.07194776972600621,
+      "baseline_gain_high": 0.1254936439379681
+    },
+    {
+      "run_id": "Cu_md_identified_material_r1_s113_model",
+      "regime": "middle",
+      "records": 349,
+      "materials": 195,
+      "low_cutoff": 1.8822577685874533,
+      "high_cutoff": 2.2256205469743553,
+      "mae": 0.041180550417874905,
+      "bias": 0.008698380344338298,
+      "baseline_mae": 0.07713900352388886,
+      "baseline_gain_low": 0.029752252793406524,
+      "baseline_gain_high": 0.04419746985207384
+    },
+    {
+      "run_id": "Cu_md_identified_material_r1_s113_model",
+      "regime": "long",
+      "records": 54,
+      "materials": 47,
+      "low_cutoff": 1.8822577685874533,
+      "high_cutoff": 2.2256205469743553,
+      "mae": 0.16597575524332958,
+      "bias": -0.15936141407564736,
+      "baseline_mae": 0.28765191683620966,
+      "baseline_gain_low": 0.08132374693607247,
+      "baseline_gain_high": 0.164306430511615
+    }
+  ],
+  "localization_stability": [],
+  "elapsed_seconds": 22.769678592681885,
+  "limitations": [
+    "Available material IDs occur only in the scrape origin; identified-material results do not establish generalization to the unidentified feff origin.",
+    "Identifier disjointness cannot exclude cross-database aliases or structural near-duplicates without structures.",
+    "Conditional test-group bootstrap omits uncertainty over training samples; two resplits and (Q5) two fitting seeds only assess limited sensitivity.",
+    "All finite spectra retained: unusual maxima are not automatically treated as bad data; results depend on this choice.",
+    "Permutation perturbations can break spectral correlations. Regions overlap in physical support for multiscale features; degree and energy effects indicate predictive reliance, not causal spectroscopy."
+  ]
+}

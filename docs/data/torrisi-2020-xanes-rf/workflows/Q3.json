@@ -1,38 +1,32 @@
 {
   "question": "Q3",
-  "source_derivation": "Charge regression and white-line interpretation; full-spectrum results anchored to released performance tables and published Figs. 8\u20139. Peak-only prediction is a new controlled ablation, not a published result.",
-  "solver_input_boundary": "Only the eleven listed input files. Workflow code, ground truth, source paper and derived release arrays are evaluator/author material, not solver inputs.",
+  "source_derivation": "Charge/white-line relationships associated with Figs. 8–9; paired predictive comparison and material grouping extend the source analysis.",
+  "illustrative_analysis": "Compare full absorption vectors with photon energy at maximum absorption using independently validation-selected nonlinear regressors. Estimate paired uncertainty on charge prediction differences.",
+  "illustrative_design": "Audit provenance/label coverage; use available-ID material groups with two approximately 60/20/20 train/validation/test holdouts; train ExtraTrees with 80 trees and validation-selected leaf size 1 or 5. Report conditional group-bootstrap intervals, training-only baselines and source-selection limits. These are example choices only.",
+  "executed_finding": "Full-spectrum charge MAE is lower in 16/16 paired holdouts; 16 conditional intervals favor full spectra. The inference is conditional on learner and identified source population.",
+  "solver_input_boundary": "Only the standalone prompt and eight input files. Evaluator materials and the review site must be inaccessible during a benchmark attempt.",
+  "status": "executed_example",
   "commands": [
     {
-      "tool": "shell/python venv + pip",
-      "command": "python3 -m venv /tmp/xanes-bench-env; /tmp/xanes-bench-env/bin/python -m pip install -r papers/torrisi-2020-xanes-rf/requirements.txt",
-      "purpose": "Install the recorded numerical runtime."
+      "tool": "Python environment",
+      "command": "python3 -m venv /tmp/xanes-bench-env\n/tmp/xanes-bench-env/bin/python -m pip install -r papers/torrisi-2020-xanes-rf/requirements.txt",
+      "purpose": "Install the numerical runtime."
     },
     {
-      "tool": "Python gzip/json/NumPy/scikit-learn",
-      "command": "OPENBLAS_NUM_THREADS=1 MPLCONFIGDIR=/tmp/xanes-mpl /tmp/xanes-bench-env/bin/python docs/data/torrisi-2020-xanes-rf/workflows/candidate.py Q3 --inputs docs/data/torrisi-2020-xanes-rf/inputs --output /tmp/xanes-answer/Q3 --jobs 4",
-      "purpose": "Screen released spectra, construct paired splits and features, train fresh models, and write predictions, metrics, diagnostics and conclusion."
+      "tool": "Python / NumPy / scikit-learn / Matplotlib",
+      "command": "OPENBLAS_NUM_THREADS=1 MPLCONFIGDIR=/tmp/xanes-mpl /tmp/xanes-bench-env/bin/python docs/data/torrisi-2020-xanes-rf/workflows/candidate.py Q3 --inputs docs/data/torrisi-2020-xanes-rf/inputs --output /tmp/xanes-answer/Q3",
+      "purpose": "Execute one worked research design; its choices are examples, not solver requirements."
     },
     {
-      "tool": "Python evaluator",
-      "command": "/tmp/xanes-bench-env/bin/python docs/data/torrisi-2020-xanes-rf/workflows/verify.py Q3 --output /tmp/xanes-answer/Q3",
-      "purpose": "After completion, compare source-derived labels/memberships, recalculate scores and apply the benchmark comparison policy."
+      "tool": "Independent numerical evaluator",
+      "command": "/tmp/xanes-bench-env/bin/python docs/data/torrisi-2020-xanes-rf/workflows/verify.py Q3 --inputs docs/data/torrisi-2020-xanes-rf/inputs --output /tmp/xanes-answer/Q3",
+      "purpose": "Audit source-label provenance, partitions, pairing and metric arithmetic. Does not award scientific acceptance."
+    },
+    {
+      "tool": "Scientific review",
+      "command": "Review report, code and evidence using docs/data/torrisi-2020-xanes-rf/verification/scientific_review_rubric.md",
+      "purpose": "Judge leakage prevention, uncertainty, fairness and whether evidence supports the conclusions; rerun code to establish prediction provenance."
     }
   ],
-  "batch_command": "OPENBLAS_NUM_THREADS=1 MPLCONFIGDIR=/tmp/xanes-mpl /tmp/xanes-bench-env/bin/python docs/data/torrisi-2020-xanes-rf/workflows/candidate.py ALL --inputs docs/data/torrisi-2020-xanes-rf/inputs --output /tmp/xanes-answer --jobs 4",
-  "execution_record": "data/torrisi-2020-xanes-rf/verification/candidate_execution.json",
-  "verification_audit": "data/torrisi-2020-xanes-rf/verification/verification_audit.json",
-  "output_files": [
-    "result.json",
-    "splits.json",
-    "predictions.csv",
-    "importances.csv",
-    "feature_metadata.json",
-    "plot.png",
-    "diagnostics.png",
-    "conclusion.md",
-    "comparisons.csv"
-  ],
-  "question_specific_operations": "Fit full-spectrum and first-maximum-index Bader regressors on identical rows. Compute each model against the training-mean baseline. Pair full minus peak R\u00b2 and peak minus full MAE; distinguish model seed variation from uncertainty in a paired difference.",
-  "notes": "ALL reuses identical fits within that run. Each individual Q command is independently runnable and requires no answer from another question. Scientific conclusions and visual readability require human review after automated numeric checks."
+  "notes": "A valid alternative can use different representations, learners, filters, splits and random seeds and reach different or null findings. Historical v1 outputs are archived, not acceptance targets."
 }

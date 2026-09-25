@@ -1,0 +1,17 @@
+run_id,metric,value
+Ti_alternative,mae,0.01575558887964978
+Ti_alternative,r2,0.859802025767929
+V_alternative,mae,0.01576148348264527
+V_alternative,r2,0.9171944945948107
+Cr_alternative,mae,0.01919560831098063
+Cr_alternative,r2,0.942532726529301
+Mn_alternative,mae,0.019398662898571763
+Mn_alternative,r2,0.8911499191162833
+Fe_alternative,mae,0.01615269282187687
+Fe_alternative,r2,0.846698207255047
+Co_alternative,mae,0.02025964234828405
+Co_alternative,r2,0.8754413397346142
+Ni_alternative,mae,0.015250470513329503
+Ni_alternative,r2,0.857478243814238
+Cu_alternative,mae,0.06468474895383926
+Cu_alternative,r2,0.4625343792039359
