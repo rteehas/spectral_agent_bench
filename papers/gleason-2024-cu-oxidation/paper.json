@@ -122,63 +122,6 @@
       "groundTruthReasoning": "Worked solution: reconstruct the material spectrum from the supplied FEFF outputs using candidate.py. The interpolation and padding below follow the authors recipe as one valid numerical treatment; the benchmark also permits other justified treatments.\n\n1. Read the crystal structure (Python / pymatgen)\nRead L3_001_Cu_feff.inp with Python. Extract the lattice lengths, angles, species and fractional coordinates from its header, then construct a pymatgen Structure using Lattice.from_parameters.\nResult: A six-atom TbCu₅ unit cell containing one Tb atom and five Cu atoms.\n\n2. Determine the site weights (Python / pymatgen SpacegroupAnalyzer)\nIdentify equivalent atoms with SpacegroupAnalyzer(symprec=0.01).get_symmetrized_structure().equivalent_indices. Keep the Cu groups and divide each group size by the total number of Cu atoms.\nResult: Zero-based representative site 1 occurs once and site 2 represents four equivalent atoms, giving weights 1/5 = 0.2 and 4/5 = 0.8.\n\n3. Load the four edge spectra (Python / NumPy)\nUse numpy.loadtxt to read the L2 and L3 xmu.dat files for sites 001 and 002. Select column 1 for photon energy in eV and column 4 for absorption, preserving their supplied conventions.\nResult: Separate L₂ and L₃ energy–intensity arrays for each Cu environment.\n\n4. Interpolate each edge (Python / NumPy)\nFor this worked solution, use numpy.arange to make a 0.1 eV grid from round(min(E)+0.15,1) to round(max(E)−0.15,1), excluding the upper bound. Use numpy.interp for linear interpolation of each edge onto its grid.\nResult: Regularly sampled L₂ and L₃ curves ready for combination.\n\n5. Combine L₂ and L₃ for each site (Python / NumPy)\nExtend L₂ down to the L₃ grid start using b(E+a)^10. Determine a and b from an intensity of 1e−10 at that start and the first interpolated L₂ point. Prepend this extension to L₂ and add it pointwise to L₃ over the L₃ grid.\nResult: One combined Cu L₂,₃ spectrum for each representative site.\n\n6. Average the Cu sites (Python / NumPy)\nFind the overlap of the two site energy ranges, build a common 0.1 eV grid excluding its upper endpoint, and interpolate both site curves onto it. Calculate S(E) = 0.2 S₁(E) + 0.8 S₂(E). The weights account for the number of Cu atoms represented by each simulation.\nResult: The worked solution produces a material-averaged spectrum with 545 samples; this row count is specific to its numerical choices.\n\n7. Save the answer and plot the contributions (Python / pandas, json and Matplotlib)\nUse pandas.DataFrame.to_csv to save energy_eV and intensity in spectrum.csv. Use Python json to save material_id, site_weights and the output row count in result.json. Use Matplotlib to overlay the weighted site contributions and their sum in plot.png.\nResult: The requested numerical spectrum, result metadata and contribution plot. The archived run also retains an optional energy-reference diagnostic.\n\n8. Check the reconstructed answer (Evaluator / Python verify.py)\nAfter the candidate finishes, run verify.py separately to check its site weights, reported row count and spectral agreement. The evaluator reference is the mp-1077262 row of the authors released 110222_Cu_DF_With_Spectra.joblib, previously extracted with joblib and pandas by prepare_assets.py. The candidate does not read that reference. Apply the comparison policy documented in Verification.\nResult: The recorded execution passes the numerical checks, with normalized RMSE 0.0 on the comparison interval and zero reported peak-energy, peak-height and edge-area errors. Scientific interpretation and plot readability require separate review.\n\nExecution: python candidate.py Q1 --inputs INPUT_DIRECTORY --output OUTPUT_DIRECTORY. The Q1_candidate_workflow.json link in Verification records the actual commands, program versions and outputs. Source methods: Database_Construction.ipynb cells 1, 9 and 10. FEFF is the source of the supplied simulations; no new FEFF calculation is run here."
     },
     {
-      "id": "GLEASON24-Q5",
-      "kind": "Subquestion",
-      "title": "What Cu L₂,₃ signal results from the paper’s displayed three-material spectral combination?",
-      "inputs": [
-        {
-          "name": "parent_spectra.csv",
-          "url": "data/gleason-2024-cu-oxidation/inputs/Q5/parent_spectra.csv",
-          "description": "Released ordinary spectra for HoCdCu4 (mp-12007), NdCuSi (mp-8120) and CuN2(Cl2O)2 (mp-1188453), already aligned and normalized. No mixture output is included."
-        }
-      ],
-      "prompt": {
-        "background": "The Figure 1 example combines these three parent signals linearly using display coefficients 0.33, 0.33 and 0.33. Use those coefficients exactly: this plotting call does not rescale them to sum to one. This task concerns the displayed signal; the training-data generator has a separate normalization rule.",
-        "instruction": "Compute the three weighted contributions and total signal on the shared energy grid. Save mixture.csv with energy_eV,weighted_0,weighted_1,weighted_2,mixture, and plot dashed components with their summed curve. Save result.json with parent_ids, coefficients, coefficient_sum and points. Explain why the summed curve can exceed each individual weighted contribution."
-      },
-      "verification": {
-        "description": "Require the weighted components and total at rtol=1e−7, atol=1e−8, including the 0.99 coefficient sum. Compare curve order, peak locations and relative heights to the embedded author plot; styling need not match. Require an additive-signal interpretation, without claiming measured mass fractions.",
-        "data": [
-          {
-            "name": "expected.json",
-            "url": "data/gleason-2024-cu-oxidation/verification/Q5/expected.json",
-            "description": "Evaluator-only numerical targets; see provenance.json for their evidence type."
-          },
-          {
-            "name": "mixture.csv",
-            "url": "data/gleason-2024-cu-oxidation/verification/Q5/mixture.csv",
-            "description": "Evaluator-only numerical comparison table."
-          }
-        ],
-        "figures": [
-          {
-            "image": "assets/gleason-2024-cu-oxidation/notebook-ternary-mixture.png",
-            "label": "Author notebook · displayed ternary mixture",
-            "caption": "Unmodified embedded plot from Paper_Figures.ipynb cell 16, output 2. Supports the curve shapes; numeric reference is a recomputation.",
-            "url": "https://www.nature.com/articles/s41524-024-01408-1"
-          }
-        ],
-        "methods": [
-          {
-            "name": "Q5_candidate_workflow.json",
-            "url": "data/gleason-2024-cu-oxidation/workflows/Q5.json",
-            "description": "Worked candidate tool sequence, actual execution record, and limitations. Exclude from agent inputs."
-          },
-          {
-            "name": "candidate.py",
-            "url": "data/gleason-2024-cu-oxidation/workflows/candidate.py",
-            "description": "Executable worked solutions; reads only the selected question input directory. Exclude from agent inputs."
-          },
-          {
-            "name": "verify.py",
-            "url": "data/gleason-2024-cu-oxidation/workflows/verify.py",
-            "description": "Evaluator-side numeric checker. Interpretation and figure readability require separate review."
-          }
-        ]
-      },
-      "groundTruthReasoning": "The authors plotting call in Paper_Figures.ipynb cell 16 uses these IDs and coefficients directly. Their sum is 0.99. The evaluator table is a deterministic weighted sum recomputed from the released parent arrays; it is not a separately released mixture table. The independently embedded author plot supplies a shape check. The parents are not the Cu/Cu2O/CuO standards. The total is pointwise additive, explaining why it can exceed each weighted component."
-    },
-    {
       "id": "GLEASON24-Q6",
       "kind": "Subquestion",
       "title": "How does synthetic mixture augmentation change Cu oxidation-state coverage?",
