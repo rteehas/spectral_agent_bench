@@ -2,7 +2,7 @@
   "question": "Q2",
   "source_derivation": "Distance regression and error structure associated with Fig. 6. The solver defines and validates unusual-environment regimes.",
   "illustrative_analysis": "Fit distance regressors, define short/middle/long regimes using training-distance quantiles, and compare signed errors and MAE with a training-median baseline, including material-bootstrap intervals.",
-  "illustrative_design": "Audit provenance/label coverage; use available-ID material groups with two approximately 60/20/20 train/validation/test holdouts; train ExtraTrees with 80 trees and validation-selected leaf size 1 or 5. Report conditional group-bootstrap intervals, training-only baselines and source-selection limits. These are example choices only.",
+  "illustrative_design": "Inspect source labels, material IDs and target availability; use available-ID material groups with two approximately 60/20/20 train/validation/test holdouts; train ExtraTrees with 80 trees and validation-selected leaf size 1 or 5. Report conditional group-bootstrap intervals, training-only baselines and source-selection limits. These are example choices only.",
   "executed_finding": "Descriptive mean over eight elements and two holdouts: short: mean MAE 0.0307 Å, mean bias +0.0293 Å; middle: mean MAE 0.0169 Å, mean bias +0.0033 Å; long: mean MAE 0.0674 Å, mean bias -0.0520 Å. Full regime support and uncertainty are in the example, not universal calibration targets.",
   "solver_input_boundary": "Only the standalone prompt and eight input files. Evaluator materials and the review site must be inaccessible during a benchmark attempt.",
   "status": "executed_example",
@@ -20,12 +20,12 @@
     {
       "tool": "Independent numerical evaluator",
       "command": "/tmp/xanes-bench-env/bin/python docs/data/torrisi-2020-xanes-rf/workflows/verify.py Q2 --inputs docs/data/torrisi-2020-xanes-rf/inputs --output /tmp/xanes-answer/Q2",
-      "purpose": "Audit source-label provenance, partitions, pairing and metric arithmetic. Does not award scientific acceptance."
+      "purpose": "Check record identities, data partitions, prediction coverage and numerical consistency. Does not award scientific acceptance."
     },
     {
       "tool": "Scientific review",
       "command": "Review report, code and evidence using docs/data/torrisi-2020-xanes-rf/verification/scientific_review_rubric.md",
-      "purpose": "Judge leakage prevention, uncertainty, fairness and whether evidence supports the conclusions; rerun code to establish prediction provenance."
+      "purpose": "Judge leakage prevention, uncertainty, fairness and whether evidence supports the conclusions; rerun code to confirm how the predictions were produced."
     }
   ],
   "notes": "A valid alternative can use different representations, learners, filters, splits and random seeds and reach different or null findings. Historical v1 outputs are archived, not acceptance targets."

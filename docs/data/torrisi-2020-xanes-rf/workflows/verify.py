@@ -24,11 +24,27 @@ DEFAULT_INPUT = Path(__file__).resolve().parents[1] / 'inputs'
 TARGET_FIELDS = {'coord': 'coordination', 'md': 'avg_nn_dists', 'bader': 'bader'}
 TARGETS = {'Q1': ['coord'], 'Q2': ['md'], 'Q3': ['bader'],
            'Q4': ['coord', 'md', 'bader'], 'Q5': ['coord', 'md']}
-CONDITIONS = {'Q1': {'untreated', 'treated'}, 'Q2': {'model'},
-              'Q3': {'full', 'white_line'}, 'Q4': {'pointwise', 'multiscale'},
-              'Q5': {'released', 'unit_peak'}}
 ROLES = {'train', 'validation', 'test', 'excluded'}
-GENERALIZATION = {'spectrum', 'identified_material'}
+# Names are conveniences for reading ordinary scientific tables, not required
+# modeling choices. Shared extra columns named for experiments may also identify them.
+IDENTIFIERS = ['run_id', 'model', 'condition', 'split_id', 'fold', 'repeat',
+               'evaluation_id', 'representation', 'seed', 'experiment_id', 'trial']
+COLUMN_ALIASES = {
+    'prediction': 'y_pred', 'predicted': 'y_pred', 'predicted_value': 'y_pred',
+    'truth': 'y_true', 'true_value': 'y_true', 'observed': 'y_true',
+    'property': 'target', 'target_property': 'target',
+    'run': 'run_id', 'method': 'model', 'estimator': 'model', 'model_id': 'model', 'model_name': 'model',
+    'experiment': 'experiment_id', 'trial_id': 'trial',
+    'partition': 'role', 'membership': 'role', 'dataset_role': 'role',
+    'evaluation_split': 'split_id', 'split': 'split_id',
+}
+ROLE_ALIASES = {'training': 'train', 'validation': 'validation', 'valid': 'validation',
+                'val': 'validation', 'testing': 'test', 'heldout': 'test',
+                'held_out': 'test', 'exclude': 'excluded'}
+TARGET_ALIASES = {'coordination': 'coord', 'coordination_number': 'coord',
+                  'mean_neighbor_distance': 'md', 'mean_nearest_neighbor_distance': 'md',
+                  'avg_nn_dists': 'md', 'distance': 'md',
+                  'bader_charge': 'bader', 'charge': 'bader'}
 REVIEW = {
     'common': [
         'Rerun submitted code from the supplied raw records in a clean environment. Compare the regenerated partitions, predictions, metrics, and supporting tables to the submission; recording a command alone is insufficient.',
@@ -39,7 +55,7 @@ REVIEW = {
     ],
     'Q1': [
         'Assess whether the spectral evidence distinguishes coordination classes 4/5/6 beyond class prevalence; verify class support, confusion patterns, an appropriate prevalence baseline, and minority-class performance.',
-        'Check the chosen class-imbalance intervention and paired changes with uncertainty. Improvements in aggregate accuracy alone cannot establish improved minority-class discrimination.',
+        'Check the chosen class-imbalance intervention and the comparability of its evaluation, with uncertainty. Improvements in aggregate accuracy alone cannot establish improved minority-class discrimination.',
     ],
     'Q2': [
         'Independently reconstruct the submitted short-/long-distance or other justified tail cohorts from raw distances and the declared rule; check tail counts, errors, signed biases, baseline comparisons, and uncertainty.',
@@ -47,14 +63,14 @@ REVIEW = {
     ],
     'Q3': [
         'Reconstruct the white-line estimator from energy and absorption; ensure the white-line condition uses only that energy and the full condition uses spectral information, with no target-derived peak selection.',
-        'Verify the paired charge-prediction comparison, baselines, uncertainty, and evidence about deviations from a simple white-line relationship. Interpret the numerical released Bader label without inventing an unsupported oxidation-state mapping.',
+        'Verify the charge-prediction comparison, its evaluation design, baselines, uncertainty, and evidence about deviations from a simple white-line relationship. Interpret the numerical released Bader label without inventing an unsupported oxidation-state mapping.',
     ],
     'Q4': [
         'Reconstruct the multiscale representation from E/mu and map descriptors or attributed intervals back to physical energy regions. The representation must actually encode more than one spectral scale.',
         'Verify predictive comparisons for all three targets and independent held-out perturbation/ablation or other defensible validation of attributed spectral information. Model importance rankings alone do not establish a physical mechanism.',
     ],
     'Q5': [
-        'Reconstruct unit-peak normalization as mu/max(mu), verify paired sample coverage and otherwise comparable representations/learners, and check the handling of invalid maxima.',
+        'Reconstruct unit-peak normalization as mu/max(mu), verify defensible sample comparisons and otherwise comparable representations/learners, and check the handling of invalid maxima.',
         'Check predictive changes for both targets separately from stability of the inferred informative energy regions/features; recompute the submitted stability evidence and validate important regions with held-out perturbation/ablation or another justified check. Compare physical energy regions or consistently defined descriptors, not arbitrary coefficient indices from incompatible representations.',
     ],
 }
@@ -100,11 +116,63 @@ def load_raw(inputs, element):
     return _read_raw_cached(str(path), stat.st_mtime_ns, stat.st_size)
 
 
-def table(path, columns, identities):
+def canonical_target(value):
+    key = str(value).strip().lower().replace(' ', '_').replace('-', '_')
+    return TARGET_ALIASES.get(key, key)
+
+
+def table(path, required):
     frame = pd.read_csv(path, keep_default_na=False)
-    require(set(columns).issubset(frame.columns), path.name + ': missing required columns')
     require(len(frame) > 0, path.name + ': empty table')
-    require(not frame.duplicated(identities).any(), path.name + ': duplicate identities')
+    for old, new in COLUMN_ALIASES.items():
+        if old not in frame:
+            continue
+        if new in frame:
+            require((frame[old].astype(str) == frame[new].astype(str)).all(),
+                    path.name + ': conflicting columns ' + old + '/' + new)
+            frame = frame.drop(columns=old)
+        else:
+            frame = frame.rename(columns={old: new})
+    # A column named "split" commonly describes either membership or a fold.
+    if 'role' not in frame and 'split_id' in frame:
+        possible = frame.split_id.astype(str).str.lower().map(lambda x: ROLE_ALIASES.get(x, x))
+        if set(possible) <= ROLES:
+            frame = frame.rename(columns={'split_id': 'role'})
+    require(set(required) <= set(frame.columns), path.name + ': missing columns ' + str(set(required) - set(frame.columns)))
+    if 'target' in frame:
+        frame['target'] = frame.target.map(canonical_target)
+    if 'role' in frame:
+        frame['role'] = frame.role.astype(str).str.lower().map(lambda x: ROLE_ALIASES.get(x, x))
+        require(set(frame.role) <= ROLES, path.name + ': unknown partition role')
+    for name in IDENTIFIERS:
+        if name in frame:
+            frame[name] = frame[name].astype(str)
+            require(frame[name].str.strip().ne('').all(), path.name + ': blank ' + name)
+    return frame
+
+
+def enrich(frame, design, question, label):
+    """Resolve optional legacy run IDs; inline metadata must agree if provided."""
+    runs = design.get('runs', [])
+    if runs and 'run_id' in frame:
+        require(all(isinstance(r, dict) and 'run_id' in r for r in runs), 'Invalid optional run metadata')
+        roster = pd.DataFrame(runs)
+        require(not roster.run_id.duplicated().any(), 'Duplicate optional run_id')
+        roster['run_id'] = roster.run_id.astype(str)
+        require(set(frame.run_id) <= set(roster.run_id), label + ': run_id absent from optional design')
+        roster = roster.set_index('run_id')
+        for key in ['element', 'target', 'condition', 'model', 'comparison_id', 'generalization']:
+            if key not in roster:
+                continue
+            values = frame.run_id.map(roster[key])
+            if key == 'target':
+                values = values.map(canonical_target)
+            if key in frame:
+                require((frame[key].astype(str) == values.astype(str)).all(), label + ': contradictory ' + key)
+            else:
+                frame[key] = values
+    if 'target' not in frame and len(TARGETS[question]) == 1:
+        frame['target'] = TARGETS[question][0]
     return frame
 
 
@@ -125,7 +193,7 @@ def recompute_metrics(target, truth, predictions):
                     macro_f1=float(np.mean(scores)),
                     **{f'f1_{k}': float(v) for k, v in zip([4, 5, 6], scores)})
     return dict(mae=float(mean_absolute_error(truth, predictions)),
-                r2=float(r2_score(truth, predictions)))
+                r2=float(r2_score(truth, predictions)) if len(truth) >= 2 and np.ptp(truth) > 0 else None)
 
 
 def artifacts(output):
@@ -133,9 +201,10 @@ def artifacts(output):
     require(report.is_file() and report.read_text().strip(), 'Missing nonempty report.md')
     # Language and file naming are the submitter's choice. Whether these files
     # form executable source is checked by the mandatory independent rerun.
-    code = [p for p in (output / 'code').rglob('*')
-            if p.is_file() and '__pycache__' not in p.parts and p.suffix != '.pyc']
-    require(code and any(p.stat().st_size for p in code), 'Missing reproducible source in code/')
+    code = [p for p in output.rglob('*')
+            if p.is_file() and '__pycache__' not in p.parts
+            and p.suffix.lower() in {'.py', '.ipynb', '.r', '.jl', '.m', '.sh', '.c', '.cpp', '.rmd'}]
+    require(code and any(p.stat().st_size for p in code), 'Missing runnable analysis source')
     plots = [p for p in output.rglob('*')
              if p.is_file() and p.suffix.lower() in {'.png', '.jpg', '.jpeg', '.svg', '.pdf'}]
     require(plots, 'Missing a figure')
@@ -155,101 +224,142 @@ def artifacts(output):
 def verify(question, output, inputs=DEFAULT_INPUT):
     require(question in TARGETS, 'Unknown question')
     output, inputs = Path(output), Path(inputs)
-    design = read_json(output / 'design.json')
-    require(design.get('question') == question, 'Wrong question in design.json')
-    runs = design.get('runs')
-    require(isinstance(runs, list) and runs, 'design.json: runs must be a nonempty list')
-    required = {'run_id', 'element', 'target', 'condition', 'comparison_id', 'generalization'}
-    for run in runs:
-        require(isinstance(run, dict) and required.issubset(run), 'Incomplete run declaration')
-        require(all(isinstance(run[k], str) and run[k].strip() for k in required),
-                'Run identifiers and declarations must be nonempty strings')
-        require(run['element'] in ELEMENTS, 'Unknown element')
-        require(run['target'] in TARGETS[question], 'Target is outside this question')
-        require(run['generalization'] in GENERALIZATION, 'Unknown generalization claim')
-    ids = {r['run_id'] for r in runs}
-    require(len(ids) == len(runs), 'Duplicate run_id')
-    predictions = table(output / 'predictions.csv', ['run_id', 'source_row', 'y_pred'], ['run_id', 'source_row'])
-    partitions = table(output / 'partitions.csv', ['run_id', 'source_row', 'role'], ['run_id', 'source_row'])
-    metrics = table(output / 'metrics.csv', ['run_id', 'metric', 'value'], ['run_id', 'metric'])
-    row_ids(predictions, 'predictions.csv')
-    row_ids(partitions, 'partitions.csv')
-    for frame, name in [(predictions, 'predictions'), (partitions, 'partitions'), (metrics, 'metrics')]:
-        require(set(frame.run_id) == ids, name + ': missing or undeclared runs')
-    require(set(partitions.role) <= ROLES, 'Unknown partition role')
+    design = read_json(output / 'design.json') if (output / 'design.json').exists() else {}
+    require(isinstance(design, dict), 'Optional design.json must be an object')
+    require(design.get('question', question) == question, 'Wrong question in optional design.json')
+    predictions = enrich(table(output / 'predictions.csv', ['source_row', 'y_pred']), design, question, 'predictions')
+    partitions = enrich(table(output / 'partitions.csv', ['source_row', 'role']), design, question, 'partitions')
+    metrics = (enrich(table(output / 'metrics.csv', ['metric', 'value']), design, question, 'metrics')
+               if (output / 'metrics.csv').exists() else None)
+    for frame, name in [(predictions, 'predictions'), (partitions, 'partitions')]:
+        row_ids(frame, name)
+        require('element' in frame, name + ': element is needed to identify source records')
+        require(set(frame.element) <= set(ELEMENTS), name + ': unknown element')
+    require('target' in predictions, 'Multiple target properties: identify the property in predictions')
+    require(set(predictions.target) <= set(TARGETS[question]), 'Prediction target outside this question')
     require(np.isfinite(pd.to_numeric(predictions.y_pred, errors='raise')).all(), 'Nonfinite prediction')
-    require(np.isfinite(pd.to_numeric(metrics.value, errors='raise')).all(), 'Nonfinite metric')
+    if metrics is not None:
+        require(np.isfinite(pd.to_numeric(metrics.value, errors='raise')).all(), 'Nonfinite optional metric')
     artifact_evidence = artifacts(output)
-    comparisons, checks, coverage, input_hashes = {}, [], set(), {}
-    for run in runs:
-        name, element, target = run['run_id'], run['element'], run['target']
+    # Shared experiment identifiers can have arbitrary values. Partitions may
+    # omit model/target columns when one assignment applies to several models.
+    ignored = {'source_row', 'role', 'y_pred', 'y_true', 'element', 'target',
+               'comparison_id', 'generalization', 'metric', 'value'}
+    shared_extra = sorted(key for key in (set(predictions) & set(partitions)) - ignored - set(IDENTIFIERS)
+                          if any(token in key.lower() for token in ['model', 'method', 'experiment', 'trial', 'split', 'fold', 'run', 'repeat', 'condition', 'representation']))
+    identifiers = [key for key in IDENTIFIERS if key in predictions] + shared_extra
+    keys = ['element', 'target'] + identifiers
+    require(not predictions.duplicated(keys + ['source_row']).any(),
+            'Duplicate predictions; identify distinct models or evaluation splits if needed')
+    partition_keys = ['element'] + [key for key in ['target'] + identifiers if key in partitions]
+    require(not partitions.duplicated(partition_keys + ['source_row']).any(),
+            'Overlapping or repeated row memberships; identify evaluation splits if needed')
+    checks, comparisons, coverage, input_hashes, used_partition_indices, used_metric_indices = [], {}, set(), {}, set(), set()
+    for identity, pred in predictions.groupby(keys, dropna=False, sort=False):
+        identity = identity if isinstance(identity, tuple) else (identity,)
+        run = dict(zip(keys, identity))
+        element, target = run['element'], run['target']
+        name = str(run.get('run_id', '|'.join(str(run[k]) for k in keys)))
+        part = partitions
+        for key in partition_keys:
+            part = part[part[key].astype(str) == str(run[key])]
+        require(len(part) > 0, name + ': missing data partition')
+        used_partition_indices.update(part.index)
+        part = part.set_index('source_row').sort_index()
+        pred = pred.set_index('source_row').sort_index()
         raw, sha = load_raw(inputs, element)
         input_hashes[element] = sha
-        part = partitions[partitions.run_id == name].set_index('source_row').sort_index()
-        require(set(part.index) == set(raw), name + ': partitions must account for every supplied element row')
+        require(set(part.index) <= set(raw), name + ': partition references unknown source rows')
         active = part[part.role != 'excluded']
+        role_rows = {role: set(part.index[part.role == role]) for role in sorted(ROLES)}
         truth_by_row = {}
-        for source_row in active.index:
-            value = raw[int(source_row)][target]
-            require(isinstance(value, (int, float)) and not isinstance(value, bool) and np.isfinite(value),
-                    name + ': active row lacks a finite raw target')
-            require(target != 'coord' or value in [4, 5, 6], name + ': active coordination label outside 4/5/6')
-            truth_by_row[int(source_row)] = float(value)
-        role_rows = {role: set(part.index[part.role == role]) for role in ROLES}
-        require(role_rows['train'] and len(role_rows['test']) >= 2, name + ': empty training set or fewer than two test rows')
-        materials = {role: {str(raw[int(i)]['material_id']) for i in role_rows[role]
-                            if raw[int(i)]['material_id'] is not None and str(raw[int(i)]['material_id']).strip()}
-                     for role in ['train', 'validation', 'test']}
-        missing_ids = sum(raw[int(i)]['material_id'] is None or not str(raw[int(i)]['material_id']).strip()
-                          for i in active.index)
-        overlaps = {a + '_' + b: len(materials[a] & materials[b])
-                    for a, b in [('train', 'test'), ('train', 'validation'), ('validation', 'test')]}
-        if run['generalization'] == 'identified_material':
-            require(missing_ids == 0, name + ': identified_material run contains rows without material IDs')
-            require(not any(overlaps.values()), name + ': material identity leaks between declared partitions')
-        pred = predictions[predictions.run_id == name].set_index('source_row').sort_index()
+        # Auxiliary spectra may legitimately be used without labels during
+        # representation learning. Only scored test rows require target truth.
+        auxiliary_labels = {role: 0 for role in ['train', 'validation']}
+        for role in ['train', 'validation', 'test']:
+            for source_row in role_rows[role]:
+                value = raw[int(source_row)][target]
+                usable = (isinstance(value, (int, float)) and not isinstance(value, bool)
+                          and np.isfinite(value) and (target != 'coord' or value in [4, 5, 6]))
+                if role == 'test':
+                    require(usable, name + ': scored test row lacks a finite in-scope raw target')
+                    truth_by_row[int(source_row)] = float(value)
+                elif not usable:
+                    auxiliary_labels[role] += 1
+        require(role_rows['train'] and role_rows['test'], name + ': empty training or test set')
         require(set(pred.index) == role_rows['test'], name + ': predictions do not cover exactly the declared test rows')
         truth = np.asarray([truth_by_row[int(i)] for i in pred.index])
-        require(target == 'coord' or np.ptp(truth) > 0, name + ': test targets are constant; R2 is uninformative')
-        # Redundant columns are optional, but may not contradict the raw source/roster.
-        for column, expected in [('element', element), ('target', target)]:
-            if column in pred:
-                require((pred[column] == expected).all(), name + ': contradictory ' + column)
         if 'y_true' in pred:
             np.testing.assert_allclose(pd.to_numeric(pred.y_true), truth, rtol=0, atol=1e-12,
                                        err_msg=name + ': truth labels differ from raw release')
+        materials = {role: {str(raw[int(i)]['material_id']) for i in role_rows[role]
+                            if raw[int(i)]['material_id'] is not None and str(raw[int(i)]['material_id']).strip()}
+                     for role in ['train', 'validation', 'test']}
+        missing = {role: sum(raw[int(i)]['material_id'] is None or not str(raw[int(i)]['material_id']).strip()
+                             for i in role_rows[role]) for role in ['train', 'validation', 'test']}
+        overlaps = {a + '_' + b: len(materials[a] & materials[b])
+                    for a, b in [('train', 'test'), ('train', 'validation'), ('validation', 'test')]}
+        claims = {}
+        for key in ['generalization', 'comparison_id']:
+            values = set()
+            for frame in [pred, part]:
+                if key in frame:
+                    values.update(frame[key].astype(str))
+            require(len(values) <= 1, name + ': contradictory optional ' + key)
+            if values:
+                claims[key] = next(iter(values))
+        if claims.get('generalization') == 'identified_material':
+            require(sum(missing.values()) == 0, name + ': explicit identified_material claim includes missing material IDs')
+            require(not any(overlaps.values()), name + ': explicit identified_material claim contradicts partition overlap')
         calculated = recompute_metrics(target, truth, pd.to_numeric(pred.y_pred).to_numpy())
-        declared = metrics[metrics.run_id == name].set_index('metric').value
-        require(set(calculated) <= set(declared.index), name + ': missing core metrics')
-        for metric, expected in calculated.items():
-            require(np.isclose(float(declared[metric]), expected, atol=1e-8, rtol=1e-7),
-                    name + ': inconsistent ' + metric)
-        group_key = (element, target, run['generalization'], run['comparison_id'])
-        group = comparisons.setdefault(group_key, [])
-        require(not any(other['condition'] == run['condition'] for other, _ in group),
-                name + ': duplicate condition within a comparison')
-        for other, other_part in group:
-            require(part.role.equals(other_part.role),
-                    name + ': paired comparison changes row inclusion or partition assignments')
-        group.append((run, part))
-        checks.append(dict(run_id=name, source_labels='read directly from supplied element records',
+        additional = []
+        if metrics is not None:
+            selected = metrics
+            for key in keys:
+                if key in selected:
+                    selected = selected[selected[key].astype(str) == str(run[key])]
+            # A metric table without enough experiment identifiers is ambiguous;
+            # it is not silently assigned to every experiment.
+            require(not selected.metric.duplicated().any(), name + ': optional metrics need model/split identifiers')
+            used_metric_indices.update(selected.index)
+            aliases = {'mean_absolute_error': 'mae', 'r2_score': 'r2', 'f1_macro': 'macro_f1'}
+            for item in selected.itertuples():
+                metric = aliases.get(str(item.metric).lower(), str(item.metric).lower())
+                if metric in calculated:
+                    expected = calculated[metric]
+                    require(expected is not None and np.isclose(float(item.value), expected, atol=1e-8, rtol=1e-7),
+                            name + ': inconsistent optional ' + metric)
+                else:
+                    additional.append(str(item.metric))
+        if 'comparison_id' in claims:
+            # This historical optional declaration explicitly claims identical
+            # row inclusion and assignments. Unpaired studies need not supply it.
+            group_key = (element, target, claims['comparison_id'])
+            group = comparisons.setdefault(group_key, [])
+            for other in group:
+                require(part.role.equals(other), name + ': optional paired comparison changes partition assignments')
+            group.append(part.role)
+        coverage.add((element, target))
+        checks.append(dict(run_id=name, experiment=run, source_labels='read directly from supplied element records',
                            partitions={role: len(rows) for role, rows in role_rows.items()},
+                           supplied_rows_not_listed=len(set(raw) - set(part.index)),
+                           auxiliary_rows_without_in_scope_target=auxiliary_labels,
                            distinct_material_ids={role: len(v) for role, v in materials.items()},
-                           material_id_overlap=overlaps, active_rows_without_material_id=int(missing_ids),
+                           material_id_overlap=overlaps, rows_without_material_id=missing,
+                           active_rows_without_material_id=int(sum(missing.values())),
                            active_source_counts=pd.Series([raw[int(i)]['origin'] for i in active.index]).value_counts(dropna=False).to_dict(),
-                           metrics_recomputed=calculated,
-                           additional_metrics_requiring_review=sorted(set(declared.index) - set(calculated))))
-    for (element, target, generalization, comparison_id), group in comparisons.items():
-        if generalization == 'identified_material' and CONDITIONS[question] <= {run['condition'] for run, _ in group}:
-            coverage.add((element, target))
-    expected_coverage = {(element, target) for element in ELEMENTS for target in TARGETS[question]}
-    require(coverage == expected_coverage,
-            'Missing identified-material investigation/paired conditions for: ' + str(sorted(expected_coverage - coverage)))
+                           optional_claims=claims, metrics_recomputed=calculated,
+                           additional_metrics_requiring_review=sorted(set(additional))))
+    require(used_partition_indices == set(partitions.index), 'Partition rows reference experiments without predictions')
+    if metrics is not None:
+        require(used_metric_indices == set(metrics.index), 'Optional metric rows reference experiments without predictions')
+    expected = {(element, target) for element in ELEMENTS for target in TARGETS[question]}
+    require(coverage == expected, 'Missing requested elements/properties: ' + str(sorted(expected - coverage)))
     return dict(question=question, numerical_integrity_pass=True, scientific_pass=None,
-                status='scientific_review_required', run_count=len(runs), comparison_count=len(comparisons),
+                status='scientific_review_required', run_count=len(checks), comparison_count=len(comparisons),
                 source_input_sha256=input_hashes, artifacts=artifact_evidence, checks=checks,
                 required_independent_review=REVIEW['common'] + REVIEW[question],
-                interpretation='Passing this check establishes declared row/label/partition consistency and core score arithmetic only. It cannot prove the fitted code used those partitions, prevent fabricated predictions, validate optional diagnostic tables, or judge scientific conclusions. Final acceptance requires an independent code rerun and all scientific rubric items; archived results are illustrative, never numeric pass thresholds.')
+                interpretation='Passing establishes source-row/label/partition consistency and recalculates scores. Material-ID overlap and missing IDs are reported; a grouped-material split is not required. Optional explicit pairing/generalization claims and recognized scores are checked if supplied. This does not prove code used those partitions, prevent fabricated predictions, validate scientific conclusions, or accept an investigation. Independent code rerun and scientific review remain necessary. No archived result or prescribed modeling recipe is an acceptance target.')
 
 
 def main():

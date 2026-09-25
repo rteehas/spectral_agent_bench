@@ -1,8 +1,8 @@
 {
   "question": "Q1",
-  "source_derivation": "Coordination prediction and imbalance analysis associated with Fig. 3/Table 1. Material-group evaluation and study-design sensitivity extend the source analysis.",
+  "source_derivation": "Coordination prediction and imbalance analysis associated with Fig. 3/Table 1. Evaluation design is left to the solver.",
   "illustrative_analysis": "Compare untreated versus class-weighted coordination models on paired material holdouts and record holdouts of the same identified cohort. Inspect training/test class support, per-class F1, confusion counts and conditional paired uncertainty.",
-  "illustrative_design": "Audit provenance/label coverage; use available-ID material groups with two approximately 60/20/20 train/validation/test holdouts; train ExtraTrees with 80 trees and validation-selected leaf size 1 or 5. Report conditional group-bootstrap intervals, training-only baselines and source-selection limits. These are example choices only.",
+  "illustrative_design": "Inspect source labels, material IDs and target availability; use available-ID material groups with two approximately 60/20/20 train/validation/test holdouts; train ExtraTrees with 80 trees and validation-selected leaf size 1 or 5. Report conditional group-bootstrap intervals, training-only baselines and source-selection limits. These are example choices only.",
   "executed_finding": "Class weighting increases macro-F1 in 6/16 material comparisons; 2 conditional intervals are wholly positive. Per-class performance and support still determine rare-environment reliability.",
   "solver_input_boundary": "Only the standalone prompt and eight input files. Evaluator materials and the review site must be inaccessible during a benchmark attempt.",
   "status": "executed_example",
@@ -20,12 +20,12 @@
     {
       "tool": "Independent numerical evaluator",
       "command": "/tmp/xanes-bench-env/bin/python docs/data/torrisi-2020-xanes-rf/workflows/verify.py Q1 --inputs docs/data/torrisi-2020-xanes-rf/inputs --output /tmp/xanes-answer/Q1",
-      "purpose": "Audit source-label provenance, partitions, pairing and metric arithmetic. Does not award scientific acceptance."
+      "purpose": "Check record identities, data partitions, prediction coverage and numerical consistency. Does not award scientific acceptance."
     },
     {
       "tool": "Scientific review",
       "command": "Review report, code and evidence using docs/data/torrisi-2020-xanes-rf/verification/scientific_review_rubric.md",
-      "purpose": "Judge leakage prevention, uncertainty, fairness and whether evidence supports the conclusions; rerun code to establish prediction provenance."
+      "purpose": "Judge leakage prevention, uncertainty, fairness and whether evidence supports the conclusions; rerun code to confirm how the predictions were produced."
     }
   ],
   "notes": "A valid alternative can use different representations, learners, filters, splits and random seeds and reach different or null findings. Historical v1 outputs are archived, not acceptance targets."

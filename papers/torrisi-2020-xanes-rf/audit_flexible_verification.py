@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exercise the flexible numerical gate with independent fits and bad artifacts.
+"""Historical version-2 numerical-gate audit with independent fits and bad artifacts.
 
 The alternative Q2 experiment below is deliberately independent of the worked
 candidate. It demonstrates acceptance of legitimate methodological differences,
@@ -95,7 +95,7 @@ if __name__=='__main__':main()
 
 
 def verifier():
-    spec = importlib.util.spec_from_file_location('flexible_verifier', DATA / 'workflows/verify.py')
+    spec = importlib.util.spec_from_file_location('flexible_verifier', DATA / 'workflows/legacy_v2/verify.py')
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     return module
@@ -250,7 +250,7 @@ def audit(runs, alternative, inputs):
     shutil.copytree(alternative,archived,dirs_exist_ok=True)
     alternate_evidence['artifact_directory']='verification/alternative_method_v2'
     alternate_evidence['source_sha256']=v.digest(archived/'code/alternative.py')
-    result=dict(version=2,verifier='workflows/verify.py',candidate_integrity_checks=positive,
+    result=dict(version=2,verifier='workflows/legacy_v2/verify.py',candidate_integrity_checks=positive,
                 independent_alternate_method=alternate_evidence,
                 benign_controls=[dict(control='CSV_row_permutation',accepted=True)],
                 rejected_controls=rejects,mandatory_review_controls=review_controls,

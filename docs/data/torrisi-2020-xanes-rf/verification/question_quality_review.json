@@ -1,27 +1,23 @@
 {
-  "review_version": 2,
+  "review_version": 3,
   "reviewer_role": "Independent question-quality subagent",
-  "review_scope": "Scientific framing, intended difficulty, minimal necessary background, input/output boundary and fair scientific adjudication; separate agents assess workflow execution and verification correctness.",
-  "overall_verdict": "pass_after_revision",
-  "supersedes": "The version-1 review incorrectly endorsed a solver-facing recipe. That endorsement is withdrawn; absence of expected answers did not make the prescribed pipeline a difficult research task.",
+  "review_scope": "Scientific framing, intended difficulty, necessary field definitions, minimal output request and solver-only exports. Verification implementation is assessed separately.",
+  "overall_verdict": "pass_after_prompt_cleanup",
+  "supersedes": "Version 2 removed the protocol but retained excessive checker-specific schemas and directed material-holdout decisions. That endorsement is superseded; the prior review is archived under legacy_v2/.",
   "difficulty_assessment": {
-    "basis": "Design-level expert review, not empirically calibrated system pass rates.",
+    "basis": "Design-level expert review; empirical pass rates across scientific-agent systems have not been measured.",
     "nontrivial_decisions_left_to_solver": [
       "data eligibility and quality treatment",
-      "evaluation populations and material-group partitions",
-      "model and hyperparameter selection",
-      "uncertainty and sensitivity design",
+      "evaluation population and data partitioning",
+      "assessment of related spectra, material identifiers and missing information",
+      "models, tuning and predictor representations",
+      "appropriate performance measures",
+      "uncertainty and sensitivity methods",
       "multiscale feature construction",
       "extreme-environment definitions",
-      "attribution method and corroborating evidence"
+      "attribution and corroborating evidence"
     ],
-    "scientific_requirements": [
-      "all eight elements with evidence appropriate to the question",
-      "assessment on previously unseen identified materials",
-      "qualified conclusions accounting for missing provenance",
-      "uncertainty and sensitivity evidence",
-      "runnable analysis and auditable row-level outputs"
-    ]
+    "scientific_scope": "The five substantive questions are retained. Comparisons, interpretation and uncertainty still require executable analysis; detailed checker bookkeeping and explicit material-holdout instructions are removed."
   },
   "checks": {
     "standalone_scientific_questions": true,
@@ -29,32 +25,37 @@
     "no_paper_reference_in_solver_prose": true,
     "no_expected_results_in_solver_inputs": true,
     "only_eight_release_data_files_per_question": true,
-    "protocol_and_output_schema_files_removed": true,
-    "necessary_field_definitions_and_output_contract_inline": true,
-    "background_and_metrics_restricted_to_question_targets": true,
+    "protocol_and_output_schema_files_absent": true,
+    "material_identifier_and_source_label_defined_directly": true,
+    "no_provenance_jargon_in_solver_prompt": true,
+    "missing_identifier_consequences_left_for_solver_to_discover": true,
+    "no_prescribed_material_holdout": true,
+    "no_design_json_or_metrics_csv_requirement": true,
+    "no_run_condition_enum_or_fixed_metric_list": true,
     "no_fixed_filters_models_seeds_splits_or_descriptor_recipe": true,
-    "question_id_test_prediction_and_pairing_semantics_explicit": true,
-    "negative_or_inconclusive_findings_allowed": true,
-    "candidate_scores_and_rankings_not_acceptance_thresholds": true
+    "output_request_limited_to_report_figures_code_record_predictions_and_membership": true,
+    "all_five_exports_checked": true,
+    "exported_inputs_hash_identical_to_released_projections": true,
+    "negative_or_inconclusive_findings_allowed": true
   },
   "questions": [
     {
       "question": "Q1",
       "verdict": "pass",
       "research_objective": "Determine the reliability of uncommon coordination-environment prediction and the empirical benefit or tradeoffs of imbalance treatment.",
-      "required_work": "Distribution audit, meaningful modeling comparison, minority-class diagnosis, material generalization and uncertainty."
+      "required_work": "Distribution audit, meaningful modeling comparison, minority-class diagnosis, defensible evaluation and uncertainty."
     },
     {
       "question": "Q2",
       "verdict": "pass",
       "research_objective": "Establish where spectral distance inference becomes unreliable, including unusual environments.",
-      "required_work": "Regression, justified regime definitions, signed and absolute error diagnosis, material generalization and uncertainty."
+      "required_work": "Regression, justified regime definitions, signed and absolute error diagnosis, defensible evaluation and uncertainty."
     },
     {
       "question": "Q3",
       "verdict": "pass",
       "research_objective": "Assess incremental local-charge information beyond white-line position.",
-      "required_work": "A fair spectral-versus-peak predictive study, out-of-sample paired evidence, baselines and uncertainty; full spectra need not win."
+      "required_work": "A fair spectral-versus-peak predictive study, out-of-sample comparative evidence, baselines and uncertainty; full spectra need not win."
     },
     {
       "question": "Q4",
@@ -71,78 +72,90 @@
   ],
   "resolved_findings": [
     {
-      "id": "V2-QUALITY-01",
-      "finding": "The prior protocol prescribed the solution pipeline.",
-      "resolution": "The solver receives only scientific objectives, relevant field definitions and a compact evidence contract; methodological recipes remain evaluator-only."
+      "id": "V3-QUALITY-01",
+      "finding": "A long audit-specific schema dominated the research prompts.",
+      "resolution": "Prompts retain filenames for report, predictions and membership, with record/model/property/split identification only; no JSON schema, condition enums or fixed metric collection."
     },
     {
-      "id": "V2-QUALITY-02",
-      "finding": "The checker required an exact question identifier that was absent from the standalone prompt.",
-      "resolution": "Each prompt explicitly sets question=Q1 through Q5 in design.json."
+      "id": "V3-QUALITY-02",
+      "finding": "Provenance wording was abstract and directed material-holdout choices.",
+      "resolution": "Background explains metadata.id and metadata.origin directly. The task leaves the evaluation design and implications of missing identifiers to the solver."
     },
     {
-      "id": "V2-QUALITY-03",
-      "finding": "Prediction scope and comparison partition semantics were underspecified.",
-      "resolution": "Predictions explicitly cover each test record once, and comparison_id explicitly groups shared row inclusion and partition assignments."
-    },
-    {
-      "id": "V2-QUALITY-04",
-      "finding": "Macro-F1 averaging and irrelevant target-specific background/metrics could create unnecessary or ambiguous requirements.",
-      "resolution": "Coordination tasks define the three-class average and undefined-F1 convention. Background fields and metric requirements are now question-specific; unused neighbor-spread background is removed."
+      "id": "V3-QUALITY-03",
+      "finding": "Q2 and Q3 still explicitly demanded generalization to unseen materials.",
+      "resolution": "Those clauses were replaced by requirements to assess reliability, strength of evidence and uncertainty; no particular split unit is prescribed."
     }
   ],
   "fair_adjudication": {
-    "numerical_check_role": "Source identity, labels, declared partitions, pairing and metric arithmetic; success remains scientific_review_required.",
-    "scientific_check_role": "Independently rerun source and reconstruct substantive evidence; assess fairness, baselines, provenance coverage, uncertainty, interpretation and the scope of conclusions.",
-    "allowed_variation": "Defensible alternative filtering, splitting, models, features, tuning, uncertainty and negative or mixed conclusions.",
-    "source_limitation": "Known material IDs occur only in origin=scrape; origin=feff lacks IDs. Identified-material claims must be limited to that supported population.",
-    "interpretation_limit": "Correlated feature attributions are not unique causal mechanisms; apparent stability must map to comparable features or physical energy regions."
+    "numerical_check_role": "Reconstruct released labels and inspect record-linked predictions and declared data membership. The evaluator must adapt to documented column names and cannot impose omitted legacy schemas or fixed metric collections.",
+    "scientific_check_role": "Rerun code and examine whether the chosen design, comparisons, uncertainty and evidence support the stated conclusions. Claims of new-material generalization require appropriate evidence; every answer is not required to make that claim.",
+    "allowed_variation": "Defensible alternative filtering, splitting, models, features, metrics, tuning, uncertainty procedures and negative or mixed conclusions.",
+    "source_limitation_for_reviewer": "Known material identifiers occur only for source label scrape; feff records lack identifiers. This limits claims the data can establish, but is not an automatic requirement for a particular partitioning scheme.",
+    "review_separation": "This question-quality review does not certify the verifier implementation; consult the separate checker review."
   },
   "isolation": {
     "public_site_is_secure_holdout": false,
     "required_boundary": "Use solver-only exports and prevent access to the review repository, public site and reference artifacts.",
-    "tested_export": "Q3",
-    "export_contains": "prompt.md plus eight gzip JSONL inputs, byte-identical to released projections.",
-    "generic_local_paths_and_no_source_identity_in_export_prompt": true,
-    "export_prompt_sha256": "6da1a46ee901589f6c6600d60e3c82ca551fc1ee08a66987c07c27360d8a7aab"
+    "tested_exports": [
+      "Q1",
+      "Q2",
+      "Q3",
+      "Q4",
+      "Q5"
+    ],
+    "export_contains": "Each export contains prompt.md and exactly eight gzip JSONL files; no evaluator artifacts.",
+    "generic_local_paths_and_no_source_identity_in_export_prompt": true
   },
-  "prompt_hash_canonicalization": "SHA-256 of UTF-8 JSON containing title and prompt only, sort_keys=True, ensure_ascii=False, separators=(comma,colon). Full paper metadata and changing evaluator references are deliberately excluded.",
+  "prompt_hash_canonicalization": "SHA-256 of UTF-8 JSON containing title and prompt only, sort_keys=True, ensure_ascii=False, separators=(comma,colon).",
   "reviewed_prompts": {
     "Q1": {
-      "sha256": "a81e8aeee177ad65140eb8ad6190a12cf6db509552cf76dc8c071b4ca7a332c6",
-      "background_words": 57,
-      "instruction_words": 219,
-      "input_files": 8
+      "sha256": "b7fa2d0dcb55a74d20c8dfd43846f8eb860e09167ccdd72591cf958f660de6de",
+      "background_words": 55,
+      "instruction_words": 101,
+      "input_files": 8,
+      "export_prompt_sha256": "883754630e0eb913510eedaaefd143ed3d27bf1efe0c6887e69d928c8a63b7d9",
+      "input_hashes_match": true,
+      "standalone_export_checked": true
     },
     "Q2": {
-      "sha256": "b25737f452e448deacb1e9ba1052f4a043a37a95435bd0cc6c49644e9933c86c",
-      "background_words": 60,
-      "instruction_words": 210,
-      "input_files": 8
+      "sha256": "99e83ba772d7eb8a1459d60a7b6748fc0bb152dafd2cfb6429b6d129a4378f19",
+      "background_words": 58,
+      "instruction_words": 94,
+      "input_files": 8,
+      "export_prompt_sha256": "295ee5cf6f68e2cd2345e0f40dc0be57feb6a2c425f1aac4e1cd199cfca14109",
+      "input_hashes_match": true,
+      "standalone_export_checked": true
     },
     "Q3": {
-      "sha256": "9c057b0447652bb10bdc3922fe4acc0bba897c856cf7cd36ea4a9558318ff590",
-      "background_words": 72,
-      "instruction_words": 197,
-      "input_files": 8
+      "sha256": "765de706876122860b4cd7bbf04948e40f4d3391edbcc9d861fe4aae48bcf6bd",
+      "background_words": 70,
+      "instruction_words": 91,
+      "input_files": 8,
+      "export_prompt_sha256": "748cc1560d434b16b4805570e3512f18c2d43146a795b47388be1e504bb5786c",
+      "input_hashes_match": true,
+      "standalone_export_checked": true
     },
     "Q4": {
-      "sha256": "aaed46f33e58f33d6ead71b2f3dd8d86b1c2bca3aeb79a133b861614fd656d3d",
-      "background_words": 97,
-      "instruction_words": 254,
-      "input_files": 8
+      "sha256": "9cf3427f327dad718065148a89435572a3a4acdd3f50630fe8e00ea45799f950",
+      "background_words": 93,
+      "instruction_words": 122,
+      "input_files": 8,
+      "export_prompt_sha256": "762f00d955b0b16cf4da82c8036daa57061b6404b9db9a392328f63d7b307e78",
+      "input_hashes_match": true,
+      "standalone_export_checked": true
     },
     "Q5": {
-      "sha256": "39944182a9bc6dd17527393ad690c30f3cb0f1a8bce113936ee6fb05f1ca8dd2",
-      "background_words": 65,
-      "instruction_words": 234,
-      "input_files": 8
+      "sha256": "285ccf7256b9b4d1bb20a640424ae58a52b86855d74c4f8f7eca7a501bd81d65",
+      "background_words": 62,
+      "instruction_words": 107,
+      "input_files": 8,
+      "export_prompt_sha256": "920b3e4eefccb4c21b5e69945e2c0615ee5648feec036c9adb5201651e314439",
+      "input_hashes_match": true,
+      "standalone_export_checked": true
     }
   },
-  "reviewed_support_files_sha256": {
-    "papers/torrisi-2020-xanes-rf/export_agent_bundle.py": "55d836fec96267845cd94d02a0f0be2e7939615c2392394f02d0c07eaa380d47",
-    "docs/data/torrisi-2020-xanes-rf/verification/scientific_review_rubric.md": "122c926296f356c4bc197ab093f5e144bb8fc005498fdfa4b96f28934dee15c3"
-  },
+  "reviewed_exporter_sha256": "55d836fec96267845cd94d02a0f0be2e7939615c2392394f02d0c07eaa380d47",
   "unresolved_material_findings": 0,
-  "execution_claim": "This report does not certify execution or scientific completeness of the candidate examples; consult separately recorded execution and verification reviews."
+  "execution_claim": "All five solver-only exports were generated and inspected for this revision. Existing worked-example results are historical evidence for those analyses; this review does not claim fresh execution or scientific acceptance."
 }

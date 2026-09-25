@@ -1,0 +1,204 @@
+{
+  "schema": "lean-numerical-interface-v3",
+  "scope": "Output-interface and numerical-integrity audit, not a scientific pass",
+  "verifier_sha256": "0692393a33b271b8ffc8974ef99d2113439c44315c35a0e9f5f06aab29ed269e",
+  "audit_script_sha256": "d4ad76b6f9a21541e45596df4a6427165096b3302e225067bb53ec5639d8cb39",
+  "references": [
+    {
+      "question": "Q1",
+      "runs": 64,
+      "status": "scientific_review_required"
+    },
+    {
+      "question": "Q2",
+      "runs": 16,
+      "status": "scientific_review_required"
+    },
+    {
+      "question": "Q3",
+      "runs": 32,
+      "status": "scientific_review_required"
+    },
+    {
+      "question": "Q4",
+      "runs": 96,
+      "status": "scientific_review_required"
+    },
+    {
+      "question": "Q5",
+      "runs": 128,
+      "status": "scientific_review_required"
+    }
+  ],
+  "lean_outputs": [
+    {
+      "question": "Q1",
+      "runs": 64,
+      "numerical_integrity_pass": true,
+      "scientific_pass": null,
+      "design_and_metrics_files_absent": true,
+      "excluded_rows_omitted": true,
+      "code_outside_code_directory": true,
+      "property_column_omitted": true,
+      "custom_model_names": true,
+      "prediction_and_membership_aliases": true,
+      "metrics_match_original": true
+    },
+    {
+      "question": "Q2",
+      "runs": 16,
+      "numerical_integrity_pass": true,
+      "scientific_pass": null,
+      "design_and_metrics_files_absent": true,
+      "excluded_rows_omitted": true,
+      "code_outside_code_directory": true,
+      "property_column_omitted": true,
+      "custom_model_names": true,
+      "prediction_and_membership_aliases": true,
+      "metrics_match_original": true
+    },
+    {
+      "question": "Q3",
+      "runs": 32,
+      "numerical_integrity_pass": true,
+      "scientific_pass": null,
+      "design_and_metrics_files_absent": true,
+      "excluded_rows_omitted": true,
+      "code_outside_code_directory": true,
+      "property_column_omitted": true,
+      "custom_model_names": true,
+      "prediction_and_membership_aliases": true,
+      "metrics_match_original": true
+    },
+    {
+      "question": "Q4",
+      "runs": 96,
+      "numerical_integrity_pass": true,
+      "scientific_pass": null,
+      "design_and_metrics_files_absent": true,
+      "excluded_rows_omitted": true,
+      "code_outside_code_directory": true,
+      "property_column_omitted": false,
+      "custom_model_names": true,
+      "prediction_and_membership_aliases": true,
+      "metrics_match_original": true
+    },
+    {
+      "question": "Q5",
+      "runs": 128,
+      "numerical_integrity_pass": true,
+      "scientific_pass": null,
+      "design_and_metrics_files_absent": true,
+      "excluded_rows_omitted": true,
+      "code_outside_code_directory": true,
+      "property_column_omitted": false,
+      "custom_model_names": true,
+      "prediction_and_membership_aliases": true,
+      "metrics_match_original": true
+    }
+  ],
+  "alternate_layouts": [
+    {
+      "case": "single_target_without_run_model_split_or_property_columns",
+      "accepted": true,
+      "runs": 8
+    },
+    {
+      "case": "shared_partitions_across_arbitrarily_named_models",
+      "accepted": true,
+      "runs": 32
+    },
+    {
+      "case": "spectrum_evaluation_with_material_overlap",
+      "accepted": true,
+      "runs": 32,
+      "material_overlap_count_reported": 21446,
+      "active_rows_without_material_ids_reported": 0,
+      "scientific_pass": null
+    },
+    {
+      "case": "unidentified_training_row_integrity_control",
+      "accepted": true,
+      "scientific_pass": null,
+      "note": "Roster mutation proves missing IDs are not an arithmetic gate; independent code rerun is still required."
+    },
+    {
+      "case": "unlabelled_auxiliary_training",
+      "accepted": true,
+      "auxiliary_target_unavailable_count_reported": 1,
+      "scientific_pass": null,
+      "note": "Roster integrity control; submitted learning procedure still requires independent code review."
+    },
+    {
+      "case": "other_class_auxiliary_training",
+      "accepted": true,
+      "auxiliary_target_unavailable_count_reported": 1,
+      "scientific_pass": null,
+      "note": "Roster integrity control; submitted learning procedure still requires independent code review."
+    },
+    {
+      "case": "different_evaluation_partitions_without_pairing_claim",
+      "accepted": true,
+      "scientific_pass": null,
+      "status": "scientific_review_required"
+    }
+  ],
+  "adversarial": [
+    {
+      "case": "unknown_source_row",
+      "rejected": true,
+      "message": "Ti|md: predictions do not cover exactly the declared test rows"
+    },
+    {
+      "case": "missing_test_prediction",
+      "rejected": true,
+      "message": "Ti|md: predictions do not cover exactly the declared test rows"
+    },
+    {
+      "case": "duplicate_prediction",
+      "rejected": true,
+      "message": "Duplicate predictions; identify distinct models or evaluation splits if needed"
+    },
+    {
+      "case": "train_test_row_overlap",
+      "rejected": true,
+      "message": "Overlapping or repeated row memberships; identify evaluation splits if needed"
+    },
+    {
+      "case": "false_optional_metric",
+      "rejected": true,
+      "message": "Ti|md: inconsistent optional mae"
+    },
+    {
+      "case": "false_optional_truth",
+      "rejected": true,
+      "message": "\nNot equal to tolerance rtol=0, atol=1e-12\nTi|md: truth labels differ from raw release\nMismatched elements: 501 / 501 (100%)\nFirst 5 mismatches are at indices:\n [0]: -999 (ACTUAL), 1.9629663166777636 (DESIRED)\n [1]: -999 (ACTUAL), 1.837873170352395 (DESIRED)\n [2]: -999 (ACTUAL), 1.9948496326703757 (DESIRED)\n [3]: -999 (ACTUAL), 1.9843709938227756 (DESIRED)\n [4]: -999 (ACTUAL), 2.101096264458774 (DESIRED)\nMax absolute difference among violations: 1002.27430672\nMax relative difference among violations: 564.39267058\n ACTUAL: array([-999, -999, -999, -999, -999, -999, -999, -999, -999, -999, -999,\n       -999, -999, -999, -999, -999, -999, -999, -999, -999, -999, -999,\n       -999, -999, -999, -999, -999, -999, -999, -999, -999, -999, -999,...\n DESIRED: array([1.962966, 1.837873, 1.99485 , 1.984371, 2.101096, 2.015109,\n       2.045242, 2.053982, 2.050075, 2.020173, 2.036674, 2.028174,\n       2.038528, 2.051673, 1.980363, 2.485843, 2.046111, 2.011275,..."
+    },
+    {
+      "case": "contradictory_optional_design_metadata",
+      "rejected": true,
+      "message": "predictions: contradictory element"
+    },
+    {
+      "case": "false_explicit_material_independence_claim",
+      "rejected": true,
+      "message": "Ti|coord|Investigator model [untreated]|Ti_coord_spectrum_r0_s113: explicit identified_material claim contradicts partition overlap"
+    },
+    {
+      "case": "false_explicit_pairing_claim",
+      "rejected": true,
+      "message": "Ti|bader|Investigator model [full]|Ti_bader_identified_material_r1_s113: optional paired comparison changes partition assignments"
+    },
+    {
+      "case": "unlabelled_scored_test_row",
+      "rejected": true,
+      "message": "Ti|bader|Investigator model [full]|Ti_bader_identified_material_r0_s113: scored test row lacks a finite in-scope raw target"
+    },
+    {
+      "case": "missing_element_investigation",
+      "rejected": true,
+      "message": "Missing requested elements/properties: [('Cu', 'md')]"
+    }
+  ],
+  "result": "All interface and numerical-integrity checks passed; scientific review remains required."
+}

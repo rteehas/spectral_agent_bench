@@ -1,61 +1,23 @@
 {
-  "version": "research-v2",
-  "status": "pass_with_stated_limits",
-  "scope": "Executed illustrative solutions, not predetermined answers for future benchmark attempts.",
-  "numerical_integrity": {
-    "Q1": true,
-    "Q2": true,
-    "Q3": true,
-    "Q4": true,
-    "Q5": true
-  },
-  "scientific_review": {
-    "Q1": {
-      "verdict": "pass_with_stated_limits",
-      "evidence": "scientific_review_q1_q2.json",
-      "execution": "Independent raw evidence reconstruction and selected model refit."
-    },
-    "Q2": {
-      "verdict": "pass_with_stated_limits",
-      "evidence": "scientific_review_q1_q2.json",
-      "execution": "Independent complete workflow rerun plus raw evidence reconstruction; worked_q2_execution_v2.json."
-    },
-    "Q3": {
-      "verdict": "pass_with_stated_limits",
-      "evidence": "scientific_probes_q3_q5_v2.json",
-      "execution": "Independent paired-interval reconstruction and selected model refits. A distinct prompt-only solution was separately rerun completely."
-    },
-    "Q4": {
-      "verdict": "pass_with_stated_limits",
-      "evidence": "workflow_execution_review.json",
-      "execution": "Independent complete workflow rerun, all comparisons/baselines/stability and selected raw feature/permutation reconstruction."
-    },
-    "Q5": {
-      "verdict": "pass_with_stated_limits",
-      "evidence": "scientific_probes_q3_q5_v2.json",
-      "execution": "Independent64 paired intervals,448 stability comparisons and4 selected model/perturbation refits."
-    }
-  },
-  "difficulty": "Independent design review passes; observed difficulty across a population of scientific-agent systems remains uncalibrated.",
-  "isolated_prompt_attempt": {
-    "question": "Q3",
-    "status": "completed_and_independently_rerun",
-    "evidence": "independent_q3_review_v2.json",
-    "boundary": "Prompt-only information boundary followed by the solver agent, not OS-enforced access control."
-  },
-  "limitations": [
-    "Material-ID coverage selects the scrape population; unknown-ID source generalization is not established.",
-    "Conditional test-group intervals and few training resplits do not establish population-wide uncertainty.",
-    "Perturbation reliance is not a causal physical assignment; multiscale midpoint bins are not full feature support.",
-    "Raw scientific labels are scoring truth; experimental validity and structural alias freedom cannot be established from this release."
+  "version": "prompts-v3",
+  "status": "prompt_and_interface_cleanup_validated",
+  "scope": "The scientific questions, data and worked numerical analyses are retained. Prompts and the numerical output interface are simplified; no model refitting or new scientific-result validation is claimed for this change.",
+  "prompt_review": "pass_after_prompt_cleanup",
+  "current_numerical_verification": "Five existing examples and their lean output conversions pass the current checker. Extra experiment manifests and metric files remain optional; material-group holdouts and complete excluded-row rosters are not required.",
+  "independent_lean_output_review": "Q1 and Q4 lean answers were independently constructed and checked without design.json or metrics.csv; 608 recomputed metric values agree with the existing fits.",
+  "scientific_review_of_unchanged_examples": "legacy_v2/scientific_review.json",
+  "scientific_acceptance": "Each new submission still requires independent source rerun and scientific review. Numerical integrity is not scientific acceptance.",
+  "previous_execution_evidence": [
+    "workflow_execution_review.json",
+    "scientific_review_q1_q2.json",
+    "scientific_probes_q3_q5_v2.json",
+    "independent_q3_review_v2.json"
   ],
-  "independent_review_artifact_sha256": {
-    "question_quality_review.json": "c96b65be716cbbb2c94ea965ca9e605a1113f064b2fca4f66f86afe989f3f4ce",
-    "scientific_review_q1_q2.json": "d7e58f47cf506d9c73d55d4a7a58ecd978af49bf1e86af091101050ed9ac26c2",
-    "worked_q2_execution_v2.json": "f89703fed7559c13fd04eb82617fe7dbeeafb51a4bcac9b9f0b9a5c2cb5ca928",
-    "workflow_execution_review.json": "ffdf674a2876513b35abdbb3d8fcaf066c9add6369ee76488d60361122c1ed15",
-    "scientific_probes_q3_q5_v2.json": "361d8ef4514d1b6d06912319b0cc12a0c5dac3a2e85a2d501b2eb06e91ba658c",
-    "independent_q3_review_v2.json": "b9456bff7118bf65737f72d24de2a0122fd5eb602c1b292595db8f99d8c62ad5",
-    "flexible_verification_v2.json": "0700fe27f1e672d741ed2c6590acfe5c17da85dc23da845ff37f82a5cabdc2ae"
+  "note": "These prior records concern the unchanged example calculations under the earlier prompts. The current prompt review and lean-verifier audits are separate evidence.",
+  "review_artifact_sha256": {
+    "question_quality_review.json": "1491a11652f00500d01ba430ebd874b3f3ac65b7d34396c530b4e79dec338d44",
+    "lean_verification_v3.json": "80b02e4fe0cbda9ede9876512696c9d0c03b68e44ba9842c2436436a040bf009",
+    "lean_output_execution_review.json": "575d9c29b9fa782afc24b9b5a6aad1492151c13431e87ca8b33e2f8bb8df3e4a",
+    "legacy_v2/scientific_review.json": "8d4115704a11de94aba15149bde8e675b16a92c0086946be2449cd16eb2ccbf3"
   }
 }

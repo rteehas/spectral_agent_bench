@@ -1,8 +1,8 @@
 {
   "question": "Q3",
-  "source_derivation": "Charge/white-line relationships associated with Figs. 8–9; paired predictive comparison and material grouping extend the source analysis.",
+  "source_derivation": "Charge/white-line relationships associated with Figs. 8–9; predictive comparison extends the source analysis.",
   "illustrative_analysis": "Compare full absorption vectors with photon energy at maximum absorption using independently validation-selected nonlinear regressors. Estimate paired uncertainty on charge prediction differences.",
-  "illustrative_design": "Audit provenance/label coverage; use available-ID material groups with two approximately 60/20/20 train/validation/test holdouts; train ExtraTrees with 80 trees and validation-selected leaf size 1 or 5. Report conditional group-bootstrap intervals, training-only baselines and source-selection limits. These are example choices only.",
+  "illustrative_design": "Inspect source labels, material IDs and target availability; use available-ID material groups with two approximately 60/20/20 train/validation/test holdouts; train ExtraTrees with 80 trees and validation-selected leaf size 1 or 5. Report conditional group-bootstrap intervals, training-only baselines and source-selection limits. These are example choices only.",
   "executed_finding": "Full-spectrum charge MAE is lower in 16/16 paired holdouts; 16 conditional intervals favor full spectra. The inference is conditional on learner and identified source population.",
   "solver_input_boundary": "Only the standalone prompt and eight input files. Evaluator materials and the review site must be inaccessible during a benchmark attempt.",
   "status": "executed_example",
@@ -20,12 +20,12 @@
     {
       "tool": "Independent numerical evaluator",
       "command": "/tmp/xanes-bench-env/bin/python docs/data/torrisi-2020-xanes-rf/workflows/verify.py Q3 --inputs docs/data/torrisi-2020-xanes-rf/inputs --output /tmp/xanes-answer/Q3",
-      "purpose": "Audit source-label provenance, partitions, pairing and metric arithmetic. Does not award scientific acceptance."
+      "purpose": "Check record identities, data partitions, prediction coverage and numerical consistency. Does not award scientific acceptance."
     },
     {
       "tool": "Scientific review",
       "command": "Review report, code and evidence using docs/data/torrisi-2020-xanes-rf/verification/scientific_review_rubric.md",
-      "purpose": "Judge leakage prevention, uncertainty, fairness and whether evidence supports the conclusions; rerun code to establish prediction provenance."
+      "purpose": "Judge leakage prevention, uncertainty, fairness and whether evidence supports the conclusions; rerun code to confirm how the predictions were produced."
     }
   ],
   "notes": "A valid alternative can use different representations, learners, filters, splits and random seeds and reach different or null findings. Historical v1 outputs are archived, not acceptance targets."

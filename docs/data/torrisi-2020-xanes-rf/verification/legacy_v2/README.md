@@ -1,0 +1,1 @@
+Historical version-2 prompt and checker review records. The current prompt no longer requires experiment manifests, metric files, prescribed grouping claims or full excluded-row accounting. See the lean v3 verifier audit and current question review. The unchanged worked numerical analyses remain valid examples.

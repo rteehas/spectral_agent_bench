@@ -1,12 +1,10 @@
-# Independent question-quality review: concise scientific tasks
+# Independent question-quality review: open scientific tasks
 
-This review supersedes versions 1 and 2. Version 1 endorsed a supplied analysis recipe. Version 2 removed that recipe but retained a lengthy checker-specific contract and directed the solver toward a particular way to handle material identifiers. Neither was as open as the intended research benchmark. The prior version-2 review is retained in `verification/legacy_v2/` for the historical record.
+This review supersedes the earlier review that endorsed the supplied protocol. That endorsement was too permissive: prescribing the spectrum screens, exact data partitions, estimators, feature construction, repeated seeds and attribution calculation substantially reduced the scientific reasoning being assessed. Removing expected numerical values was not sufficient to make those prompts a difficult research benchmark.
 
 ## Review standard
 
-The solver should receive eight released spectral-data projections and a standalone scientific question. Necessary context consists of measurement type, field definitions, units and the meaning of missing values. Material identifiers and source collection names should be described directly as data fields. The solver must discover and assess their completeness and scientific implications. Numerical algorithms, data curation, partitioning, model selection, uncertainty estimation, feature construction and interpretation remain decisions for the solver to justify.
-
-The output request should ask for a scientific report, supporting figures, runnable code, record-level predictions and data assignments. Element and source-row identifiers allow evaluators to reconstruct evidence. Models, properties and evaluation repetitions must be distinguishable where relevant. This does not require a particular JSON or CSV schema, run-condition vocabulary, metric collection or material-holdout design.
+The solver should receive eight released spectral-data projections and a standalone scientific question. Necessary context consists of measurement type, field definitions, units, unavailable values and provenance limitations. Output requirements should specify only the evidence needed to audit an answer. Numerical algorithms, data curation, partitioning, model selection, uncertainty estimation, feature construction and interpretation must remain decisions for the solver to justify.
 
 A prompt can define its scientific intervention without becoming a recipe. Coordination classes 4/5/6 define the population of interest; white-line position defines the single-descriptor comparison; division by maximum absorption defines the normalization intervention. These definitions do not prescribe an estimator or an expected result.
 
@@ -26,7 +24,7 @@ A valid answer may use different defensible data screens, partitions, estimators
 
 Numerical screening is necessary but insufficient. A fabricated scientific narrative or an uninformative constant model can be internally consistent. Review must assess meaningful baselines, sample coverage, fair comparisons, uncertainty, interpretation and the match between the evaluation population and the claimed population. Tail and minority-class conclusions must acknowledge sparse or absent groups. Attributions must be compared on a scientifically comparable domain and cannot be treated as unique causal explanations.
 
-Known material identifiers occur only in records with source collection `scrape`. Records from source collection `feff` lack these identifiers. Holding out known identifiers can assess prediction for other identified materials, but it cannot establish that unidentified records are distinct materials or that this subset represents the whole release. This is evaluator knowledge, not a prescribed step in the prompt. Reviewers should assess the claims the solver actually makes: unknown identifiers cannot support a claim of distinct materials, and repeated estimator seeds alone do not quantify uncertainty over sampled materials. A justified evaluation design should not fail merely because it differs from the worked example.
+Known material identifiers cover only the `scrape` provenance in these inputs. The `feff` provenance lacks material IDs. Grouped evaluation can assess generalization to held-out known identifiers, but it cannot establish that unidentified records are distinct materials or that this subset represents the whole release. Solver methods must account for this limitation; unknown IDs must not be silently treated as evidence of unique materials. Repeated estimator seeds alone measure fitting randomness, not uncertainty over sampled materials.
 
 ## Input isolation and scope
 
@@ -36,4 +34,4 @@ The spectra are already processed 100-point release arrays. They are the earlies
 
 ## Final-review status
 
-The machine-readable companion records the exact reviewed revisions, prompt checks and final verdict. This document reviews question quality and output-request fairness. Separate agents assess the verification loop. Existing worked-example execution evidence remains historical evidence for that analysis; wording changes do not constitute fresh execution. Intended difficulty is assessed by research judgment and has not been calibrated across scientific-agent systems.
+The machine-readable companion records the exact reviewed revisions, prompt checks and final verdict. This document reviews question quality and contract fairness. Separate agents assess candidate execution and the correctness of the verification loop; successful question framing must not be conflated with complete scientific validation of a worked example.

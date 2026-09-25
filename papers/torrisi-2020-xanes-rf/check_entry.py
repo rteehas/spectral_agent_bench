@@ -26,7 +26,9 @@ def main():
         assert all('/inputs/' in i['url'] and i['name'].endswith('.jsonl.gz') for i in scenario['inputs'])
         prompt=' '.join(scenario['prompt'].values()).lower()
         assert not any(s in prompt for s in ['torrisi','paper','figure 3','reproduce','doi.org','protocol.json','output_schema.json','random forest','seed 42','157 features'])
-        assert 'design.json' in prompt and 'partitions.csv' in prompt and 'predictions.csv' in prompt
+        assert 'partitions.csv' in prompt and 'predictions.csv' in prompt
+        assert not any(term in prompt for term in ['for audit','provenance','design.json','metrics.csv','run_id','comparison_id','identified_material','condition=','target='])
+        assert 'metadata.id' in prompt and 'metadata.origin' in prompt
         for item in scenario['inputs']:assert (ROOT/'docs'/item['url']).is_file()
     report=dict(paper_id=paper['id'],questions=len(paper['scenarios']),input_records=total,input_hashes_match=True,paper_matches_active_dataset=True,
                 all_scenarios_have_only_raw_input_assets=True,solver_prompts_have_no_paper_references=True,input_file_count_per_question=8,

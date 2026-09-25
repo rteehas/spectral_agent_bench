@@ -1,0 +1,142 @@
+{
+  "review_version": 3,
+  "scope": "Independent numerical compatibility review of lean output tables; no scientific model fitting or rerun of the candidate analysis was performed. Previously executed predictions were retained exactly apart from floating-point CSV serialization.",
+  "reviewed_at_utc": "2026-09-25T15:53:51.119459+00:00",
+  "numerical_compatibility_pass": true,
+  "scientific_acceptance_of_new_analysis": null,
+  "model_refit_performed": false,
+  "files_reviewed_sha256": {
+    "workflows/verify.py": "0692393a33b271b8ffc8974ef99d2113439c44315c35a0e9f5f06aab29ed269e",
+    "verification/scientific_review_rubric.md": "b28c9ac3c08669f60a361c8729b62d42dbf952ca04b2dc533c27670711cfb208"
+  },
+  "tested_layout_choices": [
+    "No design.json or metrics.csv.",
+    "Runnable analysis source is at the output root; no code directory.",
+    "Property values are raw-release label names: coordination, avg_nn_dists, bader.",
+    "Model names are descriptive alternatives rather than prescribed condition codes.",
+    "Evaluation identifiers are in an ordinary fold column.",
+    "Prediction column is named prediction, membership column membership, role values training/validation/testing.",
+    "Partition assignment is shared across compared models.",
+    "Excluded source records are omitted rather than exhaustively enumerated.",
+    "Spectrum-level partitions with shared known material IDs are accepted and reported."
+  ],
+  "interpretation": "The checker reconstructs metrics from the released labels and submitted predictions, without a separate experiment manifest or scores table. Successful compatibility leaves scientific acceptance pending. Existing candidate model source and a figure were included to test ordinary artifact layout; their presence is not evidence of a new source-code rerun.",
+  "review_findings": {
+    "new_prompts_and_rubric": "Aligned: study design, model names and output formatting are not tied to the previous example; known-ID grouping and exhaustive excluded-row accounting are not required. Explicitly claimed material separation or pairing remains verifiable.",
+    "remaining_scientific_requirements": "Independent execution and code review, fair comparisons, uncertainty and question-specific supporting evidence remain necessary. These are not established by this format probe.",
+    "difficulty": "This review does not calibrate empirical benchmark difficulty."
+  },
+  "commands": [
+    "/tmp/torrisi-env/bin/python /tmp/torrisi_make_lean_output_review.py",
+    "/tmp/torrisi-env/bin/python docs/data/torrisi-2020-xanes-rf/workflows/verify.py Q1 --inputs docs/data/torrisi-2020-xanes-rf/inputs --output /tmp/torrisi-lean-output-review/Q1 > /tmp/torrisi-lean-output-review/Q1-verification.json",
+    "/tmp/torrisi-env/bin/python docs/data/torrisi-2020-xanes-rf/workflows/verify.py Q4 --inputs docs/data/torrisi-2020-xanes-rf/inputs --output /tmp/torrisi-lean-output-review/Q4 > /tmp/torrisi-lean-output-review/Q4-verification.json"
+  ],
+  "working_directory": "/scratch/rst306/spectrasleuth_work/spectral_agent_bench",
+  "conversion_program": "import json,shutil,hashlib\nfrom pathlib import Path\nimport pandas as pd\nROOT=Path('/scratch/rst306/spectrasleuth_work/spectral_agent_bench')\nBASE=ROOT/'docs/data/torrisi-2020-xanes-rf'\nOUT=Path('/tmp/torrisi-lean-output-review')\nTARGET={'coord':'coordination','md':'avg_nn_dists','bader':'bader'}\nMODEL={'untreated':'unweighted_forest','treated':'class_weighted_forest','pointwise':'pointwise_absorption','multiscale':'multiscale_shape'}\nsummary={}\nfor question in ['Q1','Q4']:\n    old=BASE/'verification'/question\n    new=OUT/question\n    new.mkdir(parents=True,exist_ok=True)\n    for name in ['design.json','metrics.csv']:\n        (new/name).unlink(missing_ok=True)\n    design=json.loads((old/'design.json').read_text())\n    roster={r['run_id']:r for r in design['runs']}\n    counts={}\n    for filename in ['predictions.csv','partitions.csv']:\n        frame=pd.read_csv(old/filename)\n        frame['element']=frame.run_id.map(lambda x:roster[x]['element'])\n        frame['property']=frame.run_id.map(lambda x:TARGET[roster[x]['target']])\n        frame['model']=frame.run_id.map(lambda x:MODEL[roster[x]['condition']])\n        frame['fold']=frame.run_id.map(lambda x:roster[x]['comparison_id'])\n        frame=frame.drop(columns='run_id')\n        if filename=='partitions.csv':\n            frame=frame[frame.role!='excluded'].copy()\n            frame=frame.drop(columns='model').drop_duplicates()\n            frame['role']=frame.role.map({'train':'training','validation':'validation','test':'testing'})\n            frame=frame.rename(columns={'role':'membership'})\n            columns=['element','property','fold','source_row','membership']\n        else:\n            frame=frame.rename(columns={'y_pred':'prediction'})\n            columns=['element','property','model','fold','source_row','prediction']\n        frame[columns].to_csv(new/filename,index=False)\n        counts[filename]=len(frame)\n    shutil.copy2(BASE/'workflows/candidate.py',new/'analysis.py')\n    shutil.copy2(old/'diagnostics.png',new/'diagnostics.png')\n    (new/'report.md').write_text(f'''# Lean-output compatibility probe: {question}\\n\\nThis artifact preserves predictions from the previously executed illustrative analysis. No model fitting was performed for this compatibility probe. The copied analysis.py is the original runnable analysis source; its fitting workflow was executed in the earlier scientific review, not again here.\\n\\nThe property column uses the released label names. Model values name the compared conditions. Fold identifies the original evaluation cohort and fit repetition; partitions are shared across compared models. Rows omitted from partitions were excluded in the original analysis. The original example used material and/or spectrum partitions as recorded by each fold name; the tabular conversion does not add a generalization claim.\\n\\nThe purpose of these files is to check whether a numerical verifier can recover the unchanged results from straightforward tables without an auxiliary design or metric schema. This compatibility check does not establish complete scientific acceptance of a new answer. Diagnostic figures are copied from the executed example.\\n''')\n    summary[question]={'original_runs':len(roster),'rows':counts,'files':sorted(p.name for p in new.iterdir())}\nprint(json.dumps(summary,indent=2))\n",
+  "results": [
+    {
+      "question": "Q1",
+      "numerical_integrity_pass": true,
+      "status": "scientific_review_required",
+      "scientific_pass": null,
+      "run_count": 64,
+      "recomputed_metrics_compared": 320,
+      "maximum_metric_difference": 1.1102230246251565e-16,
+      "runs_with_material_overlap": 32,
+      "runs_with_unlisted_source_rows": 64,
+      "prediction_rows": 37086,
+      "partition_rows": 93140,
+      "prediction_columns": [
+        "element",
+        "property",
+        "model",
+        "fold",
+        "source_row",
+        "prediction"
+      ],
+      "partition_columns": [
+        "element",
+        "property",
+        "fold",
+        "source_row",
+        "membership"
+      ],
+      "fixture_files_sha256": {
+        "analysis.py": "169cc61515679e47efd1354247e4fa083ecd413e5236745acfe5f8bb9910ad2b",
+        "diagnostics.png": "71f4db7027e8d2b2829e926e321d54978972100ddf4712f8aca82b6658580424",
+        "partitions.csv": "95c2d51b9210e39086f10ba8592fbcc55863ad330062f4379477ddd9917a43a4",
+        "predictions.csv": "1368fd6c48f6e86fe092b9d72f014209ea83cdf45c5d089a613f8c2376b65da9",
+        "report.md": "507d8d182376f76f83e7f964c3da46b2b2f453c59201d5a77adfa3ff9e2bff6d"
+      },
+      "source_files_sha256": {
+        "design.json": "fd8b51c891992c300482c77047af244e17173575c9958d827f8b268531704cc3",
+        "metrics.csv": "67c66c797150e8c4b894519d03f667554e137e3027ed9459dc0d633491e94d6e",
+        "predictions.csv": "a254160f5d5fad92ab7d347fc6a8bce64b10789122ce93b420ca3c8c1b9d8c12",
+        "partitions.csv": "10addf06c6dc6012e23299dc8790f9cb2c5b5870075f54c5a7d84f4f27a4f46b"
+      },
+      "verifier_receipt_sha256": "fd01dea67305eb9d820acedef397e82d590cc660e005a12f0b838c65203b462c",
+      "source_input_sha256": {
+        "Ti": "ce5e4255439233ff903dc6be0e8a3b1acc9327e72523a66403d2a640fc2f9792",
+        "V": "755c3407c7b47ed9f96becfdb21cf14cc64213e9c4fedec2d493a7fdf0bf1b5b",
+        "Cr": "3b4af75470896db924e60c95d99efbde1152fbc6c848772a07d25abb76eb5684",
+        "Mn": "38f99877c8ece423bb23676463bc4ba767ac6d2bc057edcecf766263c6363dd7",
+        "Fe": "1791e54a4a9d56009d83b5405179c12aa84aa5e1fc6a401af3dfdc1ae7e4b12e",
+        "Co": "f9b3b80ca0a6e44a03dcd9443a90332f7eb42af5a967a8f51923541fb32f6155",
+        "Ni": "a9eb1ad9fde915f8f3387b553395707625d8be8180a4faa2dbb4debf979d2f04",
+        "Cu": "a5c8457b95cc5557616c5c5db3e38fe5cd9d29b8026859b3d3509e35ffea95e0"
+      }
+    },
+    {
+      "question": "Q4",
+      "numerical_integrity_pass": true,
+      "status": "scientific_review_required",
+      "scientific_pass": null,
+      "run_count": 96,
+      "recomputed_metrics_compared": 288,
+      "maximum_metric_difference": 2.220446049250313e-16,
+      "runs_with_material_overlap": 0,
+      "runs_with_unlisted_source_rows": 96,
+      "prediction_rows": 47228,
+      "partition_rows": 117522,
+      "prediction_columns": [
+        "element",
+        "property",
+        "model",
+        "fold",
+        "source_row",
+        "prediction"
+      ],
+      "partition_columns": [
+        "element",
+        "property",
+        "fold",
+        "source_row",
+        "membership"
+      ],
+      "fixture_files_sha256": {
+        "analysis.py": "169cc61515679e47efd1354247e4fa083ecd413e5236745acfe5f8bb9910ad2b",
+        "diagnostics.png": "f0458455d895b9765d9c8140af8f81f2e43829fefd1deae17b78c9f6fb6ea7cb",
+        "partitions.csv": "b69d7de8f8233afde6dcf2bcef4437d798cbc12ceaf71ae9d31dcfdd953be131",
+        "predictions.csv": "cb2789e780021cef6fbafa92b23be4538bd5d41141c77b73b0650ecf0b28754e",
+        "report.md": "d831e0d3cf69040e42084900d15be272abfdec35359ab666abb6890c6923dc22"
+      },
+      "source_files_sha256": {
+        "design.json": "0dc26afb9ca2a4b74daa4014cf07ed90c54ba1497faa5d3713db6afa5ed4ded0",
+        "metrics.csv": "25f77c55fae6a5a92b982ee1987ab5544263122cb66b2acf47d46b57b3418d71",
+        "predictions.csv": "543892584358eef47b10e040ba90c9f993d99e2e5e96bed5db48694eec624b06",
+        "partitions.csv": "c2723cb7cfd03b1f7ac2eb9ed2ef6bf62e0a4708a2f9e9fdb8f8fc093b0138c7"
+      },
+      "verifier_receipt_sha256": "939b11dc3e3a2e3a640ceaa2894fb23b0d9bf9c18c84cdcf568a141796c2ef5d",
+      "source_input_sha256": {
+        "Ti": "ce5e4255439233ff903dc6be0e8a3b1acc9327e72523a66403d2a640fc2f9792",
+        "V": "755c3407c7b47ed9f96becfdb21cf14cc64213e9c4fedec2d493a7fdf0bf1b5b",
+        "Cr": "3b4af75470896db924e60c95d99efbde1152fbc6c848772a07d25abb76eb5684",
+        "Mn": "38f99877c8ece423bb23676463bc4ba767ac6d2bc057edcecf766263c6363dd7",
+        "Fe": "1791e54a4a9d56009d83b5405179c12aa84aa5e1fc6a401af3dfdc1ae7e4b12e",
+        "Co": "f9b3b80ca0a6e44a03dcd9443a90332f7eb42af5a967a8f51923541fb32f6155",
+        "Ni": "a9eb1ad9fde915f8f3387b553395707625d8be8180a4faa2dbb4debf979d2f04",
+        "Cu": "a5c8457b95cc5557616c5c5db3e38fe5cd9d29b8026859b3d3509e35ffea95e0"
+      }
+    }
+  ]
+}

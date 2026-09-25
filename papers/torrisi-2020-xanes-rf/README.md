@@ -10,7 +10,7 @@ Five standalone investigations test scientific study design, spectral modeling a
 | Q4 | Predictive and interpretive value of a newly designed multiscale spectral representation |
 | Q5 | Whether predictive information and energy-localized interpretations survive intensity normalization |
 
-All tasks cover Ti, V, Cr, Mn, Fe, Co, Ni and Cu and require evidence about previously unseen identified materials. Each can be answered independently. An independently inspected difficulty rubric is in [question_quality_review.md](question_quality_review.md); difficulty has not yet been calibrated across multiple tested systems.
+All tasks cover Ti, V, Cr, Mn, Fe, Co, Ni and Cu. Solvers choose their evaluation design and must limit scientific claims to what their evidence supports. Each can be answered independently. An independently inspected difficulty rubric is in [question_quality_review.md](question_quality_review.md); difficulty has not yet been calibrated across multiple tested systems.
 
 ## Sources and solver boundary
 
@@ -24,7 +24,7 @@ Export a solver-only bundle:
 python papers/torrisi-2020-xanes-rf/export_agent_bundle.py Q3 --output /tmp/xanes-agent
 ```
 
-The result contains `prompt.md` and eight files under `inputs/`. Keep the repository, review website, paper, workflows and verification artifacts inaccessible during an attempt. The review site's visual separation is not access control. The inline output contract requests enough row-level evidence to audit a chosen study; it does not prescribe an analysis recipe.
+The result contains `prompt.md` and eight files under `inputs/`. Keep the repository, review website, paper, workflows and verification artifacts inaccessible during an attempt. The review site's visual separation is not access control. The prompt requests a report, figures, runnable code and two tables linking test predictions and training/validation/test membership to element and source_row. Model, property and evaluation-split labels are needed only to distinguish results. There is no required design.json, metrics.csv, run-ID convention, condition vocabulary or excluded-row roster. Material-ID and data-source fields are defined directly; the prompt does not prescribe how to use them when evaluating models.
 
 ## Worked example and verification
 
@@ -41,10 +41,10 @@ Use `Q1` through `Q5` instead of `ALL` for one independent question and a questi
 
 Verification has two required parts:
 
-1. **Numerical integrity:** reconstruct truth from source labels; check record coverage, material separation, paired partitions and metric arithmetic. No fixed split, seed, model, feature ranking or reference-score agreement is required.
+1. **Numerical integrity:** reconstruct truth from source labels, check disjoint record partitions and test-prediction coverage, and calculate metrics. Report shared material IDs and missing IDs for scientific review. Optional metric files, pairing declarations and material-separation claims are checked when supplied; they are not required. No fixed split, seed, model, condition name or reference-score agreement is required.
 2. **Scientific review:** independently run submitted code and inspect leakage, fairness, uncertainty, source-population coverage and whether the question-specific evidence supports the conclusions. The mandatory rubric is `verification/scientific_review_rubric.md`. A numeric pass alone cannot establish a scientific pass.
 
-An alternate implementation and adversarial controls are recorded in `verification/flexible_verification_v2.json`. The audit accepts a distinct model and rejects corrupted artifacts; it also demonstrates why self-consistent copied labels and fabricated auxiliary tables require source reruns and scientific checks. New worked results reside in `verification/Q1` through `Q5`; independent question, execution and scientific review receipts are stored alongside them. A separate prompt-only Q3 attempt provides a feasibility check under different scientific choices.
+Current minimal-output acceptance and adversarial checks are in `verification/lean_verification_v3.json`. They accept outputs without experiment manifests or metric files and check that actual inconsistencies still fail. `verification/flexible_verification_v2.json` preserves the historical interface audit, including demonstrations of why self-consistent copied labels and fabricated auxiliary tables require source reruns and scientific checks. New worked results reside in `verification/Q1` through `Q5`; independent question, execution and scientific review receipts are stored alongside them. A separate Q3 attempt using the previous prompt provides a feasibility check under different scientific choices. The numerical examples have not been refitted for this wording/interface cleanup; their scientific evidence remains valid, and they are checked against the current verifier. The new quality review addresses the current prompts.
 
 Raw labels provide exact truth for each submitted prediction. Author-released tables and the historical source-array audit remain contextual provenance, not acceptance targets for changed study designs. All previous fixed-recipe results are under `verification/legacy_v1` and `workflows/legacy_v1`; they are not completed answers to the revised tasks.
 
@@ -57,7 +57,7 @@ The released `metadata.id` is available only for the `scrape` origin. An identif
 ```bash
 python papers/torrisi-2020-xanes-rf/prepare_assets.py --release /tmp/torrisi-release/matrio_folder --archive /tmp/torrisi-xanes_2019.zip --code-repository /tmp/torrisi-trixs
 /tmp/xanes-bench-env/bin/python papers/torrisi-2020-xanes-rf/audit_verification.py --release /tmp/torrisi-release/matrio_folder
-/tmp/xanes-bench-env/bin/python papers/torrisi-2020-xanes-rf/audit_flexible_verification.py --runs /tmp/xanes-answer
+/tmp/xanes-bench-env/bin/python papers/torrisi-2020-xanes-rf/audit_lean_verification.py
 python papers/torrisi-2020-xanes-rf/build_entry.py
 python papers/torrisi-2020-xanes-rf/check_entry.py
 python scripts/validate_data.py
