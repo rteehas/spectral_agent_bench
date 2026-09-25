@@ -1,0 +1,174 @@
+{
+  "meaning": "Exact released metadata.id appears in training and test. This does not resolve structural equivalence or cross-database aliases.",
+  "conclusion": "These splits test held-out spectral records, not held-out material identifiers.",
+  "conditions": [
+    {
+      "element": "Ti",
+      "target": "coord",
+      "test_records": 471,
+      "test_records_with_material_id_in_training": 189,
+      "overlap_fraction": 0.4012738853503185
+    },
+    {
+      "element": "Ti",
+      "target": "md",
+      "test_records": 471,
+      "test_records_with_material_id_in_training": 189,
+      "overlap_fraction": 0.4012738853503185
+    },
+    {
+      "element": "Ti",
+      "target": "bader",
+      "test_records": 321,
+      "test_records_with_material_id_in_training": 77,
+      "overlap_fraction": 0.2398753894080997
+    },
+    {
+      "element": "V",
+      "target": "coord",
+      "test_records": 687,
+      "test_records_with_material_id_in_training": 315,
+      "overlap_fraction": 0.4585152838427948
+    },
+    {
+      "element": "V",
+      "target": "md",
+      "test_records": 687,
+      "test_records_with_material_id_in_training": 315,
+      "overlap_fraction": 0.4585152838427948
+    },
+    {
+      "element": "V",
+      "target": "bader",
+      "test_records": 387,
+      "test_records_with_material_id_in_training": 140,
+      "overlap_fraction": 0.36175710594315247
+    },
+    {
+      "element": "Cr",
+      "target": "coord",
+      "test_records": 235,
+      "test_records_with_material_id_in_training": 57,
+      "overlap_fraction": 0.2425531914893617
+    },
+    {
+      "element": "Cr",
+      "target": "md",
+      "test_records": 235,
+      "test_records_with_material_id_in_training": 57,
+      "overlap_fraction": 0.2425531914893617
+    },
+    {
+      "element": "Cr",
+      "target": "bader",
+      "test_records": 181,
+      "test_records_with_material_id_in_training": 21,
+      "overlap_fraction": 0.11602209944751381
+    },
+    {
+      "element": "Mn",
+      "target": "coord",
+      "test_records": 781,
+      "test_records_with_material_id_in_training": 296,
+      "overlap_fraction": 0.37900128040973113
+    },
+    {
+      "element": "Mn",
+      "target": "md",
+      "test_records": 781,
+      "test_records_with_material_id_in_training": 296,
+      "overlap_fraction": 0.37900128040973113
+    },
+    {
+      "element": "Mn",
+      "target": "bader",
+      "test_records": 404,
+      "test_records_with_material_id_in_training": 86,
+      "overlap_fraction": 0.21287128712871287
+    },
+    {
+      "element": "Fe",
+      "target": "coord",
+      "test_records": 668,
+      "test_records_with_material_id_in_training": 232,
+      "overlap_fraction": 0.3473053892215569
+    },
+    {
+      "element": "Fe",
+      "target": "md",
+      "test_records": 668,
+      "test_records_with_material_id_in_training": 232,
+      "overlap_fraction": 0.3473053892215569
+    },
+    {
+      "element": "Fe",
+      "target": "bader",
+      "test_records": 391,
+      "test_records_with_material_id_in_training": 107,
+      "overlap_fraction": 0.27365728900255754
+    },
+    {
+      "element": "Co",
+      "target": "coord",
+      "test_records": 344,
+      "test_records_with_material_id_in_training": 149,
+      "overlap_fraction": 0.4331395348837209
+    },
+    {
+      "element": "Co",
+      "target": "md",
+      "test_records": 344,
+      "test_records_with_material_id_in_training": 149,
+      "overlap_fraction": 0.4331395348837209
+    },
+    {
+      "element": "Co",
+      "target": "bader",
+      "test_records": 208,
+      "test_records_with_material_id_in_training": 59,
+      "overlap_fraction": 0.28365384615384615
+    },
+    {
+      "element": "Ni",
+      "target": "coord",
+      "test_records": 337,
+      "test_records_with_material_id_in_training": 143,
+      "overlap_fraction": 0.42433234421364985
+    },
+    {
+      "element": "Ni",
+      "target": "md",
+      "test_records": 337,
+      "test_records_with_material_id_in_training": 143,
+      "overlap_fraction": 0.42433234421364985
+    },
+    {
+      "element": "Ni",
+      "target": "bader",
+      "test_records": 223,
+      "test_records_with_material_id_in_training": 69,
+      "overlap_fraction": 0.3094170403587444
+    },
+    {
+      "element": "Cu",
+      "target": "coord",
+      "test_records": 338,
+      "test_records_with_material_id_in_training": 114,
+      "overlap_fraction": 0.33727810650887574
+    },
+    {
+      "element": "Cu",
+      "target": "md",
+      "test_records": 338,
+      "test_records_with_material_id_in_training": 114,
+      "overlap_fraction": 0.33727810650887574
+    },
+    {
+      "element": "Cu",
+      "target": "bader",
+      "test_records": 217,
+      "test_records_with_material_id_in_training": 59,
+      "overlap_fraction": 0.271889400921659
+    }
+  ]
+}

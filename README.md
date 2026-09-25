@@ -5,7 +5,7 @@ A static GitHub Pages workspace for reviewing spectral benchmark examples, inspi
 **Website:** https://rteehas.github.io/spectral_agent_bench/  
 **Review alias:** https://rteehas.github.io/spectral_agent_bench/review.html
 
-The live dataset, [`docs/data/benchmark.json`](docs/data/benchmark.json), contains three active questions for [Gleason et al. (2024)](papers/gleason-2024-cu-oxidation/README.md), with minimal input bundles and verification targets. Q1 has an executed offline candidate workflow; Q8 covers live search and fresh simulations; Q9 assigns Cu oxidation-state labels from material IDs. Q8 and Q9 remain partially validated pending their live runtime stages. The four fictional demonstration tasks are preserved separately in [`docs/data/benchmark.examples.json`](docs/data/benchmark.examples.json) as a reference; they are not loaded by the website.
+The active dataset, [`docs/data/benchmark.json`](docs/data/benchmark.json), contains eight questions across two papers. [Torrisi et al. (2020)](papers/torrisi-2020-xanes-rf/README.md) adds five offline XANES research questions with released spectral inputs, executed workflows, independent reruns, and audited verification. [Gleason et al. (2024)](papers/gleason-2024-cu-oxidation/README.md) retains three questions: Q1 has an executed offline workflow; Q8 covers live search and fresh simulations; Q9 assigns Cu oxidation-state labels from material IDs. Gleason Q8 and Q9 remain partially validated pending their live runtime stages. The four fictional demonstration tasks remain separately in [`docs/data/benchmark.examples.json`](docs/data/benchmark.examples.json); they are not loaded by the website. Local additions appear on the public website only after a separate deployment.
 
 ## Review workflow
 

@@ -1,0 +1,815 @@
+{
+  "question": "Q3",
+  "models": [
+    {
+      "id": "Ti_bader_pointwise_feff_natural",
+      "element": "Ti",
+      "target": "bader",
+      "representation": "pointwise",
+      "normalization": "feff",
+      "balanced": false,
+      "train_count": 2592,
+      "fit_count": 2592,
+      "valid_count": 288,
+      "test_count": 321,
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "metrics_mean": {
+        "r2": 0.571185445780216,
+        "mae": 0.07112919018989516,
+        "low_count": 38.0,
+        "low_mae": 0.11545662203590747,
+        "low_bias": 0.09829624343870423,
+        "high_count": 35.0,
+        "high_mae": 0.2476701454965141,
+        "high_bias": -0.2476701454965141
+      },
+      "metrics_std": {
+        "r2": 0.005327407350610602,
+        "mae": 0.00031620144545820966,
+        "low_count": 0.0,
+        "low_mae": 0.002151173593235935,
+        "low_bias": 0.0029589010152979624,
+        "high_count": 0.0,
+        "high_mae": 0.004287836169773059,
+        "high_bias": 0.004287836169773059
+      },
+      "baseline": {
+        "train_mean": 2.284653584700897,
+        "mae": 0.11125185398229545,
+        "r2": -3.128337677149595e-05
+      },
+      "tail_thresholds": {
+        "low": 2.13889884375,
+        "high": 2.4880566
+      }
+    },
+    {
+      "id": "Ti_bader_peak_feff_natural",
+      "element": "Ti",
+      "target": "bader",
+      "representation": "peak",
+      "normalization": "feff",
+      "balanced": false,
+      "train_count": 2592,
+      "fit_count": 2592,
+      "valid_count": 288,
+      "test_count": 321,
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "metrics_mean": {
+        "r2": 0.15383816496559066,
+        "mae": 0.1052491498434472,
+        "low_count": 38.0,
+        "low_mae": 0.221180955702853,
+        "low_bias": 0.20359806094474672,
+        "high_count": 35.0,
+        "high_mae": 0.3251726780262844,
+        "high_bias": -0.3251726780262844
+      },
+      "metrics_std": {
+        "r2": 0.0009642563504264058,
+        "mae": 9.087062544115833e-05,
+        "low_count": 0.0,
+        "low_mae": 0.0007230010909205004,
+        "low_bias": 0.0006003449188577673,
+        "high_count": 0.0,
+        "high_mae": 0.0009404628809532078,
+        "high_bias": 0.0009404628809532078
+      },
+      "baseline": {
+        "train_mean": 2.284653584700897,
+        "mae": 0.11125185398229545,
+        "r2": -3.128337677149595e-05
+      },
+      "tail_thresholds": {
+        "low": 2.13889884375,
+        "high": 2.4880566
+      }
+    },
+    {
+      "id": "V_bader_pointwise_feff_natural",
+      "element": "V",
+      "target": "bader",
+      "representation": "pointwise",
+      "normalization": "feff",
+      "balanced": false,
+      "train_count": 3128,
+      "fit_count": 3128,
+      "valid_count": 348,
+      "test_count": 387,
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "metrics_mean": {
+        "r2": 0.8298866191121167,
+        "mae": 0.07752239194256495,
+        "low_count": 40.0,
+        "low_mae": 0.1001688678087085,
+        "low_bias": 0.0920991212498971,
+        "high_count": 35.0,
+        "high_mae": 0.1395923812297958,
+        "high_bias": -0.1395923812297958
+      },
+      "metrics_std": {
+        "r2": 0.0013606176521955321,
+        "mae": 0.0004279769738940677,
+        "low_count": 0.0,
+        "low_mae": 0.0013293133460318665,
+        "low_bias": 0.0007323546672658006,
+        "high_count": 0.0,
+        "high_mae": 0.0011562637876257774,
+        "high_bias": 0.0011562637876257774
+      },
+      "baseline": {
+        "train_mean": 2.1372757814266157,
+        "mae": 0.20505993946905904,
+        "r2": -1.7480385110957286e-05
+      },
+      "tail_thresholds": {
+        "low": 1.8146387899999998,
+        "high": 2.420177125
+      }
+    },
+    {
+      "id": "V_bader_peak_feff_natural",
+      "element": "V",
+      "target": "bader",
+      "representation": "peak",
+      "normalization": "feff",
+      "balanced": false,
+      "train_count": 3128,
+      "fit_count": 3128,
+      "valid_count": 348,
+      "test_count": 387,
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "metrics_mean": {
+        "r2": 0.3321973049099282,
+        "mae": 0.1632468598660685,
+        "low_count": 40.0,
+        "low_mae": 0.31472842166712345,
+        "low_bias": 0.3114037760546056,
+        "high_count": 35.0,
+        "high_mae": 0.2868923870083994,
+        "high_bias": -0.2868923870083994
+      },
+      "metrics_std": {
+        "r2": 0.0002668203192960044,
+        "mae": 8.521906138245794e-05,
+        "low_count": 0.0,
+        "low_mae": 0.0005249479263149481,
+        "low_bias": 0.0001661922673359686,
+        "high_count": 0.0,
+        "high_mae": 0.0003415918072562379,
+        "high_bias": 0.0003415918072562379
+      },
+      "baseline": {
+        "train_mean": 2.1372757814266157,
+        "mae": 0.20505993946905904,
+        "r2": -1.7480385110957286e-05
+      },
+      "tail_thresholds": {
+        "low": 1.8146387899999998,
+        "high": 2.420177125
+      }
+    },
+    {
+      "id": "Cr_bader_pointwise_feff_natural",
+      "element": "Cr",
+      "target": "bader",
+      "representation": "pointwise",
+      "normalization": "feff",
+      "balanced": false,
+      "train_count": 1465,
+      "fit_count": 1465,
+      "valid_count": 163,
+      "test_count": 181,
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "metrics_mean": {
+        "r2": 0.8466148846833793,
+        "mae": 0.06479986002679126,
+        "low_count": 21.0,
+        "low_mae": 0.11174876293624024,
+        "low_bias": 0.09308358934754561,
+        "high_count": 17.0,
+        "high_mae": 0.12599810370271067,
+        "high_bias": -0.12364526048375639
+      },
+      "metrics_std": {
+        "r2": 0.0006448653757376358,
+        "mae": 0.00034863610321818453,
+        "low_count": 0.0,
+        "low_mae": 0.0007983454852892118,
+        "low_bias": 0.0021254298828743937,
+        "high_count": 0.0,
+        "high_mae": 0.0015672676362812243,
+        "high_bias": 0.002255214114810321
+      },
+      "baseline": {
+        "train_mean": 1.8790905393782578,
+        "mae": 0.19767399462665777,
+        "r2": -0.008455292077918397
+      },
+      "tail_thresholds": {
+        "low": 1.5162818000000002,
+        "high": 2.146890999999999
+      }
+    },
+    {
+      "id": "Cr_bader_peak_feff_natural",
+      "element": "Cr",
+      "target": "bader",
+      "representation": "peak",
+      "normalization": "feff",
+      "balanced": false,
+      "train_count": 1465,
+      "fit_count": 1465,
+      "valid_count": 163,
+      "test_count": 181,
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "metrics_mean": {
+        "r2": 0.27583111942406996,
+        "mae": 0.1659066168327899,
+        "low_count": 21.0,
+        "low_mae": 0.36506477518955743,
+        "low_bias": 0.3388212758621066,
+        "high_count": 17.0,
+        "high_mae": 0.2663645271635164,
+        "high_bias": -0.2663645271635164
+      },
+      "metrics_std": {
+        "r2": 0.0017223011604484773,
+        "mae": 0.0003324928886417998,
+        "low_count": 0.0,
+        "low_mae": 0.0016767785688275691,
+        "low_bias": 0.0006978544128234683,
+        "high_count": 0.0,
+        "high_mae": 0.0010232580102492598,
+        "high_bias": 0.0010232580102492598
+      },
+      "baseline": {
+        "train_mean": 1.8790905393782578,
+        "mae": 0.19767399462665777,
+        "r2": -0.008455292077918397
+      },
+      "tail_thresholds": {
+        "low": 1.5162818000000002,
+        "high": 2.146890999999999
+      }
+    },
+    {
+      "id": "Mn_bader_pointwise_feff_natural",
+      "element": "Mn",
+      "target": "bader",
+      "representation": "pointwise",
+      "normalization": "feff",
+      "balanced": false,
+      "train_count": 3264,
+      "fit_count": 3264,
+      "valid_count": 363,
+      "test_count": 404,
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "metrics_mean": {
+        "r2": 0.7848056287002798,
+        "mae": 0.06220059803537809,
+        "low_count": 39.0,
+        "low_mae": 0.14181964533850885,
+        "low_bias": 0.1406882175163765,
+        "high_count": 37.0,
+        "high_mae": 0.09888220798908083,
+        "high_bias": -0.09790183142644678
+      },
+      "metrics_std": {
+        "r2": 0.004332079279494099,
+        "mae": 9.715572014111601e-05,
+        "low_count": 0.0,
+        "low_mae": 0.0010089647913600857,
+        "low_bias": 0.0009253381841768523,
+        "high_count": 0.0,
+        "high_mae": 0.0007402067869051053,
+        "high_bias": 0.0007751018087411445
+      },
+      "baseline": {
+        "train_mean": 1.7420648166078125,
+        "mae": 0.19281452610763888,
+        "r2": -0.0003356296448089324
+      },
+      "tail_thresholds": {
+        "low": 1.486596375,
+        "high": 2.036538
+      }
+    },
+    {
+      "id": "Mn_bader_peak_feff_natural",
+      "element": "Mn",
+      "target": "bader",
+      "representation": "peak",
+      "normalization": "feff",
+      "balanced": false,
+      "train_count": 3264,
+      "fit_count": 3264,
+      "valid_count": 363,
+      "test_count": 404,
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "metrics_mean": {
+        "r2": 0.23401999109612806,
+        "mae": 0.14826991108138501,
+        "low_count": 39.0,
+        "low_mae": 0.3557102872368219,
+        "low_bias": 0.35351024992430063,
+        "high_count": 37.0,
+        "high_mae": 0.27963235052795765,
+        "high_bias": -0.27963235052795765
+      },
+      "metrics_std": {
+        "r2": 0.0006877636203351189,
+        "mae": 0.00010928098877587002,
+        "low_count": 0.0,
+        "low_mae": 0.0005621351416809797,
+        "low_bias": 0.0004839619107301901,
+        "high_count": 0.0,
+        "high_mae": 0.00017546882621463438,
+        "high_bias": 0.00017546882621463438
+      },
+      "baseline": {
+        "train_mean": 1.7420648166078125,
+        "mae": 0.19281452610763888,
+        "r2": -0.0003356296448089324
+      },
+      "tail_thresholds": {
+        "low": 1.486596375,
+        "high": 2.036538
+      }
+    },
+    {
+      "id": "Fe_bader_pointwise_feff_natural",
+      "element": "Fe",
+      "target": "bader",
+      "representation": "pointwise",
+      "normalization": "feff",
+      "balanced": false,
+      "train_count": 3165,
+      "fit_count": 3165,
+      "valid_count": 352,
+      "test_count": 391,
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "metrics_mean": {
+        "r2": 0.7904101663755281,
+        "mae": 0.09196946474557617,
+        "low_count": 36.0,
+        "low_mae": 0.18185120505381888,
+        "low_bias": 0.1736079122248946,
+        "high_count": 36.0,
+        "high_mae": 0.10056636905963369,
+        "high_bias": -0.10056636905963369
+      },
+      "metrics_std": {
+        "r2": 0.0034625637282190294,
+        "mae": 0.0005265532480495884,
+        "low_count": 0.0,
+        "low_mae": 0.0033226042710034934,
+        "low_bias": 0.0024551853274599428,
+        "high_count": 0.0,
+        "high_mae": 0.001890365141806291,
+        "high_bias": 0.001890365141806291
+      },
+      "baseline": {
+        "train_mean": 1.7017907922002313,
+        "mae": 0.20989258217657664,
+        "r2": -0.001126190410524197
+      },
+      "tail_thresholds": {
+        "low": 1.4070307777777777,
+        "high": 1.971686
+      }
+    },
+    {
+      "id": "Fe_bader_peak_feff_natural",
+      "element": "Fe",
+      "target": "bader",
+      "representation": "peak",
+      "normalization": "feff",
+      "balanced": false,
+      "train_count": 3165,
+      "fit_count": 3165,
+      "valid_count": 352,
+      "test_count": 391,
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "metrics_mean": {
+        "r2": 0.04477065041355858,
+        "mae": 0.20144746733886,
+        "low_count": 36.0,
+        "low_mae": 0.5825627887133704,
+        "low_bias": 0.5805302869298975,
+        "high_count": 36.0,
+        "high_mae": 0.2950898456730928,
+        "high_bias": -0.2950898456730928
+      },
+      "metrics_std": {
+        "r2": 0.0006483123271572388,
+        "mae": 0.00013787261036258132,
+        "low_count": 0.0,
+        "low_mae": 0.00038235108031365087,
+        "low_bias": 0.0007541158982796779,
+        "high_count": 0.0,
+        "high_mae": 0.0002599361711205336,
+        "high_bias": 0.0002599361711205336
+      },
+      "baseline": {
+        "train_mean": 1.7017907922002313,
+        "mae": 0.20989258217657664,
+        "r2": -0.001126190410524197
+      },
+      "tail_thresholds": {
+        "low": 1.4070307777777777,
+        "high": 1.971686
+      }
+    },
+    {
+      "id": "Co_bader_pointwise_feff_natural",
+      "element": "Co",
+      "target": "bader",
+      "representation": "pointwise",
+      "normalization": "feff",
+      "balanced": false,
+      "train_count": 1680,
+      "fit_count": 1680,
+      "valid_count": 187,
+      "test_count": 208,
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "metrics_mean": {
+        "r2": 0.8196181198386943,
+        "mae": 0.06581363356431043,
+        "low_count": 19.0,
+        "low_mae": 0.11357333359436056,
+        "low_bias": 0.1113546518838342,
+        "high_count": 28.0,
+        "high_mae": 0.13273060805780137,
+        "high_bias": -0.1321106194466902
+      },
+      "metrics_std": {
+        "r2": 0.0056730069248534165,
+        "mae": 0.0012776280227577992,
+        "low_count": 0.0,
+        "low_mae": 0.0020489570413976667,
+        "low_bias": 0.001977647086163298,
+        "high_count": 0.0,
+        "high_mae": 0.001181072156935707,
+        "high_bias": 0.0014747022660225697
+      },
+      "baseline": {
+        "train_mean": 1.4448910983870935,
+        "mae": 0.15222001358931764,
+        "r2": -0.018159191452862267
+      },
+      "tail_thresholds": {
+        "low": 1.26221728,
+        "high": 1.6722920000000001
+      }
+    },
+    {
+      "id": "Co_bader_peak_feff_natural",
+      "element": "Co",
+      "target": "bader",
+      "representation": "peak",
+      "normalization": "feff",
+      "balanced": false,
+      "train_count": 1680,
+      "fit_count": 1680,
+      "valid_count": 187,
+      "test_count": 208,
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "metrics_mean": {
+        "r2": 0.01684031946233307,
+        "mae": 0.15106901565152245,
+        "low_count": 19.0,
+        "low_mae": 0.39485620803424,
+        "low_bias": 0.39485620803424,
+        "high_count": 28.0,
+        "high_mae": 0.3095592259749468,
+        "high_bias": -0.3095085305502019
+      },
+      "metrics_std": {
+        "r2": 0.0014135903377175188,
+        "mae": 0.0001224498069327086,
+        "low_count": 0.0,
+        "low_mae": 0.0003179354177102459,
+        "low_bias": 0.0003179354177102459,
+        "high_count": 0.0,
+        "high_mae": 0.0010179229215676604,
+        "high_bias": 0.0010856906634001333
+      },
+      "baseline": {
+        "train_mean": 1.4448910983870935,
+        "mae": 0.15222001358931764,
+        "r2": -0.018159191452862267
+      },
+      "tail_thresholds": {
+        "low": 1.26221728,
+        "high": 1.6722920000000001
+      }
+    },
+    {
+      "id": "Ni_bader_pointwise_feff_natural",
+      "element": "Ni",
+      "target": "bader",
+      "representation": "pointwise",
+      "normalization": "feff",
+      "balanced": false,
+      "train_count": 1800,
+      "fit_count": 1800,
+      "valid_count": 201,
+      "test_count": 223,
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "metrics_mean": {
+        "r2": 0.6055329442660655,
+        "mae": 0.06063104875738887,
+        "low_count": 21.0,
+        "low_mae": 0.16028453447617116,
+        "low_bias": 0.1355215715150663,
+        "high_count": 27.0,
+        "high_mae": 0.0769299516533296,
+        "high_bias": -0.07656503234321789
+      },
+      "metrics_std": {
+        "r2": 0.008786122743852006,
+        "mae": 0.00010640946793335154,
+        "low_count": 0.0,
+        "low_mae": 0.005177209413681062,
+        "low_bias": 0.0070416920974947115,
+        "high_count": 0.0,
+        "high_mae": 0.0018723403324438232,
+        "high_bias": 0.0019815324344176727
+      },
+      "baseline": {
+        "train_mean": 1.292730432922826,
+        "mae": 0.09672081328887207,
+        "r2": -0.007824072015406802
+      },
+      "tail_thresholds": {
+        "low": 1.144167025,
+        "high": 1.4295135999999997
+      }
+    },
+    {
+      "id": "Ni_bader_peak_feff_natural",
+      "element": "Ni",
+      "target": "bader",
+      "representation": "peak",
+      "normalization": "feff",
+      "balanced": false,
+      "train_count": 1800,
+      "fit_count": 1800,
+      "valid_count": 201,
+      "test_count": 223,
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "metrics_mean": {
+        "r2": -0.10256471131439533,
+        "mae": 0.10134544152496361,
+        "low_count": 21.0,
+        "low_mae": 0.2869679302289984,
+        "low_bias": 0.2820301623412433,
+        "high_count": 27.0,
+        "high_mae": 0.1771672102562365,
+        "high_bias": -0.1771672102562365
+      },
+      "metrics_std": {
+        "r2": 0.012439562643413647,
+        "mae": 0.00027882355979192634,
+        "low_count": 0.0,
+        "low_mae": 0.0005666909331269869,
+        "low_bias": 0.00032672060280748716,
+        "high_count": 0.0,
+        "high_mae": 0.0004168960332984797,
+        "high_bias": 0.0004168960332984797
+      },
+      "baseline": {
+        "train_mean": 1.292730432922826,
+        "mae": 0.09672081328887207,
+        "r2": -0.007824072015406802
+      },
+      "tail_thresholds": {
+        "low": 1.144167025,
+        "high": 1.4295135999999997
+      }
+    },
+    {
+      "id": "Cu_bader_pointwise_feff_natural",
+      "element": "Cu",
+      "target": "bader",
+      "representation": "pointwise",
+      "normalization": "feff",
+      "balanced": false,
+      "train_count": 1755,
+      "fit_count": 1755,
+      "valid_count": 195,
+      "test_count": 217,
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "metrics_mean": {
+        "r2": 0.6817786381000834,
+        "mae": 0.08479694031827266,
+        "low_count": 19.0,
+        "low_mae": 0.1903311873060557,
+        "low_bias": 0.18984854027681594,
+        "high_count": 33.0,
+        "high_mae": 0.11998330848515466,
+        "high_bias": -0.11854808908279783
+      },
+      "metrics_std": {
+        "r2": 0.002864724535435736,
+        "mae": 0.000644172005157658,
+        "low_count": 0.0,
+        "low_mae": 0.0023526646962304183,
+        "low_bias": 0.002263256814568743,
+        "high_count": 0.0,
+        "high_mae": 0.0023734321717897647,
+        "high_bias": 0.002214573527437022
+      },
+      "baseline": {
+        "train_mean": 1.0345402469133231,
+        "mae": 0.1752352976634267,
+        "r2": -0.007175297734181463
+      },
+      "tail_thresholds": {
+        "low": 0.6851507000000004,
+        "high": 1.254283
+      }
+    },
+    {
+      "id": "Cu_bader_peak_feff_natural",
+      "element": "Cu",
+      "target": "bader",
+      "representation": "peak",
+      "normalization": "feff",
+      "balanced": false,
+      "train_count": 1755,
+      "fit_count": 1755,
+      "valid_count": 195,
+      "test_count": 217,
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "metrics_mean": {
+        "r2": 0.04728396777992409,
+        "mae": 0.17153306222439624,
+        "low_count": 19.0,
+        "low_mae": 0.46498292473554176,
+        "low_bias": 0.46498292473554176,
+        "high_count": 33.0,
+        "high_mae": 0.25199926726649874,
+        "high_bias": -0.25199926726649874
+      },
+      "metrics_std": {
+        "r2": 0.0057850467943864215,
+        "mae": 0.0007576157279320007,
+        "low_count": 0.0,
+        "low_mae": 0.0025418015962504832,
+        "low_bias": 0.0025418015962504832,
+        "high_count": 0.0,
+        "high_mae": 0.0021036754334791473,
+        "high_bias": 0.0021036754334791473
+      },
+      "baseline": {
+        "train_mean": 1.0345402469133231,
+        "mae": 0.1752352976634267,
+        "r2": -0.007175297734181463
+      },
+      "tail_thresholds": {
+        "low": 0.6851507000000004,
+        "high": 1.254283
+      }
+    }
+  ],
+  "preprocessing": {
+    "Ti": {
+      "raw": 4930,
+      "ineligible": 57,
+      "unphysical": 26,
+      "polynomial_rejected": 54,
+      "retained": 4793
+    },
+    "V": {
+      "raw": 7120,
+      "ineligible": 30,
+      "unphysical": 12,
+      "polynomial_rejected": 149,
+      "retained": 6929
+    },
+    "Cr": {
+      "raw": 2542,
+      "ineligible": 8,
+      "unphysical": 18,
+      "polynomial_rejected": 121,
+      "retained": 2395
+    },
+    "Mn": {
+      "raw": 8504,
+      "ineligible": 42,
+      "unphysical": 504,
+      "polynomial_rejected": 41,
+      "retained": 7917
+    },
+    "Fe": {
+      "raw": 7362,
+      "ineligible": 25,
+      "unphysical": 523,
+      "polynomial_rejected": 70,
+      "retained": 6744
+    },
+    "Co": {
+      "raw": 3533,
+      "ineligible": 7,
+      "unphysical": 66,
+      "polynomial_rejected": 7,
+      "retained": 3453
+    },
+    "Ni": {
+      "raw": 3420,
+      "ineligible": 11,
+      "unphysical": 12,
+      "polynomial_rejected": 1,
+      "retained": 3396
+    },
+    "Cu": {
+      "raw": 3496,
+      "ineligible": 21,
+      "unphysical": 31,
+      "polynomial_rejected": 0,
+      "retained": 3444
+    }
+  },
+  "protocol": {
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "n_estimators": 100,
+    "max_depth": 35,
+    "split_seed": 42,
+    "split": "sequential 10% test then 10% validation of remainder"
+  },
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.5.3",
+    "sklearn": "1.9.1"
+  }
+}

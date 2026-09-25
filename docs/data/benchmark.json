@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "datasetId": "spectral-agent-v3",
+  "datasetId": "spectral-agent-v4",
   "title": "Spectral Agent Bench",
   "demo": false,
   "papers": [
@@ -309,6 +309,889 @@
             }
           },
           "groundTruthReasoning": "Worked solution: retrieve material-level oxidation-state assignments and attach the Cu average to each simulated spectrum. API lookup is the candidate method; the released historical labels are held back for evaluator comparison.\n\n1. Read the spectrum-to-material mapping (Python / csv)\nRead spectrum_material_ids.csv. Preserve every spectrum_id and mp_id pairing; query each distinct material ID once and map its result back to all associated spectra.\nOutput/status: The supplied mapping contains 3,439 spectra and 3,439 distinct MP IDs. The material IDs are projected from the released processed spectral table; spectrum_id is an added row identifier.\n\n2. Retrieve the material oxidation-state records (Python / mp-api MPRester)\nUse MPRester.materials.oxidation_states.search(material_ids=..., all_fields=True) in batches, with all result pages enabled. Save returned records in query_snapshot.json along with queries, retrieval times, database versions and client version. Keep request failures distinct from successful requests that return no record or no Cu assignment. Check identifier changes or conflicting records before assigning a label.\nOutput/status: A live response snapshot tied to the input IDs. This authenticated stage has not been executed here. The offline check uses a clearly identified projection of historical dictionaries, not a new API response.\n\n3. Determine the material-average Cu label (Python / JSON processing; MP oxidation-state documents)\nFor each matched document, select average_oxidation_states[\"Cu\"]. This is an average over Cu atoms; it can be fractional. Preserve the returned value and the document method where available. A separate recalculation of bond-valence descriptors is not needed for this worked solution.\nOutput/status: One supported Cu average for each record that supplies it. Offline replay of the archived dictionaries yields 2,563 available Cu averages, including fractional values.\n\n4. Represent unavailable assignments explicitly (Python / data validation)\nLeave the value blank and explain an unresolved case if the Cu assignment is absent, a record is missing, a request failed or an identifier needs review. Distinguish an explicitly returned numeric zero from an absent assignment. Do not remove the associated spectrum from the output.\nOutput/status: The archived dictionaries leave 876 of the retained spectra unresolved. The paper pipeline later replaced these missing values with zero; those released zero labels are historical processing outputs, not independent evidence of Cu(0). Live coverage can differ.\n\n5. Save labels and provenance (Python / csv, json and hashlib)\nWrite labels.csv with spectrum_id, mp_id, cu_oxidation_state, status, reason and evidence. Link each row to its saved source record. Save a result summary identifying the snapshot and explaining the handling of fractional and unavailable assignments.\nOutput/status: A complete spectrum-to-label table, query snapshot and method explanation. The offline projection replay preserves all 3,439 input rows; it does not perform spectral simulation, alignment or model training.\n\n6. Compare the answer with independent records (Evaluator / mp-api and verify_oxidation_states.py)\nCapture the same MP query scope independently at the same database version and compare material mappings, Cu averages and unavailable assignments. Review database drift against historical_labels.json separately. The numeric checker does not itself establish independent retrieval or chemical correctness.\nOutput/status: The historical replay and deliberately incorrect-answer checks are recorded in component_checks.json. Live API execution and independent live reference capture remain pending."
+        }
+      ]
+    },
+    {
+      "id": "torrisi-2020-xanes-rf",
+      "title": "Random forest machine learning models for interpretable X-ray absorption near-edge structure spectrum-property relationships",
+      "authors": "Steven B. Torrisi et al. (2020)",
+      "doi": "10.1038/s41524-020-00376-6",
+      "category": "Transition-metal K-edge XANES structure–property inference",
+      "facility": "Materials Project / OQMD / FEFF9",
+      "pdf": "https://www.nature.com/articles/s41524-020-00376-6.pdf",
+      "dataUrl": "https://data.matr.io/4/",
+      "codeUrl": "https://github.com/TRI-AMDD/trixs/tree/6dbcc598c7bea235f464bed91744c1617725b7a8",
+      "scenarios": [
+        {
+          "id": "TORRISI20-Q1",
+          "kind": "Subquestion",
+          "executionStatus": "validated",
+          "title": "Does coordination-number prediction resolve rare environments as well as common ones?",
+          "inputs": [
+            {
+              "name": "Ti.jsonl.gz",
+              "url": "data/torrisi-2020-xanes-rf/inputs/Ti.jsonl.gz",
+              "description": "All released Ti spectral rows; lossless projection of E, mu, labels and provenance with source_row."
+            },
+            {
+              "name": "V.jsonl.gz",
+              "url": "data/torrisi-2020-xanes-rf/inputs/V.jsonl.gz",
+              "description": "All released V spectral rows; lossless projection of E, mu, labels and provenance with source_row."
+            },
+            {
+              "name": "Cr.jsonl.gz",
+              "url": "data/torrisi-2020-xanes-rf/inputs/Cr.jsonl.gz",
+              "description": "All released Cr spectral rows; lossless projection of E, mu, labels and provenance with source_row."
+            },
+            {
+              "name": "Mn.jsonl.gz",
+              "url": "data/torrisi-2020-xanes-rf/inputs/Mn.jsonl.gz",
+              "description": "All released Mn spectral rows; lossless projection of E, mu, labels and provenance with source_row."
+            },
+            {
+              "name": "Fe.jsonl.gz",
+              "url": "data/torrisi-2020-xanes-rf/inputs/Fe.jsonl.gz",
+              "description": "All released Fe spectral rows; lossless projection of E, mu, labels and provenance with source_row."
+            },
+            {
+              "name": "Co.jsonl.gz",
+              "url": "data/torrisi-2020-xanes-rf/inputs/Co.jsonl.gz",
+              "description": "All released Co spectral rows; lossless projection of E, mu, labels and provenance with source_row."
+            },
+            {
+              "name": "Ni.jsonl.gz",
+              "url": "data/torrisi-2020-xanes-rf/inputs/Ni.jsonl.gz",
+              "description": "All released Ni spectral rows; lossless projection of E, mu, labels and provenance with source_row."
+            },
+            {
+              "name": "Cu.jsonl.gz",
+              "url": "data/torrisi-2020-xanes-rf/inputs/Cu.jsonl.gz",
+              "description": "All released Cu spectral rows; lossless projection of E, mu, labels and provenance with source_row."
+            },
+            {
+              "name": "protocol.json",
+              "url": "data/torrisi-2020-xanes-rf/inputs/protocol.json",
+              "description": "Fixed comparison design, preprocessing conventions and compute budget; no fitted outputs or expected conclusions."
+            },
+            {
+              "name": "output_schema.json",
+              "url": "data/torrisi-2020-xanes-rf/inputs/output_schema.json",
+              "description": "Answer-format contract for numerical screening; no ground-truth values."
+            },
+            {
+              "name": "README.md",
+              "url": "data/torrisi-2020-xanes-rf/inputs/README.md",
+              "description": "Input field definitions and units."
+            }
+          ],
+          "prompt": {
+            "background": "The inputs contain site-resolved computed K-edge spectra and labels for oxygen-containing compounds of eight transition metals. The spectra are the earliest released representation: 100-point processed absorption arrays, with missing labels marked null. The coordination classification target is restricted to 4, 5 or 6, and their frequencies can differ by element. Overall classification accuracy can conceal poor recognition of rare coordination environments.",
+            "instruction": "Across Ti, V, Cr, Mn, Fe, Co, Ni and Cu, determine how much spectral prediction improves on a dominant-class baseline, and whether training-set oversampling helps the less common environments. Use the paired protocol. Report class distributions, held-out accuracy, per-class and macro-F1, seed variability, and confusion matrices. Explain which conclusions about rare environments are supported by the results. Follow protocol.json and output_schema.json, and return a concise evidence-backed conclusion alongside the numerical files and plots."
+          },
+          "groundTruthReasoning": "1. Load the eight gzip JSONL input files using Python gzip and json, retaining source_row identifiers. Use NumPy to apply the declared eligibility, unphysical-spectrum and cubic-fit residual screens. The independent source audit checks this reconstruction against released arrays.\n\n2. Select the target labels and use scikit-learn train_test_split twice with seed 42. Retain disjoint training, validation and test identifiers; oversample only training coordination records in balanced conditions. Compute baselines and tail cutoffs from training labels.\n\n3. Build the representations required by the research question using NumPy. For polynomial descriptors, fit cubics on local [-1,1] coordinates at four partition sizes and retain coefficient metadata. The independently checked released coefficient vectors anchor this calculation.\n\n4. Train the specified fresh random forests using scikit-learn with 100 trees and seeds 42, 43, 44. Save every held-out prediction and impurity importance. Calculate scores separately per seed, then their mean and population standard deviation.\n\n5. Run summarize.py (called by candidate.py) with NumPy, SciPy and Matplotlib to produce the task-specific paired comparisons, diagnostics and conclusion. Fit matched natural-frequency and oversampled coordination classifiers. Compute training-mode baselines, class frequencies and per-class F1; average balanced-model confusion-cell counts across seeds. Compare balanced minus natural macro-F1 and balanced accuracy minus mode-baseline accuracy. The executed numerical reference is stored in verification/Q1/result.json. There are 16 element/target/representation conditions, each evaluated with three forest seeds. Executed finding: Balanced spectral models exceed the training-mode accuracy baseline for 8/8 elements. Oversampling improves macro-F1 for 4/8 elements, with mean paired change +0.0150. Ti: training minority class CN=4; balanced accuracy 0.873 versus mode baseline 0.514; minority F1 0.816; oversampling changes macro-F1 by -0.0011.\n\n6. Evaluator only: run verify.py against source_anchor_audit.json and held-back reference outputs. Check labels and test membership, recalculate metrics from predictions, validate paired differences and feature attribution summaries, and apply declared numerical tolerances. Inspect diagnostics.png and conclusion.md for scientific interpretation. Numerical success is not a substitute for that review.\n\nProvenance: Coordination classification and class imbalance; anchored to released pointwise performance table and published Fig. 3. The paired no-oversampling ablation is a benchmark extension. These are controlled benchmark reruns using a smaller forest budget and current software, not exact reproductions of published scores. See candidate_execution.json for independent execution and verification_audit.json for checker controls.",
+          "verification": {
+            "description": "Check the exact source-row split and labels against independently reconstructed released data; recompute reported scores from predictions and inspect the paired scientific comparisons. Compare model outputs with the held-back modern reference under the documented benchmark tolerances. Published tables provide contextual evidence rather than exact targets for the smaller training budget. Require plots and an evidence-backed conclusion; attribution is predictive association, not causation.",
+            "data": [
+              {
+                "name": "result.json",
+                "url": "data/torrisi-2020-xanes-rf/verification/Q1/result.json",
+                "description": "Held-back controlled-run numerical targets with version and model metadata."
+              },
+              {
+                "name": "predictions.csv",
+                "url": "data/torrisi-2020-xanes-rf/verification/Q1/predictions.csv",
+                "description": "Executed held-out predictions with source-row identities, target labels and seeds."
+              },
+              {
+                "name": "importances.csv",
+                "url": "data/torrisi-2020-xanes-rf/verification/Q1/importances.csv",
+                "description": "Executed feature importances with model, seed and feature indices."
+              },
+              {
+                "name": "source_anchor_audit.json",
+                "url": "data/torrisi-2020-xanes-rf/verification/source_anchor_audit.json",
+                "description": "Independent exact checks against 144 released pointwise arrays and sampled released polynomial coefficients."
+              },
+              {
+                "name": "provenance.json",
+                "url": "data/torrisi-2020-xanes-rf/provenance.json",
+                "description": "Source URLs, archive/member hashes and lossless input projection."
+              },
+              {
+                "name": "verification_audit.json",
+                "url": "data/torrisi-2020-xanes-rf/verification/verification_audit.json",
+                "description": "Independent checker positive and adversarial-control results."
+              },
+              {
+                "name": "pointwise_table_feff.csv",
+                "url": "data/torrisi-2020-xanes-rf/verification/published/pointwise_table_feff.csv",
+                "description": "Unmodified author-released numerical score table; contextual ground truth, not the smaller-forest reference."
+              }
+            ],
+            "figures": [
+              {
+                "image": "data/torrisi-2020-xanes-rf/verification/Q1/diagnostics.png",
+                "label": "Q1 executed diagnostic",
+                "caption": "Generated from the executed candidate and released spectral data; this is not an image copied from the article."
+              }
+            ],
+            "methods": [
+              {
+                "name": "Q1_workflow.json",
+                "url": "data/torrisi-2020-xanes-rf/workflows/Q1.json",
+                "description": "Worked tool sequence and execution evidence; evaluator-only."
+              },
+              {
+                "name": "candidate.py",
+                "url": "data/torrisi-2020-xanes-rf/workflows/candidate.py",
+                "description": "Executable candidate: loads only the input bundle."
+              },
+              {
+                "name": "summarize.py",
+                "url": "data/torrisi-2020-xanes-rf/workflows/summarize.py",
+                "description": "Task-specific comparisons, plots and scientific summary from candidate outputs."
+              },
+              {
+                "name": "verify.py",
+                "url": "data/torrisi-2020-xanes-rf/workflows/verify.py",
+                "description": "Independent evaluator: checks source-derived memberships/labels and output consistency."
+              },
+              {
+                "name": "candidate_execution.json",
+                "url": "data/torrisi-2020-xanes-rf/verification/candidate_execution.json",
+                "description": "Recorded independent execution, environment and final artifact checks."
+              },
+              {
+                "name": "question_quality_review.json",
+                "url": "data/torrisi-2020-xanes-rf/verification/question_quality_review.json",
+                "description": "Independent standalone-question and input-contract review."
+              },
+              {
+                "name": "source_map.json",
+                "url": "data/torrisi-2020-xanes-rf/verification/source_map.json",
+                "description": "Pinned notebook cell locations and evaluator-side paper-figure mapping."
+              }
+            ],
+            "thresholds": {
+              "origin": "Benchmark-defined",
+              "generatedBy": "Model-generated",
+              "provenance": "The numerical screening tolerances are benchmark engineering choices, not paper-reported uncertainties. Three-seed spread estimates forest randomness only.",
+              "notes": [
+                {
+                  "title": "Comparison policy",
+                  "description": "Use the evaluator policy for score, prediction and feature-importance tolerances. Exact data membership and labels are independently anchored to the release. Alternative scientific analyses require adjudication if they depart from the fixed comparison protocol."
+                }
+              ],
+              "data": [
+                {
+                  "name": "comparison_policy.json",
+                  "url": "data/torrisi-2020-xanes-rf/verification/comparison_policy.json",
+                  "description": "Evaluator numerical settings, provenance, and limitations."
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "TORRISI20-Q2",
+          "kind": "Subquestion",
+          "executionStatus": "validated",
+          "title": "How reliably do K-edge spectra determine mean neighbor distance, including unusually short or long environments?",
+          "inputs": [
+            {
+              "name": "Ti.jsonl.gz",
+              "url": "data/torrisi-2020-xanes-rf/inputs/Ti.jsonl.gz",
+              "description": "All released Ti spectral rows; lossless projection of E, mu, labels and provenance with source_row."
+            },
+            {
+              "name": "V.jsonl.gz",
+              "url": "data/torrisi-2020-xanes-rf/inputs/V.jsonl.gz",
+              "description": "All released V spectral rows; lossless projection of E, mu, labels and provenance with source_row."
+            },
+            {
+              "name": "Cr.jsonl.gz",
+              "url": "data/torrisi-2020-xanes-rf/inputs/Cr.jsonl.gz",
+              "description": "All released Cr spectral rows; lossless projection of E, mu, labels and provenance with source_row."
+            },
+            {
+              "name": "Mn.jsonl.gz",
+              "url": "data/torrisi-2020-xanes-rf/inputs/Mn.jsonl.gz",
+              "description": "All released Mn spectral rows; lossless projection of E, mu, labels and provenance with source_row."
+            },
+            {
+              "name": "Fe.jsonl.gz",
+              "url": "data/torrisi-2020-xanes-rf/inputs/Fe.jsonl.gz",
+              "description": "All released Fe spectral rows; lossless projection of E, mu, labels and provenance with source_row."
+            },
+            {
+              "name": "Co.jsonl.gz",
+              "url": "data/torrisi-2020-xanes-rf/inputs/Co.jsonl.gz",
+              "description": "All released Co spectral rows; lossless projection of E, mu, labels and provenance with source_row."
+            },
+            {
+              "name": "Ni.jsonl.gz",
+              "url": "data/torrisi-2020-xanes-rf/inputs/Ni.jsonl.gz",
+              "description": "All released Ni spectral rows; lossless projection of E, mu, labels and provenance with source_row."
+            },
+            {
+              "name": "Cu.jsonl.gz",
+              "url": "data/torrisi-2020-xanes-rf/inputs/Cu.jsonl.gz",
+              "description": "All released Cu spectral rows; lossless projection of E, mu, labels and provenance with source_row."
+            },
+            {
+              "name": "protocol.json",
+              "url": "data/torrisi-2020-xanes-rf/inputs/protocol.json",
+              "description": "Fixed comparison design, preprocessing conventions and compute budget; no fitted outputs or expected conclusions."
+            },
+            {
+              "name": "output_schema.json",
+              "url": "data/torrisi-2020-xanes-rf/inputs/output_schema.json",
+              "description": "Answer-format contract for numerical screening; no ground-truth values."
+            },
+            {
+              "name": "README.md",
+              "url": "data/torrisi-2020-xanes-rf/inputs/README.md",
+              "description": "Input field definitions and units."
+            }
+          ],
+          "prompt": {
+            "background": "The inputs contain site-resolved computed K-edge spectra and labels for oxygen-containing compounds of eight transition metals. The spectra are the earliest released representation: 100-point processed absorption arrays, with missing labels marked null. avg_nn_dists is the labeled mean nearest-neighbor distance in angstrom. Small overall error can hide systematic errors in the tails of its distribution.",
+            "instruction": "Determine the predictive accuracy of element-specific spectral models for mean nearest-neighbor distance across the eight elements. Compare with the training-mean baseline and quantify errors and signed bias in the short- and long-distance tails using the supplied protocol. Return parity plots, MAE and R² with seed variability, tail counts and diagnostics, and a conclusion about where the inferred distances are reliable. Follow protocol.json and output_schema.json, and return a concise evidence-backed conclusion alongside the numerical files and plots."
+          },
+          "groundTruthReasoning": "1. Load the eight gzip JSONL input files using Python gzip and json, retaining source_row identifiers. Use NumPy to apply the declared eligibility, unphysical-spectrum and cubic-fit residual screens. The independent source audit checks this reconstruction against released arrays.\n\n2. Select the target labels and use scikit-learn train_test_split twice with seed 42. Retain disjoint training, validation and test identifiers; oversample only training coordination records in balanced conditions. Compute baselines and tail cutoffs from training labels.\n\n3. Build the representations required by the research question using NumPy. For polynomial descriptors, fit cubics on local [-1,1] coordinates at four partition sizes and retain coefficient metadata. The independently checked released coefficient vectors anchor this calculation.\n\n4. Train the specified fresh random forests using scikit-learn with 100 trees and seeds 42, 43, 44. Save every held-out prediction and impurity importance. Calculate scores separately per seed, then their mean and population standard deviation.\n\n5. Run summarize.py (called by candidate.py) with NumPy, SciPy and Matplotlib to produce the task-specific paired comparisons, diagnostics and conclusion. Fit distance regressors. Compute training-mean baselines and training-only 10th/90th target quantiles. Apply those cutoffs to held-out labels; compute tail counts, MAE and signed prediction-minus-label residuals. Plot seed-42 parity while reporting metrics across all seeds. The executed numerical reference is stored in verification/Q2/result.json. There are 8 element/target/representation conditions, each evaluated with three forest seeds. Executed finding: Full-spectrum models beat the training-mean baseline MAE for 8/8 elements. High-tail MAE exceeds overall MAE for 8/8; low-tail MAE does so for 7/8. Ti: R²=0.857, MAE=0.01327 Å (training-mean baseline R²=-0.000, MAE=0.04040 Å). Low/high training-quantile tail MAE=0.03379/0.03103 Å; signed bias=+0.03175/-0.01762 Å (n=56/43 test spectra).\n\n6. Evaluator only: run verify.py against source_anchor_audit.json and held-back reference outputs. Check labels and test membership, recalculate metrics from predictions, validate paired differences and feature attribution summaries, and apply declared numerical tolerances. Inspect diagnostics.png and conclusion.md for scientific interpretation. Numerical success is not a substitute for that review.\n\nProvenance: Distance regression and error localization; anchored to released distance labels/performance table and published Fig. 6. Quantile-based tail diagnostics are benchmark-defined. These are controlled benchmark reruns using a smaller forest budget and current software, not exact reproductions of published scores. See candidate_execution.json for independent execution and verification_audit.json for checker controls.",
+          "verification": {
+            "description": "Check the exact source-row split and labels against independently reconstructed released data; recompute reported scores from predictions and inspect the paired scientific comparisons. Compare model outputs with the held-back modern reference under the documented benchmark tolerances. Published tables provide contextual evidence rather than exact targets for the smaller training budget. Require plots and an evidence-backed conclusion; attribution is predictive association, not causation.",
+            "data": [
+              {
+                "name": "result.json",
+                "url": "data/torrisi-2020-xanes-rf/verification/Q2/result.json",
+                "description": "Held-back controlled-run numerical targets with version and model metadata."
+              },
+              {
+                "name": "predictions.csv",
+                "url": "data/torrisi-2020-xanes-rf/verification/Q2/predictions.csv",
+                "description": "Executed held-out predictions with source-row identities, target labels and seeds."
+              },
+              {
+                "name": "importances.csv",
+                "url": "data/torrisi-2020-xanes-rf/verification/Q2/importances.csv",
+                "description": "Executed feature importances with model, seed and feature indices."
+              },
+              {
+                "name": "source_anchor_audit.json",
+                "url": "data/torrisi-2020-xanes-rf/verification/source_anchor_audit.json",
+                "description": "Independent exact checks against 144 released pointwise arrays and sampled released polynomial coefficients."
+              },
+              {
+                "name": "provenance.json",
+                "url": "data/torrisi-2020-xanes-rf/provenance.json",
+                "description": "Source URLs, archive/member hashes and lossless input projection."
+              },
+              {
+                "name": "verification_audit.json",
+                "url": "data/torrisi-2020-xanes-rf/verification/verification_audit.json",
+                "description": "Independent checker positive and adversarial-control results."
+              },
+              {
+                "name": "pointwise_table_feff.csv",
+                "url": "data/torrisi-2020-xanes-rf/verification/published/pointwise_table_feff.csv",
+                "description": "Unmodified author-released numerical score table; contextual ground truth, not the smaller-forest reference."
+              }
+            ],
+            "figures": [
+              {
+                "image": "data/torrisi-2020-xanes-rf/verification/Q2/diagnostics.png",
+                "label": "Q2 executed diagnostic",
+                "caption": "Generated from the executed candidate and released spectral data; this is not an image copied from the article."
+              }
+            ],
+            "methods": [
+              {
+                "name": "Q2_workflow.json",
+                "url": "data/torrisi-2020-xanes-rf/workflows/Q2.json",
+                "description": "Worked tool sequence and execution evidence; evaluator-only."
+              },
+              {
+                "name": "candidate.py",
+                "url": "data/torrisi-2020-xanes-rf/workflows/candidate.py",
+                "description": "Executable candidate: loads only the input bundle."
+              },
+              {
+                "name": "summarize.py",
+                "url": "data/torrisi-2020-xanes-rf/workflows/summarize.py",
+                "description": "Task-specific comparisons, plots and scientific summary from candidate outputs."
+              },
+              {
+                "name": "verify.py",
+                "url": "data/torrisi-2020-xanes-rf/workflows/verify.py",
+                "description": "Independent evaluator: checks source-derived memberships/labels and output consistency."
+              },
+              {
+                "name": "candidate_execution.json",
+                "url": "data/torrisi-2020-xanes-rf/verification/candidate_execution.json",
+                "description": "Recorded independent execution, environment and final artifact checks."
+              },
+              {
+                "name": "question_quality_review.json",
+                "url": "data/torrisi-2020-xanes-rf/verification/question_quality_review.json",
+                "description": "Independent standalone-question and input-contract review."
+              },
+              {
+                "name": "source_map.json",
+                "url": "data/torrisi-2020-xanes-rf/verification/source_map.json",
+                "description": "Pinned notebook cell locations and evaluator-side paper-figure mapping."
+              }
+            ],
+            "thresholds": {
+              "origin": "Benchmark-defined",
+              "generatedBy": "Model-generated",
+              "provenance": "The numerical screening tolerances are benchmark engineering choices, not paper-reported uncertainties. Three-seed spread estimates forest randomness only.",
+              "notes": [
+                {
+                  "title": "Comparison policy",
+                  "description": "Use the evaluator policy for score, prediction and feature-importance tolerances. Exact data membership and labels are independently anchored to the release. Alternative scientific analyses require adjudication if they depart from the fixed comparison protocol."
+                }
+              ],
+              "data": [
+                {
+                  "name": "comparison_policy.json",
+                  "url": "data/torrisi-2020-xanes-rf/verification/comparison_policy.json",
+                  "description": "Evaluator numerical settings, provenance, and limitations."
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "TORRISI20-Q3",
+          "kind": "Subquestion",
+          "executionStatus": "validated",
+          "title": "How much local-charge information do full spectra contain beyond white-line position?",
+          "inputs": [
+            {
+              "name": "Ti.jsonl.gz",
+              "url": "data/torrisi-2020-xanes-rf/inputs/Ti.jsonl.gz",
+              "description": "All released Ti spectral rows; lossless projection of E, mu, labels and provenance with source_row."
+            },
+            {
+              "name": "V.jsonl.gz",
+              "url": "data/torrisi-2020-xanes-rf/inputs/V.jsonl.gz",
+              "description": "All released V spectral rows; lossless projection of E, mu, labels and provenance with source_row."
+            },
+            {
+              "name": "Cr.jsonl.gz",
+              "url": "data/torrisi-2020-xanes-rf/inputs/Cr.jsonl.gz",
+              "description": "All released Cr spectral rows; lossless projection of E, mu, labels and provenance with source_row."
+            },
+            {
+              "name": "Mn.jsonl.gz",
+              "url": "data/torrisi-2020-xanes-rf/inputs/Mn.jsonl.gz",
+              "description": "All released Mn spectral rows; lossless projection of E, mu, labels and provenance with source_row."
+            },
+            {
+              "name": "Fe.jsonl.gz",
+              "url": "data/torrisi-2020-xanes-rf/inputs/Fe.jsonl.gz",
+              "description": "All released Fe spectral rows; lossless projection of E, mu, labels and provenance with source_row."
+            },
+            {
+              "name": "Co.jsonl.gz",
+              "url": "data/torrisi-2020-xanes-rf/inputs/Co.jsonl.gz",
+              "description": "All released Co spectral rows; lossless projection of E, mu, labels and provenance with source_row."
+            },
+            {
+              "name": "Ni.jsonl.gz",
+              "url": "data/torrisi-2020-xanes-rf/inputs/Ni.jsonl.gz",
+              "description": "All released Ni spectral rows; lossless projection of E, mu, labels and provenance with source_row."
+            },
+            {
+              "name": "Cu.jsonl.gz",
+              "url": "data/torrisi-2020-xanes-rf/inputs/Cu.jsonl.gz",
+              "description": "All released Cu spectral rows; lossless projection of E, mu, labels and provenance with source_row."
+            },
+            {
+              "name": "protocol.json",
+              "url": "data/torrisi-2020-xanes-rf/inputs/protocol.json",
+              "description": "Fixed comparison design, preprocessing conventions and compute budget; no fitted outputs or expected conclusions."
+            },
+            {
+              "name": "output_schema.json",
+              "url": "data/torrisi-2020-xanes-rf/inputs/output_schema.json",
+              "description": "Answer-format contract for numerical screening; no ground-truth values."
+            },
+            {
+              "name": "README.md",
+              "url": "data/torrisi-2020-xanes-rf/inputs/README.md",
+              "description": "Input field definitions and units."
+            }
+          ],
+          "prompt": {
+            "background": "The inputs contain site-resolved computed K-edge spectra and labels for oxygen-containing compounds of eight transition metals. The spectra are the earliest released representation: 100-point processed absorption arrays, with missing labels marked null. bader is a continuous released charge label, not a formal integer oxidation state. The white-line descriptor identifies the maximum absorption on the supplied energy grid.",
+            "instruction": "Compare matched full-spectrum and white-line-only models of Bader charge for each of the eight elements. Quantify out-of-sample R², MAE, improvements over the training-mean baseline, the mean paired change between representations, and seed variability for each model. Show charge parity plots and explain what the ablation supports about information beyond peak position, including its limitations. Follow protocol.json and output_schema.json, and return a concise evidence-backed conclusion alongside the numerical files and plots."
+          },
+          "groundTruthReasoning": "1. Load the eight gzip JSONL input files using Python gzip and json, retaining source_row identifiers. Use NumPy to apply the declared eligibility, unphysical-spectrum and cubic-fit residual screens. The independent source audit checks this reconstruction against released arrays.\n\n2. Select the target labels and use scikit-learn train_test_split twice with seed 42. Retain disjoint training, validation and test identifiers; oversample only training coordination records in balanced conditions. Compute baselines and tail cutoffs from training labels.\n\n3. Build the representations required by the research question using NumPy. For polynomial descriptors, fit cubics on local [-1,1] coordinates at four partition sizes and retain coefficient metadata. The independently checked released coefficient vectors anchor this calculation.\n\n4. Train the specified fresh random forests using scikit-learn with 100 trees and seeds 42, 43, 44. Save every held-out prediction and impurity importance. Calculate scores separately per seed, then their mean and population standard deviation.\n\n5. Run summarize.py (called by candidate.py) with NumPy, SciPy and Matplotlib to produce the task-specific paired comparisons, diagnostics and conclusion. Fit full-spectrum and first-maximum-index Bader regressors on identical rows. Compute each model against the training-mean baseline. Pair full minus peak R² and peak minus full MAE; distinguish model seed variation from uncertainty in a paired difference. The executed numerical reference is stored in verification/Q3/result.json. There are 16 element/target/representation conditions, each evaluated with three forest seeds. Executed finding: The full spectrum improves R² over peak position alone for 8/8 elements. The mean paired R² gain is 0.616; the mean MAE reduction is 0.0787 charge units. Ti: full-spectrum R²=0.571, peak-only R²=0.154; full-spectrum MAE=0.0711, peak-only MAE=0.1052 charge units (training-mean baseline R²=-0.000, MAE=0.1113).\n\n6. Evaluator only: run verify.py against source_anchor_audit.json and held-back reference outputs. Check labels and test membership, recalculate metrics from predictions, validate paired differences and feature attribution summaries, and apply declared numerical tolerances. Inspect diagnostics.png and conclusion.md for scientific interpretation. Numerical success is not a substitute for that review.\n\nProvenance: Charge regression and white-line interpretation; full-spectrum results anchored to released performance tables and published Figs. 8–9. Peak-only prediction is a new controlled ablation, not a published result. These are controlled benchmark reruns using a smaller forest budget and current software, not exact reproductions of published scores. See candidate_execution.json for independent execution and verification_audit.json for checker controls.",
+          "verification": {
+            "description": "Check the exact source-row split and labels against independently reconstructed released data; recompute reported scores from predictions and inspect the paired scientific comparisons. Compare model outputs with the held-back modern reference under the documented benchmark tolerances. Published tables provide contextual evidence rather than exact targets for the smaller training budget. Require plots and an evidence-backed conclusion; attribution is predictive association, not causation.",
+            "data": [
+              {
+                "name": "result.json",
+                "url": "data/torrisi-2020-xanes-rf/verification/Q3/result.json",
+                "description": "Held-back controlled-run numerical targets with version and model metadata."
+              },
+              {
+                "name": "predictions.csv",
+                "url": "data/torrisi-2020-xanes-rf/verification/Q3/predictions.csv",
+                "description": "Executed held-out predictions with source-row identities, target labels and seeds."
+              },
+              {
+                "name": "importances.csv",
+                "url": "data/torrisi-2020-xanes-rf/verification/Q3/importances.csv",
+                "description": "Executed feature importances with model, seed and feature indices."
+              },
+              {
+                "name": "source_anchor_audit.json",
+                "url": "data/torrisi-2020-xanes-rf/verification/source_anchor_audit.json",
+                "description": "Independent exact checks against 144 released pointwise arrays and sampled released polynomial coefficients."
+              },
+              {
+                "name": "provenance.json",
+                "url": "data/torrisi-2020-xanes-rf/provenance.json",
+                "description": "Source URLs, archive/member hashes and lossless input projection."
+              },
+              {
+                "name": "verification_audit.json",
+                "url": "data/torrisi-2020-xanes-rf/verification/verification_audit.json",
+                "description": "Independent checker positive and adversarial-control results."
+              },
+              {
+                "name": "pointwise_table_feff.csv",
+                "url": "data/torrisi-2020-xanes-rf/verification/published/pointwise_table_feff.csv",
+                "description": "Unmodified author-released numerical score table; contextual ground truth, not the smaller-forest reference."
+              }
+            ],
+            "figures": [
+              {
+                "image": "data/torrisi-2020-xanes-rf/verification/Q3/diagnostics.png",
+                "label": "Q3 executed diagnostic",
+                "caption": "Generated from the executed candidate and released spectral data; this is not an image copied from the article."
+              }
+            ],
+            "methods": [
+              {
+                "name": "Q3_workflow.json",
+                "url": "data/torrisi-2020-xanes-rf/workflows/Q3.json",
+                "description": "Worked tool sequence and execution evidence; evaluator-only."
+              },
+              {
+                "name": "candidate.py",
+                "url": "data/torrisi-2020-xanes-rf/workflows/candidate.py",
+                "description": "Executable candidate: loads only the input bundle."
+              },
+              {
+                "name": "summarize.py",
+                "url": "data/torrisi-2020-xanes-rf/workflows/summarize.py",
+                "description": "Task-specific comparisons, plots and scientific summary from candidate outputs."
+              },
+              {
+                "name": "verify.py",
+                "url": "data/torrisi-2020-xanes-rf/workflows/verify.py",
+                "description": "Independent evaluator: checks source-derived memberships/labels and output consistency."
+              },
+              {
+                "name": "candidate_execution.json",
+                "url": "data/torrisi-2020-xanes-rf/verification/candidate_execution.json",
+                "description": "Recorded independent execution, environment and final artifact checks."
+              },
+              {
+                "name": "question_quality_review.json",
+                "url": "data/torrisi-2020-xanes-rf/verification/question_quality_review.json",
+                "description": "Independent standalone-question and input-contract review."
+              },
+              {
+                "name": "source_map.json",
+                "url": "data/torrisi-2020-xanes-rf/verification/source_map.json",
+                "description": "Pinned notebook cell locations and evaluator-side paper-figure mapping."
+              }
+            ],
+            "thresholds": {
+              "origin": "Benchmark-defined",
+              "generatedBy": "Model-generated",
+              "provenance": "The numerical screening tolerances are benchmark engineering choices, not paper-reported uncertainties. Three-seed spread estimates forest randomness only.",
+              "notes": [
+                {
+                  "title": "Comparison policy",
+                  "description": "Use the evaluator policy for score, prediction and feature-importance tolerances. Exact data membership and labels are independently anchored to the release. Alternative scientific analyses require adjudication if they depart from the fixed comparison protocol."
+                }
+              ],
+              "data": [
+                {
+                  "name": "comparison_policy.json",
+                  "url": "data/torrisi-2020-xanes-rf/verification/comparison_policy.json",
+                  "description": "Evaluator numerical settings, provenance, and limitations."
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "TORRISI20-Q4",
+          "kind": "Subquestion",
+          "executionStatus": "validated",
+          "title": "Can multiscale spectral-shape descriptors retain predictive accuracy while identifying local-property signatures?",
+          "inputs": [
+            {
+              "name": "Ti.jsonl.gz",
+              "url": "data/torrisi-2020-xanes-rf/inputs/Ti.jsonl.gz",
+              "description": "All released Ti spectral rows; lossless projection of E, mu, labels and provenance with source_row."
+            },
+            {
+              "name": "V.jsonl.gz",
+              "url": "data/torrisi-2020-xanes-rf/inputs/V.jsonl.gz",
+              "description": "All released V spectral rows; lossless projection of E, mu, labels and provenance with source_row."
+            },
+            {
+              "name": "Cr.jsonl.gz",
+              "url": "data/torrisi-2020-xanes-rf/inputs/Cr.jsonl.gz",
+              "description": "All released Cr spectral rows; lossless projection of E, mu, labels and provenance with source_row."
+            },
+            {
+              "name": "Mn.jsonl.gz",
+              "url": "data/torrisi-2020-xanes-rf/inputs/Mn.jsonl.gz",
+              "description": "All released Mn spectral rows; lossless projection of E, mu, labels and provenance with source_row."
+            },
+            {
+              "name": "Fe.jsonl.gz",
+              "url": "data/torrisi-2020-xanes-rf/inputs/Fe.jsonl.gz",
+              "description": "All released Fe spectral rows; lossless projection of E, mu, labels and provenance with source_row."
+            },
+            {
+              "name": "Co.jsonl.gz",
+              "url": "data/torrisi-2020-xanes-rf/inputs/Co.jsonl.gz",
+              "description": "All released Co spectral rows; lossless projection of E, mu, labels and provenance with source_row."
+            },
+            {
+              "name": "Ni.jsonl.gz",
+              "url": "data/torrisi-2020-xanes-rf/inputs/Ni.jsonl.gz",
+              "description": "All released Ni spectral rows; lossless projection of E, mu, labels and provenance with source_row."
+            },
+            {
+              "name": "Cu.jsonl.gz",
+              "url": "data/torrisi-2020-xanes-rf/inputs/Cu.jsonl.gz",
+              "description": "All released Cu spectral rows; lossless projection of E, mu, labels and provenance with source_row."
+            },
+            {
+              "name": "protocol.json",
+              "url": "data/torrisi-2020-xanes-rf/inputs/protocol.json",
+              "description": "Fixed comparison design, preprocessing conventions and compute budget; no fitted outputs or expected conclusions."
+            },
+            {
+              "name": "output_schema.json",
+              "url": "data/torrisi-2020-xanes-rf/inputs/output_schema.json",
+              "description": "Answer-format contract for numerical screening; no ground-truth values."
+            },
+            {
+              "name": "README.md",
+              "url": "data/torrisi-2020-xanes-rf/inputs/README.md",
+              "description": "Input field definitions and units."
+            }
+          ],
+          "prompt": {
+            "background": "The inputs contain site-resolved computed K-edge spectra and labels for oxygen-containing compounds of eight transition metals. The spectra are the earliest released representation: 100-point processed absorption arrays, with missing labels marked null. Pointwise features describe absorption at each energy. Cubic coefficients over several interval sizes separate local magnitude, slope and curvature; the supplied protocol defines the coordinate and ordering conventions.",
+            "instruction": "Compare pointwise and multiscale polynomial representations for coordination, mean neighbor distance and Bader charge across the eight elements, using paired data splits and the fixed settings specified for each representation. Quantify changes in predictive performance. Map the twelve most important polynomial features to coefficient degree and energy interval and summarize importance by degree and peak position. Use the evidence to assess whether the descriptors preserve predictive usefulness and which signatures distinguish the three properties; discuss limits of interpreting impurity importance. Follow protocol.json and output_schema.json, and return a concise evidence-backed conclusion alongside the numerical files and plots."
+          },
+          "groundTruthReasoning": "1. Load the eight gzip JSONL input files using Python gzip and json, retaining source_row identifiers. Use NumPy to apply the declared eligibility, unphysical-spectrum and cubic-fit residual screens. The independent source audit checks this reconstruction against released arrays.\n\n2. Select the target labels and use scikit-learn train_test_split twice with seed 42. Retain disjoint training, validation and test identifiers; oversample only training coordination records in balanced conditions. Compute baselines and tail cutoffs from training labels.\n\n3. Build the representations required by the research question using NumPy. For polynomial descriptors, fit cubics on local [-1,1] coordinates at four partition sizes and retain coefficient metadata. The independently checked released coefficient vectors anchor this calculation.\n\n4. Train the specified fresh random forests using scikit-learn with 100 trees and seeds 42, 43, 44. Save every held-out prediction and impurity importance. Calculate scores separately per seed, then their mean and population standard deviation.\n\n5. Run summarize.py (called by candidate.py) with NumPy, SciPy and Matplotlib to produce the task-specific paired comparisons, diagnostics and conclusion. Construct polynomial coefficient vectors from spectra, retaining each scale, interval and degree. Fit paired pointwise/polynomial models for all three labels. Aggregate impurity importance across seeds, rank all 157 features, sum coefficient families and keep peak separate. Save twelve ranked features per condition and plot six for readability. The executed numerical reference is stored in verification/Q4/result.json. There are 48 element/target/representation conditions, each evaluated with three forest seeds. Executed finding: bader: mean polynomial-minus-pointwise score change -0.0210; largest absolute element-level change 0.1237. Average coefficient-family importance (a0/a1/a2/a3) is 0.563/0.195/0.132/0.104; the largest family is a0. Energy locations vary by element and are listed below. md: mean polynomial-minus-pointwise score change -0.0069; largest absolute element-level change 0.0208. Average coefficient-family importance (a0/a1/a2/a3) is 0.692/0.204/0.052/0.045; the largest family is a0. Energy locations vary by element and are listed below.\n\n6. Evaluator only: run verify.py against source_anchor_audit.json and held-back reference outputs. Check labels and test membership, recalculate metrics from predictions, validate paired differences and feature attribution summaries, and apply declared numerical tolerances. Inspect diagnostics.png and conclusion.md for scientific interpretation. Numerical success is not a substitute for that review.\n\nProvenance: Representation design and feature interpretation; polynomial values anchored directly to released polynomial JSON, with performance and interpretation context in Figs. 3–5, 7, 9. Both representations balance coordination training for the controlled comparison. These are controlled benchmark reruns using a smaller forest budget and current software, not exact reproductions of published scores. See candidate_execution.json for independent execution and verification_audit.json for checker controls.",
+          "verification": {
+            "description": "Check the exact source-row split and labels against independently reconstructed released data; recompute reported scores from predictions and inspect the paired scientific comparisons. Compare model outputs with the held-back modern reference under the documented benchmark tolerances. Published tables provide contextual evidence rather than exact targets for the smaller training budget. Require plots and an evidence-backed conclusion; attribution is predictive association, not causation.",
+            "data": [
+              {
+                "name": "result.json",
+                "url": "data/torrisi-2020-xanes-rf/verification/Q4/result.json",
+                "description": "Held-back controlled-run numerical targets with version and model metadata."
+              },
+              {
+                "name": "predictions.csv",
+                "url": "data/torrisi-2020-xanes-rf/verification/Q4/predictions.csv",
+                "description": "Executed held-out predictions with source-row identities, target labels and seeds."
+              },
+              {
+                "name": "importances.csv",
+                "url": "data/torrisi-2020-xanes-rf/verification/Q4/importances.csv",
+                "description": "Executed feature importances with model, seed and feature indices."
+              },
+              {
+                "name": "source_anchor_audit.json",
+                "url": "data/torrisi-2020-xanes-rf/verification/source_anchor_audit.json",
+                "description": "Independent exact checks against 144 released pointwise arrays and sampled released polynomial coefficients."
+              },
+              {
+                "name": "provenance.json",
+                "url": "data/torrisi-2020-xanes-rf/provenance.json",
+                "description": "Source URLs, archive/member hashes and lossless input projection."
+              },
+              {
+                "name": "verification_audit.json",
+                "url": "data/torrisi-2020-xanes-rf/verification/verification_audit.json",
+                "description": "Independent checker positive and adversarial-control results."
+              },
+              {
+                "name": "pointwise_table_feff.csv",
+                "url": "data/torrisi-2020-xanes-rf/verification/published/pointwise_table_feff.csv",
+                "description": "Unmodified author-released numerical score table; contextual ground truth, not the smaller-forest reference."
+              },
+              {
+                "name": "poly_table_feff.csv",
+                "url": "data/torrisi-2020-xanes-rf/verification/published/poly_table_feff.csv",
+                "description": "Unmodified author-released numerical score table; contextual ground truth, not the smaller-forest reference."
+              }
+            ],
+            "figures": [
+              {
+                "image": "data/torrisi-2020-xanes-rf/verification/Q4/diagnostics.png",
+                "label": "Q4 executed diagnostic",
+                "caption": "Generated from the executed candidate and released spectral data; this is not an image copied from the article."
+              }
+            ],
+            "methods": [
+              {
+                "name": "Q4_workflow.json",
+                "url": "data/torrisi-2020-xanes-rf/workflows/Q4.json",
+                "description": "Worked tool sequence and execution evidence; evaluator-only."
+              },
+              {
+                "name": "candidate.py",
+                "url": "data/torrisi-2020-xanes-rf/workflows/candidate.py",
+                "description": "Executable candidate: loads only the input bundle."
+              },
+              {
+                "name": "summarize.py",
+                "url": "data/torrisi-2020-xanes-rf/workflows/summarize.py",
+                "description": "Task-specific comparisons, plots and scientific summary from candidate outputs."
+              },
+              {
+                "name": "verify.py",
+                "url": "data/torrisi-2020-xanes-rf/workflows/verify.py",
+                "description": "Independent evaluator: checks source-derived memberships/labels and output consistency."
+              },
+              {
+                "name": "candidate_execution.json",
+                "url": "data/torrisi-2020-xanes-rf/verification/candidate_execution.json",
+                "description": "Recorded independent execution, environment and final artifact checks."
+              },
+              {
+                "name": "question_quality_review.json",
+                "url": "data/torrisi-2020-xanes-rf/verification/question_quality_review.json",
+                "description": "Independent standalone-question and input-contract review."
+              },
+              {
+                "name": "source_map.json",
+                "url": "data/torrisi-2020-xanes-rf/verification/source_map.json",
+                "description": "Pinned notebook cell locations and evaluator-side paper-figure mapping."
+              }
+            ],
+            "thresholds": {
+              "origin": "Benchmark-defined",
+              "generatedBy": "Model-generated",
+              "provenance": "The numerical screening tolerances are benchmark engineering choices, not paper-reported uncertainties. Three-seed spread estimates forest randomness only.",
+              "notes": [
+                {
+                  "title": "Comparison policy",
+                  "description": "Use the evaluator policy for score, prediction and feature-importance tolerances. Exact data membership and labels are independently anchored to the release. Alternative scientific analyses require adjudication if they depart from the fixed comparison protocol."
+                }
+              ],
+              "data": [
+                {
+                  "name": "comparison_policy.json",
+                  "url": "data/torrisi-2020-xanes-rf/verification/comparison_policy.json",
+                  "description": "Evaluator numerical settings, provenance, and limitations."
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "TORRISI20-Q5",
+          "kind": "Subquestion",
+          "executionStatus": "validated",
+          "title": "Which inferred spectral signatures are stable under intensity normalization?",
+          "inputs": [
+            {
+              "name": "Ti.jsonl.gz",
+              "url": "data/torrisi-2020-xanes-rf/inputs/Ti.jsonl.gz",
+              "description": "All released Ti spectral rows; lossless projection of E, mu, labels and provenance with source_row."
+            },
+            {
+              "name": "V.jsonl.gz",
+              "url": "data/torrisi-2020-xanes-rf/inputs/V.jsonl.gz",
+              "description": "All released V spectral rows; lossless projection of E, mu, labels and provenance with source_row."
+            },
+            {
+              "name": "Cr.jsonl.gz",
+              "url": "data/torrisi-2020-xanes-rf/inputs/Cr.jsonl.gz",
+              "description": "All released Cr spectral rows; lossless projection of E, mu, labels and provenance with source_row."
+            },
+            {
+              "name": "Mn.jsonl.gz",
+              "url": "data/torrisi-2020-xanes-rf/inputs/Mn.jsonl.gz",
+              "description": "All released Mn spectral rows; lossless projection of E, mu, labels and provenance with source_row."
+            },
+            {
+              "name": "Fe.jsonl.gz",
+              "url": "data/torrisi-2020-xanes-rf/inputs/Fe.jsonl.gz",
+              "description": "All released Fe spectral rows; lossless projection of E, mu, labels and provenance with source_row."
+            },
+            {
+              "name": "Co.jsonl.gz",
+              "url": "data/torrisi-2020-xanes-rf/inputs/Co.jsonl.gz",
+              "description": "All released Co spectral rows; lossless projection of E, mu, labels and provenance with source_row."
+            },
+            {
+              "name": "Ni.jsonl.gz",
+              "url": "data/torrisi-2020-xanes-rf/inputs/Ni.jsonl.gz",
+              "description": "All released Ni spectral rows; lossless projection of E, mu, labels and provenance with source_row."
+            },
+            {
+              "name": "Cu.jsonl.gz",
+              "url": "data/torrisi-2020-xanes-rf/inputs/Cu.jsonl.gz",
+              "description": "All released Cu spectral rows; lossless projection of E, mu, labels and provenance with source_row."
+            },
+            {
+              "name": "protocol.json",
+              "url": "data/torrisi-2020-xanes-rf/inputs/protocol.json",
+              "description": "Fixed comparison design, preprocessing conventions and compute budget; no fitted outputs or expected conclusions."
+            },
+            {
+              "name": "output_schema.json",
+              "url": "data/torrisi-2020-xanes-rf/inputs/output_schema.json",
+              "description": "Answer-format contract for numerical screening; no ground-truth values."
+            },
+            {
+              "name": "README.md",
+              "url": "data/torrisi-2020-xanes-rf/inputs/README.md",
+              "description": "Input field definitions and units."
+            }
+          ],
+          "prompt": {
+            "background": "The inputs contain site-resolved computed K-edge spectra and labels for oxygen-containing compounds of eight transition metals. The spectra are the earliest released representation: 100-point processed absorption arrays, with missing labels marked null. The supplied absorption and absorption divided by its maximum preserve peak position but differ in magnitude information. Model predictions and feature rankings may respond differently to that transformation.",
+            "instruction": "For coordination and mean neighbor distance across the eight elements, compare supplied and maximum-normalized spectra using both pointwise and polynomial representations with the paired protocol. Quantify performance changes, feature-rank correlation and top-feature overlap, and compare coefficient-family importance and energy-localized rankings. Explain which conclusions are stable under normalization and whether similar predictive performance can coexist with different attribution. Follow protocol.json and output_schema.json, and return a concise evidence-backed conclusion alongside the numerical files and plots."
+          },
+          "groundTruthReasoning": "1. Load the eight gzip JSONL input files using Python gzip and json, retaining source_row identifiers. Use NumPy to apply the declared eligibility, unphysical-spectrum and cubic-fit residual screens. The independent source audit checks this reconstruction against released arrays.\n\n2. Select the target labels and use scikit-learn train_test_split twice with seed 42. Retain disjoint training, validation and test identifiers; oversample only training coordination records in balanced conditions. Compute baselines and tail cutoffs from training labels.\n\n3. Build the representations required by the research question using NumPy. For polynomial descriptors, fit cubics on local [-1,1] coordinates at four partition sizes and retain coefficient metadata. The independently checked released coefficient vectors anchor this calculation.\n\n4. Train the specified fresh random forests using scikit-learn with 100 trees and seeds 42, 43, 44. Save every held-out prediction and impurity importance. Calculate scores separately per seed, then their mean and population standard deviation.\n\n5. Run summarize.py (called by candidate.py) with NumPy, SciPy and Matplotlib to produce the task-specific paired comparisons, diagnostics and conclusion. Repeat coordination and distance fits after per-spectrum maximum normalization, retaining the same row splits and random seeds. Pair max minus supplied scores within each representation. Recompute Spearman rank correlation and top-12 Jaccard from the two mean-importance vectors; compare polynomial degree-family totals and energy intervals. The executed numerical reference is stored in verification/Q5/result.json. There are 64 element/target/representation conditions, each evaluated with three forest seeds. Executed finding: md: mean maximum-minus-supplied changes in polynomial family importance (a0/a1/a2/a3) are -0.388/+0.328/+0.037/+0.016. md/poly: normalization changes the score by -0.0459 to +0.0162; importance rank correlations range 0.781–0.907. Cu has the lowest rank stability (score change -0.0328, top-12 overlap 0.263).\n\n6. Evaluator only: run verify.py against source_anchor_audit.json and held-back reference outputs. Check labels and test membership, recalculate metrics from predictions, validate paired differences and feature attribution summaries, and apply declared numerical tolerances. Inspect diagnostics.png and conclusion.md for scientific interpretation. Numerical success is not a substitute for that review.\n\nProvenance: Normalization as an interpretation control; anchored to released feff/max polynomial vectors and four published performance tables, with discussion/SI context. Rank-stability summaries are benchmark-defined. These are controlled benchmark reruns using a smaller forest budget and current software, not exact reproductions of published scores. See candidate_execution.json for independent execution and verification_audit.json for checker controls.",
+          "verification": {
+            "description": "Check the exact source-row split and labels against independently reconstructed released data; recompute reported scores from predictions and inspect the paired scientific comparisons. Compare model outputs with the held-back modern reference under the documented benchmark tolerances. Published tables provide contextual evidence rather than exact targets for the smaller training budget. Require plots and an evidence-backed conclusion; attribution is predictive association, not causation.",
+            "data": [
+              {
+                "name": "result.json",
+                "url": "data/torrisi-2020-xanes-rf/verification/Q5/result.json",
+                "description": "Held-back controlled-run numerical targets with version and model metadata."
+              },
+              {
+                "name": "predictions.csv",
+                "url": "data/torrisi-2020-xanes-rf/verification/Q5/predictions.csv",
+                "description": "Executed held-out predictions with source-row identities, target labels and seeds."
+              },
+              {
+                "name": "importances.csv",
+                "url": "data/torrisi-2020-xanes-rf/verification/Q5/importances.csv",
+                "description": "Executed feature importances with model, seed and feature indices."
+              },
+              {
+                "name": "source_anchor_audit.json",
+                "url": "data/torrisi-2020-xanes-rf/verification/source_anchor_audit.json",
+                "description": "Independent exact checks against 144 released pointwise arrays and sampled released polynomial coefficients."
+              },
+              {
+                "name": "provenance.json",
+                "url": "data/torrisi-2020-xanes-rf/provenance.json",
+                "description": "Source URLs, archive/member hashes and lossless input projection."
+              },
+              {
+                "name": "verification_audit.json",
+                "url": "data/torrisi-2020-xanes-rf/verification/verification_audit.json",
+                "description": "Independent checker positive and adversarial-control results."
+              },
+              {
+                "name": "pointwise_table_feff.csv",
+                "url": "data/torrisi-2020-xanes-rf/verification/published/pointwise_table_feff.csv",
+                "description": "Unmodified author-released numerical score table; contextual ground truth, not the smaller-forest reference."
+              },
+              {
+                "name": "poly_table_feff.csv",
+                "url": "data/torrisi-2020-xanes-rf/verification/published/poly_table_feff.csv",
+                "description": "Unmodified author-released numerical score table; contextual ground truth, not the smaller-forest reference."
+              },
+              {
+                "name": "pointwise_table_max.csv",
+                "url": "data/torrisi-2020-xanes-rf/verification/published/pointwise_table_max.csv",
+                "description": "Unmodified author-released numerical score table; contextual ground truth, not the smaller-forest reference."
+              },
+              {
+                "name": "poly_table_max.csv",
+                "url": "data/torrisi-2020-xanes-rf/verification/published/poly_table_max.csv",
+                "description": "Unmodified author-released numerical score table; contextual ground truth, not the smaller-forest reference."
+              }
+            ],
+            "figures": [
+              {
+                "image": "data/torrisi-2020-xanes-rf/verification/Q5/diagnostics.png",
+                "label": "Q5 executed diagnostic",
+                "caption": "Generated from the executed candidate and released spectral data; this is not an image copied from the article."
+              }
+            ],
+            "methods": [
+              {
+                "name": "Q5_workflow.json",
+                "url": "data/torrisi-2020-xanes-rf/workflows/Q5.json",
+                "description": "Worked tool sequence and execution evidence; evaluator-only."
+              },
+              {
+                "name": "candidate.py",
+                "url": "data/torrisi-2020-xanes-rf/workflows/candidate.py",
+                "description": "Executable candidate: loads only the input bundle."
+              },
+              {
+                "name": "summarize.py",
+                "url": "data/torrisi-2020-xanes-rf/workflows/summarize.py",
+                "description": "Task-specific comparisons, plots and scientific summary from candidate outputs."
+              },
+              {
+                "name": "verify.py",
+                "url": "data/torrisi-2020-xanes-rf/workflows/verify.py",
+                "description": "Independent evaluator: checks source-derived memberships/labels and output consistency."
+              },
+              {
+                "name": "candidate_execution.json",
+                "url": "data/torrisi-2020-xanes-rf/verification/candidate_execution.json",
+                "description": "Recorded independent execution, environment and final artifact checks."
+              },
+              {
+                "name": "question_quality_review.json",
+                "url": "data/torrisi-2020-xanes-rf/verification/question_quality_review.json",
+                "description": "Independent standalone-question and input-contract review."
+              },
+              {
+                "name": "source_map.json",
+                "url": "data/torrisi-2020-xanes-rf/verification/source_map.json",
+                "description": "Pinned notebook cell locations and evaluator-side paper-figure mapping."
+              }
+            ],
+            "thresholds": {
+              "origin": "Benchmark-defined",
+              "generatedBy": "Model-generated",
+              "provenance": "The numerical screening tolerances are benchmark engineering choices, not paper-reported uncertainties. Three-seed spread estimates forest randomness only.",
+              "notes": [
+                {
+                  "title": "Comparison policy",
+                  "description": "Use the evaluator policy for score, prediction and feature-importance tolerances. Exact data membership and labels are independently anchored to the release. Alternative scientific analyses require adjudication if they depart from the fixed comparison protocol."
+                }
+              ],
+              "data": [
+                {
+                  "name": "comparison_policy.json",
+                  "url": "data/torrisi-2020-xanes-rf/verification/comparison_policy.json",
+                  "description": "Evaluator numerical settings, provenance, and limitations."
+                }
+              ]
+            }
+          }
         }
       ]
     }

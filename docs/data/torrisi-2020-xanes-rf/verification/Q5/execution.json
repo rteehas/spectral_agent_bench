@@ -1,0 +1,11 @@
+{
+  "question": "Q5",
+  "elapsed_seconds": 130.99823189608287,
+  "method": "Reused 32 identical completed Q4 FEFF model conditions; trained or resumed 32 maximum-normalized conditions from raw inputs.",
+  "reused_q4_conditions": 32,
+  "fresh_conditions": 32,
+  "resumed_checkpoint_conditions": 0,
+  "q4": "/tmp/torrisi-reference-100/Q4",
+  "inputs": "/scratch/rst306/spectrasleuth_work/spectral_agent_bench/docs/data/torrisi-2020-xanes-rf/inputs",
+  "output": "/tmp/torrisi-reference-100/Q5"
+}

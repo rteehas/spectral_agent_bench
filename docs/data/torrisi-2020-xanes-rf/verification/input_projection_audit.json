@@ -1,0 +1,57 @@
+{
+  "reviewer": "workflow_execution subagent",
+  "status": "pass",
+  "method": "Independently deserialize original JSONL and projected gzip lines in lockstep; compare each selected JSON value and source_row; verify complete input length.",
+  "rows_checked": 40907,
+  "checks": [
+    {
+      "element": "Ti",
+      "records_compared": 4930,
+      "all_selected_values_exact": true,
+      "source_order_exact": true
+    },
+    {
+      "element": "V",
+      "records_compared": 7120,
+      "all_selected_values_exact": true,
+      "source_order_exact": true
+    },
+    {
+      "element": "Cr",
+      "records_compared": 2542,
+      "all_selected_values_exact": true,
+      "source_order_exact": true
+    },
+    {
+      "element": "Mn",
+      "records_compared": 8504,
+      "all_selected_values_exact": true,
+      "source_order_exact": true
+    },
+    {
+      "element": "Fe",
+      "records_compared": 7362,
+      "all_selected_values_exact": true,
+      "source_order_exact": true
+    },
+    {
+      "element": "Co",
+      "records_compared": 3533,
+      "all_selected_values_exact": true,
+      "source_order_exact": true
+    },
+    {
+      "element": "Ni",
+      "records_compared": 3420,
+      "all_selected_values_exact": true,
+      "source_order_exact": true
+    },
+    {
+      "element": "Cu",
+      "records_compared": 3496,
+      "all_selected_values_exact": true,
+      "source_order_exact": true
+    }
+  ],
+  "earlier_checks": "All projected input hashes, schemas, row counts, and source_row sequences match provenance."
+}

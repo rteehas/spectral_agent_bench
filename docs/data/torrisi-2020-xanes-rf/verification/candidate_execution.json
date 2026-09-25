@@ -1,0 +1,86 @@
+{
+  "questions": [
+    {
+      "question": "Q1",
+      "status": "passed",
+      "model_configurations": 16,
+      "fresh_execution": true,
+      "final_summary_and_diagnostic_outputs": true
+    },
+    {
+      "question": "Q2",
+      "status": "passed",
+      "model_configurations": 8,
+      "fresh_execution": true,
+      "final_summary_and_diagnostic_outputs": true
+    },
+    {
+      "question": "Q3",
+      "status": "passed",
+      "model_configurations": 16,
+      "fresh_execution": true,
+      "final_summary_and_diagnostic_outputs": true
+    },
+    {
+      "question": "Q4",
+      "status": "passed",
+      "model_configurations": 48,
+      "fresh_execution": true,
+      "final_summary_and_diagnostic_outputs": true
+    },
+    {
+      "question": "Q5",
+      "status": "passed",
+      "model_configurations": 64,
+      "fresh_execution": true,
+      "final_summary_and_diagnostic_outputs": true
+    }
+  ],
+  "all_numeric_checks_passed": true,
+  "complete_all_exit_code": 0,
+  "numeric_run_wall_seconds": 478.1065511830384,
+  "model_budget": {
+    "distinct_configurations": 96,
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "trees_per_forest": 100
+  },
+  "input_boundary": "Training used only the eight lossless spectral-record projections. Scientific summaries read only generated outputs. No answer keys or released model arrays were inputs to candidate training.",
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "scikit_learn": "1.9.1",
+    "matplotlib": "3.11.2"
+  },
+  "final_standalone_check": {
+    "question": "Q2",
+    "exit_code": 0,
+    "elapsed_seconds": 36.438746612053365,
+    "automatic_summary_outputs": true
+  },
+  "execution_scope_note": "ALL completed using launch-hash numerical implementation. The author subsequently added automatic summary invocation and improved presentation; final summarize.py was executed explicitly for all five completed outputs. A fresh standalone Q2 invocation then exercised final candidate.py including automatic summary integration.",
+  "evidence": {
+    "complete_run_log_sha256": "6662dfc9b27ca644b06d03a4a70681c7c8c95c32d424e1ab34092b3acb2b96da",
+    "scientific_verification": "verification_audit.json",
+    "input_projection_check": "input_projection_audit.json",
+    "detailed_replay_review": "workflow_execution_review.json",
+    "complete_run_log": "execution_logs/independent_all.log"
+  },
+  "scope": "All five offline worked examples executed across all eight elements; every final diagnostic plot inspected. Numerical verifier, independent archival-array refits, and scientific-prose review are recorded separately.",
+  "independent_author_replay_comparison": {
+    "status": "passed",
+    "questions": [
+      "Q1",
+      "Q2",
+      "Q3",
+      "Q4",
+      "Q5"
+    ],
+    "absolute_and_relative_tolerance": 1e-12,
+    "report": "workflow_execution_review.json"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "paper_id": "torrisi-2020-xanes-rf",
+  "questions": 5,
+  "input_records": 40907,
+  "input_hashes_match": true,
+  "paper_matches_active_dataset": true,
+  "all_scenarios_have_only_input_assets": true,
+  "solver_prompts_have_no_paper_references": true,
+  "input_file_count_per_question": 11,
+  "note": "Exported solver bundles omit all workflows, published output arrays, ground truth and paper metadata."
+}

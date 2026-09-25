@@ -1,0 +1,46 @@
+{
+  "purpose": "Evaluator screening limits for the specified modern controlled benchmark, not physical uncertainty or tolerance for a different scientific protocol.",
+  "protocol": {
+    "forest_seeds": [42, 43, 44],
+    "trees": 100,
+    "maximum_depth": 35,
+    "split_seed": 42,
+    "archived_comparison": "Published models used ten seeds and 300 trees with scikit-learn 0.21.3. The source arrays and coefficient probes anchor data processing; modern predictions are independently audited reruns."
+  },
+  "exact_checks": [
+    "All experiment configurations, model and seed coverage",
+    "Raw source-row partition identities, labels, sample counts, and oversampling counts",
+    "Preprocessing counts against independent archival-array audit",
+    "Prediction and importance row uniqueness and finite values",
+    "Feature definitions and energy intervals",
+    "Per-seed metrics recomputed from submitted predictions and aggregated with population standard deviation",
+    "Baseline, training-label tail quantiles and tail membership counts",
+    "Confusion matrices, paired comparisons, ranked features, coefficient family sums, and rank stability statistics"
+  ],
+  "absolute_numeric_tolerances": {
+    "raw_test_labels": 1e-12,
+    "recomputed_scalar_metrics_and_baselines": 1e-9,
+    "feature_energy_eV": 1e-7,
+    "derived_tables": 1e-8,
+    "importance_sum_difference_from_one": 1e-8
+  },
+  "modern_reference_screening": {
+    "maximum_per_seed_classification_disagreement_fraction": 0.08,
+    "maximum_per_seed_distance_prediction_rmse_angstrom": 0.02,
+    "maximum_per_seed_charge_prediction_rmse": 0.06,
+    "maximum_per_seed_importance_l1_distance": 0.5,
+    "maximum_mean_accuracy_difference": 0.03,
+    "maximum_mean_f1_difference": 0.07,
+    "maximum_mean_r2_difference": 0.04,
+    "maximum_distance_mae_or_tail_error_or_bias_difference_angstrom": 0.01,
+    "maximum_charge_mae_or_tail_error_or_bias_difference": 0.025
+  },
+  "required_human_review": [
+    "Scientific conclusions answer the research question and cite measured comparisons with appropriate units.",
+    "Figures faithfully show the saved data; visual similarity to archived figures is contextual because the benchmark changes tree count and seed count.",
+    "Forest seed variability is distinguished from uncertainty across splits, compounds or experiments.",
+    "Impurity importance is interpreted as model attribution among correlated features, not proof of causation.",
+    "The spectrum-record split and possible related-structure overlap limit claims about unseen-material generalization."
+  ],
+  "limits": "Passing numerical checks alone is insufficient. The verifier does not prove solver isolation, training correctness for every submitted model, absence of label leakage, or validity of scientific prose. Independent archival-array refits audit five model conditions; other defensible methods require reviewer adjudication."
+}

@@ -1,0 +1,47 @@
+{
+  "status": "complete",
+  "questions": [
+    "Q1",
+    "Q2",
+    "Q3",
+    "Q4",
+    "Q5"
+  ],
+  "reference_assembly": [
+    {
+      "command": "candidate.py ALL",
+      "exit_code": 143,
+      "status": "interrupted",
+      "completed_questions": [
+        "Q1",
+        "Q2",
+        "Q3",
+        "Q4"
+      ],
+      "note": "SIGTERM during Q5. No Python exception; signal source not established."
+    },
+    {
+      "command": "candidate.py Q5",
+      "exit_code": 143,
+      "status": "interrupted",
+      "note": "SIGTERM after Co conditions; no completed Q5 artifact claimed."
+    },
+    {
+      "command": "resume_reference_q5.py",
+      "exit_code": 0,
+      "status": "complete",
+      "details": {
+        "question": "Q5",
+        "elapsed_seconds": 130.99823189608287,
+        "method": "Reused 32 identical completed Q4 FEFF model conditions; trained or resumed 32 maximum-normalized conditions from raw inputs.",
+        "reused_q4_conditions": 32,
+        "fresh_conditions": 32,
+        "resumed_checkpoint_conditions": 0,
+        "q4": "/tmp/torrisi-reference-100/Q4",
+        "inputs": "/scratch/rst306/spectrasleuth_work/spectral_agent_bench/docs/data/torrisi-2020-xanes-rf/inputs",
+        "output": "/tmp/torrisi-reference-100/Q5"
+      }
+    }
+  ],
+  "note": "Q5 reuses 32 identical FEFF model conditions from completed Q4 as the ALL in-memory cache would, and freshly fits 32 maximum-normalized conditions with per-condition checkpoints. All five outputs independently compared with the completed separate-agent ALL run."
+}

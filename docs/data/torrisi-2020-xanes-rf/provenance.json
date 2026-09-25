@@ -1,0 +1,111 @@
+{
+  "paper_doi": "10.1038/s41524-020-00376-6",
+  "data_landing_url": "https://data.matr.io/4/",
+  "archive_name": "torrisi-xanes_2019.zip",
+  "archive_sha256": "d2d90d1ede802b4ef725ef25e7d19add046554502ddc52b4c635ef93fb50a561",
+  "archive_bytes": 1084200448,
+  "code_url": "https://github.com/TRI-AMDD/trixs",
+  "code_commit": "6dbcc598c7bea235f464bed91744c1617725b7a8",
+  "source_status": "Earliest available processed spectral records; not native FEFF outputs.",
+  "input_transformations": {
+    "selected_fields": [
+      "E",
+      "mu",
+      "coordination",
+      "avg_nn_dists",
+      "nn_min-max",
+      "bader",
+      "metadata"
+    ],
+    "added_fields": {
+      "source_row": "Zero-based physical line number in source JSONL."
+    },
+    "row_selection": "All source rows, unchanged order, no filtering.",
+    "values": "Selected JSON values copied without numerical transformation.",
+    "compression": "gzip, compression level 9, empty filename, mtime=0.",
+    "excluded": "Derived polynomial coefficients, augmentation arrays, saved splits, model outputs, and answer keys."
+  },
+  "sources": [
+    {
+      "element": "Ti",
+      "source_path": "spectral_data/Ti_XY.json",
+      "source_sha256": "217a153b3dcf0dbc6b9af6bf1ff9bd3faf032ba5541ec01a9d2631d019510b8f",
+      "source_bytes": 145462588,
+      "rows": 4930,
+      "input_path": "inputs/Ti.jsonl.gz",
+      "input_sha256": "ce5e4255439233ff903dc6be0e8a3b1acc9327e72523a66403d2a640fc2f9792",
+      "input_bytes": 4758540
+    },
+    {
+      "element": "V",
+      "source_path": "spectral_data/V_XY.json",
+      "source_sha256": "f7a33cc5b48c87e67f4721de63e9a74db839db5ae15c28936a2c74645349c899",
+      "source_bytes": 207986419,
+      "rows": 7120,
+      "input_path": "inputs/V.jsonl.gz",
+      "input_sha256": "755c3407c7b47ed9f96becfdb21cf14cc64213e9c4fedec2d493a7fdf0bf1b5b",
+      "input_bytes": 6875725
+    },
+    {
+      "element": "Cr",
+      "source_path": "spectral_data/Cr_XY.json",
+      "source_sha256": "796709ebbc01fb3244d5c40cd2bd796183225a390722d2060aab932fd8089fc0",
+      "source_bytes": 75429005,
+      "rows": 2542,
+      "input_path": "inputs/Cr.jsonl.gz",
+      "input_sha256": "3b4af75470896db924e60c95d99efbde1152fbc6c848772a07d25abb76eb5684",
+      "input_bytes": 2463742
+    },
+    {
+      "element": "Mn",
+      "source_path": "spectral_data/Mn_XY.json",
+      "source_sha256": "e83150fd5551add32f8510bd4aa6a71dd8e451f05efcd462550b0c405f788320",
+      "source_bytes": 250453231,
+      "rows": 8504,
+      "input_path": "inputs/Mn.jsonl.gz",
+      "input_sha256": "38f99877c8ece423bb23676463bc4ba767ac6d2bc057edcecf766263c6363dd7",
+      "input_bytes": 8199486
+    },
+    {
+      "element": "Fe",
+      "source_path": "spectral_data/Fe_XY.json",
+      "source_sha256": "984fb7b6ae7af027894a49f97499af522dff2bd7e688a2a4cd3640ee915679bf",
+      "source_bytes": 216573149,
+      "rows": 7362,
+      "input_path": "inputs/Fe.jsonl.gz",
+      "input_sha256": "1791e54a4a9d56009d83b5405179c12aa84aa5e1fc6a401af3dfdc1ae7e4b12e",
+      "input_bytes": 7109483
+    },
+    {
+      "element": "Co",
+      "source_path": "spectral_data/Co_XY.json",
+      "source_sha256": "5ee52a31d072a268442d17468b4e279562bf74bddaef0ea58dacfb31c7823b06",
+      "source_bytes": 102362215,
+      "rows": 3533,
+      "input_path": "inputs/Co.jsonl.gz",
+      "input_sha256": "f9b3b80ca0a6e44a03dcd9443a90332f7eb42af5a967a8f51923541fb32f6155",
+      "input_bytes": 3420296
+    },
+    {
+      "element": "Ni",
+      "source_path": "spectral_data/Ni_XY.json",
+      "source_sha256": "846ad3d769a2c7867e6ecbad19f94f729e7ec41abb6aceb16e0ce02bdb6eb01a",
+      "source_bytes": 99688711,
+      "rows": 3420,
+      "input_path": "inputs/Ni.jsonl.gz",
+      "input_sha256": "a9eb1ad9fde915f8f3387b553395707625d8be8180a4faa2dbb4debf979d2f04",
+      "input_bytes": 3304733
+    },
+    {
+      "element": "Cu",
+      "source_path": "spectral_data/Cu_XY.json",
+      "source_sha256": "4adf8ce125145743ab1aa1416dcd950789598884faa3a85313afce2eec1600a8",
+      "source_bytes": 101452726,
+      "rows": 3496,
+      "input_path": "inputs/Cu.jsonl.gz",
+      "input_sha256": "a5c8457b95cc5557616c5c5db3e38fe5cd9d29b8026859b3d3509e35ffea95e0",
+      "input_bytes": 3360863
+    }
+  ],
+  "total_rows": 40907
+}

@@ -1,0 +1,116 @@
+{
+  "result.json": {
+    "question": "Q1..Q5",
+    "models": [
+      {
+        "id": "model_id",
+        "element": "Ti..Cu",
+        "target": "coord|md|bader",
+        "representation": "pointwise|poly|peak",
+        "normalization": "feff|max",
+        "balanced": "boolean",
+        "train_count": "before oversampling",
+        "fit_count": "after oversampling",
+        "valid_count": "integer",
+        "test_count": "integer",
+        "seeds": [
+          42,
+          43,
+          44
+        ],
+        "metrics_mean": "metric -> numeric",
+        "metrics_std": "metric -> numeric",
+        "baseline": "coord: train_mode,accuracy,train_class_counts; regression: train_mean,mae,r2",
+        "tail_thresholds": "regression: low,high"
+      }
+    ],
+    "preprocessing": "element -> raw,ineligible,unphysical,polynomial_rejected,retained",
+    "protocol": "seeds,n_estimators,max_depth,split_seed,split",
+    "versions": "python,numpy,sklearn"
+  },
+  "metrics_keys": {
+    "coord": [
+      "accuracy",
+      "macro_f1",
+      "f1_4",
+      "f1_5",
+      "f1_6"
+    ],
+    "regression": [
+      "r2",
+      "mae",
+      "low_count",
+      "low_mae",
+      "low_bias",
+      "high_count",
+      "high_mae",
+      "high_bias"
+    ]
+  },
+  "splits.json": "element_target -> train,valid,test lists of source_row integers before oversampling",
+  "coefficient_families.csv": [
+    "model_id",
+    "degree_0",
+    "degree_1",
+    "degree_2",
+    "degree_3",
+    "peak",
+    "peak_rank"
+  ],
+  "ranked_features.csv": [
+    "model_id",
+    "rank",
+    "importance",
+    "label",
+    "degree",
+    "parts",
+    "chunk",
+    "energy_lo",
+    "energy_hi",
+    "index"
+  ],
+  "comparisons.csv": {
+    "Q1": [
+      "element",
+      "delta_macro_f1",
+      "accuracy_gain_over_mode"
+    ],
+    "Q3": [
+      "element",
+      "delta_r2",
+      "mae_reduction"
+    ],
+    "Q4": [
+      "element",
+      "target",
+      "metric",
+      "pointwise",
+      "poly",
+      "delta"
+    ],
+    "Q5": [
+      "element",
+      "target",
+      "representation",
+      "metric",
+      "delta",
+      "importance_spearman",
+      "top12_jaccard"
+    ]
+  },
+  "confusion.csv": [
+    "element",
+    "true_class",
+    "predicted_class",
+    "mean_count"
+  ],
+  "field_definitions": {
+    "comparisons": "Q1 delta_macro_f1 = balanced minus natural; accuracy_gain_over_mode = balanced accuracy minus training-mode baseline. Q3 delta_r2 = full minus peak; mae_reduction = peak minus full. Q4 delta = polynomial minus pointwise. Q5 delta = maximum normalization minus supplied normalization. Coordination comparison metric is macro_f1; regression is r2.",
+    "confusion": "Use only balanced coordination models; mean_count is the cell count averaged across three seeds, not row-normalized.",
+    "feature_metadata": "Pointwise feature i: label=mu_i, degree=-1, parts=0, chunk=i, energy_lo=energy_hi=E[i]. Peak: label=peak, degree=-1, parts=0, chunk=0, energy_lo/hi are the full descriptor domain bounds, not an observed peak position. Polynomial: degree=d, parts=N, chunk=j, energy_lo/hi are first/last sampled energy in that block. Feature indices follow the protocol ordering.",
+    "ranks": "Rank mean impurity importance using numpy.argsort(-mean_importance) with default sorting; ranks start at 1. Top-12 sets use these indices, including peak if selected.",
+    "tail_thresholds": "Coordination records use an empty object. Regression records use low/high training quantiles.",
+    "paired_variability": "Comparison CSVs contain mean paired changes. Per-model metrics_mean and metrics_std describe seed variability; they are not the standard deviation of a paired difference."
+  },
+  "nonfinite": "Do not emit NaN or infinity. Use null only for genuinely empty tail groups and explain them."
+}

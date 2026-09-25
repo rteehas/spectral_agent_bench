@@ -1,0 +1,134 @@
+{
+  "reviewer_role": "Independent question-quality subagent",
+  "review_scope": "Solver-facing questions, background, eleven input files, output contract, and alignment with candidate/checker requirements; numerical execution is reviewed separately.",
+  "overall_verdict": "pass_after_revision",
+  "research_quality": {
+    "standalone_research_framing": true,
+    "substantial_code_and_data_work": true,
+    "distinct_scientific_questions": true,
+    "no_paper_references_in_solver_prompts": true,
+    "no_expected_numeric_answers_in_solver_inputs": true,
+    "each_question_has_complete_independent_inputs": true,
+    "inputs_come_from_release_or_necessary_benchmark_protocol": true
+  },
+  "background_assessment": "The short solver backgrounds contain necessary measurement/label context without expected scientific results. The shared protocol is detailed, but its numerical choices define the controlled experiment and exact verification; the output schema is formatting rather than a worked solution. Each solver should apply only its question settings. An optional future packaging refinement is to provide question-specific protocol views.",
+  "independence_assessment": "Each question is independently runnable from the same eight unfeaturized spectral projections plus protocol, schema, and field definitions. No previous task answer, paper plot, trained model, released polynomial vector, or evaluator file is required.",
+  "questions": [
+    {
+      "question": "Q1",
+      "verdict": "pass",
+      "rationale": "Data curation, leakage-free resampling comparison, baseline construction, held-out classification, and per-class diagnosis answer a genuine minority-environment question."
+    },
+    {
+      "question": "Q2",
+      "verdict": "pass",
+      "rationale": "Regression, training-defined tail analysis, signed residuals, and parity plots distinguish average accuracy from unusual local environments."
+    },
+    {
+      "question": "Q3",
+      "verdict": "pass",
+      "rationale": "A matched spectral-versus-peak ablation evaluates information beyond one physically interpretable descriptor rather than merely fitting another target."
+    },
+    {
+      "question": "Q4",
+      "verdict": "pass",
+      "rationale": "Construction and evaluation of 157 descriptors, paired predictive comparison, and coefficient/energy attribution form a substantive representation-design step."
+    },
+    {
+      "question": "Q5",
+      "verdict": "pass",
+      "rationale": "Paired normalization interventions and attribution-stability statistics test whether interpretation survives a plausible preprocessing choice."
+    }
+  ],
+  "issues": [
+    {
+      "id": "QUALITY-01",
+      "severity": "minor",
+      "questions": [
+        "Q1"
+      ],
+      "finding": "Background describes all coordination labels as 4, 5, or 6, although the unfiltered inputs also contain other coordination labels.",
+      "requested_change": "Describe 4/5/6 as the restricted classification target.",
+      "status": "resolved",
+      "resolution": "Q1 now states that the classification target is restricted to 4/5/6."
+    },
+    {
+      "id": "QUALITY-02",
+      "severity": "minor",
+      "questions": [
+        "Q5"
+      ],
+      "finding": "The instruction presupposes an attribution shift despite similar performance by asking where it occurs.",
+      "requested_change": "Ask whether similar predictive performance coexists with different attribution.",
+      "status": "resolved",
+      "resolution": "Q5 now asks whether similar predictive performance can coexist with different attribution."
+    },
+    {
+      "id": "QUALITY-03",
+      "severity": "material_contract",
+      "questions": [
+        "Q1",
+        "Q3",
+        "Q4",
+        "Q5"
+      ],
+      "finding": "The strict derived-table checker requires comparison directions and balanced-only confusion scope not defined in the solver contract.",
+      "requested_change": "Define delta signs, comparison metric selection, confusion averaging/scope, and deterministic ranking conventions.",
+      "status": "resolved",
+      "resolution": "field_definitions now specifies all comparison signs, metric choice, balanced-only mean confusion counts and numpy.argsort ranking convention."
+    },
+    {
+      "id": "QUALITY-04",
+      "severity": "material_contract",
+      "questions": [
+        "Q3",
+        "Q4"
+      ],
+      "finding": "Protocol describes distance tails only, while schema, candidate, and checker require tails for every regression including Bader charge.",
+      "requested_change": "Explicitly define regression tail diagnostics for both regression targets or restrict requirements consistently to distance.",
+      "status": "resolved",
+      "resolution": "metrics.tails explicitly applies the common tail diagnostics to every regression output."
+    },
+    {
+      "id": "QUALITY-05",
+      "severity": "material_contract",
+      "questions": [
+        "Q1",
+        "Q2",
+        "Q3",
+        "Q4",
+        "Q5"
+      ],
+      "finding": "Exact metadata checking depends on unspecified labels, sentinel degree/partition/chunk fields, peak-domain bounds, and empty coordination tail_thresholds.",
+      "requested_change": "Declare canonical metadata and empty-field conventions in output_schema.json.",
+      "status": "resolved",
+      "resolution": "field_definitions specifies pointwise, peak and polynomial metadata sentinels/domain meanings, plus empty coordination tail_thresholds."
+    },
+    {
+      "id": "QUALITY-06",
+      "severity": "minor_contract",
+      "questions": [
+        "Q3"
+      ],
+      "finding": "Prompt requests variability of paired changes but outputs report variability per model and only mean paired changes.",
+      "requested_change": "Either calculate paired-difference variability or clarify the prompt to require model seed variability and mean paired changes.",
+      "status": "resolved",
+      "resolution": "Q3 now asks for the mean paired change and seed variability for each model; paired_variability defines this distinction."
+    }
+  ],
+  "scientific_limits": [
+    "The earliest public spectra are already interpolated/normalized; upstream native-FEFF, structural-neighbor, or electron-density reconstruction is not supported by these inputs.",
+    "A fixed spectrum-record holdout does not establish transfer to unseen compounds, material families, or experimental spectra.",
+    "Three-seed spread measures forest randomness, not dataset uncertainty.",
+    "Impurity rankings among correlated descriptors describe model association, not a unique causal mechanism."
+  ],
+  "reviewed_files_sha256": {
+    "papers/torrisi-2020-xanes-rf/paper.json": "6200dbf74e33fa10f1fe961710cd72b21d603223eed800d5efa820ae0b2b0e92",
+    "papers/torrisi-2020-xanes-rf/build_entry.py": "0162b8bf60cd73a79cdcb7317a8d32c52262623281351eee410191c9fe354bf8",
+    "docs/data/torrisi-2020-xanes-rf/inputs/protocol.json": "4c735f7df3067a176d9859363de5a75141a9df0a52c237a2bc244ea328cece03",
+    "docs/data/torrisi-2020-xanes-rf/inputs/output_schema.json": "21597d8d649c287f3b99bb21145f758937c393fea70df279ce313ae92b3536a9"
+  },
+  "unresolved_material_findings": 0,
+  "revision_check": "Re-read the regenerated paper.json, protocol.json and output_schema.json after all six findings were addressed. The scientific questions remain independently answerable and all strict output conventions reviewed are now solver-visible.",
+  "final_clarification_check": "Confirmed Q4 now asks for paired data splits and fixed settings specified for each representation. This accurately describes pointwise max_features=8 versus polynomial max_features=30: the scientific comparison concerns configured modeling pipelines and does not isolate representation from every modeling choice. The final paper README states this limitation explicitly. No change to the pass verdict."
+}

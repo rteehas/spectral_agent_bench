@@ -1,0 +1,77 @@
+{
+  "paper_url": "https://doi.org/10.1038/s41524-020-00376-6",
+  "data_url": "https://data.matr.io/4/",
+  "code_commit": "6dbcc598c7bea235f464bed91744c1617725b7a8",
+  "code_notebooks": [
+    {
+      "path": "notebooks/Spectra_To_Model_Data.ipynb",
+      "sha256": "a711a1cde4af6452fc3d0507a2ecfd90214cb96fb35fe80e9913e2e4cf9104dd",
+      "zero_based_cells_matching_methods": {
+        "eligibility_and_splitting": [
+          6,
+          8,
+          10,
+          16
+        ],
+        "polynomial_construction": [
+          3,
+          6,
+          15,
+          16
+        ],
+        "forest_settings": []
+      }
+    },
+    {
+      "path": "notebooks/Train_Run_Models.ipynb",
+      "sha256": "bf451c1d46a43be33bee352ec1b69b22e5df69c6dbbc3ebcb1641712381e1519",
+      "zero_based_cells_matching_methods": {
+        "eligibility_and_splitting": [],
+        "polynomial_construction": [
+          3
+        ],
+        "forest_settings": [
+          13,
+          26
+        ]
+      }
+    },
+    {
+      "path": "notebooks/XY_to_Polynomial_Data.ipynb",
+      "sha256": "51af7a122520eb5d8e27cd7a285feaf079d01e043c322c7f873250aa3408c36d",
+      "zero_based_cells_matching_methods": {
+        "eligibility_and_splitting": [
+          6,
+          11
+        ],
+        "polynomial_construction": [
+          4,
+          7,
+          11
+        ],
+        "forest_settings": []
+      }
+    }
+  ],
+  "figures_by_question": {
+    "Q1": [
+      "Fig.3",
+      "Table1"
+    ],
+    "Q2": [
+      "Fig.6",
+      "Supplementary distance performance tables"
+    ],
+    "Q3": [
+      "Figs.8\u20139"
+    ],
+    "Q4": [
+      "Figs.2\u20135,7,9"
+    ],
+    "Q5": [
+      "Discussion",
+      "Supplementary Figs.76\u2013139"
+    ]
+  },
+  "distinction": "Paper figure references motivate evaluator review. Solver prompts do not contain these references or expected findings. New ablations and rank statistics use independently executed benchmark references."
+}
