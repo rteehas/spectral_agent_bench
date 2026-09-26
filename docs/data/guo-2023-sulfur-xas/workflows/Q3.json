@@ -1,0 +1,31 @@
+{
+  "question": "Q3",
+  "source_derivation": "The stated use of unaveraged site spectra for local-environment fingerprinting/machine-learning interpretation. This transfer experiment operationalizes that use; the paper supplies no historical machine-learning scores.",
+  "solver_inputs": "Only the eight inputs linked in this task; no paper, averaged spectra, code release or expected answers.",
+  "environment": "Python3.12; install papers/guo-2023-sulfur-xas/requirements.txt",
+  "commands": [
+    "python3 -m venv /tmp/guo-bench-env",
+    "/tmp/guo-bench-env/bin/python -m pip install -r papers/guo-2023-sulfur-xas/requirements.txt",
+    "python3 papers/guo-2023-sulfur-xas/export_agent_bundle.py Q3 --output /tmp/guo-Q3-agent",
+    "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MPLCONFIGDIR=/tmp/guo-mpl /tmp/guo-bench-env/bin/python docs/data/guo-2023-sulfur-xas/workflows/candidate.py Q3 --inputs /tmp/guo-Q3-agent/inputs --output /tmp/guo-Q3-answer",
+    "/tmp/guo-bench-env/bin/python docs/data/guo-2023-sulfur-xas/workflows/verify.py --question Q3 --inputs docs/data/guo-2023-sulfur-xas/inputs --output /tmp/guo-Q3-answer"
+  ],
+  "tools": [
+    "Python gzip/json/csv and NumPy for raw release parsing",
+    "ASE periodic geometry",
+    "SciPy interpolation and Gaussian filtering",
+    "scikit-learn random forests/confusion matrices",
+    "Matplotlib diagnostic plots"
+  ],
+  "choices": "See candidate.py, definitions.json and report.md. These are illustrative choices, not a required solver protocol.",
+  "outputs": [
+    "sites.csv",
+    "predictions.csv",
+    "partitions.csv",
+    "metrics.json",
+    "definitions.json",
+    "report.md",
+    "transfer.png"
+  ],
+  "verification": "Independent source reconstruction/numerical integrity followed by scientific rubric. No acceptance threshold on classification performance or regression sign."
+}

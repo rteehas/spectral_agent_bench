@@ -1,0 +1,298 @@
+{
+  "reviewer": "execution_review independent sub-agent",
+  "date": "2026-09-26",
+  "status": "pass",
+  "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MPLCONFIGDIR=/tmp/guo-execution-mpl /tmp/guo-bench-env/bin/python docs/data/guo-2023-sulfur-xas/workflows/candidate.py ALL --inputs docs/data/guo-2023-sulfur-xas/inputs --output /tmp/guo-independent-run-v2",
+  "exit_code": 0,
+  "questions_completed": [
+    "Q1",
+    "Q2",
+    "Q3"
+  ],
+  "dependencies": {
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "ase": "3.29.0",
+    "scikit-learn": "1.9.1"
+  },
+  "input_scope": "Only packaged calculations.json.gz, materials.csv and spectra_*.npz; source inspection confirms no verification inputs or heldback targets loaded.",
+  "reproducibility": {
+    "matching_artifacts": 24,
+    "expected_differing_artifacts": [
+      "execution.json"
+    ],
+    "details": [
+      {
+        "path": "Q1/ablations.npz",
+        "sha256": "a338cffb7628ef302511d39cc98c3e21b9085fe7d07f101609d84cf32d6815f9",
+        "matches_root_run": true
+      },
+      {
+        "path": "Q1/analysis.py",
+        "sha256": "7550e7b488fdb310f6f0bde2483e5337ed284eadb455e35432ffef7d1e641b2d",
+        "matches_root_run": true
+      },
+      {
+        "path": "Q1/bulk.npz",
+        "sha256": "cb9c25c03e95f163e33d3d45102a4056fbab3366abddc85d3d5afbc9d67c2dfb",
+        "matches_root_run": true
+      },
+      {
+        "path": "Q1/definitions.json",
+        "sha256": "9a71da10ef9ee9abf2cbd7490726247258938b847d73744f73fbade6494922da",
+        "matches_root_run": true
+      },
+      {
+        "path": "Q1/effects.csv",
+        "sha256": "9beb29179f3042ccfec22c7e022567eeec054896e26fbe1c8b29bf9376962465",
+        "matches_root_run": true
+      },
+      {
+        "path": "Q1/effects.png",
+        "sha256": "ca2995baf06560670a9d3260b4c645d90dc5e52b998a23c01fb08be93d0c5a0d",
+        "matches_root_run": true
+      },
+      {
+        "path": "Q1/overlays.png",
+        "sha256": "4e02be1ba9a027d8c54719da8a4f93cef9379e31d66d748c22b4d4401006b113",
+        "matches_root_run": true
+      },
+      {
+        "path": "Q1/report.md",
+        "sha256": "646f11104f68073c550d93ff854a0e953460a587d3f71b19b79f4b0d64d7327b",
+        "matches_root_run": true
+      },
+      {
+        "path": "Q1/sites.csv",
+        "sha256": "29970bbdbf30a8afa2451078576d858840be363019554cf8ed9eadb43eddc360",
+        "matches_root_run": true
+      },
+      {
+        "path": "Q1/summary.json",
+        "sha256": "133a277109956c4f12ffb966314f60da03863fdfdf8d7a94769bccff1290fed9",
+        "matches_root_run": true
+      },
+      {
+        "path": "Q2/analysis.py",
+        "sha256": "7550e7b488fdb310f6f0bde2483e5337ed284eadb455e35432ffef7d1e641b2d",
+        "matches_root_run": true
+      },
+      {
+        "path": "Q2/associations.csv",
+        "sha256": "184c752499b521e3b318249b744c27db23796957cc3a3efc16d5ec5dd4c4b50e",
+        "matches_root_run": true
+      },
+      {
+        "path": "Q2/associations.png",
+        "sha256": "85ca3460006ad965d6f5a2a56f2707491bc4d86661b40b9f916ae3a801feb5df",
+        "matches_root_run": true
+      },
+      {
+        "path": "Q2/definitions.json",
+        "sha256": "9a71da10ef9ee9abf2cbd7490726247258938b847d73744f73fbade6494922da",
+        "matches_root_run": true
+      },
+      {
+        "path": "Q2/report.md",
+        "sha256": "4e6a6e2a4c3c0b7c90e3434810eeab78e8c1c0a64b617a1f97e44adc60081bf1",
+        "matches_root_run": true
+      },
+      {
+        "path": "Q2/sites.csv",
+        "sha256": "29970bbdbf30a8afa2451078576d858840be363019554cf8ed9eadb43eddc360",
+        "matches_root_run": true
+      },
+      {
+        "path": "Q3/analysis.py",
+        "sha256": "7550e7b488fdb310f6f0bde2483e5337ed284eadb455e35432ffef7d1e641b2d",
+        "matches_root_run": true
+      },
+      {
+        "path": "Q3/definitions.json",
+        "sha256": "9a71da10ef9ee9abf2cbd7490726247258938b847d73744f73fbade6494922da",
+        "matches_root_run": true
+      },
+      {
+        "path": "Q3/metrics.json",
+        "sha256": "5dc50afdc872c7e6c1c48bab4e33132c02191d274f7d690306f077a5cfaed6f1",
+        "matches_root_run": true
+      },
+      {
+        "path": "Q3/partitions.csv",
+        "sha256": "5ae329655e8968036116b6afe90ac021a42a55e4f7467b7e5fd5cb61b06b33a6",
+        "matches_root_run": true
+      },
+      {
+        "path": "Q3/predictions.csv",
+        "sha256": "610dd854505f4c403d1b767163b800dcd47f7c5c9cd5cbf769572910a57ba1fe",
+        "matches_root_run": true
+      },
+      {
+        "path": "Q3/report.md",
+        "sha256": "c2c71d9d255a5a5bed039bf2b132beafd965a3845c2e61d3d5fea489b2af6922",
+        "matches_root_run": true
+      },
+      {
+        "path": "Q3/sites.csv",
+        "sha256": "29970bbdbf30a8afa2451078576d858840be363019554cf8ed9eadb43eddc360",
+        "matches_root_run": true
+      },
+      {
+        "path": "Q3/transfer.png",
+        "sha256": "74bdc3ffea1acacc8c8b99255e7003a3c2fd21ac0de30d660e25f4de2c8f3986",
+        "matches_root_run": true
+      },
+      {
+        "path": "execution.json",
+        "sha256": "ce16d0495e78a726079e549da8be7f22a9a4d994f00eb244951dba6d9f744697",
+        "matches_root_run": false
+      }
+    ]
+  },
+  "method_review": {
+    "absorber_mapping": "First corehole POSCAR atom; correct and independently confirmed from release code CLNT=1",
+    "alignment": "Includes final E0 corehole-minus-neutral excitation difference and minus corehole Fermi energy; all66 external raw spectra independently reconstruct to 3.1e-12 relative L2.",
+    "geometry": "Minimum-image periodic distances; corehole supercells have sufficient dimensions for selected neighbor cutoffs.",
+    "q2_inference": "Material-block bootstrap and within-material regression appropriately avoid treating all sites as independent. Operational labels/feature windows and linear P-coordination adjustment limit universality.",
+    "q3_leakage": "No test material appears in glass/hybrid training. Predictors contain normalized spectra only; geometry, composition, site IDs are not model features. Same-composition/ancestry overlap remains and is disclosed.",
+    "uncertainty": "Material-block intervals are conditional on fixed fitted model and available archive; no training uncertainty claimed.",
+    "negative_results": "Q2 positive centroid association and weak onset/peak effects refute a universal red-shift interpretation; Q3 crystal-only P2 recall ~31-33% reveals poor minority transfer despite aggregate accuracy."
+  },
+  "requested_improvement": "Resolved: all three reports now lead with direct quantitative answers, including negative Q2 evidence and poor crystal-only P2 transfer.",
+  "initial_candidate_sha256": "7550e7b488fdb310f6f0bde2483e5337ed284eadb455e35432ffef7d1e641b2d",
+  "candidate_sha256": "cc413e1ba3e99a2e2ecb27456eaadb09194a2434ce555b2374c29ecc8a91c170",
+  "narrative_revision": {
+    "changes": "Only report prose changed to provide direct quantitative answers, with interpolation of already computed results; all18 numerical/figure/definition artifacts unchanged.",
+    "output_directory": "/tmp/guo-independent-run-v2",
+    "execution_exit_code": 0,
+    "narrative_review": "Direct Q1/Q2/Q3 conclusions checked against tables. Q1 prompt narrowed to within-material reliability; no pairwise material-ranking claim is certified.",
+    "artifacts": [
+      {
+        "path": "Q1/ablations.npz",
+        "sha256": "a338cffb7628ef302511d39cc98c3e21b9085fe7d07f101609d84cf32d6815f9",
+        "same_as_initial_run": true
+      },
+      {
+        "path": "Q1/analysis.py",
+        "sha256": "cc413e1ba3e99a2e2ecb27456eaadb09194a2434ce555b2374c29ecc8a91c170",
+        "same_as_initial_run": false
+      },
+      {
+        "path": "Q1/bulk.npz",
+        "sha256": "cb9c25c03e95f163e33d3d45102a4056fbab3366abddc85d3d5afbc9d67c2dfb",
+        "same_as_initial_run": true
+      },
+      {
+        "path": "Q1/definitions.json",
+        "sha256": "9a71da10ef9ee9abf2cbd7490726247258938b847d73744f73fbade6494922da",
+        "same_as_initial_run": true
+      },
+      {
+        "path": "Q1/effects.csv",
+        "sha256": "9beb29179f3042ccfec22c7e022567eeec054896e26fbe1c8b29bf9376962465",
+        "same_as_initial_run": true
+      },
+      {
+        "path": "Q1/effects.png",
+        "sha256": "ca2995baf06560670a9d3260b4c645d90dc5e52b998a23c01fb08be93d0c5a0d",
+        "same_as_initial_run": true
+      },
+      {
+        "path": "Q1/overlays.png",
+        "sha256": "4e02be1ba9a027d8c54719da8a4f93cef9379e31d66d748c22b4d4401006b113",
+        "same_as_initial_run": true
+      },
+      {
+        "path": "Q1/report.md",
+        "sha256": "3bb9150703c28b801261594d860f62e1701bdef3cae0a4c0e43baa3919ed16bb",
+        "same_as_initial_run": false
+      },
+      {
+        "path": "Q1/sites.csv",
+        "sha256": "29970bbdbf30a8afa2451078576d858840be363019554cf8ed9eadb43eddc360",
+        "same_as_initial_run": true
+      },
+      {
+        "path": "Q1/summary.json",
+        "sha256": "133a277109956c4f12ffb966314f60da03863fdfdf8d7a94769bccff1290fed9",
+        "same_as_initial_run": true
+      },
+      {
+        "path": "Q2/analysis.py",
+        "sha256": "cc413e1ba3e99a2e2ecb27456eaadb09194a2434ce555b2374c29ecc8a91c170",
+        "same_as_initial_run": false
+      },
+      {
+        "path": "Q2/associations.csv",
+        "sha256": "184c752499b521e3b318249b744c27db23796957cc3a3efc16d5ec5dd4c4b50e",
+        "same_as_initial_run": true
+      },
+      {
+        "path": "Q2/associations.png",
+        "sha256": "85ca3460006ad965d6f5a2a56f2707491bc4d86661b40b9f916ae3a801feb5df",
+        "same_as_initial_run": true
+      },
+      {
+        "path": "Q2/definitions.json",
+        "sha256": "9a71da10ef9ee9abf2cbd7490726247258938b847d73744f73fbade6494922da",
+        "same_as_initial_run": true
+      },
+      {
+        "path": "Q2/report.md",
+        "sha256": "246724c7d1f0cce8fbc29b63b197101c17fe43fc923196367b25d6293138f072",
+        "same_as_initial_run": false
+      },
+      {
+        "path": "Q2/sites.csv",
+        "sha256": "29970bbdbf30a8afa2451078576d858840be363019554cf8ed9eadb43eddc360",
+        "same_as_initial_run": true
+      },
+      {
+        "path": "Q3/analysis.py",
+        "sha256": "cc413e1ba3e99a2e2ecb27456eaadb09194a2434ce555b2374c29ecc8a91c170",
+        "same_as_initial_run": false
+      },
+      {
+        "path": "Q3/definitions.json",
+        "sha256": "9a71da10ef9ee9abf2cbd7490726247258938b847d73744f73fbade6494922da",
+        "same_as_initial_run": true
+      },
+      {
+        "path": "Q3/metrics.json",
+        "sha256": "5dc50afdc872c7e6c1c48bab4e33132c02191d274f7d690306f077a5cfaed6f1",
+        "same_as_initial_run": true
+      },
+      {
+        "path": "Q3/partitions.csv",
+        "sha256": "5ae329655e8968036116b6afe90ac021a42a55e4f7467b7e5fd5cb61b06b33a6",
+        "same_as_initial_run": true
+      },
+      {
+        "path": "Q3/predictions.csv",
+        "sha256": "610dd854505f4c403d1b767163b800dcd47f7c5c9cd5cbf769572910a57ba1fe",
+        "same_as_initial_run": true
+      },
+      {
+        "path": "Q3/report.md",
+        "sha256": "420c400615eae4ccf7d270a19840cd45707b4cc237cb44a46c8502362159ebfa",
+        "same_as_initial_run": false
+      },
+      {
+        "path": "Q3/sites.csv",
+        "sha256": "29970bbdbf30a8afa2451078576d858840be363019554cf8ed9eadb43eddc360",
+        "same_as_initial_run": true
+      },
+      {
+        "path": "Q3/transfer.png",
+        "sha256": "74bdc3ffea1acacc8c8b99255e7003a3c2fd21ac0de30d660e25f4de2c8f3986",
+        "same_as_initial_run": true
+      },
+      {
+        "path": "execution.json",
+        "sha256": "d46376bf38db23601d809b569af06855937300ee40108b5cb5cc98373abdaa90",
+        "same_as_initial_run": false
+      }
+    ]
+  }
+}

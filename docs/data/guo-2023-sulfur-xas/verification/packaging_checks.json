@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "input_hashes_checked": 8,
+  "questions": [
+    {
+      "question": "Q1",
+      "export_file_count": 9,
+      "inputs_match": true,
+      "no_evaluator_files": true
+    },
+    {
+      "question": "Q2",
+      "export_file_count": 9,
+      "inputs_match": true,
+      "no_evaluator_files": true
+    },
+    {
+      "question": "Q3",
+      "export_file_count": 9,
+      "inputs_match": true,
+      "no_evaluator_files": true
+    }
+  ],
+  "active_index_matches": true
+}

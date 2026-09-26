@@ -1,0 +1,174 @@
+{
+  "reviewer_role": "Independent adversarial question-quality sub-agent",
+  "review_date": "2026-09-26",
+  "verdict": "pass",
+  "scope": "Standalone solver prompts, raw-input descriptions, exporter boundary, scientific scope and method freedom. Separate agents assess worked execution and verification correctness.",
+  "reviewed_files": {
+    "papers/guo-2023-sulfur-xas/paper.json": "82ee34fda6bb6875eb9ff8f56ff6c5b2448cb5ad06fc82c104505e7c4e1fa2ee",
+    "papers/guo-2023-sulfur-xas/build_entry.py": "860a6f2127889de07808a2b95f8763ecb6ae2456eb8c590046666da3986eb302",
+    "papers/guo-2023-sulfur-xas/export_agent_bundle.py": "26dcdb6c63787f5291588d98222d479e0e0ddd83a6b2c3b033aaa048f64e5ff1",
+    "papers/guo-2023-sulfur-xas/README.md": "a678fdf2ee52f37f575c057023cca69f7994f86192ae5a78fcf686fb651ef3c2"
+  },
+  "reviewed_prompts": [
+    {
+      "id": "GUO23-Q1",
+      "title": "When does treating inequivalent sulfur sites as interchangeable distort a material’s XANES fingerprint?",
+      "background": "These are computed sulfur K-edge spectra of lithium thiophosphates. Each NPZ key is material/site; its native columns are energy in eV and the xx, yy, zz dielectric components. calculations.json.gz contains unchanged VASP input/output text for neutral and core-hole calculations. The first atom in each core-hole POSCAR is the absorber; the site-name suffix gives its relative multiplicity. materials.csv describes each structure. The energy reference for an excitation is the core-hole minus neutral total energy; the saved spectral axis includes the core-hole Fermi-energy offset. A common offset to experimental photon energies is unknown.",
+      "instruction": "Across the supplied structures, determine how much the material-level sulfur K-edge fingerprint depends on differences in site excitation energies and populations, and whether finite energy resolution changes that assessment. Identify where simplified site treatment is least reliable. Return report.md with your answer, quantitative evidence, methodological justification and limitations, supporting figures, and runnable code. Include the unbroadened material responses as bulk.npz (keys m001 through m066, each with energy and intensity columns), and numerical evidence for the comparisons.",
+      "prompt_sha256": "54f4ad5abb4306acda87bc26e008317a5d5b999f5f65e2969096d565acf56ba4"
+    },
+    {
+      "id": "GUO23-Q2",
+      "title": "Does greater local lithium coordination reliably predict a sulfur K-edge red shift?",
+      "background": "These are computed sulfur K-edge spectra of lithium thiophosphates. Each NPZ key is material/site; its native columns are energy in eV and the xx, yy, zz dielectric components. calculations.json.gz contains unchanged VASP input/output text for neutral and core-hole calculations. The first atom in each core-hole POSCAR is the absorber; the site-name suffix gives its relative multiplicity. materials.csv describes each structure. The energy reference for an excitation is the core-hole minus neutral total energy; the saved spectral axis includes the core-hole Fermi-energy offset. A common offset to experimental photon energies is unknown.",
+      "instruction": "Determine whether increasing lithium coordination around sulfur predicts a red shift across these structures once phosphorus bonding and material composition are taken into account. Establish how robust the relationship is to the definitions of local coordination and spectral shift, and what the data support about its physical interpretation. Return report.md with your answer, quantitative evidence, methodological justification and limitations, supporting figures, and runnable code. Include sites.csv, identifying each observation by material and site, with the structural and spectral quantities used; define their units and meaning in the report.",
+      "prompt_sha256": "3003768ebefb5411e0c1aaafc1569dfdd081b1b1a0556cc4b5455c5556c73948"
+    },
+    {
+      "id": "GUO23-Q3",
+      "title": "Can sulfur K-edge spectra identify phosphorus coordination in previously unseen glassy structures?",
+      "background": "These are computed sulfur K-edge spectra of lithium thiophosphates. Each NPZ key is material/site; its native columns are energy in eV and the xx, yy, zz dielectric components. calculations.json.gz contains unchanged VASP input/output text for neutral and core-hole calculations. The first atom in each core-hole POSCAR is the absorber; the site-name suffix gives its relative multiplicity. materials.csv describes each structure. The energy reference for an excitation is the core-hole minus neutral total energy; the saved spectral axis includes the core-hole Fermi-energy offset. A common offset to experimental photon energies is unknown.",
+      "instruction": "Infer the number of phosphorus neighbours of an absorbing sulfur from its spectrum alone. Determine whether inference trained on crystalline environments transfers to glasses, and whether including other glassy structures improves generalization. Evaluate all supplied glassy structures without using any site from a target structure for training or selection. Assess failures for uncommon environments and sensitivity to energy resolution. Structural information may define labels but must not enter spectral prediction. Return report.md with your answer, quantitative evidence, methodological justification and limitations, supporting figures, and runnable code. Include sites.csv with material,site,p_cn and the coordination definition in the report; predictions.csv with material,site,split,method,predicted; and partitions.csv with material,split,method,role (train,validation,test,unused).",
+      "prompt_sha256": "49bd54103940d4f54a247e5ffef2dab80778e86bacd353136cdac6244600bb76"
+    }
+  ],
+  "criteria": {
+    "standalone_research_questions": true,
+    "no_paper_or_figure_reference_in_question_text": true,
+    "distinct_research_stages": true,
+    "requires_nontrivial_data_and_code_work": true,
+    "minimal_necessary_background": true,
+    "no_worked_protocol_in_solver_inputs": true,
+    "no_prescribed_estimator_or_preprocessing": true,
+    "no_expected_outcome_in_prompts": true,
+    "output_contract_is_auditable_evidence_not_recipe": true,
+    "independent_inputs_for_every_question": true
+  },
+  "question_reviews": [
+    {
+      "question": "Q1",
+      "verdict": "pass",
+      "scientific_problem": "Determine the consequences of treating inequivalent sulfur sites as interchangeable when constructing material fingerprints, including resolution dependence.",
+      "nontrivial_work": "Requires physically valid energy alignment, populations and orientational averaging across 66 materials, defensible simplified-treatment comparisons and resolution sensitivity. Recovering spectra alone does not settle the question.",
+      "method_freedom": "No interpolation grid, broadening kernel, resolution values, error metric or site-ablation implementation is supplied.",
+      "grounding": "A distinct step of the released XCH database construction; unbroadened author material averages provide independent reconstruction truth. Scientific ablation conclusions are new benchmark analysis.",
+      "answer_leakage": false
+    },
+    {
+      "question": "Q2",
+      "verdict": "pass",
+      "scientific_problem": "Test whether local lithium coordination predicts a red shift conditional on phosphorus bonding and material composition.",
+      "nontrivial_work": "Requires periodic geometry, justified neighbor and spectral-shift definitions, confounding control, dependent-observation uncertainty and interpretation of robustness or failure. A scatterplot or unconditional correlation is insufficient.",
+      "method_freedom": "No cutoff, estimator, adjustment model, energy window, spectral observable, resampling design or required sign is supplied. The red-shift direction defines the hypothesis, not its answer.",
+      "grounding": "Derives from the structural interpretation motivating the spectral database; there is no claim that a historical regression is being reproduced.",
+      "answer_leakage": false
+    },
+    {
+      "question": "Q3",
+      "verdict": "pass",
+      "scientific_problem": "Determine whether spectral inference of phosphorus coordination transfers from crystals to previously unseen glasses and whether glass training improves transfer.",
+      "nontrivial_work": "Requires geometry-derived labels, spectra-only inference, material-excluded evaluation, comparisons of training populations, minority-environment analysis and resolution sensitivity.",
+      "method_freedom": "No feature representation, classifier, coordination cutoff, fold count, hyperparameters, broadening kernel or target score is supplied. Whole-material exclusion and all-glass evaluation define the intended generalization question.",
+      "grounding": "Operationalizes the release's proposed site-spectrum fingerprinting use; this is a new transfer experiment, not an author-reported learning result.",
+      "answer_leakage": false
+    }
+  ],
+  "background_assessment": "The shared 91-word background defines native columns and units, absorber identity, multiplicity, calculation records and energy conventions. Energy-reference context is necessary because the released code does not directly reproduce the released material-average convention. It provides no alignment equation, algorithm, cutoff, model or expected finding.",
+  "resolved_findings": [
+    {
+      "issue": "Q1 formerly asked which inter-material comparisons remain defensible, while the worked design measures within-material distortions.",
+      "resolution": "Replaced by identifying where simplified site treatment is least reliable; final prompt inspected."
+    },
+    {
+      "issue": "Q3 formerly allowed structural information only for evaluation labels, ambiguously excluding necessary training-label construction.",
+      "resolution": "Changed to may define labels; final prompt inspected."
+    },
+    {
+      "issue": "The site checker formerly required all 2681 rows even for scientifically justified Q2 screening or omitted unused crystalline Q3 labels.",
+      "resolution": "Final checker permits valid Q2 subsets and requires glass target rows for Q3, reporting source and submitted coverage. Code inspected; mutation/alternative tests are the verification reviewer's responsibility."
+    }
+  ],
+  "independent_export_audit": {
+    "exports": [
+      {
+        "question": "Q1",
+        "file_count": 9,
+        "files": [
+          "inputs/calculations.json.gz",
+          "inputs/materials.csv",
+          "inputs/spectra_01.npz",
+          "inputs/spectra_02.npz",
+          "inputs/spectra_03.npz",
+          "inputs/spectra_04.npz",
+          "inputs/spectra_05.npz",
+          "inputs/spectra_06.npz",
+          "task.json"
+        ],
+        "prompt_unchanged": true,
+        "all_input_hashes_equal": true,
+        "only_task_and_raw_inputs": true,
+        "task_sha256": "9f11ae6aa4b23f0b1af3c7fde3f90e75619494a8c56a499e8e9ac62c4b039622",
+        "source_attribution_retained": true
+      },
+      {
+        "question": "Q2",
+        "file_count": 9,
+        "files": [
+          "inputs/calculations.json.gz",
+          "inputs/materials.csv",
+          "inputs/spectra_01.npz",
+          "inputs/spectra_02.npz",
+          "inputs/spectra_03.npz",
+          "inputs/spectra_04.npz",
+          "inputs/spectra_05.npz",
+          "inputs/spectra_06.npz",
+          "task.json"
+        ],
+        "prompt_unchanged": true,
+        "all_input_hashes_equal": true,
+        "only_task_and_raw_inputs": true,
+        "task_sha256": "992495579cd1a5ecbf2f2cacb57ca89b8bcd6ae61b6368279692653d1b120846",
+        "source_attribution_retained": true
+      },
+      {
+        "question": "Q3",
+        "file_count": 9,
+        "files": [
+          "inputs/calculations.json.gz",
+          "inputs/materials.csv",
+          "inputs/spectra_01.npz",
+          "inputs/spectra_02.npz",
+          "inputs/spectra_03.npz",
+          "inputs/spectra_04.npz",
+          "inputs/spectra_05.npz",
+          "inputs/spectra_06.npz",
+          "task.json"
+        ],
+        "prompt_unchanged": true,
+        "all_input_hashes_equal": true,
+        "only_task_and_raw_inputs": true,
+        "task_sha256": "3342214aae96146f06c52a435d124397e3a1233df1cb29c8ac744a22b3eb91c3",
+        "source_attribution_retained": true
+      }
+    ],
+    "native_array_count": 2681,
+    "unique_array_count": 2681,
+    "materials": 66,
+    "float64_four_column_arrays": true,
+    "raw_calculation_text_only": true
+  },
+  "evaluation_boundary": {
+    "answers_and_workflows_excluded_from_exports": true,
+    "source_attribution_retained": true,
+    "anonymous_or_access_controlled": false,
+    "restriction": "Use a fresh solver context without the review repository or external retrieval of source attribution. Geometry and metadata remain readable; spectra-only inference and target exclusion require code/execution review.",
+    "alternative_methods": "Do not reject scientifically justified alternative coordination definitions, descriptors, estimators or conclusions merely for differing from the worked example. Nonstandard quantities need an independent adapter or scientific review rather than candidate-matching thresholds."
+  },
+  "limitations": [
+    "Difficulty is assessed from scientific demands; it has not been calibrated with independent solver success rates.",
+    "The input spectra are cropped native released VASP arrays, not detector raw counts or complete original VASP outputs.",
+    "There are 66 structures rather than 2681 independent materials. Related ancestral structures and formulas can cross a material-level split.",
+    "No task establishes experimental transfer, convergence with computational settings, charge redistribution or a causal shielding mechanism from absent source data.",
+    "Q3 whole-material holdout concerns unseen released structural models and does not by itself establish transfer to new chemical families."
+  ]
+}

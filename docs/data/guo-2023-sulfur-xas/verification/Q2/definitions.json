@@ -1,0 +1,8 @@
+{
+  "energy_units": "eV; arbitrary common DFT zero, not experimental photon energy",
+  "correction": "last OSZICAR E0(corehole) - Ncorehole/Nneutral * last E0(neutral) - efermi",
+  "geometry": "first S in corehole POSCAR, periodic minimum-image distances; P cutoff2.6A, Li cutoff3.0A; sensitivities2.8/3.2A",
+  "spectral_features": "diagonal mean, linear resample2398:0.05:2428 eV, Gaussian FWHM0.5eV; peak, cumulative-area10% onset and centroid on2399..2410eV",
+  "multiplicities": "reduced ratios, not number of sulfur atoms in supercell",
+  "broadening": "controlled Gaussian resolution experiment, not reproduction of lifetime-broadened experimental spectra"
+}

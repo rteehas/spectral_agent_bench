@@ -1,0 +1,20 @@
+{
+  "question": "ALL",
+  "command": [
+    "spectral_agent_bench/docs/data/guo-2023-sulfur-xas/workflows/candidate.py",
+    "ALL",
+    "--inputs",
+    "spectral_agent_bench/docs/data/guo-2023-sulfur-xas/inputs",
+    "--output",
+    "/tmp/guo-final"
+  ],
+  "materials": 66,
+  "sites": 2681,
+  "reference_data_read": false,
+  "seed_values": [
+    202309,
+    710,
+    41,
+    19
+  ]
+}

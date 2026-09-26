@@ -1,0 +1,3534 @@
+{
+  "scope": "Source projection and numerical-integrity audit; scientific review and code execution remain separate.",
+  "verifier_sha256": "348c7d122476989fa36e1923884cedb041e9e392c1aefd417214ff5921ae4d46",
+  "audit_sha256": "f65c01a9889a9ef420ccd83e9c723667d5803b6467a7278cf739defede0b76b9",
+  "candidate_source_sha256": "cc413e1ba3e99a2e2ecb27456eaadb09194a2434ce555b2374c29ecc8a91c170",
+  "accepted": [
+    {
+      "case": "common_origin_and_independent_intensity_units",
+      "question": "Q1",
+      "integrity_pass": true,
+      "scientific_pass": null,
+      "status": "scientific_review_required"
+    },
+    {
+      "case": "alternate_energy_sampling",
+      "question": "Q1",
+      "integrity_pass": true,
+      "scientific_pass": null,
+      "status": "scientific_review_required"
+    },
+    {
+      "case": "reordered_site_table",
+      "question": "Q2",
+      "integrity_pass": true,
+      "scientific_pass": null,
+      "status": "scientific_review_required"
+    },
+    {
+      "case": "alternate_declared_geometry_cutoffs",
+      "question": "Q2",
+      "integrity_pass": true,
+      "scientific_pass": null,
+      "status": "scientific_review_required"
+    },
+    {
+      "case": "source_valid_subset_requires_scientific_review",
+      "question": "Q2",
+      "integrity_pass": true,
+      "scientific_pass": null,
+      "status": "scientific_review_required"
+    },
+    {
+      "case": "minimal_single_method_interface",
+      "question": "Q3",
+      "integrity_pass": true,
+      "scientific_pass": null,
+      "status": "scientific_review_required"
+    },
+    {
+      "case": "unused_crystalline_geometry_omitted",
+      "question": "Q3",
+      "integrity_pass": true,
+      "scientific_pass": null,
+      "status": "scientific_review_required"
+    },
+    {
+      "case": "arbitrary_model_names_shared_partition_table",
+      "question": "Q3",
+      "integrity_pass": true,
+      "scientific_pass": null,
+      "status": "scientific_review_required"
+    },
+    {
+      "case": "majority_predictions_need_scientific_review",
+      "question": "Q3",
+      "integrity_pass": true,
+      "scientific_pass": null,
+      "status": "scientific_review_required"
+    }
+  ],
+  "rejected": [
+    {
+      "case": "missing_material_spectrum",
+      "question": "Q1",
+      "reason": "Missing, duplicate or extra material spectra"
+    },
+    {
+      "case": "zero_spectrum",
+      "question": "Q1",
+      "reason": "Zero or negative spectrum: m001"
+    },
+    {
+      "case": "nonfinite_spectrum",
+      "question": "Q1",
+      "reason": "Non-real or non-finite curve: m001"
+    },
+    {
+      "case": "negative_spectrum",
+      "question": "Q1",
+      "reason": "Zero or negative spectrum: m001"
+    },
+    {
+      "case": "nonmonotonic_spectrum",
+      "question": "Q1",
+      "reason": "Non-increasing energy axis: m001"
+    },
+    {
+      "case": "one_material_shifted",
+      "question": "Q1",
+      "reason": "Released-spectrum mismatch m057: relative RMSE 0.685094 > 0.02"
+    },
+    {
+      "case": "relative_alignment_removed",
+      "question": "Q1",
+      "reason": "Released-spectrum mismatch m010: relative RMSE 0.113766 > 0.02"
+    },
+    {
+      "case": "multiplicity_removed",
+      "question": "Q1",
+      "reason": "Released-spectrum mismatch m044: relative RMSE 0.0576278 > 0.02"
+    },
+    {
+      "case": "empty_site_table",
+      "question": "Q2",
+      "reason": "Empty table: /tmp/guo-verifier-audit-s_3h8xs9/empty_site_table/sites.csv"
+    },
+    {
+      "case": "duplicate_site",
+      "question": "Q2",
+      "reason": "Duplicate site row: ('001', '01_1')"
+    },
+    {
+      "case": "false_site_correction",
+      "question": "Q2",
+      "reason": "Source disagreement ('001', '01_1')/correction: -999.0 versus 7.073985006999968"
+    },
+    {
+      "case": "false_site_p_cn",
+      "question": "Q2",
+      "reason": "Source disagreement ('001', '01_1')/p_cn: 99.0 versus 1"
+    },
+    {
+      "case": "false_site_weight",
+      "question": "Q2",
+      "reason": "Source disagreement ('001', '01_1')/weight: 99.0 versus 1"
+    },
+    {
+      "case": "false_site_peak_e",
+      "question": "Q2",
+      "reason": "Non-finite descriptor ('001', '01_1')/peak_e"
+    },
+    {
+      "case": "false_site_p_nearest_A",
+      "question": "Q2",
+      "reason": "Source disagreement ('001', '01_1')/p_nearest_A: -1.0 versus 2.0305661274161424"
+    },
+    {
+      "case": "false_site_p_cutoff_A",
+      "question": "Q2",
+      "reason": "Source disagreement ('001', '01_1')/p_cutoff_A: 1.2 versus 2.6"
+    },
+    {
+      "case": "missing_test_prediction",
+      "question": "Q3",
+      "reason": "Missing or extra predictions for declared test materials: default/fold0"
+    },
+    {
+      "case": "duplicate_prediction",
+      "question": "Q3",
+      "reason": "Duplicate prediction: default/fold0/('004', '01_1')"
+    },
+    {
+      "case": "complete_glass_target_omitted",
+      "question": "Q3",
+      "reason": "Method omits glassy target materials: default"
+    },
+    {
+      "case": "glass_geometry_omitted",
+      "question": "Q3",
+      "reason": "Site table omits glass target sites"
+    },
+    {
+      "case": "invalid_prediction_predicted_99",
+      "question": "Q3",
+      "reason": "Unknown coordination class"
+    },
+    {
+      "case": "invalid_prediction_predicted_nan",
+      "question": "Q3",
+      "reason": "Non-finite predicted"
+    },
+    {
+      "case": "invalid_prediction_site_99999_1",
+      "question": "Q3",
+      "reason": "Unknown source site: 004/99999_1"
+    },
+    {
+      "case": "material_train_test_overlap",
+      "question": "Q3",
+      "reason": "Duplicate or overlapping material roles: ('*', 'fold0', '004')"
+    },
+    {
+      "case": "false_supplied_labels",
+      "question": "Q3",
+      "reason": "False supplied truth: ('004', '01_1')"
+    },
+    {
+      "case": "false_csv_metric",
+      "question": "Q3",
+      "reason": "False reported metric: ('default', 'fold0')/accuracy"
+    },
+    {
+      "case": "false_aggregate_json_metric",
+      "question": "Q3",
+      "reason": "False aggregate metric: crystal_RF_fwhm0.5/accuracy"
+    }
+  ],
+  "baselines": {
+    "Q1": {
+      "question": "Q1",
+      "integrity_pass": true,
+      "scientific_pass": null,
+      "status": "scientific_review_required",
+      "scope": "Numerical/source integrity only. Independent execution and scientific rubric review are mandatory.",
+      "submitted_code": [
+        "analysis.py"
+      ],
+      "checks": {
+        "material_count": 66,
+        "common_energy_offset_eV": 5.179884299266746e-14,
+        "relative_rmse_tolerance": 0.02,
+        "material_comparisons": [
+          {
+            "material": "m010",
+            "relative_rmse": 3.407525141554555e-13,
+            "intensity_scale": 189.00000000000347
+          },
+          {
+            "material": "m011",
+            "relative_rmse": 3.6302377985061853e-13,
+            "intensity_scale": 185.99999999999798
+          },
+          {
+            "material": "m012",
+            "relative_rmse": 2.7970081850852206e-13,
+            "intensity_scale": 186.0000000000031
+          },
+          {
+            "material": "m013",
+            "relative_rmse": 4.0191879528100456e-13,
+            "intensity_scale": 185.99999999999775
+          },
+          {
+            "material": "m014",
+            "relative_rmse": 3.6588781942506604e-13,
+            "intensity_scale": 186.00000000001026
+          },
+          {
+            "material": "m015",
+            "relative_rmse": 2.9822840164190416e-13,
+            "intensity_scale": 185.99999999999682
+          },
+          {
+            "material": "m016",
+            "relative_rmse": 4.0144986146009144e-13,
+            "intensity_scale": 185.9999999999972
+          },
+          {
+            "material": "m017",
+            "relative_rmse": 3.4684462433776125e-13,
+            "intensity_scale": 186.0000000000056
+          },
+          {
+            "material": "m018",
+            "relative_rmse": 4.262856239418432e-13,
+            "intensity_scale": 186.00000000000406
+          },
+          {
+            "material": "m019",
+            "relative_rmse": 2.9109507296968637e-13,
+            "intensity_scale": 186.00000000000287
+          },
+          {
+            "material": "m001",
+            "relative_rmse": 2.5718541083369284e-13,
+            "intensity_scale": 189.00000000000236
+          },
+          {
+            "material": "m020",
+            "relative_rmse": 3.999015057524925e-13,
+            "intensity_scale": 185.99999999999892
+          },
+          {
+            "material": "m021",
+            "relative_rmse": 3.62139637531027e-13,
+            "intensity_scale": 186.00000000001307
+          },
+          {
+            "material": "m022",
+            "relative_rmse": 5.47822921348964e-13,
+            "intensity_scale": 182.99999999999523
+          },
+          {
+            "material": "m023",
+            "relative_rmse": 6.304548004815017e-13,
+            "intensity_scale": 182.9999999999933
+          },
+          {
+            "material": "m024",
+            "relative_rmse": 4.900199207024791e-13,
+            "intensity_scale": 185.9999999999923
+          },
+          {
+            "material": "m025",
+            "relative_rmse": 5.135491807773644e-13,
+            "intensity_scale": 180.00000000000526
+          },
+          {
+            "material": "m026",
+            "relative_rmse": 3.764464125768707e-13,
+            "intensity_scale": 174.00000000000458
+          },
+          {
+            "material": "m027",
+            "relative_rmse": 4.854634620821339e-13,
+            "intensity_scale": 258.00000000000637
+          },
+          {
+            "material": "m028",
+            "relative_rmse": 3.414129369771311e-13,
+            "intensity_scale": 180.00000000001083
+          },
+          {
+            "material": "m029",
+            "relative_rmse": 4.1480054276985683e-13,
+            "intensity_scale": 177.00000000000372
+          },
+          {
+            "material": "m002",
+            "relative_rmse": 2.9396532861428974e-13,
+            "intensity_scale": 189.0000000000074
+          },
+          {
+            "material": "m030",
+            "relative_rmse": 3.819066559966555e-13,
+            "intensity_scale": 173.99999999999983
+          },
+          {
+            "material": "m031",
+            "relative_rmse": 4.170044387318718e-13,
+            "intensity_scale": 170.99999999999963
+          },
+          {
+            "material": "m032",
+            "relative_rmse": 5.119155853397026e-13,
+            "intensity_scale": 167.999999999997
+          },
+          {
+            "material": "m033",
+            "relative_rmse": 5.179524616136224e-13,
+            "intensity_scale": 165.00000000000125
+          },
+          {
+            "material": "m034",
+            "relative_rmse": 5.944801094468786e-13,
+            "intensity_scale": 162.000000000004
+          },
+          {
+            "material": "m035",
+            "relative_rmse": 3.4974703442772065e-13,
+            "intensity_scale": 87.00000000000075
+          },
+          {
+            "material": "m036",
+            "relative_rmse": 3.9211145005250185e-13,
+            "intensity_scale": 126.00000000000259
+          },
+          {
+            "material": "m037",
+            "relative_rmse": 3.263499285573078e-13,
+            "intensity_scale": 69.00000000000114
+          },
+          {
+            "material": "m038",
+            "relative_rmse": 4.766391899048334e-13,
+            "intensity_scale": 66.0000000000004
+          },
+          {
+            "material": "m039",
+            "relative_rmse": 5.330633335397872e-13,
+            "intensity_scale": 63.00000000000088
+          },
+          {
+            "material": "m003",
+            "relative_rmse": 3.5370060452974927e-13,
+            "intensity_scale": 189.00000000000347
+          },
+          {
+            "material": "m040",
+            "relative_rmse": 8.736466491795077e-13,
+            "intensity_scale": 59.99999999999798
+          },
+          {
+            "material": "m041",
+            "relative_rmse": 3.9099859884955146e-13,
+            "intensity_scale": 57.00000000000055
+          },
+          {
+            "material": "m042",
+            "relative_rmse": 4.3541039730495604e-13,
+            "intensity_scale": 53.99999999999846
+          },
+          {
+            "material": "m043",
+            "relative_rmse": 5.10206073965876e-13,
+            "intensity_scale": 51.00000000000074
+          },
+          {
+            "material": "m044",
+            "relative_rmse": 5.028968776913486e-13,
+            "intensity_scale": 140.99999999999451
+          },
+          {
+            "material": "m045",
+            "relative_rmse": 3.983417739931486e-13,
+            "intensity_scale": 183.0000000000079
+          },
+          {
+            "material": "m046",
+            "relative_rmse": 3.538921137899512e-13,
+            "intensity_scale": 177.00000000000176
+          },
+          {
+            "material": "m047",
+            "relative_rmse": 1.0321165331581353e-12,
+            "intensity_scale": 69.0000000000016
+          },
+          {
+            "material": "m048",
+            "relative_rmse": 3.45448588605029e-13,
+            "intensity_scale": 192.00000000000523
+          },
+          {
+            "material": "m049",
+            "relative_rmse": 1.796446598833028e-12,
+            "intensity_scale": 8.999999999999073
+          },
+          {
+            "material": "m004",
+            "relative_rmse": 3.445678452322443e-13,
+            "intensity_scale": 188.9999999999998
+          },
+          {
+            "material": "m050",
+            "relative_rmse": 2.0929024771264892e-16,
+            "intensity_scale": 3.0
+          },
+          {
+            "material": "m051",
+            "relative_rmse": 2.1422425663450518e-16,
+            "intensity_scale": 3.0
+          },
+          {
+            "material": "m052",
+            "relative_rmse": 3.1831872096215556e-12,
+            "intensity_scale": 9.000000000003253
+          },
+          {
+            "material": "m053",
+            "relative_rmse": 1.2241750493711054e-12,
+            "intensity_scale": 18.000000000000966
+          },
+          {
+            "material": "m054",
+            "relative_rmse": 1.112175551721926e-12,
+            "intensity_scale": 33.000000000001826
+          },
+          {
+            "material": "m055",
+            "relative_rmse": 1.0304931912346853e-12,
+            "intensity_scale": 32.99999999999966
+          },
+          {
+            "material": "m056",
+            "relative_rmse": 7.222100519345409e-13,
+            "intensity_scale": 47.99999999999906
+          },
+          {
+            "material": "m057",
+            "relative_rmse": 1.2705048311848555e-12,
+            "intensity_scale": 12.000000000002018
+          },
+          {
+            "material": "m058",
+            "relative_rmse": 9.744179714996605e-13,
+            "intensity_scale": 11.999999999999233
+          },
+          {
+            "material": "m059",
+            "relative_rmse": 5.416628055988408e-13,
+            "intensity_scale": 48.00000000000084
+          },
+          {
+            "material": "m005",
+            "relative_rmse": 3.7488933666240375e-13,
+            "intensity_scale": 188.9999999999965
+          },
+          {
+            "material": "m060",
+            "relative_rmse": 1.1380899994731573e-12,
+            "intensity_scale": 11.999999999997648
+          },
+          {
+            "material": "m061",
+            "relative_rmse": 9.007453499308748e-13,
+            "intensity_scale": 12.00000000000129
+          },
+          {
+            "material": "m062",
+            "relative_rmse": 6.822812205148819e-13,
+            "intensity_scale": 18.00000000000028
+          },
+          {
+            "material": "m063",
+            "relative_rmse": 4.689687771196403e-13,
+            "intensity_scale": 183.00000000000531
+          },
+          {
+            "material": "m064",
+            "relative_rmse": 1.576658981797781e-12,
+            "intensity_scale": 20.99999999999847
+          },
+          {
+            "material": "m065",
+            "relative_rmse": 1.5781594626944292e-12,
+            "intensity_scale": 21.000000000000203
+          },
+          {
+            "material": "m066",
+            "relative_rmse": 1.6295526682850855e-12,
+            "intensity_scale": 42.00000000000103
+          },
+          {
+            "material": "m006",
+            "relative_rmse": 4.953398836200378e-13,
+            "intensity_scale": 189.00000000000045
+          },
+          {
+            "material": "m007",
+            "relative_rmse": 2.908881385915461e-13,
+            "intensity_scale": 188.99999999998883
+          },
+          {
+            "material": "m008",
+            "relative_rmse": 3.482050812664625e-13,
+            "intensity_scale": 188.99999999999991
+          },
+          {
+            "material": "m009",
+            "relative_rmse": 4.0875762771985655e-13,
+            "intensity_scale": 188.99999999999707
+          }
+        ],
+        "maximum_relative_rmse": 3.1831872096215556e-12
+      }
+    },
+    "Q2": {
+      "question": "Q2",
+      "integrity_pass": true,
+      "scientific_pass": null,
+      "status": "scientific_review_required",
+      "scope": "Numerical/source integrity only. Independent execution and scientific rubric review are mandatory.",
+      "submitted_code": [
+        "analysis.py"
+      ],
+      "geometry_convention": {
+        "p_cutoff_A": 2.6,
+        "li_cutoff_A": 3.0,
+        "neighbor_definition": "Distinct atoms within a strict radius using nearest periodic images, centered on the core-hole first S atom."
+      },
+      "checks": {
+        "site_count": 2681,
+        "independently_checked_fields": {
+          "p_nearest_A": 2681,
+          "li_cn": 2681,
+          "p_cutoff_A": 2681,
+          "li_cn_2p8": 2681,
+          "li_nearest_A": 2681,
+          "correction": 2681,
+          "weight": 2681,
+          "p_cn": 2681,
+          "li_cutoff_A": 2681,
+          "li_cn_3p2": 2681
+        },
+        "omitted_source_sites": 0,
+        "omitted_materials": [],
+        "fields_requiring_scientific_review": [
+          "centroid_e",
+          "onset_e",
+          "peak_e"
+        ],
+        "selection_note": "Q2 source-valid subsets are accepted numerically; exclusions and representativeness require scientific review. Q3 requires every glass target site, but unused crystalline sites may be omitted."
+      }
+    },
+    "Q3": {
+      "question": "Q3",
+      "integrity_pass": true,
+      "scientific_pass": null,
+      "status": "scientific_review_required",
+      "scope": "Numerical/source integrity only. Independent execution and scientific rubric review are mandatory.",
+      "submitted_code": [
+        "analysis.py"
+      ],
+      "geometry_convention": {
+        "p_cutoff_A": 2.6,
+        "li_cutoff_A": 3.0,
+        "neighbor_definition": "Distinct atoms within a strict radius using nearest periodic images, centered on the core-hole first S atom."
+      },
+      "checks": {
+        "site_count": 2681,
+        "independently_checked_fields": {
+          "p_nearest_A": 2681,
+          "li_cn": 2681,
+          "p_cutoff_A": 2681,
+          "li_cn_2p8": 2681,
+          "li_nearest_A": 2681,
+          "correction": 2681,
+          "weight": 2681,
+          "p_cn": 2681,
+          "li_cutoff_A": 2681,
+          "li_cn_3p2": 2681
+        },
+        "omitted_source_sites": 0,
+        "omitted_materials": [],
+        "fields_requiring_scientific_review": [
+          "centroid_e",
+          "onset_e",
+          "peak_e"
+        ],
+        "selection_note": "Q2 source-valid subsets are accepted numerically; exclusions and representativeness require scientific review. Q3 requires every glass target site, but unused crystalline sites may be omitted."
+      },
+      "predictions": {
+        "run_count": 28,
+        "runs": [
+          {
+            "method": "crystal_RF_fwhm0.5",
+            "split": "fold0",
+            "train_materials": [
+              "049",
+              "050",
+              "051",
+              "052",
+              "053",
+              "054",
+              "055",
+              "056",
+              "057",
+              "058",
+              "059",
+              "060",
+              "061",
+              "062",
+              "063",
+              "064",
+              "065",
+              "066"
+            ],
+            "validation_materials": [],
+            "test_materials": [
+              "004",
+              "005",
+              "012",
+              "014",
+              "022",
+              "025",
+              "026",
+              "033",
+              "036",
+              "037",
+              "040",
+              "046"
+            ],
+            "n": 628,
+            "accuracy": 0.8312101910828026,
+            "balanced_accuracy": 0.6769569228585621,
+            "macro_f1": 0.5051983857086392,
+            "class_support": {
+              "0": 11,
+              "1": 610,
+              "2": 7
+            },
+            "class_recall": {
+              "0": 0.9090909090909091,
+              "1": 0.8360655737704918,
+              "2": 0.2857142857142857
+            },
+            "confusion_labels": [
+              0,
+              1,
+              2
+            ],
+            "confusion": [
+              [
+                10,
+                1,
+                0
+              ],
+              [
+                100,
+                510,
+                0
+              ],
+              [
+                0,
+                5,
+                2
+              ]
+            ],
+            "test_majority_fraction": 0.9713375796178344
+          },
+          {
+            "method": "crystal_RF_fwhm0.5",
+            "split": "fold1",
+            "train_materials": [
+              "049",
+              "050",
+              "051",
+              "052",
+              "053",
+              "054",
+              "055",
+              "056",
+              "057",
+              "058",
+              "059",
+              "060",
+              "061",
+              "062",
+              "063",
+              "064",
+              "065",
+              "066"
+            ],
+            "validation_materials": [],
+            "test_materials": [
+              "002",
+              "006",
+              "013",
+              "018",
+              "019",
+              "020",
+              "023",
+              "027",
+              "032",
+              "034",
+              "035",
+              "038"
+            ],
+            "n": 682,
+            "accuracy": 0.8299120234604106,
+            "balanced_accuracy": 0.746041351487645,
+            "macro_f1": 0.5258325552443199,
+            "class_support": {
+              "0": 6,
+              "1": 661,
+              "2": 15
+            },
+            "class_recall": {
+              "0": 1.0,
+              "1": 0.8381240544629349,
+              "2": 0.4
+            },
+            "confusion_labels": [
+              0,
+              1,
+              2
+            ],
+            "confusion": [
+              [
+                6,
+                0,
+                0
+              ],
+              [
+                107,
+                554,
+                0
+              ],
+              [
+                0,
+                9,
+                6
+              ]
+            ],
+            "test_majority_fraction": 0.969208211143695
+          },
+          {
+            "method": "crystal_RF_fwhm0.5",
+            "split": "fold2",
+            "train_materials": [
+              "049",
+              "050",
+              "051",
+              "052",
+              "053",
+              "054",
+              "055",
+              "056",
+              "057",
+              "058",
+              "059",
+              "060",
+              "061",
+              "062",
+              "063",
+              "064",
+              "065",
+              "066"
+            ],
+            "validation_materials": [],
+            "test_materials": [
+              "001",
+              "003",
+              "008",
+              "010",
+              "011",
+              "024",
+              "028",
+              "030",
+              "039",
+              "042",
+              "044",
+              "048"
+            ],
+            "n": 628,
+            "accuracy": 0.947452229299363,
+            "balanced_accuracy": 0.657790520846534,
+            "macro_f1": 0.5976673383620413,
+            "class_support": {
+              "0": 8,
+              "1": 607,
+              "2": 13
+            },
+            "class_recall": {
+              "0": 0.625,
+              "1": 0.9637561779242174,
+              "2": 0.38461538461538464
+            },
+            "confusion_labels": [
+              0,
+              1,
+              2
+            ],
+            "confusion": [
+              [
+                5,
+                3,
+                0
+              ],
+              [
+                21,
+                585,
+                1
+              ],
+              [
+                0,
+                8,
+                5
+              ]
+            ],
+            "test_majority_fraction": 0.9665605095541401
+          },
+          {
+            "method": "crystal_RF_fwhm0.5",
+            "split": "fold3",
+            "train_materials": [
+              "049",
+              "050",
+              "051",
+              "052",
+              "053",
+              "054",
+              "055",
+              "056",
+              "057",
+              "058",
+              "059",
+              "060",
+              "061",
+              "062",
+              "063",
+              "064",
+              "065",
+              "066"
+            ],
+            "validation_materials": [],
+            "test_materials": [
+              "007",
+              "009",
+              "015",
+              "016",
+              "017",
+              "021",
+              "029",
+              "031",
+              "041",
+              "043",
+              "045",
+              "047"
+            ],
+            "n": 602,
+            "accuracy": 0.7691029900332226,
+            "balanced_accuracy": 0.6260523321956769,
+            "macro_f1": 0.37317268480092136,
+            "class_support": {
+              "0": 6,
+              "1": 586,
+              "2": 10
+            },
+            "class_recall": {
+              "0": 1.0,
+              "1": 0.7781569965870307,
+              "2": 0.1
+            },
+            "confusion_labels": [
+              0,
+              1,
+              2
+            ],
+            "confusion": [
+              [
+                6,
+                0,
+                0
+              ],
+              [
+                129,
+                456,
+                1
+              ],
+              [
+                0,
+                9,
+                1
+              ]
+            ],
+            "test_majority_fraction": 0.973421926910299
+          },
+          {
+            "method": "crystal_RF_fwhm1",
+            "split": "fold0",
+            "train_materials": [
+              "049",
+              "050",
+              "051",
+              "052",
+              "053",
+              "054",
+              "055",
+              "056",
+              "057",
+              "058",
+              "059",
+              "060",
+              "061",
+              "062",
+              "063",
+              "064",
+              "065",
+              "066"
+            ],
+            "validation_materials": [],
+            "test_materials": [
+              "004",
+              "005",
+              "012",
+              "014",
+              "022",
+              "025",
+              "026",
+              "033",
+              "036",
+              "037",
+              "040",
+              "046"
+            ],
+            "n": 628,
+            "accuracy": 0.9331210191082803,
+            "balanced_accuracy": 0.7119296004541905,
+            "macro_f1": 0.5866758399266139,
+            "class_support": {
+              "0": 11,
+              "1": 610,
+              "2": 7
+            },
+            "class_recall": {
+              "0": 0.9090909090909091,
+              "1": 0.940983606557377,
+              "2": 0.2857142857142857
+            },
+            "confusion_labels": [
+              0,
+              1,
+              2
+            ],
+            "confusion": [
+              [
+                10,
+                1,
+                0
+              ],
+              [
+                36,
+                574,
+                0
+              ],
+              [
+                0,
+                5,
+                2
+              ]
+            ],
+            "test_majority_fraction": 0.9713375796178344
+          },
+          {
+            "method": "crystal_RF_fwhm1",
+            "split": "fold1",
+            "train_materials": [
+              "049",
+              "050",
+              "051",
+              "052",
+              "053",
+              "054",
+              "055",
+              "056",
+              "057",
+              "058",
+              "059",
+              "060",
+              "061",
+              "062",
+              "063",
+              "064",
+              "065",
+              "066"
+            ],
+            "validation_materials": [],
+            "test_materials": [
+              "002",
+              "006",
+              "013",
+              "018",
+              "019",
+              "020",
+              "023",
+              "027",
+              "032",
+              "034",
+              "035",
+              "038"
+            ],
+            "n": 682,
+            "accuracy": 0.9222873900293255,
+            "balanced_accuracy": 0.7560934610858968,
+            "macro_f1": 0.5590215577027059,
+            "class_support": {
+              "0": 6,
+              "1": 661,
+              "2": 15
+            },
+            "class_recall": {
+              "0": 1.0,
+              "1": 0.9349470499243571,
+              "2": 0.3333333333333333
+            },
+            "confusion_labels": [
+              0,
+              1,
+              2
+            ],
+            "confusion": [
+              [
+                6,
+                0,
+                0
+              ],
+              [
+                43,
+                618,
+                0
+              ],
+              [
+                0,
+                10,
+                5
+              ]
+            ],
+            "test_majority_fraction": 0.969208211143695
+          },
+          {
+            "method": "crystal_RF_fwhm1",
+            "split": "fold2",
+            "train_materials": [
+              "049",
+              "050",
+              "051",
+              "052",
+              "053",
+              "054",
+              "055",
+              "056",
+              "057",
+              "058",
+              "059",
+              "060",
+              "061",
+              "062",
+              "063",
+              "064",
+              "065",
+              "066"
+            ],
+            "validation_materials": [],
+            "test_materials": [
+              "001",
+              "003",
+              "008",
+              "010",
+              "011",
+              "024",
+              "028",
+              "030",
+              "039",
+              "042",
+              "044",
+              "048"
+            ],
+            "n": 628,
+            "accuracy": 0.9792993630573248,
+            "balanced_accuracy": 0.7349828919021671,
+            "macro_f1": 0.7650726246199874,
+            "class_support": {
+              "0": 8,
+              "1": 607,
+              "2": 13
+            },
+            "class_recall": {
+              "0": 0.75,
+              "1": 0.9934102141680395,
+              "2": 0.46153846153846156
+            },
+            "confusion_labels": [
+              0,
+              1,
+              2
+            ],
+            "confusion": [
+              [
+                6,
+                2,
+                0
+              ],
+              [
+                3,
+                603,
+                1
+              ],
+              [
+                0,
+                7,
+                6
+              ]
+            ],
+            "test_majority_fraction": 0.9665605095541401
+          },
+          {
+            "method": "crystal_RF_fwhm1",
+            "split": "fold3",
+            "train_materials": [
+              "049",
+              "050",
+              "051",
+              "052",
+              "053",
+              "054",
+              "055",
+              "056",
+              "057",
+              "058",
+              "059",
+              "060",
+              "061",
+              "062",
+              "063",
+              "064",
+              "065",
+              "066"
+            ],
+            "validation_materials": [],
+            "test_materials": [
+              "007",
+              "009",
+              "015",
+              "016",
+              "017",
+              "021",
+              "029",
+              "031",
+              "041",
+              "043",
+              "045",
+              "047"
+            ],
+            "n": 602,
+            "accuracy": 0.9119601328903655,
+            "balanced_accuracy": 0.7077360637087601,
+            "macro_f1": 0.4990545379601721,
+            "class_support": {
+              "0": 6,
+              "1": 586,
+              "2": 10
+            },
+            "class_recall": {
+              "0": 1.0,
+              "1": 0.9232081911262798,
+              "2": 0.2
+            },
+            "confusion_labels": [
+              0,
+              1,
+              2
+            ],
+            "confusion": [
+              [
+                6,
+                0,
+                0
+              ],
+              [
+                45,
+                541,
+                0
+              ],
+              [
+                0,
+                8,
+                2
+              ]
+            ],
+            "test_majority_fraction": 0.973421926910299
+          },
+          {
+            "method": "crystal_majority",
+            "split": "fold0",
+            "train_materials": [
+              "049",
+              "050",
+              "051",
+              "052",
+              "053",
+              "054",
+              "055",
+              "056",
+              "057",
+              "058",
+              "059",
+              "060",
+              "061",
+              "062",
+              "063",
+              "064",
+              "065",
+              "066"
+            ],
+            "validation_materials": [],
+            "test_materials": [
+              "004",
+              "005",
+              "012",
+              "014",
+              "022",
+              "025",
+              "026",
+              "033",
+              "036",
+              "037",
+              "040",
+              "046"
+            ],
+            "n": 628,
+            "accuracy": 0.9713375796178344,
+            "balanced_accuracy": 0.3333333333333333,
+            "macro_f1": 0.32848680667743674,
+            "class_support": {
+              "0": 11,
+              "1": 610,
+              "2": 7
+            },
+            "class_recall": {
+              "0": 0.0,
+              "1": 1.0,
+              "2": 0.0
+            },
+            "confusion_labels": [
+              0,
+              1,
+              2
+            ],
+            "confusion": [
+              [
+                0,
+                11,
+                0
+              ],
+              [
+                0,
+                610,
+                0
+              ],
+              [
+                0,
+                7,
+                0
+              ]
+            ],
+            "test_majority_fraction": 0.9713375796178344
+          },
+          {
+            "method": "crystal_majority",
+            "split": "fold1",
+            "train_materials": [
+              "049",
+              "050",
+              "051",
+              "052",
+              "053",
+              "054",
+              "055",
+              "056",
+              "057",
+              "058",
+              "059",
+              "060",
+              "061",
+              "062",
+              "063",
+              "064",
+              "065",
+              "066"
+            ],
+            "validation_materials": [],
+            "test_materials": [
+              "002",
+              "006",
+              "013",
+              "018",
+              "019",
+              "020",
+              "023",
+              "027",
+              "032",
+              "034",
+              "035",
+              "038"
+            ],
+            "n": 682,
+            "accuracy": 0.969208211143695,
+            "balanced_accuracy": 0.3333333333333333,
+            "macro_f1": 0.3281211218664681,
+            "class_support": {
+              "0": 6,
+              "1": 661,
+              "2": 15
+            },
+            "class_recall": {
+              "0": 0.0,
+              "1": 1.0,
+              "2": 0.0
+            },
+            "confusion_labels": [
+              0,
+              1,
+              2
+            ],
+            "confusion": [
+              [
+                0,
+                6,
+                0
+              ],
+              [
+                0,
+                661,
+                0
+              ],
+              [
+                0,
+                15,
+                0
+              ]
+            ],
+            "test_majority_fraction": 0.969208211143695
+          },
+          {
+            "method": "crystal_majority",
+            "split": "fold2",
+            "train_materials": [
+              "049",
+              "050",
+              "051",
+              "052",
+              "053",
+              "054",
+              "055",
+              "056",
+              "057",
+              "058",
+              "059",
+              "060",
+              "061",
+              "062",
+              "063",
+              "064",
+              "065",
+              "066"
+            ],
+            "validation_materials": [],
+            "test_materials": [
+              "001",
+              "003",
+              "008",
+              "010",
+              "011",
+              "024",
+              "028",
+              "030",
+              "039",
+              "042",
+              "044",
+              "048"
+            ],
+            "n": 628,
+            "accuracy": 0.9665605095541401,
+            "balanced_accuracy": 0.3333333333333333,
+            "macro_f1": 0.3276653171390013,
+            "class_support": {
+              "0": 8,
+              "1": 607,
+              "2": 13
+            },
+            "class_recall": {
+              "0": 0.0,
+              "1": 1.0,
+              "2": 0.0
+            },
+            "confusion_labels": [
+              0,
+              1,
+              2
+            ],
+            "confusion": [
+              [
+                0,
+                8,
+                0
+              ],
+              [
+                0,
+                607,
+                0
+              ],
+              [
+                0,
+                13,
+                0
+              ]
+            ],
+            "test_majority_fraction": 0.9665605095541401
+          },
+          {
+            "method": "crystal_majority",
+            "split": "fold3",
+            "train_materials": [
+              "049",
+              "050",
+              "051",
+              "052",
+              "053",
+              "054",
+              "055",
+              "056",
+              "057",
+              "058",
+              "059",
+              "060",
+              "061",
+              "062",
+              "063",
+              "064",
+              "065",
+              "066"
+            ],
+            "validation_materials": [],
+            "test_materials": [
+              "007",
+              "009",
+              "015",
+              "016",
+              "017",
+              "021",
+              "029",
+              "031",
+              "041",
+              "043",
+              "045",
+              "047"
+            ],
+            "n": 602,
+            "accuracy": 0.973421926910299,
+            "balanced_accuracy": 0.3333333333333333,
+            "macro_f1": 0.3288439955106622,
+            "class_support": {
+              "0": 6,
+              "1": 586,
+              "2": 10
+            },
+            "class_recall": {
+              "0": 0.0,
+              "1": 1.0,
+              "2": 0.0
+            },
+            "confusion_labels": [
+              0,
+              1,
+              2
+            ],
+            "confusion": [
+              [
+                0,
+                6,
+                0
+              ],
+              [
+                0,
+                586,
+                0
+              ],
+              [
+                0,
+                10,
+                0
+              ]
+            ],
+            "test_majority_fraction": 0.973421926910299
+          },
+          {
+            "method": "glass_group_RF_fwhm0.5",
+            "split": "fold0",
+            "train_materials": [
+              "001",
+              "002",
+              "003",
+              "006",
+              "007",
+              "008",
+              "009",
+              "010",
+              "011",
+              "013",
+              "015",
+              "016",
+              "017",
+              "018",
+              "019",
+              "020",
+              "021",
+              "023",
+              "024",
+              "027",
+              "028",
+              "029",
+              "030",
+              "031",
+              "032",
+              "034",
+              "035",
+              "038",
+              "039",
+              "041",
+              "042",
+              "043",
+              "044",
+              "045",
+              "047",
+              "048"
+            ],
+            "validation_materials": [],
+            "test_materials": [
+              "004",
+              "005",
+              "012",
+              "014",
+              "022",
+              "025",
+              "026",
+              "033",
+              "036",
+              "037",
+              "040",
+              "046"
+            ],
+            "n": 628,
+            "accuracy": 0.9936305732484076,
+            "balanced_accuracy": 0.8095238095238094,
+            "macro_f1": 0.8655773420479304,
+            "class_support": {
+              "0": 11,
+              "1": 610,
+              "2": 7
+            },
+            "class_recall": {
+              "0": 1.0,
+              "1": 1.0,
+              "2": 0.42857142857142855
+            },
+            "confusion_labels": [
+              0,
+              1,
+              2
+            ],
+            "confusion": [
+              [
+                11,
+                0,
+                0
+              ],
+              [
+                0,
+                610,
+                0
+              ],
+              [
+                0,
+                4,
+                3
+              ]
+            ],
+            "test_majority_fraction": 0.9713375796178344
+          },
+          {
+            "method": "glass_group_RF_fwhm0.5",
+            "split": "fold1",
+            "train_materials": [
+              "001",
+              "003",
+              "004",
+              "005",
+              "007",
+              "008",
+              "009",
+              "010",
+              "011",
+              "012",
+              "014",
+              "015",
+              "016",
+              "017",
+              "021",
+              "022",
+              "024",
+              "025",
+              "026",
+              "028",
+              "029",
+              "030",
+              "031",
+              "033",
+              "036",
+              "037",
+              "039",
+              "040",
+              "041",
+              "042",
+              "043",
+              "044",
+              "045",
+              "046",
+              "047",
+              "048"
+            ],
+            "validation_materials": [],
+            "test_materials": [
+              "002",
+              "006",
+              "013",
+              "018",
+              "019",
+              "020",
+              "023",
+              "027",
+              "032",
+              "034",
+              "035",
+              "038"
+            ],
+            "n": 682,
+            "accuracy": 0.9912023460410557,
+            "balanced_accuracy": 0.9101025382417213,
+            "macro_f1": 0.9270608545533016,
+            "class_support": {
+              "0": 6,
+              "1": 661,
+              "2": 15
+            },
+            "class_recall": {
+              "0": 1.0,
+              "1": 0.9969742813918305,
+              "2": 0.7333333333333333
+            },
+            "confusion_labels": [
+              0,
+              1,
+              2
+            ],
+            "confusion": [
+              [
+                6,
+                0,
+                0
+              ],
+              [
+                0,
+                659,
+                2
+              ],
+              [
+                0,
+                4,
+                11
+              ]
+            ],
+            "test_majority_fraction": 0.969208211143695
+          },
+          {
+            "method": "glass_group_RF_fwhm0.5",
+            "split": "fold2",
+            "train_materials": [
+              "002",
+              "004",
+              "005",
+              "006",
+              "007",
+              "009",
+              "012",
+              "013",
+              "014",
+              "015",
+              "016",
+              "017",
+              "018",
+              "019",
+              "020",
+              "021",
+              "022",
+              "023",
+              "025",
+              "026",
+              "027",
+              "029",
+              "031",
+              "032",
+              "033",
+              "034",
+              "035",
+              "036",
+              "037",
+              "038",
+              "040",
+              "041",
+              "043",
+              "045",
+              "046",
+              "047"
+            ],
+            "validation_materials": [],
+            "test_materials": [
+              "001",
+              "003",
+              "008",
+              "010",
+              "011",
+              "024",
+              "028",
+              "030",
+              "039",
+              "042",
+              "044",
+              "048"
+            ],
+            "n": 628,
+            "accuracy": 0.9968152866242038,
+            "balanced_accuracy": 0.9487179487179488,
+            "macro_f1": 0.9716739766081871,
+            "class_support": {
+              "0": 8,
+              "1": 607,
+              "2": 13
+            },
+            "class_recall": {
+              "0": 1.0,
+              "1": 1.0,
+              "2": 0.8461538461538461
+            },
+            "confusion_labels": [
+              0,
+              1,
+              2
+            ],
+            "confusion": [
+              [
+                8,
+                0,
+                0
+              ],
+              [
+                0,
+                607,
+                0
+              ],
+              [
+                0,
+                2,
+                11
+              ]
+            ],
+            "test_majority_fraction": 0.9665605095541401
+          },
+          {
+            "method": "glass_group_RF_fwhm0.5",
+            "split": "fold3",
+            "train_materials": [
+              "001",
+              "002",
+              "003",
+              "004",
+              "005",
+              "006",
+              "008",
+              "010",
+              "011",
+              "012",
+              "013",
+              "014",
+              "018",
+              "019",
+              "020",
+              "022",
+              "023",
+              "024",
+              "025",
+              "026",
+              "027",
+              "028",
+              "030",
+              "032",
+              "033",
+              "034",
+              "035",
+              "036",
+              "037",
+              "038",
+              "039",
+              "040",
+              "042",
+              "044",
+              "046",
+              "048"
+            ],
+            "validation_materials": [],
+            "test_materials": [
+              "007",
+              "009",
+              "015",
+              "016",
+              "017",
+              "021",
+              "029",
+              "031",
+              "041",
+              "043",
+              "045",
+              "047"
+            ],
+            "n": 602,
+            "accuracy": 0.9900332225913622,
+            "balanced_accuracy": 0.7333333333333334,
+            "macro_f1": 0.8283675666078542,
+            "class_support": {
+              "0": 6,
+              "1": 586,
+              "2": 10
+            },
+            "class_recall": {
+              "0": 0.5,
+              "1": 1.0,
+              "2": 0.7
+            },
+            "confusion_labels": [
+              0,
+              1,
+              2
+            ],
+            "confusion": [
+              [
+                3,
+                3,
+                0
+              ],
+              [
+                0,
+                586,
+                0
+              ],
+              [
+                0,
+                3,
+                7
+              ]
+            ],
+            "test_majority_fraction": 0.973421926910299
+          },
+          {
+            "method": "glass_group_RF_fwhm1",
+            "split": "fold0",
+            "train_materials": [
+              "001",
+              "002",
+              "003",
+              "006",
+              "007",
+              "008",
+              "009",
+              "010",
+              "011",
+              "013",
+              "015",
+              "016",
+              "017",
+              "018",
+              "019",
+              "020",
+              "021",
+              "023",
+              "024",
+              "027",
+              "028",
+              "029",
+              "030",
+              "031",
+              "032",
+              "034",
+              "035",
+              "038",
+              "039",
+              "041",
+              "042",
+              "043",
+              "044",
+              "045",
+              "047",
+              "048"
+            ],
+            "validation_materials": [],
+            "test_materials": [
+              "004",
+              "005",
+              "012",
+              "014",
+              "022",
+              "025",
+              "026",
+              "033",
+              "036",
+              "037",
+              "040",
+              "046"
+            ],
+            "n": 628,
+            "accuracy": 0.9968152866242038,
+            "balanced_accuracy": 0.9047619047619048,
+            "macro_f1": 0.9438988907074014,
+            "class_support": {
+              "0": 11,
+              "1": 610,
+              "2": 7
+            },
+            "class_recall": {
+              "0": 1.0,
+              "1": 1.0,
+              "2": 0.7142857142857143
+            },
+            "confusion_labels": [
+              0,
+              1,
+              2
+            ],
+            "confusion": [
+              [
+                11,
+                0,
+                0
+              ],
+              [
+                0,
+                610,
+                0
+              ],
+              [
+                0,
+                2,
+                5
+              ]
+            ],
+            "test_majority_fraction": 0.9713375796178344
+          },
+          {
+            "method": "glass_group_RF_fwhm1",
+            "split": "fold1",
+            "train_materials": [
+              "001",
+              "003",
+              "004",
+              "005",
+              "007",
+              "008",
+              "009",
+              "010",
+              "011",
+              "012",
+              "014",
+              "015",
+              "016",
+              "017",
+              "021",
+              "022",
+              "024",
+              "025",
+              "026",
+              "028",
+              "029",
+              "030",
+              "031",
+              "033",
+              "036",
+              "037",
+              "039",
+              "040",
+              "041",
+              "042",
+              "043",
+              "044",
+              "045",
+              "046",
+              "047",
+              "048"
+            ],
+            "validation_materials": [],
+            "test_materials": [
+              "002",
+              "006",
+              "013",
+              "018",
+              "019",
+              "020",
+              "023",
+              "027",
+              "032",
+              "034",
+              "035",
+              "038"
+            ],
+            "n": 682,
+            "accuracy": 0.9882697947214076,
+            "balanced_accuracy": 0.8873760295848041,
+            "macro_f1": 0.9027478060710689,
+            "class_support": {
+              "0": 6,
+              "1": 661,
+              "2": 15
+            },
+            "class_recall": {
+              "0": 1.0,
+              "1": 0.9954614220877458,
+              "2": 0.6666666666666666
+            },
+            "confusion_labels": [
+              0,
+              1,
+              2
+            ],
+            "confusion": [
+              [
+                6,
+                0,
+                0
+              ],
+              [
+                0,
+                658,
+                3
+              ],
+              [
+                0,
+                5,
+                10
+              ]
+            ],
+            "test_majority_fraction": 0.969208211143695
+          },
+          {
+            "method": "glass_group_RF_fwhm1",
+            "split": "fold2",
+            "train_materials": [
+              "002",
+              "004",
+              "005",
+              "006",
+              "007",
+              "009",
+              "012",
+              "013",
+              "014",
+              "015",
+              "016",
+              "017",
+              "018",
+              "019",
+              "020",
+              "021",
+              "022",
+              "023",
+              "025",
+              "026",
+              "027",
+              "029",
+              "031",
+              "032",
+              "033",
+              "034",
+              "035",
+              "036",
+              "037",
+              "038",
+              "040",
+              "041",
+              "043",
+              "045",
+              "046",
+              "047"
+            ],
+            "validation_materials": [],
+            "test_materials": [
+              "001",
+              "003",
+              "008",
+              "010",
+              "011",
+              "024",
+              "028",
+              "030",
+              "039",
+              "042",
+              "044",
+              "048"
+            ],
+            "n": 628,
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0,
+            "macro_f1": 1.0,
+            "class_support": {
+              "0": 8,
+              "1": 607,
+              "2": 13
+            },
+            "class_recall": {
+              "0": 1.0,
+              "1": 1.0,
+              "2": 1.0
+            },
+            "confusion_labels": [
+              0,
+              1,
+              2
+            ],
+            "confusion": [
+              [
+                8,
+                0,
+                0
+              ],
+              [
+                0,
+                607,
+                0
+              ],
+              [
+                0,
+                0,
+                13
+              ]
+            ],
+            "test_majority_fraction": 0.9665605095541401
+          },
+          {
+            "method": "glass_group_RF_fwhm1",
+            "split": "fold3",
+            "train_materials": [
+              "001",
+              "002",
+              "003",
+              "004",
+              "005",
+              "006",
+              "008",
+              "010",
+              "011",
+              "012",
+              "013",
+              "014",
+              "018",
+              "019",
+              "020",
+              "022",
+              "023",
+              "024",
+              "025",
+              "026",
+              "027",
+              "028",
+              "030",
+              "032",
+              "033",
+              "034",
+              "035",
+              "036",
+              "037",
+              "038",
+              "039",
+              "040",
+              "042",
+              "044",
+              "046",
+              "048"
+            ],
+            "validation_materials": [],
+            "test_materials": [
+              "007",
+              "009",
+              "015",
+              "016",
+              "017",
+              "021",
+              "029",
+              "031",
+              "041",
+              "043",
+              "045",
+              "047"
+            ],
+            "n": 602,
+            "accuracy": 0.9900332225913622,
+            "balanced_accuracy": 0.7333333333333334,
+            "macro_f1": 0.8283675666078542,
+            "class_support": {
+              "0": 6,
+              "1": 586,
+              "2": 10
+            },
+            "class_recall": {
+              "0": 0.5,
+              "1": 1.0,
+              "2": 0.7
+            },
+            "confusion_labels": [
+              0,
+              1,
+              2
+            ],
+            "confusion": [
+              [
+                3,
+                3,
+                0
+              ],
+              [
+                0,
+                586,
+                0
+              ],
+              [
+                0,
+                3,
+                7
+              ]
+            ],
+            "test_majority_fraction": 0.973421926910299
+          },
+          {
+            "method": "hybrid_RF_fwhm0.5",
+            "split": "fold0",
+            "train_materials": [
+              "001",
+              "002",
+              "003",
+              "006",
+              "007",
+              "008",
+              "009",
+              "010",
+              "011",
+              "013",
+              "015",
+              "016",
+              "017",
+              "018",
+              "019",
+              "020",
+              "021",
+              "023",
+              "024",
+              "027",
+              "028",
+              "029",
+              "030",
+              "031",
+              "032",
+              "034",
+              "035",
+              "038",
+              "039",
+              "041",
+              "042",
+              "043",
+              "044",
+              "045",
+              "047",
+              "048",
+              "049",
+              "050",
+              "051",
+              "052",
+              "053",
+              "054",
+              "055",
+              "056",
+              "057",
+              "058",
+              "059",
+              "060",
+              "061",
+              "062",
+              "063",
+              "064",
+              "065",
+              "066"
+            ],
+            "validation_materials": [],
+            "test_materials": [
+              "004",
+              "005",
+              "012",
+              "014",
+              "022",
+              "025",
+              "026",
+              "033",
+              "036",
+              "037",
+              "040",
+              "046"
+            ],
+            "n": 628,
+            "accuracy": 0.9936305732484076,
+            "balanced_accuracy": 0.8095238095238094,
+            "macro_f1": 0.8655773420479304,
+            "class_support": {
+              "0": 11,
+              "1": 610,
+              "2": 7
+            },
+            "class_recall": {
+              "0": 1.0,
+              "1": 1.0,
+              "2": 0.42857142857142855
+            },
+            "confusion_labels": [
+              0,
+              1,
+              2
+            ],
+            "confusion": [
+              [
+                11,
+                0,
+                0
+              ],
+              [
+                0,
+                610,
+                0
+              ],
+              [
+                0,
+                4,
+                3
+              ]
+            ],
+            "test_majority_fraction": 0.9713375796178344
+          },
+          {
+            "method": "hybrid_RF_fwhm0.5",
+            "split": "fold1",
+            "train_materials": [
+              "001",
+              "003",
+              "004",
+              "005",
+              "007",
+              "008",
+              "009",
+              "010",
+              "011",
+              "012",
+              "014",
+              "015",
+              "016",
+              "017",
+              "021",
+              "022",
+              "024",
+              "025",
+              "026",
+              "028",
+              "029",
+              "030",
+              "031",
+              "033",
+              "036",
+              "037",
+              "039",
+              "040",
+              "041",
+              "042",
+              "043",
+              "044",
+              "045",
+              "046",
+              "047",
+              "048",
+              "049",
+              "050",
+              "051",
+              "052",
+              "053",
+              "054",
+              "055",
+              "056",
+              "057",
+              "058",
+              "059",
+              "060",
+              "061",
+              "062",
+              "063",
+              "064",
+              "065",
+              "066"
+            ],
+            "validation_materials": [],
+            "test_materials": [
+              "002",
+              "006",
+              "013",
+              "018",
+              "019",
+              "020",
+              "023",
+              "027",
+              "032",
+              "034",
+              "035",
+              "038"
+            ],
+            "n": 682,
+            "accuracy": 0.9912023460410557,
+            "balanced_accuracy": 0.9101025382417213,
+            "macro_f1": 0.9270608545533016,
+            "class_support": {
+              "0": 6,
+              "1": 661,
+              "2": 15
+            },
+            "class_recall": {
+              "0": 1.0,
+              "1": 0.9969742813918305,
+              "2": 0.7333333333333333
+            },
+            "confusion_labels": [
+              0,
+              1,
+              2
+            ],
+            "confusion": [
+              [
+                6,
+                0,
+                0
+              ],
+              [
+                0,
+                659,
+                2
+              ],
+              [
+                0,
+                4,
+                11
+              ]
+            ],
+            "test_majority_fraction": 0.969208211143695
+          },
+          {
+            "method": "hybrid_RF_fwhm0.5",
+            "split": "fold2",
+            "train_materials": [
+              "002",
+              "004",
+              "005",
+              "006",
+              "007",
+              "009",
+              "012",
+              "013",
+              "014",
+              "015",
+              "016",
+              "017",
+              "018",
+              "019",
+              "020",
+              "021",
+              "022",
+              "023",
+              "025",
+              "026",
+              "027",
+              "029",
+              "031",
+              "032",
+              "033",
+              "034",
+              "035",
+              "036",
+              "037",
+              "038",
+              "040",
+              "041",
+              "043",
+              "045",
+              "046",
+              "047",
+              "049",
+              "050",
+              "051",
+              "052",
+              "053",
+              "054",
+              "055",
+              "056",
+              "057",
+              "058",
+              "059",
+              "060",
+              "061",
+              "062",
+              "063",
+              "064",
+              "065",
+              "066"
+            ],
+            "validation_materials": [],
+            "test_materials": [
+              "001",
+              "003",
+              "008",
+              "010",
+              "011",
+              "024",
+              "028",
+              "030",
+              "039",
+              "042",
+              "044",
+              "048"
+            ],
+            "n": 628,
+            "accuracy": 0.9968152866242038,
+            "balanced_accuracy": 0.9487179487179488,
+            "macro_f1": 0.9716739766081871,
+            "class_support": {
+              "0": 8,
+              "1": 607,
+              "2": 13
+            },
+            "class_recall": {
+              "0": 1.0,
+              "1": 1.0,
+              "2": 0.8461538461538461
+            },
+            "confusion_labels": [
+              0,
+              1,
+              2
+            ],
+            "confusion": [
+              [
+                8,
+                0,
+                0
+              ],
+              [
+                0,
+                607,
+                0
+              ],
+              [
+                0,
+                2,
+                11
+              ]
+            ],
+            "test_majority_fraction": 0.9665605095541401
+          },
+          {
+            "method": "hybrid_RF_fwhm0.5",
+            "split": "fold3",
+            "train_materials": [
+              "001",
+              "002",
+              "003",
+              "004",
+              "005",
+              "006",
+              "008",
+              "010",
+              "011",
+              "012",
+              "013",
+              "014",
+              "018",
+              "019",
+              "020",
+              "022",
+              "023",
+              "024",
+              "025",
+              "026",
+              "027",
+              "028",
+              "030",
+              "032",
+              "033",
+              "034",
+              "035",
+              "036",
+              "037",
+              "038",
+              "039",
+              "040",
+              "042",
+              "044",
+              "046",
+              "048",
+              "049",
+              "050",
+              "051",
+              "052",
+              "053",
+              "054",
+              "055",
+              "056",
+              "057",
+              "058",
+              "059",
+              "060",
+              "061",
+              "062",
+              "063",
+              "064",
+              "065",
+              "066"
+            ],
+            "validation_materials": [],
+            "test_materials": [
+              "007",
+              "009",
+              "015",
+              "016",
+              "017",
+              "021",
+              "029",
+              "031",
+              "041",
+              "043",
+              "045",
+              "047"
+            ],
+            "n": 602,
+            "accuracy": 0.9933554817275747,
+            "balanced_accuracy": 0.8666666666666667,
+            "macro_f1": 0.9155328798185941,
+            "class_support": {
+              "0": 6,
+              "1": 586,
+              "2": 10
+            },
+            "class_recall": {
+              "0": 1.0,
+              "1": 1.0,
+              "2": 0.6
+            },
+            "confusion_labels": [
+              0,
+              1,
+              2
+            ],
+            "confusion": [
+              [
+                6,
+                0,
+                0
+              ],
+              [
+                0,
+                586,
+                0
+              ],
+              [
+                0,
+                4,
+                6
+              ]
+            ],
+            "test_majority_fraction": 0.973421926910299
+          },
+          {
+            "method": "hybrid_RF_fwhm1",
+            "split": "fold0",
+            "train_materials": [
+              "001",
+              "002",
+              "003",
+              "006",
+              "007",
+              "008",
+              "009",
+              "010",
+              "011",
+              "013",
+              "015",
+              "016",
+              "017",
+              "018",
+              "019",
+              "020",
+              "021",
+              "023",
+              "024",
+              "027",
+              "028",
+              "029",
+              "030",
+              "031",
+              "032",
+              "034",
+              "035",
+              "038",
+              "039",
+              "041",
+              "042",
+              "043",
+              "044",
+              "045",
+              "047",
+              "048",
+              "049",
+              "050",
+              "051",
+              "052",
+              "053",
+              "054",
+              "055",
+              "056",
+              "057",
+              "058",
+              "059",
+              "060",
+              "061",
+              "062",
+              "063",
+              "064",
+              "065",
+              "066"
+            ],
+            "validation_materials": [],
+            "test_materials": [
+              "004",
+              "005",
+              "012",
+              "014",
+              "022",
+              "025",
+              "026",
+              "033",
+              "036",
+              "037",
+              "040",
+              "046"
+            ],
+            "n": 628,
+            "accuracy": 0.9952229299363057,
+            "balanced_accuracy": 0.8571428571428571,
+            "macro_f1": 0.9082732476027653,
+            "class_support": {
+              "0": 11,
+              "1": 610,
+              "2": 7
+            },
+            "class_recall": {
+              "0": 1.0,
+              "1": 1.0,
+              "2": 0.5714285714285714
+            },
+            "confusion_labels": [
+              0,
+              1,
+              2
+            ],
+            "confusion": [
+              [
+                11,
+                0,
+                0
+              ],
+              [
+                0,
+                610,
+                0
+              ],
+              [
+                0,
+                3,
+                4
+              ]
+            ],
+            "test_majority_fraction": 0.9713375796178344
+          },
+          {
+            "method": "hybrid_RF_fwhm1",
+            "split": "fold1",
+            "train_materials": [
+              "001",
+              "003",
+              "004",
+              "005",
+              "007",
+              "008",
+              "009",
+              "010",
+              "011",
+              "012",
+              "014",
+              "015",
+              "016",
+              "017",
+              "021",
+              "022",
+              "024",
+              "025",
+              "026",
+              "028",
+              "029",
+              "030",
+              "031",
+              "033",
+              "036",
+              "037",
+              "039",
+              "040",
+              "041",
+              "042",
+              "043",
+              "044",
+              "045",
+              "046",
+              "047",
+              "048",
+              "049",
+              "050",
+              "051",
+              "052",
+              "053",
+              "054",
+              "055",
+              "056",
+              "057",
+              "058",
+              "059",
+              "060",
+              "061",
+              "062",
+              "063",
+              "064",
+              "065",
+              "066"
+            ],
+            "validation_materials": [],
+            "test_materials": [
+              "002",
+              "006",
+              "013",
+              "018",
+              "019",
+              "020",
+              "023",
+              "027",
+              "032",
+              "034",
+              "035",
+              "038"
+            ],
+            "n": 682,
+            "accuracy": 0.9912023460410557,
+            "balanced_accuracy": 0.9318204740292485,
+            "macro_f1": 0.9318204740292485,
+            "class_support": {
+              "0": 6,
+              "1": 661,
+              "2": 15
+            },
+            "class_recall": {
+              "0": 1.0,
+              "1": 0.9954614220877458,
+              "2": 0.8
+            },
+            "confusion_labels": [
+              0,
+              1,
+              2
+            ],
+            "confusion": [
+              [
+                6,
+                0,
+                0
+              ],
+              [
+                0,
+                658,
+                3
+              ],
+              [
+                0,
+                3,
+                12
+              ]
+            ],
+            "test_majority_fraction": 0.969208211143695
+          },
+          {
+            "method": "hybrid_RF_fwhm1",
+            "split": "fold2",
+            "train_materials": [
+              "002",
+              "004",
+              "005",
+              "006",
+              "007",
+              "009",
+              "012",
+              "013",
+              "014",
+              "015",
+              "016",
+              "017",
+              "018",
+              "019",
+              "020",
+              "021",
+              "022",
+              "023",
+              "025",
+              "026",
+              "027",
+              "029",
+              "031",
+              "032",
+              "033",
+              "034",
+              "035",
+              "036",
+              "037",
+              "038",
+              "040",
+              "041",
+              "043",
+              "045",
+              "046",
+              "047",
+              "049",
+              "050",
+              "051",
+              "052",
+              "053",
+              "054",
+              "055",
+              "056",
+              "057",
+              "058",
+              "059",
+              "060",
+              "061",
+              "062",
+              "063",
+              "064",
+              "065",
+              "066"
+            ],
+            "validation_materials": [],
+            "test_materials": [
+              "001",
+              "003",
+              "008",
+              "010",
+              "011",
+              "024",
+              "028",
+              "030",
+              "039",
+              "042",
+              "044",
+              "048"
+            ],
+            "n": 628,
+            "accuracy": 0.9984076433121019,
+            "balanced_accuracy": 0.9743589743589745,
+            "macro_f1": 0.9863923182441701,
+            "class_support": {
+              "0": 8,
+              "1": 607,
+              "2": 13
+            },
+            "class_recall": {
+              "0": 1.0,
+              "1": 1.0,
+              "2": 0.9230769230769231
+            },
+            "confusion_labels": [
+              0,
+              1,
+              2
+            ],
+            "confusion": [
+              [
+                8,
+                0,
+                0
+              ],
+              [
+                0,
+                607,
+                0
+              ],
+              [
+                0,
+                1,
+                12
+              ]
+            ],
+            "test_majority_fraction": 0.9665605095541401
+          },
+          {
+            "method": "hybrid_RF_fwhm1",
+            "split": "fold3",
+            "train_materials": [
+              "001",
+              "002",
+              "003",
+              "004",
+              "005",
+              "006",
+              "008",
+              "010",
+              "011",
+              "012",
+              "013",
+              "014",
+              "018",
+              "019",
+              "020",
+              "022",
+              "023",
+              "024",
+              "025",
+              "026",
+              "027",
+              "028",
+              "030",
+              "032",
+              "033",
+              "034",
+              "035",
+              "036",
+              "037",
+              "038",
+              "039",
+              "040",
+              "042",
+              "044",
+              "046",
+              "048",
+              "049",
+              "050",
+              "051",
+              "052",
+              "053",
+              "054",
+              "055",
+              "056",
+              "057",
+              "058",
+              "059",
+              "060",
+              "061",
+              "062",
+              "063",
+              "064",
+              "065",
+              "066"
+            ],
+            "validation_materials": [],
+            "test_materials": [
+              "007",
+              "009",
+              "015",
+              "016",
+              "017",
+              "021",
+              "029",
+              "031",
+              "041",
+              "043",
+              "045",
+              "047"
+            ],
+            "n": 602,
+            "accuracy": 0.9950166112956811,
+            "balanced_accuracy": 0.9,
+            "macro_f1": 0.940325406758448,
+            "class_support": {
+              "0": 6,
+              "1": 586,
+              "2": 10
+            },
+            "class_recall": {
+              "0": 1.0,
+              "1": 1.0,
+              "2": 0.7
+            },
+            "confusion_labels": [
+              0,
+              1,
+              2
+            ],
+            "confusion": [
+              [
+                6,
+                0,
+                0
+              ],
+              [
+                0,
+                586,
+                0
+              ],
+              [
+                0,
+                3,
+                7
+              ]
+            ],
+            "test_majority_fraction": 0.973421926910299
+          }
+        ],
+        "aggregated_by_method": [
+          {
+            "method": "crystal_RF_fwhm0.5",
+            "unique_test_sites": 2540,
+            "unique_test_materials": 48,
+            "all_48_glasses_evaluated": true,
+            "repeated_test_occurrences": 0,
+            "n": 2540,
+            "accuracy": 0.8448818897637795,
+            "balanced_accuracy": 0.6787936003661811,
+            "macro_f1": 0.501186372299813,
+            "class_support": {
+              "0": 31,
+              "1": 2464,
+              "2": 45
+            },
+            "class_recall": {
+              "0": 0.8709677419354839,
+              "1": 0.854301948051948,
+              "2": 0.3111111111111111
+            },
+            "confusion_labels": [
+              0,
+              1,
+              2
+            ],
+            "confusion": [
+              [
+                27,
+                4,
+                0
+              ],
+              [
+                357,
+                2105,
+                2
+              ],
+              [
+                0,
+                31,
+                14
+              ]
+            ],
+            "test_majority_fraction": 0.9700787401574803
+          },
+          {
+            "method": "crystal_RF_fwhm1",
+            "unique_test_sites": 2540,
+            "unique_test_materials": 48,
+            "all_48_glasses_evaluated": true,
+            "repeated_test_occurrences": 0,
+            "n": 2540,
+            "accuracy": 0.9366141732283465,
+            "balanced_accuracy": 0.7282036959456315,
+            "macro_f1": 0.5865219684181797,
+            "class_support": {
+              "0": 31,
+              "1": 2464,
+              "2": 45
+            },
+            "class_recall": {
+              "0": 0.9032258064516129,
+              "1": 0.948051948051948,
+              "2": 0.3333333333333333
+            },
+            "confusion_labels": [
+              0,
+              1,
+              2
+            ],
+            "confusion": [
+              [
+                28,
+                3,
+                0
+              ],
+              [
+                127,
+                2336,
+                1
+              ],
+              [
+                0,
+                30,
+                15
+              ]
+            ],
+            "test_majority_fraction": 0.9700787401574803
+          },
+          {
+            "method": "crystal_majority",
+            "unique_test_sites": 2540,
+            "unique_test_materials": 48,
+            "all_48_glasses_evaluated": true,
+            "repeated_test_occurrences": 0,
+            "n": 2540,
+            "accuracy": 0.9700787401574803,
+            "balanced_accuracy": 0.3333333333333333,
+            "macro_f1": 0.3282707167599254,
+            "class_support": {
+              "0": 31,
+              "1": 2464,
+              "2": 45
+            },
+            "class_recall": {
+              "0": 0.0,
+              "1": 1.0,
+              "2": 0.0
+            },
+            "confusion_labels": [
+              0,
+              1,
+              2
+            ],
+            "confusion": [
+              [
+                0,
+                31,
+                0
+              ],
+              [
+                0,
+                2464,
+                0
+              ],
+              [
+                0,
+                45,
+                0
+              ]
+            ],
+            "test_majority_fraction": 0.9700787401574803
+          },
+          {
+            "method": "glass_group_RF_fwhm0.5",
+            "unique_test_sites": 2540,
+            "unique_test_materials": 48,
+            "all_48_glasses_evaluated": true,
+            "repeated_test_occurrences": 0,
+            "n": 2540,
+            "accuracy": 0.9929133858267717,
+            "balanced_accuracy": 0.8711750764170119,
+            "macro_f1": 0.9185456248500629,
+            "class_support": {
+              "0": 31,
+              "1": 2464,
+              "2": 45
+            },
+            "class_recall": {
+              "0": 0.9032258064516129,
+              "1": 0.9991883116883117,
+              "2": 0.7111111111111111
+            },
+            "confusion_labels": [
+              0,
+              1,
+              2
+            ],
+            "confusion": [
+              [
+                28,
+                3,
+                0
+              ],
+              [
+                0,
+                2462,
+                2
+              ],
+              [
+                0,
+                13,
+                32
+              ]
+            ],
+            "test_majority_fraction": 0.9700787401574803
+          },
+          {
+            "method": "glass_group_RF_fwhm1",
+            "unique_test_sites": 2540,
+            "unique_test_materials": 48,
+            "all_48_glasses_evaluated": true,
+            "repeated_test_occurrences": 0,
+            "n": 2540,
+            "accuracy": 0.9937007874015747,
+            "balanced_accuracy": 0.8932620172539528,
+            "macro_f1": 0.9297619527129944,
+            "class_support": {
+              "0": 31,
+              "1": 2464,
+              "2": 45
+            },
+            "class_recall": {
+              "0": 0.9032258064516129,
+              "1": 0.9987824675324676,
+              "2": 0.7777777777777778
+            },
+            "confusion_labels": [
+              0,
+              1,
+              2
+            ],
+            "confusion": [
+              [
+                28,
+                3,
+                0
+              ],
+              [
+                0,
+                2461,
+                3
+              ],
+              [
+                0,
+                10,
+                35
+              ]
+            ],
+            "test_majority_fraction": 0.9700787401574803
+          },
+          {
+            "method": "hybrid_RF_fwhm0.5",
+            "unique_test_sites": 2540,
+            "unique_test_materials": 48,
+            "all_48_glasses_evaluated": true,
+            "repeated_test_occurrences": 0,
+            "n": 2540,
+            "accuracy": 0.9937007874015747,
+            "balanced_accuracy": 0.8960257335257337,
+            "macro_f1": 0.9305443094916779,
+            "class_support": {
+              "0": 31,
+              "1": 2464,
+              "2": 45
+            },
+            "class_recall": {
+              "0": 1.0,
+              "1": 0.9991883116883117,
+              "2": 0.6888888888888889
+            },
+            "confusion_labels": [
+              0,
+              1,
+              2
+            ],
+            "confusion": [
+              [
+                31,
+                0,
+                0
+              ],
+              [
+                0,
+                2462,
+                2
+              ],
+              [
+                0,
+                14,
+                31
+              ]
+            ],
+            "test_majority_fraction": 0.9700787401574803
+          },
+          {
+            "method": "hybrid_RF_fwhm1",
+            "unique_test_sites": 2540,
+            "unique_test_materials": 48,
+            "all_48_glasses_evaluated": true,
+            "repeated_test_occurrences": 0,
+            "n": 2540,
+            "accuracy": 0.9948818897637796,
+            "balanced_accuracy": 0.9255200817700818,
+            "macro_f1": 0.9469130829294891,
+            "class_support": {
+              "0": 31,
+              "1": 2464,
+              "2": 45
+            },
+            "class_recall": {
+              "0": 1.0,
+              "1": 0.9987824675324676,
+              "2": 0.7777777777777778
+            },
+            "confusion_labels": [
+              0,
+              1,
+              2
+            ],
+            "confusion": [
+              [
+                31,
+                0,
+                0
+              ],
+              [
+                0,
+                2461,
+                3
+              ],
+              [
+                0,
+                10,
+                35
+              ]
+            ],
+            "test_majority_fraction": 0.9700787401574803
+          }
+        ]
+      }
+    }
+  },
+  "raw_projection": {
+    "site_arrays_bitwise_equal": 2681,
+    "unmodified_calculation_texts": 13669,
+    "heldback_arrays_bitwise_equal": 66,
+    "material_index_byte_equal": true,
+    "source_manifest_hashes_checked": 16350,
+    "input_asset_hashes_checked": 8
+  },
+  "independent_source_truth": {
+    "sites": 2681,
+    "p_coordination_counts": {
+      "0": 42,
+      "1": 2589,
+      "2": 50
+    },
+    "correction_range_eV": [
+      5.5713985012,
+      10.059263326999965
+    ],
+    "geometry_implementation": "Verifier uses custom POSCAR parser and reciprocal-vector-bounded periodic image enumeration; no ASE or candidate imports",
+    "crosscheck": "Audit independently checks all sites against ASE minimum-image distances and neighbor counts",
+    "maximum_geometry_distance_disagreement_A": 7.105427357601002e-15
+  },
+  "accepted_count": 9,
+  "rejected_count": 27
+}

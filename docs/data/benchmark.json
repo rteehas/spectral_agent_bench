@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "datasetId": "spectral-agent-v1-20260925-szymanski-discovery-v4",
+  "datasetId": "spectral-agent-v2026-09-26-guo-research-v1",
   "title": "Spectral Agent Bench",
   "demo": false,
   "papers": [
@@ -2281,6 +2281,500 @@
                 {
                   "title": "Discovery validity",
                   "description": "Record target exposure separately. A paper-assisted or known-target workflow cannot demonstrate independent discovery. Evaluation metadata must remain outside the solver context."
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "guo-2023-sulfur-xas",
+      "title": "Simulated sulfur K-edge X-ray absorption spectroscopy database of lithium thiophosphate solid electrolytes",
+      "authors": "Haoyue Guo, Matthew R. Carbone et al. (2023)",
+      "doi": "10.1038/s41597-023-02262-4",
+      "category": "Sulfur K-edge XANES / solid electrolytes",
+      "facility": "VASP XCH / Materials Cloud",
+      "pdf": "https://www.nature.com/articles/s41597-023-02262-4.pdf",
+      "dataUrl": "https://doi.org/10.24435/materialscloud:6z-qm",
+      "codeUrl": "https://github.com/atomisticnet/xas-tools/releases/tag/v0.1.0",
+      "scenarios": [
+        {
+          "id": "GUO23-Q1",
+          "kind": "Subquestion",
+          "executionStatus": "executed_example",
+          "title": "When does treating inequivalent sulfur sites as interchangeable distort a material’s XANES fingerprint?",
+          "inputs": [
+            {
+              "name": "spectra_01.npz",
+              "url": "data/guo-2023-sulfur-xas/inputs/spectra_01.npz",
+              "description": "Native site-resolved numeric spectra; material/site keys, energy and three diagonal components."
+            },
+            {
+              "name": "spectra_02.npz",
+              "url": "data/guo-2023-sulfur-xas/inputs/spectra_02.npz",
+              "description": "Native site-resolved numeric spectra; material/site keys, energy and three diagonal components."
+            },
+            {
+              "name": "spectra_03.npz",
+              "url": "data/guo-2023-sulfur-xas/inputs/spectra_03.npz",
+              "description": "Native site-resolved numeric spectra; material/site keys, energy and three diagonal components."
+            },
+            {
+              "name": "spectra_04.npz",
+              "url": "data/guo-2023-sulfur-xas/inputs/spectra_04.npz",
+              "description": "Native site-resolved numeric spectra; material/site keys, energy and three diagonal components."
+            },
+            {
+              "name": "spectra_05.npz",
+              "url": "data/guo-2023-sulfur-xas/inputs/spectra_05.npz",
+              "description": "Native site-resolved numeric spectra; material/site keys, energy and three diagonal components."
+            },
+            {
+              "name": "spectra_06.npz",
+              "url": "data/guo-2023-sulfur-xas/inputs/spectra_06.npz",
+              "description": "Native site-resolved numeric spectra; material/site keys, energy and three diagonal components."
+            },
+            {
+              "name": "calculations.json.gz",
+              "url": "data/guo-2023-sulfur-xas/inputs/calculations.json.gz",
+              "description": "Raw POSCAR, OSZICAR, INCAR, KPOINTS and saved Fermi-energy text, keyed by material and calculation."
+            },
+            {
+              "name": "materials.csv",
+              "url": "data/guo-2023-sulfur-xas/inputs/materials.csv",
+              "description": "Released material identities, compositions and structure origins."
+            }
+          ],
+          "prompt": {
+            "background": "These are computed sulfur K-edge spectra of lithium thiophosphates. Each NPZ key is material/site; its native columns are energy in eV and the xx, yy, zz dielectric components. calculations.json.gz contains unchanged VASP input/output text for neutral and core-hole calculations. The first atom in each core-hole POSCAR is the absorber; the site-name suffix gives its relative multiplicity. materials.csv describes each structure. The energy reference for an excitation is the core-hole minus neutral total energy; the saved spectral axis includes the core-hole Fermi-energy offset. A common offset to experimental photon energies is unknown.",
+            "instruction": "Across the supplied structures, determine how much the material-level sulfur K-edge fingerprint depends on differences in site excitation energies and populations, and whether finite energy resolution changes that assessment. Identify where simplified site treatment is least reliable. Return report.md with your answer, quantitative evidence, methodological justification and limitations, supporting figures, and runnable code. Include the unbroadened material responses as bulk.npz (keys m001 through m066, each with energy and intensity columns), and numerical evidence for the comparisons."
+          },
+          "groundTruthReasoning": "Python loads all native site arrays and calculation text. The worked candidate uses the last OSZICAR E0 values and stored Fermi energies to align excitation energies, then SciPy cubic interpolation and multiplicity ratios to form an orientationally averaged response for each material. It separately replaces site corrections by their material mean and replaces multiplicity ratios by equal weights. Gaussian resolution trials quantify changes of normalized shape and main peak. bulk.npz, ablations.npz and effects.csv preserve the evidence; effects.png and overlays.png show its structure dependence. Independently, the evaluator compares against author-released raw material averages after permitted intensity scaling and one common energy zero. The supplied code tag omits the Fermi correction; independent reconstruction of all66 released outputs establishes the convention, rather than trusting that parser. Broadened/shifted author outputs have additional undocumented normalization/calibration and are not exact targets.",
+          "verification": {
+            "description": "Verify raw-source consistency and numerical integrity, then review the scientific design, executable evidence and scope of conclusions. Numerical success alone does not establish a scientific pass. Negative scientific results are valid. Compare all66 reconstructed native material responses with held-back released arrays, allowing a single shared energy origin and independent positive intensity scales.",
+            "data": [
+              {
+                "name": "provenance.json",
+                "url": "data/guo-2023-sulfur-xas/provenance.json",
+                "description": "Release identity, licenses, hashes and lossless packaging manifest."
+              },
+              {
+                "name": "source_map.json",
+                "url": "data/guo-2023-sulfur-xas/verification/source_map.json",
+                "description": "Source grounding and available/missing truth."
+              },
+              {
+                "name": "Scientific rubric",
+                "url": "data/guo-2023-sulfur-xas/verification/scientific_review_rubric.md",
+                "description": "Required scientific assessment, separate from numerical integrity."
+              },
+              {
+                "name": "Released raw material spectra",
+                "url": "data/guo-2023-sulfur-xas/verification/released_material_spectra.npz",
+                "description": "Held-back author outputs for66 materials; independent numerical truth."
+              },
+              {
+                "name": "Q1 bulk.npz",
+                "url": "data/guo-2023-sulfur-xas/verification/Q1/bulk.npz",
+                "description": "Executed illustrative evidence; alternative defensible analyses need not match these choices."
+              },
+              {
+                "name": "Q1 effects.csv",
+                "url": "data/guo-2023-sulfur-xas/verification/Q1/effects.csv",
+                "description": "Executed illustrative evidence; alternative defensible analyses need not match these choices."
+              },
+              {
+                "name": "Q1 ablations.npz",
+                "url": "data/guo-2023-sulfur-xas/verification/Q1/ablations.npz",
+                "description": "Executed illustrative evidence; alternative defensible analyses need not match these choices."
+              },
+              {
+                "name": "Q1 summary.json",
+                "url": "data/guo-2023-sulfur-xas/verification/Q1/summary.json",
+                "description": "Executed illustrative evidence; alternative defensible analyses need not match these choices."
+              },
+              {
+                "name": "Q1 report.md",
+                "url": "data/guo-2023-sulfur-xas/verification/Q1/report.md",
+                "description": "Executed illustrative evidence; alternative defensible analyses need not match these choices."
+              },
+              {
+                "name": "question_quality_review.json",
+                "url": "data/guo-2023-sulfur-xas/verification/question_quality_review.json",
+                "description": "Independent review/audit record."
+              },
+              {
+                "name": "workflow_execution_review.json",
+                "url": "data/guo-2023-sulfur-xas/verification/workflow_execution_review.json",
+                "description": "Independent review/audit record."
+              },
+              {
+                "name": "verification_audit.json",
+                "url": "data/guo-2023-sulfur-xas/verification/verification_audit.json",
+                "description": "Independent review/audit record."
+              },
+              {
+                "name": "scientific_review.json",
+                "url": "data/guo-2023-sulfur-xas/verification/scientific_review.json",
+                "description": "Independent review/audit record."
+              }
+            ],
+            "figures": [
+              {
+                "image": "data/guo-2023-sulfur-xas/verification/Q1/effects.png",
+                "label": "Q1 effects.png",
+                "caption": "Diagnostic generated by the executed worked example; not a paper figure."
+              },
+              {
+                "image": "data/guo-2023-sulfur-xas/verification/Q1/overlays.png",
+                "label": "Q1 overlays.png",
+                "caption": "Diagnostic generated by the executed worked example; not a paper figure."
+              }
+            ],
+            "methods": [
+              {
+                "name": "Worked tool calls",
+                "url": "data/guo-2023-sulfur-xas/workflows/Q1.json",
+                "description": "Executable commands and workflow choices; excluded from solver inputs."
+              },
+              {
+                "name": "candidate.py",
+                "url": "data/guo-2023-sulfur-xas/workflows/candidate.py",
+                "description": "Runnable illustrative research design."
+              },
+              {
+                "name": "verify.py",
+                "url": "data/guo-2023-sulfur-xas/workflows/verify.py",
+                "description": "Independent integrity and numerical verification; scientific review remains required."
+              }
+            ],
+            "thresholds": {
+              "origin": "benchmark-defined",
+              "generatedBy": "Benchmark authors with independent agent audit",
+              "provenance": "Tolerances and review criteria are benchmark engineering choices, not published scientific performance thresholds. No regression sign or classification score is required.",
+              "notes": [
+                {
+                  "title": "Numerical checks",
+                  "description": "Native response comparison allows interpolation differences; geometry and energy quantities are checked against original inputs. See checker and mutation audit for exact tolerances and their limits."
+                },
+                {
+                  "title": "Scientific acceptance",
+                  "description": "The rubric requires valid design, sensitivity, evidence-supported conclusions and reproducibility. A constant predictor or shallow correlation may pass arithmetic checks and fail scientific review."
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "GUO23-Q2",
+          "kind": "Subquestion",
+          "executionStatus": "executed_example",
+          "title": "Does greater local lithium coordination reliably predict a sulfur K-edge red shift?",
+          "inputs": [
+            {
+              "name": "spectra_01.npz",
+              "url": "data/guo-2023-sulfur-xas/inputs/spectra_01.npz",
+              "description": "Native site-resolved numeric spectra; material/site keys, energy and three diagonal components."
+            },
+            {
+              "name": "spectra_02.npz",
+              "url": "data/guo-2023-sulfur-xas/inputs/spectra_02.npz",
+              "description": "Native site-resolved numeric spectra; material/site keys, energy and three diagonal components."
+            },
+            {
+              "name": "spectra_03.npz",
+              "url": "data/guo-2023-sulfur-xas/inputs/spectra_03.npz",
+              "description": "Native site-resolved numeric spectra; material/site keys, energy and three diagonal components."
+            },
+            {
+              "name": "spectra_04.npz",
+              "url": "data/guo-2023-sulfur-xas/inputs/spectra_04.npz",
+              "description": "Native site-resolved numeric spectra; material/site keys, energy and three diagonal components."
+            },
+            {
+              "name": "spectra_05.npz",
+              "url": "data/guo-2023-sulfur-xas/inputs/spectra_05.npz",
+              "description": "Native site-resolved numeric spectra; material/site keys, energy and three diagonal components."
+            },
+            {
+              "name": "spectra_06.npz",
+              "url": "data/guo-2023-sulfur-xas/inputs/spectra_06.npz",
+              "description": "Native site-resolved numeric spectra; material/site keys, energy and three diagonal components."
+            },
+            {
+              "name": "calculations.json.gz",
+              "url": "data/guo-2023-sulfur-xas/inputs/calculations.json.gz",
+              "description": "Raw POSCAR, OSZICAR, INCAR, KPOINTS and saved Fermi-energy text, keyed by material and calculation."
+            },
+            {
+              "name": "materials.csv",
+              "url": "data/guo-2023-sulfur-xas/inputs/materials.csv",
+              "description": "Released material identities, compositions and structure origins."
+            }
+          ],
+          "prompt": {
+            "background": "These are computed sulfur K-edge spectra of lithium thiophosphates. Each NPZ key is material/site; its native columns are energy in eV and the xx, yy, zz dielectric components. calculations.json.gz contains unchanged VASP input/output text for neutral and core-hole calculations. The first atom in each core-hole POSCAR is the absorber; the site-name suffix gives its relative multiplicity. materials.csv describes each structure. The energy reference for an excitation is the core-hole minus neutral total energy; the saved spectral axis includes the core-hole Fermi-energy offset. A common offset to experimental photon energies is unknown.",
+            "instruction": "Determine whether increasing lithium coordination around sulfur predicts a red shift across these structures once phosphorus bonding and material composition are taken into account. Establish how robust the relationship is to the definitions of local coordination and spectral shift, and what the data support about its physical interpretation. Return report.md with your answer, quantitative evidence, methodological justification and limitations, supporting figures, and runnable code. Include sites.csv, identifying each observation by material and site, with the structural and spectral quantities used; define their units and meaning in the report."
+          },
+          "groundTruthReasoning": "ASE reads each core-hole POSCAR and obtains periodic neighbor distances about its first sulfur. NumPy/SciPy derive several near-edge shift observables on aligned spectra. The candidate compares equal-material-weighted regressions with and without material fixed effects, controlling P coordination, and changes the Li cutoff and spectral observable. A material-block bootstrap estimates conditional uncertainty. sites.csv contains2681 observations, associations.csv contains18 specifications, and the report distinguishes association from an electronic shielding mechanism. Independent geometry and energy checks verify observations. The evaluator then inspects confounding controls, uncertainty and sensitivity rather than requiring a particular slope or sign.",
+          "verification": {
+            "description": "Verify raw-source consistency and numerical integrity, then review the scientific design, executable evidence and scope of conclusions. Numerical success alone does not establish a scientific pass. Negative scientific results are valid. Audit claimed observations against raw geometry/energies, and examine composition control and definition sensitivity.",
+            "data": [
+              {
+                "name": "provenance.json",
+                "url": "data/guo-2023-sulfur-xas/provenance.json",
+                "description": "Release identity, licenses, hashes and lossless packaging manifest."
+              },
+              {
+                "name": "source_map.json",
+                "url": "data/guo-2023-sulfur-xas/verification/source_map.json",
+                "description": "Source grounding and available/missing truth."
+              },
+              {
+                "name": "Scientific rubric",
+                "url": "data/guo-2023-sulfur-xas/verification/scientific_review_rubric.md",
+                "description": "Required scientific assessment, separate from numerical integrity."
+              },
+              {
+                "name": "Q2 sites.csv",
+                "url": "data/guo-2023-sulfur-xas/verification/Q2/sites.csv",
+                "description": "Executed illustrative evidence; alternative defensible analyses need not match these choices."
+              },
+              {
+                "name": "Q2 associations.csv",
+                "url": "data/guo-2023-sulfur-xas/verification/Q2/associations.csv",
+                "description": "Executed illustrative evidence; alternative defensible analyses need not match these choices."
+              },
+              {
+                "name": "Q2 definitions.json",
+                "url": "data/guo-2023-sulfur-xas/verification/Q2/definitions.json",
+                "description": "Executed illustrative evidence; alternative defensible analyses need not match these choices."
+              },
+              {
+                "name": "Q2 report.md",
+                "url": "data/guo-2023-sulfur-xas/verification/Q2/report.md",
+                "description": "Executed illustrative evidence; alternative defensible analyses need not match these choices."
+              },
+              {
+                "name": "question_quality_review.json",
+                "url": "data/guo-2023-sulfur-xas/verification/question_quality_review.json",
+                "description": "Independent review/audit record."
+              },
+              {
+                "name": "workflow_execution_review.json",
+                "url": "data/guo-2023-sulfur-xas/verification/workflow_execution_review.json",
+                "description": "Independent review/audit record."
+              },
+              {
+                "name": "verification_audit.json",
+                "url": "data/guo-2023-sulfur-xas/verification/verification_audit.json",
+                "description": "Independent review/audit record."
+              },
+              {
+                "name": "scientific_review.json",
+                "url": "data/guo-2023-sulfur-xas/verification/scientific_review.json",
+                "description": "Independent review/audit record."
+              }
+            ],
+            "figures": [
+              {
+                "image": "data/guo-2023-sulfur-xas/verification/Q2/associations.png",
+                "label": "Q2 associations.png",
+                "caption": "Diagnostic generated by the executed worked example; not a paper figure."
+              }
+            ],
+            "methods": [
+              {
+                "name": "Worked tool calls",
+                "url": "data/guo-2023-sulfur-xas/workflows/Q2.json",
+                "description": "Executable commands and workflow choices; excluded from solver inputs."
+              },
+              {
+                "name": "candidate.py",
+                "url": "data/guo-2023-sulfur-xas/workflows/candidate.py",
+                "description": "Runnable illustrative research design."
+              },
+              {
+                "name": "verify.py",
+                "url": "data/guo-2023-sulfur-xas/workflows/verify.py",
+                "description": "Independent integrity and numerical verification; scientific review remains required."
+              }
+            ],
+            "thresholds": {
+              "origin": "benchmark-defined",
+              "generatedBy": "Benchmark authors with independent agent audit",
+              "provenance": "Tolerances and review criteria are benchmark engineering choices, not published scientific performance thresholds. No regression sign or classification score is required.",
+              "notes": [
+                {
+                  "title": "Numerical checks",
+                  "description": "Native response comparison allows interpolation differences; geometry and energy quantities are checked against original inputs. See checker and mutation audit for exact tolerances and their limits."
+                },
+                {
+                  "title": "Scientific acceptance",
+                  "description": "The rubric requires valid design, sensitivity, evidence-supported conclusions and reproducibility. A constant predictor or shallow correlation may pass arithmetic checks and fail scientific review."
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "GUO23-Q3",
+          "kind": "Subquestion",
+          "executionStatus": "executed_example",
+          "title": "Can sulfur K-edge spectra identify phosphorus coordination in previously unseen glassy structures?",
+          "inputs": [
+            {
+              "name": "spectra_01.npz",
+              "url": "data/guo-2023-sulfur-xas/inputs/spectra_01.npz",
+              "description": "Native site-resolved numeric spectra; material/site keys, energy and three diagonal components."
+            },
+            {
+              "name": "spectra_02.npz",
+              "url": "data/guo-2023-sulfur-xas/inputs/spectra_02.npz",
+              "description": "Native site-resolved numeric spectra; material/site keys, energy and three diagonal components."
+            },
+            {
+              "name": "spectra_03.npz",
+              "url": "data/guo-2023-sulfur-xas/inputs/spectra_03.npz",
+              "description": "Native site-resolved numeric spectra; material/site keys, energy and three diagonal components."
+            },
+            {
+              "name": "spectra_04.npz",
+              "url": "data/guo-2023-sulfur-xas/inputs/spectra_04.npz",
+              "description": "Native site-resolved numeric spectra; material/site keys, energy and three diagonal components."
+            },
+            {
+              "name": "spectra_05.npz",
+              "url": "data/guo-2023-sulfur-xas/inputs/spectra_05.npz",
+              "description": "Native site-resolved numeric spectra; material/site keys, energy and three diagonal components."
+            },
+            {
+              "name": "spectra_06.npz",
+              "url": "data/guo-2023-sulfur-xas/inputs/spectra_06.npz",
+              "description": "Native site-resolved numeric spectra; material/site keys, energy and three diagonal components."
+            },
+            {
+              "name": "calculations.json.gz",
+              "url": "data/guo-2023-sulfur-xas/inputs/calculations.json.gz",
+              "description": "Raw POSCAR, OSZICAR, INCAR, KPOINTS and saved Fermi-energy text, keyed by material and calculation."
+            },
+            {
+              "name": "materials.csv",
+              "url": "data/guo-2023-sulfur-xas/inputs/materials.csv",
+              "description": "Released material identities, compositions and structure origins."
+            }
+          ],
+          "prompt": {
+            "background": "These are computed sulfur K-edge spectra of lithium thiophosphates. Each NPZ key is material/site; its native columns are energy in eV and the xx, yy, zz dielectric components. calculations.json.gz contains unchanged VASP input/output text for neutral and core-hole calculations. The first atom in each core-hole POSCAR is the absorber; the site-name suffix gives its relative multiplicity. materials.csv describes each structure. The energy reference for an excitation is the core-hole minus neutral total energy; the saved spectral axis includes the core-hole Fermi-energy offset. A common offset to experimental photon energies is unknown.",
+            "instruction": "Infer the number of phosphorus neighbours of an absorbing sulfur from its spectrum alone. Determine whether inference trained on crystalline environments transfers to glasses, and whether including other glassy structures improves generalization. Evaluate all supplied glassy structures without using any site from a target structure for training or selection. Assess failures for uncommon environments and sensitivity to energy resolution. Structural information may define labels but must not enter spectral prediction. Return report.md with your answer, quantitative evidence, methodological justification and limitations, supporting figures, and runnable code. Include sites.csv with material,site,p_cn and the coordination definition in the report; predictions.csv with material,site,split,method,predicted; and partitions.csv with material,split,method,role (train,validation,test,unused)."
+          },
+          "groundTruthReasoning": "Python/ASE constructs coordination labels from raw structures, while only processed spectral intensities enter inference. The candidate evaluates crystal-only, glass-material-holdout and hybrid training on the same four partitions of48 glasses. Scikit-learn fits fixed random forests at two Gaussian resolutions, with a majority baseline. Predictions and partitions retain all target sites so the evaluator independently reconstructs class recalls, balanced accuracy and confusions from source-derived labels. Material-block intervals expose sampling limitations. The scientific review must assess sparse-class failures, leakage and what generalization the archive supports; no historical or candidate score is a target.",
+          "verification": {
+            "description": "Verify raw-source consistency and numerical integrity, then review the scientific design, executable evidence and scope of conclusions. Numerical success alone does not establish a scientific pass. Negative scientific results are valid. Reconstruct target labels and metrics independently; audit material-level train/test exclusion, target coverage and sparse-class behavior.",
+            "data": [
+              {
+                "name": "provenance.json",
+                "url": "data/guo-2023-sulfur-xas/provenance.json",
+                "description": "Release identity, licenses, hashes and lossless packaging manifest."
+              },
+              {
+                "name": "source_map.json",
+                "url": "data/guo-2023-sulfur-xas/verification/source_map.json",
+                "description": "Source grounding and available/missing truth."
+              },
+              {
+                "name": "Scientific rubric",
+                "url": "data/guo-2023-sulfur-xas/verification/scientific_review_rubric.md",
+                "description": "Required scientific assessment, separate from numerical integrity."
+              },
+              {
+                "name": "Q3 sites.csv",
+                "url": "data/guo-2023-sulfur-xas/verification/Q3/sites.csv",
+                "description": "Executed illustrative evidence; alternative defensible analyses need not match these choices."
+              },
+              {
+                "name": "Q3 predictions.csv",
+                "url": "data/guo-2023-sulfur-xas/verification/Q3/predictions.csv",
+                "description": "Executed illustrative evidence; alternative defensible analyses need not match these choices."
+              },
+              {
+                "name": "Q3 partitions.csv",
+                "url": "data/guo-2023-sulfur-xas/verification/Q3/partitions.csv",
+                "description": "Executed illustrative evidence; alternative defensible analyses need not match these choices."
+              },
+              {
+                "name": "Q3 metrics.json",
+                "url": "data/guo-2023-sulfur-xas/verification/Q3/metrics.json",
+                "description": "Executed illustrative evidence; alternative defensible analyses need not match these choices."
+              },
+              {
+                "name": "Q3 definitions.json",
+                "url": "data/guo-2023-sulfur-xas/verification/Q3/definitions.json",
+                "description": "Executed illustrative evidence; alternative defensible analyses need not match these choices."
+              },
+              {
+                "name": "Q3 report.md",
+                "url": "data/guo-2023-sulfur-xas/verification/Q3/report.md",
+                "description": "Executed illustrative evidence; alternative defensible analyses need not match these choices."
+              },
+              {
+                "name": "question_quality_review.json",
+                "url": "data/guo-2023-sulfur-xas/verification/question_quality_review.json",
+                "description": "Independent review/audit record."
+              },
+              {
+                "name": "workflow_execution_review.json",
+                "url": "data/guo-2023-sulfur-xas/verification/workflow_execution_review.json",
+                "description": "Independent review/audit record."
+              },
+              {
+                "name": "verification_audit.json",
+                "url": "data/guo-2023-sulfur-xas/verification/verification_audit.json",
+                "description": "Independent review/audit record."
+              },
+              {
+                "name": "scientific_review.json",
+                "url": "data/guo-2023-sulfur-xas/verification/scientific_review.json",
+                "description": "Independent review/audit record."
+              }
+            ],
+            "figures": [
+              {
+                "image": "data/guo-2023-sulfur-xas/verification/Q3/transfer.png",
+                "label": "Q3 transfer.png",
+                "caption": "Diagnostic generated by the executed worked example; not a paper figure."
+              }
+            ],
+            "methods": [
+              {
+                "name": "Worked tool calls",
+                "url": "data/guo-2023-sulfur-xas/workflows/Q3.json",
+                "description": "Executable commands and workflow choices; excluded from solver inputs."
+              },
+              {
+                "name": "candidate.py",
+                "url": "data/guo-2023-sulfur-xas/workflows/candidate.py",
+                "description": "Runnable illustrative research design."
+              },
+              {
+                "name": "verify.py",
+                "url": "data/guo-2023-sulfur-xas/workflows/verify.py",
+                "description": "Independent integrity and numerical verification; scientific review remains required."
+              }
+            ],
+            "thresholds": {
+              "origin": "benchmark-defined",
+              "generatedBy": "Benchmark authors with independent agent audit",
+              "provenance": "Tolerances and review criteria are benchmark engineering choices, not published scientific performance thresholds. No regression sign or classification score is required.",
+              "notes": [
+                {
+                  "title": "Numerical checks",
+                  "description": "Native response comparison allows interpolation differences; geometry and energy quantities are checked against original inputs. See checker and mutation audit for exact tolerances and their limits."
+                },
+                {
+                  "title": "Scientific acceptance",
+                  "description": "The rubric requires valid design, sensitivity, evidence-supported conclusions and reproducibility. A constant predictor or shallow correlation may pass arithmetic checks and fail scientific review."
                 }
               ]
             }

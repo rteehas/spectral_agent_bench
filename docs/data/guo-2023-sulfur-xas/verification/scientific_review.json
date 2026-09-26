@@ -1,0 +1,60 @@
+{
+  "reviewer": "execution_review independent sub-agent",
+  "date": "2026-09-26",
+  "status": "pass_for_scoped_worked_examples",
+  "candidate_sha256": "cc413e1ba3e99a2e2ecb27456eaadb09194a2434ce555b2374c29ecc8a91c170",
+  "evidence_directory": "verification/Q1, verification/Q2, verification/Q3 (independently executed at /tmp/guo-independent-run-v2)",
+  "scope": "Scientific adequacy of illustrative candidate answers, distinct from generic numerical integrity checks; alternative valid analyses need not match this estimator or these point estimates.",
+  "Q1": {
+    "status": "pass",
+    "evidence": [
+      "66 raw reconstructions externally anchored to released author outputs",
+      "Per-material isolation of relative alignment and multiplicity effects",
+      "Three Gaussian resolution levels with all per-material shape/peak effects retained"
+    ],
+    "answer": "Relative shifts matter: at0.5eV median normalized-shape error12.8%, max41.5% material066; at1eV median5.8%, max25.6%. Unequal-population exceptions remain despite zero median weight effect.",
+    "limitations": [
+      "No pairwise material-similarity ranking preservation analysis; prompt was narrowed accordingly.",
+      "No significance threshold makes a5% shape discrepancy scientifically detectable without experimental noise/targets.",
+      "Gaussian broadening is a controlled resolution probe, not an exact lifetime/instrument model."
+    ]
+  },
+  "Q2": {
+    "status": "pass",
+    "evidence": [
+      "All2681 sites linked to raw geometry and spectral inputs",
+      "Material-weighted pooled and within-material regressions controlling P coordination",
+      "Three Li cutoffs and three spectral-shift definitions",
+      "Material-block bootstrap intervals and explicit observational interpretation"
+    ],
+    "answer": "All18 partial slopes are positive. Nominal within-material onset/peak intervals include zero; positive centroid association persists across cutoffs, so no general red-shift rule is supported by this operational analysis.",
+    "limitations": [
+      "Coordination enters as global linear predictors; nonlinear relationships, interactions and motif-specific effects are not comprehensively tested.",
+      "Finite near-edge window and peak/centroid definitions can differ from a physical absorption threshold.",
+      "Bootstrap intervals are conditional on the archived material collection and200 replicates, not population-representative or causal evidence."
+    ]
+  },
+  "Q3": {
+    "status": "pass",
+    "evidence": [
+      "All48 glass structures tested by material-group exclusion",
+      "Only normalized spectral intensities are predictors",
+      "Crystal, grouped-glass and hybrid training at two resolutions",
+      "Majority control, class recall, confusion matrices and material-bootstrap uncertainty"
+    ],
+    "answer": "At0.5eV balanced accuracy is.679 crystal,.871 glass,.896 hybrid; crystal P2 recall31.1% versus71.1% glass.1eV retains ranking with crystal P2 recall33.3%. Majority ordinary accuracy97.0% conceals chance balanced accuracy.",
+    "limitations": [
+      "Minority labels span only7 P0 and15 P2 glass structures.",
+      "Related ancestry and composition may cross folds; this tests new archived structures, not new chemistries.",
+      "Different training libraries differ in size/coverage, so score gains are not isolated effects of disorder.",
+      "Bootstrap intervals hold fitted predictions fixed; model-fitting uncertainty and paired-resolution score-difference significance are not established."
+    ]
+  },
+  "figures": "Q1 effects.png, Q2 associations.png and Q3 transfer.png visually inspected; readable and consistent with tabulated results.",
+  "unsupported_claims_rejected": [
+    "Pairwise material distance/ranking preservation",
+    "Universal Li-shielding causal law",
+    "Statistically significant benefit of increased broadening",
+    "Experimental bulk-spectrum coordination classification"
+  ]
+}
