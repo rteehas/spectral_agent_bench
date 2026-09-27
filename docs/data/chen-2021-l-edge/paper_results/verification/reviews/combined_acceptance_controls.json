@@ -1,0 +1,189 @@
+{
+  "reviewer": "paper_adversarial_review",
+  "verifier_sha256": "8e5156dfb2e45c0ef81ad2e1a7bc56b4aace457ec628f44070812bcc5f6f6b4b",
+  "pass": true,
+  "controls": [
+    {
+      "control": "valid independently replayed R1",
+      "expected_accepted": true,
+      "actual_accepted": true,
+      "pass": true,
+      "checks": {
+        "publication_agreement": true,
+        "independent_raw_data_replay": true,
+        "independent_scientific_review": true,
+        "independent_verifier_audit": true
+      },
+      "errors": []
+    },
+    {
+      "control": "missing workflow_execution.json",
+      "expected_accepted": false,
+      "actual_accepted": false,
+      "pass": true,
+      "checks": {
+        "publication_agreement": true,
+        "workflow_execution.json": false,
+        "independent_scientific_review": true,
+        "independent_verifier_audit": true
+      },
+      "errors": [
+        "Unavailable evaluator review workflow_execution.json: [Errno 2] No such file or directory: '/tmp/chen-combined-controls-tggvm95b/workflow_execution.json/workflow_execution.json'"
+      ]
+    },
+    {
+      "control": "missing scientific_review.json",
+      "expected_accepted": false,
+      "actual_accepted": false,
+      "pass": true,
+      "checks": {
+        "publication_agreement": true,
+        "independent_raw_data_replay": true,
+        "scientific_review.json": false,
+        "independent_verifier_audit": true
+      },
+      "errors": [
+        "Unavailable evaluator review scientific_review.json: [Errno 2] No such file or directory: '/tmp/chen-combined-controls-tggvm95b/scientific_review.json/scientific_review.json'"
+      ]
+    },
+    {
+      "control": "stale replay artifact hash",
+      "expected_accepted": false,
+      "actual_accepted": false,
+      "pass": true,
+      "checks": {
+        "publication_agreement": true,
+        "independent_raw_data_replay": false,
+        "independent_scientific_review": true,
+        "independent_verifier_audit": true
+      },
+      "errors": [
+        "Independent source/code replay is missing, failed, incomplete, or bound to different native inputs/output files"
+      ]
+    },
+    {
+      "control": "stale scientific output manifest",
+      "expected_accepted": false,
+      "actual_accepted": false,
+      "pass": true,
+      "checks": {
+        "publication_agreement": true,
+        "independent_raw_data_replay": true,
+        "independent_scientific_review": false,
+        "independent_verifier_audit": true
+      },
+      "errors": [
+        "Scientific review is missing, failed, or bound to different outputs/publication targets"
+      ]
+    },
+    {
+      "control": "scientific approval withheld despite matching spectra",
+      "expected_accepted": false,
+      "actual_accepted": false,
+      "pass": true,
+      "checks": {
+        "publication_agreement": true,
+        "independent_raw_data_replay": true,
+        "independent_scientific_review": false,
+        "independent_verifier_audit": true
+      },
+      "errors": [
+        "Scientific review is missing, failed, or bound to different outputs/publication targets"
+      ]
+    },
+    {
+      "control": "post-review narrative mutation",
+      "expected_accepted": false,
+      "actual_accepted": false,
+      "pass": true,
+      "checks": {
+        "publication_agreement": true,
+        "independent_raw_data_replay": false,
+        "independent_scientific_review": false,
+        "independent_verifier_audit": true
+      },
+      "errors": [
+        "Independent source/code replay is missing, failed, incomplete, or bound to different native inputs/output files",
+        "Scientific review is missing, failed, or bound to different outputs/publication targets"
+      ]
+    },
+    {
+      "control": "unreviewed additional output file",
+      "expected_accepted": false,
+      "actual_accepted": false,
+      "pass": true,
+      "checks": {
+        "publication_agreement": true,
+        "independent_raw_data_replay": false,
+        "independent_scientific_review": false,
+        "independent_verifier_audit": true
+      },
+      "errors": [
+        "Independent source/code replay is missing, failed, incomplete, or bound to different native inputs/output files",
+        "Scientific review is missing, failed, or bound to different outputs/publication targets"
+      ]
+    },
+    {
+      "control": "raw input changed after approved replay",
+      "expected_accepted": false,
+      "actual_accepted": false,
+      "pass": true,
+      "checks": {
+        "publication_agreement": true,
+        "independent_raw_data_replay": false,
+        "independent_scientific_review": true,
+        "independent_verifier_audit": true
+      },
+      "errors": [
+        "Independent source/code replay is missing, failed, incomplete, or bound to different native inputs/output files"
+      ]
+    },
+    {
+      "control": "stale verifier audit hash",
+      "expected_accepted": false,
+      "actual_accepted": false,
+      "pass": true,
+      "checks": {
+        "publication_agreement": true,
+        "independent_raw_data_replay": true,
+        "independent_scientific_review": true,
+        "independent_verifier_audit": false
+      },
+      "errors": [
+        "Independent verifier audit is missing, failed, or stale for the checker/publication targets"
+      ]
+    },
+    {
+      "control": "publication contract changed after review",
+      "expected_accepted": false,
+      "actual_accepted": false,
+      "pass": true,
+      "checks": {
+        "publication_agreement": true,
+        "independent_raw_data_replay": true,
+        "independent_scientific_review": false,
+        "independent_verifier_audit": false
+      },
+      "errors": [
+        "Scientific review is missing, failed, or bound to different outputs/publication targets",
+        "Independent verifier audit is missing, failed, or stale for the checker/publication targets"
+      ]
+    },
+    {
+      "control": "publication calibration changed after review",
+      "expected_accepted": false,
+      "actual_accepted": false,
+      "pass": true,
+      "checks": {
+        "publication_agreement": true,
+        "independent_raw_data_replay": true,
+        "independent_scientific_review": false,
+        "independent_verifier_audit": false
+      },
+      "errors": [
+        "Scientific review is missing, failed, or bound to different outputs/publication targets",
+        "Independent verifier audit is missing, failed, or stale for the checker/publication targets"
+      ]
+    }
+  ]
+}

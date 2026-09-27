@@ -10,8 +10,11 @@ ROOT = Path(__file__).resolve().parents[2]
 ELEMENTS = ('Ti', 'V', 'Cr', 'Mn', 'Fe', 'Co', 'Ni', 'Cu')
 
 
-def export(question, output):
+def export(question, output, allow_unvalidated=False):
     spec = next(q for q in QUESTIONS if q['id'] == question)
+    acceptance = ROOT / 'docs/data/chen-2021-l-edge/paper_results/verification' / f'{question}_acceptance.json'
+    if not allow_unvalidated and (not acceptance.is_file() or not json.loads(acceptance.read_text()).get('accepted')):
+        raise ValueError(f'{question} is not validated for scoring. --allow-unvalidated is required for evaluator development only.')
     output = Path(output)
     if output.exists() and any(output.iterdir()):
         raise ValueError('Use a new or empty output directory')
@@ -30,7 +33,8 @@ def export(question, output):
 
 if __name__ == '__main__':
     p = argparse.ArgumentParser()
-    p.add_argument('question', choices=['Q1', 'Q2', 'Q3'])
+    p.add_argument('question', choices=[q['id'] for q in QUESTIONS])
     p.add_argument('--output', required=True, type=Path)
+    p.add_argument('--allow-unvalidated', action='store_true', help='Evaluator development only; does not grant scientific acceptance')
     a = p.parse_args()
-    export(a.question, a.output)
+    export(a.question, a.output, a.allow_unvalidated)

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Register the researched tasks and evaluator-only worked evidence locally."""
+"""Publish paper-result tasks only after all independent acceptance gates pass."""
 import json
 from pathlib import Path
 from questions import BACKGROUND, QUESTIONS
@@ -7,11 +7,13 @@ from questions import BACKGROUND, QUESTIONS
 ROOT = Path(__file__).resolve().parents[2]
 HERE = Path(__file__).resolve().parent
 BASE = ROOT / 'docs/data/chen-2021-l-edge'
+RESULTS = BASE / 'paper_results'
 URL = 'data/chen-2021-l-edge'
 ELEMENTS = ('Ti', 'V', 'Cr', 'Mn', 'Fe', 'Co', 'Ni', 'Cu')
 
 
 def asset(name, relative, description):
+    assert (BASE / relative).is_file(), relative
     return {'name': name, 'url': URL + '/' + relative, 'description': description}
 
 
@@ -24,80 +26,106 @@ def main():
     scenarios = []
     for spec in QUESTIONS:
         q = spec['id']
-        output = BASE / 'verification' / q
-        assert (output / 'report.md').is_file(), f'Execute {q} before indexing it'
-        workflow = {
-            'question': q, 'source_derivation': spec['derivation'],
-            'solver_inputs': 'Only eight native JSONL gzip streams and the minimal task. No paper, code, derived label, precomputed feature, expected answer or verifier is exported.',
-            'environment': 'Python 3.12; requirements.txt pins direct dependencies; requirements-lock.txt records all installed packages.',
-            'commands': [
-                'python3 -m venv /tmp/chen-bench-env',
-                '/tmp/chen-bench-env/bin/python -m pip install -r papers/chen-2021-l-edge/requirements.txt',
-                f'python3 papers/chen-2021-l-edge/export_agent_bundle.py {q} --output /tmp/chen-{q}-agent',
-                f'OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MPLCONFIGDIR=/tmp/chen-mpl /tmp/chen-bench-env/bin/python docs/{URL}/workflows/candidate.py {q} --inputs /tmp/chen-{q}-agent/inputs --output /tmp/chen-{q}-answer',
-                f'/tmp/chen-bench-env/bin/python docs/{URL}/workflows/verify.py --question {q} --inputs docs/{URL}/inputs --output /tmp/chen-{q}-answer',
-            ],
-            'tools': ['Python gzip/json/csv for original record parsing', 'NumPy and SciPy for native-grid spectral calculations',
-                      'pymatgen periodic geometry and spglib symmetry',
-                      'NumPy material-block regression/bootstrap' if q == 'Q2' else ('scikit-learn composition-held-out classification and NumPy paired group bootstrap' if q == 'Q3' else 'NumPy weighted interpolation and SciPy Gaussian resolution comparisons'),
-                      'Matplotlib figures'],
-            'choices': 'The candidate selects its symmetry tolerance, geometric labels, supports, metrics, models and uncertainty design. These are illustrative choices, not requirements imposed on solvers.',
-            'outputs': sorted(p.name for p in output.iterdir() if p.is_file()),
-                'verification': 'verify.py audits the explicit worked-example protocol only. Alternative submissions use verify_submission.py for source/partition integrity and require independent reconstruction of their own declared quantities plus the scientific rubric. Neither checker grants scientific acceptance.',
-        }
-        write(BASE / 'workflows' / f'{q}.json', workflow)
-        reasoning = {
-            'Q1': 'Python reads the native calculation records and checks material identities against geometry. spglib derives symmetry equivalence classes and populations. The worked candidate establishes complete absorbing-site coverage before averaging, preserving physical photon energies and relative intensities. NumPy constructs population-weighted responses by linear interpolation only within common native support, then compares equal-site and single-representative approximations under several Gaussian resolutions. Response arrays, coverage/exclusion records and numerical effects make the result auditable. The evaluator independently reconstructs source populations and responses rather than loading the candidate arrays as truth. No historical material-average output is present in the release.',
-            'Q2': 'pymatgen enumerates periodic neighbors; the candidate distinguishes tetrahedral and octahedral shapes using radial and angular geometry, retaining other sites in its audit. NumPy integrates native L2 and L3 intensities in declared windows and preserves their relative scale. Weighted conditional contrasts and material-cluster resampling examine chemical confounding, including exact-composition overlap, while alternate window and shape definitions test sensitivity. Raw finite-window areas are explicitly distinguished from continuum-subtracted experimental branching ratios. The evaluator independently derives geometry and edge integrals from source records; scientific review judges adjustment, overlap, uncertainty and interpretation. Neither a sign nor the example coefficient is a required answer.',
-            'Q3': 'The worked candidate derives regular-environment reference labels from structures and constructs matched spectral features from paired native edges. Scikit-learn compares L3-only and joint-edge classifiers on identical composition-held-out folds, with majority and chemistry-prior controls and altered resolution. Predictions, material partitions and class-specific support expose dependence and chemistry effects. NumPy uses paired composition-block resampling to assess incremental performance. The evaluator recovers source compositions and reference geometry, checks partition exclusion and recomputes prediction metrics without reading candidate scores as truth. The scientific assessment audits feature provenance and the conditional scope of the information claim; historical model performance is not supplied or assumed.',
-        }[q]
-        summary = json.loads((output / 'summary.json').read_text())
-        if q == 'Q1':
-            equal = next(r for r in summary['statistics'] if r['approximation'] == 'equal_sites' and r['fwhm_eV'] == 1)
-            single = next(r for r in summary['statistics'] if r['approximation'] == 'first_representative' and r['fwhm_eV'] == 1)
-            finding = (f"The executed example reconstructs {summary['complete_responses']} complete edge responses and excludes {summary['excluded_responses']} observed groups. Another 142 whole edge groups have no released records and are not reconstructed. "
-                       f"At 1 eV FWHM, the 95th-percentile shape errors among multisite responses are {equal['q95']:.4f} for equal populations and {single['q95']:.4f} for one representative. "
-                       'These are descriptive results under the declared populations/support and error definitions, not acceptance thresholds.')
-        elif q == 'Q2':
-            exact = next(r for r in summary['associations'] if r['adjustment'] == 'exact_composition' and r['feature'] == 'log_ratio' and r['geometry_definition'] == 'geometry')
-            finding = (f"The exact-composition comparison uses {exact['n_sites']} sites from {exact['n_materials']} materials. Its tetrahedral-minus-octahedral log-area contrast is "
-                       f"{exact['tetra_minus_octa_log_ratio']:.5f}, with material-bootstrap interval [{exact['ci025']:.5f}, {exact['ci975']:.5f}]. "
-                       'The example therefore does not establish a composition-invariant geometry effect, despite a clearer association under partial chemistry adjustment. Limited overlap is part of the answer.')
+        reference = RESULTS / 'verification' / q
+        acceptance = json.loads((RESULTS / 'verification' / f'{q}_acceptance.json').read_text())
+        accepted = acceptance['accepted']
+        number = 4 if q == 'R1' else 5
+        contract = f'paper_results/verification/figures/figure{number}_comparison_contract.json'
+        common = [
+            asset('Native input provenance', 'provenance.json', 'Exact versioned archive and lossless native input hashes.'),
+            asset('Publication target provenance', 'paper_results/verification/figures/provenance.json', 'Published PDF, extraction method, CC BY attribution and limitations.'),
+            asset('Source and scope audit', 'paper_results/verification/source_scope.json', 'Full-release audit of missing Table 2 IDs and Figure 2 count discrepancies; excluded tasks are not counted as reproductions.'),
+            asset('Mandatory paper comparison policy', contract, 'Frozen independently of candidate discrepancies; failure cannot be replaced by a source-integrity pass.'),
+            asset('Combined acceptance', f'paper_results/verification/{q}_acceptance.json', 'Paper agreement, independent raw-data replay, and scientific review are all required and bound to the output hashes.'),
+        ]
+        if q == 'R1':
+            common += [asset('Original Figure 4 vector coordinates', 'paper_results/verification/figures/figure4_traces.csv', 'Literal published curves, affine-calibrated from axis ticks; evaluator-only numerical ground truth.'),
+                       asset('Figure 4 axis calibration', 'paper_results/verification/figures/figure4_calibration.json', 'Tick coordinates, clipping bounds and source stroke widths.'),
+                       asset('Excluded Figure 4 panels', 'paper_results/verification/figure4_feasibility.json', 'Absent source IDs and failed exploratory reconstructions are disclosed; no relaxed tolerance.')]
+            description = ('Every retained material must reproduce its published Figure 4 FEFF curve. '
+                           'The evaluator extracts the original PDF vector paths and compares the complete visible line shape, '
+                           'L2 peak position and L2 intensity after a single L3-peak energy registration and global maximum normalization. '
+                           'Both Mn and Fe panels must pass. Native-source replay and scientific review are additionally mandatory. '
+                           'Only panels (c,d) are validated: the published Fe ID is absent, and the released olivine phase has a different ID. '
+                           'The four other panels are not represented as reproduced.')
+            reasoning = ('Python identifies spinel MgMn2O4 and olivine LiFePO4 from native composition and crystallography, '
+                         'checks absorber-site coverage, constructs the combined edge response, and applies the stated energy resolution. '
+                         'The worked example uses crystallographic populations, cubic interpolation and the contemporaneous pymatgen L23 convention, '
+                         'then measures the peak structure. Its curves are predictions from raw records, not the answer key. '
+                         'The independent answer key is the green vector trace in Figure 4(c,d). The evaluator fixes the single permitted energy '
+                         'translation using the L3 maximum and checks the entire visible trace plus the L2 feature. '
+                         'The worked comparison gives normalized RMSE 0.00581 for Mn and 0.01180 for Fe, below the fixed 0.02 bound. '
+                         'No intensity-baseline fitting, separate edge scaling, bandwidth fitting or energy warping is permitted. '
+                         'MgMn2O4 uses the exact Table 2 ID mp-32006. LiFePO4 uses released olivine mp-761468, because mp-19017 is absent; '
+                         'this reproduces the plotted phase response rather than establishing exact historical calculation identity.')
+            threshold_notes = [
+                {'title': 'Mandatory numerical paper agreement', 'description': 'For BOTH published curves: normalized RMSE ≤ 0.02, maximum pointwise residual ≤ 0.07, secondary-peak intensity error ≤ 0.05, and position error ≤ max(0.1 eV, the published stroke width). At least 98% of the visible curve must be covered, with no endpoint gap larger than one stroke.'},
+                {'title': 'Additional acceptance gates', 'description': 'Independently rerun the submitted analysis from native inputs, inspect its source and scientific conclusions, and bind the review to the resulting artifacts. Numerical agreement alone cannot certify provenance.'},
+            ]
         else:
-            delta = next(r for r in summary['paired_differences'] if r['fwhm_eV'] == 0)
-            finding = (f"The example evaluates {summary['n_sites']} regular-environment sites across {summary['n_compositions']} held-out composition groups. "
-                       f"Adding L2 changes balanced accuracy by {delta['L23_minus_L3_balanced_accuracy']:.5f}, with paired composition-bootstrap interval [{delta['ci025']:.5f}, {delta['ci975']:.5f}]. "
-                       'The incremental benefit is unresolved in this experiment; high overall label accuracy does not establish added information from the second edge.')
-        reasoning += '\n\n' + finding
-        data = [asset('Source provenance', 'provenance.json', 'Versioned archive, MIT license, lossless selection and native/package hashes.'),
-                asset('Source map', 'verification/source_map.json', 'Available and missing evidence; historical code inspection and truth boundaries.'),
-                asset('Release census', 'verification/release_census.json', 'Source-derived census and numerical/identity caveats; evaluator only.'),
-                asset('Scientific review rubric', 'verification/scientific_review_rubric.md', 'Scientific validity criteria, separate from automatic numerical integrity.')]
-        for p in sorted(output.iterdir()):
+            description = ('All eight published Figure 5 panels are mandatory targets. '
+                           'Compare the complete red/blue spectral ensembles on calibrated energy and intensity axes using the fixed raster contract, '
+                           'and independently inspect the published and reconstructed plots for the coordination-dependent line shapes and evolution across the series. '
+                           'Raw-data replay and scientific interpretation must also pass. Color opacity is not treated as a recoverable class count, density or quantile. '
+                           'A failed paper comparison cannot be replaced by correct formatting, source integrity, plausible trends or agreement with a newly generated reference.')
+            reasoning = ('Python derives local environments from periodic structures, joins the separately released edges by physical site identity, '
+                         'and reconstructs normalized site-level L2,3 responses for each absorbing element. '
+                         'The worked candidate uses CrystalNN neighborhoods and local structural order parameters, retaining excluded records and other motifs in an audit. '
+                         'Matplotlib renders the full coordination-colored ensembles. The scientific targets are the eight published Figure 5 panels, '
+                         'including their peak locations, line-shape spread, color-dependent L2 response and changing white-line contrast. '
+                         'The evaluator uses the retained publisher raster and frozen coordinate/color criteria, followed by mandatory full-panel scientific review. '
+                         'The release has no author geometry labels or figure-generating arrays; candidate label counts and descriptive summaries therefore '
+                         'remain reproducibility evidence, not replacements for the paper target. Max-normalized plots support relative contrast, not an absolute oscillator-strength trend.')
+            threshold_notes = [
+                {'title': 'Mandatory plot comparison', 'description': 'Apply the frozen Figure 5 raster policy to every element and both coordination colors; retain all panel-level results and apply the required independent visual rubric. No averaging away a failed panel.'},
+                {'title': 'Additional acceptance gates', 'description': 'Independently replay the workflow, audit source identity and structural labels, and review the physical interpretation. No causal coordination claim or absolute-intensity inference from max-normalized overplots.'},
+            ]
+        for name in ['question_quality.json', 'workflow_execution.json', 'scientific_review.json', 'verification_audit.json']:
+            common.append(asset(name, 'paper_results/verification/reviews/' + name, 'Independent review for this revision; previous extension-task reviews are retired.'))
+        common.append(asset('Combined acceptance rejection controls', 'paper_results/verification/reviews/combined_acceptance_controls.json', 'Applied positive and negative checks, including changed raw inputs, stale approvals and changed publication targets.'))
+        common.append(asset('Paper comparison result', f'paper_results/verification/{q}_paper_comparison.json', 'Every mandatory publication comparison, including any unresolved failures.'))
+        if q == 'R2':
+            common.extend([
+                asset('Original raster comparison failure', 'paper_results/verification/R2_paper_comparison_v1.json', 'Preserved first result; it was not silently replaced by a pass.'),
+                asset('Independent source-only renderer calibration', 'paper_results/verification/reviews/source_renderer_independent_audit.json', 'Checks the source-measured stroke-width correction; scientific thresholds remain unchanged.'),
+            ])
+        for p in sorted(reference.iterdir()):
             if p.is_file() and p.suffix in {'.json', '.csv', '.npz', '.md'}:
-                data.append(asset(q + ' ' + p.name, f'verification/{q}/{p.name}', 'Executed worked evidence; source data and independent checks establish truth, not exact imitation of this analysis.'))
-        for name in ['question_quality_review.json', 'workflow_execution_review.json', 'verification_audit.json', 'scientific_review.json', 'source_packaging_audit.json', 'open_submission_audit.json', 'open_submission_independent_review.json', 'open_submission_independent_controls.json']:
-            assert (BASE / 'verification' / name).exists(), f'Missing independent evidence: {name}'
-            data.append(asset(name, 'verification/' + name, 'Recorded independent review or applied audit.'))
-        figures = [{'image': f'{URL}/verification/{q}/{p.name}', 'label': q + ' · ' + p.stem,
-                    'caption': 'Generated diagnostic from the executed candidate; not a reproduction of a historical paper figure.'}
-                   for p in sorted(output.glob('*.png'))]
+                common.append(asset(q + ' · ' + p.name, f'paper_results/verification/{q}/{p.name}', 'Executed candidate evidence. The published figure, not this candidate output, supplies the scientific target.'))
+        figures = [{'image': URL + f'/paper_results/verification/figures/figure{number}.png',
+                    'label': f'Published Figure {number}',
+                    'caption': 'Chen et al. (2021), Scientific Data, CC BY 4.0. Retained publication target; evaluator-only.'}]
+        figures += [{'image': URL + '/paper_results/verification/' + q + '/' + p.name,
+                     'label': q + ' reconstructed · ' + p.stem,
+                     'caption': 'Worked reconstruction generated from native records. Compare with the published figure above.'}
+                    for p in sorted(reference.glob('*.png'))]
+        overlay = RESULTS / 'verification' / f'{q}_paper_overlay.png'
+        if overlay.exists():
+            figures.append({'image': URL + '/paper_results/verification/' + overlay.name,
+                            'label': q + ' · direct publication overlay',
+                            'caption': 'Actual paper trace and raw-data reconstruction overlaid using only the permitted registration. No curve fitting or error-dependent cropping.'})
+        if not accepted:
+            description = ('UNVALIDATED — withheld from scoring. The worked example has not passed every required publication comparison. '
+                           'The full failing report is retained and no weaker acceptance path is provided. ' + description)
         scenarios.append({
-            'id': 'CHEN21-' + q, 'kind': 'Subquestion', 'executionStatus': 'executed_example', 'title': spec['title'],
-            'inputs': [asset(f'{e}.jsonl.gz', f'inputs/{e}.jsonl.gz', f'Native {e} absorbing-site calculation records, including separate-edge spectra, structures and FEFF input parameters.') for e in ELEMENTS],
+            'id': 'CHEN21-' + q, 'kind': 'Subquestion',
+            'executionStatus': 'paper_verified_example' if accepted else 'unvalidated_paper_comparison',
+            'scoringEligible': accepted,
+            'title': spec['title'] if accepted else '[UNVALIDATED] ' + spec['title'],
+            'inputs': [asset(e + '.jsonl.gz', 'inputs/' + e + '.jsonl.gz', 'Native ' + e + ' absorbing-site spectra, periodic structures and FEFF inputs.') for e in ELEMENTS],
             'prompt': {'background': BACKGROUND, 'instruction': spec['instruction']},
             'groundTruthReasoning': reasoning,
-            'verification': {
-                'description': 'For open submissions, verify_submission.py checks native-source identities and declared composition exclusion without imposing the candidate protocol. Its numerical validation is partial and cannot grant scientific acceptance: independently reconstruct submitted geometric/spectral quantities, inspect and execute code, and apply the rubric. verify.py separately audits the complete worked-example protocol and is not a universal grading contract. Alternative defensible methods and negative results are permitted; example conclusions are not fixed targets.',
-                'data': data, 'figures': figures,
-                'methods': [asset('Worked tool calls', f'workflows/{q}.json', 'Environment, executable commands, analysis choices and outputs.'),
-                            asset('candidate.py', 'workflows/candidate.py', 'Executed illustrative solution; evaluator-only.'),
-                            asset('verify.py', 'workflows/verify.py', 'Independent numerical audit of the declared worked-example profile; not a universal submission contract.'),
-                            asset('verify_submission.py', 'workflows/verify_submission.py', 'Open-submission source/partition checks with explicit unresolved scientific/numerical review obligations.')],
-                'thresholds': {'origin': 'benchmark-defined', 'generatedBy': 'Benchmark authors with independent agent verification audit',
-                               'provenance': 'Numerical tolerances are implementation checks, not paper-reported effect sizes or predictive targets. Scientific acceptance is assessed separately.',
-                               'notes': [{'title': 'Numerical integrity', 'description': 'Check finite quantities, native identities, geometric populations, declared source-derived observations and metrics. Unsupported alternative definitions require independent scientific/numerical review; they do not earn full verification from format checks.'},
-                                         {'title': 'Scientific acceptance', 'description': 'Require a justified nontrivial investigation, valid dependence/chemistry controls, sensitivity and conclusions supported by executable evidence. No particular coefficient, direction or classification score is required.'}]},
+            'verification': {'description': description, 'data': common, 'figures': figures,
+                'methods': [
+                    asset('Worked workflow and tool calls', 'paper_results/workflows/' + q + '.json', 'Complete executable workflow, inputs, tools and mandatory acceptance gates; evaluator-only.'),
+                    asset('candidate_' + q.lower() + '.py', 'paper_results/workflows/candidate_' + q.lower() + '.py', 'Worked raw-data solution; never exported to solvers.'),
+                    asset('verify_' + q.lower() + '.py', 'paper_results/workflows/verify_' + q.lower() + '.py', 'Mandatory comparison against the published figure.'),
+                    asset('check_acceptance.py', 'paper_results/workflows/check_acceptance.py', 'Requires publication agreement and independent reviews tied to these output files; no weaker fallback.'),
+                ],
+                'thresholds': {'origin': 'publication figure; benchmark comparison tolerances',
+                    'generatedBy': 'Independent publication-target extraction and verification agents',
+                    'provenance': 'The answer key comes from the published figure. Numerical tolerances follow source stroke/raster precision and were frozen independently of candidate residuals. Scientific and raw-data replay review remain mandatory.',
+                    'notes': threshold_notes, 'data': [asset('Frozen figure comparison policy', contract, 'Exact acceptance criteria and rationale.')]},
             },
         })
     paper = {'id': 'chen-2021-l-edge', 'title': 'Database of ab initio L-edge X-ray absorption near edge structure',
@@ -111,9 +139,11 @@ def main():
     target = ROOT / 'docs/data/benchmark.json'
     dataset = json.loads(target.read_text())
     dataset['papers'] = [p for p in dataset['papers'] if p['id'] != paper['id']] + [paper]
-    dataset['datasetId'] = 'spectral-agent-v2026-09-26-chen-research-v1'
+    dataset['datasetId'] = 'spectral-agent-v2026-09-27-chen-paper-results-v2'
+    dataset['retiredScenarioIds'] = sorted(set(dataset.get('retiredScenarioIds', [])) | {'CHEN21-Q1', 'CHEN21-Q2', 'CHEN21-Q3'})
     write(target, dataset)
-    print('Added Chen 2021: 3 research questions; other entries preserved.')
+    print(f"Added Chen 2021: {sum(s['scoringEligible'] for s in scenarios)} paper-verified questions, "
+          f"{sum(not s['scoringEligible'] for s in scenarios)} unvalidated candidates; other entries preserved.")
 
 
 if __name__ == '__main__':

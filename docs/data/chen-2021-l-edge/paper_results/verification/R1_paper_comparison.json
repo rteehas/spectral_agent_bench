@@ -1,0 +1,64 @@
+{
+  "paper_doi": "10.1038/s41597-021-00936-5",
+  "verification_target": "Original published Figure 4 green vector paths",
+  "required_materials": [
+    "MgMn2O4",
+    "LiFePO4"
+  ],
+  "panels": {
+    "MgMn2O4": {
+      "pass": true,
+      "errors": [],
+      "registered_energy_shift_eV": -1.502212935711782,
+      "visible_reference_range_eV": [
+        638.3461707580375,
+        670.0000572845229
+      ],
+      "coverage_fraction": 1.0,
+      "uncovered_left_eV": 0.0,
+      "uncovered_right_eV": 0.0,
+      "comparison_points": 634,
+      "normalized_rmse": 0.00580543091083777,
+      "normalized_maximum_absolute_residual": 0.027723918736582087,
+      "secondary_peak": {
+        "paper_energy_eV": 652.8274513089975,
+        "candidate_energy_eV": 652.817376552281,
+        "energy_error_eV": 0.01007475671656266,
+        "paper_height": 0.43304382195487356,
+        "candidate_height": 0.4314865715111822,
+        "height_error": 0.0015572504436913714,
+        "position_tolerance_eV": 0.22387131113836278
+      }
+    },
+    "LiFePO4": {
+      "pass": true,
+      "errors": [],
+      "registered_energy_shift_eV": -2.785657384995716,
+      "visible_reference_range_eV": [
+        703.8821050602013,
+        734.9999785795815
+      ],
+      "coverage_fraction": 0.9995424637614091,
+      "uncovered_left_eV": 0.01423755480300315,
+      "uncovered_right_eV": 0.0,
+      "comparison_points": 623,
+      "normalized_rmse": 0.011775036498382805,
+      "normalized_maximum_absolute_residual": 0.033194595922798276,
+      "secondary_peak": {
+        "paper_energy_eV": 719.911498894486,
+        "candidate_energy_eV": 719.9175669013658,
+        "energy_error_eV": 0.006068006879786481,
+        "paper_height": 0.38721268168302103,
+        "candidate_height": 0.3896487497004544,
+        "height_error": 0.002436068017433346,
+        "position_tolerance_eV": 0.15722431496544018
+      }
+    }
+  },
+  "protocol_metadata_checked": false,
+  "scientific_review_required": true,
+  "paper_numerical_pass": true,
+  "scientific_pass": null,
+  "input_contract": "responses.npz and sources.csv",
+  "protocol_review": "The mandatory independent replay must establish 1.2 eV FWHM processing, native energies, absence of baseline transforms, source selection and actual code-to-array provenance. A metadata claim is insufficient."
+}

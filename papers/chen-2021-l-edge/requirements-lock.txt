@@ -24,6 +24,7 @@ pillow==12.3.0
 plotly==7.1.0
 pymatgen==2026.9.24
 pymatgen-core==2026.9.23
+pymupdf==1.28.2
 pyparsing==3.3.3
 python-dateutil==2.9.0.post0
 requests==2.34.2

@@ -1,0 +1,446 @@
+{
+  "reviewer": "paper_adversarial_review",
+  "role": "Independent scientific interpretation and complete-paper-figure comparison after clean final workflow replay",
+  "revision": "paper-result-grounded R1/R2",
+  "cases": {
+    "R1": {
+      "pass": true,
+      "paper_comparison_pass": true,
+      "interpretation_supported": true,
+      "output_manifest_sha256": "63ab28d0cd00409f1051216b8c29817b09b8229075f93f761aa36ff29fdc94fd",
+      "findings": [
+        "Both retained original Figure 4 FEFF vector curves pass unchanged full-curve, coverage, second-peak position and height gates. Verified independently from replayed responses.npz and sources.csv.",
+        "MgMn2O4 reproduces the dominant asymmetric first peak, shoulder, weaker second peak and low post-edge continuum; LiFePO4 reproduces the narrower first peak, simpler weaker second peak and low continuum.",
+        "The allowed rigid registration accounts only for published energy alignment. No peak separation, relative intensity or continuum shape is independently warped or fitted.",
+        "Quantified peak separations 11.607 and 13.265 eV and peak-height ratios 0.432 and 0.390 are supported by replayed curves. These are not integrated branching ratios or spin-state determinations.",
+        "The released Pnma LiFePO4 structure uses mp-761468 rather than Table 2 mp-19017. This discrepancy is disclosed and the actual published curve still agrees within fixed tolerance.",
+        "Only Figure 4(c,d) are certified. Failed/missing Ti,V,Cu,Pt comparisons are excluded and preserved in the scope audit; no claim of complete Figure 4 reproduction is made."
+      ],
+      "paper_numeric_evidence": {
+        "paper_doi": "10.1038/s41597-021-00936-5",
+        "verification_target": "Original published Figure 4 green vector paths",
+        "required_materials": [
+          "MgMn2O4",
+          "LiFePO4"
+        ],
+        "panels": {
+          "MgMn2O4": {
+            "pass": true,
+            "errors": [],
+            "registered_energy_shift_eV": -1.502212935711782,
+            "visible_reference_range_eV": [
+              638.3461707580375,
+              670.0000572845229
+            ],
+            "coverage_fraction": 1.0,
+            "uncovered_left_eV": 0.0,
+            "uncovered_right_eV": 0.0,
+            "comparison_points": 634,
+            "normalized_rmse": 0.00580543091083777,
+            "normalized_maximum_absolute_residual": 0.027723918736582087,
+            "secondary_peak": {
+              "paper_energy_eV": 652.8274513089975,
+              "candidate_energy_eV": 652.817376552281,
+              "energy_error_eV": 0.01007475671656266,
+              "paper_height": 0.43304382195487356,
+              "candidate_height": 0.4314865715111822,
+              "height_error": 0.0015572504436913714,
+              "position_tolerance_eV": 0.22387131113836278
+            }
+          },
+          "LiFePO4": {
+            "pass": true,
+            "errors": [],
+            "registered_energy_shift_eV": -2.785657384995716,
+            "visible_reference_range_eV": [
+              703.8821050602013,
+              734.9999785795815
+            ],
+            "coverage_fraction": 0.9995424637614091,
+            "uncovered_left_eV": 0.01423755480300315,
+            "uncovered_right_eV": 0.0,
+            "comparison_points": 623,
+            "normalized_rmse": 0.011775036498382805,
+            "normalized_maximum_absolute_residual": 0.033194595922798276,
+            "secondary_peak": {
+              "paper_energy_eV": 719.911498894486,
+              "candidate_energy_eV": 719.9175669013658,
+              "energy_error_eV": 0.006068006879786481,
+              "paper_height": 0.38721268168302103,
+              "candidate_height": 0.3896487497004544,
+              "height_error": 0.002436068017433346,
+              "position_tolerance_eV": 0.15722431496544018
+            }
+          }
+        },
+        "protocol_metadata_checked": false,
+        "scientific_review_required": true,
+        "paper_numerical_pass": true,
+        "scientific_pass": null,
+        "input_contract": "responses.npz and sources.csv",
+        "protocol_review": "The mandatory independent replay must establish 1.2 eV FWHM processing, native energies, absence of baseline transforms, source selection and actual code-to-array provenance. A metadata claim is insufficient."
+      },
+      "all_required_panels_inspected": [
+        "Figure 4(c)",
+        "Figure 4(d)"
+      ],
+      "paper_target_sha256": {
+        "paper.pdf": "4c7d70586e2fd53178d11681e39c3a6ce4d9c3b94eabdb961e8ab9fa837e2f41",
+        "figure4_traces.csv": "eb916c8e3f065102bf36a8cd4623b67f06cdb746d3dc9e212cfc4ad723436e3c",
+        "figure4_calibration.json": "62365449c9edb8299b30049d5c1344ef65f18bfe2bdd7a5e16cb682ab0bf7a79",
+        "figure4_comparison_contract.json": "0dcea7e51d61b0e6e09d6e32c49ad844e0deff4c57343aaba8908ce3303306b0"
+      }
+    },
+    "R2": {
+      "pass": false,
+      "paper_comparison_pass": false,
+      "interpretation_supported": true,
+      "output_manifest_sha256": "0b3f8df34f6b0e2ee32781e4acb7b8a0fcbdca2e7ab7a7bb3fa48f232ed87027",
+      "all_required_panels_inspected": [
+        "Ti",
+        "V",
+        "Cr",
+        "Mn",
+        "Fe",
+        "Co",
+        "Ni",
+        "Cu"
+      ],
+      "panel_observations": {
+        "Ti": "Octahedral red curves dominate the selected ensemble; complicated near-edge shoulders and the identifiable tetrahedral high secondary feature are present at the same photon energies. No class fraction is inferred from ink darkness.",
+        "V": "Both classes produce the two compact bands near515–520 and523–527eV, low inter-edge minimum and weak high-energy tails. The rendered visible-color mask remains discrepant despite close shape agreement.",
+        "Cr": "The compact main bands and rare high, broad red outlier traces at higher energy are recovered. Class-specific visible-ink recall remains unresolved in the fixed automated rendering comparison.",
+        "Mn": "The first peak, second band around 653 eV and high tetrahedral outlier responses agree in position and qualitative shape; the median class contrast is modest rather than an inferred large universal effect.",
+        "Fe": "Both main bands and broad tetrahedral higher-energy responses agree visually; within-class spread and outliers are retained, rather than replacing the ensemble with means.",
+        "Co": "The later-metal broadening of the ensemble, stronger tetrahedral second-band/post-edge responses and rare high curves are present. This is between-site diversity, not extra instrumental convolution.",
+        "Ni": "The narrow first band contrasts with broad higher-energy responses; the tetrahedral ensemble extends to substantially stronger post-edge intensities than much of the octahedral ensemble.",
+        "Cu": "The strong high-energy continuum-like rise and broad band near953–970eV, including high tetrahedral curves and low red curves, are retained. Their maxima do not measure absolute oscillator strengths."
+      },
+      "findings": [
+        "The native-data reconstruction and its full eight-panel display were inspected directly against the original Figure 5, not against an invented reference ensemble.",
+        "Source-derived conclusions about class overlap, late-metal continua and qualitative line-shape diversity are supported. No classification accuracy, causal coordination effect, spin-state inference or opacity-derived counts are claimed.",
+        "The paper color-support checker currently fails 6 of 16 mandatory panel/color gates. This review does not waive those failures, widen tolerance or claim strict reproduction passed.",
+        "The unresolved discrepancy may involve renderer quantization, unknown source plotting style, or classification. A source-only width correction retained every scientific/hue threshold and still failed six mandatory panel/color comparisons. Close visual agreement and correct raw-data replay do not override this gate."
+      ],
+      "paper_plot_evidence": {
+        "paper_doi": "10.1038/s41597-021-00936-5",
+        "target": "Original Figure 5, all eight panels and both coordination colors",
+        "figure_sha256": "be7bbd6785d830b1aae23626d4538eb572679335a66ba6588f55e2c6f53da727",
+        "contract_sha256": "6f3d3190e04f7a552253a3a165027c2ce58f3448e96eacda3e06792a0d347000",
+        "renderer": {
+          "opacity": 0.015,
+          "line_width_source_pixels": 1.65,
+          "dpi": 100,
+          "canvas_pixels": [
+            1972,
+            978
+          ],
+          "palette": {
+            "octahedral": "#e41a1c",
+            "tetrahedral": "#377eb8"
+          },
+          "order": "first contributing native source-record order",
+          "fitted_to_candidate": false
+        },
+        "source_identity_audit": {
+          "Ti": {
+            "curves": 710,
+            "by_environment": {
+              "octahedral": 641,
+              "tetrahedral": 69
+            }
+          },
+          "V": {
+            "curves": 1159,
+            "by_environment": {
+              "octahedral": 661,
+              "tetrahedral": 498
+            }
+          },
+          "Cr": {
+            "curves": 680,
+            "by_environment": {
+              "octahedral": 420,
+              "tetrahedral": 260
+            }
+          },
+          "Mn": {
+            "curves": 1132,
+            "by_environment": {
+              "octahedral": 885,
+              "tetrahedral": 247
+            }
+          },
+          "Fe": {
+            "curves": 1471,
+            "by_environment": {
+              "octahedral": 1051,
+              "tetrahedral": 420
+            }
+          },
+          "Co": {
+            "curves": 1095,
+            "by_environment": {
+              "octahedral": 671,
+              "tetrahedral": 424
+            }
+          },
+          "Ni": {
+            "curves": 769,
+            "by_environment": {
+              "octahedral": 503,
+              "tetrahedral": 266
+            }
+          },
+          "Cu": {
+            "curves": 1022,
+            "by_environment": {
+              "octahedral": 404,
+              "tetrahedral": 618
+            }
+          }
+        },
+        "panels": {
+          "Ti": {
+            "octahedral": {
+              "paper_pixels": 48138,
+              "submitted_pixels": 46141,
+              "errors": [],
+              "precision_within_tolerance": 0.9984829110769164,
+              "recall_within_tolerance": 0.9979641862977273,
+              "directed_distance_90th_percentile_pixels": [
+                0.0,
+                0.0
+              ],
+              "pass": true
+            },
+            "tetrahedral": {
+              "paper_pixels": 1956,
+              "submitted_pixels": 1144,
+              "errors": [
+                "Published visible support recall below frozen minimum",
+                "Directed 90th-percentile distance exceeds frozen tolerance"
+              ],
+              "precision_within_tolerance": 0.9318181818181818,
+              "recall_within_tolerance": 0.7760736196319018,
+              "directed_distance_90th_percentile_pixels": [
+                2.0,
+                7.0
+              ],
+              "pass": false
+            }
+          },
+          "V": {
+            "octahedral": {
+              "paper_pixels": 27709,
+              "submitted_pixels": 39092,
+              "errors": [
+                "Predicted visible support precision below frozen minimum",
+                "Directed 90th-percentile distance exceeds frozen tolerance"
+              ],
+              "precision_within_tolerance": 0.8574388621712883,
+              "recall_within_tolerance": 0.9994225702840233,
+              "directed_distance_90th_percentile_pixels": [
+                4.242640687119285,
+                1.0
+              ],
+              "pass": false
+            },
+            "tetrahedral": {
+              "paper_pixels": 15509,
+              "submitted_pixels": 3319,
+              "errors": [
+                "Published visible support recall below frozen minimum",
+                "Directed 90th-percentile distance exceeds frozen tolerance"
+              ],
+              "precision_within_tolerance": 0.9939740885808979,
+              "recall_within_tolerance": 0.5635437487910245,
+              "directed_distance_90th_percentile_pixels": [
+                1.0,
+                10.0
+              ],
+              "pass": false
+            }
+          },
+          "Cr": {
+            "octahedral": {
+              "paper_pixels": 33735,
+              "submitted_pixels": 38523,
+              "errors": [],
+              "precision_within_tolerance": 0.987591828258443,
+              "recall_within_tolerance": 0.9983400029642804,
+              "directed_distance_90th_percentile_pixels": [
+                1.0,
+                0.0
+              ],
+              "pass": true
+            },
+            "tetrahedral": {
+              "paper_pixels": 10987,
+              "submitted_pixels": 2091,
+              "errors": [
+                "Published visible support recall below frozen minimum",
+                "Directed 90th-percentile distance exceeds frozen tolerance"
+              ],
+              "precision_within_tolerance": 0.9708273553323769,
+              "recall_within_tolerance": 0.5167925730408665,
+              "directed_distance_90th_percentile_pixels": [
+                2.0,
+                24.698178070456937
+              ],
+              "pass": false
+            }
+          },
+          "Mn": {
+            "octahedral": {
+              "paper_pixels": 39201,
+              "submitted_pixels": 41579,
+              "errors": [],
+              "precision_within_tolerance": 0.9827316674282691,
+              "recall_within_tolerance": 0.9996173567000842,
+              "directed_distance_90th_percentile_pixels": [
+                1.0,
+                0.0
+              ],
+              "pass": true
+            },
+            "tetrahedral": {
+              "paper_pixels": 8651,
+              "submitted_pixels": 4170,
+              "errors": [
+                "Published visible support recall below frozen minimum",
+                "Directed 90th-percentile distance exceeds frozen tolerance"
+              ],
+              "precision_within_tolerance": 0.9844124700239808,
+              "recall_within_tolerance": 0.8186336839671714,
+              "directed_distance_90th_percentile_pixels": [
+                1.0,
+                5.0
+              ],
+              "pass": false
+            }
+          },
+          "Fe": {
+            "octahedral": {
+              "paper_pixels": 39135,
+              "submitted_pixels": 42530,
+              "errors": [],
+              "precision_within_tolerance": 0.9852339525041147,
+              "recall_within_tolerance": 0.9980324517695158,
+              "directed_distance_90th_percentile_pixels": [
+                1.0,
+                1.0
+              ],
+              "pass": true
+            },
+            "tetrahedral": {
+              "paper_pixels": 16922,
+              "submitted_pixels": 9803,
+              "errors": [
+                "Published visible support recall below frozen minimum",
+                "Directed 90th-percentile distance exceeds frozen tolerance"
+              ],
+              "precision_within_tolerance": 0.9983678465775783,
+              "recall_within_tolerance": 0.8710554308001418,
+              "directed_distance_90th_percentile_pixels": [
+                0.0,
+                5.0
+              ],
+              "pass": false
+            }
+          },
+          "Co": {
+            "octahedral": {
+              "paper_pixels": 42998,
+              "submitted_pixels": 45654,
+              "errors": [],
+              "precision_within_tolerance": 0.9746791080737723,
+              "recall_within_tolerance": 0.9974882552676869,
+              "directed_distance_90th_percentile_pixels": [
+                1.0,
+                1.0
+              ],
+              "pass": true
+            },
+            "tetrahedral": {
+              "paper_pixels": 22713,
+              "submitted_pixels": 15693,
+              "errors": [],
+              "precision_within_tolerance": 0.998024596954056,
+              "recall_within_tolerance": 0.91392594549377,
+              "directed_distance_90th_percentile_pixels": [
+                0.0,
+                2.8284271247461903
+              ],
+              "pass": true
+            }
+          },
+          "Ni": {
+            "octahedral": {
+              "paper_pixels": 56328,
+              "submitted_pixels": 58400,
+              "errors": [],
+              "precision_within_tolerance": 0.9752739726027397,
+              "recall_within_tolerance": 0.9935733560573782,
+              "directed_distance_90th_percentile_pixels": [
+                1.0,
+                1.0
+              ],
+              "pass": true
+            },
+            "tetrahedral": {
+              "paper_pixels": 29743,
+              "submitted_pixels": 21369,
+              "errors": [],
+              "precision_within_tolerance": 0.9985493003884132,
+              "recall_within_tolerance": 0.9666476145647716,
+              "directed_distance_90th_percentile_pixels": [
+                0.0,
+                1.4142135623730951
+              ],
+              "pass": true
+            }
+          },
+          "Cu": {
+            "octahedral": {
+              "paper_pixels": 42949,
+              "submitted_pixels": 46686,
+              "errors": [],
+              "precision_within_tolerance": 0.947393222807694,
+              "recall_within_tolerance": 0.9953200307341266,
+              "directed_distance_90th_percentile_pixels": [
+                1.4142135623730951,
+                1.0
+              ],
+              "pass": true
+            },
+            "tetrahedral": {
+              "paper_pixels": 48232,
+              "submitted_pixels": 35958,
+              "errors": [],
+              "precision_within_tolerance": 0.9981923355025307,
+              "recall_within_tolerance": 0.9715334217946592,
+              "directed_distance_90th_percentile_pixels": [
+                0.0,
+                1.4142135623730951
+              ],
+              "pass": true
+            }
+          }
+        },
+        "paper_plot_pass": false,
+        "scientific_pass": null,
+        "independent_source_replay_required": true,
+        "mandatory_manual_review": "All eight full panels, unusual curves, and late-metal L2/post-edge class contrasts; no opacity-derived population inference."
+      },
+      "visual_qualitative_correspondence": true,
+      "scientific_acceptance_withheld_reason": "Final version 2 mandatory published-plot comparison has not passed all 16 class/panel gates. This is unresolved reproduction, not evidence that the underlying scientific interpretation is false.",
+      "paper_target_sha256": {
+        "figure5.png": "be7bbd6785d830b1aae23626d4538eb572679335a66ba6588f55e2c6f53da727",
+        "figure5_comparison_contract.json": "6f3d3190e04f7a552253a3a165027c2ce58f3448e96eacda3e06792a0d347000"
+      },
+      "verification_status": "unvalidated; withheld from scoring; not disproven",
+      "source_only_renderer_revision": "The independent source-only renderer investigation corrected the nominal stroke width from 1 to 1.65 publisher pixels. The original failed version is retained. Version 2 still passes 10 of 16 panel/color comparisons; the 3-pixel geometric tolerance, 90 percent support thresholds and hue criteria were not relaxed."
+    }
+  }
+}

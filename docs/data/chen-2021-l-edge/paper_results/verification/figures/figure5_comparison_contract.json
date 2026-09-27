@@ -1,0 +1,71 @@
+{
+  "status": "Version 2: independently audited source-only renderer calibration correction; original scientific thresholds unchanged",
+  "reference": "Unmodified full-size publisher figure5.png, 1972 by 978 pixels",
+  "quantity": "Visible, color-specific curve support; not curve density, empirical quantiles, class frequencies, or opacity-derived population statistics",
+  "required_elements": [
+    "Ti",
+    "V",
+    "Cr",
+    "Mn",
+    "Fe",
+    "Co",
+    "Ni",
+    "Cu"
+  ],
+  "required_colors": [
+    "octahedral_red",
+    "tetrahedral_blue"
+  ],
+  "coordinate_system": "Calibrate each panel from its own printed energy and intensity ticks. Map each candidate curve into those same pixel coordinates. Do not optimize translation, dilation, energy stretch, intensity stretch, or panel-specific distortions against the figure.",
+  "allowed_normalization": "Divide each combined L2,3 curve by its maximum, as in the published caption. No per-edge normalization, baseline fit or independent edge registration.",
+  "paper_colors_rgb": {
+    "octahedral_red": [
+      228,
+      26,
+      28
+    ],
+    "tetrahedral_blue": [
+      55,
+      126,
+      184
+    ]
+  },
+  "color_mask": {
+    "octahedral_red": "R-G >= 3 and R-B >= 3",
+    "tetrahedral_blue": "B-R >= 3 and B-G >= 3",
+    "rationale": "A three-code-value separation exceeds single-channel 8-bit quantization ambiguity; black axes and lettering do not satisfy either hue test. Ambiguous blended colors are not assigned to both classes. Do not invert cumulative alpha or solve for source-class populations from RGB mixtures."
+  },
+  "spatial_tolerance_source_pixels": 3.0,
+  "tolerance_rationale": "The original three-source-pixel tolerance is retained unchanged. Version 2 corrects the renderer stroke width from one to 1.65 source pixels using only the published isolated trace; it does not enlarge any comparison tolerance or alter the detected hue masks. Three pixels correspond to roughly 0.3 eV horizontally and 0.0094 maximum-normalized intensity vertically.",
+  "per_panel_per_color_precision_minimum": 0.9,
+  "per_panel_per_color_recall_minimum": 0.9,
+  "per_panel_per_color_90th_percentile_directed_distance_maximum_pixels": 3.0,
+  "mandatory_gates": [
+    "All eight absorbing elements and both classes must be represented, with provenance for every plotted curve",
+    "Each of the sixteen panel-color comparisons must meet precision, recall and distance requirements separately",
+    "No source-color mask may be empty; a missing class does not count as a vacuous pass",
+    "The complete published plotting ranges must be covered; no post hoc masking of mismatching peaks, tails or unusual spectra",
+    "Reconstruct class membership from native released structures using a disclosed reproducible local-environment method",
+    "Independently replay source selection, edge pairing, environment assignment and normalization from native records",
+    "A reviewer must compare the full reconstructed plot directly with the published figure, including outlier curves, peak positions, L2 class contrasts for Mn/Fe/Co/Ni/Cu, and the distinctive high post-edge responses for Ni and Cu",
+    "The automated support result alone must never set scientific_pass to true"
+  ],
+  "rendering_caution": "The original author plotting code and labels are unavailable. Unresolved rendering or classification discrepancies must be reported as unresolved reproduction failures rather than being used to enlarge these tolerances. Plot support is an additional paper-result check, not a substitute for scientific comparison or raw-data provenance.",
+  "contract_version": 2,
+  "original_contract_file": "figure5_comparison_contract_v1.json",
+  "source_only_renderer_correction": {
+    "original_width_source_pixels": 1.0,
+    "corrected_width_source_pixels": 1.65,
+    "opacity_unchanged": 0.015,
+    "palette_unchanged": true,
+    "order_unchanged": true,
+    "coordinates_unchanged": true,
+    "hue_masks_unchanged": true,
+    "scientific_tolerances_unchanged": true,
+    "basis": "Source-only isolated Cr stroke calibration; independent regression halves source-crop RGB reconstruction error at fixed opacity. A second source continuation gives the same width optimum. No candidate spectra or mask scores used to select the width.",
+    "independent_audit": "../reviews/source_renderer_independent_audit.json",
+    "calibration": "../reviews/source_renderer_calibration.json",
+    "holdout_calibration": "../reviews/source_renderer_calibration_holdout.json",
+    "original_candidate_result": "../R2_paper_comparison_v1.json"
+  }
+}

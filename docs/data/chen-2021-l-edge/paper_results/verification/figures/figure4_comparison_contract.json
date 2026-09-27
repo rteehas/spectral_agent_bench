@@ -1,0 +1,22 @@
+{
+  "status": "Frozen before candidate spectra were inspected by the figure-truth author",
+  "target": "The visible green FEFF vector paths in Figure 4 of Chen et al. (2021)",
+  "normalization": "Maximum intensity over the reconstructed displayed spectral interval is one; no baseline removal or independent peak rescaling.",
+  "permitted_energy_adjustment": "One rigid translation per material to align the L3 white line. No energy stretching, piecewise warping, or separate L2 alignment.",
+  "broadening": "Gaussian full width at half maximum 1.2 eV, as specified in the article; do not fit broadening to the held-out target.",
+  "comparison_grid_spacing_eV": 0.05,
+  "minimum_visible_reference_coverage_fraction": 0.98,
+  "normalized_rmse_maximum": 0.02,
+  "normalized_absolute_residual_maximum": 0.07,
+  "peak_position_tolerance": "max(0.1 eV, one full source stroke width converted to eV for the panel)",
+  "peak_height_absolute_tolerance": 0.05,
+  "threshold_rationale": "The six full source stroke widths are 0.0204 to 0.0283 in maximum-normalized intensity and 0.128 to 0.264 eV in energy. A 0.02 RMS difference is below one displayed line width. The 0.07 ceiling permits isolated departures of roughly three line widths at curved or steep segments of the simplified publication polyline while still forbidding a missing peak or systematically incorrect shoulder. Secondary peaks must also meet independent height and position checks, so low mean error cannot conceal a wrong L2 response. These tolerances are determined from the published stroke precision, not from candidate discrepancies.",
+  "mandatory_failure_conditions": [
+    "Nonfinite, nonmonotone, missing, constant, or zero response arrays",
+    "Less than 98 percent coverage of the visible source curve",
+    "Incorrect source material or absorbing species",
+    "A disallowed fitted transformation or fitted smoothing bandwidth",
+    "Failure of any full-curve or identifiable secondary-feature threshold"
+  ],
+  "scientific_review_required": "The reconstructed curve must be traceable to native released records and an executable workflow. Agreement with the figure alone does not prove this provenance. Conclusions must be restricted to available reproduced panels; missing materials and untested experimental comparisons cannot be counted as passes."
+}

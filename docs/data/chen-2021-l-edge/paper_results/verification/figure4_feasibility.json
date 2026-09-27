@@ -1,0 +1,421 @@
+{
+  "purpose": "Feasibility audit, not the final pass/fail verifier. Global rigid-shift screening examined native reconstructions without changing published evaluation tolerances.",
+  "author_validation_material_ids": {
+    "TiO2": "mp-2657",
+    "V2O5": "mp-754670",
+    "MgMn2O4": "mp-32006",
+    "LiFePO4": "mp-19017",
+    "Cu": "mp-30",
+    "Pt": "mp-126"
+  },
+  "exact_ids_absent_from_release": [
+    "mp-2657",
+    "mp-754670",
+    "mp-19017",
+    "mp-30"
+  ],
+  "candidate_materials": {
+    "mp-1102591": {
+      "formula": "TiO2",
+      "spacegroup": [
+        "Pa-3",
+        205
+      ],
+      "sites": 12,
+      "records": 2
+    },
+    "mp-1104615": {
+      "formula": "V2O5",
+      "spacegroup": [
+        "P-1",
+        2
+      ],
+      "sites": 14,
+      "records": 4
+    },
+    "mp-1102255": {
+      "formula": "TiO2",
+      "spacegroup": [
+        "Pnma",
+        62
+      ],
+      "sites": 12,
+      "records": 2
+    },
+    "mp-1056079": {
+      "formula": "Cu",
+      "spacegroup": [
+        "P2/m",
+        10
+      ],
+      "sites": 1,
+      "records": 2
+    },
+    "mp-1059259": {
+      "formula": "Cu",
+      "spacegroup": [
+        "C2/m",
+        12
+      ],
+      "sites": 2,
+      "records": 2
+    },
+    "mp-18951": {
+      "formula": "LiFePO4",
+      "spacegroup": [
+        "Pna2_1",
+        33
+      ],
+      "sites": 84,
+      "records": 6
+    },
+    "mp-126": {
+      "formula": "Pt",
+      "spacegroup": [
+        "Fm-3m",
+        225
+      ],
+      "sites": 1,
+      "records": 2
+    },
+    "mp-1439": {
+      "formula": "TiO2",
+      "spacegroup": [
+        "Pbcn",
+        60
+      ],
+      "sites": 12,
+      "records": 2
+    },
+    "mp-1840": {
+      "formula": "TiO2",
+      "spacegroup": [
+        "Pbca",
+        61
+      ],
+      "sites": 24,
+      "records": 2
+    },
+    "mp-390": {
+      "formula": "TiO2",
+      "spacegroup": [
+        "I4_1/amd",
+        141
+      ],
+      "sites": 6,
+      "records": 2
+    },
+    "mp-32006": {
+      "formula": "MgMn2O4",
+      "spacegroup": [
+        "I4_1/amd",
+        141
+      ],
+      "sites": 14,
+      "records": 2
+    },
+    "mp-554278": {
+      "formula": "TiO2",
+      "spacegroup": [
+        "C2/m",
+        12
+      ],
+      "sites": 12,
+      "records": 1
+    },
+    "mp-553432": {
+      "formula": "TiO2",
+      "spacegroup": [
+        "P3_121",
+        152
+      ],
+      "sites": 9,
+      "records": 2
+    },
+    "mp-754672": {
+      "formula": "TiO2",
+      "spacegroup": [
+        "P2_12_12_1",
+        19
+      ],
+      "sites": 12,
+      "records": 2
+    },
+    "mp-849597": {
+      "formula": "V2O5",
+      "spacegroup": [
+        "Pmmn",
+        59
+      ],
+      "sites": 14,
+      "records": 2
+    },
+    "mp-636827": {
+      "formula": "TiO2",
+      "spacegroup": [
+        "Cmm2",
+        35
+      ],
+      "sites": 24,
+      "records": 4
+    },
+    "mp-761468": {
+      "formula": "LiFePO4",
+      "spacegroup": [
+        "Pnma",
+        62
+      ],
+      "sites": 28,
+      "records": 2
+    },
+    "mp-572822": {
+      "formula": "TiO2",
+      "spacegroup": [
+        "P2_1/m",
+        11
+      ],
+      "sites": 12,
+      "records": 4
+    },
+    "mp-998890": {
+      "formula": "Cu",
+      "spacegroup": [
+        "Im-3m",
+        229
+      ],
+      "sites": 1,
+      "records": 2
+    },
+    "mp-9173": {
+      "formula": "TiO2",
+      "spacegroup": [
+        "Pnma",
+        62
+      ],
+      "sites": 12,
+      "records": 2
+    }
+  },
+  "published_fwhm_screen": [
+    {
+      "mid": "mp-1102591",
+      "element": "Ti",
+      "norm": "max",
+      "sigma_eV": 0.509593080179509,
+      "shift": 0.1060937999316065,
+      "rmse": 0.07635456871188843,
+      "max_error": 0.23599490481382274,
+      "ncompared": 138,
+      "nreference": 138
+    },
+    {
+      "mid": "mp-1104615",
+      "element": "V",
+      "norm": "max",
+      "sigma_eV": 0.509593080179509,
+      "shift": 2.970368171287425,
+      "rmse": 0.05862604029523868,
+      "max_error": 0.18895602933304734,
+      "ncompared": 138,
+      "nreference": 138
+    },
+    {
+      "mid": "mp-1102255",
+      "element": "Ti",
+      "norm": "max",
+      "sigma_eV": 0.509593080179509,
+      "shift": -0.9570059984663312,
+      "rmse": 0.2638000915910455,
+      "max_error": 0.8313177549383646,
+      "ncompared": 138,
+      "nreference": 138
+    },
+    {
+      "mid": "mp-1056079",
+      "element": "Cu",
+      "norm": "max",
+      "sigma_eV": 0.509593080179509,
+      "shift": -15.259911256474771,
+      "rmse": 0.2256809566573508,
+      "max_error": 0.4702120212280514,
+      "ncompared": 191,
+      "nreference": 191
+    },
+    {
+      "mid": "mp-1059259",
+      "element": "Cu",
+      "norm": "max",
+      "sigma_eV": 0.509593080179509,
+      "shift": -4.998979013302007,
+      "rmse": 0.07793576115012218,
+      "max_error": 0.18640022722571903,
+      "ncompared": 191,
+      "nreference": 191
+    },
+    {
+      "mid": "mp-18951",
+      "element": "Fe",
+      "norm": "max",
+      "sigma_eV": 0.509593080179509,
+      "shift": -2.8259944281219918,
+      "rmse": 0.01668903789436963,
+      "max_error": 0.06533866647286682,
+      "ncompared": 116,
+      "nreference": 116
+    },
+    {
+      "mid": "mp-126",
+      "element": "Pt",
+      "norm": "max",
+      "sigma_eV": 0.509593080179509,
+      "shift": -6.536162364352265,
+      "rmse": 0.19295813768953018,
+      "max_error": 0.2979171226269456,
+      "ncompared": 80,
+      "nreference": 82
+    },
+    {
+      "mid": "mp-1439",
+      "element": "Ti",
+      "norm": "max",
+      "sigma_eV": 0.509593080179509,
+      "shift": 0.17550355154412722,
+      "rmse": 0.08575187310645216,
+      "max_error": 0.2787580106367946,
+      "ncompared": 138,
+      "nreference": 138
+    },
+    {
+      "mid": "mp-1840",
+      "element": "Ti",
+      "norm": "max",
+      "sigma_eV": 0.509593080179509,
+      "shift": 0.14225349045476882,
+      "rmse": 0.10379894940231471,
+      "max_error": 0.3365860704574499,
+      "ncompared": 138,
+      "nreference": 138
+    },
+    {
+      "mid": "mp-390",
+      "element": "Ti",
+      "norm": "max",
+      "sigma_eV": 0.509593080179509,
+      "shift": 0.12292496770709095,
+      "rmse": 0.0775079500111309,
+      "max_error": 0.25823579754476284,
+      "ncompared": 138,
+      "nreference": 138
+    },
+    {
+      "mid": "mp-32006",
+      "element": "Mn",
+      "norm": "max",
+      "sigma_eV": 0.509593080179509,
+      "shift": -1.4861129490139267,
+      "rmse": 0.006779885722805421,
+      "max_error": 0.024542714076625227,
+      "ncompared": 125,
+      "nreference": 126
+    },
+    {
+      "mid": "mp-553432",
+      "element": "Ti",
+      "norm": "max",
+      "sigma_eV": 0.509593080179509,
+      "shift": 0.6669108469835889,
+      "rmse": 0.23929701724282898,
+      "max_error": 0.7396144857597938,
+      "ncompared": 138,
+      "nreference": 138
+    },
+    {
+      "mid": "mp-754672",
+      "element": "Ti",
+      "norm": "max",
+      "sigma_eV": 0.509593080179509,
+      "shift": 0.2073799942618936,
+      "rmse": 0.17895743996244937,
+      "max_error": 0.573776353116081,
+      "ncompared": 138,
+      "nreference": 138
+    },
+    {
+      "mid": "mp-849597",
+      "element": "V",
+      "norm": "max",
+      "sigma_eV": 0.509593080179509,
+      "shift": 3.082466121146859,
+      "rmse": 0.07067080972567408,
+      "max_error": 0.21164442042367626,
+      "ncompared": 138,
+      "nreference": 138
+    },
+    {
+      "mid": "mp-636827",
+      "element": "Ti",
+      "norm": "max",
+      "sigma_eV": 0.509593080179509,
+      "shift": 0.217744103144971,
+      "rmse": 0.219258150490127,
+      "max_error": 0.6840841441631959,
+      "ncompared": 138,
+      "nreference": 138
+    },
+    {
+      "mid": "mp-761468",
+      "element": "Fe",
+      "norm": "max",
+      "sigma_eV": 0.509593080179509,
+      "shift": -2.753721119271794,
+      "rmse": 0.008790836997660504,
+      "max_error": 0.01945828121995797,
+      "ncompared": 115,
+      "nreference": 116
+    },
+    {
+      "mid": "mp-572822",
+      "element": "Ti",
+      "norm": "max",
+      "sigma_eV": 0.509593080179509,
+      "shift": -0.11716646038785936,
+      "rmse": 0.17932871703916525,
+      "max_error": 0.5388116790715771,
+      "ncompared": 138,
+      "nreference": 138
+    },
+    {
+      "mid": "mp-998890",
+      "element": "Cu",
+      "norm": "max",
+      "sigma_eV": 0.509593080179509,
+      "shift": -1.1569156241786829,
+      "rmse": 0.22877268093149217,
+      "max_error": 0.7906394921769544,
+      "ncompared": 161,
+      "nreference": 191
+    },
+    {
+      "mid": "mp-9173",
+      "element": "Ti",
+      "norm": "max",
+      "sigma_eV": 0.509593080179509,
+      "shift": -0.04724294604265599,
+      "rmse": 0.09673772995552718,
+      "max_error": 0.29353105194977847,
+      "ncompared": 138,
+      "nreference": 138
+    }
+  ],
+  "accepted_scope": {
+    "MgMn2O4": "Exact released author material mp-32006, tetragonal I41/amd.",
+    "LiFePO4": "Released olivine Pnma phase mp-761468. Author table ID mp-19017 absent. This is a transparent same-phase reconstruction, not a claim of exact source identity."
+  },
+  "excluded_scope": {
+    "TiO2": "Rutile phase absent; other polymorphs cannot substitute.",
+    "V2O5": "Author exact material absent; alternate released structures fail strict published-curve test.",
+    "Cu": "Author fcc material absent; released elemental structures have other lattices.",
+    "Pt": "Author material present but its released L3 curve fails published shape test after declared max normalisation and broadening. Ad hoc baseline adjustments are not accepted."
+  },
+  "final_verification": "Run ../workflows/verify_r1.py on verification/R1 against the held-back published vector traces; this feasibility screen is not a correctness verdict."
+}

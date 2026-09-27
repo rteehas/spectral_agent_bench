@@ -1,0 +1,5 @@
+material,material_id,element,edge,absorbing_atom,name
+LiFePO4,mp-761468,Fe,L2,4,mp-761468-4-XANES-L2
+LiFePO4,mp-761468,Fe,L3,4,mp-761468-4-XANES-L3
+MgMn2O4,mp-32006,Mn,L2,2,mp-32006-2-XANES-L2
+MgMn2O4,mp-32006,Mn,L3,2,mp-32006-2-XANES-L3

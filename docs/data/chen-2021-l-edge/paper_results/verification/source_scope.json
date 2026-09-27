@@ -1,0 +1,598 @@
+{
+  "source_member_sha256": "725281938c937c3aefded49253408f83c9b7d1736f59140a4f4442b69628af35",
+  "release_records": 151140,
+  "figure2_comparison": [
+    {
+      "element": "Sc",
+      "published_site_wise": 1121,
+      "released_records": 1122,
+      "difference": 1,
+      "exact_match": false
+    },
+    {
+      "element": "Ti",
+      "published_site_wise": 2117,
+      "released_records": 2144,
+      "difference": 27,
+      "exact_match": false
+    },
+    {
+      "element": "V",
+      "published_site_wise": 3073,
+      "released_records": 3104,
+      "difference": 31,
+      "exact_match": false
+    },
+    {
+      "element": "Cr",
+      "published_site_wise": 1848,
+      "released_records": 1866,
+      "difference": 18,
+      "exact_match": false
+    },
+    {
+      "element": "Mn",
+      "published_site_wise": 3240,
+      "released_records": 3270,
+      "difference": 30,
+      "exact_match": false
+    },
+    {
+      "element": "Fe",
+      "published_site_wise": 4589,
+      "released_records": 4627,
+      "difference": 38,
+      "exact_match": false
+    },
+    {
+      "element": "Co",
+      "published_site_wise": 3786,
+      "released_records": 3805,
+      "difference": 19,
+      "exact_match": false
+    },
+    {
+      "element": "Ni",
+      "published_site_wise": 3827,
+      "released_records": 3860,
+      "difference": 33,
+      "exact_match": false
+    },
+    {
+      "element": "Cu",
+      "published_site_wise": 4837,
+      "released_records": 4894,
+      "difference": 57,
+      "exact_match": false
+    },
+    {
+      "element": "Zn",
+      "published_site_wise": 4422,
+      "released_records": 4487,
+      "difference": 65,
+      "exact_match": false
+    },
+    {
+      "element": "Ga",
+      "published_site_wise": 1605,
+      "released_records": 1618,
+      "difference": 13,
+      "exact_match": false
+    },
+    {
+      "element": "Ge",
+      "published_site_wise": 6082,
+      "released_records": 6151,
+      "difference": 69,
+      "exact_match": false
+    },
+    {
+      "element": "As",
+      "published_site_wise": 4430,
+      "released_records": 4483,
+      "difference": 53,
+      "exact_match": false
+    },
+    {
+      "element": "Se",
+      "published_site_wise": 9890,
+      "released_records": 9991,
+      "difference": 101,
+      "exact_match": false
+    },
+    {
+      "element": "Br",
+      "published_site_wise": 4833,
+      "released_records": 4889,
+      "difference": 56,
+      "exact_match": false
+    },
+    {
+      "element": "Kr",
+      "published_site_wise": 28,
+      "released_records": 28,
+      "difference": 0,
+      "exact_match": true
+    },
+    {
+      "element": "Rb",
+      "published_site_wise": 3478,
+      "released_records": 3498,
+      "difference": 20,
+      "exact_match": false
+    },
+    {
+      "element": "Sr",
+      "published_site_wise": 3207,
+      "released_records": 3254,
+      "difference": 47,
+      "exact_match": false
+    },
+    {
+      "element": "Y",
+      "published_site_wise": 1698,
+      "released_records": 1719,
+      "difference": 21,
+      "exact_match": false
+    },
+    {
+      "element": "Zr",
+      "published_site_wise": 1440,
+      "released_records": 1447,
+      "difference": 7,
+      "exact_match": false
+    },
+    {
+      "element": "Nb",
+      "published_site_wise": 2185,
+      "released_records": 2205,
+      "difference": 20,
+      "exact_match": false
+    },
+    {
+      "element": "Mo",
+      "published_site_wise": 3297,
+      "released_records": 3310,
+      "difference": 13,
+      "exact_match": false
+    },
+    {
+      "element": "Tc",
+      "published_site_wise": 226,
+      "released_records": 226,
+      "difference": 0,
+      "exact_match": true
+    },
+    {
+      "element": "Ru",
+      "published_site_wise": 1174,
+      "released_records": 1199,
+      "difference": 25,
+      "exact_match": false
+    },
+    {
+      "element": "Rh",
+      "published_site_wise": 1060,
+      "released_records": 1079,
+      "difference": 19,
+      "exact_match": false
+    },
+    {
+      "element": "Pd",
+      "published_site_wise": 1560,
+      "released_records": 1568,
+      "difference": 8,
+      "exact_match": false
+    },
+    {
+      "element": "Ag",
+      "published_site_wise": 2288,
+      "released_records": 2308,
+      "difference": 20,
+      "exact_match": false
+    },
+    {
+      "element": "Cd",
+      "published_site_wise": 3087,
+      "released_records": 3126,
+      "difference": 39,
+      "exact_match": false
+    },
+    {
+      "element": "In",
+      "published_site_wise": 1667,
+      "released_records": 1675,
+      "difference": 8,
+      "exact_match": false
+    },
+    {
+      "element": "Sn",
+      "published_site_wise": 1626,
+      "released_records": 1645,
+      "difference": 19,
+      "exact_match": false
+    },
+    {
+      "element": "Sb",
+      "published_site_wise": 4344,
+      "released_records": 4374,
+      "difference": 30,
+      "exact_match": false
+    },
+    {
+      "element": "Te",
+      "published_site_wise": 5107,
+      "released_records": 5170,
+      "difference": 63,
+      "exact_match": false
+    },
+    {
+      "element": "I",
+      "published_site_wise": 6976,
+      "released_records": 7061,
+      "difference": 85,
+      "exact_match": false
+    },
+    {
+      "element": "Xe",
+      "published_site_wise": 201,
+      "released_records": 204,
+      "difference": 3,
+      "exact_match": false
+    },
+    {
+      "element": "Cs",
+      "published_site_wise": 3464,
+      "released_records": 3497,
+      "difference": 33,
+      "exact_match": false
+    },
+    {
+      "element": "Ba",
+      "published_site_wise": 5154,
+      "released_records": 5184,
+      "difference": 30,
+      "exact_match": false
+    },
+    {
+      "element": "Hf",
+      "published_site_wise": 718,
+      "released_records": 736,
+      "difference": 18,
+      "exact_match": false
+    },
+    {
+      "element": "Ta",
+      "published_site_wise": 1378,
+      "released_records": 1397,
+      "difference": 19,
+      "exact_match": false
+    },
+    {
+      "element": "W",
+      "published_site_wise": 1306,
+      "released_records": 1319,
+      "difference": 13,
+      "exact_match": false
+    },
+    {
+      "element": "Re",
+      "published_site_wise": 985,
+      "released_records": 1004,
+      "difference": 19,
+      "exact_match": false
+    },
+    {
+      "element": "Os",
+      "published_site_wise": 819,
+      "released_records": 821,
+      "difference": 2,
+      "exact_match": false
+    },
+    {
+      "element": "Ir",
+      "published_site_wise": 940,
+      "released_records": 950,
+      "difference": 10,
+      "exact_match": false
+    },
+    {
+      "element": "Pt",
+      "published_site_wise": 1345,
+      "released_records": 1348,
+      "difference": 3,
+      "exact_match": false
+    },
+    {
+      "element": "Au",
+      "published_site_wise": 842,
+      "released_records": 852,
+      "difference": 10,
+      "exact_match": false
+    },
+    {
+      "element": "Hg",
+      "published_site_wise": 1420,
+      "released_records": 1423,
+      "difference": 3,
+      "exact_match": false
+    },
+    {
+      "element": "Tl",
+      "published_site_wise": 1617,
+      "released_records": 1634,
+      "difference": 17,
+      "exact_match": false
+    },
+    {
+      "element": "Pb",
+      "published_site_wise": 2190,
+      "released_records": 2224,
+      "difference": 34,
+      "exact_match": false
+    },
+    {
+      "element": "Bi",
+      "published_site_wise": 2491,
+      "released_records": 2505,
+      "difference": 14,
+      "exact_match": false
+    },
+    {
+      "element": "La",
+      "published_site_wise": 2573,
+      "released_records": 2610,
+      "difference": 37,
+      "exact_match": false
+    },
+    {
+      "element": "Ce",
+      "published_site_wise": 1839,
+      "released_records": 1850,
+      "difference": 11,
+      "exact_match": false
+    },
+    {
+      "element": "Pr",
+      "published_site_wise": 1432,
+      "released_records": 1447,
+      "difference": 15,
+      "exact_match": false
+    },
+    {
+      "element": "Nd",
+      "published_site_wise": 1674,
+      "released_records": 1703,
+      "difference": 29,
+      "exact_match": false
+    },
+    {
+      "element": "Pm",
+      "published_site_wise": 14,
+      "released_records": 14,
+      "difference": 0,
+      "exact_match": true
+    },
+    {
+      "element": "Sm",
+      "published_site_wise": 1096,
+      "released_records": 1113,
+      "difference": 17,
+      "exact_match": false
+    },
+    {
+      "element": "Eu",
+      "published_site_wise": 1036,
+      "released_records": 1047,
+      "difference": 11,
+      "exact_match": false
+    },
+    {
+      "element": "Gd",
+      "published_site_wise": 990,
+      "released_records": 997,
+      "difference": 7,
+      "exact_match": false
+    },
+    {
+      "element": "Tb",
+      "published_site_wise": 1116,
+      "released_records": 1123,
+      "difference": 7,
+      "exact_match": false
+    },
+    {
+      "element": "Dy",
+      "published_site_wise": 1004,
+      "released_records": 1016,
+      "difference": 12,
+      "exact_match": false
+    },
+    {
+      "element": "Ho",
+      "published_site_wise": 1134,
+      "released_records": 1145,
+      "difference": 11,
+      "exact_match": false
+    },
+    {
+      "element": "Er",
+      "published_site_wise": 1232,
+      "released_records": 1249,
+      "difference": 17,
+      "exact_match": false
+    },
+    {
+      "element": "Tm",
+      "published_site_wise": 746,
+      "released_records": 765,
+      "difference": 19,
+      "exact_match": false
+    },
+    {
+      "element": "Yb",
+      "published_site_wise": 1130,
+      "released_records": 1135,
+      "difference": 5,
+      "exact_match": false
+    },
+    {
+      "element": "Lu",
+      "published_site_wise": 827,
+      "released_records": 841,
+      "difference": 14,
+      "exact_match": false
+    },
+    {
+      "element": "Ac",
+      "published_site_wise": 10,
+      "released_records": 10,
+      "difference": 0,
+      "exact_match": true
+    },
+    {
+      "element": "Th",
+      "published_site_wise": 521,
+      "released_records": 522,
+      "difference": 1,
+      "exact_match": false
+    },
+    {
+      "element": "Pa",
+      "published_site_wise": 40,
+      "released_records": 40,
+      "difference": 0,
+      "exact_match": true
+    },
+    {
+      "element": "U",
+      "published_site_wise": 1732,
+      "released_records": 1747,
+      "difference": 15,
+      "exact_match": false
+    },
+    {
+      "element": "Np",
+      "published_site_wise": 254,
+      "released_records": 254,
+      "difference": 0,
+      "exact_match": true
+    },
+    {
+      "element": "Pu",
+      "published_site_wise": 211,
+      "released_records": 211,
+      "difference": 0,
+      "exact_match": true
+    }
+  ],
+  "figure2_conclusion": "Literal published per-element site-wise counts do not all equal the versioned release record counts. No tolerance is substituted for integer equality. This census is not an active reproduction task.",
+  "figure4_table2_source_audit": {
+    "TiO2": {
+      "panel": "a",
+      "element": "Ti",
+      "material": "mp-2657",
+      "released_records": []
+    },
+    "V2O5": {
+      "panel": "b",
+      "element": "V",
+      "material": "mp-754670",
+      "released_records": []
+    },
+    "MgMn2O4": {
+      "panel": "c",
+      "element": "Mn",
+      "material": "mp-32006",
+      "released_records": [
+        {
+          "name": "mp-32006-2-XANES-L2",
+          "element": "Mn",
+          "edge": "L2",
+          "site": 2,
+          "native_line_sha256": "01f77cecdd1b4192d3eaa4b4dd1711b6d1479154920e912ef26a8481e3b7a871"
+        },
+        {
+          "name": "mp-32006-2-XANES-L3",
+          "element": "Mn",
+          "edge": "L3",
+          "site": 2,
+          "native_line_sha256": "5b484ff4b7a92e26b537fa5f2c6767b4742afa3d1e05b169ed4b93b59169bf18"
+        }
+      ]
+    },
+    "LiFePO4": {
+      "panel": "d",
+      "element": "Fe",
+      "material": "mp-19017",
+      "released_records": []
+    },
+    "Cu": {
+      "panel": "e",
+      "element": "Cu",
+      "material": "mp-30",
+      "released_records": []
+    },
+    "Pt": {
+      "panel": "f",
+      "element": "Pt",
+      "material": "mp-126",
+      "released_records": [
+        {
+          "name": "mp-126-0-XANES-L2",
+          "element": "Pt",
+          "edge": "L2",
+          "site": 0,
+          "native_line_sha256": "36f2a8d81c340e4cf43989f78ac424ef7f2bc23d0c2e9a951980690095fc348d"
+        },
+        {
+          "name": "mp-126-0-XANES-L3",
+          "element": "Pt",
+          "edge": "L3",
+          "site": 0,
+          "native_line_sha256": "4e98b049f56223c9604f938cda6719dd1bed8168e7800358fd3aaf96440dc02f"
+        }
+      ]
+    }
+  },
+  "alternate_phase_records": {
+    "mp-761468": [
+      {
+        "name": "mp-761468-4-XANES-L2",
+        "element": "Fe",
+        "edge": "L2",
+        "site": 4,
+        "native_line_sha256": "1988821309ba6ca44bd064187d530a5056c81939695e8e8887db546de820a6bc"
+      },
+      {
+        "name": "mp-761468-4-XANES-L3",
+        "element": "Fe",
+        "edge": "L3",
+        "site": 4,
+        "native_line_sha256": "7a39a49c35b0a87bbded6ef7d20aea950eef98bb50847989aee6506e2f6725fd"
+      }
+    ],
+    "mp-849597": [
+      {
+        "name": "mp-849597-0-XANES-L2",
+        "element": "V",
+        "edge": "L2",
+        "site": 0,
+        "native_line_sha256": "f48a18119a6dd446f49b5b837a3c57266f0c4f89bb31895510c728d9a207cb6a"
+      },
+      {
+        "name": "mp-849597-0-XANES-L3",
+        "element": "V",
+        "edge": "L3",
+        "site": 0,
+        "native_line_sha256": "4060a9b465abd493b90827e3a5248c394c3637bda0979e502a5176e8c9cd196c"
+      }
+    ]
+  },
+  "identity_caveat": "The LiFePO4 structure mp-761468 has the requested olivine phase and its computed response can be compared to Figure 4(d). It is not the exact mp-19017 calculation named in Table 2. Neither matching composition nor space group alone establishes numerical reproduction; the paper-curve gate remains mandatory.",
+  "unavailable_stages": [
+    "Figure 3 radius/core-hole parameter sweeps and their experimental reference arrays are absent from the release.",
+    "Historical site-averaged arrays, coordination labels, and figure-generation scripts are not supplied.",
+    "OCEAN and experimental spectra are not native inputs; extracted publication traces remain evaluator-only."
+  ]
+}

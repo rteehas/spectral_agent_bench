@@ -1,0 +1,172 @@
+{
+  "elements": [
+    {
+      "element": "Ti",
+      "raw_records": 2144,
+      "negative_raw_records": 15,
+      "site_identities": 1083,
+      "reconstructed_sites": 1052,
+      "displayed_sites": 710,
+      "environments": {
+        "octahedral": 641,
+        "other": 342,
+        "tetrahedral": 69,
+        "excluded": 31
+      },
+      "exclusions": {
+        "outside_two_displayed_motifs": 342,
+        "negative_partial_edge": 9,
+        "unpaired_edges": 22
+      },
+      "material_identity_collisions": {}
+    },
+    {
+      "element": "V",
+      "raw_records": 3104,
+      "negative_raw_records": 18,
+      "site_identities": 1566,
+      "reconstructed_sites": 1523,
+      "displayed_sites": 1159,
+      "environments": {
+        "tetrahedral": 498,
+        "octahedral": 661,
+        "other": 364,
+        "excluded": 43
+      },
+      "exclusions": {
+        "outside_two_displayed_motifs": 364,
+        "negative_partial_edge": 15,
+        "unpaired_edges": 28
+      },
+      "material_identity_collisions": {}
+    },
+    {
+      "element": "Cr",
+      "raw_records": 1866,
+      "negative_raw_records": 11,
+      "site_identities": 943,
+      "reconstructed_sites": 914,
+      "displayed_sites": 680,
+      "environments": {
+        "other": 234,
+        "octahedral": 420,
+        "tetrahedral": 260,
+        "excluded": 29
+      },
+      "exclusions": {
+        "outside_two_displayed_motifs": 234,
+        "unpaired_edges": 20,
+        "negative_partial_edge": 9
+      },
+      "material_identity_collisions": {}
+    },
+    {
+      "element": "Mn",
+      "raw_records": 3270,
+      "negative_raw_records": 4,
+      "site_identities": 1657,
+      "reconstructed_sites": 1610,
+      "displayed_sites": 1132,
+      "environments": {
+        "other": 478,
+        "octahedral": 885,
+        "tetrahedral": 247,
+        "excluded": 47
+      },
+      "exclusions": {
+        "outside_two_displayed_motifs": 478,
+        "unpaired_edges": 44,
+        "negative_partial_edge": 3
+      },
+      "material_identity_collisions": {}
+    },
+    {
+      "element": "Fe",
+      "raw_records": 4627,
+      "negative_raw_records": 0,
+      "site_identities": 2339,
+      "reconstructed_sites": 2288,
+      "displayed_sites": 1471,
+      "environments": {
+        "tetrahedral": 420,
+        "octahedral": 1051,
+        "other": 817,
+        "excluded": 51
+      },
+      "exclusions": {
+        "outside_two_displayed_motifs": 817,
+        "unpaired_edges": 51
+      },
+      "material_identity_collisions": {}
+    },
+    {
+      "element": "Co",
+      "raw_records": 3805,
+      "negative_raw_records": 0,
+      "site_identities": 1922,
+      "reconstructed_sites": 1883,
+      "displayed_sites": 1095,
+      "environments": {
+        "other": 788,
+        "tetrahedral": 424,
+        "octahedral": 671,
+        "excluded": 39
+      },
+      "exclusions": {
+        "outside_two_displayed_motifs": 788,
+        "unpaired_edges": 39
+      },
+      "material_identity_collisions": {}
+    },
+    {
+      "element": "Ni",
+      "raw_records": 3860,
+      "negative_raw_records": 1,
+      "site_identities": 1950,
+      "reconstructed_sites": 1909,
+      "displayed_sites": 769,
+      "environments": {
+        "other": 1140,
+        "tetrahedral": 266,
+        "octahedral": 503,
+        "excluded": 41
+      },
+      "exclusions": {
+        "outside_two_displayed_motifs": 1140,
+        "unpaired_edges": 40,
+        "negative_partial_edge": 1
+      },
+      "material_identity_collisions": {}
+    },
+    {
+      "element": "Cu",
+      "raw_records": 4894,
+      "negative_raw_records": 4,
+      "site_identities": 2476,
+      "reconstructed_sites": 2415,
+      "displayed_sites": 1022,
+      "environments": {
+        "other": 1393,
+        "octahedral": 404,
+        "tetrahedral": 618,
+        "excluded": 61
+      },
+      "exclusions": {
+        "outside_two_displayed_motifs": 1393,
+        "unpaired_edges": 58,
+        "negative_partial_edge": 3
+      },
+      "material_identity_collisions": {}
+    }
+  ],
+  "raw_records": 27570,
+  "negative_raw_records": 53,
+  "reconstructed_sites": 13594,
+  "displayed_sites": 8038,
+  "cross_element_material_identity_collisions": {
+    "mp-12905": [
+      "9816b80101934db2568e0edac94978d4b7ed9176b91aad0c4039fd1be7f1d137",
+      "bfe109da129a89f47ef8f30dd7f32c4adc12a192ef8cb8b75eb4d9b9a0dd8411"
+    ]
+  }
+}

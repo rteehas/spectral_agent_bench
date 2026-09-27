@@ -1,0 +1,98 @@
+{
+  "source_only": true,
+  "candidate_arrays_or_images_read": false,
+  "source_figure_sha256": "be7bbd6785d830b1aae23626d4538eb572679335a66ba6588f55e2c6f53da727",
+  "source_crop": [
+    1230,
+    140,
+    1350,
+    240
+  ],
+  "fixed_opacity": 0.015,
+  "original_width_source_pixels": 1.0,
+  "proposed_corrected_width_source_pixels": 1.65,
+  "comparison": {
+    "1.0": {
+      "whole_interior": 0.2383656473113981,
+      "left_profile": 0.2661737869296766,
+      "right_profile": 0.20685231153622333
+    },
+    "1.65": {
+      "whole_interior": 0.11780826744667744,
+      "left_profile": 0.13483997249264842,
+      "right_profile": 0.0978557999086287
+    }
+  },
+  "independent_nearly_horizontal_profiles": [
+    {
+      "source_x": 1273,
+      "nonwhite_y_coordinates": [
+        196,
+        197
+      ],
+      "green_contrasts": [
+        3.0,
+        4.0
+      ],
+      "integrated_contrast_over_peak_pixels": 1.75
+    },
+    {
+      "source_x": 1274,
+      "nonwhite_y_coordinates": [
+        196,
+        197,
+        198
+      ],
+      "green_contrasts": [
+        2.0,
+        4.0,
+        1.0
+      ],
+      "integrated_contrast_over_peak_pixels": 1.75
+    },
+    {
+      "source_x": 1275,
+      "nonwhite_y_coordinates": [
+        196,
+        197,
+        198
+      ],
+      "green_contrasts": [
+        1.0,
+        4.0,
+        1.0
+      ],
+      "integrated_contrast_over_peak_pixels": 1.5
+    },
+    {
+      "source_x": 1276,
+      "nonwhite_y_coordinates": [
+        196,
+        197,
+        198
+      ],
+      "green_contrasts": [
+        3.0,
+        4.0,
+        1.0
+      ],
+      "integrated_contrast_over_peak_pixels": 2.0
+    },
+    {
+      "source_x": 1277,
+      "nonwhite_y_coordinates": [
+        195,
+        196,
+        197
+      ],
+      "green_contrasts": [
+        1.0,
+        4.0,
+        3.0
+      ],
+      "integrated_contrast_over_peak_pixels": 2.0
+    }
+  ],
+  "correction_supported": true,
+  "scope": "Supports replacing an inaccurate stroke-width calibration, not changing scientific tolerances, coordinates, class labels, spectral curves or opacity. The original failed candidate result must be retained. No claim that the author's entire renderer is recovered."
+}

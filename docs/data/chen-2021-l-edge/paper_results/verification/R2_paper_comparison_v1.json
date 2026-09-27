@@ -1,0 +1,312 @@
+{
+  "paper_doi": "10.1038/s41597-021-00936-5",
+  "target": "Original Figure 5, all eight panels and both coordination colors",
+  "figure_sha256": "be7bbd6785d830b1aae23626d4538eb572679335a66ba6588f55e2c6f53da727",
+  "contract_sha256": "b563d618b46e22d8353baa36fd245d198559eff34d552d220864061203a45c25",
+  "renderer": {
+    "opacity": 0.015,
+    "line_width_source_pixels": 1.0,
+    "dpi": 100,
+    "canvas_pixels": [
+      1972,
+      978
+    ],
+    "palette": {
+      "octahedral": "#e41a1c",
+      "tetrahedral": "#377eb8"
+    },
+    "order": "first contributing native source-record order",
+    "fitted_to_candidate": false
+  },
+  "source_identity_audit": {
+    "Ti": {
+      "curves": 710,
+      "by_environment": {
+        "octahedral": 641,
+        "tetrahedral": 69
+      }
+    },
+    "V": {
+      "curves": 1159,
+      "by_environment": {
+        "octahedral": 661,
+        "tetrahedral": 498
+      }
+    },
+    "Cr": {
+      "curves": 680,
+      "by_environment": {
+        "octahedral": 420,
+        "tetrahedral": 260
+      }
+    },
+    "Mn": {
+      "curves": 1132,
+      "by_environment": {
+        "octahedral": 885,
+        "tetrahedral": 247
+      }
+    },
+    "Fe": {
+      "curves": 1471,
+      "by_environment": {
+        "octahedral": 1051,
+        "tetrahedral": 420
+      }
+    },
+    "Co": {
+      "curves": 1095,
+      "by_environment": {
+        "octahedral": 671,
+        "tetrahedral": 424
+      }
+    },
+    "Ni": {
+      "curves": 769,
+      "by_environment": {
+        "octahedral": 503,
+        "tetrahedral": 266
+      }
+    },
+    "Cu": {
+      "curves": 1022,
+      "by_environment": {
+        "octahedral": 404,
+        "tetrahedral": 618
+      }
+    }
+  },
+  "panels": {
+    "Ti": {
+      "octahedral": {
+        "paper_pixels": 48138,
+        "submitted_pixels": 42475,
+        "errors": [],
+        "precision_within_tolerance": 0.9992466156562684,
+        "recall_within_tolerance": 0.9934770867090448,
+        "directed_distance_90th_percentile_pixels": [
+          0.0,
+          1.0
+        ],
+        "pass": true
+      },
+      "tetrahedral": {
+        "paper_pixels": 1956,
+        "submitted_pixels": 830,
+        "errors": [
+          "Predicted visible support precision below frozen minimum",
+          "Published visible support recall below frozen minimum",
+          "Directed 90th-percentile distance exceeds frozen tolerance"
+        ],
+        "precision_within_tolerance": 0.8674698795180723,
+        "recall_within_tolerance": 0.7668711656441718,
+        "directed_distance_90th_percentile_pixels": [
+          4.123105625617661,
+          7.0
+        ],
+        "pass": false
+      }
+    },
+    "V": {
+      "octahedral": {
+        "paper_pixels": 27709,
+        "submitted_pixels": 34659,
+        "errors": [
+          "Predicted visible support precision below frozen minimum",
+          "Directed 90th-percentile distance exceeds frozen tolerance"
+        ],
+        "precision_within_tolerance": 0.8463025476788136,
+        "recall_within_tolerance": 0.995452740986683,
+        "directed_distance_90th_percentile_pixels": [
+          5.0,
+          1.0
+        ],
+        "pass": false
+      },
+      "tetrahedral": {
+        "paper_pixels": 15509,
+        "submitted_pixels": 3178,
+        "errors": [
+          "Published visible support recall below frozen minimum",
+          "Directed 90th-percentile distance exceeds frozen tolerance"
+        ],
+        "precision_within_tolerance": 0.9889867841409692,
+        "recall_within_tolerance": 0.5682506931459153,
+        "directed_distance_90th_percentile_pixels": [
+          1.0,
+          10.0
+        ],
+        "pass": false
+      }
+    },
+    "Cr": {
+      "octahedral": {
+        "paper_pixels": 33735,
+        "submitted_pixels": 34509,
+        "errors": [],
+        "precision_within_tolerance": 0.9888434901040308,
+        "recall_within_tolerance": 0.9947235808507485,
+        "directed_distance_90th_percentile_pixels": [
+          1.0,
+          1.0
+        ],
+        "pass": true
+      },
+      "tetrahedral": {
+        "paper_pixels": 10987,
+        "submitted_pixels": 1840,
+        "errors": [
+          "Published visible support recall below frozen minimum",
+          "Directed 90th-percentile distance exceeds frozen tolerance"
+        ],
+        "precision_within_tolerance": 0.9184782608695652,
+        "recall_within_tolerance": 0.49604077546190956,
+        "directed_distance_90th_percentile_pixels": [
+          3.0,
+          23.0
+        ],
+        "pass": false
+      }
+    },
+    "Mn": {
+      "octahedral": {
+        "paper_pixels": 39201,
+        "submitted_pixels": 36746,
+        "errors": [],
+        "precision_within_tolerance": 0.9894954552876504,
+        "recall_within_tolerance": 0.9954592995076657,
+        "directed_distance_90th_percentile_pixels": [
+          0.0,
+          1.0
+        ],
+        "pass": true
+      },
+      "tetrahedral": {
+        "paper_pixels": 8651,
+        "submitted_pixels": 3563,
+        "errors": [
+          "Published visible support recall below frozen minimum",
+          "Directed 90th-percentile distance exceeds frozen tolerance"
+        ],
+        "precision_within_tolerance": 0.9623912433342688,
+        "recall_within_tolerance": 0.8082302623974107,
+        "directed_distance_90th_percentile_pixels": [
+          1.4142135623730951,
+          5.0
+        ],
+        "pass": false
+      }
+    },
+    "Fe": {
+      "octahedral": {
+        "paper_pixels": 39135,
+        "submitted_pixels": 35341,
+        "errors": [],
+        "precision_within_tolerance": 0.9877762372315441,
+        "recall_within_tolerance": 0.9913632298454069,
+        "directed_distance_90th_percentile_pixels": [
+          1.0,
+          1.0
+        ],
+        "pass": true
+      },
+      "tetrahedral": {
+        "paper_pixels": 16922,
+        "submitted_pixels": 8557,
+        "errors": [
+          "Published visible support recall below frozen minimum",
+          "Directed 90th-percentile distance exceeds frozen tolerance"
+        ],
+        "precision_within_tolerance": 0.9907677924506252,
+        "recall_within_tolerance": 0.8728282708899657,
+        "directed_distance_90th_percentile_pixels": [
+          1.0,
+          4.47213595499958
+        ],
+        "pass": false
+      }
+    },
+    "Co": {
+      "octahedral": {
+        "paper_pixels": 42998,
+        "submitted_pixels": 37452,
+        "errors": [],
+        "precision_within_tolerance": 0.973112250347111,
+        "recall_within_tolerance": 0.991534489976278,
+        "directed_distance_90th_percentile_pixels": [
+          1.0,
+          1.0
+        ],
+        "pass": true
+      },
+      "tetrahedral": {
+        "paper_pixels": 22713,
+        "submitted_pixels": 13851,
+        "errors": [],
+        "precision_within_tolerance": 0.9914807595119486,
+        "recall_within_tolerance": 0.9083344340245675,
+        "directed_distance_90th_percentile_pixels": [
+          0.0,
+          2.8284271247461903
+        ],
+        "pass": true
+      }
+    },
+    "Ni": {
+      "octahedral": {
+        "paper_pixels": 56328,
+        "submitted_pixels": 47708,
+        "errors": [],
+        "precision_within_tolerance": 0.9809046700762974,
+        "recall_within_tolerance": 0.9860637693509444,
+        "directed_distance_90th_percentile_pixels": [
+          1.0,
+          1.0
+        ],
+        "pass": true
+      },
+      "tetrahedral": {
+        "paper_pixels": 29743,
+        "submitted_pixels": 17813,
+        "errors": [],
+        "precision_within_tolerance": 0.9967439510469882,
+        "recall_within_tolerance": 0.9567965571731164,
+        "directed_distance_90th_percentile_pixels": [
+          0.0,
+          2.0
+        ],
+        "pass": true
+      }
+    },
+    "Cu": {
+      "octahedral": {
+        "paper_pixels": 42949,
+        "submitted_pixels": 36654,
+        "errors": [],
+        "precision_within_tolerance": 0.9337589349047853,
+        "recall_within_tolerance": 0.9924328855153787,
+        "directed_distance_90th_percentile_pixels": [
+          2.0,
+          1.0
+        ],
+        "pass": true
+      },
+      "tetrahedral": {
+        "paper_pixels": 48232,
+        "submitted_pixels": 31603,
+        "errors": [],
+        "precision_within_tolerance": 0.9966775306141822,
+        "recall_within_tolerance": 0.9700821031680212,
+        "directed_distance_90th_percentile_pixels": [
+          0.0,
+          1.4142135623730951
+        ],
+        "pass": true
+      }
+    }
+  },
+  "paper_plot_pass": false,
+  "scientific_pass": null,
+  "independent_source_replay_required": true,
+  "mandatory_manual_review": "All eight full panels, unusual curves, and late-metal L2/post-edge class contrasts; no opacity-derived population inference."
+}

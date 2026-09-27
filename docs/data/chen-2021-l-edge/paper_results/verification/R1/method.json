@@ -1,0 +1,10 @@
+{
+  "symprec_A": 0.01,
+  "stitch_samples": 500,
+  "broadening_fwhm_eV": 1.2,
+  "convolution_boundary": "reflect",
+  "site_averaging": "crystallographic multiplicity; cubic interpolation on common support",
+  "L23_stitch": "sum L3 and nonnegative cubic L2 extrapolation on L3 support",
+  "normalisation": "maximum after broadening, no fitted intensity transform",
+  "paper_data_read": false
+}

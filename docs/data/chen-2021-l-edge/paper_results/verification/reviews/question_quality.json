@@ -1,0 +1,60 @@
+{
+  "reviewer": "paper_adversarial_review",
+  "role": "Independent adversarial question-quality reviewer; separate from candidate and figure-truth authors",
+  "revision": "paper-result-grounded R1/R2",
+  "pass": true,
+  "cases": {
+    "R1": {
+      "pass": true,
+      "title": "Which L2,3 spectral features distinguish spinel MgMn2O4 and olivine LiFePO4?",
+      "background": "These are site-resolved FEFF L2 and L3 XANES calculations for Ti, V, Cr, Mn, Fe, Co, Ni and Cu. Each gzip file contains one native JSON record per line. \"spectrum\" holds [photon energies in eV, absorption intensities]; \"absorbing_atom\" is a zero-based index into \"structure.sites\". \"mp-id\" is the released material identifier; \"name\" identifies a calculation. Structures contain lattice vectors and fractional coordinates. Intensities retain the released relative scale.",
+      "instruction": "Which L2,3 spectral features distinguish spinel MgMn2O4 and olivine LiFePO4 at 1.2 eV Gaussian FWHM resolution? Establish their material responses and quantify the differences in peak structure and relative intensities. Return a report, supporting figures, runnable code, responses.npz (compound__element__edge keys, energy and intensity columns), and sources.csv (material, material_id, element, name) identifying the contributing native calculations.",
+      "exported_task_sha256": "57ffca7d5dc513924f946e34d78b50266b1aab95dc1aabd9e43422bb6b2393f1",
+      "bundle_file_sha256": {
+        "inputs/Co.jsonl.gz": "619b1f69f640f6f00f5969d81d718a10ab89bfe2459b37e3ac2485af64662643",
+        "inputs/Cr.jsonl.gz": "1b6e31151375e347bf6f528d3905b3b495a02868400e9228e52537ce060404f3",
+        "inputs/Cu.jsonl.gz": "d7b66378b0f9156eae4758e77c2529113dc59db793b1a31868a3f1b4adee78c1",
+        "inputs/Fe.jsonl.gz": "ad39eb07b7ffd53fdd05d697d7fb454bcb4c0f2ca84f41f0a9ed135c14420fbb",
+        "inputs/Mn.jsonl.gz": "63c20361c2360241866758ceda1ab4d1ce6842f650974267031f9190a8d5d944",
+        "inputs/Ni.jsonl.gz": "d816a72f0d1ac0b8ddd4c4d30676f4a24b64923ebc21a54660c0236e522cbb0c",
+        "inputs/Ti.jsonl.gz": "546de52105cf8013c4271e90e2c04b5bbef7830e3f4c9a7c8a5d3cfedd8e29b9",
+        "inputs/V.jsonl.gz": "4998451c087a3281fbf90f5a706bfd397e5995f039ebd705e4b2494fd66a9a56",
+        "task.json": "57ffca7d5dc513924f946e34d78b50266b1aab95dc1aabd9e43422bb6b2393f1"
+      },
+      "input_boundary_checked": true,
+      "export_contains_only_task_and_eight_native_inputs": true,
+      "expected_answers_figures_methods_labels_absent_from_export": true
+    },
+    "R2": {
+      "pass": true,
+      "title": "How do coordination and absorber identity shape Ti–Cu L2,3 spectra?",
+      "background": "These are site-resolved FEFF L2 and L3 XANES calculations for Ti, V, Cr, Mn, Fe, Co, Ni and Cu. Each gzip file contains one native JSON record per line. \"spectrum\" holds [photon energies in eV, absorption intensities]; \"absorbing_atom\" is a zero-based index into \"structure.sites\". \"mp-id\" is the released material identifier; \"name\" identifies a calculation. Structures contain lattice vectors and fractional coordinates. Intensities retain the released relative scale.",
+      "instruction": "How do Ti–Cu L2,3 line shapes differ between octahedral and tetrahedral coordination, and how does spectral structure evolve across this series? Establish the coordination-resolved spectral evidence from the released structures and calculations. Return a report, figures for every element, runnable code, one ELEMENT.npz file per element (site keys; energy and intensity columns), and sites.csv (element, key, source_l2, source_l3, environment) linking each response to its native calculations and coordination assignment.",
+      "exported_task_sha256": "127cc23695fd8770a3ca41b31aeedbd3353a82c10c3a37c093711a2f6e3df051",
+      "bundle_file_sha256": {
+        "inputs/Co.jsonl.gz": "619b1f69f640f6f00f5969d81d718a10ab89bfe2459b37e3ac2485af64662643",
+        "inputs/Cr.jsonl.gz": "1b6e31151375e347bf6f528d3905b3b495a02868400e9228e52537ce060404f3",
+        "inputs/Cu.jsonl.gz": "d7b66378b0f9156eae4758e77c2529113dc59db793b1a31868a3f1b4adee78c1",
+        "inputs/Fe.jsonl.gz": "ad39eb07b7ffd53fdd05d697d7fb454bcb4c0f2ca84f41f0a9ed135c14420fbb",
+        "inputs/Mn.jsonl.gz": "63c20361c2360241866758ceda1ab4d1ce6842f650974267031f9190a8d5d944",
+        "inputs/Ni.jsonl.gz": "d816a72f0d1ac0b8ddd4c4d30676f4a24b64923ebc21a54660c0236e522cbb0c",
+        "inputs/Ti.jsonl.gz": "546de52105cf8013c4271e90e2c04b5bbef7830e3f4c9a7c8a5d3cfedd8e29b9",
+        "inputs/V.jsonl.gz": "4998451c087a3281fbf90f5a706bfd397e5995f039ebd705e4b2494fd66a9a56",
+        "task.json": "127cc23695fd8770a3ca41b31aeedbd3353a82c10c3a37c093711a2f6e3df051"
+      },
+      "input_boundary_checked": true,
+      "export_contains_only_task_and_eight_native_inputs": true,
+      "expected_answers_figures_methods_labels_absent_from_export": true
+    }
+  },
+  "findings": [
+    "Both prompts are standalone research questions; no paper/figure references, expected directions or hidden target values appear in solver text.",
+    "Background is restricted to native data schema, units, absorber indices, identifiers and preserved intensity scale. Gaussian FWHM in R1 is the requested observation condition, not a procedural recipe.",
+    "R1 requires chemical/crystallographic selection from the full release projection, reconstruction of a complete two-edge material spectrum, finite-resolution processing, and quantitative spectral comparison. It is narrower than R2, and difficult-agent performance has not been empirically calibrated.",
+    "R2 requires structural neighborhood/motif inference, valid edge pairing, full spectral ensembles across eight elements, and substantive coordination/series interpretation. A count, mean curve, or generic branching-ratio claim is insufficient.",
+    "The explicit response/source filenames are an auditable output interface and prescribe no scientific algorithm.",
+    "The original three new-analysis questions are superseded. R1 now binds to Figure4(c,d); R2 must bind to all Figure5 panels. No missing author result is replaced with a new experiment.",
+    "R1 scope exclusions are necessary and disclosed: missing or mismatching Figure4 systems are not silently accepted. The released Pnma LiFePO4 ID differs from Table2; native crystallographic identity and mandatory full-curve agreement support the retained comparison.",
+    "Publication of the evaluator makes the review repository nonblind. A real solver run must isolate this nine-file bundle and prevent retrieval of evaluator/paper answer assets."
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "source_figure_sha256": "be7bbd6785d830b1aae23626d4538eb572679335a66ba6588f55e2c6f53da727",
+  "source_only": true,
+  "candidate_read": false,
+  "crop_box_source_pixels": [
+    1340,
+    190,
+    1460,
+    390
+  ],
+  "legend_integrated_width_pixels": 2.6200873362445414,
+  "caveat": "Stroke coordinates estimated from source raster weighted centerline; subpixel positions/antialiasing and line opacity are not uniquely identified. Grid assesses raster representation, not scientific correctness.",
+  "best": [
+    {
+      "alpha": 0.013999999999999992,
+      "width_source_pixels": 1.650000000000001,
+      "source_rgb_rmse": 0.07229988054812211
+    },
+    {
+      "alpha": 0.014499999999999992,
+      "width_source_pixels": 1.650000000000001,
+      "source_rgb_rmse": 0.07229988054812211
+    },
+    {
+      "alpha": 0.014999999999999993,
+      "width_source_pixels": 1.650000000000001,
+      "source_rgb_rmse": 0.07229988054812211
+    },
+    {
+      "alpha": 0.015499999999999993,
+      "width_source_pixels": 1.650000000000001,
+      "source_rgb_rmse": 0.07229988054812211
+    },
+    {
+      "alpha": 0.01599999999999999,
+      "width_source_pixels": 1.650000000000001,
+      "source_rgb_rmse": 0.07229988054812211
+    },
+    {
+      "alpha": 0.01649999999999999,
+      "width_source_pixels": 1.650000000000001,
+      "source_rgb_rmse": 0.07229988054812211
+    },
+    {
+      "alpha": 0.01699999999999999,
+      "width_source_pixels": 1.650000000000001,
+      "source_rgb_rmse": 0.07229988054812211
+    },
+    {
+      "alpha": 0.01749999999999999,
+      "width_source_pixels": 1.650000000000001,
+      "source_rgb_rmse": 0.07229988054812211
+    },
+    {
+      "alpha": 0.013999999999999992,
+      "width_source_pixels": 1.750000000000001,
+      "source_rgb_rmse": 0.07282190812544191
+    },
+    {
+      "alpha": 0.014499999999999992,
+      "width_source_pixels": 1.750000000000001,
+      "source_rgb_rmse": 0.07282190812544191
+    },
+    {
+      "alpha": 0.014999999999999993,
+      "width_source_pixels": 1.750000000000001,
+      "source_rgb_rmse": 0.07282190812544191
+    },
+    {
+      "alpha": 0.015499999999999993,
+      "width_source_pixels": 1.750000000000001,
+      "source_rgb_rmse": 0.07282190812544191
+    },
+    {
+      "alpha": 0.01599999999999999,
+      "width_source_pixels": 1.750000000000001,
+      "source_rgb_rmse": 0.07282190812544191
+    },
+    {
+      "alpha": 0.01649999999999999,
+      "width_source_pixels": 1.750000000000001,
+      "source_rgb_rmse": 0.07282190812544191
+    },
+    {
+      "alpha": 0.01699999999999999,
+      "width_source_pixels": 1.750000000000001,
+      "source_rgb_rmse": 0.07282190812544191
+    },
+    {
+      "alpha": 0.01749999999999999,
+      "width_source_pixels": 1.750000000000001,
+      "source_rgb_rmse": 0.07282190812544191
+    },
+    {
+      "alpha": 0.013999999999999992,
+      "width_source_pixels": 1.700000000000001,
+      "source_rgb_rmse": 0.07436600722307894
+    },
+    {
+      "alpha": 0.014499999999999992,
+      "width_source_pixels": 1.700000000000001,
+      "source_rgb_rmse": 0.07436600722307894
+    },
+    {
+      "alpha": 0.014999999999999993,
+      "width_source_pixels": 1.700000000000001,
+      "source_rgb_rmse": 0.07436600722307894
+    },
+    {
+      "alpha": 0.015499999999999993,
+      "width_source_pixels": 1.700000000000001,
+      "source_rgb_rmse": 0.07436600722307894
+    }
+  ],
+  "frozen_renderer_result": {
+    "alpha": 0.014999999999999993,
+    "width_source_pixels": 1.0000000000000004,
+    "source_rgb_rmse": 0.15666989036012804
+  }
+}

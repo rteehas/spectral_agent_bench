@@ -1,0 +1,58 @@
+{
+  "LiFePO4": {
+    "source_record_ids": [
+      "mp-761468-4-XANES-L2",
+      "mp-761468-4-XANES-L3"
+    ],
+    "material_id": "mp-761468",
+    "element": "Fe",
+    "energy_shift_eV": 0.0,
+    "broadening_fwhm_eV": 1.2,
+    "normalisation": "maximum after broadening; no baseline subtraction",
+    "space_group_number": 62,
+    "site_weights": {
+      "L2": [
+        {
+          "source_record_id": "mp-761468-4-XANES-L2",
+          "multiplicity": 4,
+          "normalised_weight": 1.0
+        }
+      ],
+      "L3": [
+        {
+          "source_record_id": "mp-761468-4-XANES-L3",
+          "multiplicity": 4,
+          "normalised_weight": 1.0
+        }
+      ]
+    }
+  },
+  "MgMn2O4": {
+    "source_record_ids": [
+      "mp-32006-2-XANES-L2",
+      "mp-32006-2-XANES-L3"
+    ],
+    "material_id": "mp-32006",
+    "element": "Mn",
+    "energy_shift_eV": 0.0,
+    "broadening_fwhm_eV": 1.2,
+    "normalisation": "maximum after broadening; no baseline subtraction",
+    "space_group_number": 141,
+    "site_weights": {
+      "L2": [
+        {
+          "source_record_id": "mp-32006-2-XANES-L2",
+          "multiplicity": 4,
+          "normalised_weight": 1.0
+        }
+      ],
+      "L3": [
+        {
+          "source_record_id": "mp-32006-2-XANES-L3",
+          "multiplicity": 4,
+          "normalised_weight": 1.0
+        }
+      ]
+    }
+  }
+}

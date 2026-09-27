@@ -1,0 +1,4 @@
+material,material_id,space_group_symbol,space_group_number,records,selected_phase
+LiFePO4,mp-18951,Pna2_1,33,6,False
+LiFePO4,mp-761468,Pnma,62,2,True
+MgMn2O4,mp-32006,I4_1/amd,141,2,True

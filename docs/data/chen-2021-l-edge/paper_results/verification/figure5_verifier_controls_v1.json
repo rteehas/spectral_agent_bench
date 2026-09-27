@@ -1,0 +1,51 @@
+{
+  "all_controls_pass": true,
+  "controls": [
+    {
+      "control": "published_figure_against_itself",
+      "expected_pass": true,
+      "actual_pass": true,
+      "control_pass": true,
+      "passing_panel_colors": 16
+    },
+    {
+      "control": "empty_white_plot",
+      "expected_pass": false,
+      "actual_pass": false,
+      "control_pass": true,
+      "passing_panel_colors": 0
+    },
+    {
+      "control": "swap_red_blue_class_colors",
+      "expected_pass": false,
+      "actual_pass": false,
+      "control_pass": true,
+      "passing_panel_colors": 0
+    },
+    {
+      "control": "omit_Cu_panel",
+      "expected_pass": false,
+      "actual_pass": false,
+      "control_pass": true,
+      "passing_panel_colors": 14
+    },
+    {
+      "control": "remove_L2_and_postedge_features",
+      "expected_pass": false,
+      "actual_pass": false,
+      "control_pass": true,
+      "passing_panel_colors": 0
+    }
+  ],
+  "applied_candidate_paper_plot_pass": false,
+  "applied_candidate_passing_panel_colors": 10,
+  "mandatory_panel_colors": 16,
+  "interpretation": "A candidate with a failed mandatory panel/color remains unvalidated. The checker uses an assumed, frozen renderer; absent author rendering parameters can make a scientific reconstruction fail this literal image gate. Failure must not be silently changed to acceptance or called proof of incorrect physics.",
+  "review_findings": [
+    "Distance-transform precision/recall and p90 checks implement the fixed contract separately for all sixteen panel/color pairs.",
+    "The figure coordinate ticks were extracted independently of candidate data; no residual-driven masks are used.",
+    "The blue dominance detector excludes some isolated faint paper pixels, e.g. RGB 251,252,254. Hence visible-color support still depends on compositing even though no density or class quantile is inferred.",
+    "An Agg floor-compositing renderer can differ from the published raster's rounding. Any correction must be established from source-only calibration and recorded; tolerances may not be enlarged after inspecting candidate errors.",
+    "Paper-plot comparison alone cannot certify code provenance, coordination assignments or honest construction of supplied arrays; independent source replay and scientific review remain mandatory."
+  ]
+}

@@ -1,0 +1,259 @@
+{
+  "all_controls_pass": true,
+  "n_controls": 20,
+  "n_expected_rejections": 17,
+  "controls": [
+    {
+      "control": "unaltered_candidate",
+      "expected_paper_numerical_pass": true,
+      "actual_paper_numerical_pass": true,
+      "control_pass": true,
+      "errors": {
+        "MgMn2O4": [],
+        "LiFePO4": []
+      }
+    },
+    {
+      "control": "permitted_rigid_translation",
+      "expected_paper_numerical_pass": true,
+      "actual_paper_numerical_pass": true,
+      "control_pass": true,
+      "errors": {
+        "MgMn2O4": [],
+        "LiFePO4": []
+      }
+    },
+    {
+      "control": "missing_required_material",
+      "expected_paper_numerical_pass": false,
+      "actual_paper_numerical_pass": false,
+      "control_pass": true,
+      "errors": {
+        "MgMn2O4": [],
+        "LiFePO4": [
+          "Missing or insufficient curve"
+        ]
+      }
+    },
+    {
+      "control": "all_zero",
+      "expected_paper_numerical_pass": false,
+      "actual_paper_numerical_pass": false,
+      "control_pass": true,
+      "errors": {
+        "MgMn2O4": [
+          "Spectrum must be nonconstant and have a positive maximum"
+        ],
+        "LiFePO4": [
+          "Spectrum must be nonconstant and have a positive maximum"
+        ]
+      }
+    },
+    {
+      "control": "constant_unit_response",
+      "expected_paper_numerical_pass": false,
+      "actual_paper_numerical_pass": false,
+      "control_pass": true,
+      "errors": {
+        "MgMn2O4": [
+          "Spectrum must be nonconstant and have a positive maximum"
+        ],
+        "LiFePO4": [
+          "Spectrum must be nonconstant and have a positive maximum"
+        ]
+      }
+    },
+    {
+      "control": "permitted_native_intensity_units",
+      "expected_paper_numerical_pass": true,
+      "actual_paper_numerical_pass": true,
+      "control_pass": true,
+      "errors": {
+        "MgMn2O4": [],
+        "LiFePO4": []
+      }
+    },
+    {
+      "control": "unphysical_not_finite",
+      "expected_paper_numerical_pass": false,
+      "actual_paper_numerical_pass": false,
+      "control_pass": true,
+      "errors": {
+        "MgMn2O4": [
+          "Nonfinite values or nonmonotone energies"
+        ],
+        "LiFePO4": []
+      }
+    },
+    {
+      "control": "negative_energy_axis",
+      "expected_paper_numerical_pass": false,
+      "actual_paper_numerical_pass": false,
+      "control_pass": true,
+      "errors": {
+        "MgMn2O4": [
+          "Nonfinite values or nonmonotone energies"
+        ],
+        "LiFePO4": [
+          "Nonfinite values or nonmonotone energies"
+        ]
+      }
+    },
+    {
+      "control": "missing_L2_feature",
+      "expected_paper_numerical_pass": false,
+      "actual_paper_numerical_pass": false,
+      "control_pass": true,
+      "errors": {
+        "MgMn2O4": [
+          "Full-curve normalized RMSE exceeds the fixed paper tolerance",
+          "Maximum local residual exceeds the fixed paper tolerance",
+          "Peak lies at the search-window boundary"
+        ],
+        "LiFePO4": []
+      }
+    },
+    {
+      "control": "independent_L2_displacement",
+      "expected_paper_numerical_pass": false,
+      "actual_paper_numerical_pass": false,
+      "control_pass": true,
+      "errors": {
+        "MgMn2O4": [
+          "Full-curve normalized RMSE exceeds the fixed paper tolerance",
+          "Maximum local residual exceeds the fixed paper tolerance",
+          "Secondary-peak position disagrees with the published curve"
+        ],
+        "LiFePO4": []
+      }
+    },
+    {
+      "control": "energy_axis_stretched",
+      "expected_paper_numerical_pass": false,
+      "actual_paper_numerical_pass": false,
+      "control_pass": true,
+      "errors": {
+        "MgMn2O4": [
+          "Full-curve normalized RMSE exceeds the fixed paper tolerance",
+          "Maximum local residual exceeds the fixed paper tolerance",
+          "Secondary-peak position disagrees with the published curve"
+        ],
+        "LiFePO4": []
+      }
+    },
+    {
+      "control": "clipped_postedge",
+      "expected_paper_numerical_pass": false,
+      "actual_paper_numerical_pass": false,
+      "control_pass": true,
+      "errors": {
+        "MgMn2O4": [
+          "Insufficient published-curve coverage",
+          "An uncovered endpoint exceeds one published stroke width"
+        ],
+        "LiFePO4": []
+      }
+    },
+    {
+      "control": "clipped_preedge",
+      "expected_paper_numerical_pass": false,
+      "actual_paper_numerical_pass": false,
+      "control_pass": true,
+      "errors": {
+        "MgMn2O4": [
+          "Insufficient published-curve coverage",
+          "An uncovered endpoint exceeds one published stroke width",
+          "Full-curve normalized RMSE exceeds the fixed paper tolerance",
+          "Maximum local residual exceeds the fixed paper tolerance"
+        ],
+        "LiFePO4": []
+      }
+    },
+    {
+      "control": "spurious_postedge_plateau",
+      "expected_paper_numerical_pass": false,
+      "actual_paper_numerical_pass": false,
+      "control_pass": true,
+      "errors": {
+        "MgMn2O4": [
+          "Full-curve normalized RMSE exceeds the fixed paper tolerance",
+          "Maximum local residual exceeds the fixed paper tolerance"
+        ],
+        "LiFePO4": []
+      }
+    },
+    {
+      "control": "wrong_material_id",
+      "expected_paper_numerical_pass": false,
+      "actual_paper_numerical_pass": false,
+      "control_pass": true,
+      "errors": {
+        "MgMn2O4": [
+          "Wrong released material or absorbing element"
+        ],
+        "LiFePO4": []
+      }
+    },
+    {
+      "control": "wrong_absorber",
+      "expected_paper_numerical_pass": false,
+      "actual_paper_numerical_pass": false,
+      "control_pass": true,
+      "errors": {
+        "MgMn2O4": [
+          "Wrong released material or absorbing element"
+        ],
+        "LiFePO4": []
+      }
+    },
+    {
+      "control": "forged_source_identifiers",
+      "expected_paper_numerical_pass": false,
+      "actual_paper_numerical_pass": false,
+      "control_pass": true,
+      "errors": {
+        "MgMn2O4": [
+          "Native source identifiers do not match the released material/edge pair"
+        ],
+        "LiFePO4": []
+      }
+    },
+    {
+      "control": "duplicated_source_identifier",
+      "expected_paper_numerical_pass": false,
+      "actual_paper_numerical_pass": false,
+      "control_pass": true,
+      "errors": {
+        "MgMn2O4": [
+          "Native source identifiers do not match the released material/edge pair"
+        ],
+        "LiFePO4": []
+      }
+    },
+    {
+      "control": "wrong_broadening",
+      "expected_paper_numerical_pass": false,
+      "actual_paper_numerical_pass": false,
+      "control_pass": true,
+      "errors": {
+        "MgMn2O4": [
+          "Broadening differs from the published 1.2 eV FWHM"
+        ],
+        "LiFePO4": []
+      }
+    },
+    {
+      "control": "preapplied_declared_registration",
+      "expected_paper_numerical_pass": false,
+      "actual_paper_numerical_pass": false,
+      "control_pass": true,
+      "errors": {
+        "MgMn2O4": [
+          "Submit native energies; the evaluator performs the one permitted registration"
+        ],
+        "LiFePO4": []
+      }
+    }
+  ],
+  "scope": "This audit tests strict paper-curve checks, not whether an arbitrary submitted program honestly produced its arrays. Independent source/code execution remains required."
+}

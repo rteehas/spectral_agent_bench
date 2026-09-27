@@ -1,0 +1,14 @@
+{
+  "neighbor_method": "pymatgen CrystalNN defaults, unweighted discrete coordination",
+  "motif_method": "For coordination 4 or 6, calculate every CN_OPT_PARAMS motif and select its maximum local order parameter; keep only tetrahedral or octahedral winners in the displayed ensemble. Other coordinations/motifs remain audited.",
+  "spectral_unit": "one inequivalent absorbing site with both native L2 and L3 edges",
+  "pair_identity": "released mp-id, element, absorbing index, and exact physical-structure hash; names are never overwritten",
+  "identity_collision_policy": "Distinct structures sharing an mp-id remain separate site identities and are explicitly recorded.",
+  "negative_policy": "If either partial edge has any negative intensity, exclude the pair from reconstruction and retain both source names in the audit.",
+  "stitch": "500 equal energy samples on native L3 support; cubic L3 interpolation plus nonnegative cubic extrapolation of native L2",
+  "normalisation": "maximum of each entire stitched L23 curve",
+  "broadening_fwhm_eV": 0.0,
+  "energy_shift_eV": 0.0,
+  "published_reference_inputs": [],
+  "raw_summary_note": "Group medians/means are descriptive outputs of this reconstruction, not quantitative values read from the published overplot."
+}

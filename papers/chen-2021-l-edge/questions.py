@@ -1,45 +1,49 @@
-"""Minimal solver-facing questions; no worked protocol or expected findings."""
+"""Minimal research questions. Paper targets and worked methods stay evaluator-only."""
+
 BACKGROUND = (
     'These are site-resolved FEFF L2 and L3 XANES calculations for Ti, V, Cr, Mn, Fe, Co, Ni and Cu. '
-    'Each gzip file contains one native JSON record per line. "spectrum" holds [photon energies in eV, absorption intensities]; '
-    '"absorbing_atom" is a zero-based index into "structure.sites". "mp-id" is the released material identifier; "name" identifies a calculation. '
-    'Structures include lattice vectors and fractional coordinates. Intensities retain the released relative scale.'
+    'Each gzip file contains one native JSON record per line. "spectrum" holds '
+    '[photon energies in eV, absorption intensities]; "absorbing_atom" is a zero-based index '
+    'into "structure.sites". "mp-id" is the released material identifier; "name" identifies '
+    'a calculation. Structures contain lattice vectors and fractional coordinates. '
+    'Intensities retain the released relative scale.'
 )
-DELIVER = 'Return a report with quantitative evidence, methodological justification and limitations, supporting figures, and runnable code. '
+
 QUESTIONS = [
     {
-        'id': 'Q1',
-        'title': 'When do simplified treatments of inequivalent sites distort a material’s L-edge fingerprint?',
+        'id': 'R1',
+        'title': 'Which L2,3 spectral features distinguish spinel MgMn2O4 and olivine LiFePO4?',
         'instruction': (
-            'Determine how strongly material-level L2 and L3 fingerprints depend on differences among absorbing sites and their populations, '
-            'and whether finite energy resolution changes which materials are most affected. Establish where the available calculations support a complete material response. '
-            + DELIVER +
-            'Include responses.npz (material__element__edge keys, energy and intensity columns), sites.csv identifying contributing raw records and their populations, '
-            'and numerical evidence for the comparisons.'
+            'Which L2,3 spectral features distinguish spinel MgMn2O4 and olivine LiFePO4 '
+            'at 1.2 eV Gaussian FWHM resolution? Establish their material responses and '
+            'quantify the differences in peak structure and relative intensities. '
+            'Return a report, supporting figures, runnable code, responses.npz '
+            '(compound__element__edge keys, energy and intensity columns), and sources.csv '
+            '(material, material_id, element, name) identifying the contributing native calculations.'
         ),
-        'derivation': 'The site-to-material aggregation stage of the high-throughput workflow. The sensitivity of resulting fingerprints to simplified site treatment is a new release-based investigation.',
+        'derivation': (
+            'Material-level spectral reconstruction and line-shape characterization, '
+            'verified against the computed curves in Figure 4(c,d). The other four '
+            'panels are excluded, with the failed comparisons and missing inputs documented.'
+        ),
     },
     {
-        'id': 'Q2',
-        'title': 'Does local coordination geometry predict the balance of L3 and L2 spectral weight across transition-metal compounds?',
+        'id': 'R2',
+        'title': 'How do coordination and absorber identity shape Ti–Cu L2,3 spectra?',
         'instruction': (
-            'Determine whether tetrahedral and octahedral environments differ in their L3-to-L2 spectral weight once chemical composition is taken into account. '
-            'How robust is the relationship to the definitions of local geometry and spectral weight, and what physical interpretation do these calculations support? '
-            + DELIVER +
-            'Include sites.csv identifying each raw observation and the structural and spectral quantities used; define their meaning and units in the report.'
+            'How do Ti–Cu L2,3 line shapes differ between octahedral and tetrahedral '
+            'coordination, and how does spectral structure evolve across this series? '
+            'Establish the coordination-resolved spectral evidence from the released '
+            'structures and calculations. Return a report, figures for every element, '
+            'runnable code, one ELEMENT.npz file per element (site keys; energy and '
+            'intensity columns), and sites.csv '
+            '(element, key, source_l2, source_l3, environment) linking each response to '
+            'its native calculations and coordination assignment.'
         ),
-        'derivation': 'The comparison of local environments and L-edge intensity balance motivates this conditional analysis. The release contains structures and separate edge spectra, but no historical labels or exact figure arrays.',
-    },
-    {
-        'id': 'Q3',
-        'title': 'Does the L2 edge add transferable coordination information beyond the L3 edge?',
-        'instruction': (
-            'Determine whether including L2 improves identification of tetrahedral and octahedral absorbing environments from spectra when the test compositions are absent from model development. '
-            'Assess how the conclusion depends on chemistry and energy resolution. Structures may define the reference environments but must not enter spectral prediction. '
-            + DELIVER +
-            'Include sites.csv with source identities and reference environments, predictions.csv (name,method,split,predicted), '
-            'and partitions.csv (material,method,split,role).'
+        'derivation': (
+            'The structure-to-spectrum comparison in Figure 5. All eight published '
+            'panels and their visible coordination-dependent line shapes are required '
+            'comparison targets; source integrity alone is insufficient.'
         ),
-        'derivation': 'The stated use of L-edge spectra for local-environment inference. The paired-edge transfer comparison is a new benchmark experiment; the release contains no original machine-learning predictions or splits.',
     },
 ]

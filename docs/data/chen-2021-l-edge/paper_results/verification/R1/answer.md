@@ -1,0 +1,1 @@
+Both compounds have a dominant L3 white line and a weaker L2 peak. The MgMn2O4 L2/L3 peak-height ratio is 0.432, compared with 0.390 for LiFePO4. The separations are 11.61 and 13.27 eV, respectively. Absolute photon energies retain the release calibration. These are peak-height ratios after broadening, not integrated branching ratios or spin-state measurements.

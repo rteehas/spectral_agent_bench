@@ -1,200 +1,109 @@
-# Chen 2021: transition-metal L-edge research questions
+# Chen 2021: mandatory verification against publication results
 
-Three independent questions use native site calculations and periodic structures
-from the open L-edge XANES release. Solvers receive raw records, brief format
-context and a research question. They receive no processing protocol, geometric
-labels, expected trend, reference prediction or worked code.
+This revision replaces the three extension experiments with two standalone
+research questions grounded in results actually plotted by
+[Chen et al. (2021)](https://doi.org/10.1038/s41597-021-00936-5).
+The publication is the answer key. A plausible new analysis, correct source
+identities, or agreement with our worked solution cannot replace agreement with
+its results.
 
-| Task | Research question | Decisions left to the solver |
+| Question | Publication target | Status |
 |---|---|---|
-| Q1 | When do simplified treatments of inequivalent sites distort material L-edge fingerprints? | Establish complete site coverage and populations, reconstruct physical responses, design simplification comparisons and assess resolution dependence. |
-| Q2 | Does local geometry predict the balance of L3 and L2 spectral weight after accounting for chemistry? | Define geometric environments and spectral observables, establish chemical overlap, control confounding, quantify uncertainty and assess interpretation. |
-| Q3 | Does L2 add coordination information beyond L3 on unseen compositions? | Derive defensible labels, construct matched predictors and controls, design composition transfer and assess chemistry/resolution dependence. |
+| R1: Which spectral features distinguish spinel MgMn2O4 and olivine LiFePO4? | Original FEFF vector curves in Figure 4(c,d), including complete visible shapes and secondary peaks | Paper verified, with independent raw-data replay |
+| R2: How do coordination and absorber identity shape Ti–Cu spectra? | All eight Figure 5 panels, both coordination colors, full line-shape and outlier evidence | Unvalidated; withheld from scoring until every mandatory comparison passes |
 
-The questions derive from aggregation, structural interpretation and proposed
-inference uses in [Chen et al., Scientific Data 8, 153 (2021)](https://doi.org/10.1038/s41597-021-00936-5).
-The sensitivity and transfer experiments are new analyses of the release, not
-claimed reproductions of historical numerical results. They are designed to be
-difficult research tasks; difficulty has not been calibrated on a population of
-scientific agent systems.
+R1 is a narrower reconstruction task than originally intended. Its difficulty
+has not been calibrated on agent systems. R2 requires a substantial structural
+and spectral investigation, but computational difficulty does not excuse an
+unresolved verification failure. Consult the recorded
+[R1 acceptance](../../docs/data/chen-2021-l-edge/paper_results/verification/R1_acceptance.json)
+and [R2 acceptance](../../docs/data/chen-2021-l-edge/paper_results/verification/R2_acceptance.json)
+for the actual gate results.
 
-## Source data and scope
+## Solver inputs
 
-[Figshare version 1](https://doi.org/10.6084/m9.figshare.12824513.v1), credited to
-Yiming Chen (2020), supplies one `L-XAS.json.tgz` archive under an MIT license.
-It is 218,348,880 bytes, SHA256
-`39d25a0e8085af41d3f0a06bbab0b0e1a8a91968aa21bef23a2397774ccf9537`.
-Its single member is newline-delimited JSON despite its `.json` extension.
-The independently audited release contains 151,140 records for 22,879 material
-identifiers and 69 absorbing elements. There are 53 negative-intensity records
-and 1,508 records lacking their partner edge. These exact release counts need
-not equal rounded historical descriptions.
-
-This entry retains **all 27,570 Ti, V, Cr, Mn, Fe, Co, Ni and Cu records**, covering
-7,618 material identifiers. The eight gzip files total approximately 37 MB.
-Each record preserves its original bytes: two native numeric arrays, structure,
-absorbing index, identity and FEFF parameters. No selection depends on geometry,
-completeness, intensity validity or a predicted target. Negative spectra and
-orphan edges remain for the solver to assess. “Raw” denotes the earliest
-released numerical calculation data, not experimental detector counts or FEFF
-intermediate output. [Provenance](../../docs/data/chen-2021-l-edge/provenance.json)
-records both native-stream and packaged hashes.
-
-There are 8,160 material/element identities but only 16,178 observed edge groups:
-142 whole L2 or L3 groups are absent. The worked Q1 excludes 386 *observed*
-groups and reconstructs 15,792 complete responses. Its exclusion count does not
-include wholly absent groups; missing edges are never reconstructed as zero.
-
-The records require actual identity checks: `mp-12905` aliases two physically
-different structures in this release. Six other material identifiers have
-dictionary differences despite unchanged lattice and coordinates. The candidate
-excludes the physical collision and does not mistake optional metadata for a
-geometry change. This information is evaluator evidence; the exported inputs
-retain the native records.
-
-The release **does not contain** radius/core-hole sweeps, experimental reference
-arrays, OCEAN results, author-generated material averages, historical geometry
-labels, figure-generation scripts or trained-model outputs. Those missing stages
-are not benchmark questions. The [source map](../../docs/data/chen-2021-l-edge/verification/source_map.json)
-separates raw truth, benchmark choices and unavailable historical evidence.
-
-The paper points to general open-source packages for workflow code. The review
-entry's code link is an inspected
-[pymatgen v2020.12.31 spectrum module](https://github.com/materialsproject/pymatgen/blob/v2020.12.31/pymatgen/analysis/xas/spectrum.py),
-not an asserted author analysis repository or exact historical commit. That
-implementation uses cubic interpolation and extrapolates L2 while stitching a
-combined edge. The candidate instead investigates material-averaged L2 and L3
-separately on finite native support. It does not claim pixel agreement with the
-paper's stitched plots. No FEFF executable or Materials Project API is required.
-
-## Solver boundary
-
-From the repository root:
+The eight inputs preserve all 27,570 Ti–Cu native calculation records byte for
+byte from [Figshare version 1](https://doi.org/10.6084/m9.figshare.12824513.v1).
+They contain separate-edge spectra, periodic structures, source identities and
+FEFF settings. Negative spectra, orphan edges and identity collisions are
+retained. “Raw” means the earliest released numerical calculation data, not
+experimental detector counts. The release is attributed to Yiming Chen (2020)
+and licensed under MIT; archive and native-stream hashes are in
+[provenance.json](../../docs/data/chen-2021-l-edge/provenance.json).
 
 ```bash
-python3 papers/chen-2021-l-edge/export_agent_bundle.py Q1 --output /tmp/chen-Q1-agent
+python3 papers/chen-2021-l-edge/export_agent_bundle.py R1 --output /tmp/chen-R1-agent
 ```
 
-Replace Q1 with Q2 or Q3. Each export contains only `task.json` and eight native
-input files. Attribution and license are retained. There is no separate protocol
-or output-schema document. Output identifiers enable independent checks; the
-solver chooses the scientific methods.
-
-Use the exported directory in a fresh isolated solver context. Keep the paper,
-public review site, source code, candidate, derived labels and evaluator evidence
-outside that context; disable external retrieval for the unassisted track. The
-exporter does not enforce filesystem or network isolation, and the public site
-does not provide access control. Attribution may reveal the source and prior
-model knowledge cannot be excluded.
-
-Q3 structures remain available to derive reference environments and conduct
-evaluation. Their exclusion from spectral prediction is a code-audited research
-requirement, not enforced label blinding. Inspect feature generation, model
-selection and partitioning; an output table alone cannot establish absence of
-leakage.
-
-## Worked candidate
-
-Use Python 3.12. The exact observed dependency set is also retained in
-`requirements-lock.txt`.
-
-```bash
-python3 -m venv /tmp/chen-bench-env
-/tmp/chen-bench-env/bin/python -m pip install -r papers/chen-2021-l-edge/requirements.txt
-OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MPLCONFIGDIR=/tmp/chen-mpl /tmp/chen-bench-env/bin/python docs/data/chen-2021-l-edge/workflows/candidate.py all --inputs docs/data/chen-2021-l-edge/inputs --output /tmp/chen-answer
-```
-
-For one question, use Q1, Q2 or Q3 instead of `all`; its output argument then names
-the question directory itself. Each question can run directly from its own
-export without another task's answers. The per-question workflow JSON records
-tool calls and choices; `verification/Qn/` retains the executed artifacts.
-
-The candidate uses crystallographic populations and complete-coverage checks for
-Q1, independent angular/radial geometry and conditional edge-area contrasts for
-Q2, and matched composition-held-out spectral classifiers for Q3. Its tolerances,
-integration windows, preprocessing, learners and bootstrap design are examples,
-not prescribed solver methods. Reports state support, exclusions and limitations.
-Computed finite-window edge areas are not experimental white-line branching
-ratios or direct evidence of spin state.
-
-The [adversarial question review](question_quality_review.md) checks the exact
-prompts and native input boundary. The
-[independent execution review](workflow_execution_review.md) reproduces all 34
-outputs byte for byte. The
-[open-verifier review](open_submission_review.md) independently tests alternative
-interfaces, corruptions and unresolved identifier mappings. The
-[scientific assessment](../../docs/data/chen-2021-l-edge/verification/scientific_review.md)
-evaluates actual claims and their limits. All review artifacts are evaluator-only.
+Only `task.json` and eight native gzip files are exported. Questions include
+minimal field semantics and output formats, without paper references, expected
+trends, processing recipes, geometry labels or worked code. R2 export requires
+`--allow-unvalidated` for evaluator development and does not grant scoring
+eligibility. Use an isolated solver context without the public review site,
+paper, candidate code or evaluator assets; the exporter itself does not enforce
+filesystem/network isolation.
 
 ## Verification
 
-```bash
-/tmp/chen-bench-env/bin/python docs/data/chen-2021-l-edge/workflows/verify.py --question Q1 --inputs docs/data/chen-2021-l-edge/inputs --output /tmp/chen-answer/Q1
-```
+The final acceptance rule is a conjunction of four independently auditable gates:
 
-Repeat for Q2 and Q3. This is the **worked-example profile audit**: it derives
-truth from native spectra and structures without importing the candidate, and
-checks the particular declared populations, interpolation, geometry, observables,
-partitions and arithmetic. Its additional files and numerical conventions are
-not hidden requirements for alternative answers.
+1. **Publication agreement.** R1 compares against original PDF vector coordinates,
+   calibrated from printed ticks, rather than newly calculated reference curves.
+   Both panels must satisfy RMSE ≤ 0.02, maximum absolute residual ≤ 0.07,
+   L2-height error ≤ 0.05, and an L2-position tolerance determined from source
+   stroke width. One rigid L3 registration and global maximum normalization are
+   allowed. Missing endpoints, local energy warping and independently rescaled
+   edges cannot pass. R2 uses the original raster on calibrated axes; every
+   element/color comparison is mandatory. Overplot opacity is never treated as
+   an empirical density, quantile or population count.
+2. **Independent native-data execution.** A separate agent exports a clean
+   bundle, inspects the source, reruns the supplied program and checks every
+   produced file. Approval is bound to the eight native input hashes and the
+   complete output manifest. The final R1 and R2 candidate outputs were both
+   reproduced byte for byte.
+3. **Scientific review.** A separate review compares complete plots directly to
+   the paper, checks interpretation and records limitations. The review is bound
+   to output and publication-target hashes. Qualitative resemblance cannot waive
+   a failed mandatory numerical/plot gate.
+4. **Verification-loop audit.** Another agent applies positive and negative
+   controls and checks the verifier and target hashes. Missing curves, incorrect
+   peaks, missing colors, stale reviews, altered native inputs and modified
+   artifacts are tested. These checks do not replace the publication comparison.
 
-For an independently designed submission, use:
+`check_acceptance.py` reruns the paper comparator and requires all gates. It
+returns a failing exit status for missing, false or stale evidence. Reviewer
+files are evaluator-owned; a solver cannot approve its own submission.
 
-```bash
-/tmp/chen-bench-env/bin/python docs/data/chen-2021-l-edge/workflows/verify_submission.py --question Q3 --inputs docs/data/chen-2021-l-edge/inputs --output /path/to/submission
-```
+Complete tool calls, commands and outputs are recorded in
+[R1 workflow](../../docs/data/chen-2021-l-edge/paper_results/workflows/R1.json) and
+[R2 workflow](../../docs/data/chen-2021-l-edge/paper_results/workflows/R2.json).
+The worked methods are evaluator-only. Install the direct dependencies with
+`python -m pip install -r papers/chen-2021-l-edge/requirements.txt` in Python 3.12;
+`requirements-lock.txt` records the full observed environment.
 
-This separate checker accepts freely named methods and the compact public output
-contract. It checks native identities, finite arrays, declared populations where
-recognized, and development/test composition exclusion. It explicitly reports
-**partial numerical validation** and lists unresolved independent review work.
-Any prediction metrics against submitted labels are labeled arithmetic-only
-until those labels are independently reconstructed. The evaluator must validate
-the solver's own geometric/spectral definitions and execute its code; a surface
-pass does not validate its quantities or conclusions. A different interpolation,
-label definition, learner, partition or uncertainty analysis is not rejected
-merely for differing from the worked example.
+The paper-target extraction, native-release scope audit, independent reviews,
+mutation controls and failed comparisons are retained under
+[`paper_results/verification`](../../docs/data/chen-2021-l-edge/paper_results/verification).
+The paper figures are CC BY 4.0 with source attribution and extraction provenance.
 
-Custom material identities or unfamiliar role vocabularies that cannot yet be
-mapped return a pending result (`integrity_pass: null`, exit status 2), with an
-explicit mapping obligation. This includes valid ways of resolving the native
-material-identifier collision. Common training/holdout role synonyms are accepted.
+## What can and cannot be reproduced
 
-The automatic verdict is **numerical integrity only**, with scientific acceptance
-assessed separately using the
-[scientific rubric](../../docs/data/chen-2021-l-edge/verification/scientific_review_rubric.md).
-The scientific review checks physical validity, nontrivial evidence, chemistry
-and dependence controls, sensitivity, uncertainty, leakage and justified claims.
-A constant predictor can have correct arithmetic and still fail the research
-question. No coefficient sign, positive improvement or minimum prediction score
-is required. Code and evidence are necessary for acceptance.
+Four of the six exact Figure 4 material IDs are absent from the full release.
+MgMn2O4 uses the exact released/published `mp-32006` calculation. The released
+olivine LiFePO4 `mp-761468` reproduces the plotted curve, but Table 2 names the
+absent `mp-19017`; matching a phase response does not prove identical historical
+calculation identity. Other tested substitutions and released Pt did not pass
+the unchanged Figure 4 tolerances. Their failures remain documented; this entry
+claims only Figure 4(c,d), not the whole figure.
 
-The applied audit checks byte-level source fidelity, accepts valid alternative
-submissions and rejects targeted corruptions. Its retained record states which
-checks are complete and which require scientific judgment. Original released
-arrays and periodic structures anchor verification; no author-supplied averaged
-spectrum or label set is invented.
+The release's exact element counts also disagree with 62 of 69 literal Figure 2
+site-wise counts. We do not make those integers agree by changing their
+tolerance. Figure 3's radius/core-hole sweeps and experimental reference arrays
+are absent. These stages are excluded from validated tasks. Figure 5's original
+labels and plotting script are also absent; its complete published plot remains
+the required target, with rendering uncertainties recorded explicitly.
 
-Reproduce the audits from the repository root:
-
-```bash
-OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 /tmp/chen-bench-env/bin/python papers/chen-2021-l-edge/audit_verification.py --candidate docs/data/chen-2021-l-edge/verification --raw-source /tmp/chen2021/raw/L_XAS.json
-OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 /tmp/chen-bench-env/bin/python papers/chen-2021-l-edge/audit_open_submission.py --candidate docs/data/chen-2021-l-edge/verification
-/tmp/chen-bench-env/bin/python papers/chen-2021-l-edge/independent_replay.py --work /tmp/chen-replay-new --reference docs/data/chen-2021-l-edge/verification --record /tmp/chen-replay-new.json
-```
-
-## Rebuild
-
-```bash
-python3 papers/chen-2021-l-edge/acquire_release.py --output /tmp/chen2021
-python3 papers/chen-2021-l-edge/prepare_assets.py --raw /tmp/chen2021/raw/L_XAS.json --archive /tmp/chen2021/L-XAS.json.tgz --metadata /tmp/chen2021/figshare.json
-python3 papers/chen-2021-l-edge/build_entry.py
-python3 papers/chen-2021-l-edge/check_entry.py
-python3 scripts/validate_data.py
-```
-
-Rebuilding the index requires the executed workflows and independent review
-records already present. Acquisition verifies the exact versioned archive; the
-packaging script copies native lines and never computes solver-facing labels.
-The new paper is added to the active local index with a new dataset release ID;
-previous papers are preserved. Website publication is a separate action.
+The previous `CHEN21-Q1/Q2/Q3` extension tasks, their weaker verification paths
+and their old reviews are retired. They remain available only in Git history at
+commit `63d90dbfce8925e39b0108418c81b5cb77e65265`. New IDs and a new dataset ID
+prevent old reviews from being silently reused for these different questions.

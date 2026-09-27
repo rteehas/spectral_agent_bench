@@ -1,0 +1,48 @@
+{
+  "reviewer": "paper_figure_truth independent verification subagent",
+  "status": "R1 direct-paper numerical verification passed; R2 remains unvalidated after independently justified source-only renderer-width correction (v2); original v1 failure retained",
+  "R1": {
+    "paper_numerical_pass": true,
+    "minimum_required_panels": 2,
+    "controls": 20,
+    "expected_rejections": 17,
+    "all_controls_pass": true,
+    "source_truth": "Published PDF page 5 original vector traces, calibrated from printed ticks; no benchmark-candidate-derived expected values",
+    "candidate_output_provenance": "Source IDs independently found in native Figshare JSONL; code execution is separately reviewed by worked-example execution subagent",
+    "phase_caveat": "Released olivine LiFePO4 mp-761468 is an alternate same-phase record; exact paperTable2 mp-19017 is absent. Agreement is to the published curve within plot tolerances, not identity of Materials Project records.",
+    "numeric_report_sha256": "831810d09aa99cc28f9bf87449227f5ab4ec2c49f3f1c6e6e5bb9db681b74c22"
+  },
+  "R2": {
+    "paper_plot_pass": false,
+    "passing_panel_colors": 10,
+    "required_panel_colors": 16,
+    "negative_and_positive_mask_controls": 5,
+    "all_mask_controls_pass": true,
+    "limitations": "Unknown original compositing/style and unreleased labels still prevent validation under the fixed paper gate. Both v1 and v2 pass only 10 of 16 mandatory panel/color tests. This is not evidence that the reconstructed physics is false. The task remains unvalidated and withheld from scoring; no more style fitting or threshold changes are authorized.",
+    "contract_version": 2,
+    "source_only_renderer_correction_supported": true,
+    "corrected_width_source_pixels": 1.65,
+    "original_width_source_pixels": 1.0,
+    "scientific_thresholds_changed": false,
+    "original_failure_preserved": "verification/R2_paper_comparison_v1.json",
+    "current_failed_report": "verification/R2_paper_comparison_v2.json"
+  },
+  "scientific_acceptance": "Numerical or raster comparisons alone never award scientific acceptance. Both independent source/code replay and direct manual scientific comparison with the paper remain required.",
+  "audited_file_sha256": {
+    "workflows/verify_r1.py": "6fd9a1300b77af0359b21996c63b81af6477ccc439c6680562f954ea267544d4",
+    "workflows/verify_r2.py": "159875223791adde9bcc0bb465a74c3ceb98564578b4618dd465eb706506a6c5",
+    "verification/figures/figure4_comparison_contract.json": "0dcea7e51d61b0e6e09d6e32c49ad844e0deff4c57343aaba8908ce3303306b0",
+    "verification/figures/figure5_comparison_contract.json": "6f3d3190e04f7a552253a3a165027c2ce58f3448e96eacda3e06792a0d347000",
+    "verification/figures/figure4_traces.csv": "eb916c8e3f065102bf36a8cd4623b67f06cdb746d3dc9e212cfc4ad723436e3c",
+    "verification/figures/figure2_counts.csv": "eb351dbd66750bf0d31b752c77cf63267c0bb260c37a23060cc1d34ef02bcecf",
+    "verification/figures/paper.pdf": "4c7d70586e2fd53178d11681e39c3a6ce4d9c3b94eabdb961e8ab9fa837e2f41",
+    "verification/figures/figure4_calibration.json": "62365449c9edb8299b30049d5c1344ef65f18bfe2bdd7a5e16cb682ab0bf7a79",
+    "verification/figures/figure5.png": "be7bbd6785d830b1aae23626d4538eb572679335a66ba6588f55e2c6f53da727",
+    "verification/figures/figure5_comparison_contract_v1.json": "b563d618b46e22d8353baa36fd245d198559eff34d552d220864061203a45c25",
+    "verification/reviews/source_renderer_independent_audit.json": "c76c539ba7d26939a70cc53f420cb2236d347ca4d12da57fff5e266c6ef7fc07",
+    "verification/reviews/source_renderer_calibration.json": "4e5c269509c8ea9f71d4fda9d1415b6c90a4a40802d57d029163a3bc210ff16f",
+    "verification/reviews/source_renderer_calibration_holdout.json": "e9f81d59c3980a2e6b56980386e5fc53ae07c484232225b8d64aa0fbcebc348b",
+    "verification/R2_paper_comparison_v1.json": "91f03201db076fb22e69c62eaca66ee17dbba7c4ab851454f071658ab402c52f",
+    "verification/R2_paper_comparison_v2.json": "d15fdcac84f99b3c1d84c1e3fe72d9a6aa1a2a40f0e9dd4ac36a583e04262299"
+  }
+}

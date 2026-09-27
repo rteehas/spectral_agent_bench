@@ -1,0 +1,381 @@
+{
+  "question": "R2",
+  "accepted": false,
+  "rule": "Publication agreement AND independent native-data execution AND scientific review; no fallback gate",
+  "checks": {
+    "publication_agreement": false,
+    "independent_raw_data_replay": true,
+    "independent_scientific_review": false,
+    "independent_verifier_audit": true
+  },
+  "errors": [
+    "Mandatory comparison against the published figure failed or could not execute",
+    "Scientific review is missing, failed, or bound to different outputs/publication targets"
+  ],
+  "paper_comparison": {
+    "paper_doi": "10.1038/s41597-021-00936-5",
+    "target": "Original Figure 5, all eight panels and both coordination colors",
+    "figure_sha256": "be7bbd6785d830b1aae23626d4538eb572679335a66ba6588f55e2c6f53da727",
+    "contract_sha256": "6f3d3190e04f7a552253a3a165027c2ce58f3448e96eacda3e06792a0d347000",
+    "renderer": {
+      "opacity": 0.015,
+      "line_width_source_pixels": 1.65,
+      "dpi": 100,
+      "canvas_pixels": [
+        1972,
+        978
+      ],
+      "palette": {
+        "octahedral": "#e41a1c",
+        "tetrahedral": "#377eb8"
+      },
+      "order": "first contributing native source-record order",
+      "fitted_to_candidate": false
+    },
+    "source_identity_audit": {
+      "Ti": {
+        "curves": 710,
+        "by_environment": {
+          "octahedral": 641,
+          "tetrahedral": 69
+        }
+      },
+      "V": {
+        "curves": 1159,
+        "by_environment": {
+          "octahedral": 661,
+          "tetrahedral": 498
+        }
+      },
+      "Cr": {
+        "curves": 680,
+        "by_environment": {
+          "octahedral": 420,
+          "tetrahedral": 260
+        }
+      },
+      "Mn": {
+        "curves": 1132,
+        "by_environment": {
+          "octahedral": 885,
+          "tetrahedral": 247
+        }
+      },
+      "Fe": {
+        "curves": 1471,
+        "by_environment": {
+          "octahedral": 1051,
+          "tetrahedral": 420
+        }
+      },
+      "Co": {
+        "curves": 1095,
+        "by_environment": {
+          "octahedral": 671,
+          "tetrahedral": 424
+        }
+      },
+      "Ni": {
+        "curves": 769,
+        "by_environment": {
+          "octahedral": 503,
+          "tetrahedral": 266
+        }
+      },
+      "Cu": {
+        "curves": 1022,
+        "by_environment": {
+          "octahedral": 404,
+          "tetrahedral": 618
+        }
+      }
+    },
+    "panels": {
+      "Ti": {
+        "octahedral": {
+          "paper_pixels": 48138,
+          "submitted_pixels": 46141,
+          "errors": [],
+          "precision_within_tolerance": 0.9984829110769164,
+          "recall_within_tolerance": 0.9979641862977273,
+          "directed_distance_90th_percentile_pixels": [
+            0.0,
+            0.0
+          ],
+          "pass": true
+        },
+        "tetrahedral": {
+          "paper_pixels": 1956,
+          "submitted_pixels": 1144,
+          "errors": [
+            "Published visible support recall below frozen minimum",
+            "Directed 90th-percentile distance exceeds frozen tolerance"
+          ],
+          "precision_within_tolerance": 0.9318181818181818,
+          "recall_within_tolerance": 0.7760736196319018,
+          "directed_distance_90th_percentile_pixels": [
+            2.0,
+            7.0
+          ],
+          "pass": false
+        }
+      },
+      "V": {
+        "octahedral": {
+          "paper_pixels": 27709,
+          "submitted_pixels": 39092,
+          "errors": [
+            "Predicted visible support precision below frozen minimum",
+            "Directed 90th-percentile distance exceeds frozen tolerance"
+          ],
+          "precision_within_tolerance": 0.8574388621712883,
+          "recall_within_tolerance": 0.9994225702840233,
+          "directed_distance_90th_percentile_pixels": [
+            4.242640687119285,
+            1.0
+          ],
+          "pass": false
+        },
+        "tetrahedral": {
+          "paper_pixels": 15509,
+          "submitted_pixels": 3319,
+          "errors": [
+            "Published visible support recall below frozen minimum",
+            "Directed 90th-percentile distance exceeds frozen tolerance"
+          ],
+          "precision_within_tolerance": 0.9939740885808979,
+          "recall_within_tolerance": 0.5635437487910245,
+          "directed_distance_90th_percentile_pixels": [
+            1.0,
+            10.0
+          ],
+          "pass": false
+        }
+      },
+      "Cr": {
+        "octahedral": {
+          "paper_pixels": 33735,
+          "submitted_pixels": 38523,
+          "errors": [],
+          "precision_within_tolerance": 0.987591828258443,
+          "recall_within_tolerance": 0.9983400029642804,
+          "directed_distance_90th_percentile_pixels": [
+            1.0,
+            0.0
+          ],
+          "pass": true
+        },
+        "tetrahedral": {
+          "paper_pixels": 10987,
+          "submitted_pixels": 2091,
+          "errors": [
+            "Published visible support recall below frozen minimum",
+            "Directed 90th-percentile distance exceeds frozen tolerance"
+          ],
+          "precision_within_tolerance": 0.9708273553323769,
+          "recall_within_tolerance": 0.5167925730408665,
+          "directed_distance_90th_percentile_pixels": [
+            2.0,
+            24.698178070456937
+          ],
+          "pass": false
+        }
+      },
+      "Mn": {
+        "octahedral": {
+          "paper_pixels": 39201,
+          "submitted_pixels": 41579,
+          "errors": [],
+          "precision_within_tolerance": 0.9827316674282691,
+          "recall_within_tolerance": 0.9996173567000842,
+          "directed_distance_90th_percentile_pixels": [
+            1.0,
+            0.0
+          ],
+          "pass": true
+        },
+        "tetrahedral": {
+          "paper_pixels": 8651,
+          "submitted_pixels": 4170,
+          "errors": [
+            "Published visible support recall below frozen minimum",
+            "Directed 90th-percentile distance exceeds frozen tolerance"
+          ],
+          "precision_within_tolerance": 0.9844124700239808,
+          "recall_within_tolerance": 0.8186336839671714,
+          "directed_distance_90th_percentile_pixels": [
+            1.0,
+            5.0
+          ],
+          "pass": false
+        }
+      },
+      "Fe": {
+        "octahedral": {
+          "paper_pixels": 39135,
+          "submitted_pixels": 42530,
+          "errors": [],
+          "precision_within_tolerance": 0.9852339525041147,
+          "recall_within_tolerance": 0.9980324517695158,
+          "directed_distance_90th_percentile_pixels": [
+            1.0,
+            1.0
+          ],
+          "pass": true
+        },
+        "tetrahedral": {
+          "paper_pixels": 16922,
+          "submitted_pixels": 9803,
+          "errors": [
+            "Published visible support recall below frozen minimum",
+            "Directed 90th-percentile distance exceeds frozen tolerance"
+          ],
+          "precision_within_tolerance": 0.9983678465775783,
+          "recall_within_tolerance": 0.8710554308001418,
+          "directed_distance_90th_percentile_pixels": [
+            0.0,
+            5.0
+          ],
+          "pass": false
+        }
+      },
+      "Co": {
+        "octahedral": {
+          "paper_pixels": 42998,
+          "submitted_pixels": 45654,
+          "errors": [],
+          "precision_within_tolerance": 0.9746791080737723,
+          "recall_within_tolerance": 0.9974882552676869,
+          "directed_distance_90th_percentile_pixels": [
+            1.0,
+            1.0
+          ],
+          "pass": true
+        },
+        "tetrahedral": {
+          "paper_pixels": 22713,
+          "submitted_pixels": 15693,
+          "errors": [],
+          "precision_within_tolerance": 0.998024596954056,
+          "recall_within_tolerance": 0.91392594549377,
+          "directed_distance_90th_percentile_pixels": [
+            0.0,
+            2.8284271247461903
+          ],
+          "pass": true
+        }
+      },
+      "Ni": {
+        "octahedral": {
+          "paper_pixels": 56328,
+          "submitted_pixels": 58400,
+          "errors": [],
+          "precision_within_tolerance": 0.9752739726027397,
+          "recall_within_tolerance": 0.9935733560573782,
+          "directed_distance_90th_percentile_pixels": [
+            1.0,
+            1.0
+          ],
+          "pass": true
+        },
+        "tetrahedral": {
+          "paper_pixels": 29743,
+          "submitted_pixels": 21369,
+          "errors": [],
+          "precision_within_tolerance": 0.9985493003884132,
+          "recall_within_tolerance": 0.9666476145647716,
+          "directed_distance_90th_percentile_pixels": [
+            0.0,
+            1.4142135623730951
+          ],
+          "pass": true
+        }
+      },
+      "Cu": {
+        "octahedral": {
+          "paper_pixels": 42949,
+          "submitted_pixels": 46686,
+          "errors": [],
+          "precision_within_tolerance": 0.947393222807694,
+          "recall_within_tolerance": 0.9953200307341266,
+          "directed_distance_90th_percentile_pixels": [
+            1.4142135623730951,
+            1.0
+          ],
+          "pass": true
+        },
+        "tetrahedral": {
+          "paper_pixels": 48232,
+          "submitted_pixels": 35958,
+          "errors": [],
+          "precision_within_tolerance": 0.9981923355025307,
+          "recall_within_tolerance": 0.9715334217946592,
+          "directed_distance_90th_percentile_pixels": [
+            0.0,
+            1.4142135623730951
+          ],
+          "pass": true
+        }
+      }
+    },
+    "paper_plot_pass": false,
+    "scientific_pass": null,
+    "independent_source_replay_required": true,
+    "mandatory_manual_review": "All eight full panels, unusual curves, and late-metal L2/post-edge class contrasts; no opacity-derived population inference."
+  },
+  "output_manifest_sha256": "0b3f8df34f6b0e2ee32781e4acb7b8a0fcbdca2e7ab7a7bb3fa48f232ed87027",
+  "artifact_sha256": {
+    "Co.csv": "e5b1e5cea7e3cbe4e1959e566fbc02014f5ca1ee331a91d40ef226fa1652e0d7",
+    "Co.npz": "fef6f194e3d6dff4d3876b54c932c3f85341cbbdbbe520400c00856eb0a7d699",
+    "Co_sources.csv": "f3a0333c82876a7b566f32de1ef31f65a8c962551b3da196bd06abd537bdc0b3",
+    "Cr.csv": "eac1f7b528d51223a7f4fa0223da5ea466d889f4400e71803472cbac77f678bf",
+    "Cr.npz": "1ffead8efdda2005b4945bd8ab3ef6e816c61b83c7f88026f03557f693118630",
+    "Cr_sources.csv": "196a71395b8131f4ea0f08e12060a8916b937cd649cfcec6fa9367615e625dc3",
+    "Cu.csv": "2c95f62750dda13be04428fe5f897a0982188b13095bd911c1f089fb7bed1194",
+    "Cu.npz": "b189f0fa0aedd152a6a612700c283871076cec2067f51777bef2a652de8f9701",
+    "Cu_sources.csv": "935f8e2f4c89355477f5d49ac1c2d2c45d5d31ce353b38fa77580d6d517cb036",
+    "Fe.csv": "53cee5d903f0b6fb52a86bb03f362c186a20c322dc150e69f0106e59e4d5d6a7",
+    "Fe.npz": "fa24237d02cc062bd6a504e2391b38ba6e7e41e376a87901ed73b38f769b2c2c",
+    "Fe_sources.csv": "849fa81a40c068ee82c9ae6f1af2380a79d51fd8988121d059c87f906c9cdd72",
+    "Mn.csv": "b770466abcc754c2d0d7855e8a3cbd4a52b6e8f94e4ded0f7709aa4b78a9a9b3",
+    "Mn.npz": "5278bdcbf089221e7cc2989dce198647f9daf538908ded38005471981f9dc4f8",
+    "Mn_sources.csv": "a521c045f3ec978c5ba6d17f2e64fdc4bfacb377a29b96c076aaa3e3e33bffc6",
+    "Ni.csv": "a7a3ad335670437a3bf75e64630ffb597e941c8ce5a99ad493cf8e22aa76d6b8",
+    "Ni.npz": "6da7bbec29828b551cb2151d747d9b25e504bb3ad31877cea954c0a6bb4d6b5a",
+    "Ni_sources.csv": "f2e59c9220c8f0cb53dd3146aa69e30093c5c9fb7c974f124e0c12a8e2d71026",
+    "Ti.csv": "23dafbcbc8a06ac1b7312ba856f855d083fd5fbec997eccd70fcce2a291379f9",
+    "Ti.npz": "588b9cc6a47c149c50ec37f0298e650ec7dab822b291311ed54f39fd4faa71d3",
+    "Ti_sources.csv": "f85b2528e86fdee77dfc64bb12fb285a0d94e7987dea39495c2a17405577980a",
+    "V.csv": "271c8f9be26e5142cc61ae5b288a5548caaff8076750a282220622ede9deac30",
+    "V.npz": "36d332eab67d570f9226ceafcff24811e6f8fea082431e98b94e5d299a8ff068",
+    "V_sources.csv": "e7e6159d16ce38ec8915b003bb400a3ebf3537687198031672e16d1105c68ffc",
+    "analysis.py": "6fc55980cca88e08f0d78e2a1a34b06384be201bf7fddd205be94bf8c9062e3c",
+    "answer.md": "850f7ef697c969977cc1dc71dcc31f000e6f0d594c2a71cf2ae34392ff4a2f83",
+    "descriptive_summaries.csv": "2717c36adb75a298fe41cd74e871ffc2219a6584170b5f62cfc34880287f2187",
+    "figure5_reconstruction.png": "bcc42e002c2f0920d01e4930d4912968549b49f844a256bf5ab4895fe225fdd1",
+    "method.json": "3d34ee13c25c3e611acb19a45b7a34944e8a5d99987346b0cd3361c6c70f513a",
+    "sites.csv": "37ae6339e8b7e251fa005f263dd09c468720ed8582e4e800701cd3d019ca879f",
+    "sources.csv": "c490e16e2567ad5e4f15f0cfe672f9cea4146afac0567e98e9950578b61830c0",
+    "summary.json": "90cd63081de3591a3ce68b004ceda8079b1242fd546dab6acd3016fa0870853f"
+  },
+  "paper_checker_sha256": "159875223791adde9bcc0bb465a74c3ceb98564578b4618dd465eb706506a6c5",
+  "paper_target_sha256": {
+    "figure5.png": "be7bbd6785d830b1aae23626d4538eb572679335a66ba6588f55e2c6f53da727",
+    "figure5_comparison_contract.json": "6f3d3190e04f7a552253a3a165027c2ce58f3448e96eacda3e06792a0d347000"
+  },
+  "native_input_sha256": {
+    "inputs/Ti.jsonl.gz": "546de52105cf8013c4271e90e2c04b5bbef7830e3f4c9a7c8a5d3cfedd8e29b9",
+    "inputs/V.jsonl.gz": "4998451c087a3281fbf90f5a706bfd397e5995f039ebd705e4b2494fd66a9a56",
+    "inputs/Cr.jsonl.gz": "1b6e31151375e347bf6f528d3905b3b495a02868400e9228e52537ce060404f3",
+    "inputs/Mn.jsonl.gz": "63c20361c2360241866758ceda1ab4d1ce6842f650974267031f9190a8d5d944",
+    "inputs/Fe.jsonl.gz": "ad39eb07b7ffd53fdd05d697d7fb454bcb4c0f2ca84f41f0a9ed135c14420fbb",
+    "inputs/Co.jsonl.gz": "619b1f69f640f6f00f5969d81d718a10ab89bfe2459b37e3ac2485af64662643",
+    "inputs/Ni.jsonl.gz": "d816a72f0d1ac0b8ddd4c4d30676f4a24b64923ebc21a54660c0236e522cbb0c",
+    "inputs/Cu.jsonl.gz": "d7b66378b0f9156eae4758e77c2529113dc59db793b1a31868a3f1b4adee78c1"
+  },
+  "evaluator_review_sha256": {
+    "workflow_execution.json": "21eba05c9b033e783be9bb76dae20e8a7a454c25ca7468c57df43282a2b88cac",
+    "scientific_review.json": "4c59da35ef0580bb2b57821ef69a52a3c73be297728b916816b626ec9b4a1140",
+    "verification_audit.json": "8bb22e77ebb5aa3e9dbb9b390dcac81f6610f6fefb0fec52cb6cee5a10083506"
+  }
+}

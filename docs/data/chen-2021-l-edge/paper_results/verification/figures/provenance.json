@@ -1,0 +1,47 @@
+{
+  "article_doi": "10.1038/s41597-021-00936-5",
+  "article_title": "Database of ab initio L-edge X-ray absorption near edge structure",
+  "authors": "Chen et al.",
+  "publication_year": 2021,
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "source_pdf_url": "https://www.nature.com/articles/s41597-021-00936-5.pdf",
+  "source_pdf_sha256": "4c7d70586e2fd53178d11681e39c3a6ce4d9c3b94eabdb961e8ab9fa837e2f41",
+  "publisher_images": {
+    "figure2.png": {
+      "url": "https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41597-021-00936-5/MediaObjects/41597_2021_936_Fig2_HTML.png",
+      "sha256": "933c0750bd96910d8fbe17752e87c9fe829b10862029c824df110adc931ef4a1"
+    },
+    "figure4.png": {
+      "url": "https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41597-021-00936-5/MediaObjects/41597_2021_936_Fig4_HTML.png",
+      "sha256": "80941ba41f7c2eb83ef1d0feecd26183921b5b29de3961ef1c6a08c9a6e33103"
+    },
+    "figure5.png": {
+      "url": "https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41597-021-00936-5/MediaObjects/41597_2021_936_Fig5_HTML.png",
+      "sha256": "be7bbd6785d830b1aae23626d4538eb572679335a66ba6588f55e2c6f53da727"
+    }
+  },
+  "extraction_software": "PyMuPDF 1.28.2",
+  "figure4": {
+    "pdf_page_one_based": 5,
+    "method": "Original vector line vertices and axis tick positions; affine calibration from labelled ticks.",
+    "transformations": "Axis-coordinate calibration; retain literal display intensity and separately subtract visual offsets 0,0.55,1.1. No reconstruction from release data.",
+    "visible_only_note": "PDF paths extend beyond axis clips; only the visible portion is valid published comparison evidence.",
+    "n_vertices": 2666,
+    "n_curves": 18,
+    "uncertainty": "Original vector coordinates eliminate raster digitization error. Printed line widths and path simplification still limit meaningful plot comparison precision."
+  },
+  "figure2": {
+    "pdf_page_one_based": 3,
+    "method": "Manual literal transcription of every numbered element cell, checked against retained full-size publisher image.",
+    "n_numbered_elements": 69,
+    "tolerance": 0,
+    "site_averaged_definition": "Per-element crystal count with complete corresponding L2 and L3 site-wise spectra.",
+    "site_wise_definition": "Either L2 or L3 spectrum for one absorbing site."
+  },
+  "figure5": {
+    "pdf_page_one_based": 6,
+    "format": "Raster-only overplot in source PDF.",
+    "restriction": "Opacity is not an empirical quantile, a class count, or a recoverable per-trace distribution. Preserve literal figure for comparative review; do not fabricate pointwise targets."
+  }
+}

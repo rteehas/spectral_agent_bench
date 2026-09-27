@@ -33,7 +33,7 @@ def main():
         assert scenario['prompt'] == {'background': BACKGROUND, 'instruction': spec['instruction']}
         with tempfile.TemporaryDirectory(prefix='chen-export-check-') as temp:
             out = Path(temp) / 'agent'
-            export(spec['id'], out)
+            export(spec['id'], out, allow_unvalidated=True)
             task = json.loads((out / 'task.json').read_text())
             assert set(task) == {'id', 'title', 'background', 'instruction', 'inputs', 'attribution'}
             assert task['background'] == BACKGROUND and task['instruction'] == spec['instruction']
@@ -45,7 +45,22 @@ def main():
                            'no_evaluator_files': True, 'prompt_matches_index': True})
     result = {'passed': True, 'input_hashes_checked': len(prov['input_assets']),
               'active_index_matches': True, 'questions': checks}
-    (BASE / 'verification/packaging_checks.json').write_text(json.dumps(result, indent=2) + '\n')
+    for scenario in paper['scenarios']:
+        q = scenario['id'].removeprefix('CHEN21-')
+        acceptance = json.loads((BASE / 'paper_results/verification' / f'{q}_acceptance.json').read_text())
+        assert scenario['scoringEligible'] == acceptance['accepted']
+        if not acceptance['accepted']:
+            assert scenario['executionStatus'] == 'unvalidated_paper_comparison'
+            assert scenario['title'].startswith('[UNVALIDATED]')
+            assert scenario['verification']['description'].startswith('UNVALIDATED')
+            with tempfile.TemporaryDirectory(prefix='chen-scoring-check-') as temp:
+                try:
+                    export(q, Path(temp)/'blocked')
+                except ValueError:
+                    pass
+                else:
+                    raise AssertionError('Unvalidated question exported without development override')
+    (BASE / 'paper_results/verification/packaging_checks.json').write_text(json.dumps(result, indent=2) + '\n')
     print(json.dumps(result, indent=2))
 
 
