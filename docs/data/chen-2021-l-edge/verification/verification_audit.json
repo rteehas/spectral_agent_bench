@@ -1,0 +1,367 @@
+{
+  "reviewer": "Independent source-verification sub-agent",
+  "date": "2026-09-26",
+  "status": "pass",
+  "all_controls_pass": true,
+  "profile": "worked-example-declared-conventions",
+  "scope": "Independent numerical audit of the worked candidate and its declared conventions; not a universal solver schema or algorithm prescription. Open submissions use workflows/verify_submission.py and independent scientific review.",
+  "integrity_pass": true,
+  "scientific_pass": null,
+  "checker_sha256": "2161b3725e34edfc555f3a719405ac541a6b9e92a31e371d52e5ab1354ad0838",
+  "audit_script_sha256": "63c178b2c69631e94f4218e127b7556d52dcd8e211647d73147e09eda5632d93",
+  "candidate_sha256": "72e3ffe98d17a5b305bc8f720e8fc0b35639b1b061412c27f9419e06be51b755",
+  "executed_command": [
+    "/tmp/chen-bench-env/bin/python",
+    "spectral_agent_bench/papers/chen-2021-l-edge/audit_verification.py",
+    "--candidate",
+    "spectral_agent_bench/docs/data/chen-2021-l-edge/verification",
+    "--reports",
+    "spectral_agent_bench/docs/data/chen-2021-l-edge/verification/audit"
+  ],
+  "exit_code": 0,
+  "positive_controls": 5,
+  "negative_controls": 25,
+  "detailed_results": "verification/audit/audit_summary.json",
+  "process_log": "verification/verifier_execution.log",
+  "source_byte_fidelity": "verification/source_packaging_audit.json",
+  "separate_open_submission_audit": "verification/open_submission_audit.json",
+  "scientific_review": "verification/scientific_review.json",
+  "independence": [
+    "Verifier never imports or runs candidate.py.",
+    "Periodic neighbors are independently enumerated as lattice images.",
+    "Native spectral integrals and population averages are reconstructed from source arrays.",
+    "Association intervals use direct weighted residualized least squares, independent of candidate moment subtraction.",
+    "Compositions come from source structures; metrics and clustered uncertainty come from submitted held-out predictions after source-label and partition checks."
+  ],
+  "positive_controls_details": [
+    "Original Q1 source reconstruction",
+    "Original Q2 geometry, native ratios and adjusted/bootstrapped associations",
+    "Original Q3 labels, composition partitions, baselines and paired metrics",
+    "Alternative complete-support response grid",
+    "Coherently regenerated zero-increment spectral predictions/metrics; a synthetic consistency control, not scientific acceptance"
+  ],
+  "negative_control_classes": [
+    "Missing/duplicate source observations",
+    "Wrong multiplicity",
+    "Unjustified complete-group exclusion",
+    "Missing/nonfinite/wrong population response",
+    "Wrong distortion",
+    "Wrong shape or coordination count",
+    "Missing geometry or descriptor",
+    "Wrong native integral or nonfinite ratio",
+    "Wrong adjusted contrast or bootstrap interval",
+    "Missing/duplicate prediction or partition",
+    "Wrong structural target",
+    "Changed prediction with stale metric",
+    "Reduced-composition leakage",
+    "Wrong metric or paired uncertainty"
+  ],
+  "limits": [
+    "Coherent null predictions are a synthetic consistency control, not a scientific submission or a demonstration that submitted training code generated them.",
+    "An integrity pass does not prove absence of feature/tuning leakage; independent clean replay and scientific review are separate.",
+    "Control sensitivity and successful replay do not empirically calibrate benchmark difficulty."
+  ],
+  "empirical_difficulty_calibrated": false,
+  "controls": [
+    {
+      "audit_case": "positive_original_Q1",
+      "question": "Q1",
+      "integrity_pass": true,
+      "scientific_pass": null,
+      "expected_integrity_pass": true,
+      "control_pass": true,
+      "elapsed_seconds": 50.302,
+      "error": null
+    },
+    {
+      "audit_case": "positive_original_Q2",
+      "question": "Q2",
+      "integrity_pass": true,
+      "scientific_pass": null,
+      "expected_integrity_pass": true,
+      "control_pass": true,
+      "elapsed_seconds": 22.468,
+      "error": null
+    },
+    {
+      "audit_case": "positive_original_Q3",
+      "question": "Q3",
+      "integrity_pass": true,
+      "scientific_pass": null,
+      "expected_integrity_pass": true,
+      "control_pass": true,
+      "elapsed_seconds": 2.874,
+      "error": null
+    },
+    {
+      "audit_case": "positive_alternate_response_grid",
+      "question": "Q1",
+      "integrity_pass": true,
+      "scientific_pass": null,
+      "expected_integrity_pass": true,
+      "control_pass": true,
+      "elapsed_seconds": 8.594,
+      "error": null
+    },
+    {
+      "audit_case": "positive_coherent_null_increment",
+      "question": "Q3",
+      "integrity_pass": true,
+      "scientific_pass": null,
+      "expected_integrity_pass": true,
+      "control_pass": true,
+      "elapsed_seconds": 2.781,
+      "error": null
+    },
+    {
+      "audit_case": "negative_missing_source_id",
+      "question": "Q1",
+      "integrity_pass": false,
+      "scientific_pass": null,
+      "expected_integrity_pass": false,
+      "control_pass": true,
+      "elapsed_seconds": 0.167,
+      "error": "AssertionError: sites: missing or unknown source IDs / undercoverage"
+    },
+    {
+      "audit_case": "negative_duplicate_source_id",
+      "question": "Q1",
+      "integrity_pass": false,
+      "scientific_pass": null,
+      "expected_integrity_pass": false,
+      "control_pass": true,
+      "elapsed_seconds": 0.156,
+      "error": "AssertionError: sites: duplicate identifiers"
+    },
+    {
+      "audit_case": "negative_wrong_multiplicity",
+      "question": "Q1",
+      "integrity_pass": false,
+      "scientific_pass": null,
+      "expected_integrity_pass": false,
+      "control_pass": true,
+      "elapsed_seconds": 0.159,
+      "error": "AssertionError: sites: wrong structural multiplicity"
+    },
+    {
+      "audit_case": "negative_unjustified_group_exclusion",
+      "question": "Q1",
+      "integrity_pass": false,
+      "scientific_pass": null,
+      "expected_integrity_pass": false,
+      "control_pass": true,
+      "elapsed_seconds": 0.27,
+      "error": "AssertionError: coverage: inclusion contradicts declared completeness/validity rule"
+    },
+    {
+      "audit_case": "negative_missing_response",
+      "question": "Q1",
+      "integrity_pass": false,
+      "scientific_pass": null,
+      "expected_integrity_pass": false,
+      "control_pass": true,
+      "elapsed_seconds": 0.623,
+      "error": "AssertionError: responses: missing/unknown groups / undercoverage"
+    },
+    {
+      "audit_case": "negative_nan_response",
+      "question": "Q1",
+      "integrity_pass": false,
+      "scientific_pass": null,
+      "expected_integrity_pass": false,
+      "control_pass": true,
+      "elapsed_seconds": 3.179,
+      "error": "AssertionError: responses: nonfinite or malformed array"
+    },
+    {
+      "audit_case": "negative_wrong_population_average",
+      "question": "Q1",
+      "integrity_pass": false,
+      "scientific_pass": null,
+      "expected_integrity_pass": false,
+      "control_pass": true,
+      "elapsed_seconds": 3.172,
+      "error": "AssertionError: responses: wrong population-weighted average"
+    },
+    {
+      "audit_case": "negative_wrong_distortion",
+      "question": "Q1",
+      "integrity_pass": false,
+      "scientific_pass": null,
+      "expected_integrity_pass": false,
+      "control_pass": true,
+      "elapsed_seconds": 7.44,
+      "error": "AssertionError: effects: wrong shape distortion"
+    },
+    {
+      "audit_case": "negative_wrong_shape_label",
+      "question": "Q2",
+      "integrity_pass": false,
+      "scientific_pass": null,
+      "expected_integrity_pass": false,
+      "control_pass": true,
+      "elapsed_seconds": 0.361,
+      "error": "AssertionError: geometry: incorrect shape label"
+    },
+    {
+      "audit_case": "negative_missing_geometry",
+      "question": "Q2",
+      "integrity_pass": false,
+      "scientific_pass": null,
+      "expected_integrity_pass": false,
+      "control_pass": true,
+      "elapsed_seconds": 0.356,
+      "error": "AssertionError: geometry: missing or unknown absorbing sites / undercoverage"
+    },
+    {
+      "audit_case": "negative_wrong_coordination_number",
+      "question": "Q2",
+      "integrity_pass": false,
+      "scientific_pass": null,
+      "expected_integrity_pass": false,
+      "control_pass": true,
+      "elapsed_seconds": 0.359,
+      "error": "AssertionError: geometry: incorrect periodic coordination number"
+    },
+    {
+      "audit_case": "negative_missing_descriptor",
+      "question": "Q2",
+      "integrity_pass": false,
+      "scientific_pass": null,
+      "expected_integrity_pass": false,
+      "control_pass": true,
+      "elapsed_seconds": 1.405,
+      "error": "AssertionError: descriptors: missing or unknown included paired sites / undercoverage"
+    },
+    {
+      "audit_case": "negative_wrong_edge_integral",
+      "question": "Q2",
+      "integrity_pass": false,
+      "scientific_pass": null,
+      "expected_integrity_pass": false,
+      "control_pass": true,
+      "elapsed_seconds": 1.393,
+      "error": "AssertionError: Wrong native edge descriptor: area_L2_3_33"
+    },
+    {
+      "audit_case": "negative_nan_descriptor",
+      "question": "Q2",
+      "integrity_pass": false,
+      "scientific_pass": null,
+      "expected_integrity_pass": false,
+      "control_pass": true,
+      "elapsed_seconds": 1.408,
+      "error": "AssertionError: Nonfinite numerical artifact value"
+    },
+    {
+      "audit_case": "negative_wrong_association",
+      "question": "Q2",
+      "integrity_pass": false,
+      "scientific_pass": null,
+      "expected_integrity_pass": false,
+      "control_pass": true,
+      "elapsed_seconds": 5.397,
+      "error": "AssertionError: Wrong adjusted geometry contrast"
+    },
+    {
+      "audit_case": "negative_wrong_association_interval",
+      "question": "Q2",
+      "integrity_pass": false,
+      "scientific_pass": null,
+      "expected_integrity_pass": false,
+      "control_pass": true,
+      "elapsed_seconds": 5.282,
+      "error": "AssertionError: Wrong material-bootstrap association interval"
+    },
+    {
+      "audit_case": "negative_missing_prediction",
+      "question": "Q3",
+      "integrity_pass": false,
+      "scientific_pass": null,
+      "expected_integrity_pass": false,
+      "control_pass": true,
+      "elapsed_seconds": 2.061,
+      "error": "AssertionError: predictions: missing/unknown test IDs / undercoverage"
+    },
+    {
+      "audit_case": "negative_duplicate_prediction",
+      "question": "Q3",
+      "integrity_pass": false,
+      "scientific_pass": null,
+      "expected_integrity_pass": false,
+      "control_pass": true,
+      "elapsed_seconds": 1.266,
+      "error": "AssertionError: predictions: duplicate identifiers"
+    },
+    {
+      "audit_case": "negative_wrong_target",
+      "question": "Q3",
+      "integrity_pass": false,
+      "scientific_pass": null,
+      "expected_integrity_pass": false,
+      "control_pass": true,
+      "elapsed_seconds": 1.977,
+      "error": "AssertionError: Prediction target does not match reconstructed geometry"
+    },
+    {
+      "audit_case": "negative_wrong_prediction_unreported",
+      "question": "Q3",
+      "integrity_pass": false,
+      "scientific_pass": null,
+      "expected_integrity_pass": false,
+      "control_pass": true,
+      "elapsed_seconds": 2.511,
+      "error": "AssertionError: Wrong held-out balanced accuracy"
+    },
+    {
+      "audit_case": "negative_composition_leakage",
+      "question": "Q3",
+      "integrity_pass": false,
+      "scientific_pass": null,
+      "expected_integrity_pass": false,
+      "control_pass": true,
+      "elapsed_seconds": 1.94,
+      "error": "AssertionError: Train/test reduced-composition leakage"
+    },
+    {
+      "audit_case": "negative_missing_partition",
+      "question": "Q3",
+      "integrity_pass": false,
+      "scientific_pass": null,
+      "expected_integrity_pass": false,
+      "control_pass": true,
+      "elapsed_seconds": 1.592,
+      "error": "AssertionError: Incomplete or unknown partition material coverage"
+    },
+    {
+      "audit_case": "negative_duplicate_partition",
+      "question": "Q3",
+      "integrity_pass": false,
+      "scientific_pass": null,
+      "expected_integrity_pass": false,
+      "control_pass": true,
+      "elapsed_seconds": 1.399,
+      "error": "AssertionError: partitions: duplicate identifiers"
+    },
+    {
+      "audit_case": "negative_wrong_metric",
+      "question": "Q3",
+      "integrity_pass": false,
+      "scientific_pass": null,
+      "expected_integrity_pass": false,
+      "control_pass": true,
+      "elapsed_seconds": 2.494,
+      "error": "AssertionError: Wrong held-out balanced accuracy"
+    },
+    {
+      "audit_case": "negative_wrong_paired_interval",
+      "question": "Q3",
+      "integrity_pass": false,
+      "scientific_pass": null,
+      "expected_integrity_pass": false,
+      "control_pass": true,
+      "elapsed_seconds": 3.032,
+      "error": "AssertionError: Wrong paired composition-bootstrap interval"
+    }
+  ]
+}

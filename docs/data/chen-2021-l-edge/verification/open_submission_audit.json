@@ -1,0 +1,427 @@
+{
+  "all_controls_pass": true,
+  "profile": "open-submission",
+  "positive_controls": 4,
+  "negative_controls": 8,
+  "pending_mapping_controls": 1,
+  "scientific_pass": null,
+  "scope": "Public-contract integrity only. Valid alternative scientific definitions retain explicit independent-reconstruction obligations; these controls do not validate new scientific conclusions.",
+  "checker_sha256": "17fd37d29678c9b726ea797eb6a82ca1ca4f82d46512598f6f8baf3a1faf9172",
+  "controls": [
+    {
+      "control": "valid_minimal_Q1",
+      "question": "Q1",
+      "expected_integrity_pass": true,
+      "observed_integrity_pass": true,
+      "control_pass": true,
+      "report": {
+        "question": "Q1",
+        "profile": "open-submission",
+        "integrity_pass": true,
+        "numerical_validation": "partial",
+        "scientific_pass": null,
+        "checks": {
+          "native_observation_rows": 26770,
+          "distinct_native_records": 26770,
+          "finite_monotone_responses": 15792,
+          "native_response_groups": 15792,
+          "report_files": [
+            "report.md"
+          ],
+          "runnable_code_files": [
+            "analysis.py"
+          ]
+        },
+        "independent_review_required": [
+          "Independently reconstruct declared populations from periodic geometry, accounting for normalization and the chosen symmetry definition.",
+          "Independently reconstruct material responses under the declared interpolation, support, population and exclusion conventions. Check complete crystallographic coverage, quantitative simplification effects and finite-resolution rankings. The worked-profile auditor is applicable only if those conventions match.",
+          "Inspect the report, figures and runnable code; execute the analysis and apply scientific_review_rubric.md. Surface consistency alone never establishes scientific correctness. Missing or unsupported evidence cannot receive final acceptance."
+        ],
+        "meaning": "A pass covers only the checks explicitly listed. It is not correctness of a scientific answer or acceptance of a research method."
+      }
+    },
+    {
+      "control": "valid_minimal_Q2",
+      "question": "Q2",
+      "expected_integrity_pass": true,
+      "observed_integrity_pass": true,
+      "control_pass": true,
+      "report": {
+        "question": "Q2",
+        "profile": "open-submission",
+        "integrity_pass": true,
+        "numerical_validation": "partial",
+        "scientific_pass": null,
+        "checks": {
+          "native_observation_rows": 27570,
+          "distinct_native_records": 27570,
+          "report_files": [
+            "report.md"
+          ],
+          "runnable_code_files": [
+            "analysis.py"
+          ]
+        },
+        "independent_review_required": [
+          "Reconstruct structural labels and spectral observables under the submitted definitions directly from native coordinates/arrays; do not substitute the worked example definitions. Check chemical overlap, adjustment, dependent uncertainty and definition sensitivity, including every reported quantitative claim.",
+          "Inspect the report, figures and runnable code; execute the analysis and apply scientific_review_rubric.md. Surface consistency alone never establishes scientific correctness. Missing or unsupported evidence cannot receive final acceptance."
+        ],
+        "meaning": "A pass covers only the checks explicitly listed. It is not correctness of a scientific answer or acceptance of a research method."
+      }
+    },
+    {
+      "control": "valid_minimal_Q3_free_method_names",
+      "question": "Q3",
+      "expected_integrity_pass": true,
+      "observed_integrity_pass": true,
+      "control_pass": true,
+      "report": {
+        "question": "Q3",
+        "profile": "open-submission",
+        "integrity_pass": true,
+        "numerical_validation": "partial",
+        "scientific_pass": null,
+        "checks": {
+          "native_observation_rows": 27570,
+          "distinct_native_records": 27570,
+          "native_predictions_in_test_partitions": 32448,
+          "composition_disjoint_method_splits": 24,
+          "method_names": [
+            "freely_named_method_0",
+            "freely_named_method_1",
+            "freely_named_method_2",
+            "freely_named_method_3",
+            "freely_named_method_4",
+            "freely_named_method_5"
+          ],
+          "metrics_against_submitted_labels_NOT_independent_geometry_truth": [
+            {
+              "method": "freely_named_method_2",
+              "n": 5408,
+              "accuracy": 0.965051775147929,
+              "balanced_accuracy": 0.9571894596939923,
+              "macro_f1": 0.9595338669764244
+            },
+            {
+              "method": "freely_named_method_0",
+              "n": 5408,
+              "accuracy": 0.9665310650887574,
+              "balanced_accuracy": 0.9593576284185446,
+              "macro_f1": 0.9612833964266738
+            },
+            {
+              "method": "freely_named_method_3",
+              "n": 5408,
+              "accuracy": 0.9678254437869822,
+              "balanced_accuracy": 0.9613901487437477,
+              "macro_f1": 0.9628216409758465
+            },
+            {
+              "method": "freely_named_method_1",
+              "n": 5408,
+              "accuracy": 0.9689349112426036,
+              "balanced_accuracy": 0.9628228857282759,
+              "macro_f1": 0.9641148994357406
+            },
+            {
+              "method": "freely_named_method_5",
+              "n": 5408,
+              "accuracy": 0.6815828402366864,
+              "balanced_accuracy": 0.5,
+              "macro_f1": 0.4053221904552452
+            },
+            {
+              "method": "freely_named_method_4",
+              "n": 5408,
+              "accuracy": 0.7544378698224852,
+              "balanced_accuracy": 0.6799995966783945,
+              "macro_f1": 0.6914139653770187
+            }
+          ],
+          "report_files": [
+            "report.md"
+          ],
+          "runnable_code_files": [
+            "analysis.py"
+          ]
+        },
+        "independent_review_required": [
+          "Derive reference environments independently from native structures using the declared scientific definition. Audit spectra-only features, model selection, complete declared evaluation cohorts, repeated-condition identifiers, matched edge comparisons, chemistry controls, resolution and uncertainty. Scores against submitted labels above are arithmetic only, not validation of those labels.",
+          "Inspect the report, figures and runnable code; execute the analysis and apply scientific_review_rubric.md. Surface consistency alone never establishes scientific correctness. Missing or unsupported evidence cannot receive final acceptance."
+        ],
+        "meaning": "A pass covers only the checks explicitly listed. It is not correctness of a scientific answer or acceptance of a research method."
+      }
+    },
+    {
+      "control": "valid_partition_role_synonyms",
+      "question": "Q3",
+      "expected_integrity_pass": true,
+      "observed_integrity_pass": true,
+      "control_pass": true,
+      "report": {
+        "question": "Q3",
+        "profile": "open-submission",
+        "integrity_pass": true,
+        "numerical_validation": "partial",
+        "scientific_pass": null,
+        "checks": {
+          "native_observation_rows": 27570,
+          "distinct_native_records": 27570,
+          "native_predictions_in_test_partitions": 32448,
+          "composition_disjoint_method_splits": 24,
+          "method_names": [
+            "L23_fwhm0",
+            "L23_fwhm1",
+            "L3_fwhm0",
+            "L3_fwhm1",
+            "element_prior",
+            "majority"
+          ],
+          "metrics_against_submitted_labels_NOT_independent_geometry_truth": [
+            {
+              "method": "L3_fwhm0",
+              "n": 5408,
+              "accuracy": 0.965051775147929,
+              "balanced_accuracy": 0.9571894596939923,
+              "macro_f1": 0.9595338669764244
+            },
+            {
+              "method": "L23_fwhm0",
+              "n": 5408,
+              "accuracy": 0.9665310650887574,
+              "balanced_accuracy": 0.9593576284185446,
+              "macro_f1": 0.9612833964266738
+            },
+            {
+              "method": "L3_fwhm1",
+              "n": 5408,
+              "accuracy": 0.9678254437869822,
+              "balanced_accuracy": 0.9613901487437477,
+              "macro_f1": 0.9628216409758465
+            },
+            {
+              "method": "L23_fwhm1",
+              "n": 5408,
+              "accuracy": 0.9689349112426036,
+              "balanced_accuracy": 0.9628228857282759,
+              "macro_f1": 0.9641148994357406
+            },
+            {
+              "method": "majority",
+              "n": 5408,
+              "accuracy": 0.6815828402366864,
+              "balanced_accuracy": 0.5,
+              "macro_f1": 0.4053221904552452
+            },
+            {
+              "method": "element_prior",
+              "n": 5408,
+              "accuracy": 0.7544378698224852,
+              "balanced_accuracy": 0.6799995966783945,
+              "macro_f1": 0.6914139653770187
+            }
+          ],
+          "report_files": [
+            "report.md"
+          ],
+          "runnable_code_files": [
+            "analysis.py"
+          ]
+        },
+        "independent_review_required": [
+          "Derive reference environments independently from native structures using the declared scientific definition. Audit spectra-only features, model selection, complete declared evaluation cohorts, repeated-condition identifiers, matched edge comparisons, chemistry controls, resolution and uncertainty. Scores against submitted labels above are arithmetic only, not validation of those labels.",
+          "Inspect the report, figures and runnable code; execute the analysis and apply scientific_review_rubric.md. Surface consistency alone never establishes scientific correctness. Missing or unsupported evidence cannot receive final acceptance."
+        ],
+        "meaning": "A pass covers only the checks explicitly listed. It is not correctness of a scientific answer or acceptance of a research method."
+      }
+    },
+    {
+      "control": "pending_custom_material_mapping",
+      "question": "Q3",
+      "expected_integrity_pass": null,
+      "observed_integrity_pass": null,
+      "control_pass": true,
+      "report": {
+        "question": "Q3",
+        "profile": "open-submission",
+        "integrity_pass": null,
+        "numerical_validation": "pending_identifier_or_vocabulary_mapping",
+        "scientific_pass": null,
+        "checks": {
+          "native_observation_rows": 27570,
+          "distinct_native_records": 27570
+        },
+        "independent_review_required": [
+          "Partition uses custom or physically ambiguous material IDs; independently map them through native record names/structures before checking composition exclusion.",
+          "This is an unresolved representation mapping, not a demonstrated scientific error. Complete the independent mapping and source checks before acceptance."
+        ],
+        "meaning": "A pass covers only the checks explicitly listed. It is not correctness of a scientific answer or acceptance of a research method."
+      }
+    },
+    {
+      "control": "invalid_unknown_site",
+      "question": "Q2",
+      "expected_integrity_pass": false,
+      "observed_integrity_pass": false,
+      "control_pass": true,
+      "report": {
+        "question": "Q2",
+        "profile": "open-submission",
+        "integrity_pass": false,
+        "numerical_validation": "partial",
+        "scientific_pass": null,
+        "checks": {},
+        "independent_review_required": [],
+        "meaning": "A pass covers only the checks explicitly listed. It is not correctness of a scientific answer or acceptance of a research method.",
+        "error": "ValueError: Unknown native source identity: not-a-source"
+      }
+    },
+    {
+      "control": "invalid_nonfinite_site",
+      "question": "Q2",
+      "expected_integrity_pass": false,
+      "observed_integrity_pass": false,
+      "control_pass": true,
+      "report": {
+        "question": "Q2",
+        "profile": "open-submission",
+        "integrity_pass": false,
+        "numerical_validation": "partial",
+        "scientific_pass": null,
+        "checks": {
+          "native_observation_rows": 27570,
+          "distinct_native_records": 27570
+        },
+        "independent_review_required": [],
+        "meaning": "A pass covers only the checks explicitly listed. It is not correctness of a scientific answer or acceptance of a research method.",
+        "error": "ValueError: Nonfinite site observation: log_ratio"
+      }
+    },
+    {
+      "control": "invalid_unknown_prediction",
+      "question": "Q3",
+      "expected_integrity_pass": false,
+      "observed_integrity_pass": false,
+      "control_pass": true,
+      "report": {
+        "question": "Q3",
+        "profile": "open-submission",
+        "integrity_pass": false,
+        "numerical_validation": "partial",
+        "scientific_pass": null,
+        "checks": {
+          "native_observation_rows": 27570,
+          "distinct_native_records": 27570
+        },
+        "independent_review_required": [],
+        "meaning": "A pass covers only the checks explicitly listed. It is not correctness of a scientific answer or acceptance of a research method.",
+        "error": "ValueError: Unknown prediction source name"
+      }
+    },
+    {
+      "control": "invalid_nonfinite_prediction",
+      "question": "Q3",
+      "expected_integrity_pass": false,
+      "observed_integrity_pass": false,
+      "control_pass": true,
+      "report": {
+        "question": "Q3",
+        "profile": "open-submission",
+        "integrity_pass": false,
+        "numerical_validation": "partial",
+        "scientific_pass": null,
+        "checks": {
+          "native_observation_rows": 27570,
+          "distinct_native_records": 27570
+        },
+        "independent_review_required": [],
+        "meaning": "A pass covers only the checks explicitly listed. It is not correctness of a scientific answer or acceptance of a research method.",
+        "error": "ValueError: Nonfinite prediction label"
+      }
+    },
+    {
+      "control": "invalid_duplicate_prediction",
+      "question": "Q3",
+      "expected_integrity_pass": false,
+      "observed_integrity_pass": false,
+      "control_pass": true,
+      "report": {
+        "question": "Q3",
+        "profile": "open-submission",
+        "integrity_pass": false,
+        "numerical_validation": "partial",
+        "scientific_pass": null,
+        "checks": {
+          "native_observation_rows": 27570,
+          "distinct_native_records": 27570
+        },
+        "independent_review_required": [],
+        "meaning": "A pass covers only the checks explicitly listed. It is not correctness of a scientific answer or acceptance of a research method.",
+        "error": "ValueError: Duplicate prediction within method/split"
+      }
+    },
+    {
+      "control": "invalid_conflicting_partition",
+      "question": "Q3",
+      "expected_integrity_pass": false,
+      "observed_integrity_pass": false,
+      "control_pass": true,
+      "report": {
+        "question": "Q3",
+        "profile": "open-submission",
+        "integrity_pass": false,
+        "numerical_validation": "partial",
+        "scientific_pass": null,
+        "checks": {
+          "native_observation_rows": 27570,
+          "distinct_native_records": 27570
+        },
+        "independent_review_required": [],
+        "meaning": "A pass covers only the checks explicitly listed. It is not correctness of a scientific answer or acceptance of a research method.",
+        "error": "ValueError: Duplicate/conflicting material partition"
+      }
+    },
+    {
+      "control": "invalid_validation_composition_leak",
+      "question": "Q3",
+      "expected_integrity_pass": false,
+      "observed_integrity_pass": false,
+      "control_pass": true,
+      "report": {
+        "question": "Q3",
+        "profile": "open-submission",
+        "integrity_pass": false,
+        "numerical_validation": "partial",
+        "scientific_pass": null,
+        "checks": {
+          "native_observation_rows": 27570,
+          "distinct_native_records": 27570
+        },
+        "independent_review_required": [],
+        "meaning": "A pass covers only the checks explicitly listed. It is not correctness of a scientific answer or acceptance of a research method.",
+        "error": "ValueError: Composition leakage from development into test"
+      }
+    },
+    {
+      "control": "invalid_nonpositive_population",
+      "question": "Q1",
+      "expected_integrity_pass": false,
+      "observed_integrity_pass": false,
+      "control_pass": true,
+      "report": {
+        "question": "Q1",
+        "profile": "open-submission",
+        "integrity_pass": false,
+        "numerical_validation": "partial",
+        "scientific_pass": null,
+        "checks": {
+          "native_observation_rows": 27570,
+          "distinct_native_records": 27570
+        },
+        "independent_review_required": [],
+        "meaning": "A pass covers only the checks explicitly listed. It is not correctness of a scientific answer or acceptance of a research method.",
+        "error": "ValueError: Nonpositive site population"
+      }
+    }
+  ]
+}

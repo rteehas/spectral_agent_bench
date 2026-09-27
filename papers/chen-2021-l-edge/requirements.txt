@@ -1,0 +1,7 @@
+numpy==2.5.3
+scipy==1.18.1
+matplotlib==3.11.2
+scikit-learn==1.9.1
+pymatgen==2026.9.24
+pymatgen-core==2026.9.23
+spglib==2.7.0

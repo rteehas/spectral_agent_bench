@@ -1,0 +1,27 @@
+Loaded 27570 records / 7618 materials
+Geometry 1000
+Geometry 2000
+Geometry 3000
+Geometry 4000
+spglib: ssm_get_exact_positions failed.
+spglib: get_bravais_exact_positions_and_lattice failed.
+Geometry 5000
+Geometry 6000
+spglib: ssm_get_exact_positions failed.
+spglib: get_bravais_exact_positions_and_lattice failed.
+spglib: ssm_get_exact_positions failed.
+spglib: get_bravais_exact_positions_and_lattice failed.
+spglib: ssm_get_exact_positions failed.
+spglib: get_bravais_exact_positions_and_lattice failed.
+Geometry 7000
+Geometry counts Counter({'other': 8386, 'octahedral': 3780, 'tetrahedral': 1770})
+Executing Q1
+Completed Q1
+Executing Q2
+Completed Q2
+Executing Q3
+Train L3_fwhm0 (5408, 81)
+Train L23_fwhm0 (5408, 162)
+Train L3_fwhm1 (5408, 81)
+Train L23_fwhm1 (5408, 162)
+Completed Q3

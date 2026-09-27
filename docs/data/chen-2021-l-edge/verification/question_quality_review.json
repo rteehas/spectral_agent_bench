@@ -1,0 +1,192 @@
+{
+  "reviewer_role": "Independent adversarial question-quality sub-agent",
+  "review_date": "2026-09-26",
+  "verdict": "pass",
+  "scope": "Exact standalone question text, native input descriptions, exporter boundary, scientific scope and analysis freedom. Worked execution and verification correctness are separate reviews.",
+  "reviewed_files": {
+    "papers/chen-2021-l-edge/questions.py": "91d82f20a146b21b358a3cf2254a68af238204364070609ecb53bf9d90eea57c",
+    "papers/chen-2021-l-edge/export_agent_bundle.py": "2881757c08c2c3767d817d7338bb7051e196dcc6d67c214eda00ee00e32289b5",
+    "papers/chen-2021-l-edge/prepare_assets.py": "e8c8fbde67e7cc3d8722b67e5f7471334810da6d0777e5164ffb3eb0e6c5b01f",
+    "papers/chen-2021-l-edge/question_quality_review.md": "440a69722d87fc781da701b0d1cdca7f01805bc62f15204c0220785eefd50fd3"
+  },
+  "reviewed_prompts": [
+    {
+      "id": "CHEN21-Q1",
+      "title": "When do simplified treatments of inequivalent sites distort a material’s L-edge fingerprint?",
+      "background": "These are site-resolved FEFF L2 and L3 XANES calculations for Ti, V, Cr, Mn, Fe, Co, Ni and Cu. Each gzip file contains one native JSON record per line. \"spectrum\" holds [photon energies in eV, absorption intensities]; \"absorbing_atom\" is a zero-based index into \"structure.sites\". \"mp-id\" is the released material identifier; \"name\" identifies a calculation. Structures include lattice vectors and fractional coordinates. Intensities retain the released relative scale.",
+      "instruction": "Determine how strongly material-level L2 and L3 fingerprints depend on differences among absorbing sites and their populations, and whether finite energy resolution changes which materials are most affected. Establish where the available calculations support a complete material response. Return a report with quantitative evidence, methodological justification and limitations, supporting figures, and runnable code. Include responses.npz (material__element__edge keys, energy and intensity columns), sites.csv identifying contributing raw records and their populations, and numerical evidence for the comparisons.",
+      "prompt_sha256": "115732a47f09a659435614928ce0904ecb46c47bf5da76fcd240f05d4cb53591"
+    },
+    {
+      "id": "CHEN21-Q2",
+      "title": "Does local coordination geometry predict the balance of L3 and L2 spectral weight across transition-metal compounds?",
+      "background": "These are site-resolved FEFF L2 and L3 XANES calculations for Ti, V, Cr, Mn, Fe, Co, Ni and Cu. Each gzip file contains one native JSON record per line. \"spectrum\" holds [photon energies in eV, absorption intensities]; \"absorbing_atom\" is a zero-based index into \"structure.sites\". \"mp-id\" is the released material identifier; \"name\" identifies a calculation. Structures include lattice vectors and fractional coordinates. Intensities retain the released relative scale.",
+      "instruction": "Determine whether tetrahedral and octahedral environments differ in their L3-to-L2 spectral weight once chemical composition is taken into account. How robust is the relationship to the definitions of local geometry and spectral weight, and what physical interpretation do these calculations support? Return a report with quantitative evidence, methodological justification and limitations, supporting figures, and runnable code. Include sites.csv identifying each raw observation and the structural and spectral quantities used; define their meaning and units in the report.",
+      "prompt_sha256": "7f344ef0d6418087c9bff7d0f38c6825dd80e7185d9e81abeb82ee9a4536d0d9"
+    },
+    {
+      "id": "CHEN21-Q3",
+      "title": "Does the L2 edge add transferable coordination information beyond the L3 edge?",
+      "background": "These are site-resolved FEFF L2 and L3 XANES calculations for Ti, V, Cr, Mn, Fe, Co, Ni and Cu. Each gzip file contains one native JSON record per line. \"spectrum\" holds [photon energies in eV, absorption intensities]; \"absorbing_atom\" is a zero-based index into \"structure.sites\". \"mp-id\" is the released material identifier; \"name\" identifies a calculation. Structures include lattice vectors and fractional coordinates. Intensities retain the released relative scale.",
+      "instruction": "Determine whether including L2 improves identification of tetrahedral and octahedral absorbing environments from spectra when the test compositions are absent from model development. Assess how the conclusion depends on chemistry and energy resolution. Structures may define the reference environments but must not enter spectral prediction. Return a report with quantitative evidence, methodological justification and limitations, supporting figures, and runnable code. Include sites.csv with source identities and reference environments, predictions.csv (name,method,split,predicted), and partitions.csv (material,method,split,role).",
+      "prompt_sha256": "5f9319137cbbbdc7bcc96e7bfd6434d289e961c7de57cee1343f96c2b46ee363"
+    }
+  ],
+  "criteria": {
+    "standalone_research_questions": true,
+    "no_paper_or_figure_reference_in_question_text": true,
+    "distinct_research_stages": true,
+    "requires_nontrivial_data_and_code_work": true,
+    "minimal_necessary_background": true,
+    "no_worked_protocol_in_solver_inputs": true,
+    "no_prescribed_estimator_or_preprocessing": true,
+    "no_expected_outcome_in_prompts": true,
+    "output_contract_is_auditable_evidence_not_recipe": true,
+    "independent_inputs_for_every_question": true
+  },
+  "question_reviews": [
+    {
+      "question": "Q1",
+      "verdict": "pass",
+      "scientific_problem": "Establish the consequences of simplifying inequivalent site spectra and populations in complete material fingerprints and how resolution changes that assessment.",
+      "nontrivial_work": "Requires data validation, reconstructable complete-site coverage, crystallographic populations, material response construction for both absorption edges, defensible simplification comparisons and resolution analysis. Counts or reconstruction alone do not answer the research question.",
+      "method_freedom": "No symmetry tolerance, interpolation, edge-combination method, resolution kernel, ablation or distortion statistic supplied.",
+      "grounding": "The site-to-material aggregation stage is a released-data workflow; the sensitivity analysis is new benchmark research.",
+      "answer_leakage": false
+    },
+    {
+      "question": "Q2",
+      "verdict": "pass",
+      "scientific_problem": "Test whether geometry predicts relative L3/L2 spectral weight after chemical composition is considered, and whether the finding survives defensible operational definitions.",
+      "nontrivial_work": "Requires periodic geometry, tetrahedral/octahedral shape distinctions, paired spectral observables, chemistry adjustment, dependence-aware uncertainty and physical interpretation.",
+      "method_freedom": "No neighbor cutoff, geometric score, integral window, adjustment estimator or expected sign supplied. Null or non-identifiable relationships are admissible.",
+      "grounding": "Derived from interpretation of environment-dependent L-edge intensity balance; no claim of reproducing historical regression outputs.",
+      "answer_leakage": false
+    },
+    {
+      "question": "Q3",
+      "verdict": "pass",
+      "scientific_problem": "Test the incremental coordination information in L2 beyond L3 under transfer to absent compositions, including chemical and resolution dependence.",
+      "nontrivial_work": "Requires geometry labels, fair paired representations/models, composition exclusion in development, uncertainty and resolution comparisons. A held-out accuracy alone is insufficient.",
+      "method_freedom": "No classifier, representation, alignment, fold count, hyperparameters, broadening kernel or score target supplied. Composition exclusion defines the intended transfer population.",
+      "grounding": "A new experiment supported by the stated use of paired L-edge spectra for local-environment inference. No author predictions or splits are claimed.",
+      "answer_leakage": false
+    }
+  ],
+  "background_word_count": 67,
+  "background_assessment": "Only measurement/data type, absorbing elements, container/field layout, units, index convention, released identities, structure coordinates and intensity scale. No derived labels, numeric analysis thresholds or expected results.",
+  "adversarial_findings": [
+    {
+      "issue": "CN4 is not synonymous with tetrahedral geometry, nor CN6 alone proof of octahedral geometry.",
+      "resolution": "Raised to workflow and verification agents; scientific acceptance requires geometric support and definition sensitivity."
+    },
+    {
+      "issue": "Element-wise or ligand-family comparisons can retain composition confounding.",
+      "resolution": "Raised to workflow and verification agents; Q2 may support limited or non-identifiable conditional conclusions, but not claim full adjustment from pooled medians."
+    },
+    {
+      "issue": "Stitching/extrapolation conventions and operational edge integrals are not uniquely fixed by the release.",
+      "resolution": "Alternative justified definitions should be audited on their own terms; no hidden requirement to equal one candidate convention."
+    },
+    {
+      "issue": "The original background asserted that mp-id identifies a crystal, while a raw identifier collision has incompatible structures.",
+      "resolution": "Final background says released material identifier. Native calculation names and structures are preserved for solver validation; final exports rerun."
+    },
+    {
+      "issue": "Public evaluator assets and source attribution permit answer retrieval.",
+      "resolution": "Blind runs must isolate exported task/raw-input bundle and disallow access to review/reference assets and external retrieval."
+    },
+    {
+      "issue": "Q1 originally used L2,3 notation although the worked analysis reconstructs the two edges separately.",
+      "resolution": "Final question explicitly asks for L2 and L3 fingerprints; this is a scope clarification, not an algorithm or shortcut."
+    }
+  ],
+  "independent_export_audit": {
+    "exports": [
+      {
+        "question": "Q1",
+        "files": [
+          "inputs/Co.jsonl.gz",
+          "inputs/Cr.jsonl.gz",
+          "inputs/Cu.jsonl.gz",
+          "inputs/Fe.jsonl.gz",
+          "inputs/Mn.jsonl.gz",
+          "inputs/Ni.jsonl.gz",
+          "inputs/Ti.jsonl.gz",
+          "inputs/V.jsonl.gz",
+          "task.json"
+        ],
+        "file_count": 9,
+        "all_input_hashes_equal": true,
+        "prompt_unchanged": true,
+        "only_task_and_raw_inputs": true,
+        "task_sha256": "99bb91ad6bfe93a09f71230946924281047521dd4a3c2d36c2b5743f0c03cf5e"
+      },
+      {
+        "question": "Q2",
+        "files": [
+          "inputs/Co.jsonl.gz",
+          "inputs/Cr.jsonl.gz",
+          "inputs/Cu.jsonl.gz",
+          "inputs/Fe.jsonl.gz",
+          "inputs/Mn.jsonl.gz",
+          "inputs/Ni.jsonl.gz",
+          "inputs/Ti.jsonl.gz",
+          "inputs/V.jsonl.gz",
+          "task.json"
+        ],
+        "file_count": 9,
+        "all_input_hashes_equal": true,
+        "prompt_unchanged": true,
+        "only_task_and_raw_inputs": true,
+        "task_sha256": "16ba4de90f388bf6b9c087baadcad3b295878c9bf7435a3e3389f33cd02a4a99"
+      },
+      {
+        "question": "Q3",
+        "files": [
+          "inputs/Co.jsonl.gz",
+          "inputs/Cr.jsonl.gz",
+          "inputs/Cu.jsonl.gz",
+          "inputs/Fe.jsonl.gz",
+          "inputs/Mn.jsonl.gz",
+          "inputs/Ni.jsonl.gz",
+          "inputs/Ti.jsonl.gz",
+          "inputs/V.jsonl.gz",
+          "task.json"
+        ],
+        "file_count": 9,
+        "all_input_hashes_equal": true,
+        "prompt_unchanged": true,
+        "only_task_and_raw_inputs": true,
+        "task_sha256": "26759a1fb6a52b801eb07519ec83b310ac5b8d72e145c606f740472993f7b93b"
+      }
+    ]
+  },
+  "independent_source_audit": {
+    "selected_source_rows": 27570,
+    "supplied_rows": 27570,
+    "byte_identical_source_rows": 27570,
+    "counts": {
+      "Co": 3805,
+      "Cr": 1866,
+      "Cu": 4894,
+      "Fe": 4627,
+      "Mn": 3270,
+      "Ni": 3860,
+      "Ti": 2144,
+      "V": 3104
+    },
+    "native_key_sets": {
+      "absorbing_atom,edge,input parameters,mp-id,name,spectrum,structure": 27570
+    },
+    "complete_lossless_eight_element_projection": true
+  },
+  "verification_fairness": "Accept scientifically justified method choices and null findings. Exact checks concern source identities, independently recoverable geometry, arithmetic and documented reconstruction conventions. Scientific claims need separate evidence review; matching candidate scores cannot establish correctness.",
+  "scope_limits": [
+    "No experimental-transfer claim",
+    "No independently established spin states or causal geometry effect",
+    "No raw FEFF parameter sweeps or experimental/OCEAN comparison arrays provided by the release",
+    "Difficulty not calibrated across a solver population"
+  ],
+  "post_review_metadata_update": "prepare_assets.py adds evaluator-side counts for absent material/element edge groups; final prompts, exporter and native input bytes unchanged."
+}

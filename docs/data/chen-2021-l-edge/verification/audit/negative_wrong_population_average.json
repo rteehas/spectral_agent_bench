@@ -1,0 +1,44 @@
+{
+  "question": "Q1",
+  "validation_profile": "worked-example-declared-conventions",
+  "scope": "Audits the worked artifacts and explicitly declared conventions; additional filenames/algorithms are not solver-facing requirements. Other methods use verify_submission.py plus scientific review.",
+  "integrity_pass": false,
+  "scientific_pass": null,
+  "checks": {
+    "native_site_records": 27570
+  },
+  "scientific_review_required": [],
+  "source_provenance": {
+    "element_record_counts": {
+      "Ti": 2144,
+      "V": 3104,
+      "Cr": 1866,
+      "Mn": 3270,
+      "Fe": 4627,
+      "Co": 3805,
+      "Ni": 3860,
+      "Cu": 4894
+    },
+    "records": 27570,
+    "materials": 7618,
+    "negative_records": 53,
+    "inconsistent_materials": [
+      "mp-12905"
+    ],
+    "sha256": {
+      "Ti": "546de52105cf8013c4271e90e2c04b5bbef7830e3f4c9a7c8a5d3cfedd8e29b9",
+      "V": "4998451c087a3281fbf90f5a706bfd397e5995f039ebd705e4b2494fd66a9a56",
+      "Cr": "1b6e31151375e347bf6f528d3905b3b495a02868400e9228e52537ce060404f3",
+      "Mn": "63c20361c2360241866758ceda1ab4d1ce6842f650974267031f9190a8d5d944",
+      "Fe": "ad39eb07b7ffd53fdd05d697d7fb454bcb4c0f2ca84f41f0a9ed135c14420fbb",
+      "Co": "619b1f69f640f6f00f5969d81d718a10ab89bfe2459b37e3ac2485af64662643",
+      "Ni": "d816a72f0d1ac0b8ddd4c4d30676f4a24b64923ebc21a54660c0236e522cbb0c",
+      "Cu": "d7b66378b0f9156eae4758e77c2529113dc59db793b1a31868a3f1b4adee78c1"
+    }
+  },
+  "error": "AssertionError: responses: wrong population-weighted average",
+  "audit_case": "negative_wrong_population_average",
+  "expected_integrity_pass": false,
+  "control_pass": true,
+  "elapsed_seconds": 3.172
+}

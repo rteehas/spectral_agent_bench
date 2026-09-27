@@ -1,0 +1,38 @@
+spglib: ssm_get_exact_positions failed.
+spglib: get_bravais_exact_positions_and_lattice failed.
+spglib: ssm_get_exact_positions failed.
+spglib: get_bravais_exact_positions_and_lattice failed.
+spglib: ssm_get_exact_positions failed.
+spglib: get_bravais_exact_positions_and_lattice failed.
+spglib: ssm_get_exact_positions failed.
+spglib: get_bravais_exact_positions_and_lattice failed.
+positive_original_Q1 PASS 
+positive_original_Q2 PASS 
+positive_original_Q3 PASS 
+positive_alternate_response_grid PASS 
+positive_coherent_null_increment PASS 
+negative_missing_source_id PASS AssertionError: sites: missing or unknown source IDs / undercoverage
+negative_duplicate_source_id PASS AssertionError: sites: duplicate identifiers
+negative_wrong_multiplicity PASS AssertionError: sites: wrong structural multiplicity
+negative_unjustified_group_exclusion PASS AssertionError: coverage: inclusion contradicts declared completeness/validity rule
+negative_missing_response PASS AssertionError: responses: missing/unknown groups / undercoverage
+negative_nan_response PASS AssertionError: responses: nonfinite or malformed array
+negative_wrong_population_average PASS AssertionError: responses: wrong population-weighted average
+negative_wrong_distortion PASS AssertionError: effects: wrong shape distortion
+negative_wrong_shape_label PASS AssertionError: geometry: incorrect shape label
+negative_missing_geometry PASS AssertionError: geometry: missing or unknown absorbing sites / undercoverage
+negative_wrong_coordination_number PASS AssertionError: geometry: incorrect periodic coordination number
+negative_missing_descriptor PASS AssertionError: descriptors: missing or unknown included paired sites / undercoverage
+negative_wrong_edge_integral PASS AssertionError: Wrong native edge descriptor: area_L2_3_33
+negative_nan_descriptor PASS AssertionError: Nonfinite numerical artifact value
+negative_wrong_association PASS AssertionError: Wrong adjusted geometry contrast
+negative_wrong_association_interval PASS AssertionError: Wrong material-bootstrap association interval
+negative_missing_prediction PASS AssertionError: predictions: missing/unknown test IDs / undercoverage
+negative_duplicate_prediction PASS AssertionError: predictions: duplicate identifiers
+negative_wrong_target PASS AssertionError: Prediction target does not match reconstructed geometry
+negative_wrong_prediction_unreported PASS AssertionError: Wrong held-out balanced accuracy
+negative_composition_leakage PASS AssertionError: Train/test reduced-composition leakage
+negative_missing_partition PASS AssertionError: Incomplete or unknown partition material coverage
+negative_duplicate_partition PASS AssertionError: partitions: duplicate identifiers
+negative_wrong_metric PASS AssertionError: Wrong held-out balanced accuracy
+negative_wrong_paired_interval PASS AssertionError: Wrong paired composition-bootstrap interval

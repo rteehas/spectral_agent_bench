@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "input_hashes_checked": 8,
+  "active_index_matches": true,
+  "questions": [
+    {
+      "question": "Q1",
+      "files": 9,
+      "native_inputs_match": true,
+      "no_evaluator_files": true,
+      "prompt_matches_index": true
+    },
+    {
+      "question": "Q2",
+      "files": 9,
+      "native_inputs_match": true,
+      "no_evaluator_files": true,
+      "prompt_matches_index": true
+    },
+    {
+      "question": "Q3",
+      "files": 9,
+      "native_inputs_match": true,
+      "no_evaluator_files": true,
+      "prompt_matches_index": true
+    }
+  ]
+}

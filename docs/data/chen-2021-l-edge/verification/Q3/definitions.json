@@ -1,0 +1,41 @@
+{
+  "symprec_A": 0.01,
+  "angle_tolerance_degrees": 5.0,
+  "neighbor_radius_A": 6.0,
+  "shell_ratio": 1.2,
+  "shell_ratio_sensitivity": [
+    1.15,
+    1.25
+  ],
+  "angular_rms_cosine_max": 0.15,
+  "radial_cv_max": 0.12,
+  "geometry": "All periodic neighbors at distance <= shell_ratio times nearest distance; ideal sorted pair cosine RMS for tetrahedral CN4 or octahedral CN6, plus radial CV. Other geometries are retained in audit but not binary comparison.",
+  "origin": "Each edge first released photon energy; matched excess energy window, not independently inferred experimental thresholds.",
+  "area_windows_eV": [
+    [
+      3.0,
+      23.0
+    ],
+    [
+      3.0,
+      33.0
+    ],
+    [
+      3.0,
+      43.0
+    ]
+  ],
+  "area_method": "Piecewise-linear trapezoidal integral of raw positive intensity; no continuum subtraction or L3/L2 statistical weighting.",
+  "feature_grid_eV": [
+    3.0,
+    43.0,
+    0.5
+  ],
+  "resolution_FWHM_eV": [
+    0.0,
+    1.0
+  ],
+  "broadening": "Gaussian after linear interpolation at 0.1eV; nearest extension only for convolution; metric/features exclude first/last3eV. No extrapolation for stored material responses.",
+  "composition_key": "Sorted elemental reduced integer composition, using pymatgen reduced_composition; MP identifiers are not composition groups.",
+  "random_seed": 20260926
+}
