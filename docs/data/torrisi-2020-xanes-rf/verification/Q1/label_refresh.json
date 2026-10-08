@@ -1,0 +1,82 @@
+{
+  "scope": "Q1 display-label update only; no model refit or new scientific acceptance.",
+  "recorded_date": "2026-10-08",
+  "previous_commit": "fb692bfd5f73ea485c4360dfed1a393b03b34fc1",
+  "condition_labels": {
+    "untreated": "No class weighting",
+    "treated": "Balanced class weighting"
+  },
+  "machine_readable_condition_ids_unchanged": true,
+  "model_refit_performed": false,
+  "changed_functions": [
+    "plot_extra",
+    "summarize"
+  ],
+  "added_functions": [
+    "condition_label"
+  ],
+  "unchanged_functions": [
+    "dump",
+    "fit_model",
+    "group_bootstrap",
+    "localize",
+    "loss",
+    "main",
+    "refresh",
+    "representation",
+    "run",
+    "score",
+    "split_rows",
+    "write_csv"
+  ],
+  "numerical_code_and_module_configuration_unchanged": true,
+  "numerical_artifacts_unchanged_sha256": {
+    "class_counts.csv": "ea45fa4bc5a0be106fef8e68f3c4ce7c0834777c917626502cbe8e46d5e4b875",
+    "comparisons.csv": "52faeac63d574178928be5d9bfddd78c146aa804bbf1764264708d2b3114a8bc",
+    "confusion.csv": "76d8f569d484e3d5b242cbbb97f4e3f6f72b1b6ee8f981553c3b724bb8d2716a",
+    "design.json": "fd8b51c891992c300482c77047af244e17173575c9958d827f8b268531704cc3",
+    "evidence.json": "3ab45a2bdb92ee3846aa4713893ae566d598745393d00c9575661fcdaf9f6739",
+    "feature_definitions.json": "f4da6f2a0852dd1e34364f266db4b9a70eabbd8b1ebbdd4ac20ce9c5ee25f16f",
+    "localization.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "metrics.csv": "67c66c797150e8c4b894519d03f667554e137e3027ed9459dc0d633491e94d6e",
+    "partitions.csv": "10addf06c6dc6012e23299dc8790f9cb2c5b5870075f54c5a7d84f4f27a4f46b",
+    "predictions.csv": "a254160f5d5fad92ab7d347fc6a8bce64b10789122ce93b420ca3c8c1b9d8c12"
+  },
+  "report_numbers_unchanged": true,
+  "refreshed_artifacts": {
+    "docs/data/torrisi-2020-xanes-rf/workflows/candidate.py": {
+      "previous_sha256": "169cc61515679e47efd1354247e4fa083ecd413e5236745acfe5f8bb9910ad2b",
+      "current_sha256": "b4a61b8d049b1d34f9e6959aaa720781f2c74de8ab36e52cf281935175d5df53"
+    },
+    "docs/data/torrisi-2020-xanes-rf/verification/Q1/code/candidate.py": {
+      "previous_sha256": "169cc61515679e47efd1354247e4fa083ecd413e5236745acfe5f8bb9910ad2b",
+      "current_sha256": "b4a61b8d049b1d34f9e6959aaa720781f2c74de8ab36e52cf281935175d5df53"
+    },
+    "docs/data/torrisi-2020-xanes-rf/verification/Q1/report.md": {
+      "previous_sha256": "a3d11f6ec50be7decfaebbe5d1b7bb1afcc29d7f86cd201c7a003a399468824d",
+      "current_sha256": "59bf7c777e61f48da36ed35255c4a9e850fc5adfd574ea48f1f88757e1f06a3d"
+    },
+    "docs/data/torrisi-2020-xanes-rf/verification/Q1/diagnostics.png": {
+      "previous_sha256": "71f4db7027e8d2b2829e926e321d54978972100ddf4712f8aca82b6658580424",
+      "current_sha256": "942437df8ee6aef62f23235d70dfc19f5d133fae76e7e0f65b1ec4b8fe9269fa"
+    },
+    "docs/data/torrisi-2020-xanes-rf/verification/Q1/paired_effects.png": {
+      "previous_sha256": "590b22c370303c0779f531d172a144d6254ae602a4ea2d5b66444ddc955ca21a",
+      "current_sha256": "c78dc43fb6bc84e1582ae9239db4487a0b5f5143ca5d31be941313a97ab9bf1b"
+    }
+  },
+  "prior_scientific_review": {
+    "path": "docs/data/torrisi-2020-xanes-rf/verification/scientific_review_q1_q2.json",
+    "sha256": "d7e58f47cf506d9c73d55d4a7a58ecd978af49bf1e86af091101050ed9ac26c2",
+    "note": "Historical review retained as recorded. Its original figure/report/source hashes predate this presentation-only update."
+  },
+  "refresh_command": "OPENBLAS_NUM_THREADS=1 MPLCONFIGDIR=/tmp/spectral-q1-mpl /tmp/spectral-q1-label-env/bin/python docs/data/torrisi-2020-xanes-rf/workflows/candidate.py Q1 --inputs docs/data/torrisi-2020-xanes-rf/inputs --output docs/data/torrisi-2020-xanes-rf/verification/Q1 --summarize-only",
+  "numerical_check": {
+    "command": "OPENBLAS_NUM_THREADS=1 /tmp/spectral-q1-label-env/bin/python docs/data/torrisi-2020-xanes-rf/workflows/verify.py Q1 --inputs docs/data/torrisi-2020-xanes-rf/inputs --output docs/data/torrisi-2020-xanes-rf/verification/Q1",
+    "status": "scientific_review_required",
+    "numerical_integrity_pass": true,
+    "scientific_pass": null,
+    "run_count": 64
+  },
+  "visual_review": "Both regenerated figures were inspected. The performance legend uses the new labels; the paired-effect title defines Balanced class weighting minus No class weighting and its positive direction. Labels are readable and unclipped."
+}

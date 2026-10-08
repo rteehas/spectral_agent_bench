@@ -1,7 +1,7 @@
 {
   "question": "Q1",
   "source_derivation": "Coordination prediction and imbalance analysis associated with Fig. 3/Table 1. Evaluation design is left to the solver.",
-  "illustrative_analysis": "Compare untreated versus class-weighted coordination models on paired material holdouts and record holdouts of the same identified cohort. Inspect training/test class support, per-class F1, confusion counts and conditional paired uncertainty.",
+  "illustrative_analysis": "Compare No class weighting and Balanced class weighting coordination models on paired material holdouts and record holdouts of the same identified cohort. Inspect training/test class support, per-class F1, confusion counts and conditional paired uncertainty.",
   "illustrative_design": "Inspect source labels, material IDs and target availability; use available-ID material groups with two approximately 60/20/20 train/validation/test holdouts; train ExtraTrees with 80 trees and validation-selected leaf size 1 or 5. Report conditional group-bootstrap intervals, training-only baselines and source-selection limits. These are example choices only.",
   "executed_finding": "Class weighting increases macro-F1 in 6/16 material comparisons; 2 conditional intervals are wholly positive. Per-class performance and support still determine rare-environment reliability.",
   "solver_input_boundary": "Only the standalone prompt and eight input files. Evaluator materials and the review site must be inaccessible during a benchmark attempt.",

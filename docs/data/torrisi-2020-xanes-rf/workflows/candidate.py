@@ -28,6 +28,9 @@ ELEMENTS=['Ti','V','Cr','Mn','Fe','Co','Ni','Cu']
 TARGETS={'coord':'coordination','md':'avg_nn_dists','bader':'bader'}
 CONDITIONS={'Q1':{'coord':['untreated','treated']},'Q2':{'md':['model']},'Q3':{'bader':['full','white_line']},'Q4':{t:['pointwise','multiscale'] for t in TARGETS},'Q5':{t:['released','unit_peak'] for t in ['coord','md']}}
 
+def condition_label(condition):
+    return {'untreated':'No class weighting','treated':'Balanced class weighting'}.get(condition,condition)
+
 def dump(path,obj):
     path.write_text(json.dumps(obj,indent=2,allow_nan=False)+'\n')
 def write_csv(path,rows,fields=None):
@@ -226,6 +229,8 @@ def summarize(question,out,runs,metrics,evidence,localization,families):
     vals={}
     for row in metrics:vals.setdefault(row['run_id'],{})[row['metric']]=row['value']
     synthesis=[]
+    if question=='Q1':
+        synthesis=['No class weighting uses equal training-record weights. Balanced class weighting gives each training record a weight inversely proportional to its coordination class frequency in the training set. Both conditions use the same spectra and partitions. Machine-readable artifacts retain untreated and treated as the respective condition identifiers.','']
     if question=='Q5':
         ps=evidence['comparisons']
         worsened={t:sum(np.mean([p['gain'] for p in ps if p['element']==e and p['target']==t])<0 for e in ELEMENTS) for t in ['coord','md']}
@@ -248,8 +253,8 @@ def summarize(question,out,runs,metrics,evidence,localization,families):
                 selected=[r for r in runs if r['element']==element and r['target']==target and r['condition']==condition and r['generalization']=='identified_material']
                 a=[vals[r['run_id']][key] for r in selected]
                 points.append(np.mean(a));spreads.append(np.std(a))
-                lines.append(f'| {element} / {target} | {condition} | {np.mean(a):.4f} | {min(a):.4f}–{max(a):.4f} |')
-            ax.errorbar(np.arange(8)+.1*ci,points,yerr=spreads,marker='o',capsize=3,label=condition)
+                lines.append(f'| {element} / {target} | {condition_label(condition)} | {np.mean(a):.4f} | {min(a):.4f}–{max(a):.4f} |')
+            ax.errorbar(np.arange(8)+.1*ci,points,yerr=spreads,marker='o',capsize=3,label=condition_label(condition))
         ax.set_xticks(range(8),ELEMENTS);ax.set_ylabel(key);ax.set_title(f'{target}: identified-material test results (bars: split/fit SD, not confidence intervals)');ax.legend()
     fig.tight_layout();fig.savefig(out/'diagnostics.png',dpi=160);plt.close(fig)
     lines+=['','Paired gains and conditional 95% intervals are in comparisons.csv where applicable. Positive gain favors the second condition; regression gain is a reduction in MAE, classification gain is an increase in macro-F1. Individual intervals are descriptive and are not multiplicity-adjusted.','']
@@ -260,7 +265,7 @@ def summarize(question,out,runs,metrics,evidence,localization,families):
         for condition in CONDITIONS[question][target]:
             selected=[r for r in runs if r['target']==target and r['condition']==condition and r['generalization']=='identified_material']
             gains=[(vals[r['run_id']][key]-base_by_run[r['run_id']]['metrics'][key])*(1 if target=='coord' else -1) for r in selected]
-            lines.append(f'- {target}/{condition}: {np.mean(gains):.4f} mean gain, range {min(gains):.4f}–{max(gains):.4f} across elements and holdouts. This pooled description does not replace the element-specific scores.')
+            lines.append(f'- {target}/{condition_label(condition)}: {np.mean(gains):.4f} mean gain, range {min(gains):.4f}–{max(gains):.4f} across elements and holdouts. This pooled description does not replace the element-specific scores.')
     lines += ['']
     if question in ['Q1','Q4','Q5']:
         lines += ['Paired material-holdout comparisons (positive favors the second condition; intervals conditional on fitted models):','', '| Element / target | Second vs first | Mean gain | Individual 95% intervals |', '|---|---|---:|---|']
@@ -268,7 +273,7 @@ def summarize(question,out,runs,metrics,evidence,localization,families):
             for target in targets:
                 ps=[x for x in evidence['comparisons'] if x['element']==element and x['target']==target and x['generalization']=='identified_material']
                 intervals='; '.join(f'[{x["low"]:.4f}, {x["high"]:.4f}]' for x in ps)
-                lines.append(f'| {element} / {target} | {ps[0]["second"]} vs {ps[0]["first"]} | {np.mean([x["gain"] for x in ps]):.4f} | {intervals} |')
+                lines.append(f'| {element} / {target} | {condition_label(ps[0]["second"])} vs {condition_label(ps[0]["first"])} | {np.mean([x["gain"] for x in ps]):.4f} | {intervals} |')
         lines += ['','Intervals crossing zero are inconclusive for direction. Similar scores are not a formal equivalence result: no practical equivalence margin was specified.','']
     plot_extra(question,out,runs,evidence,localization)
     if question=='Q1':
@@ -279,7 +284,7 @@ def summarize(question,out,runs,metrics,evidence,localization,families):
             f={k:np.mean([vals[r['run_id']][f'f1_{k}'] for r in rr if r['condition']=='untreated']) for k in [4,5,6]}
             spectrum=[vals[r['run_id']]['macro_f1'] for r in runs if r['element']==e and r['condition']=='untreated' and r['generalization']=='spectrum']
             material=[vals[r['run_id']]['macro_f1'] for r in rr if r['condition']=='untreated']
-            lines.append(f'- {e}: untreated class F1(4,5,6)={f[4]:.3f}, {f[5]:.3f}, {f[6]:.3f}; record versus material macro-F1={np.mean(spectrum):.3f} versus {np.mean(material):.3f}. See class_counts.csv for prevalence and confusion.csv for error tradeoffs. Record holdouts can share IDs with training and do not estimate new-material performance.')
+            lines.append(f'- {e}: No class weighting, class F1(4,5,6)={f[4]:.3f}, {f[5]:.3f}, {f[6]:.3f}; record versus material macro-F1={np.mean(spectrum):.3f} versus {np.mean(material):.3f}. See class_counts.csv for prevalence and confusion.csv for error tradeoffs. Record holdouts can share IDs with training and do not estimate new-material performance.')
         lines += ['','Class weighting is one imbalance intervention; failure of this intervention does not show that rare-environment prediction is irreducibly poor. Small class support and unstable material holdouts limit conclusions.']
     elif question=='Q2':
         lines+=['Regimes were defined by the training-distance 10th/90th percentiles. This retrospective error stratification uses test truth to characterize failure; it is not a deployable confidence detector. The training median supplies a non-spectral baseline.','']
@@ -338,7 +343,10 @@ def plot_extra(question,out,runs,evidence,localization):
                 ax.plot([x,x],[p['low'],p['high']],color='tab:blue',alpha=.6)
                 ax.scatter(x,p['gain'],s=20,color='tab:blue')
             ax.axhline(0,color='black',linewidth=.7);ax.set_xticks(range(8),ELEMENTS)
-            ax.set_title(f"{target}: benefit of {z[0]['second']} over {z[0]['first']} (positive favors {z[0]['second']})")
+            if question=='Q1':
+                ax.set_title('coord: Balanced class weighting − No class weighting\nPositive values favor Balanced class weighting')
+            else:
+                ax.set_title(f"{target}: benefit of {z[0]['second']} over {z[0]['first']} (positive favors {z[0]['second']})")
             ax.set_ylabel('Macro-F1 gain' if target=='coord' else 'MAE reduction')
         fig.suptitle('Paired effects with conditional 95% material-bootstrap intervals',fontsize=11)
         fig.tight_layout();fig.savefig(out/'paired_effects.png',dpi=160);plt.close(fig)
