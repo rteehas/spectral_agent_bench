@@ -14,7 +14,7 @@ Q2 through Q7 have been removed from the active benchmark. The remaining questio
 
 ## Where to review
 
-- `../../docs/data/benchmark.json`: active review-site entry, dataset `spectral-agent-v3`.
+- `../../docs/data/benchmark.json`: active review-site entry; `datasetId` identifies the current review release.
 - `paper.json`: matching per-paper snapshot for author review.
 - `../../docs/data/gleason-2024-cu-oxidation/inputs/Q*/`: minimal task inputs.
 - `../../docs/data/gleason-2024-cu-oxidation/verification/Q*/`: evaluator targets.
@@ -68,6 +68,8 @@ The review page presents Q1's benchmark-defined acceptance criteria as plain not
 Q1 has an independently stored released-output target. Q8 provides archived references for three historical cases; these apply only when structures and simulation settings match. Other live-search selections require independent evaluator simulations, as described below. Q9 has directly projected historical dictionaries and labels; a live candidate needs an independent reference from the same MP database version. MP labels are computational assignments, not experimentally measured chemical truth.
 
 ## Q8: training spectra across Cu chemical environments
+
+The agent-facing background states the research goal, seed-list context and required runtime. The agent must determine and justify the material-selection criteria and its three representative choices. The prompt does not disclose the stability/synthesis rule or prescribe single- and multiple-Cu-environment cases. The paper-derived selection rule remains the expected answer in the evaluator protocol and worked reasoning. The revised prompt uses dataset `spectral-agent-v2026-10-08-q8-prompt-v1` so reviews of the earlier prompt are not silently reused.
 
 The research motivation is to predict average Cu oxidation state from XAS and EELS across different compounds. Local chemistry also affects Cu spectral shape, making varied Cu environments relevant to the training set. Additional Materials Project structures provide sources of simulated examples beyond the seed collection; selecting experimentally synthesized or predicted-stable materials focuses the search on potentially experimentally accessible materials. The experimentally synthesized category is identified using Materials Project’s `theoretical=False` flag, which concerns evidence for the crystal structure. The resulting spectra are candidates for later alignment, oxidation-state labeling and training. This subquestion does not establish an improvement in model accuracy or quantify coverage gaps in the seed set.
 

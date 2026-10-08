@@ -83,6 +83,7 @@ paper={'id':'gleason-2024-cu-oxidation','title':'Prediction of the Cu oxidation 
 path=DOCS/'data/benchmark.json';data=json.loads(path.read_text());data['papers']=[p for p in data['papers'] if p['id']!=paper['id']]+[paper]
 # Keep review storage stable and retain removed IDs only for saved-review compatibility.
 data['retiredScenarioIds']=sorted(set(data.get('retiredScenarioIds',[]))|{'GLEASON24-Q2','GLEASON24-Q3','GLEASON24-Q4','GLEASON24-Q5','GLEASON24-Q6','GLEASON24-Q7'})
-data['datasetId']='spectral-agent-v3';path.write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n')
+# Preserve the release ID in benchmark.json; prompt revisions version it explicitly.
+path.write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n')
 (ROOT/'papers/gleason-2024-cu-oxidation/paper.json').write_text(json.dumps(paper,ensure_ascii=False,indent=2)+'\n')
 print('Added',len(sc),'independent questions to',path)
