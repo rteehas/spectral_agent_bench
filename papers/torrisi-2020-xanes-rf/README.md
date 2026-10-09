@@ -1,66 +1,87 @@
 # Torrisi 2020: XANES research benchmark
 
-Five standalone investigations test scientific study design, spectral modeling and evidence-based interpretation. Solvers receive **a question with minimal inline background/output requirements and eight raw-data files**. There are no protocol or output-schema JSON inputs. Model family, preprocessing, feature construction, splits, tuning and uncertainty methods are decisions the solver must defend.
+Q1 reproduces the published pointwise coordination-classification experiment with fixed inputs, methods and numerical acceptance. Q2–Q5 remain standalone investigations in which solvers choose and defend their analysis methods.
 
-| Task | Research problem |
-|---|---|
-| Q1 | Reliability for uncommon coordination environments and the value of class-imbalance treatment |
-| Q2 | Neighbor-distance inference in unusually short or long environments |
-| Q3 | Incremental Bader-charge information beyond white-line position |
-| Q4 | Predictive and interpretive value of a newly designed multiscale spectral representation |
-| Q5 | Whether predictive information and energy-localized interpretations survive intensity normalization |
+| Task | Research problem | Evaluation |
+|---|---|---|
+| Q1 | Reproduce coordination classification for classes 4, 5 and 6 | Published accuracy and per-class F1 means/SDs |
+| Q2 | Neighbor-distance inference in unusually short or long environments | Numerical integrity and scientific review |
+| Q3 | Incremental Bader-charge information beyond white-line position | Numerical integrity and scientific review |
+| Q4 | Predictive and interpretive value of a new multiscale representation | Numerical integrity and scientific review |
+| Q5 | Whether predictions and energy-localized interpretations survive intensity normalization | Numerical integrity and scientific review |
 
-All tasks cover Ti, V, Cr, Mn, Fe, Co, Ni and Cu. Solvers choose their evaluation design and must limit scientific claims to what their evidence supports. Each can be answered independently. An independently inspected difficulty rubric is in [question_quality_review.md](question_quality_review.md); difficulty has not yet been calibrated across multiple tested systems.
+All tasks cover Ti, V, Cr, Mn, Fe, Co, Ni and Cu and can be answered independently. The earlier [question_quality_review.md](question_quality_review.md) describes the open-investigation release; its Q1 assessment is historical. Current Q1 checks are under `verification/Q1_paper/`.
 
 ## Sources and solver boundary
 
-The source is [Torrisi et al., npj Computational Materials (2020)](https://doi.org/10.1038/s41524-020-00376-6), with the [open data release](https://data.matr.io/4/) and [TRIXS code at the audited commit](https://github.com/TRI-AMDD/trixs/tree/6dbcc598c7bea235f464bed91744c1617725b7a8). The data are CC BY 4.0: Steven B. Torrisi, Matthew R. Carbone, Brian A. Rohr, Joseph H. Montoya, Yang Ha, Junko Yano, Santosh K. Suram and Linda Hung. The code release is Apache-2.0.
-
-The eight gzip JSONL files contain lossless projections of **all 40,907 released records**, in original order, with source-row identifiers. Packaging performs no filtering, fitting or feature construction. These 100-point processed spectra are the earliest released representation; native FEFF jobs, structures and detector measurements are unavailable. Hashes and field provenance are in `docs/data/torrisi-2020-xanes-rf/provenance.json`.
+The source is [Torrisi et al., npj Computational Materials (2020)](https://doi.org/10.1038/s41524-020-00376-6), with the [open data release](https://data.matr.io/4/) and [TRIXS code at the audited commit](https://github.com/TRI-AMDD/trixs/tree/6dbcc598c7bea235f464bed91744c1617725b7a8). Data are CC BY 4.0: Steven B. Torrisi, Matthew R. Carbone, Brian A. Rohr, Joseph H. Montoya, Yang Ha, Junko Yano, Santosh K. Suram and Linda Hung. Released code is Apache-2.0. Hashes and field provenance are in `docs/data/torrisi-2020-xanes-rf/provenance.json`.
 
 Export a solver-only bundle:
 
 ```bash
-python papers/torrisi-2020-xanes-rf/export_agent_bundle.py Q3 --output /tmp/xanes-agent
+python papers/torrisi-2020-xanes-rf/export_agent_bundle.py Q1 --output /tmp/xanes-agent
 ```
 
-The result contains `prompt.md` and eight files under `inputs/`. Keep the repository, review website, paper, workflows and verification artifacts inaccessible during an attempt. The review site's visual separation is not access control. The prompt requests a report, figures, runnable code and two tables linking test predictions and training/validation/test membership to element and source_row. Model, property and evaluation-split labels are needed only to distinguish results. There is no required design.json, metrics.csv, run-ID convention, condition vocabulary or excluded-row roster. Material-ID and data-source fields are defined directly; the prompt does not prescribe how to use them when evaluating models.
+Q1 exports `prompt.md`, eight prepared NPZ files and `protocol.json`. Each NPZ supplies original processed spectra, exact train/validation/test memberships, source-row IDs, and training/validation labels. Test labels, structural metadata and other targets are omitted. The protocol supplies the estimator, oversampling procedure, seeds, runtime versions and output contract, without expected scores.
 
-## Worked example and verification
+Q2–Q5 each export a prompt and eight gzip JSONL files: lossless projections of all 40,907 released records in original order. Packaging does no filtering or feature construction for those tasks. Solvers choose preprocessing, models, partitions and uncertainty methods. Their output contract remains a report, figures, code, predictions and partition membership; no protocol or experiment manifest is required.
 
-The candidate below is **one illustrative design**, not a required solution or numeric acceptance target. It uses ExtraTrees with validation-selected leaf size, two material-group holdouts, paired conditional group-bootstrap intervals, and task-specific diagnostics. Q1 also examines record holdouts; Q4 constructs 51 quadratic multiscale coefficients and tests energy/degree reliance by held-out permutation; Q5 crosses two fitting seeds with two material partitions. These choices appear only in evaluator material.
+During each attempt, restrict access to that question's bundle. The repository, review website, paper, workflows and evaluator artifacts must be inaccessible. Q1 must not receive the labeled raw files supplied to Q2–Q5. The website and bundle exporter do not enforce runtime isolation.
+
+## Q1: published experiment and fixed verification
+
+The prepared cohort reconstructs the released spectral-quality filters and coordination labels 4/5/6 from both source populations. It preserves the 100-point post-edge-normalized arrays. Exact released memberships take precedence over the article's approximate 80/10/10 description: two successive 10% splits actually yield approximately 81/9/10.
+
+Training-only random oversampling balances classes using seed 42 and the released row ordering. The pointwise random forest has 300 trees, maximum depth 35 and eight candidate features per split. Seeds 42–51 give ten fits per element, 80 forests and 38,610 test predictions. Complete settings and pinned NumPy/scikit-learn versions are in the input protocol.
+
+The evaluator joins predictions to withheld original labels and calculates accuracy and F1 for each coordination class. It compares ten-fit means and population standard deviations with the author-released `pointwise_table_feff.csv`: **all 64 comparisons must agree within 0.00005 in fractional score units, plus 1e-12 arithmetic epsilon**. This is half the published table's 0.01-percentage-point rounding unit. It is a reproduction criterion, not a confidence interval or minimum prediction-quality threshold. A narrative claim cannot override a numerical failure.
+
+An independent implementation reconstructed the experiment from raw records and archived memberships. A separate solver implementation used the prepared bundle. Both completed all 80 fits, produced identical test predictions and matched all 64 published values at printed precision using the pinned modern runtime. `reference_validation.json` and `execution_check.json` record these checks. The local audit inspected solver input access; it does not claim OS-level isolation.
+
+The task grades the final oversampled model. It does not grade an oversampling-effect ablation: a complete published paired before/after table is unavailable. The former ExtraTrees/class-weighting example is preserved under `verification/Q1/` and is superseded.
 
 ```bash
 python3 -m venv /tmp/xanes-bench-env
 /tmp/xanes-bench-env/bin/python -m pip install -r papers/torrisi-2020-xanes-rf/requirements.txt
-OPENBLAS_NUM_THREADS=1 MPLCONFIGDIR=/tmp/xanes-mpl /tmp/xanes-bench-env/bin/python docs/data/torrisi-2020-xanes-rf/workflows/candidate.py ALL --inputs docs/data/torrisi-2020-xanes-rf/inputs --output /tmp/xanes-answer
-/tmp/xanes-bench-env/bin/python docs/data/torrisi-2020-xanes-rf/workflows/verify.py Q1 --inputs docs/data/torrisi-2020-xanes-rf/inputs --output /tmp/xanes-answer/Q1
+OPENBLAS_NUM_THREADS=1 /tmp/xanes-bench-env/bin/python docs/data/torrisi-2020-xanes-rf/workflows/reproduce_coordination.py --inputs /tmp/xanes-agent/inputs --output /tmp/xanes-q1-answer --jobs 4
+/tmp/xanes-bench-env/bin/python docs/data/torrisi-2020-xanes-rf/workflows/verify_coordination.py --inputs /tmp/xanes-agent/inputs --output /tmp/xanes-q1-answer
 ```
 
-Use `Q1` through `Q5` instead of `ALL` for one independent question and a question-specific output directory. Repeat numerical verification for each generated answer. Per-question workflow JSONs record tools and commands; they are evaluator-only worked examples.
+The evaluator must execute submitted source in the isolated solver environment before checking outputs. The verifier does not execute untrusted code. It checks complete prediction coverage, input/protocol declarations, oversampling counts and published comparisons; it also scores validation predictions. `adversarial_checks.json` records rejection of wrong predictions, missing/duplicate records and altered settings. Even perfectly copied test labels fail because they do not reproduce this prescribed experiment.
 
-Verification has two required parts:
+## Q2–Q5: open investigations
 
-1. **Numerical integrity:** reconstruct truth from source labels, check disjoint record partitions and test-prediction coverage, and calculate metrics. Report shared material IDs and missing IDs for scientific review. Optional metric files, pairing declarations and material-separation claims are checked when supplied; they are not required. No fixed split, seed, model, condition name or reference-score agreement is required.
-2. **Scientific review:** independently run submitted code and inspect leakage, fairness, uncertainty, source-population coverage and whether the question-specific evidence supports the conclusions. The mandatory rubric is `verification/scientific_review_rubric.md`. A numeric pass alone cannot establish a scientific pass.
+The ExtraTrees workflows remain illustrative designs, not numerical acceptance targets. They use validation-selected leaf size, two material-group holdouts, paired conditional group-bootstrap intervals and task-specific diagnostics. Alternative defensible methods and negative or mixed findings remain eligible.
 
-Current minimal-output acceptance and adversarial checks are in `verification/lean_verification_v3.json`. They accept outputs without experiment manifests or metric files and check that actual inconsistencies still fail. `verification/flexible_verification_v2.json` preserves the historical interface audit, including demonstrations of why self-consistent copied labels and fabricated auxiliary tables require source reruns and scientific checks. New worked results reside in `verification/Q1` through `Q5`; independent question, execution and scientific review receipts are stored alongside them. A separate Q3 attempt using the previous prompt provides a feasibility check under different scientific choices. The numerical examples have not been refitted for this wording/interface cleanup; their scientific evidence remains valid, and they are checked against the current verifier. The new quality review addresses the current prompts.
+```bash
+OPENBLAS_NUM_THREADS=1 MPLCONFIGDIR=/tmp/xanes-mpl /tmp/xanes-bench-env/bin/python docs/data/torrisi-2020-xanes-rf/workflows/candidate.py Q2 --inputs docs/data/torrisi-2020-xanes-rf/inputs --output /tmp/xanes-q2-answer
+/tmp/xanes-bench-env/bin/python docs/data/torrisi-2020-xanes-rf/workflows/verify.py Q2 --inputs docs/data/torrisi-2020-xanes-rf/inputs --output /tmp/xanes-q2-answer
+```
 
-Raw labels provide exact truth for each submitted prediction. Author-released tables and the historical source-array audit remain contextual provenance, not acceptance targets for changed study designs. All previous fixed-recipe results are under `verification/legacy_v1` and `workflows/legacy_v1`; they are not completed answers to the revised tasks.
+Their numerical verifier reconstructs truth, checks partitions and prediction coverage, and calculates metrics. Success returns `scientific_review_required`. Independent source execution and substantive review using `verification/scientific_review_rubric.md` remain mandatory. Published tables provide context for these four tasks rather than score thresholds. Existing execution and scientific-review receipts remain applicable to them; Q1 sections in those earlier receipts describe the superseded question.
+
+The generic `candidate.py` and `verify.py` commands dispatch Q1 to the fixed reproduction workflow. `candidate.py ALL` runs current Q1 followed by the four open examples.
 
 ## Scientific limits
 
-The released `metadata.id` is available only for the `scrape` origin. An identified-material evaluation therefore selects a source population and cannot establish generalization to unknown-ID `feff` records. The worked example reports this coverage and excludes unknown IDs from claims about new materials. Identifier separation cannot rule out structural near-duplicates or aliases without structures. Its bootstrap intervals are conditional on fitted models, and two material splits provide limited sensitivity evidence. Permutation effects describe predictive reliance under perturbed, correlated features; they do not establish physical causation.
+These 100-point processed spectra are the earliest released representation; native FEFF jobs, structures and detector measurements are unavailable. Q1 reproduces spectral-record holdouts. Related structures may cross partitions; forest-seed SD does not measure generalization uncertainty across new materials or experimental spectra.
+
+For Q2–Q5, material IDs exist only for the `scrape` origin. Holding out identified materials selects a source population and cannot establish generalization to unknown-ID `feff` records. Identifier separation cannot rule out structural relatives or aliases. Worked bootstrap intervals are conditional on fitted models; two material splits provide limited sensitivity evidence. Feature-permutation effects do not establish physical causation.
 
 ## Rebuild and audit
 
+The following rebuilds Q1 from packaged raw records and the archived source audit. Each of the two independent fitting commands trains 80 forests. Install pinned requirements first.
+
 ```bash
-python papers/torrisi-2020-xanes-rf/prepare_assets.py --release /tmp/torrisi-release/matrio_folder --archive /tmp/torrisi-xanes_2019.zip --code-repository /tmp/torrisi-trixs
-/tmp/xanes-bench-env/bin/python papers/torrisi-2020-xanes-rf/audit_verification.py --release /tmp/torrisi-release/matrio_folder
-/tmp/xanes-bench-env/bin/python papers/torrisi-2020-xanes-rf/audit_lean_verification.py
+/tmp/xanes-bench-env/bin/python papers/torrisi-2020-xanes-rf/prepare_q1_reproduction.py
+OPENBLAS_NUM_THREADS=1 /tmp/xanes-bench-env/bin/python papers/torrisi-2020-xanes-rf/reproduce_q1_reference.py --output /tmp/xanes-q1-reference --jobs 4 > /tmp/xanes-q1-reference.log 2>&1
+/tmp/xanes-bench-env/bin/python papers/torrisi-2020-xanes-rf/build_q1_reference.py --reference-output /tmp/xanes-q1-reference --log /tmp/xanes-q1-reference.log
+OPENBLAS_NUM_THREADS=1 /tmp/xanes-bench-env/bin/python docs/data/torrisi-2020-xanes-rf/workflows/reproduce_coordination.py --inputs docs/data/torrisi-2020-xanes-rf/inputs/Q1_paper --output /tmp/xanes-q1-replay --jobs 4 > /tmp/xanes-q1-replay.log 2>&1
+MPLCONFIGDIR=/tmp/xanes-mpl /tmp/xanes-bench-env/bin/python papers/torrisi-2020-xanes-rf/finalize_q1_reproduction.py --solver-output /tmp/xanes-q1-replay --log /tmp/xanes-q1-replay.log
+/tmp/xanes-bench-env/bin/python papers/torrisi-2020-xanes-rf/check_q1_reproduction.py
 python papers/torrisi-2020-xanes-rf/build_entry.py
 python papers/torrisi-2020-xanes-rf/check_entry.py
 python scripts/validate_data.py
 ```
 
-The source-array audit reconstructs historical preprocessing solely to establish provenance. The current numerical checker uses raw labels directly. Preparation never downloads or executes archive code. The entry builder preserves the other papers and never recreates removed protocol/schema files.
+For original raw-asset reconstruction, `prepare_assets.py` accepts `--release`, `--archive` and `--code-repository`; `audit_verification.py` independently checks source arrays. Preparation never executes downloaded archive code. The entry builder preserves other papers and Q2–Q5.

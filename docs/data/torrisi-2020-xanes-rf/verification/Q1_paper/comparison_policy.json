@@ -1,0 +1,24 @@
+{
+  "task": "TORRISI20-Q1-paper-v1",
+  "status": "validated_against_all_64_published_mean_and_std_values",
+  "origin": "Benchmark acceptance rule derived from author-released table precision.",
+  "absolute_tolerance": 5e-05,
+  "floating_point_epsilon": 1e-12,
+  "explanation": "Published accuracy and class-specific F1 means/stds are rounded to 0.01 percentage points. Accept each reconstructed fraction within half that rounding unit (0.005 percentage points = 0.00005), plus 1e-12 arithmetic epsilon. These are rounding bins, not statistical confidence intervals, physical uncertainties, or minimum-score thresholds.",
+  "statistics": [
+    "mean",
+    "population_std"
+  ],
+  "metrics": [
+    "accuracy",
+    "f1_4",
+    "f1_5",
+    "f1_6"
+  ],
+  "protocol_sha256": "00e3233f2be9fc0fc87aed34962a212185b04a3e402ad13439d29275c8c6e3c1",
+  "published_targets_sha256": "341c17980c9ff578aeb9086c59c43829c3acb1aa6ced79ef14d693e65e058a9e",
+  "truth_sha256": "1d0b88351f3f7e32fb0cb8b69b06fcdd625072358fb224fd9d996fdd365ecc6a",
+  "oversampling_effect": "Not scored: this task reproduces the final oversampled-model test results. The paper reports an improvement on validation but does not provide a complete paired effect table; no positive effect for every element/class is imposed.",
+  "acceptance": "Require exact prescribed test/validation record and seed coverage, valid coordination predictions, matching input/protocol declarations and oversampling counts, and agreement with all 64 published values. A failed numerical comparison cannot be waived by a narrative claim.",
+  "runtime_boundary": "The benchmark harness executes submitted code with only the declared solver bundle. Published tables, full labeled records for other questions, and all evaluator assets must be inaccessible. The offline checker does not itself establish execution isolation."
+}

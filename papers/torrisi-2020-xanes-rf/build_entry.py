@@ -3,6 +3,7 @@
 import hashlib
 import json
 from pathlib import Path
+from q1_reproduction_question import build_scenario as build_q1
 ROOT=Path(__file__).resolve().parents[2]
 HERE=Path(__file__).resolve().parent
 ID='torrisi-2020-xanes-rf'
@@ -17,9 +18,6 @@ LABELS={'coord':'coordination is coordination number',
 DESIGN=('Base predictions on the supplied spectra. Choose and justify your analysis and evaluation. Support your conclusions with quantitative evidence, uncertainty and limitations. ')
 OUTPUT=('Return report.md, diagnostic figures and runnable code, plus predictions.csv and partitions.csv containing test predictions and training/validation/test membership. Identify records by element and source_row, and distinguish models, properties and evaluation splits where needed.')
 TASKS=[
-('Q1','Can K-edge spectra reliably identify uncommon coordination environments?','',
- 'Across all eight elements, determine whether coordination numbers 4, 5 and 6 can be identified reliably for uncommon environments, and whether class-imbalance treatment improves that reliability without concealing failures elsewhere. Distinguish rare-class performance from aggregate success and establish how robust the conclusion is to the evaluation design. ',
- 'Coordination prediction and imbalance analysis associated with Fig. 3/Table 1. Evaluation design is left to the solver.'),
 ('Q2','When does inference of mean neighbor distance from K-edge spectra become unreliable?','',
  'Across all eight elements, determine how reliably mean nearest-neighbor distance can be inferred from spectra, particularly for unusually short or long environments. Identify regimes in which error or systematic bias undermines the inference and assess the stability of your conclusions. ',
  'Distance regression and error structure associated with Fig. 6. The solver defines and validates unusual-environment regimes.'),
@@ -35,7 +33,6 @@ TASKS=[
  'For coordination numbers 4, 5 and 6 and mean neighbor distance across all eight elements, determine which conclusions about predictive information and its energy-localized signatures survive division of each spectrum by its own maximum. Distinguish normalization effects from model-fitting and sample-selection variability, and assess whether similar prediction quality supports the same scientific interpretation. ',
  'Normalization sensitivity discussed in the article and the four released score tables. Interpretation stability requires additional experiments.')]
 OPERATIONS={
- 'Q1':'Compare No class weighting and Balanced class weighting coordination models on paired material holdouts and record holdouts of the same identified cohort. Inspect training/test class support, per-class F1, confusion counts and conditional paired uncertainty.',
  'Q2':'Fit distance regressors, define short/middle/long regimes using training-distance quantiles, and compare signed errors and MAE with a training-median baseline, including material-bootstrap intervals.',
  'Q3':'Compare full absorption vectors with photon energy at maximum absorption using independently validation-selected nonlinear regressors. Estimate paired uncertainty on charge prediction differences.',
  'Q4':'Construct 51 quadratic coefficients over 10/20/50-point windows, compare with 100-point absorption for three properties, then perturb energy-midpoint groups and coefficient families on heldout data and measure stability across material partitions.',
@@ -59,7 +56,7 @@ def link(name,path,description):
 def build():
     for name in ['protocol.json','output_schema.json','README.md']:
         (DATA/'inputs'/name).unlink(missing_ok=True)
-    scenarios=[]
+    scenarios=[build_q1(ROOT,DATA,BASE)]
     for q,title,extra,instruction,source in TASKS:
         targets=TARGETS[q]
         background=BACKGROUND.format(labels='Labels: '+'; '.join(LABELS[t] for t in targets)+'.')

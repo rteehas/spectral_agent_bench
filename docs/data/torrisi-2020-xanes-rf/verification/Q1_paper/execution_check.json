@@ -1,0 +1,25 @@
+{
+  "status": "separate_solver_execution_passed",
+  "publication_reproduction_pass": true,
+  "independent_predictions_match": true,
+  "matching_test_predictions": 38610,
+  "forest_fits": 80,
+  "trees_per_fit": 300,
+  "solver_input_files": 9,
+  "executed_command": "OPENBLAS_NUM_THREADS=1 /tmp/spectral-q1-label-env/bin/python /tmp/torrisi-q1-paper-solver/run.py --inputs /tmp/torrisi-q1-paper-solver/inputs --output /tmp/torrisi-q1-paper-solver/output --jobs 4",
+  "reproduction_command": "OPENBLAS_NUM_THREADS=1 python docs/data/torrisi-2020-xanes-rf/workflows/reproduce_coordination.py --inputs INPUT_DIRECTORY --output NEW_OUTPUT_DIRECTORY --jobs 4",
+  "verification_command": "python docs/data/torrisi-2020-xanes-rf/workflows/verify_coordination.py --output OUTPUT_DIRECTORY",
+  "solver_source_sha256": "8bebd6b20e26cc2cc32bdb307a97f3a6bab81f272106d5668571bc35fe0a3c1d",
+  "verifier_sha256": "7f93770cf73079e95f4b5f23793f4e31f7d3a61ee9f1e2d713a208c53b63ac3f",
+  "output_sha256": {
+    "code/reproduce_coordination.py": "8bebd6b20e26cc2cc32bdb307a97f3a6bab81f272106d5668571bc35fe0a3c1d",
+    "execution.log": "030b2523cfe5c489576a14f7b9616fe12bf48cbdb80ab5fa037e042d20245662",
+    "predictions.csv": "a82f7257871e4b4ffbae57a5cda88989994849b940e2f87a6d93833b329bd99f",
+    "report.md": "0e89667c22b3b5a1b940569ed81c7c8d5dbdb7fc7eb03ce4954e68930c7bff31",
+    "run.json": "c20e41df0c8dff1126bf0b24def473e895ec9df9ace53de1691d6de188057586",
+    "validation_metrics.json": "13f6b9f4cfcc9222f1e2193a666e5a0277fb06933be0e885a0fec69484455b07",
+    "validation_predictions.csv": "4d1b92eb7eb0c030f07524e1c3442459addc1ea2e65c1b2cf507c758970e137a"
+  },
+  "input_boundary": "The solver source matches the worked program that reads only eight NPZ input files and protocol.json, computing validation scores without evaluator test labels. This local audit is not an OS-level sandbox claim; the benchmark harness must enforce isolation.",
+  "reference_independence": "A separately coded fitter reconstructed inputs from released raw rows and archived memberships before this solver was run. All test predictions match and all 64 published values pass the rounding test."
+}

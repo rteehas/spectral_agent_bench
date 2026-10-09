@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "task": "TORRISI20-Q1-paper-v1",
+  "elements": [
+    "Ti",
+    "V",
+    "Cr",
+    "Mn",
+    "Fe",
+    "Co",
+    "Ni",
+    "Cu"
+  ],
+  "classes": [
+    4,
+    5,
+    6
+  ],
+  "forest_seeds": [
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51
+  ],
+  "representation": "Use the 100 supplied absorption values directly, in column order. Preserve their post-edge normalization; do not renormalize or add metadata predictors.",
+  "partitions": "Use the supplied train/validation/test arrays in their supplied row order. No refitting on validation rows or test-based selection. The archived two-stage split is approximately 81/9/10; it is the released implementation of the paper-described 80/10/10 split.",
+  "oversampling": {
+    "method": "Random sampling with replacement from each minority training class until all training classes match the majority count.",
+    "random_seed": 42,
+    "order": "Keep all original training rows first. With one numpy.random.RandomState(42), visit class labels in increasing order and append the sampled rows for each class. Leave validation and test arrays unchanged."
+  },
+  "estimator": "sklearn.ensemble.RandomForestClassifier",
+  "parameters": {
+    "n_estimators": 300,
+    "criterion": "gini",
+    "max_depth": 35,
+    "max_features": 8,
+    "min_samples_split": 2,
+    "min_samples_leaf": 1,
+    "min_weight_fraction_leaf": 0.0,
+    "max_leaf_nodes": null,
+    "min_impurity_decrease": 0.0,
+    "bootstrap": true,
+    "oob_score": false,
+    "warm_start": false,
+    "class_weight": null,
+    "ccp_alpha": 0.0,
+    "max_samples": null
+  },
+  "runtime": {
+    "numpy": "2.5.3",
+    "scikit-learn": "1.9.1"
+  },
+  "runtime_note": "This pinned modern runtime is validated separately against the published results; the paper used scikit-learn 0.21.3. n_jobs is an execution setting and may be chosen freely.",
+  "output": {
+    "predictions.csv": [
+      "element",
+      "seed",
+      "source_row",
+      "prediction"
+    ],
+    "validation_predictions.csv": [
+      "element",
+      "seed",
+      "source_row",
+      "prediction"
+    ],
+    "run.json": "Record protocol_sha256, input_sha256 keyed by element, estimator, parameters, forest_seeds, runtime versions, and oversampled_training_records keyed by element.",
+    "report.md": "Describe the reproduction and validation results. Test labels are withheld; test performance is calculated by the evaluator.",
+    "code": "Provide runnable source and its command. The evaluation harness runs it with only the declared inputs."
+  },
+  "evaluation_scope": "Prediction on the released spectral-record holdout. Related materials can occur in different partitions; this does not establish unseen-material or experimental generalization."
+}

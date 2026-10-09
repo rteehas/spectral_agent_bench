@@ -4,9 +4,14 @@
   "input_records": 40907,
   "input_hashes_match": true,
   "paper_matches_active_dataset": true,
-  "all_scenarios_have_only_raw_input_assets": true,
-  "solver_prompts_have_no_paper_references": true,
-  "input_file_count_per_question": 8,
-  "protocol_and_schema_files_absent": true,
-  "note": "Exported solver bundles contain prompt.md and eight raw projections only. Evaluator website/repository access must be denied during an attempt."
+  "q1_has_prepared_partitions_without_test_labels": true,
+  "q2_q5_have_only_raw_input_assets": true,
+  "input_file_count_per_question": {
+    "Q1": 9,
+    "Q2": 8,
+    "Q3": 8,
+    "Q4": 8,
+    "Q5": 8
+  },
+  "note": "Q1 exports eight prepared NPZ files and its fixed protocol; test labels are evaluator-only. Q2-Q5 export the unchanged raw projections. Evaluator website/repository and other-question input access must be denied during an attempt."
 }

@@ -1,0 +1,64 @@
+{
+  "status": "pass",
+  "correct_reproduction_accepted": true,
+  "documented_manifest_without_optional_fields_accepted": true,
+  "test_labels_and_structural_metadata_absent_from_bundle": true,
+  "rejection_checks": [
+    {
+      "case": "missing_test_row",
+      "rejected": true,
+      "reason": "predictions.csv: incorrect Cu/51 test membership"
+    },
+    {
+      "case": "duplicate_test_row",
+      "rejected": true,
+      "reason": "predictions.csv: duplicate prediction"
+    },
+    {
+      "case": "unknown_record",
+      "rejected": true,
+      "reason": "predictions.csv: incorrect Ti/42 test membership"
+    },
+    {
+      "case": "invalid_class",
+      "rejected": true,
+      "reason": "Prediction must be coordination 4, 5, or 6"
+    },
+    {
+      "case": "majority_predictions",
+      "rejected": true,
+      "reason": "Published result mismatch: Ti accuracy mean =0.5138004246; expected 0.87540 within 0.0000500000"
+    },
+    {
+      "case": "copied_test_labels",
+      "rejected": true,
+      "reason": "Published result mismatch: Ti accuracy mean =1.0000000000; expected 0.87540 within 0.0000500000"
+    },
+    {
+      "case": "wrong_seed",
+      "rejected": true,
+      "reason": "Unknown element or seed"
+    },
+    {
+      "case": "missing_validation",
+      "rejected": true,
+      "reason": "[Errno 2] No such file or directory: '/tmp/torrisi-q1-rejections-gu6rgg8p/missing_validation/validation_predictions.csv'"
+    },
+    {
+      "case": "wrong_forest_settings",
+      "rejected": true,
+      "reason": "Incorrect declared parameters"
+    },
+    {
+      "case": "wrong_oversampling_count",
+      "rejected": true,
+      "reason": "Incorrect training oversampling counts"
+    },
+    {
+      "case": "changed_input_hash",
+      "rejected": true,
+      "reason": "Run input hashes differ from the bundle"
+    }
+  ],
+  "scope": "Numerical integrity and fixed published-result acceptance. Copied perfect labels fail because this is a prescribed experiment reproduction. This does not replace harness-enforced source execution and access isolation."
+}

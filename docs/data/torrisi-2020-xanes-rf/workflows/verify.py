@@ -223,6 +223,15 @@ def artifacts(output):
 
 def verify(question, output, inputs=DEFAULT_INPUT):
     require(question in TARGETS, 'Unknown question')
+    if question == 'Q1':
+        import importlib.util
+        spec = importlib.util.spec_from_file_location('q1_publication_verifier', Path(__file__).with_name('verify_coordination.py'))
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        prepared = Path(inputs)
+        if not (prepared / 'protocol.json').is_file():
+            prepared = prepared / 'Q1_paper'
+        return module.verify(output, prepared)
     output, inputs = Path(output), Path(inputs)
     design = read_json(output / 'design.json') if (output / 'design.json').exists() else {}
     require(isinstance(design, dict), 'Optional design.json must be an object')

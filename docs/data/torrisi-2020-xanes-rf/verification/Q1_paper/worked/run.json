@@ -1,0 +1,60 @@
+{
+  "task": "TORRISI20-Q1-paper-v1",
+  "protocol_sha256": "00e3233f2be9fc0fc87aed34962a212185b04a3e402ad13439d29275c8c6e3c1",
+  "input_sha256": {
+    "Ti": "808240c5bfc5b723a76367b74ecc19a9f543b03ace943dc4f2e13bdfc9410c54",
+    "V": "f4772793846495547ae1592cff26b9aa9aec35f0061658e9174eef2bea4b5453",
+    "Cr": "a12db702c445b187cfe7e7cc9c92273ef493331402e9492f5df181cb7c6063fb",
+    "Mn": "a721eb153ade267323e977954bab8fbcdc9f27b4b13fc4bbe5afd17561ab4f6f",
+    "Fe": "50879cc6e45f11ec9c51ba8628262d3f4ef8db6529e10e48de4aa832ca87d762",
+    "Co": "4c27723c7e71605b9d29e142e00a2bb1506c3e8a4471d7f489de45a81b5a8dd1",
+    "Ni": "02e7fa6ccb5653f912f2a88ec8e13be6ed1226eb6d431a015a7b030d8413f5be",
+    "Cu": "81e3558edcb177141e7a66df4241acda9c648190e070ee87086e1f83efc33857"
+  },
+  "estimator": "sklearn.ensemble.RandomForestClassifier",
+  "parameters": {
+    "n_estimators": 300,
+    "criterion": "gini",
+    "max_depth": 35,
+    "max_features": 8,
+    "min_samples_split": 2,
+    "min_samples_leaf": 1,
+    "min_weight_fraction_leaf": 0.0,
+    "max_leaf_nodes": null,
+    "min_impurity_decrease": 0.0,
+    "bootstrap": true,
+    "oob_score": false,
+    "warm_start": false,
+    "class_weight": null,
+    "ccp_alpha": 0.0,
+    "max_samples": null
+  },
+  "forest_seeds": [
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51
+  ],
+  "runtime": {
+    "numpy": "2.5.3",
+    "scikit-learn": "1.9.1"
+  },
+  "oversampled_training_records": {
+    "Ti": 5514,
+    "V": 6063,
+    "Cr": 3213,
+    "Mn": 9453,
+    "Fe": 7557,
+    "Co": 4512,
+    "Ni": 5310,
+    "Cu": 5502
+  },
+  "oversampling_seed": 42,
+  "elapsed_seconds": 171.84963199822232
+}

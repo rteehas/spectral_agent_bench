@@ -1,0 +1,178 @@
+{
+  "source": "Lossless raw projections and independently verified author-release array memberships.",
+  "original_array_audit": "../source_anchor_audit.json",
+  "source_code": "https://github.com/TRI-AMDD/trixs/blob/6dbcc598c7bea235f464bed91744c1617725b7a8/notebooks/Spectra_To_Model_Data.ipynb",
+  "array_contents": "energy_eV; train/validation spectra, labels and source rows; test spectra and source rows only. Structural metadata and other target labels are omitted.",
+  "split_discrepancy": "Paper: 80/10/10. Released two successive test_size=0.1 splits: approximately 81/9/10. Exact released membership is used.",
+  "elements": {
+    "Ti": {
+      "raw_input_sha256": "ce5e4255439233ff903dc6be0e8a3b1acc9327e72523a66403d2a640fc2f9792",
+      "bundle_sha256": "808240c5bfc5b723a76367b74ecc19a9f543b03ace943dc4f2e13bdfc9410c54",
+      "retained_records": 4709,
+      "partition_counts": {
+        "train": 3814,
+        "validation": 424,
+        "test": 471
+      },
+      "training_class_counts": {
+        "4": 267,
+        "5": 1838,
+        "6": 1709
+      },
+      "oversampled_training_records": 5514,
+      "matches_archived_row_order_and_labels": true,
+      "retained_origins": {
+        "feff": 2206,
+        "scrape": 2503
+      }
+    },
+    "V": {
+      "raw_input_sha256": "755c3407c7b47ed9f96becfdb21cf14cc64213e9c4fedec2d493a7fdf0bf1b5b",
+      "bundle_sha256": "f4772793846495547ae1592cff26b9aa9aec35f0061658e9174eef2bea4b5453",
+      "retained_records": 6862,
+      "partition_counts": {
+        "train": 5557,
+        "validation": 618,
+        "test": 687
+      },
+      "training_class_counts": {
+        "4": 1575,
+        "5": 1961,
+        "6": 2021
+      },
+      "oversampled_training_records": 6063,
+      "matches_archived_row_order_and_labels": true,
+      "retained_origins": {
+        "feff": 2609,
+        "scrape": 4253
+      }
+    },
+    "Cr": {
+      "raw_input_sha256": "3b4af75470896db924e60c95d99efbde1152fbc6c848772a07d25abb76eb5684",
+      "bundle_sha256": "a12db702c445b187cfe7e7cc9c92273ef493331402e9492f5df181cb7c6063fb",
+      "retained_records": 2342,
+      "partition_counts": {
+        "train": 1896,
+        "validation": 211,
+        "test": 235
+      },
+      "training_class_counts": {
+        "4": 346,
+        "5": 479,
+        "6": 1071
+      },
+      "oversampled_training_records": 3213,
+      "matches_archived_row_order_and_labels": true,
+      "retained_origins": {
+        "feff": 1235,
+        "scrape": 1107
+      }
+    },
+    "Mn": {
+      "raw_input_sha256": "38f99877c8ece423bb23676463bc4ba767ac6d2bc057edcecf766263c6363dd7",
+      "bundle_sha256": "a721eb153ade267323e977954bab8fbcdc9f27b4b13fc4bbe5afd17561ab4f6f",
+      "retained_records": 7810,
+      "partition_counts": {
+        "train": 6326,
+        "validation": 703,
+        "test": 781
+      },
+      "training_class_counts": {
+        "4": 241,
+        "5": 3151,
+        "6": 2934
+      },
+      "oversampled_training_records": 9453,
+      "matches_archived_row_order_and_labels": true,
+      "retained_origins": {
+        "feff": 3553,
+        "scrape": 4257
+      }
+    },
+    "Fe": {
+      "raw_input_sha256": "1791e54a4a9d56009d83b5405179c12aa84aa5e1fc6a401af3dfdc1ae7e4b12e",
+      "bundle_sha256": "50879cc6e45f11ec9c51ba8628262d3f4ef8db6529e10e48de4aa832ca87d762",
+      "retained_records": 6673,
+      "partition_counts": {
+        "train": 5404,
+        "validation": 601,
+        "test": 668
+      },
+      "training_class_counts": {
+        "4": 844,
+        "5": 2519,
+        "6": 2041
+      },
+      "oversampled_training_records": 7557,
+      "matches_archived_row_order_and_labels": true,
+      "retained_origins": {
+        "feff": 2927,
+        "scrape": 3746
+      }
+    },
+    "Co": {
+      "raw_input_sha256": "f9b3b80ca0a6e44a03dcd9443a90332f7eb42af5a967a8f51923541fb32f6155",
+      "bundle_sha256": "4c27723c7e71605b9d29e142e00a2bb1506c3e8a4471d7f489de45a81b5a8dd1",
+      "retained_records": 3436,
+      "partition_counts": {
+        "train": 2782,
+        "validation": 310,
+        "test": 344
+      },
+      "training_class_counts": {
+        "4": 430,
+        "5": 848,
+        "6": 1504
+      },
+      "oversampled_training_records": 4512,
+      "matches_archived_row_order_and_labels": true,
+      "retained_origins": {
+        "feff": 1117,
+        "scrape": 2319
+      }
+    },
+    "Ni": {
+      "raw_input_sha256": "a9eb1ad9fde915f8f3387b553395707625d8be8180a4faa2dbb4debf979d2f04",
+      "bundle_sha256": "02e7fa6ccb5653f912f2a88ec8e13be6ed1226eb6d431a015a7b030d8413f5be",
+      "retained_records": 3361,
+      "partition_counts": {
+        "train": 2721,
+        "validation": 303,
+        "test": 337
+      },
+      "training_class_counts": {
+        "4": 172,
+        "5": 779,
+        "6": 1770
+      },
+      "oversampled_training_records": 5310,
+      "matches_archived_row_order_and_labels": true,
+      "retained_origins": {
+        "feff": 1294,
+        "scrape": 2067
+      }
+    },
+    "Cu": {
+      "raw_input_sha256": "a5c8457b95cc5557616c5c5db3e38fe5cd9d29b8026859b3d3509e35ffea95e0",
+      "bundle_sha256": "81e3558edcb177141e7a66df4241acda9c648190e070ee87086e1f83efc33857",
+      "retained_records": 3376,
+      "partition_counts": {
+        "train": 2734,
+        "validation": 304,
+        "test": 338
+      },
+      "training_class_counts": {
+        "4": 373,
+        "5": 1834,
+        "6": 527
+      },
+      "oversampled_training_records": 5502,
+      "matches_archived_row_order_and_labels": true,
+      "retained_origins": {
+        "feff": 1377,
+        "scrape": 1999
+      }
+    }
+  },
+  "test_labels_present_in_solver_bundle": false
+}

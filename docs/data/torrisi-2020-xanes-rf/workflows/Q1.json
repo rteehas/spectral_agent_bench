@@ -1,32 +1,15 @@
 {
   "question": "Q1",
-  "source_derivation": "Coordination prediction and imbalance analysis associated with Fig. 3/Table 1. Evaluation design is left to the solver.",
-  "illustrative_analysis": "Compare No class weighting and Balanced class weighting coordination models on paired material holdouts and record holdouts of the same identified cohort. Inspect training/test class support, per-class F1, confusion counts and conditional paired uncertainty.",
-  "illustrative_design": "Inspect source labels, material IDs and target availability; use available-ID material groups with two approximately 60/20/20 train/validation/test holdouts; train ExtraTrees with 80 trees and validation-selected leaf size 1 or 5. Report conditional group-bootstrap intervals, training-only baselines and source-selection limits. These are example choices only.",
-  "executed_finding": "Class weighting increases macro-F1 in 6/16 material comparisons; 2 conditional intervals are wholly positive. Per-class performance and support still determine rare-environment reliability.",
-  "solver_input_boundary": "Only the standalone prompt and eight input files. Evaluator materials and the review site must be inaccessible during a benchmark attempt.",
-  "status": "executed_example",
-  "commands": [
-    {
-      "tool": "Python environment",
-      "command": "python3 -m venv /tmp/xanes-bench-env\n/tmp/xanes-bench-env/bin/python -m pip install -r papers/torrisi-2020-xanes-rf/requirements.txt",
-      "purpose": "Install the numerical runtime."
-    },
-    {
-      "tool": "Python / NumPy / scikit-learn / Matplotlib",
-      "command": "OPENBLAS_NUM_THREADS=1 MPLCONFIGDIR=/tmp/xanes-mpl /tmp/xanes-bench-env/bin/python docs/data/torrisi-2020-xanes-rf/workflows/candidate.py Q1 --inputs docs/data/torrisi-2020-xanes-rf/inputs --output /tmp/xanes-answer/Q1",
-      "purpose": "Execute one worked research design; its choices are examples, not solver requirements."
-    },
-    {
-      "tool": "Independent numerical evaluator",
-      "command": "/tmp/xanes-bench-env/bin/python docs/data/torrisi-2020-xanes-rf/workflows/verify.py Q1 --inputs docs/data/torrisi-2020-xanes-rf/inputs --output /tmp/xanes-answer/Q1",
-      "purpose": "Check record identities, data partitions, prediction coverage and numerical consistency. Does not award scientific acceptance."
-    },
-    {
-      "tool": "Scientific review",
-      "command": "Review report, code and evidence using docs/data/torrisi-2020-xanes-rf/verification/scientific_review_rubric.md",
-      "purpose": "Judge leakage prevention, uncertainty, fairness and whether evidence supports the conclusions; rerun code to confirm how the predictions were produced."
-    }
-  ],
-  "notes": "A valid alternative can use different representations, learners, filters, splits and random seeds and reach different or null findings. Historical v1 outputs are archived, not acceptance targets."
+  "status": "executed_publication_reproduction",
+  "source_derivation": "Published Fig. 3 coordination results and the author-released pointwise_table_feff.csv; pinned TRIXS preprocessing/training notebooks.",
+  "solver_program": "reproduce_coordination.py",
+  "evaluator_program": "verify_coordination.py",
+  "solver_command": "python reproduce_coordination.py --inputs INPUT_DIRECTORY --output NEW_OUTPUT_DIRECTORY --jobs 4",
+  "verification_command": "python verify_coordination.py --inputs INPUT_DIRECTORY --output OUTPUT_DIRECTORY",
+  "input_boundary": "Only eight prepared NPZ files and protocol.json. Test labels, original full labeled records, paper, repository and evaluator outputs are inaccessible to the solver.",
+  "execution_evidence": "verification/Q1_paper/execution_check.json",
+  "independent_reference_evidence": "verification/Q1_paper/reference_validation.json",
+  "reasoning": "1. Recover the published cohort and exact row order (Python / NumPy / source notebooks).\nApply the released spectral-quality filters and keep coordination labels 4, 5 and 6 from both data sources. Reconstruct the seed-42 split and compare every membership and label with the independent archived-array audit. The released split is approximately 81/9/10, despite the paper describing 80/10/10. Exact released memberships take precedence. preparation_audit.json records all counts and hashes.\n\n2. Prepare the solver bundle (Python / NumPy).\nPreserve the post-edge-normalized 100-point spectral arrays. Supply training and validation labels, but omit test labels and all structural metadata/other targets. Test truth remains evaluator-only.\n\n3. Balance training classes (NumPy random sampling).\nUse the released RandomOverSampler-equivalent seed-42 bootstrap: retain original training rows, then append minority-class samples in ascending class order until each matches the training majority count. Validation and test rows are not sampled or fitted.\n\n4. Fit the published pointwise random forests (scikit-learn).\nUse 300 trees, maximum depth 35, eight candidate features per split, and the other protocol settings. Fit seeds 42 through 51 separately for all eight elements: 80 forests. The solver reads only its prepared input bundle and emits 38,610 test predictions plus validation predictions. It has no test labels.\n\n5. Reconstruct the published results (independent evaluator).\nJoin test predictions to the original released labels by element/source_row. Recompute accuracy and F1 for classes 4, 5 and 6 for each seed, then their ten-fit means and population standard deviations. All 64 values reproduce the author-released pointwise_table_feff.csv within its printed rounding precision. The independently coded reference starts from the full raw projections and archived split rather than the solver bundle; its test predictions also match the separate worked solver run.\n\n6. Interpret the reproduced class-specific performance.\nOverall accuracy is high, but difficult classes remain: pointwise F1 is about 0.6143 for Mn CN4, 0.6311 for Cu CN4, 0.6809 for Cr CN5 and 0.6870 for Co CN5. These are the published final-model results. This task does not claim a quantified oversampling benefit: that separate validation ablation lacks a complete published paired reference table.\n\n7. Apply the fixed acceptance rule.\nRequire complete prescribed prediction coverage, matching protocol/input declarations and training counts, and agreement with every published mean/std within 0.00005 in fractional score units plus 1e-12 numerical epsilon. This is half the table rounding unit, not a statistical confidence interval. Numerical failure cannot be waived by a narrative claim. The harness executes source with only the solver bundle; the checker does not execute untrusted source or establish isolation itself.",
+  "oversampling_effect": "Excluded from scoring. Reproduce final oversampled-model performance; do not impose an unverified before/after effect.",
+  "historical_example": "verification/Q1 and its label-refresh receipt preserve the former class-weighted ExtraTrees investigation. It is superseded and is not a reference for this release."
 }
